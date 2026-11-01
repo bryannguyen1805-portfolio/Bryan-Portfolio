@@ -1,0 +1,103 @@
+{
+  "profile": {
+    "name": "Huynh Quang Tri Nguyen",
+    "title": "Bachelor of International Business / Master of Business Analytics",
+    "avatarUrl": "https://static.wixstatic.com/media/77d92f_e7f9e30bbeeb4d748de0be58325636da~mv2.png/v1/crop/x_270,y_0,w_1047,h_1430/fill/w_451,h_742,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8065_polarr_edited_edited.png",
+    "phone": "0838673639",
+    "email": "quangtritc1805@gmail.com",
+    "location": "Ho Chi Minh City, Vietnam",
+    "cvUrl": "https://e7dd75e6-2c4f-4010-907e-febe8cc5c2e8.filesusr.com/ugd/77d92f_c37bbfee98e44417a2fa328215522e32.pdf",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
+      "facebook": "https://www.facebook.com/Tori1005",
+      "instagram": "https://www.instagram.com/bryannguyen1805/"
+    }
+  },
+  "about": [
+    "My name is Nguyen Huynh Quang Tri, also known as Bryan. I hold a Master’s degree in Business Analytics and a Bachelor’s degree in International Business from the University of Wollongong. Throughout my academic and professional journey, I am committed to applying data analytics to understand business development, improve performance, and facilitate strategic decisions.",
+    "I’ve had the opportunity to intern in both business development and marketing, where I worked with real-world data, CRM systems, campaign analysis, and customer insights. These experiences taught me how to combine strategic thinking with practical execution, collaborate with different teams, and adapt quickly in fast-paced environments.",
+    "I consider myself a curious and proactive learner. I’m passionate about solving problems, exploring ideas, and contributing to projects where data and creativity come together. Outside of work, I enjoy photography, discovering new cultures, and staying inspired through everyday learning."
+  ],
+  "skills": [
+    {
+      "category": "Analytical & Technical Skills",
+      "items": [
+        "Business Analytics & Data Storytelling",
+        "Microsoft Excel (Pivot Tables, VLOOKUP, Charts)",
+        "Google Sheets (Formulas, Dashboards)",
+        "Power BI (Data Visualization, Basic DAX)",
+        "CRM Tools (Zoho CRM, HubSpot)",
+        "Performance Reporting & KPI Monitoring",
+        "Market & Competitor Research",
+        "A/B Testing & Campaign Analysis"
+      ]
+    },
+    {
+      "category": "Business Development & Growth",
+      "items": [
+        "Lead Qualification & Prospect Mapping",
+        "Customer Segmentation & Persona Development",
+        "Go-to-Market Support & Proposal Creation",
+        "Cross-functional Team Collaboration",
+        "Social Media & Engagement Optimization",
+        "Campaign Planning & Channel Strategy"
+      ]
+    },
+    {
+      "category": "Professional & Interpersonal",
+      "items": [
+        "Critical Thinking & Problem Solving",
+        "Strategic Communication (Written & Verbal)",
+        "Teamwork in Multicultural Environments",
+        "Attention to Detail & Time Management",
+        "Fast Learner with High Adaptability"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "period": "Nov 2024 – Mar 2025",
+      "company": "PiHome Vietnam",
+      "role": "Business Development Intern",
+      "bullets": [
+        "Identified and qualified 60+ potential leads through market research and prospecting.",
+        "Scheduled 3–5 qualified meetings/week, contributing to seller engagement pipeline.",
+        "Maintained CRM data integrity to track lead progress and team KPIs.",
+        "Prepared demo decks and reports for stakeholder presentations.",
+        "Collaborated with marketing and operations to tailor outreach by customer segment."
+      ]
+    },
+    {
+      "period": "Feb 2023 – Dec 2023",
+      "company": "OESON Australia",
+      "role": "Sales and Marketing Intern",
+      "bullets": [
+        "Conducted competitor and market analysis to inform sales strategy.",
+        "Created weekly performance reports for multi-channel marketing campaigns.",
+        "Increased social media engagement by 20%+ through targeted content.",
+        "Supported team presentations and proposal development for business pitches.",
+        "Worked with sales, product, and marketing teams to improve lead quality."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Graduated: Aug 2025",
+      "school": "University of Wollongong",
+      "degree": "Master of Business Analytics"
+    },
+    {
+      "period": "Graduated: Aug 2024",
+      "school": "University of Wollongong",
+      "degree": "Bachelor of Business - International Business"
+    }
+  ],
+  "projects": [
+    {
+      "tag": "Enterprise Fintech & Payment Solutions",
+      "title": "How I Closed an Omnichannel Payment Partnership with Xe Điện Việt Thanh",
+      "description": "A strategic business case on eliminating checkout friction for high-ticket EV retail (VND 15M - 45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated reconciliation.",
+      "url": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+    }
+  ]
+}
