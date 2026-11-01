@@ -13,6 +13,11 @@
       "instagram": "https://www.instagram.com/bryannguyen1805/"
     }
   },
+  "metrics": [
+    { "num": "50+", "label": "Enterprise Pipeline Managed" },
+    { "num": "2.4B+ VND", "label": "Projected GMV Closed" },
+    { "num": "80%", "label": "Discovery Call Conversion" }
+  ],
   "about": [
     "Hello, I’m <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s in International Business</strong> from the <strong>University of Wollongong</strong>. Throughout my journey, I have focused on leveraging data analytics not just to observe market trends, but to <strong>engineer actionable business development strategies</strong>, <strong>optimize pipeline performance</strong>, and <strong>drive high-impact commercial decisions</strong>.",
     "My professional background centers on <strong>enterprise B2B sales</strong>, <strong>omnichannel payment infrastructure</strong>, and <strong>cross-border technology solutions</strong>. Managing <strong>CRM workflows, account tiering, and market intelligence</strong>, I navigate full deal lifecycles—from <strong>outbound mapping and C-level negotiations</strong> to <strong>cross-functional alignment and go-live deployment</strong>. These experiences have strengthened my ability to <strong>bridge analytical insights with commercial execution</strong>, solving operational bottlenecks and driving measurable growth.",
@@ -130,6 +135,48 @@
       "imageUrl": "ielts.jpg"
     }
   ],
+  "businessDevelopment": {
+    "payoo": {
+      "company": "Payoo (VietUnion)",
+      "badge": "Enterprise Payment Infrastructure",
+      "logo": "payoo.jpg",
+      "summary": "Specialized in architecting merchant payment solutions, deploying physical SmartPOS networks, remote checkout mechanisms (Pay-by-Link), and automated bank reconciliation workflows for multi-branch retailers.",
+      "projects": [
+        {
+          "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
+          "tag": "High-Ticket Retail & 0% Instalment",
+          "description": "Solved checkout hesitation for high-ticket EV retail (VND 15M–45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated multi-branch reconciliation.",
+          "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+        },
+        {
+          "title": "Enterprise Account Tiering & Merchant Acquisition Model",
+          "tag": "Commercial Pipeline Strategy",
+          "description": "Architected Tier 1–3 qualification criteria evaluating merchant GMV velocity and branch footprint, accelerating prospective merchant onboarding speed by 30% and securing annual contracts exceeding 2.4B+ VND.",
+          "link": "#"
+        }
+      ]
+    },
+    "proscan": {
+      "company": "ProScan Global",
+      "badge": "Security Screening & Cross-Border Tech",
+      "logo": "proscan.jpeg",
+      "summary": "Drove international B2B market expansion, conducting regional distributor evaluations, tender quotation pipelines, and outbound commercial proposals across overseas markets.",
+      "projects": [
+        {
+          "title": "Regional Market Intelligence & Distributor Mapping Pipeline",
+          "tag": "International B2B Market Research",
+          "description": "Evaluated 70+ overseas enterprise accounts and distributor networks across APAC markets, profiling compliance requirements and technical screening tender criteria.",
+          "link": "#"
+        },
+        {
+          "title": "ODM Security Hardware Proposal & Technical Quotation Structure",
+          "tag": "Commercial & Tender Compliance",
+          "description": "Structured English commercial proposals and technical quotations up to $12K+ USD/deal, converting 80% of qualified leads into senior discovery calls.",
+          "link": "#"
+        }
+      ]
+    }
+  },
   "dataProjects": [
     {
       "title": "Automated Market Intelligence & News Aggregator",
