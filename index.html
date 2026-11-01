@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title id="page-title">Bryan's Portfolio</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,176 +27,403 @@
       font-family: 'Inter', -apple-system, sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; transition: 0.2s; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
     
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER & NAVIGATION */
     header {
-      position: sticky; top: 0;
-      background: rgba(251, 251, 253, 0.92);
+      position: sticky;
+      top: 0;
+      background: rgba(251, 251, 253, 0.94);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
       z-index: 100;
     }
-    .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 74px; }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; }
-    nav { display: flex; align-items: center; gap: 24px; }
-    nav a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
     nav a:hover { color: var(--text-main); }
     
     .btn-black {
-      display: inline-block; padding: 10px 22px;
-      background: #000; color: #fff !important;
-      border-radius: 9999px; font-size: 0.85rem; font-weight: 500;
+      display: inline-block;
+      padding: 9px 20px;
+      background: #000;
+      color: #fff !important;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      text-align: center;
     }
     .btn-black:hover { background: #333; }
 
-    section { padding: 70px 0; border-top: 1px solid var(--border-color); }
-    .hero { padding: 60px 0 80px; border-top: none; }
-    .hero-grid { display: grid; grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
+    /* SECTIONS */
+    section { padding: 60px 0; border-top: 1px solid var(--border-color); }
+    .hero { padding: 40px 0 60px; border-top: none; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 52px;
+      align-items: center;
+    }
     
+    .hero-img-box {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background-color: #f2f2f7;
+    }
     .hero-img { 
       width: 100%; 
-      height: 520px; 
+      height: 480px; 
       object-fit: cover; 
       object-position: center 20%; 
-      border-radius: 20px; 
-      box-shadow: var(--shadow-md); 
+      display: block;
     }
     
-    .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 2.75rem; line-height: 1.15; margin-bottom: 12px; }
-    .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px; }
-    .contact-inline { margin-bottom: 24px; font-size: 0.95rem; line-height: 1.8; }
-    .social-links { display: flex; gap: 16px; margin-top: 8px; }
-    .social-links a { font-size: 0.9rem; text-decoration: underline; color: var(--text-muted); }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .contact-inline {
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      font-size: 0.9rem;
+      text-decoration: underline;
+      color: var(--text-muted);
+    }
     .social-links a:hover { color: #000; }
 
-    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 28px; }
-    .about-text { font-size: 1.05rem; line-height: 1.8; color: #3a3a3c; max-width: 820px; display: flex; flex-direction: column; gap: 18px; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+    .about-text {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #3a3a3c;
+      max-width: 820px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
     .about-text strong { color: #000; font-weight: 600; }
     
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
-    .skill-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); }
-    .skill-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 18px; }
-    .skill-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .skill-list li { font-size: 0.92rem; color: #48484a; padding-left: 18px; position: relative; }
-    .skill-list li::before { content: "•"; position: absolute; left: 0; color: #8e8e93; }
-
-    .timeline { display: flex; flex-direction: column; gap: 36px; max-width: 860px; }
-    .timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 24px; }
-    .timeline-date { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
-    .timeline-body h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
-    .timeline-role { font-size: 0.95rem; font-weight: 500; margin-bottom: 12px; }
-    .timeline-desc { list-style: disc; padding-left: 20px; font-size: 0.92rem; color: #48484a; line-height: 1.7; }
-
-    .featured-case { background: #fff; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
-    .featured-tag { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #0066cc; margin-bottom: 12px; }
-    .featured-case h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 16px; }
-    .featured-case p { font-size: 0.98rem; color: var(--text-muted); margin-bottom: 24px; }
-
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; border: 1px solid var(--border-color); border-radius: 10px; padding: 14px 16px; font-size: 0.95rem; font-family: inherit;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
-    .contact-form textarea { resize: vertical; min-height: 120px; }
-    .btn-submit { padding: 14px 28px; background: #000; color: #fff; border: none; border-radius: 9999px; font-size: 0.95rem; cursor: pointer; }
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .skill-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .skill-list li {
+      font-size: 0.92rem;
+      color: #48484a;
+      padding-left: 18px;
+      position: relative;
+    }
+    .skill-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #8e8e93;
+    }
 
-    /* ====================================================
-       CỤM NÚT LIÊN HỆ & BACK TO TOP NỔI (FLOATING WIDGET)
-       ==================================================== */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 860px;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+    }
+    .timeline-date {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .timeline-body h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .timeline-role {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .timeline-desc {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: #48484a;
+      line-height: 1.7;
+    }
+
+    .featured-case {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .featured-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #0066cc;
+      margin-bottom: 12px;
+    }
+    .featured-case h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .featured-case p {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 13px 15px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .btn-submit {
+      padding: 13px 26px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    /* FLOATING BUTTONS */
     .floating-widget {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 24px;
+      right: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       z-index: 999;
     }
-
     .float-btn {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      transition: all 0.2s ease;
       cursor: pointer;
       text-decoration: none;
-      position: relative;
     }
     .float-btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+      transform: translateY(-2px) scale(1.05);
     }
-
-    /* 1. Nút Zalo */
-    .btn-zalo {
-      background: #ffffff;
-      border: 1px solid #e1e8ed;
-      padding: 4px;
-    }
-    .btn-zalo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-    }
-
-    /* 2. Nút Gọi điện thoại */
-    .btn-phone {
-      background: #ff334b;
-      color: #ffffff;
-    }
-    .btn-phone svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-
-    /* 3. Nút LinkedIn */
-    .btn-linkedin {
-      background: #0077b5;
-      color: #ffffff;
-    }
-    .btn-linkedin svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
-
-    /* 4. Nút Back To Top */
+    .btn-zalo { background: #fff; border: 1px solid #e1e8ed; padding: 4px; }
+    .btn-zalo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+    .btn-phone { background: #ff334b; color: #fff; }
+    .btn-phone svg { width: 20px; height: 20px; fill: currentColor; }
+    .btn-linkedin { background: #0077b5; color: #fff; }
+    .btn-linkedin svg { width: 19px; height: 19px; fill: currentColor; }
     .btn-top {
-      background: #222222;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #222;
+      color: #fff;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
+      transform: translateY(8px);
     }
     .btn-top.show {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
     }
-    .btn-top svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
+    .btn-top svg { width: 17px; height: 17px; fill: currentColor; }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 36px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
-    footer { border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
-
+    /* =======================================================
+       TỐI ƯU GIAO DIỆN DI ĐỘNG (MOBILE RESPONSIVE BREAKPOINT)
+       ======================================================= */
     @media (max-width: 860px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .timeline-item { grid-template-columns: 1fr; gap: 6px; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .floating-widget { bottom: 18px; right: 18px; gap: 10px; }
-      .float-btn { width: 44px; height: 44px; }
+      .container { padding: 0 18px; }
+      
+      /* Cấu trúc thanh Header dạng 2 hàng thông minh trên Mobile */
+      .nav-wrap {
+        height: auto;
+        padding: 12px 0 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .nav-top-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-logo { font-size: 1.15rem; }
+      .btn-download-mobile { padding: 7px 14px; font-size: 0.78rem; }
+      
+      /* Menu cuộn ngang mượt mà, không bị vỡ hàng */
+      nav {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        gap: 16px;
+        -webkit-overflow-scrolling: touch;
+      }
+      nav::-webkit-scrollbar { display: none; }
+      nav a { font-size: 0.85rem; }
+
+      /* Cân đối lại ảnh Hero trên Mobile */
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .hero-img-box {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .hero-img {
+        height: 340px;
+      }
+      
+      .hero-content {
+        text-align: left;
+      }
+      .hero-content h1 {
+        font-size: 2.1rem;
+      }
+      .hero-subtitle {
+        font-size: 0.98rem;
+      }
+
+      /* Chuyển Timeline & Form sang 1 cột */
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .featured-case {
+        padding: 24px;
+      }
+
+      /* Nút nổi thu nhỏ vừa vặn */
+      .floating-widget {
+        bottom: 16px;
+        right: 14px;
+        gap: 8px;
+      }
+      .float-btn {
+        width: 40px;
+        height: 40px;
+      }
+      .btn-phone svg { width: 18px; height: 18px; }
+      .btn-linkedin svg { width: 17px; height: 17px; }
+      .btn-top svg { width: 15px; height: 15px; }
     }
   </style>
 </head>
@@ -204,18 +431,22 @@
 
   <div id="top"></div>
 
+  <!-- Header có cấu trúc tối ưu cho cả Desktop và Mobile -->
   <header>
     <div class="container nav-wrap">
-      <a href="#top" class="nav-logo" id="logo-text">Bryan Nguyen</a>
+      <div class="nav-top-row">
+        <a href="#top" class="nav-logo" id="logo-text">Bryan Nguyen</a>
+        <a href="#" id="cv-btn" target="_blank" class="btn-black btn-download-mobile">Download CV</a>
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
-        <a href="#projects">Projects</a>
+        <a href="#data-projects">Data Projects</a>
+        <a href="#projects">Case Studies</a>
         <a href="#contact">Contact</a>
-        <a href="#" id="cv-btn" target="_blank" class="btn-black">Download CV</a>
       </nav>
     </div>
   </header>
@@ -225,16 +456,16 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-grid">
-        <div>
-          <img id="avatar" src="" alt="Profile Image" class="hero-img">
+        <div class="hero-img-box">
+          <img id="avatar" src="avatar.png" alt="Profile Image" class="hero-img">
         </div>
         <div class="hero-content">
-          <h1 id="hero-name">Loading...</h1>
-          <p class="hero-subtitle" id="hero-title"></p>
+          <h1 id="hero-name">Huynh Quang Tri Nguyen</h1>
+          <p class="hero-subtitle" id="hero-title">Bachelor of International Business / Master of Business Analytics</p>
           <div class="contact-inline">
-            <p><strong>Phone:</strong> <span id="phone"></span></p>
-            <p><strong>Email:</strong> <span id="email"></span></p>
-            <p><strong>Location:</strong> <span id="location"></span></p>
+            <p><strong>Phone:</strong> <span id="phone">0838673639</span></p>
+            <p><strong>Email:</strong> <span id="email">quangtritc1805@gmail.com</span></p>
+            <p><strong>Location:</strong> <span id="location">Ho Chi Minh City, Vietnam</span></p>
             <div class="social-links" id="social-links"></div>
           </div>
           <a href="#about" class="btn-black">More About Me ↓</a>
@@ -278,7 +509,7 @@
       <div class="skills-grid" id="data-projects-container"></div>
     </section>
 
-    <!-- Projects / Case Studies -->
+    <!-- Case Studies -->
     <section id="projects">
       <h2 class="section-title">Featured Projects & Case Studies</h2>
       <div id="projects-container"></div>
@@ -289,7 +520,7 @@
       <h2 class="section-title">Get in Touch</h2>
       <div class="contact-grid">
         <div>
-          <p style="font-size: 1.05rem; color: #48484a; line-height: 1.8; margin-bottom: 20px;">
+          <p style="font-size: 1.02rem; color: #48484a; line-height: 1.8; margin-bottom: 20px;">
             Whether you want to discuss enterprise payment solutions, data analytics, or potential career opportunities, feel free to reach out.
           </p>
           <p style="margin-bottom: 8px;"><strong>Phone:</strong> <span id="contact-phone"></span></p>
@@ -308,30 +539,24 @@
 
   </main>
 
-  <!-- ==============================================
-       KHỐI BUTTON FLOATING: ZALO, CALL, LINKEDIN, TOP
-       ============================================== -->
+  <!-- CỤM NÚT NỔI LIÊN HỆ -->
   <div class="floating-widget">
-    <!-- Nút Zalo -->
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn btn-zalo" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
     </a>
 
-    <!-- Nút Gọi điện thoại -->
     <a href="tel:0838673639" class="float-btn btn-phone" id="float-phone" title="Gọi điện thoại">
       <svg viewBox="0 0 24 24">
         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
       </svg>
     </a>
 
-    <!-- Nút LinkedIn -->
     <a href="#" target="_blank" class="float-btn btn-linkedin" id="float-linkedin" title="Kết nối LinkedIn">
       <svg viewBox="0 0 24 24">
         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
       </svg>
     </a>
 
-    <!-- Nút Cuộn lên đầu trang -->
     <div class="float-btn btn-top" id="backToTopBtn" title="Quay về đầu trang">
       <svg viewBox="0 0 24 24">
         <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
@@ -346,9 +571,8 @@
   </footer>
 
   <script>
-    // 1. Điều khiển nút Back To Top xuất hiện khi cuộn trang
+    // Logic nút quay về đầu trang
     const backToTopBtn = document.getElementById("backToTopBtn");
-
     window.addEventListener("scroll", () => {
       if (window.scrollY > 260) {
         backToTopBtn.classList.add("show");
@@ -356,18 +580,16 @@
         backToTopBtn.classList.remove("show");
       }
     });
-
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 2. Fetch dữ liệu từ data.json
+    // Nạp dữ liệu từ data.json
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Nạp Profile & Hero
         document.getElementById('page-title').innerText = data.profile.name + " | Portfolio";
-        document.getElementById('logo-text').innerText = data.profile.name;
+        document.getElementById('logo-text').innerText = "Bryan Nguyen";
         document.getElementById('hero-name').innerText = data.profile.name;
         document.getElementById('hero-title').innerText = data.profile.title;
         document.getElementById('avatar').src = data.profile.avatarUrl;
@@ -376,19 +598,16 @@
         document.getElementById('location').innerText = data.profile.location;
         document.getElementById('cv-btn').href = data.profile.cvUrl;
 
-        // Cập nhật link cho cụm nút Floating
         document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
         document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
         if (data.profile.social && data.profile.social.linkedin) {
           document.getElementById('float-linkedin').href = data.profile.social.linkedin;
         }
 
-        // Contact info
         document.getElementById('contact-phone').innerText = data.profile.phone;
         document.getElementById('contact-email').innerText = data.profile.email;
         document.getElementById('contact-location').innerText = data.profile.location;
 
-        // Social links
         const socialWrap = document.getElementById('social-links');
         socialWrap.innerHTML = `
           <a href="${data.profile.social.linkedin}" target="_blank">LinkedIn</a>
@@ -396,10 +615,8 @@
           <a href="${data.profile.social.instagram}" target="_blank">Instagram</a>
         `;
 
-        // About Me
         document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
-        // Skills
         document.getElementById('skills-container').innerHTML = data.skills.map(s => `
           <div class="skill-card">
             <h3>${s.category}</h3>
@@ -409,7 +626,6 @@
           </div>
         `).join('');
 
-        // Work Experience
         document.getElementById('experience-container').innerHTML = data.experience.map(e => `
           <div class="timeline-item">
             <div class="timeline-date">${e.period}</div>
@@ -423,7 +639,6 @@
           </div>
         `).join('');
 
-        // Education
         document.getElementById('education-container').innerHTML = data.education.map(ed => `
           <div class="timeline-item">
             <div class="timeline-date">${ed.period}</div>
@@ -434,7 +649,6 @@
           </div>
         `).join('');
 
-        // Certifications
         if (data.certifications) {
           document.getElementById('certifications-container').innerHTML = data.certifications.map(c => `
             <div class="timeline-item">
@@ -448,7 +662,6 @@
           `).join('');
         }
 
-        // Data Projects
         if (data.dataProjects) {
           document.getElementById('data-projects-container').innerHTML = data.dataProjects.map(dp => `
             <div class="skill-card">
@@ -460,7 +673,6 @@
           `).join('');
         }
 
-        // Projects
         document.getElementById('projects-container').innerHTML = data.projects.map(p => `
           <div class="featured-case">
             <span class="featured-tag">${p.tag}</span>
@@ -470,7 +682,7 @@
           </div>
         `).join('');
       })
-      .catch(err => console.error("Lỗi đọc file data.json:", err));
+      .catch(err => console.error("Lỗi nạp file data.json:", err));
   </script>
 </body>
 </html>
