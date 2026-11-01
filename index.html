@@ -230,7 +230,7 @@
       line-height: 1.7;
     }
 
-    /* Thumbnail Chứng chỉ */
+    /* Thumbnail Chứng chỉ (SAS & IELTS) */
     .cert-img-wrap {
       margin-top: 14px;
     }
@@ -556,7 +556,7 @@
 
     <a href="tel:0838673639" class="float-btn btn-phone" id="float-phone" title="Gọi điện thoại">
       <svg viewBox="0 0 24 24">
-        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
       </svg>
     </a>
 
@@ -665,7 +665,7 @@
           </div>
         `).join('');
 
-        // Certifications (Hỗ trợ hiển thị thumbnail ảnh chứng chỉ)
+        // Certifications (Hỗ trợ hiển thị thumbnail ảnh cho cả SAS và IELTS)
         if (data.certifications) {
           document.getElementById('certifications-container').innerHTML = data.certifications.map(c => `
             <div class="timeline-item">
