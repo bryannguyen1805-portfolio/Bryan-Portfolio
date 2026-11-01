@@ -112,16 +112,18 @@
   ],
   "certifications": [
     {
-      "name": "Data Analytics Immersion Program",
-      "issuer": "MindX Technology School",
-      "period": "2025 – 2026",
-      "skills": "Python, SQL, Advanced Power BI, Data Cleansing & Storytelling"
+      "name": "SAS® Academic Specialisation in Advanced Business Analytics",
+      "issuer": "SAS & University of Wollongong",
+      "period": "August 2025",
+      "skills": "Enterprise Business Analytics, SAS Software, Statistical Modeling & Advanced Predictive Insights",
+      "imageUrl": "Certificate.jpeg"
     },
     {
       "name": "English Proficiency – Professional Working Competence",
       "issuer": "IELTS Academic",
       "period": "International Certified",
-      "skills": "Executive Cross-border Communication & Technical Proposals"
+      "skills": "Executive Cross-border Communication & Technical Proposals",
+      "imageUrl": ""
     }
   ],
   "dataProjects": [
