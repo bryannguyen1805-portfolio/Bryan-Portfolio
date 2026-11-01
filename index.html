@@ -21,7 +21,6 @@
       --primary-hover: #0747a6;
       --accent: #0ea5e9;
       --border: #e2e8f0;
-      --border-focus: #cbd5e1;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
       --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
       --shadow-hover: 0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
@@ -150,7 +149,6 @@
     }
 
     .hero-img-box {
-      position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-card);
@@ -199,7 +197,6 @@
       font-weight: 500;
     }
 
-    /* Metric Grid (Lấy cảm hứng từ Payoo/PiHome) */
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -266,14 +263,12 @@
       transform: translateY(-1px);
     }
 
-    /* GLOBAL SECTION STYLING */
+    /* GLOBAL SECTIONS */
     section {
       padding: 70px 0;
       border-top: 1px solid var(--border);
     }
-    .section-header {
-      margin-bottom: 36px;
-    }
+    .section-header { margin-bottom: 36px; }
     .section-eyebrow {
       font-size: 0.8rem;
       font-weight: 700;
@@ -290,7 +285,7 @@
       letter-spacing: -0.5px;
     }
 
-    /* ABOUT SECTION */
+    /* ABOUT */
     .about-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -306,12 +301,9 @@
       flex-direction: column;
       gap: 18px;
     }
-    .about-text strong {
-      color: var(--text-main);
-      font-weight: 700;
-    }
+    .about-text strong { color: var(--text-main); font-weight: 700; }
 
-    /* SKILLS CHIPS */
+    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -347,15 +339,8 @@
       justify-content: center;
       font-size: 1.1rem;
     }
-    .skill-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-    .chip-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .skill-card h3 { font-size: 1.15rem; font-weight: 700; }
+    .chip-container { display: flex; flex-wrap: wrap; gap: 8px; }
     .skill-chip {
       padding: 7px 14px;
       background: #f8fafc;
@@ -372,7 +357,7 @@
       color: var(--primary);
     }
 
-    /* TIMELINE (Experience & Education) */
+    /* TIMELINE WITH LOGOS */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -405,15 +390,33 @@
       letter-spacing: 0.3px;
       white-space: nowrap;
     }
+    .company-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+    .company-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 4px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
     .timeline-body h3 {
       font-size: 1.2rem;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 0;
     }
     .timeline-role {
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--primary);
+      margin-top: 4px;
       margin-bottom: 14px;
     }
     .timeline-desc {
@@ -425,11 +428,10 @@
     }
     .timeline-desc li { margin-bottom: 6px; }
 
-    /* CERTIFICATIONS WITH THUMBNAIL */
+    /* CERTIFICATES */
     .cert-thumb-link {
       display: inline-block;
       margin-top: 14px;
-      position: relative;
     }
     .cert-thumb {
       max-width: 320px;
@@ -446,7 +448,7 @@
       border-color: var(--primary);
     }
 
-    /* CASE STUDIES CARDS */
+    /* CASE STUDIES */
     .case-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -496,7 +498,7 @@
       margin-bottom: 20px;
     }
 
-    /* CONTACT SECTION */
+    /* CONTACT */
     .contact-card {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #fff;
@@ -631,7 +633,7 @@
       background: #ffffff;
     }
 
-    /* RESPONSIVE DESIGN (Mobile & Tablet) */
+    /* RESPONSIVE DESIGN */
     @media (max-width: 900px) {
       .container { padding: 0 20px; }
       .nav-wrap {
@@ -694,11 +696,9 @@
 </head>
 <body>
 
-  <!-- Progress Bar -->
   <div id="scrollProgress"></div>
   <div id="top"></div>
 
-  <!-- Header -->
   <header>
     <div class="container nav-wrap">
       <div class="nav-top-row">
@@ -734,7 +734,6 @@
           <h1 id="hero-name">Huynh Quang Tri Nguyen</h1>
           <p class="hero-subtitle" id="hero-title">Master of Business Analytics | Omnichannel Payment Infrastructure</p>
           
-          <!-- Metric Highlights (Phong cách Payoo/PiHome) -->
           <div class="metric-grid">
             <div class="metric-item">
               <div class="metric-num">50+</div>
@@ -959,14 +958,17 @@
           `;
         }).join('');
 
-        // Work Experience
+        // Work Experience (Kèm logo công ty)
         document.getElementById('experience-container').innerHTML = data.experience.map(e => `
           <div class="timeline-card">
             <div>
               <span class="timeline-badge">${e.period}</span>
             </div>
             <div class="timeline-body">
-              <h3>${e.company}</h3>
+              <div class="company-header">
+                ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo">` : ''}
+                <h3 style="margin-bottom: 0;">${e.company}</h3>
+              </div>
               <div class="timeline-role">${e.role}</div>
               <ul class="timeline-desc">
                 ${e.bullets.map(b => `<li>${b}</li>`).join('')}
