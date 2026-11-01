@@ -20,6 +20,7 @@
       --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg);
       color: var(--text-main);
@@ -53,7 +54,16 @@
     section { padding: 70px 0; border-top: 1px solid var(--border-color); }
     .hero { padding: 60px 0 80px; border-top: none; }
     .hero-grid { display: grid; grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
-    .hero-img { width: 100%; height: 520px; object-fit: cover; object-position: center top; border-radius: 20px; box-shadow: var(--shadow-md); }
+    
+    /* Chỉnh căn giữa gương mặt ảnh chân dung không bị mất đầu */
+    .hero-img { 
+      width: 100%; 
+      height: 520px; 
+      object-fit: cover; 
+      object-position: center 20%; 
+      border-radius: 20px; 
+      box-shadow: var(--shadow-md); 
+    }
     
     .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 2.75rem; line-height: 1.15; margin-bottom: 12px; }
     .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px; }
@@ -64,6 +74,7 @@
 
     .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 28px; }
     .about-text { font-size: 1.05rem; line-height: 1.8; color: #3a3a3c; max-width: 820px; display: flex; flex-direction: column; gap: 18px; }
+    .about-text strong { color: #000; font-weight: 600; }
     
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
     .skill-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); }
@@ -79,7 +90,7 @@
     .timeline-role { font-size: 0.95rem; font-weight: 500; margin-bottom: 12px; }
     .timeline-desc { list-style: disc; padding-left: 20px; font-size: 0.92rem; color: #48484a; line-height: 1.7; }
 
-    .featured-case { background: #fff; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-sm); }
+    .featured-case { background: #fff; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
     .featured-tag { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #0066cc; margin-bottom: 12px; }
     .featured-case h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 16px; }
     .featured-case p { font-size: 0.98rem; color: var(--text-muted); margin-bottom: 24px; }
@@ -92,24 +103,63 @@
     .contact-form textarea { resize: vertical; min-height: 120px; }
     .btn-submit { padding: 14px 28px; background: #000; color: #fff; border: none; border-radius: 9999px; font-size: 0.95rem; cursor: pointer; }
 
+    /* Nút Button quay về đầu trang (Back to top) */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      background-color: #000;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+    }
+    #backToTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    #backToTopBtn:hover {
+      background-color: #333;
+      transform: translateY(-3px);
+    }
+
     footer { border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
     @media (max-width: 860px) {
       .hero-grid { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; gap: 6px; }
       .contact-grid { grid-template-columns: 1fr; }
+      #backToTopBtn { bottom: 20px; right: 20px; width: 44px; height: 44px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Điểm neo đầu trang -->
+  <div id="top"></div>
+
   <header>
     <div class="container nav-wrap">
-      <a href="#" class="nav-logo" id="logo-text">Bryan Nguyen</a>
+      <a href="#top" class="nav-logo" id="logo-text">Bryan Nguyen</a>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <a href="#" id="cv-btn" target="_blank" class="btn-black">Download CV</a>
@@ -163,7 +213,19 @@
       <div class="timeline" id="education-container"></div>
     </section>
 
-    <!-- Projects -->
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <h2 class="section-title">Certifications & Professional Training</h2>
+      <div class="timeline" id="certifications-container"></div>
+    </section>
+
+    <!-- Data Analytics Projects Section -->
+    <section id="data-projects">
+      <h2 class="section-title">Data Analytics & Technical Projects</h2>
+      <div class="skills-grid" id="data-projects-container"></div>
+    </section>
+
+    <!-- Business & FinTech Projects -->
     <section id="projects">
       <h2 class="section-title">Featured Projects & Case Studies</h2>
       <div id="projects-container"></div>
@@ -193,18 +255,40 @@
 
   </main>
 
+  <!-- Nút bấm quay lại đầu trang -->
+  <button id="backToTopBtn" aria-label="Quay lại đầu trang" title="Quay lại đầu trang">↑</button>
+
   <footer>
     <div class="container">
       <p id="footer-text">© 2026 Bryan Nguyen. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Script nạp dữ liệu từ data.json -->
+  <!-- Script xử lý nạp dữ liệu và sự kiện cuộn trang -->
   <script>
+    // 1. Logic nút Back to Top
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    // 2. Fetch dữ liệu từ data.json
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Nạp Profile & Hero
+        // Profile & Hero
         document.getElementById('page-title').innerText = data.profile.name + " | Portfolio";
         document.getElementById('logo-text').innerText = data.profile.name;
         document.getElementById('hero-name').innerText = data.profile.name;
@@ -215,7 +299,7 @@
         document.getElementById('location').innerText = data.profile.location;
         document.getElementById('cv-btn').href = data.profile.cvUrl;
 
-        // Contact info bên dưới
+        // Contact info
         document.getElementById('contact-phone').innerText = data.profile.phone;
         document.getElementById('contact-email').innerText = data.profile.email;
         document.getElementById('contact-location').innerText = data.profile.location;
@@ -228,7 +312,7 @@
           <a href="${data.profile.social.instagram}" target="_blank">Instagram</a>
         `;
 
-        // About Me
+        // About Me (Hỗ trợ HTML tag như <strong>)
         document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
         // Skills
@@ -266,7 +350,33 @@
           </div>
         `).join('');
 
-        // Projects
+        // Certifications
+        if (data.certifications) {
+          document.getElementById('certifications-container').innerHTML = data.certifications.map(c => `
+            <div class="timeline-item">
+              <div class="timeline-date">${c.period}</div>
+              <div class="timeline-body">
+                <h3>${c.name}</h3>
+                <div class="timeline-role">${c.issuer}</div>
+                <p style="font-size: 0.92rem; color: #6e6e73;">${c.skills}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // Data Projects
+        if (data.dataProjects) {
+          document.getElementById('data-projects-container').innerHTML = data.dataProjects.map(dp => `
+            <div class="skill-card">
+              <span class="featured-tag">${dp.category}</span>
+              <h3 style="margin-top: 6px;">${dp.title}</h3>
+              <p style="font-size: 0.93rem; color: #48484a; margin-bottom: 14px;">${dp.description}</p>
+              <div style="font-size: 0.82rem; font-weight: 500; color: #000;"><strong>Tech Stack:</strong> ${dp.tools}</div>
+            </div>
+          `).join('');
+        }
+
+        // Featured Projects / Case Studies
         document.getElementById('projects-container').innerHTML = data.projects.map(p => `
           <div class="featured-case">
             <span class="featured-tag">${p.tag}</span>
