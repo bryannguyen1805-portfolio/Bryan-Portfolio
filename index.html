@@ -230,6 +230,24 @@
       line-height: 1.7;
     }
 
+    /* Thumbnail Chứng chỉ */
+    .cert-img-wrap {
+      margin-top: 14px;
+    }
+    .cert-thumb {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+    }
+    .cert-thumb:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-md);
+    }
+
     .featured-case {
       background: #fff;
       border: 1px solid var(--border-color);
@@ -341,13 +359,9 @@
       color: var(--text-muted);
     }
 
-    /* =======================================================
-       TỐI ƯU GIAO DIỆN DI ĐỘNG (MOBILE RESPONSIVE BREAKPOINT)
-       ======================================================= */
+    /* MOBILE RESPONSIVE */
     @media (max-width: 860px) {
       .container { padding: 0 18px; }
-      
-      /* Cấu trúc thanh Header dạng 2 hàng thông minh trên Mobile */
       .nav-wrap {
         height: auto;
         padding: 12px 0 10px;
@@ -364,7 +378,6 @@
       .nav-logo { font-size: 1.15rem; }
       .btn-download-mobile { padding: 7px 14px; font-size: 0.78rem; }
       
-      /* Menu cuộn ngang mượt mà, không bị vỡ hàng */
       nav {
         width: 100%;
         overflow-x: auto;
@@ -375,7 +388,6 @@
       nav::-webkit-scrollbar { display: none; }
       nav a { font-size: 0.85rem; }
 
-      /* Cân đối lại ảnh Hero trên Mobile */
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -398,7 +410,6 @@
         font-size: 0.98rem;
       }
 
-      /* Chuyển Timeline & Form sang 1 cột */
       .timeline-item {
         grid-template-columns: 1fr;
         gap: 4px;
@@ -411,7 +422,6 @@
         padding: 24px;
       }
 
-      /* Nút nổi thu nhỏ vừa vặn */
       .floating-widget {
         bottom: 16px;
         right: 14px;
@@ -431,7 +441,6 @@
 
   <div id="top"></div>
 
-  <!-- Header có cấu trúc tối ưu cho cả Desktop và Mobile -->
   <header>
     <div class="container nav-wrap">
       <div class="nav-top-row">
@@ -539,7 +548,7 @@
 
   </main>
 
-  <!-- CỤM NÚT NỔI LIÊN HỆ -->
+  <!-- FLOATING ACTION BUTTONS -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn btn-zalo" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
@@ -547,7 +556,7 @@
 
     <a href="tel:0838673639" class="float-btn btn-phone" id="float-phone" title="Gọi điện thoại">
       <svg viewBox="0 0 24 24">
-        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
       </svg>
     </a>
 
@@ -584,7 +593,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // Nạp dữ liệu từ data.json
+    // Fetch dữ liệu từ data.json
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
@@ -598,16 +607,19 @@
         document.getElementById('location').innerText = data.profile.location;
         document.getElementById('cv-btn').href = data.profile.cvUrl;
 
+        // Cập nhật Floating Widget
         document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
         document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
         if (data.profile.social && data.profile.social.linkedin) {
           document.getElementById('float-linkedin').href = data.profile.social.linkedin;
         }
 
+        // Contact section
         document.getElementById('contact-phone').innerText = data.profile.phone;
         document.getElementById('contact-email').innerText = data.profile.email;
         document.getElementById('contact-location').innerText = data.profile.location;
 
+        // Social links
         const socialWrap = document.getElementById('social-links');
         socialWrap.innerHTML = `
           <a href="${data.profile.social.linkedin}" target="_blank">LinkedIn</a>
@@ -615,8 +627,10 @@
           <a href="${data.profile.social.instagram}" target="_blank">Instagram</a>
         `;
 
+        // About
         document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
+        // Skills
         document.getElementById('skills-container').innerHTML = data.skills.map(s => `
           <div class="skill-card">
             <h3>${s.category}</h3>
@@ -626,6 +640,7 @@
           </div>
         `).join('');
 
+        // Work Experience
         document.getElementById('experience-container').innerHTML = data.experience.map(e => `
           <div class="timeline-item">
             <div class="timeline-date">${e.period}</div>
@@ -639,6 +654,7 @@
           </div>
         `).join('');
 
+        // Education
         document.getElementById('education-container').innerHTML = data.education.map(ed => `
           <div class="timeline-item">
             <div class="timeline-date">${ed.period}</div>
@@ -649,6 +665,7 @@
           </div>
         `).join('');
 
+        // Certifications (Hỗ trợ hiển thị thumbnail ảnh chứng chỉ)
         if (data.certifications) {
           document.getElementById('certifications-container').innerHTML = data.certifications.map(c => `
             <div class="timeline-item">
@@ -657,11 +674,19 @@
                 <h3>${c.name}</h3>
                 <div class="timeline-role">${c.issuer}</div>
                 <p style="font-size: 0.92rem; color: #6e6e73;">${c.skills}</p>
+                ${c.imageUrl ? `
+                  <div class="cert-img-wrap">
+                    <a href="${c.imageUrl}" target="_blank" title="Xem chứng chỉ kích thước đầy đủ">
+                      <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb">
+                    </a>
+                  </div>
+                ` : ''}
               </div>
             </div>
           `).join('');
         }
 
+        // Data Projects
         if (data.dataProjects) {
           document.getElementById('data-projects-container').innerHTML = data.dataProjects.map(dp => `
             <div class="skill-card">
@@ -673,6 +698,7 @@
           `).join('');
         }
 
+        // Featured Case Studies
         document.getElementById('projects-container').innerHTML = data.projects.map(p => `
           <div class="featured-case">
             <span class="featured-tag">${p.tag}</span>
