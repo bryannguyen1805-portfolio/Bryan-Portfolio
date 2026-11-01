@@ -55,7 +55,6 @@
     .hero { padding: 60px 0 80px; border-top: none; }
     .hero-grid { display: grid; grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
     
-    /* Chỉnh căn giữa gương mặt ảnh chân dung không bị mất đầu */
     .hero-img { 
       width: 100%; 
       height: 520px; 
@@ -103,37 +102,91 @@
     .contact-form textarea { resize: vertical; min-height: 120px; }
     .btn-submit { padding: 14px 28px; background: #000; color: #fff; border: none; border-radius: 9999px; font-size: 0.95rem; cursor: pointer; }
 
-    /* Nút Button quay về đầu trang (Back to top) */
-    #backToTopBtn {
+    /* ====================================================
+       CỤM NÚT LIÊN HỆ & BACK TO TOP NỔI (FLOATING WIDGET)
+       ==================================================== */
+    .floating-widget {
       position: fixed;
-      bottom: 32px;
-      right: 32px;
+      bottom: 28px;
+      right: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
       width: 48px;
       height: 48px;
-      background-color: #000;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+    }
+    .float-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    }
+
+    /* 1. Nút Zalo */
+    .btn-zalo {
+      background: #ffffff;
+      border: 1px solid #e1e8ed;
+      padding: 4px;
+    }
+    .btn-zalo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    /* 2. Nút Gọi điện thoại */
+    .btn-phone {
+      background: #ff334b;
+      color: #ffffff;
+    }
+    .btn-phone svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* 3. Nút LinkedIn */
+    .btn-linkedin {
+      background: #0077b5;
+      color: #ffffff;
+    }
+    .btn-linkedin svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* 4. Nút Back To Top */
+    .btn-top {
+      background: #222222;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
       opacity: 0;
       visibility: hidden;
-      transform: translateY(12px);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 999;
+      transform: translateY(10px);
     }
-    #backToTopBtn.show {
+    .btn-top.show {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
     }
-    #backToTopBtn:hover {
-      background-color: #333;
-      transform: translateY(-3px);
+    .btn-top svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
 
     footer { border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
@@ -142,13 +195,13 @@
       .hero-grid { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; gap: 6px; }
       .contact-grid { grid-template-columns: 1fr; }
-      #backToTopBtn { bottom: 20px; right: 20px; width: 44px; height: 44px; }
+      .floating-widget { bottom: 18px; right: 18px; gap: 10px; }
+      .float-btn { width: 44px; height: 44px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Điểm neo đầu trang -->
   <div id="top"></div>
 
   <header>
@@ -213,19 +266,19 @@
       <div class="timeline" id="education-container"></div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Certifications -->
     <section id="certifications">
       <h2 class="section-title">Certifications & Professional Training</h2>
       <div class="timeline" id="certifications-container"></div>
     </section>
 
-    <!-- Data Analytics Projects Section -->
+    <!-- Data Projects -->
     <section id="data-projects">
       <h2 class="section-title">Data Analytics & Technical Projects</h2>
       <div class="skills-grid" id="data-projects-container"></div>
     </section>
 
-    <!-- Business & FinTech Projects -->
+    <!-- Projects / Case Studies -->
     <section id="projects">
       <h2 class="section-title">Featured Projects & Case Studies</h2>
       <div id="projects-container"></div>
@@ -255,8 +308,36 @@
 
   </main>
 
-  <!-- Nút bấm quay lại đầu trang -->
-  <button id="backToTopBtn" aria-label="Quay lại đầu trang" title="Quay lại đầu trang">↑</button>
+  <!-- ==============================================
+       KHỐI BUTTON FLOATING: ZALO, CALL, LINKEDIN, TOP
+       ============================================== -->
+  <div class="floating-widget">
+    <!-- Nút Zalo -->
+    <a href="https://zalo.me/0838673639" target="_blank" class="float-btn btn-zalo" id="float-zalo" title="Chat Zalo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+    </a>
+
+    <!-- Nút Gọi điện thoại -->
+    <a href="tel:0838673639" class="float-btn btn-phone" id="float-phone" title="Gọi điện thoại">
+      <svg viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 1 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+
+    <!-- Nút LinkedIn -->
+    <a href="#" target="_blank" class="float-btn btn-linkedin" id="float-linkedin" title="Kết nối LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+      </svg>
+    </a>
+
+    <!-- Nút Cuộn lên đầu trang -->
+    <div class="float-btn btn-top" id="backToTopBtn" title="Quay về đầu trang">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+      </svg>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
@@ -264,13 +345,12 @@
     </div>
   </footer>
 
-  <!-- Script xử lý nạp dữ liệu và sự kiện cuộn trang -->
   <script>
-    // 1. Logic nút Back to Top
+    // 1. Điều khiển nút Back To Top xuất hiện khi cuộn trang
     const backToTopBtn = document.getElementById("backToTopBtn");
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 260) {
         backToTopBtn.classList.add("show");
       } else {
         backToTopBtn.classList.remove("show");
@@ -278,17 +358,14 @@
     });
 
     backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     // 2. Fetch dữ liệu từ data.json
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Profile & Hero
+        // Nạp Profile & Hero
         document.getElementById('page-title').innerText = data.profile.name + " | Portfolio";
         document.getElementById('logo-text').innerText = data.profile.name;
         document.getElementById('hero-name').innerText = data.profile.name;
@@ -298,6 +375,13 @@
         document.getElementById('email').innerText = data.profile.email;
         document.getElementById('location').innerText = data.profile.location;
         document.getElementById('cv-btn').href = data.profile.cvUrl;
+
+        // Cập nhật link cho cụm nút Floating
+        document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
+        document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
+        if (data.profile.social && data.profile.social.linkedin) {
+          document.getElementById('float-linkedin').href = data.profile.social.linkedin;
+        }
 
         // Contact info
         document.getElementById('contact-phone').innerText = data.profile.phone;
@@ -312,7 +396,7 @@
           <a href="${data.profile.social.instagram}" target="_blank">Instagram</a>
         `;
 
-        // About Me (Hỗ trợ HTML tag như <strong>)
+        // About Me
         document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
         // Skills
@@ -376,7 +460,7 @@
           `).join('');
         }
 
-        // Featured Projects / Case Studies
+        // Projects
         document.getElementById('projects-container').innerHTML = data.projects.map(p => `
           <div class="featured-case">
             <span class="featured-tag">${p.tag}</span>
