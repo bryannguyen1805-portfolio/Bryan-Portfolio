@@ -103,6 +103,38 @@
       border-radius: 50%;
     }
 
+    .nav-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: inline-flex;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 3px;
+      gap: 2px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
     /* 5 Main Nav Tabs */
     .main-nav {
       display: flex;
@@ -633,18 +665,26 @@
       <div class="nav-top-row">
         <div class="nav-logo-group">
           <span class="nav-logo" onclick="switchPage('about')">Bryan Nguyen</span>
-          <span class="status-badge"><span class="status-dot"></span> Open to Connect</span>
+          <span class="status-badge"><span class="status-dot"></span> <span id="status-text">Open to Connect</span></span>
         </div>
-        <a href="#" id="cv-btn" target="_blank" class="btn-primary">Download CV ↗</a>
+        
+        <div class="nav-right-actions">
+          <!-- Switcher Chọn Ngôn ngữ (EN | VI) -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" id="btn-vi" onclick="setLanguage('vi')">VI</button>
+          </div>
+          <a href="#" id="cv-btn" target="_blank" class="btn-primary">Download CV ↗</a>
+        </div>
       </div>
 
       <!-- 5 MỤC NAV -->
       <nav class="main-nav">
-        <div class="nav-tab active" onclick="switchPage('about')">About</div>
-        <div class="nav-tab" onclick="switchPage('resume')">Resume</div>
-        <div class="nav-tab" onclick="switchPage('business-dev')">Business Development</div>
-        <div class="nav-tab" onclick="switchPage('data-analyst')">Data Analyst</div>
-        <div class="nav-tab" onclick="switchPage('contact')">Contact</div>
+        <div class="nav-tab active" id="tab-about" onclick="switchPage('about')">About</div>
+        <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
+        <div class="nav-tab" id="tab-bd" onclick="switchPage('business-dev')">Business Development</div>
+        <div class="nav-tab" id="tab-da" onclick="switchPage('data-analyst')">Data Analyst</div>
+        <div class="nav-tab" id="tab-contact" onclick="switchPage('contact')">Contact</div>
       </nav>
     </div>
   </header>
@@ -658,14 +698,14 @@
           <img id="avatar" src="avatar.png" alt="Profile Image" class="hero-img">
         </div>
         <div class="hero-content">
-          <div class="hero-eyebrow">Enterprise B2B & Fintech Specialist</div>
+          <div class="hero-eyebrow" id="hero-eyebrow">Enterprise B2B & Fintech Specialist</div>
           <h1 id="hero-name">Huynh Quang Tri Nguyen</h1>
-          <p class="hero-subtitle" id="hero-title">Master of Business Analytics | Omnichannel Payment Infrastructure</p>
+          <p class="hero-subtitle" id="hero-title"></p>
           
           <div class="hero-contact-row">
-            <span>📍 <strong id="location">Ho Chi Minh City, Vietnam</strong></span>
-            <span>📞 <strong id="phone">0838673639</strong></span>
-            <span>✉️ <strong id="email">quangtritc1805@gmail.com</strong></span>
+            <span>📍 <strong id="location"></strong></span>
+            <span>📞 <strong id="phone"></strong></span>
+            <span>✉️ <strong id="email"></strong></span>
           </div>
 
           <div class="social-pills" id="social-links"></div>
@@ -673,8 +713,8 @@
       </div>
 
       <div class="section-header">
-        <span class="section-eyebrow">Professional Philosophy</span>
-        <h2 class="section-title">Bridging Analytics & Commercial Growth</h2>
+        <span class="section-eyebrow" id="about-eyebrow">Professional Philosophy</span>
+        <h2 class="section-title" id="about-heading">Bridging Analytics & Commercial Growth</h2>
       </div>
       <div class="content-card">
         <div class="about-text" id="about-container"></div>
@@ -685,22 +725,22 @@
     <section id="page-resume" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Curriculum Vitae</span>
-        <h2 class="section-title">Comprehensive Resume</h2>
+        <h2 class="section-title" id="resume-heading">Comprehensive Resume</h2>
       </div>
 
-      <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Core Capabilities & Tech Stack</h3>
+      <h3 style="font-size: 1.3rem; margin-bottom: 16px;" id="resume-skills-title">Core Capabilities & Tech Stack</h3>
       <div class="skills-grid" id="resume-skills-container"></div>
 
-      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Work Experience</h3>
+      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-exp-title">Work Experience</h3>
       <div class="timeline" id="resume-experience-container"></div>
 
-      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Academic Credentials</h3>
+      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-edu-title">Academic Credentials</h3>
       <div class="timeline" id="resume-education-container"></div>
 
-      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Certifications & Accreditations</h3>
+      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-cert-title">Certifications & Accreditations</h3>
       <div class="timeline" id="resume-cert-container"></div>
 
-      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Executive Case Studies</h3>
+      <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-case-title">Executive Case Studies</h3>
       <div id="resume-case-container"></div>
     </section>
 
@@ -708,7 +748,7 @@
     <section id="page-business-dev" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Enterprise Solutions</span>
-        <h2 class="section-title">Business Development Portfolio</h2>
+        <h2 class="section-title" id="bd-heading">Business Development Portfolio</h2>
       </div>
 
       <div class="subnav-tabs">
@@ -727,16 +767,15 @@
             <img src="payoo.jpg" alt="Payoo" class="company-logo" style="width:48px; height:48px;">
             <div>
               <h3 style="font-size:1.3rem;">Payoo (VietUnion) – Payment Infrastructure</h3>
-              <span class="timeline-badge">Oct 2025 – Present</span>
+              <span class="timeline-badge" id="bd-payoo-period">Oct 2025 – Present</span>
             </div>
           </div>
           <p id="bd-payoo-summary" style="font-size:0.98rem; color:#475569; line-height:1.7;"></p>
           
-          <!-- Bảng số liệu Payoo được đặt tại đây -->
           <div class="metric-grid" id="bd-payoo-metrics"></div>
         </div>
 
-        <h3 style="font-size:1.3rem; margin-bottom:16px;">Key Merchant Solutions & Projects</h3>
+        <h3 style="font-size:1.3rem; margin-bottom:16px;" id="bd-payoo-proj-title">Key Merchant Solutions & Projects</h3>
         <div id="bd-payoo-projects"></div>
       </div>
 
@@ -747,13 +786,13 @@
             <img src="proscan.jpeg" alt="ProScan" class="company-logo" style="width:48px; height:48px;">
             <div>
               <h3 style="font-size:1.3rem;">ProScan Global – Security Screening & Technology</h3>
-              <span class="timeline-badge">Oct 2025 – Mar 2026</span>
+              <span class="timeline-badge" id="bd-proscan-period">Oct 2025 – Mar 2026</span>
             </div>
           </div>
           <p id="bd-proscan-summary" style="font-size:0.98rem; color:#475569; line-height:1.7;"></p>
         </div>
 
-        <h3 style="font-size:1.3rem; margin-bottom:16px;">Market Research & Overseas Tender Pipeline</h3>
+        <h3 style="font-size:1.3rem; margin-bottom:16px;" id="bd-proscan-proj-title">Market Research & Overseas Tender Pipeline</h3>
         <div id="bd-proscan-projects"></div>
       </div>
     </section>
@@ -762,13 +801,13 @@
     <section id="page-data-analyst" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Quantitative Engineering</span>
-        <h2 class="section-title">Data Analytics & Pipeline Engineering</h2>
+        <h2 class="section-title" id="da-heading">Data Analytics & Pipeline Engineering</h2>
       </div>
 
-      <h3 style="font-size:1.3rem; margin-bottom:16px;">Analytical Systems & Data Projects</h3>
+      <h3 style="font-size:1.3rem; margin-bottom:16px;" id="da-proj-title">Analytical Systems & Data Projects</h3>
       <div class="skills-grid" id="da-projects-container"></div>
 
-      <h3 style="font-size:1.3rem; margin:36px 0 16px;">Verified Analytics Credentials</h3>
+      <h3 style="font-size:1.3rem; margin:36px 0 16px;" id="da-cert-title">Verified Analytics Credentials</h3>
       <div class="timeline" id="da-cert-container"></div>
     </section>
 
@@ -777,19 +816,19 @@
       <div class="contact-card">
         <div class="contact-grid">
           <div class="contact-info">
-            <span class="section-eyebrow" style="color: var(--accent);">Direct Connection</span>
-            <h3>Let's Build Strategic Value Together</h3>
-            <p>Whether discussing enterprise payment solutions, data automation, or commercial partnership opportunities, feel free to drop a message.</p>
+            <span class="section-eyebrow" style="color: var(--accent);" id="contact-eyebrow">Direct Connection</span>
+            <h3 id="contact-heading">Let's Build Strategic Value Together</h3>
+            <p id="contact-sub">Whether discussing enterprise payment solutions, data automation, or commercial partnership opportunities, feel free to drop a message.</p>
             <div class="contact-pill-list">
-              <div class="contact-pill-item">📞 <span id="contact-phone">0838673639</span></div>
-              <div class="contact-pill-item">✉️ <span id="contact-email">quangtritc1805@gmail.com</span></div>
-              <div class="contact-pill-item">📍 <span id="contact-location">Ho Chi Minh City, Vietnam</span></div>
+              <div class="contact-pill-item">📞 <span id="contact-phone"></span></div>
+              <div class="contact-pill-item">✉️ <span id="contact-email"></span></div>
+              <div class="contact-pill-item">📍 <span id="contact-location"></span></div>
             </div>
           </div>
           <form id="leadForm" class="contact-form">
             <input type="text" id="name" required placeholder="Your Name / Organization">
             <input type="email" id="email-input" required placeholder="Your Corporate Email">
-            <input type="text" id="company" placeholder="Subject / Partnership Scope">
+            <input type="text" id="company" placeholder="Subject / Scope">
             <textarea id="message" required placeholder="How can we collaborate?"></textarea>
             <button type="submit" id="submitBtn" class="btn-submit">Send Message →</button>
           </form>
@@ -822,6 +861,9 @@
   </footer>
 
   <script>
+    let globalData = null;
+    let currentLang = localStorage.getItem('site_lang') || 'en';
+
     // 1. Chuyển đổi giữa 5 trang chính
     function switchPage(pageKey) {
       document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
@@ -855,7 +897,195 @@
       }
     }
 
-    // 3. Logic thanh Progress bar & nút Back to top
+    // 3. Chức năng đổi ngôn ngữ (Language Switcher)
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('site_lang', lang);
+      
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+      
+      if (globalData) {
+        renderContent(globalData[currentLang]);
+      }
+    }
+
+    // 4. Render toàn bộ nội dung theo ngôn ngữ đã chọn
+    function renderContent(data) {
+      // Navbar & Headings
+      document.getElementById('page-title').innerText = data.profile.name + " | Enterprise Fintech Portfolio";
+      document.getElementById('status-text').innerText = data.nav.status;
+      document.getElementById('cv-btn').innerText = data.nav.downloadCv;
+      document.getElementById('cv-btn').href = data.profile.cvUrl;
+      document.getElementById('tab-about').innerText = data.nav.about;
+      document.getElementById('tab-resume').innerText = data.nav.resume;
+      document.getElementById('tab-bd').innerText = data.nav.bd;
+      document.getElementById('tab-da').innerText = data.nav.da;
+      document.getElementById('tab-contact').innerText = data.nav.contact;
+
+      // Profile & Hero
+      document.getElementById('hero-name').innerText = data.profile.name;
+      document.getElementById('hero-title').innerText = data.profile.title;
+      document.getElementById('avatar').src = data.profile.avatarUrl;
+      document.getElementById('phone').innerText = data.profile.phone;
+      document.getElementById('email').innerText = data.profile.email;
+      document.getElementById('location').innerText = data.profile.location;
+
+      // Floating buttons
+      document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
+      document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
+      if (data.profile.social && data.profile.social.linkedin) {
+        document.getElementById('float-linkedin').href = data.profile.social.linkedin;
+      }
+
+      // Contact
+      document.getElementById('contact-phone').innerText = data.profile.phone;
+      document.getElementById('contact-email').innerText = data.profile.email;
+      document.getElementById('contact-location').innerText = data.profile.location;
+      document.getElementById('contact-heading').innerText = data.labels.contactHeading;
+      document.getElementById('contact-sub').innerText = data.labels.contactSub;
+      document.getElementById('submitBtn').innerText = data.labels.sendBtn;
+
+      // Social links
+      const socialWrap = document.getElementById('social-links');
+      socialWrap.innerHTML = `
+        <a href="${data.profile.social.linkedin}" target="_blank" class="social-pill">LinkedIn ↗</a>
+        <a href="${data.profile.social.facebook}" target="_blank" class="social-pill">Facebook ↗</a>
+        <a href="${data.profile.social.instagram}" target="_blank" class="social-pill">Instagram ↗</a>
+      `;
+
+      // About
+      document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
+
+      // RESUME: Skills
+      document.getElementById('resume-skills-container').innerHTML = data.skills.map((s, idx) => {
+        const icon = idx === 0 ? "💳" : idx === 1 ? "📊" : "💼";
+        return `
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">${icon}</div>
+              <h3 style="font-size:1.1rem; font-weight:700;">${s.category}</h3>
+            </div>
+            <div class="chip-container">
+              ${s.items.map(item => `<span class="skill-chip">${item}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // RESUME: Experience
+      document.getElementById('resume-experience-container').innerHTML = data.experience.map(e => `
+        <div class="timeline-card">
+          <div><span class="timeline-badge">${e.period}</span></div>
+          <div>
+            <div class="company-header">
+              ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo">` : ''}
+              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0;">${e.company}</h3>
+            </div>
+            <div class="timeline-role">${e.role}</div>
+            <ul class="timeline-desc">
+              ${e.bullets.map(b => `<li>${b}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `).join('');
+
+      // RESUME: Education
+      document.getElementById('resume-education-container').innerHTML = data.education.map(ed => `
+        <div class="timeline-card">
+          <div><span class="timeline-badge">${ed.period}</span></div>
+          <div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${ed.school}</h3>
+            <div class="timeline-role">${ed.degree}</div>
+          </div>
+        </div>
+      `).join('');
+
+      // RESUME: Certifications
+      if (data.certifications) {
+        const certHtml = data.certifications.map(c => `
+          <div class="timeline-card">
+            <div><span class="timeline-badge">${c.period}</span></div>
+            <div>
+              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${c.name}</h3>
+              <div class="timeline-role">${c.issuer}</div>
+              <p style="font-size:0.92rem; color:#64748b;">${c.skills}</p>
+              ${c.imageUrl ? `
+                <a href="${c.imageUrl}" target="_blank" title="Xem ảnh chứng chỉ">
+                  <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb">
+                </a>
+              ` : ''}
+            </div>
+          </div>
+        `).join('');
+        document.getElementById('resume-cert-container').innerHTML = certHtml;
+        document.getElementById('da-cert-container').innerHTML = certHtml;
+      }
+
+      // RESUME: Case Studies
+      document.getElementById('resume-case-container').innerHTML = data.projects.map(p => `
+        <div class="case-card">
+          <span class="case-tag">${p.tag}</span>
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+          <a href="${p.url}" target="_blank" class="btn-primary">${currentLang === 'vi' ? 'Xem Case Study Chiến lược ↗' : 'Read Strategic Case Study ↗'}</a>
+        </div>
+      `).join('');
+
+      // BUSINESS DEVELOPMENT: Payoo
+      if (data.businessDevelopment && data.businessDevelopment.payoo) {
+        const payooData = data.businessDevelopment.payoo;
+        document.getElementById('bd-payoo-summary').innerText = payooData.summary;
+        
+        if (payooData.metrics) {
+          document.getElementById('bd-payoo-metrics').innerHTML = payooData.metrics.map(m => `
+            <div class="metric-item">
+              <div class="metric-num">${m.num}</div>
+              <div class="metric-label">${m.label}</div>
+            </div>
+          `).join('');
+        }
+
+        document.getElementById('bd-payoo-projects').innerHTML = payooData.projects.map(p => `
+          <div class="case-card">
+            <span class="case-tag">${p.tag}</span>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            ${p.link !== '#' ? `<a href="${p.link}" target="_blank" class="btn-primary">${currentLang === 'vi' ? 'Xem Chi tiết Dự án ↗' : 'View Deal Breakdown ↗'}</a>` : ''}
+          </div>
+        `).join('');
+      }
+
+      // BUSINESS DEVELOPMENT: ProScan
+      if (data.businessDevelopment && data.businessDevelopment.proscan) {
+        const proscanData = data.businessDevelopment.proscan;
+        document.getElementById('bd-proscan-summary').innerText = proscanData.summary;
+        document.getElementById('bd-proscan-projects').innerHTML = proscanData.projects.map(p => `
+          <div class="case-card">
+            <span class="case-tag">${p.tag}</span>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            ${p.link !== '#' ? `<a href="${p.link}" target="_blank" class="btn-primary">${currentLang === 'vi' ? 'Mở Báo cáo Nghiên cứu ↗' : 'View Research Scope ↗'}</a>` : ''}
+          </div>
+        `).join('');
+      }
+
+      // DATA ANALYST: Projects
+      if (data.dataProjects) {
+        document.getElementById('da-projects-container').innerHTML = data.dataProjects.map(dp => `
+          <div class="skill-card">
+            <span class="case-tag">${dp.category}</span>
+            <h3 style="margin-top: 8px; margin-bottom: 10px;">${dp.title}</h3>
+            <p style="font-size: 0.92rem; color: #475569; margin-bottom: 16px;">${dp.description}</p>
+            <div style="font-size: 0.82rem; font-weight: 600; color: var(--primary);">
+              <strong>Tech Stack:</strong> ${dp.tools}
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // 5. Thanh Progress Bar & Nút Back to top
     const backToTopBtn = document.getElementById("backToTopBtn");
     const scrollProgress = document.getElementById("scrollProgress");
 
@@ -875,165 +1105,14 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 4. Fetch nạp dữ liệu từ data.json
+    // 6. Fetch nạp dữ liệu ban đầu
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        document.getElementById('hero-name').innerText = data.profile.name;
-        document.getElementById('hero-title').innerText = data.profile.title;
-        document.getElementById('avatar').src = data.profile.avatarUrl;
-        document.getElementById('phone').innerText = data.profile.phone;
-        document.getElementById('email').innerText = data.profile.email;
-        document.getElementById('location').innerText = data.profile.location;
-        document.getElementById('cv-btn').href = data.profile.cvUrl;
-
-        document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
-        document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
-        if (data.profile.social && data.profile.social.linkedin) {
-          document.getElementById('float-linkedin').href = data.profile.social.linkedin;
-        }
-
-        document.getElementById('contact-phone').innerText = data.profile.phone;
-        document.getElementById('contact-email').innerText = data.profile.email;
-        document.getElementById('contact-location').innerText = data.profile.location;
-
-        const socialWrap = document.getElementById('social-links');
-        socialWrap.innerHTML = `
-          <a href="${data.profile.social.linkedin}" target="_blank" class="social-pill">LinkedIn ↗</a>
-          <a href="${data.profile.social.facebook}" target="_blank" class="social-pill">Facebook ↗</a>
-          <a href="${data.profile.social.instagram}" target="_blank" class="social-pill">Instagram ↗</a>
-        `;
-
-        document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
-
-        // RESUME: Skills
-        document.getElementById('resume-skills-container').innerHTML = data.skills.map((s, idx) => {
-          const icon = idx === 0 ? "💳" : idx === 1 ? "📊" : "💼";
-          return `
-            <div class="skill-card">
-              <div class="skill-card-header">
-                <div class="skill-card-icon">${icon}</div>
-                <h3 style="font-size:1.1rem; font-weight:700;">${s.category}</h3>
-              </div>
-              <div class="chip-container">
-                ${s.items.map(item => `<span class="skill-chip">${item}</span>`).join('')}
-              </div>
-            </div>
-          `;
-        }).join('');
-
-        // RESUME: Experience (Có Logo)
-        document.getElementById('resume-experience-container').innerHTML = data.experience.map(e => `
-          <div class="timeline-card">
-            <div><span class="timeline-badge">${e.period}</span></div>
-            <div>
-              <div class="company-header">
-                ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo">` : ''}
-                <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0;">${e.company}</h3>
-              </div>
-              <div class="timeline-role">${e.role}</div>
-              <ul class="timeline-desc">
-                ${e.bullets.map(b => `<li>${b}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-        `).join('');
-
-        // RESUME: Education
-        document.getElementById('resume-education-container').innerHTML = data.education.map(ed => `
-          <div class="timeline-card">
-            <div><span class="timeline-badge">${ed.period}</span></div>
-            <div>
-              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${ed.school}</h3>
-              <div class="timeline-role">${ed.degree}</div>
-            </div>
-          </div>
-        `).join('');
-
-        // RESUME: Certifications
-        if (data.certifications) {
-          const certHtml = data.certifications.map(c => `
-            <div class="timeline-card">
-              <div><span class="timeline-badge">${c.period}</span></div>
-              <div>
-                <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${c.name}</h3>
-                <div class="timeline-role">${c.issuer}</div>
-                <p style="font-size:0.92rem; color:#64748b;">${c.skills}</p>
-                ${c.imageUrl ? `
-                  <a href="${c.imageUrl}" target="_blank" title="Xem ảnh chứng chỉ">
-                    <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb">
-                  </a>
-                ` : ''}
-              </div>
-            </div>
-          `).join('');
-          document.getElementById('resume-cert-container').innerHTML = certHtml;
-          document.getElementById('da-cert-container').innerHTML = certHtml;
-        }
-
-        // RESUME: Case Studies
-        document.getElementById('resume-case-container').innerHTML = data.projects.map(p => `
-          <div class="case-card">
-            <span class="case-tag">${p.tag}</span>
-            <h3>${p.title}</h3>
-            <p>${p.description}</p>
-            <a href="${p.url}" target="_blank" class="btn-primary">Read Strategic Case Study ↗</a>
-          </div>
-        `).join('');
-
-        // BUSINESS DEVELOPMENT: Payoo (Kèm bảng Metrics chuyển vào)
-        if (data.businessDevelopment && data.businessDevelopment.payoo) {
-          const payooData = data.businessDevelopment.payoo;
-          document.getElementById('bd-payoo-summary').innerText = payooData.summary;
-          
-          if (payooData.metrics) {
-            document.getElementById('bd-payoo-metrics').innerHTML = payooData.metrics.map(m => `
-              <div class="metric-item">
-                <div class="metric-num">${m.num}</div>
-                <div class="metric-label">${m.label}</div>
-              </div>
-            `).join('');
-          }
-
-          document.getElementById('bd-payoo-projects').innerHTML = payooData.projects.map(p => `
-            <div class="case-card">
-              <span class="case-tag">${p.tag}</span>
-              <h3>${p.title}</h3>
-              <p>${p.description}</p>
-              ${p.link !== '#' ? `<a href="${p.link}" target="_blank" class="btn-primary">View Deal Breakdown ↗</a>` : ''}
-            </div>
-          `).join('');
-        }
-
-        // BUSINESS DEVELOPMENT: ProScan
-        if (data.businessDevelopment && data.businessDevelopment.proscan) {
-          const proscanData = data.businessDevelopment.proscan;
-          document.getElementById('bd-proscan-summary').innerText = proscanData.summary;
-          document.getElementById('bd-proscan-projects').innerHTML = proscanData.projects.map(p => `
-            <div class="case-card">
-              <span class="case-tag">${p.tag}</span>
-              <h3>${p.title}</h3>
-              <p>${p.description}</p>
-              ${p.link !== '#' ? `<a href="${p.link}" target="_blank" class="btn-primary">View Research Scope ↗</a>` : ''}
-            </div>
-          `).join('');
-        }
-
-        // DATA ANALYST: Projects
-        if (data.dataProjects) {
-          document.getElementById('da-projects-container').innerHTML = data.dataProjects.map(dp => `
-            <div class="skill-card">
-              <span class="case-tag">${dp.category}</span>
-              <h3 style="margin-top: 8px; margin-bottom: 10px;">${dp.title}</h3>
-              <p style="font-size: 0.92rem; color: #475569; margin-bottom: 16px;">${dp.description}</p>
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--primary);">
-                <strong>Tech Stack:</strong> ${dp.tools}
-              </div>
-            </div>
-          `).join('');
-        }
+        globalData = data;
+        setLanguage(currentLang);
       })
-      .catch(err => console.error("Lỗi nạp dữ liệu:", err));
+      .catch(err => console.error("Lỗi nạp data.json:", err));
   </script>
 </body>
 </html>
