@@ -2,7 +2,7 @@
   "profile": {
     "name": "Huynh Quang Tri Nguyen (Bryan)",
     "title": "Enterprise Business Development & Fintech Solutions | Master of Business Analytics",
-    "avatarUrl": "./avatar.png",
+    "avatarUrl": "avatar.jpg",
     "phone": "0838673639",
     "email": "quangtritc1805@gmail.com",
     "location": "Ho Chi Minh City, Vietnam",
@@ -14,9 +14,9 @@
     }
   },
   "about": [
-    "I am an Enterprise Business Development professional bridging the gap between Data Analytics and commercial execution in Vietnam’s rapidly evolving Fintech and Payment Infrastructure landscape.",
-    "Holding a Master’s degree in Business Analytics and a Bachelor’s in International Business from the University of Wollongong, I specialize in consulting payment gateway architectures, omnichannel POS systems, 0% credit card instalment solutions, and automated reconciliation workflows for multi-location enterprises.",
-    "My commercial approach is data-grounded: conducting mystery-shopping audits, analyzing merchant unit economics, identifying high-ticket drop-off friction, and delivering tailored B2B proposals that tangibly drive top-line revenue and operational efficiency."
+    "Hello, I’m <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s in International Business</strong> from the <strong>University of Wollongong</strong>. Throughout my journey, I have focused on leveraging data analytics not just to observe market trends, but to <strong>engineer actionable business development strategies</strong>, <strong>optimize pipeline performance</strong>, and <strong>drive high-impact commercial decisions</strong>.",
+    "My professional background centers on <strong>enterprise B2B sales</strong>, <strong>omnichannel payment infrastructure</strong>, and <strong>cross-border technology solutions</strong>. Managing <strong>CRM workflows, account tiering, and market intelligence</strong>, I navigate full deal lifecycles—from <strong>outbound mapping and C-level negotiations</strong> to <strong>cross-functional alignment and go-live deployment</strong>. These experiences have strengthened my ability to <strong>bridge analytical insights with commercial execution</strong>, solving operational bottlenecks and driving measurable growth.",
+    "Driven by curiosity and commercial problem-solving, I thrive at the intersection where <strong>data, fintech, and strategic creativity meet</strong>. Outside the world of business and analytics, I find inspiration through <strong>street photography</strong>, discovering diverse cultures, and continuous everyday learning."
   ],
   "skills": [
     {
@@ -108,6 +108,34 @@
       "period": "Graduated: Aug 2024",
       "school": "University of Wollongong",
       "degree": "Bachelor of Business - International Business"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Data Analytics Immersion Program",
+      "issuer": "MindX Technology School",
+      "period": "2025 – 2026",
+      "skills": "Python, SQL, Advanced Power BI, Data Cleansing & Storytelling"
+    },
+    {
+      "name": "English Proficiency – Professional Working Competence",
+      "issuer": "IELTS Academic",
+      "period": "International Certified",
+      "skills": "Executive Cross-border Communication & Technical Proposals"
+    }
+  ],
+  "dataProjects": [
+    {
+      "title": "Automated Market Intelligence & News Aggregator",
+      "category": "Automation & Webhook Pipeline",
+      "tools": "Google Apps Script, REST API, Triggers, Gmail API",
+      "description": "Built an automated news monitoring pipeline fetching Fintech market intelligence within 24–72 hours, eliminating duplicate feeds, and distributing structured digests to leadership."
+    },
+    {
+      "title": "Merchant Performance & Pipeline Conversion Tracker",
+      "category": "Commercial Dashboard",
+      "tools": "Power BI, DAX, Advanced Excel Modeling",
+      "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking 50+ enterprise accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
     }
   ],
   "projects": [
