@@ -170,7 +170,7 @@
       grid-template-columns: 350px 1fr;
       gap: 52px;
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
     .hero-img-box {
       border-radius: var(--radius-lg);
@@ -212,12 +212,12 @@
       line-height: 1.6;
     }
 
-    /* Metric Grid */
+    /* Metric Grid (Dùng trong Payoo) */
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-bottom: 24px;
+      margin: 20px 0 10px;
       padding: 16px;
       background: #ffffff;
       border: 1px solid var(--border);
@@ -230,9 +230,10 @@
     }
     .metric-item:last-child { border-right: none; }
     .metric-num {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 800;
       color: var(--primary);
+      line-height: 1.2;
     }
     .metric-label {
       font-size: 0.74rem;
@@ -403,7 +404,7 @@
     }
     .cert-thumb:hover { transform: scale(1.02); }
 
-    /* SUB-TABS (Dành riêng cho Business Development: Payoo vs ProScan) */
+    /* SUB-TABS (Payoo vs ProScan) */
     .subnav-tabs {
       display: flex;
       gap: 12px;
@@ -626,7 +627,7 @@
   <div id="scrollProgress"></div>
   <div id="top"></div>
 
-  <!-- HEADER GỌN GÀNG 5 MỤC -->
+  <!-- HEADER -->
   <header>
     <div class="container nav-wrap">
       <div class="nav-top-row">
@@ -637,7 +638,7 @@
         <a href="#" id="cv-btn" target="_blank" class="btn-primary">Download CV ↗</a>
       </div>
 
-      <!-- 5 MỤC ĐIỀU HƯỚNG CHÍNH -->
+      <!-- 5 MỤC NAV -->
       <nav class="main-nav">
         <div class="nav-tab active" onclick="switchPage('about')">About</div>
         <div class="nav-tab" onclick="switchPage('resume')">Resume</div>
@@ -650,9 +651,7 @@
 
   <main class="container">
 
-    <!-- ==============================================
-         1. TRANG ABOUT (Hero, Overview, Key Metrics)
-         ============================================== -->
+    <!-- 1. ABOUT -->
     <section id="page-about" class="page-section active">
       <div class="hero-grid">
         <div class="hero-img-box">
@@ -663,21 +662,6 @@
           <h1 id="hero-name">Huynh Quang Tri Nguyen</h1>
           <p class="hero-subtitle" id="hero-title">Master of Business Analytics | Omnichannel Payment Infrastructure</p>
           
-          <div class="metric-grid">
-            <div class="metric-item">
-              <div class="metric-num">50+</div>
-              <div class="metric-label">Enterprise Pipeline</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-num">2.4B+ VND</div>
-              <div class="metric-label">Projected GMV Closed</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-num">80%</div>
-              <div class="metric-label">Discovery Conversion</div>
-            </div>
-          </div>
-
           <div class="hero-contact-row">
             <span>📍 <strong id="location">Ho Chi Minh City, Vietnam</strong></span>
             <span>📞 <strong id="phone">0838673639</strong></span>
@@ -697,46 +681,36 @@
       </div>
     </section>
 
-    <!-- ==============================================
-         2. TRANG RESUME (Skills, Exp, Edu, Certs, Case)
-         ============================================== -->
+    <!-- 2. RESUME -->
     <section id="page-resume" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Curriculum Vitae</span>
         <h2 class="section-title">Comprehensive Resume</h2>
       </div>
 
-      <!-- Skills -->
       <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Core Capabilities & Tech Stack</h3>
       <div class="skills-grid" id="resume-skills-container"></div>
 
-      <!-- Experience -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Work Experience</h3>
       <div class="timeline" id="resume-experience-container"></div>
 
-      <!-- Education -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Academic Credentials</h3>
       <div class="timeline" id="resume-education-container"></div>
 
-      <!-- Certifications -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Certifications & Accreditations</h3>
       <div class="timeline" id="resume-cert-container"></div>
 
-      <!-- Case Studies -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;">Executive Case Studies</h3>
       <div id="resume-case-container"></div>
     </section>
 
-    <!-- ==============================================
-         3. TRANG BUSINESS DEVELOPMENT (Payoo vs ProScan)
-         ============================================== -->
+    <!-- 3. BUSINESS DEVELOPMENT -->
     <section id="page-business-dev" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Enterprise Solutions</span>
         <h2 class="section-title">Business Development Portfolio</h2>
       </div>
 
-      <!-- Sub-tabs chọn Payoo hoặc ProScan -->
       <div class="subnav-tabs">
         <button class="subnav-btn active" onclick="switchBDTab('payoo')">
           <img src="payoo.jpg" alt="Payoo"> Payoo (VietUnion)
@@ -746,7 +720,7 @@
         </button>
       </div>
 
-      <!-- Nội dung Payoo -->
+      <!-- Tab Payoo (Chứa Bảng Metric) -->
       <div id="bd-payoo" class="bd-subcontent active">
         <div class="content-card">
           <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
@@ -757,13 +731,16 @@
             </div>
           </div>
           <p id="bd-payoo-summary" style="font-size:0.98rem; color:#475569; line-height:1.7;"></p>
+          
+          <!-- Bảng số liệu Payoo được đặt tại đây -->
+          <div class="metric-grid" id="bd-payoo-metrics"></div>
         </div>
 
         <h3 style="font-size:1.3rem; margin-bottom:16px;">Key Merchant Solutions & Projects</h3>
         <div id="bd-payoo-projects"></div>
       </div>
 
-      <!-- Nội dung ProScan -->
+      <!-- Tab ProScan -->
       <div id="bd-proscan" class="bd-subcontent">
         <div class="content-card">
           <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
@@ -781,9 +758,7 @@
       </div>
     </section>
 
-    <!-- ==============================================
-         4. TRANG DATA ANALYST (Projects & Credentials)
-         ============================================== -->
+    <!-- 4. DATA ANALYST -->
     <section id="page-data-analyst" class="page-section">
       <div class="section-header">
         <span class="section-eyebrow">Quantitative Engineering</span>
@@ -797,9 +772,7 @@
       <div class="timeline" id="da-cert-container"></div>
     </section>
 
-    <!-- ==============================================
-         5. TRANG CONTACT
-         ============================================== -->
+    <!-- 5. CONTACT -->
     <section id="page-contact" class="page-section">
       <div class="contact-card">
         <div class="contact-grid">
@@ -826,7 +799,7 @@
 
   </main>
 
-  <!-- FLOATING ACTION BUTTONS -->
+  <!-- FLOATING BUTTONS -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn btn-zalo" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
@@ -860,7 +833,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Đánh dấu active trên navbar
       const tabs = document.querySelectorAll('.nav-tab');
       const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
       const activeIdx = keys.indexOf(pageKey);
@@ -907,7 +879,6 @@
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Nạp Hero & Profile
         document.getElementById('hero-name').innerText = data.profile.name;
         document.getElementById('hero-title').innerText = data.profile.title;
         document.getElementById('avatar').src = data.profile.avatarUrl;
@@ -916,19 +887,16 @@
         document.getElementById('location').innerText = data.profile.location;
         document.getElementById('cv-btn').href = data.profile.cvUrl;
 
-        // Floating buttons
         document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
         document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
         if (data.profile.social && data.profile.social.linkedin) {
           document.getElementById('float-linkedin').href = data.profile.social.linkedin;
         }
 
-        // Contact info
         document.getElementById('contact-phone').innerText = data.profile.phone;
         document.getElementById('contact-email').innerText = data.profile.email;
         document.getElementById('contact-location').innerText = data.profile.location;
 
-        // Social Pills
         const socialWrap = document.getElementById('social-links');
         socialWrap.innerHTML = `
           <a href="${data.profile.social.linkedin}" target="_blank" class="social-pill">LinkedIn ↗</a>
@@ -936,10 +904,9 @@
           <a href="${data.profile.social.instagram}" target="_blank" class="social-pill">Instagram ↗</a>
         `;
 
-        // About text
         document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
-        // RESUME PAGE: Render Skills
+        // RESUME: Skills
         document.getElementById('resume-skills-container').innerHTML = data.skills.map((s, idx) => {
           const icon = idx === 0 ? "💳" : idx === 1 ? "📊" : "💼";
           return `
@@ -955,7 +922,7 @@
           `;
         }).join('');
 
-        // RESUME PAGE: Render Experience (Có logo công ty)
+        // RESUME: Experience (Có Logo)
         document.getElementById('resume-experience-container').innerHTML = data.experience.map(e => `
           <div class="timeline-card">
             <div><span class="timeline-badge">${e.period}</span></div>
@@ -972,7 +939,7 @@
           </div>
         `).join('');
 
-        // RESUME PAGE: Render Education
+        // RESUME: Education
         document.getElementById('resume-education-container').innerHTML = data.education.map(ed => `
           <div class="timeline-card">
             <div><span class="timeline-badge">${ed.period}</span></div>
@@ -983,7 +950,7 @@
           </div>
         `).join('');
 
-        // RESUME PAGE: Render Certifications
+        // RESUME: Certifications
         if (data.certifications) {
           const certHtml = data.certifications.map(c => `
             <div class="timeline-card">
@@ -1001,10 +968,10 @@
             </div>
           `).join('');
           document.getElementById('resume-cert-container').innerHTML = certHtml;
-          document.getElementById('da-cert-container').innerHTML = certHtml; // Chia sẻ sang tab Data Analyst
+          document.getElementById('da-cert-container').innerHTML = certHtml;
         }
 
-        // RESUME PAGE: Render Case Studies
+        // RESUME: Case Studies
         document.getElementById('resume-case-container').innerHTML = data.projects.map(p => `
           <div class="case-card">
             <span class="case-tag">${p.tag}</span>
@@ -1014,10 +981,20 @@
           </div>
         `).join('');
 
-        // BUSINESS DEVELOPMENT PAGE: Payoo
+        // BUSINESS DEVELOPMENT: Payoo (Kèm bảng Metrics chuyển vào)
         if (data.businessDevelopment && data.businessDevelopment.payoo) {
           const payooData = data.businessDevelopment.payoo;
           document.getElementById('bd-payoo-summary').innerText = payooData.summary;
+          
+          if (payooData.metrics) {
+            document.getElementById('bd-payoo-metrics').innerHTML = payooData.metrics.map(m => `
+              <div class="metric-item">
+                <div class="metric-num">${m.num}</div>
+                <div class="metric-label">${m.label}</div>
+              </div>
+            `).join('');
+          }
+
           document.getElementById('bd-payoo-projects').innerHTML = payooData.projects.map(p => `
             <div class="case-card">
               <span class="case-tag">${p.tag}</span>
@@ -1028,7 +1005,7 @@
           `).join('');
         }
 
-        // BUSINESS DEVELOPMENT PAGE: ProScan
+        // BUSINESS DEVELOPMENT: ProScan
         if (data.businessDevelopment && data.businessDevelopment.proscan) {
           const proscanData = data.businessDevelopment.proscan;
           document.getElementById('bd-proscan-summary').innerText = proscanData.summary;
@@ -1042,7 +1019,7 @@
           `).join('');
         }
 
-        // DATA ANALYST PAGE: Projects
+        // DATA ANALYST: Projects
         if (data.dataProjects) {
           document.getElementById('da-projects-container').innerHTML = data.dataProjects.map(dp => `
             <div class="skill-card">
