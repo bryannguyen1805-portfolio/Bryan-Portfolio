@@ -13,11 +13,6 @@
       "instagram": "https://www.instagram.com/bryannguyen1805/"
     }
   },
-  "metrics": [
-    { "num": "50+", "label": "Enterprise Pipeline Managed" },
-    { "num": "2.4B+ VND", "label": "Projected GMV Closed" },
-    { "num": "80%", "label": "Discovery Call Conversion" }
-  ],
   "about": [
     "Hello, I’m <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s in International Business</strong> from the <strong>University of Wollongong</strong>. Throughout my journey, I have focused on leveraging data analytics not just to observe market trends, but to <strong>engineer actionable business development strategies</strong>, <strong>optimize pipeline performance</strong>, and <strong>drive high-impact commercial decisions</strong>.",
     "My professional background centers on <strong>enterprise B2B sales</strong>, <strong>omnichannel payment infrastructure</strong>, and <strong>cross-border technology solutions</strong>. Managing <strong>CRM workflows, account tiering, and market intelligence</strong>, I navigate full deal lifecycles—from <strong>outbound mapping and C-level negotiations</strong> to <strong>cross-functional alignment and go-live deployment</strong>. These experiences have strengthened my ability to <strong>bridge analytical insights with commercial execution</strong>, solving operational bottlenecks and driving measurable growth.",
@@ -62,9 +57,9 @@
       "logoUrl": "payoo.jpg",
       "role": "Business Development Executive",
       "bullets": [
-        "Managed an active pipeline of 50+ enterprise accounts across retail, F&B, and hospitality for omnichannel payment adoption (POS, Gateway, QR).",
-        "Built account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by 30%.",
-        "Pitched customized payment infrastructure to C-level executives, successfully closing Tier 1 accounts with projected GMV of 2.4B+ VND/year.",
+        "Acquired and managed 11 enterprise merchant accounts across retail, F&B, and lifestyle chains for omnichannel payment infrastructure adoption (SmartPOS, Gateway, QR).",
+        "Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by 30%.",
+        "Pitched tailored payment solutions to senior leadership, securing enterprise contracts with projected annual GMV of ~1B VND.",
         "Shortened contract turnaround by 20% and collaborated with technical teams to ensure seamless merchant onboarding and SLA compliance."
       ]
     },
@@ -141,6 +136,11 @@
       "badge": "Enterprise Payment Infrastructure",
       "logo": "payoo.jpg",
       "summary": "Specialized in enterprise payment consulting, SmartPOS network rollouts, remote checkout solutions (Pay-by-Link), 0% credit card instalment programs, and automated settlement workflows for multi-location retail chains.",
+      "metrics": [
+        { "num": "11", "label": "Enterprise Merchants Acquired" },
+        { "num": "~1B VND", "label": "Projected Annual GMV Closed" },
+        { "num": "30%", "label": "Lead Qualification Accelerated" }
+      ],
       "projects": [
         {
           "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
@@ -151,7 +151,7 @@
         {
           "title": "Enterprise Account Tiering & Merchant Acquisition Model",
           "tag": "Commercial Pipeline Strategy",
-          "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected GMV of 2.4B+ VND/year.",
+          "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected annual GMV of ~1B VND.",
           "link": "#"
         }
       ]
@@ -200,7 +200,7 @@
       "title": "Merchant Performance & Pipeline Conversion Tracker",
       "category": "Commercial Dashboard",
       "tools": "Power BI, DAX, Advanced Excel Modeling",
-      "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking 50+ enterprise accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
+      "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking enterprise merchant accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
     }
   ],
   "projects": [
