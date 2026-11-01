@@ -1,7 +1,7 @@
 {
   "profile": {
-    "name": "Huynh Quang Tri Nguyen",
-    "title": "Bachelor of International Business / Master of Business Analytics",
+    "name": "Huynh Quang Tri Nguyen (Bryan)",
+    "title": "Enterprise Business Development & Fintech Solutions | Master of Business Analytics",
     "avatarUrl": "./avatar.jpg",
     "phone": "0838673639",
     "email": "quangtritc1805@gmail.com",
@@ -14,47 +14,65 @@
     }
   },
   "about": [
-    "My name is Nguyen Huynh Quang Tri, also known as Bryan. I hold a Master’s degree in Business Analytics and a Bachelor’s degree in International Business from the University of Wollongong. Throughout my academic and professional journey, I am committed to applying data analytics to understand business development, improve performance, and facilitate strategic decisions.",
-    "I’ve had the opportunity to intern in both business development and marketing, where I worked with real-world data, CRM systems, campaign analysis, and customer insights. These experiences taught me how to combine strategic thinking with practical execution, collaborate with different teams, and adapt quickly in fast-paced environments.",
-    "I consider myself a curious and proactive learner. I’m passionate about solving problems, exploring ideas, and contributing to projects where data and creativity come together. Outside of work, I enjoy photography, discovering new cultures, and staying inspired through everyday learning."
+    "I am an Enterprise Business Development professional bridging the gap between Data Analytics and commercial execution in Vietnam’s rapidly evolving Fintech and Payment Infrastructure landscape.",
+    "Holding a Master’s degree in Business Analytics and a Bachelor’s in International Business from the University of Wollongong, I specialize in consulting payment gateway architectures, omnichannel POS systems, 0% credit card instalment solutions, and automated reconciliation workflows for multi-location enterprises.",
+    "My commercial approach is data-grounded: conducting mystery-shopping audits, analyzing merchant unit economics, identifying high-ticket drop-off friction, and delivering tailored B2B proposals that tangibly drive top-line revenue and operational efficiency."
   ],
   "skills": [
     {
-      "category": "Analytical & Technical Skills",
+      "category": "Fintech & Payment Infrastructure",
       "items": [
-        "Business Analytics & Data Storytelling",
-        "Microsoft Excel (Pivot Tables, VLOOKUP, Charts)",
-        "Google Sheets (Formulas, Dashboards)",
-        "Power BI (Data Visualization, Basic DAX)",
-        "CRM Tools (Zoho CRM, HubSpot)",
-        "Performance Reporting & KPI Monitoring",
-        "Market & Competitor Research",
-        "A/B Testing & Campaign Analysis"
+        "Omnichannel Payment Solutions (SmartPOS, SoftPOS, QR)",
+        "0% Credit Card Instalment Integration & Merchant Pricing (MDR)",
+        "Payment Gateway & Remote Checkout (Pay-by-Link)",
+        "Transaction Reconciliation & Settlement Workflows",
+        "Enterprise Merchant Acquisition & Account Tiering"
       ]
     },
     {
-      "category": "Business Development & Growth",
+      "category": "Data Analytics & Automation",
       "items": [
-        "Lead Qualification & Prospect Mapping",
-        "Customer Segmentation & Persona Development",
-        "Go-to-Market Support & Proposal Creation",
-        "Cross-functional Team Collaboration",
-        "Social Media & Engagement Optimization",
-        "Campaign Planning & Channel Strategy"
+        "Business Analytics & Commercial Data Storytelling",
+        "Power BI (Visualizations, KPI Dashboards, Basic DAX)",
+        "Advanced Excel & Google Sheets (Pivot, Modeling, Lookups)",
+        "Workflow Automation (Google Apps Script, Webhooks)",
+        "A/B Testing & Sales Funnel Conversion Analysis"
       ]
     },
     {
-      "category": "Professional & Interpersonal",
+      "category": "Strategic B2B Sales & Leadership",
       "items": [
-        "Critical Thinking & Problem Solving",
-        "Strategic Communication (Written & Verbal)",
-        "Teamwork in Multicultural Environments",
-        "Attention to Detail & Time Management",
-        "Fast Learner with High Adaptability"
+        "Enterprise Lead Qualification & Prospect Mapping",
+        "Value-Led Proposal & Technical Quotation Creation",
+        "Cross-functional Alignment (Product, IT, Operations, Legal)",
+        "Complex Negotiation & Stakeholder Relationship Management",
+        "Multicultural Workplace Communication"
       ]
     }
   ],
   "experience": [
+    {
+      "period": "Oct 2025 – Present",
+      "company": "PAYOO (VIETUNION) – FinTech & Payments – Vietnam",
+      "role": "Business Development Executive",
+      "bullets": [
+        "Managed an active pipeline of 50+ enterprise accounts across retail, F&B, and hospitality for omnichannel payment adoption (POS, Gateway, QR).",
+        "Built account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by 30%.",
+        "Pitched customized payment infrastructure to C-level executives, successfully closing Tier 1 accounts with projected GMV of 2.4B+ VND/year.",
+        "Shortened contract turnaround by 20% and collaborated with technical teams to ensure seamless merchant onboarding and SLA compliance."
+      ]
+    },
+    {
+      "period": "Oct 2025 – Mar 2026",
+      "company": "PROSCAN GLOBAL – Security Screening & Technology Solutions – Vietnam",
+      "role": "Business Development Executive",
+      "bullets": [
+        "Identified and mapped 70+ international B2B accounts across regional markets, evaluating distributor profiles to expand the overseas pipeline.",
+        "Initiated 15–20 qualified outbound contacts weekly, pitching ODM security screening solutions to prospective buyers and tender contractors.",
+        "Qualified 25+ high-intent leads with an 80% conversion rate to discovery meetings, seamlessly handing over to senior directors for closing.",
+        "Delivered 10+ tailored English commercial proposals and technical quotations (up to $12K+ USD/deal), ensuring full SLA and tender compliance."
+      ]
+    },
     {
       "period": "Nov 2024 – Mar 2025",
       "company": "PiHome Vietnam",
@@ -64,7 +82,7 @@
         "Scheduled 3–5 qualified meetings/week, contributing to seller engagement pipeline.",
         "Maintained CRM data integrity to track lead progress and team KPIs.",
         "Prepared demo decks and reports for stakeholder presentations.",
-        "Collaborated with marketing and operations to tailor outreach by customer segment."
+        "Collaborated with marketing and operations teams to tailor outreach by segment."
       ]
     },
     {
@@ -98,6 +116,12 @@
       "title": "How I Closed an Omnichannel Payment Partnership with Xe Điện Việt Thanh",
       "description": "A strategic business case on eliminating checkout friction for high-ticket EV retail (VND 15M - 45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated reconciliation.",
       "url": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+    },
+    {
+      "tag": "Data Strategy & Analytics",
+      "title": "Data Governance & Strategic Decision-Making Frameworks",
+      "description": "A comprehensive analysis detailing how enterprise organizations evaluate statistical limitations in customer behavior datasets to avoid sampling fallacies and make objective capital allocation decisions.",
+      "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis"
     }
   ]
 }
