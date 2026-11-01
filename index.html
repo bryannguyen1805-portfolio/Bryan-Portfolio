@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Huynh Quang Tri Nguyen | Bryan's Portfolio</title>
-  <meta name="description" content="Bachelor of International Business / Master of Business Analytics - Portfolio by Bryan Nguyen">
-
-  <!-- Google Fonts: Playfair Display cho tiêu đề & Inter cho nội dung -->
+  <title id="page-title">Bryan's Portfolio</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -18,18 +16,10 @@
       --text-main: #1d1d1f;
       --text-muted: #6e6e73;
       --border-color: #e5e5ea;
-      --accent: #2c3e50;
-      --pill-bg: #f2f2f7;
       --shadow-sm: 0 2px 10px rgba(0,0,0,0.03);
       --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background-color: var(--bg);
       color: var(--text-main);
@@ -37,358 +27,75 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-
-    /* Navigation */
+    a { color: inherit; text-decoration: none; transition: 0.2s; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    
     header {
-      position: sticky;
-      top: 0;
+      position: sticky; top: 0;
       background: rgba(251, 251, 253, 0.92);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
       z-index: 100;
     }
-
-    .nav-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 74px;
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 74px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    nav a:hover { color: var(--text-main); }
+    
+    .btn-black {
+      display: inline-block; padding: 10px 22px;
+      background: #000; color: #fff !important;
+      border-radius: 9999px; font-size: 0.85rem; font-weight: 500;
     }
+    .btn-black:hover { background: #333; }
 
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+    section { padding: 70px 0; border-top: 1px solid var(--border-color); }
+    .hero { padding: 60px 0 80px; border-top: none; }
+    .hero-grid { display: grid; grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
+    .hero-img { width: 100%; height: 520px; object-fit: cover; object-position: center top; border-radius: 20px; box-shadow: var(--shadow-md); }
+    
+    .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 2.75rem; line-height: 1.15; margin-bottom: 12px; }
+    .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px; }
+    .contact-inline { margin-bottom: 24px; font-size: 0.95rem; line-height: 1.8; }
+    .social-links { display: flex; gap: 16px; margin-top: 8px; }
+    .social-links a { font-size: 0.9rem; text-decoration: underline; color: var(--text-muted); }
+    .social-links a:hover { color: #000; }
+
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 28px; }
+    .about-text { font-size: 1.05rem; line-height: 1.8; color: #3a3a3c; max-width: 820px; display: flex; flex-direction: column; gap: 18px; }
+    
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+    .skill-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); }
+    .skill-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 18px; }
+    .skill-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .skill-list li { font-size: 0.92rem; color: #48484a; padding-left: 18px; position: relative; }
+    .skill-list li::before { content: "•"; position: absolute; left: 0; color: #8e8e93; }
+
+    .timeline { display: flex; flex-direction: column; gap: 36px; max-width: 860px; }
+    .timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 24px; }
+    .timeline-date { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+    .timeline-body h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 4px; }
+    .timeline-role { font-size: 0.95rem; font-weight: 500; margin-bottom: 12px; }
+    .timeline-desc { list-style: disc; padding-left: 20px; font-size: 0.92rem; color: #48484a; line-height: 1.7; }
+
+    .featured-case { background: #fff; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-sm); }
+    .featured-tag { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #0066cc; margin-bottom: 12px; }
+    .featured-case h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 16px; }
+    .featured-case p { font-size: 0.98rem; color: var(--text-muted); margin-bottom: 24px; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; border: 1px solid var(--border-color); border-radius: 10px; padding: 14px 16px; font-size: 0.95rem; font-family: inherit;
     }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
+    .btn-submit { padding: 14px 28px; background: #000; color: #fff; border: none; border-radius: 9999px; font-size: 0.95rem; cursor: pointer; }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
+    footer { border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
-    nav a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    nav a:hover {
-      color: var(--text-main);
-    }
-
-    .btn-download {
-      display: inline-block;
-      padding: 9px 20px;
-      background: #000;
-      color: #fff !important;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .btn-download:hover {
-      background: #333;
-      transform: translateY(-1px);
-    }
-
-    /* Hero Section - 2 Columns (Image Left, Info Right) */
-    .hero {
-      padding: 60px 0 80px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .hero-img-wrap {
-      position: relative;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 20px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.75rem;
-      line-height: 1.15;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 24px;
-      letter-spacing: -0.2px;
-    }
-
-    .contact-inline {
-      margin-bottom: 28px;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: var(--text-main);
-    }
-
-    .social-links {
-      display: flex;
-      gap: 16px;
-      margin-top: 6px;
-    }
-
-    .social-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      color: var(--text-muted);
-    }
-
-    .social-links a:hover {
-      color: #000;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background: #000;
-      color: #fff;
-      border-radius: 9999px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-top: 10px;
-    }
-
-    /* Section Global */
-    section {
-      padding: 70px 0;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 28px;
-    }
-
-    /* About Me */
-    .about-text {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #3a3a3c;
-      max-width: 820px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .skill-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .skill-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .skill-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .skill-list li {
-      font-size: 0.92rem;
-      color: #48484a;
-      position: relative;
-      padding-left: 18px;
-    }
-
-    .skill-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #8e8e93;
-    }
-
-    /* Work Experience & Education Timeline */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-      max-width: 860px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-    }
-
-    .timeline-date {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .timeline-body h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .timeline-role {
-      font-size: 0.95rem;
-      color: #000;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .timeline-desc {
-      list-style: disc;
-      padding-left: 20px;
-      font-size: 0.92rem;
-      color: #48484a;
-      line-height: 1.7;
-    }
-
-    /* Featured Case Study */
-    .featured-case {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: var(--shadow-sm);
-      margin-top: 10px;
-    }
-
-    .featured-tag {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #0066cc;
-      margin-bottom: 12px;
-    }
-
-    .featured-case h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      line-height: 1.3;
-    }
-
-    .featured-case p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    /* Contact Section */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      background: #fff;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      color: #1d1d1f;
-      transition: border 0.2s;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #000;
-    }
-
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .btn-submit {
-      padding: 14px 28px;
-      background: #000;
-      color: #fff;
-      border: none;
-      border-radius: 9999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding: 40px 0;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Responsive */
     @media (max-width: 860px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-      .hero-img { height: 400px; }
+      .hero-grid { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; gap: 6px; }
       .contact-grid { grid-template-columns: 1fr; }
     }
@@ -396,45 +103,38 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <header>
     <div class="container nav-wrap">
-      <a href="#" class="nav-logo">Bryan Nguyen</a>
+      <a href="#" class="nav-logo" id="logo-text">Bryan Nguyen</a>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="https://e7dd75e6-2c4f-4010-907e-febe8cc5c2e8.filesusr.com/ugd/77d92f_c37bbfee98e44417a2fa328215522e32.pdf" target="_blank" class="btn-download">Download CV</a>
+        <a href="#" id="cv-btn" target="_blank" class="btn-black">Download CV</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-
+    
     <!-- Hero Section -->
-    <section class="hero" style="border-top: none;">
+    <section class="hero">
       <div class="hero-grid">
-        <div class="hero-img-wrap">
-          <img src="https://static.wixstatic.com/media/77d92f_e7f9e30bbeeb4d748de0be58325636da~mv2.png/v1/crop/x_270,y_0,w_1047,h_1430/fill/w_451,h_742,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8065_polarr_edited_edited.png" alt="Huynh Quang Tri Nguyen" class="hero-img">
+        <div>
+          <img id="avatar" src="" alt="Profile Image" class="hero-img">
         </div>
         <div class="hero-content">
-          <h1>Huynh Quang Tri Nguyen</h1>
-          <p class="hero-subtitle">Bachelor of International Business / Master of Business Analytics</p>
-          
+          <h1 id="hero-name">Loading...</h1>
+          <p class="hero-subtitle" id="hero-title"></p>
           <div class="contact-inline">
-            <p><strong>Phone:</strong> 0838673639</p>
-            <p><strong>Email:</strong> quangtritc1805@gmail.com</p>
-            <p><strong>Location:</strong> Ho Chi Minh City, Vietnam</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank">LinkedIn</a>
-              <a href="https://www.facebook.com/Tori1005" target="_blank">Facebook</a>
-              <a href="https://www.instagram.com/bryannguyen1805/" target="_blank">Instagram</a>
-            </div>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Location:</strong> <span id="location"></span></p>
+            <div class="social-links" id="social-links"></div>
           </div>
-
-          <a href="#about" class="hero-btn">More About Me ↓</a>
+          <a href="#about" class="btn-black">More About Me ↓</a>
         </div>
       </div>
     </section>
@@ -442,125 +142,34 @@
     <!-- About Me -->
     <section id="about">
       <h2 class="section-title">About Me</h2>
-      <div class="about-text">
-        <p>My name is Nguyen Huynh Quang Tri, also known as Bryan. I hold a Master’s degree in Business Analytics and a Bachelor’s degree in International Business from the University of Wollongong. Throughout my academic and professional journey, I am committed to applying data analytics to understand business development, improve performance, and facilitate strategic decisions.</p>
-        <p>I’ve had the opportunity to intern in both business development and marketing, where I worked with real-world data, CRM systems, campaign analysis, and customer insights. These experiences taught me how to combine strategic thinking with practical execution, collaborate with different teams, and adapt quickly in fast-paced environments.</p>
-        <p>I consider myself a curious and proactive learner. I’m passionate about solving problems, exploring ideas, and contributing to projects where data and creativity come together. Outside of work, I enjoy photography, discovering new cultures, and staying inspired through everyday learning.</p>
-      </div>
+      <div class="about-text" id="about-container"></div>
     </section>
 
     <!-- Skills -->
     <section id="skills">
       <h2 class="section-title">Skills & Capabilities</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Analytical & Technical Skills</h3>
-          <ul class="skill-list">
-            <li>Business Analytics & Data Storytelling</li>
-            <li>Microsoft Excel (Pivot Tables, VLOOKUP, Charts)</li>
-            <li>Google Sheets (Formulas, Dashboards)</li>
-            <li>Power BI (Data Visualization, Basic DAX)</li>
-            <li>CRM Tools (Zoho CRM, HubSpot)</li>
-            <li>Performance Reporting & KPI Monitoring</li>
-            <li>Market & Competitor Research</li>
-            <li>A/B Testing & Campaign Analysis</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>Business Development & Growth</h3>
-          <ul class="skill-list">
-            <li>Lead Qualification & Prospect Mapping</li>
-            <li>Customer Segmentation & Persona Development</li>
-            <li>Go-to-Market Support & Proposal Creation</li>
-            <li>Cross-functional Team Collaboration</li>
-            <li>Social Media & Engagement Optimization</li>
-            <li>Campaign Planning & Channel Strategy</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>Professional & Interpersonal</h3>
-          <ul class="skill-list">
-            <li>Critical Thinking & Problem Solving</li>
-            <li>Strategic Communication (Written & Verbal)</li>
-            <li>Teamwork in Multicultural Environments</li>
-            <li>Attention to Detail & Time Management</li>
-            <li>Fast Learner with High Adaptability</li>
-          </ul>
-        </div>
-      </div>
+      <div class="skills-grid" id="skills-container"></div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
       <h2 class="section-title">Work Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2024 – Mar 2025</div>
-          <div class="timeline-body">
-            <h3>PiHome Vietnam</h3>
-            <div class="timeline-role">Business Development Intern</div>
-            <ul class="timeline-desc">
-              <li>Identified and qualified 60+ potential leads through market research and prospecting.</li>
-              <li>Scheduled 3–5 qualified meetings/week, contributing to seller engagement pipeline.</li>
-              <li>Maintained CRM data integrity to track lead progress and team KPIs.</li>
-              <li>Prepared demo decks and reports for stakeholder presentations.</li>
-              <li>Collaborated with marketing and operations to tailor outreach by customer segment.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Feb 2023 – Dec 2023</div>
-          <div class="timeline-body">
-            <h3>OESON Australia</h3>
-            <div class="timeline-role">Sales and Marketing Intern</div>
-            <ul class="timeline-desc">
-              <li>Conducted competitor and market analysis to inform sales strategy.</li>
-              <li>Created weekly performance reports for multi-channel marketing campaigns.</li>
-              <li>Increased social media engagement by 20%+ through targeted content.</li>
-              <li>Supported team presentations and proposal development for business pitches.</li>
-              <li>Worked with sales, product, and marketing teams to improve lead quality.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="timeline" id="experience-container"></div>
     </section>
 
     <!-- Education -->
     <section id="education">
       <h2 class="section-title">Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Graduated: Aug 2025</div>
-          <div class="timeline-body">
-            <h3>University of Wollongong</h3>
-            <div class="timeline-role">Master of Business Analytics</div>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Graduated: Aug 2024</div>
-          <div class="timeline-body">
-            <h3>University of Wollongong</h3>
-            <div class="timeline-role">Bachelor of Business - International Business</div>
-          </div>
-        </div>
-      </div>
+      <div class="timeline" id="education-container"></div>
     </section>
 
-    <!-- Featured Projects / Case Studies -->
+    <!-- Projects -->
     <section id="projects">
       <h2 class="section-title">Featured Projects & Case Studies</h2>
-      <div class="featured-case">
-        <span class="featured-tag">Enterprise Fintech & Payment Solutions</span>
-        <h3>How I Closed an Omnichannel Payment Partnership with Xe Điện Việt Thanh</h3>
-        <p>A strategic business case on eliminating checkout friction for high-ticket EV retail (VND 15M - 45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated reconciliation.</p>
-        <a href="https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh" target="_blank" class="btn-download" style="border-radius: 8px;">Read Full Case Study ↗</a>
-      </div>
+      <div id="projects-container"></div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
       <h2 class="section-title">Get in Touch</h2>
       <div class="contact-grid">
@@ -568,14 +177,13 @@
           <p style="font-size: 1.05rem; color: #48484a; line-height: 1.8; margin-bottom: 20px;">
             Whether you want to discuss enterprise payment solutions, data analytics, or potential career opportunities, feel free to reach out.
           </p>
-          <p style="font-size: 0.95rem; margin-bottom: 8px;"><strong>Phone:</strong> 0838673639</p>
-          <p style="font-size: 0.95rem; margin-bottom: 8px;"><strong>Email:</strong> quangtritc1805@gmail.com</p>
-          <p style="font-size: 0.95rem;"><strong>Address:</strong> Ho Chi Minh City, Vietnam</p>
+          <p style="margin-bottom: 8px;"><strong>Phone:</strong> <span id="contact-phone"></span></p>
+          <p style="margin-bottom: 8px;"><strong>Email:</strong> <span id="contact-email"></span></p>
+          <p><strong>Address:</strong> <span id="contact-location"></span></p>
         </div>
-
         <form id="leadForm" class="contact-form">
           <input type="text" id="name" required placeholder="Your Name">
-          <input type="email" id="email" required placeholder="Your Email">
+          <input type="email" id="email-input" required placeholder="Your Email">
           <input type="text" id="company" placeholder="Company / Organization">
           <textarea id="message" required placeholder="Your Message..."></textarea>
           <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
@@ -587,54 +195,88 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Bryan Nguyen. All rights reserved.</p>
+      <p id="footer-text">© 2026 Bryan Nguyen. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Script nạp dữ liệu từ data.json -->
   <script>
-    const APPS_SCRIPT_URL = "DÁN_WEB_APP_URL_CỦA_BẠN_VÀO_ĐÂY";
-
-    const form = document.getElementById("leadForm");
-    const submitBtn = document.getElementById("submitBtn");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      submitBtn.innerText = "Sending...";
-
-      const payload = {
-        name: document.getElementById("name").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        company: document.getElementById("company").value.trim(),
-        message: document.getElementById("message").value.trim()
-      };
-
-      if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("DÁN_WEB_APP_URL")) {
-        alert("Demo: Vui lòng thay biến APPS_SCRIPT_URL bằng URL Google Apps Script của bạn.");
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
-        return;
-      }
-
-      fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(payload)
-      })
+    fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        alert("Cảm ơn bạn! Thông tin đã được gửi thành công.");
-        form.reset();
+        // Nạp Profile & Hero
+        document.getElementById('page-title').innerText = data.profile.name + " | Portfolio";
+        document.getElementById('logo-text').innerText = data.profile.name;
+        document.getElementById('hero-name').innerText = data.profile.name;
+        document.getElementById('hero-title').innerText = data.profile.title;
+        document.getElementById('avatar').src = data.profile.avatarUrl;
+        document.getElementById('phone').innerText = data.profile.phone;
+        document.getElementById('email').innerText = data.profile.email;
+        document.getElementById('location').innerText = data.profile.location;
+        document.getElementById('cv-btn').href = data.profile.cvUrl;
+
+        // Contact info bên dưới
+        document.getElementById('contact-phone').innerText = data.profile.phone;
+        document.getElementById('contact-email').innerText = data.profile.email;
+        document.getElementById('contact-location').innerText = data.profile.location;
+
+        // Social links
+        const socialWrap = document.getElementById('social-links');
+        socialWrap.innerHTML = `
+          <a href="${data.profile.social.linkedin}" target="_blank">LinkedIn</a>
+          <a href="${data.profile.social.facebook}" target="_blank">Facebook</a>
+          <a href="${data.profile.social.instagram}" target="_blank">Instagram</a>
+        `;
+
+        // About Me
+        document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
+
+        // Skills
+        document.getElementById('skills-container').innerHTML = data.skills.map(s => `
+          <div class="skill-card">
+            <h3>${s.category}</h3>
+            <ul class="skill-list">
+              ${s.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+
+        // Work Experience
+        document.getElementById('experience-container').innerHTML = data.experience.map(e => `
+          <div class="timeline-item">
+            <div class="timeline-date">${e.period}</div>
+            <div class="timeline-body">
+              <h3>${e.company}</h3>
+              <div class="timeline-role">${e.role}</div>
+              <ul class="timeline-desc">
+                ${e.bullets.map(b => `<li>${b}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('');
+
+        // Education
+        document.getElementById('education-container').innerHTML = data.education.map(ed => `
+          <div class="timeline-item">
+            <div class="timeline-date">${ed.period}</div>
+            <div class="timeline-body">
+              <h3>${ed.school}</h3>
+              <div class="timeline-role">${ed.degree}</div>
+            </div>
+          </div>
+        `).join('');
+
+        // Projects
+        document.getElementById('projects-container').innerHTML = data.projects.map(p => `
+          <div class="featured-case">
+            <span class="featured-tag">${p.tag}</span>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            <a href="${p.url}" target="_blank" class="btn-black" style="border-radius: 8px;">Read Full Case Study ↗</a>
+          </div>
+        `).join('');
       })
-      .catch(err => {
-        alert("Thông tin đã được ghi nhận!");
-        form.reset();
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
-      });
-    });
+      .catch(err => console.error("Lỗi đọc file data.json:", err));
   </script>
 </body>
 </html>
