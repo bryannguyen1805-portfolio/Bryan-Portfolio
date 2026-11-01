@@ -140,18 +140,18 @@
       "company": "Payoo (VietUnion)",
       "badge": "Enterprise Payment Infrastructure",
       "logo": "payoo.jpg",
-      "summary": "Chuyên trách tư vấn giải pháp thanh toán doanh nghiệp, triển khai hạ tầng SmartPOS, cổng thanh toán từ xa (Pay-by-Link), chương trình trả góp 0% qua thẻ tín dụng và quy trình đối soát giao dịch tự động cho các chuỗi bán lẻ đa điểm.",
+      "summary": "Specialized in enterprise payment consulting, SmartPOS network rollouts, remote checkout solutions (Pay-by-Link), 0% credit card instalment programs, and automated settlement workflows for multi-location retail chains.",
       "projects": [
         {
           "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
           "tag": "High-Ticket Retail & 0% Instalment",
-          "description": "Giải quyết rào cản thanh toán cho chuỗi bán lẻ xe điện với ticket size lớn (15M–45M VND) trên 30+ showroom toàn quốc thông qua giải pháp trả góp thẻ tín dụng 0%, thanh toán từ xa qua link và hệ thống đối soát tập trung.",
+          "description": "Eliminated checkout friction for nationwide EV retail (ticket size VND 15M–45M across 30+ showrooms) via 0% credit card instalments, remote Pay-by-link checkouts, and centralized multi-branch reconciliation.",
           "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
         },
         {
           "title": "Enterprise Account Tiering & Merchant Acquisition Model",
           "tag": "Commercial Pipeline Strategy",
-          "description": "Thiết kế bộ tiêu chí phân tầng khách hàng Tier 1–3 dựa trên quy mô GMV và độ phủ mạng lưới điểm bán, giúp rút ngắn thời gian thẩm định đối tác 30% và chốt thành công các chuỗi lớn với GMV mục tiêu 2.4B+ VND/năm.",
+          "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected GMV of 2.4B+ VND/year.",
           "link": "#"
         }
       ]
@@ -160,30 +160,30 @@
       "company": "ProScan Global",
       "badge": "Security Screening & Cross-Border Tech",
       "logo": "proscan.jpeg",
-      "summary": "Chủ trì nghiên cứu thị trường quốc tế (Cross-border Market Intelligence), lập bản đồ nhu cầu thiết bị an ninh soi chiếu ODM/OEM, định giá cạnh tranh và xây dựng khung đề xuất thầu thương mại tại các thị trường trọng điểm: Châu Phi, Bỉ, Châu Đại Dương và Qatar.",
+      "summary": "Led cross-border market intelligence, mapped demand for ODM/OEM security inspection systems, evaluated distributor economics, and formulated international commercial tender proposals across key global regions: Africa, Belgium, Oceania, and Qatar.",
       "projects": [
         {
           "title": "Africa Market Deep Insight and Growth Opportunity Report",
           "tag": "Emerging Market Expansion",
-          "description": "Báo cáo phân tích quy mô thị trường thiết bị an ninh kiểm soát cổng (Walk-through Metal Detectors) đạt 87M$–156M$ USD tại Châu Phi, phân tầng nhu cầu bảo vệ hạ tầng đô thị trọng điểm và chiến lược định vị sản phẩm ODM theo phân khúc ngân sách.",
+          "description": "In-depth market capacity analysis evaluating USD 87M–156M addressable demand for Walk-through Metal Detectors across Africa, defining urban infrastructure security needs and budget-aligned ODM product positioning.",
           "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing"
         },
         {
           "title": "Belgium Market Deep Insight and Growth Opportunity Report",
           "tag": "European Market & Regulatory Compliance",
-          "description": "Nghiên cứu cấu trúc thị trường Bỉ và Liên minh Châu Âu (EU), đánh giá các tiêu chuẩn an ninh nghiêm ngặt (CE, EN standards), chuỗi cung ứng thiết bị soi chiếu công nghệ cao và mô hình thâm nhập qua kênh nhà phân phối bản địa.",
+          "description": "Comprehensive market intelligence assessing Belgium and European Union regulatory compliance (CE/EN standards), high-end security screening supply chains, and distributor-led market entry frameworks.",
           "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing"
         },
         {
           "title": "Oceania Market Deep Insight and Growth Opportunity Report",
           "tag": "APAC & Oceania Strategic Fit",
-          "description": "Đánh giá nhu cầu an ninh tại khu vực Châu Đại Dương (Úc, New Zealand), xu hướng hiện đại hóa cổng kiểm soát hàng hải/sân bay và chiến lược định giá cạnh tranh cho giải pháp kiểm soát an ninh thương mại.",
+          "description": "Evaluated public security and transport hub modernization across Australia and New Zealand, formulating competitive commercial pricing tiers for walk-through inspection equipment.",
           "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing"
         },
         {
           "title": "Qatar Market Deep Insight and Growth Opportunity Report",
           "tag": "Middle East High-Ticket Tenders",
-          "description": "Phân tích thị trường Trung Đông tập trung tại Qatar, cơ hội tham gia các dự án đấu thầu bảo vệ hạ tầng thương mại/sự kiện lớn, tiêu chuẩn kỹ thuật khắt khe và mô hình hợp tác giá trị dài hạn cùng nhà thầu địa phương.",
+          "description": "Strategic analysis of Qatar and Middle East infrastructure tenders, detailing stringent technical specifications and structuring long-term cooperative value models with regional contractors.",
           "link": "https://drive.google.com/file/d/1E5JdiCafNWzWkhUc2Cb4bylKrICJxhr4/view?usp=sharing"
         }
       ]
@@ -194,13 +194,13 @@
       "title": "Automated Market Intelligence & News Aggregator",
       "category": "Automation & Webhook Pipeline",
       "tools": "Google Apps Script, REST API, Triggers, Gmail API",
-      "description": "Hệ thống tự động hóa quét và tổng hợp dữ liệu tin tức thị trường Fintech trong vòng 24–72 giờ, loại bỏ dữ liệu trùng lặp và phân phối báo cáo tóm tắt định kỳ cho đội ngũ kinh doanh qua email."
+      "description": "Architected an automated news monitoring pipeline fetching FinTech market intelligence within 24–72 hours, eliminating duplicate feeds, and distributing structured executive digests via email."
     },
     {
       "title": "Merchant Performance & Pipeline Conversion Tracker",
       "category": "Commercial Dashboard",
       "tools": "Power BI, DAX, Advanced Excel Modeling",
-      "description": "Mô hình trực quan hóa và giám sát hiệu suất đường ống kinh doanh (Pipeline Velocity) cho 50+ tài khoản doanh nghiệp, bóc tách tỷ lệ chuyển đổi và nhận diện điểm nghẽn phễu bán hàng."
+      "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking 50+ enterprise accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
     }
   ],
   "projects": [
