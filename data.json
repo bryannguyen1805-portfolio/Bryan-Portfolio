@@ -1,220 +1,487 @@
 {
-  "profile": {
-    "name": "Huynh Quang Tri Nguyen (Bryan)",
-    "title": "Enterprise Business Development & Fintech Solutions | Master of Business Analytics",
-    "avatarUrl": "avatar.png",
-    "phone": "0838673639",
-    "email": "quangtritc1805@gmail.com",
-    "location": "Ho Chi Minh City, Vietnam",
-    "cvUrl": "https://e7dd75e6-2c4f-4010-907e-febe8cc5c2e8.filesusr.com/ugd/77d92f_c37bbfee98e44417a2fa328215522e32.pdf",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
-      "facebook": "https://www.facebook.com/Tori1005",
-      "instagram": "https://www.instagram.com/bryannguyen1805/"
+  "en": {
+    "nav": {
+      "about": "About",
+      "resume": "Resume",
+      "bd": "Business Development",
+      "da": "Data Analyst",
+      "contact": "Contact",
+      "downloadCv": "Download CV ↗",
+      "status": "Open to Connect"
+    },
+    "profile": {
+      "name": "Huynh Quang Tri Nguyen (Bryan)",
+      "title": "Enterprise Business Development & Fintech Solutions | Master of Business Analytics",
+      "avatarUrl": "avatar.png",
+      "phone": "0838673639",
+      "email": "quangtritc1805@gmail.com",
+      "location": "Ho Chi Minh City, Vietnam",
+      "cvUrl": "https://e7dd75e6-2c4f-4010-907e-febe8cc5c2e8.filesusr.com/ugd/77d92f_c37bbfee98e44417a2fa328215522e32.pdf",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
+        "facebook": "https://www.facebook.com/Tori1005",
+        "instagram": "https://www.instagram.com/bryannguyen1805/"
+      }
+    },
+    "about": [
+      "Hello, I’m <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s in International Business</strong> from the <strong>University of Wollongong</strong>. Throughout my journey, I have focused on leveraging data analytics not just to observe market trends, but to <strong>engineer actionable business development strategies</strong>, <strong>optimize pipeline performance</strong>, and <strong>drive high-impact commercial decisions</strong>.",
+      "My professional background centers on <strong>enterprise B2B sales</strong>, <strong>omnichannel payment infrastructure</strong>, and <strong>cross-border technology solutions</strong>. Managing <strong>CRM workflows, account tiering, and market intelligence</strong>, I navigate full deal lifecycles—from <strong>outbound mapping and C-level negotiations</strong> to <strong>cross-functional alignment and go-live deployment</strong>. These experiences have strengthened my ability to <strong>bridge analytical insights with commercial execution</strong>, solving operational bottlenecks and driving measurable growth.",
+      "Driven by curiosity and commercial problem-solving, I thrive at the intersection where <strong>data, fintech, and strategic creativity meet</strong>. Outside the world of business and analytics, I find inspiration through <strong>street photography</strong>, discovering diverse cultures, and continuous everyday learning."
+    ],
+    "skills": [
+      {
+        "category": "Fintech & Payment Infrastructure",
+        "items": [
+          "Omnichannel Payment Solutions (SmartPOS, SoftPOS, QR)",
+          "0% Credit Card Instalment Integration & Merchant Pricing (MDR)",
+          "Payment Gateway & Remote Checkout (Pay-by-Link)",
+          "Transaction Reconciliation & Settlement Workflows",
+          "Enterprise Merchant Acquisition & Account Tiering"
+        ]
+      },
+      {
+        "category": "Data Analytics & Automation",
+        "items": [
+          "Business Analytics & Commercial Data Storytelling",
+          "Power BI (Visualizations, KPI Dashboards, Basic DAX)",
+          "Advanced Excel & Google Sheets (Pivot, Modeling, Lookups)",
+          "Workflow Automation (Google Apps Script, Webhooks)",
+          "A/B Testing & Sales Funnel Conversion Analysis"
+        ]
+      },
+      {
+        "category": "Strategic B2B Sales & Leadership",
+        "items": [
+          "Enterprise Lead Qualification & Prospect Mapping",
+          "Value-Led Proposal & Technical Quotation Creation",
+          "Cross-functional Alignment (Product, IT, Operations, Legal)",
+          "Complex Negotiation & Stakeholder Relationship Management",
+          "Multicultural Workplace Communication"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "period": "Oct 2025 – Present",
+        "company": "PAYOO (VIETUNION) – FinTech & Payments – Vietnam",
+        "logoUrl": "payoo.jpg",
+        "role": "Business Development Executive",
+        "bullets": [
+          "Acquired and managed 11 enterprise merchant accounts across retail, F&B, and lifestyle chains for omnichannel payment infrastructure adoption (SmartPOS, Gateway, QR).",
+          "Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by 30%.",
+          "Pitched tailored payment solutions to senior leadership, securing enterprise contracts with projected annual GMV of ~1B VND.",
+          "Shortened contract turnaround by 20% and collaborated with technical teams to ensure seamless merchant onboarding and SLA compliance."
+        ]
+      },
+      {
+        "period": "Oct 2025 – Mar 2026",
+        "company": "PROSCAN GLOBAL – Security Screening & Technology Solutions – Vietnam",
+        "logoUrl": "proscan.jpeg",
+        "role": "Business Development Executive",
+        "bullets": [
+          "Identified and mapped 70+ international B2B accounts across regional markets, evaluating distributor profiles to expand the overseas pipeline.",
+          "Initiated 15–20 qualified outbound contacts weekly, pitching ODM security screening solutions to prospective buyers and tender contractors.",
+          "Qualified 25+ high-intent leads with an 80% conversion rate to discovery meetings, seamlessly handing over to senior directors for closing.",
+          "Delivered 10+ tailored English commercial proposals and technical quotations (up to $12K+ USD/deal), ensuring full SLA and tender compliance."
+        ]
+      },
+      {
+        "period": "Nov 2024 – Mar 2025",
+        "company": "PiHome Vietnam",
+        "logoUrl": "pihome.png",
+        "role": "Business Development Intern",
+        "bullets": [
+          "Identified and qualified 60+ potential leads through market research and prospecting.",
+          "Scheduled 3–5 qualified meetings/week, contributing to seller engagement pipeline.",
+          "Maintained CRM data integrity to track lead progress and team KPIs.",
+          "Prepared demo decks and reports for stakeholder presentations.",
+          "Collaborated with marketing and operations teams to tailor outreach by segment."
+        ]
+      },
+      {
+        "period": "Feb 2023 – Dec 2023",
+        "company": "OESON Australia",
+        "logoUrl": "oeson.jpeg",
+        "role": "Sales and Marketing Intern",
+        "bullets": [
+          "Conducted competitor and market analysis to inform sales strategy.",
+          "Created weekly performance reports for multi-channel marketing campaigns.",
+          "Increased social media engagement by 20%+ through targeted content.",
+          "Supported team presentations and proposal development for business pitches.",
+          "Worked with sales, product, and marketing teams to improve lead quality."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "period": "Graduated: Aug 2025",
+        "school": "University of Wollongong",
+        "degree": "Master of Business Analytics"
+      },
+      {
+        "period": "Graduated: Aug 2024",
+        "school": "University of Wollongong",
+        "degree": "Bachelor of Business - International Business"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "SAS® Academic Specialisation in Advanced Business Analytics",
+        "issuer": "SAS & University of Wollongong",
+        "period": "August 2025",
+        "skills": "Enterprise Business Analytics, SAS Software, Statistical Modeling & Advanced Predictive Insights",
+        "imageUrl": "Certificate.jpeg"
+      },
+      {
+        "name": "English Proficiency – Professional Working Competence",
+        "issuer": "IELTS Academic",
+        "period": "International Certified",
+        "skills": "Executive Cross-border Communication & Technical Proposals",
+        "imageUrl": "ielts.jpg"
+      }
+    ],
+    "businessDevelopment": {
+      "payoo": {
+        "company": "Payoo (VietUnion)",
+        "badge": "Enterprise Payment Infrastructure",
+        "logo": "payoo.jpg",
+        "summary": "Specialized in enterprise payment consulting, SmartPOS network rollouts, remote checkout solutions (Pay-by-Link), 0% credit card instalment programs, and automated settlement workflows for multi-location retail chains.",
+        "metrics": [
+          { "num": "11", "label": "Enterprise Merchants Acquired" },
+          { "num": "~1B VND", "label": "Projected Annual GMV Closed" },
+          { "num": "30%", "label": "Lead Qualification Accelerated" }
+        ],
+        "projects": [
+          {
+            "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
+            "tag": "High-Ticket Retail & 0% Instalment",
+            "description": "Eliminated checkout friction for nationwide EV retail (ticket size VND 15M–45M across 30+ showrooms) via 0% credit card instalments, remote Pay-by-link checkouts, and centralized multi-branch reconciliation.",
+            "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+          },
+          {
+            "title": "Enterprise Account Tiering & Merchant Acquisition Model",
+            "tag": "Commercial Pipeline Strategy",
+            "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected annual GMV of ~1B VND.",
+            "link": "#"
+          }
+        ]
+      },
+      "proscan": {
+        "company": "ProScan Global",
+        "badge": "Security Screening & Cross-Border Tech",
+        "logo": "proscan.jpeg",
+        "summary": "Led cross-border market intelligence, mapped demand for ODM/OEM security inspection systems, evaluated distributor economics, and formulated international commercial tender proposals across key global regions: Africa, Belgium, Oceania, and Qatar.",
+        "projects": [
+          {
+            "title": "Africa Market Deep Insight and Growth Opportunity Report",
+            "tag": "Emerging Market Expansion",
+            "description": "In-depth market capacity analysis evaluating USD 87M–156M addressable demand for Walk-through Metal Detectors across Africa, defining urban infrastructure security needs and budget-aligned ODM product positioning.",
+            "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing"
+          },
+          {
+            "title": "Belgium Market Deep Insight and Growth Opportunity Report",
+            "tag": "European Market & Regulatory Compliance",
+            "description": "Comprehensive market intelligence assessing Belgium and European Union regulatory compliance (CE/EN standards), high-end security screening supply chains, and distributor-led market entry frameworks.",
+            "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing"
+          },
+          {
+            "title": "Oceania Market Deep Insight and Growth Opportunity Report",
+            "tag": "APAC & Oceania Strategic Fit",
+            "description": "Evaluated public security and transport hub modernization across Australia and New Zealand, formulating competitive commercial pricing tiers for walk-through inspection equipment.",
+            "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing"
+          },
+          {
+            "title": "Qatar Market Deep Insight and Growth Opportunity Report",
+            "tag": "Middle East High-Ticket Tenders",
+            "description": "Strategic analysis of Qatar and Middle East infrastructure tenders, detailing stringent technical specifications and structuring long-term cooperative value models with regional contractors.",
+            "link": "https://drive.google.com/file/d/1E5JdiCafNWzWkhUc2Cb4bylKrICJxhr4/view?usp=sharing"
+          }
+        ]
+      }
+    },
+    "dataProjects": [
+      {
+        "title": "Automated Market Intelligence & News Aggregator",
+        "category": "Automation & Webhook Pipeline",
+        "tools": "Google Apps Script, REST API, Triggers, Gmail API",
+        "description": "Architected an automated news monitoring pipeline fetching FinTech market intelligence within 24–72 hours, eliminating duplicate feeds, and distributing structured executive digests via email."
+      },
+      {
+        "title": "Merchant Performance & Pipeline Conversion Tracker",
+        "category": "Commercial Dashboard",
+        "tools": "Power BI, DAX, Advanced Excel Modeling",
+        "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking enterprise merchant accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
+      }
+    ],
+    "projects": [
+      {
+        "tag": "Enterprise Fintech & Payment Solutions",
+        "title": "How I Closed an Omnichannel Payment Partnership with Xe Điện Việt Thanh",
+        "description": "A strategic business case on eliminating checkout friction for high-ticket EV retail (VND 15M - 45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated reconciliation.",
+        "url": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+      },
+      {
+        "tag": "Data Strategy & Analytics",
+        "title": "Data Governance & Strategic Decision-Making Frameworks",
+        "description": "A comprehensive analysis detailing how enterprise organizations evaluate statistical limitations in customer behavior datasets to avoid sampling fallacies and make objective capital allocation decisions.",
+        "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis"
+      }
+    ],
+    "labels": {
+      "overview": "Overview",
+      "capabilities": "Capabilities",
+      "careerPath": "Career Path",
+      "academic": "Academic Background",
+      "credentials": "Certifications & Honors",
+      "analytics": "Data Analytics & Automation",
+      "caseStudies": "Featured Case Studies",
+      "directConnection": "Direct Connection",
+      "contactHeading": "Let's Build Strategic Value Together",
+      "contactSub": "Whether discussing enterprise payment solutions, data automation, or commercial partnership opportunities, feel free to drop a message.",
+      "sendBtn": "Send Message →",
+      "moreAbout": "More About Me ↓"
     }
   },
-  "about": [
-    "Hello, I’m <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s in International Business</strong> from the <strong>University of Wollongong</strong>. Throughout my journey, I have focused on leveraging data analytics not just to observe market trends, but to <strong>engineer actionable business development strategies</strong>, <strong>optimize pipeline performance</strong>, and <strong>drive high-impact commercial decisions</strong>.",
-    "My professional background centers on <strong>enterprise B2B sales</strong>, <strong>omnichannel payment infrastructure</strong>, and <strong>cross-border technology solutions</strong>. Managing <strong>CRM workflows, account tiering, and market intelligence</strong>, I navigate full deal lifecycles—from <strong>outbound mapping and C-level negotiations</strong> to <strong>cross-functional alignment and go-live deployment</strong>. These experiences have strengthened my ability to <strong>bridge analytical insights with commercial execution</strong>, solving operational bottlenecks and driving measurable growth.",
-    "Driven by curiosity and commercial problem-solving, I thrive at the intersection where <strong>data, fintech, and strategic creativity meet</strong>. Outside the world of business and analytics, I find inspiration through <strong>street photography</strong>, discovering diverse cultures, and continuous everyday learning."
-  ],
-  "skills": [
-    {
-      "category": "Fintech & Payment Infrastructure",
-      "items": [
-        "Omnichannel Payment Solutions (SmartPOS, SoftPOS, QR)",
-        "0% Credit Card Instalment Integration & Merchant Pricing (MDR)",
-        "Payment Gateway & Remote Checkout (Pay-by-Link)",
-        "Transaction Reconciliation & Settlement Workflows",
-        "Enterprise Merchant Acquisition & Account Tiering"
-      ]
+  "vi": {
+    "nav": {
+      "about": "Giới thiệu",
+      "resume": "Hồ sơ cá nhân",
+      "bd": "Phát triển kinh doanh",
+      "da": "Phân tích dữ liệu",
+      "contact": "Liên hệ",
+      "downloadCv": "Tải CV ↗",
+      "status": "Sẵn sàng kết nối"
     },
-    {
-      "category": "Data Analytics & Automation",
-      "items": [
-        "Business Analytics & Commercial Data Storytelling",
-        "Power BI (Visualizations, KPI Dashboards, Basic DAX)",
-        "Advanced Excel & Google Sheets (Pivot, Modeling, Lookups)",
-        "Workflow Automation (Google Apps Script, Webhooks)",
-        "A/B Testing & Sales Funnel Conversion Analysis"
-      ]
+    "profile": {
+      "name": "Nguyễn Huỳnh Quang Trí (Bryan)",
+      "title": "Phát triển Kinh doanh B2B & Hạ tầng Fintech | Thạc sĩ Phân tích Kinh doanh",
+      "avatarUrl": "avatar.png",
+      "phone": "0838673639",
+      "email": "quangtritc1805@gmail.com",
+      "location": "TP. Hồ Chí Minh, Việt Nam",
+      "cvUrl": "https://e7dd75e6-2c4f-4010-907e-febe8cc5c2e8.filesusr.com/ugd/77d92f_c37bbfee98e44417a2fa328215522e32.pdf",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
+        "facebook": "https://www.facebook.com/Tori1005",
+        "instagram": "https://www.instagram.com/bryannguyen1805/"
+      }
     },
-    {
-      "category": "Strategic B2B Sales & Leadership",
-      "items": [
-        "Enterprise Lead Qualification & Prospect Mapping",
-        "Value-Led Proposal & Technical Quotation Creation",
-        "Cross-functional Alignment (Product, IT, Operations, Legal)",
-        "Complex Negotiation & Stakeholder Relationship Management",
-        "Multicultural Workplace Communication"
-      ]
+    "about": [
+      "Xin chào, tôi là <strong>Nguyễn Huỳnh Quang Trí (Bryan)</strong>. Tôi tốt nghiệp <strong>Thạc sĩ Phân tích Kinh doanh (Business Analytics)</strong> và <strong>Cử nhân Kinh doanh Quốc tế</strong> tại <strong>Đại học Wollongong (Úc)</strong>. Trong suốt hành trình sự nghiệp, tôi tập trung ứng dụng phân tích dữ liệu không chỉ dừng lại ở việc quan sát xu hướng, mà biến chúng thành <strong>chiến lược phát triển kinh doanh khả thi</strong>, <strong>tối ưu hóa hiệu suất phễu bán hàng</strong> và <strong>thúc đẩy các quyết định thương mại mang tính đột phá</strong>.",
+      "Thế mạnh chuyên môn của tôi xoay quanh <strong>kinh doanh B2B cho khách hàng doanh nghiệp</strong>, <strong>hạ tầng giải pháp thanh toán đa kênh (Omnichannel Payment)</strong> và <strong>giải pháp công nghệ xuyên biên giới</strong>. Nhờ trực tiếp quản trị quy trình CRM, phân tầng đối tác và nghiên cứu thị trường, tôi làm chủ toàn diện vòng đời thương vụ—từ <strong>lập bản đồ tệp khách hàng tiềm năng, đàm phán C-level</strong> đến <strong>phối hợp liên phòng ban và triển khai Go-live hệ thống</strong>. Những trải nghiệm này giúp tôi kết nối sắc bén giữa dữ liệu phân tích và thực thi thương mại, tháo gỡ điểm nghẽn vận hành và tạo đà tăng trưởng bền vững.",
+      "Với tinh thần học hỏi không ngừng và tư duy giải quyết vấn đề bằng số liệu, tôi tự tin làm việc tại điểm giao thoa giữa <strong>dữ liệu, công nghệ tài chính (FinTech) và sáng tạo chiến lược</strong>. Ngoài công việc, tôi tìm kiếm cảm hứng qua <strong>nhiếp ảnh đường phố</strong>, khám phá văn hóa đa dạng và tinh thần học hỏi mỗi ngày."
+    ],
+    "skills": [
+      {
+        "category": "Fintech & Hạ tầng Thanh toán",
+        "items": [
+          "Giải pháp thanh toán đa kênh (SmartPOS, SoftPOS, QR)",
+          "Tích hợp trả góp 0% thẻ tín dụng & Biểu phí Merchant (MDR)",
+          "Cổng thanh toán & Thu tiền từ xa (Pay-by-Link)",
+          "Quy trình đối soát giao dịch & Quyết toán dòng tiền tự động",
+          "Phát triển khách hàng doanh nghiệp & Phân tầng Merchant"
+        ]
+      },
+      {
+        "category": "Phân tích Dữ liệu & Tự động hóa",
+        "items": [
+          "Phân tích kinh doanh & Trực quan hóa số liệu thương mại",
+          "Power BI (Visualizations, KPI Dashboards, DAX)",
+          "Excel nâng cao & Google Sheets (Pivot, Modeling, Lookups)",
+          "Tự động hóa luồng vận hành (Google Apps Script, Webhooks)",
+          "Thử nghiệm A/B & Phân tích tỷ lệ chuyển đổi phễu bán hàng"
+        ]
+      },
+      {
+        "category": "Bán hàng B2B Chiến lược & Đàm phán",
+        "items": [
+          "Thẩm định khách hàng doanh nghiệp & Lập bản đồ thị trường",
+          "Xây dựng hồ sơ giải pháp (Proposal) & Báo giá kỹ thuật",
+          "Điều phối liên bộ phận (Sản phẩm, IT, Vận hành, Pháp chế)",
+          "Đàm phán thương mại phức tạp & Quản trị quan hệ đối tác",
+          "Giao tiếp và làm việc hiệu quả trong môi trường đa văn hóa"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "period": "10/2025 – Hiện tại",
+        "company": "PAYOO (VIETUNION) – Trung gian Thanh toán & FinTech – Việt Nam",
+        "logoUrl": "payoo.jpg",
+        "role": "Chuyên viên Phát triển Kinh doanh (Enterprise B2B)",
+        "bullets": [
+          "Tìm kiếm, thẩm định và kết nối thành công 11 chuỗi đối tác doanh nghiệp áp dụng giải pháp hạ tầng thanh toán đa kênh (SmartPOS, Cổng thanh toán, QR).",
+          "Xây dựng bộ tiêu chuẩn phân tầng tài khoản (Tier 1–3) dựa trên quy mô GMV và độ phủ mạng lưới, giúp rút ngắn thời gian thẩm định đối tác thêm 30%.",
+          "Đàm phán và thuyết phục trực tiếp lãnh đạo cấp cao của đối tác, ký kết các hợp đồng thương mại với tổng GMV ước tính ~1 tỷ VNĐ/năm.",
+          "Rút ngắn 20% thời gian luân chuyển hợp đồng và phối hợp chặt chẽ với đội ngũ kỹ thuật để đảm bảo quy trình tích hợp Onboarding chuẩn SLA."
+        ]
+      },
+      {
+        "period": "10/2025 – 03/2026",
+        "company": "PROSCAN GLOBAL – Thiết bị Soi chiếu & An ninh Công nghệ – Việt Nam",
+        "logoUrl": "proscan.jpeg",
+        "role": "Chuyên viên Phát triển Kinh doanh Quốc tế",
+        "bullets": [
+          "Lập bản đồ và thẩm định hơn 70 tài khoản doanh nghiệp quốc tế, đánh giá năng lực nhà phân phối để mở rộng đường ống kinh doanh xuất khẩu.",
+          "Khởi tạo 15–20 lượt liên hệ chất lượng mỗi tuần, chào hàng giải pháp máy soi an ninh ODM cho đối tác mua hàng và nhà thầu dự án.",
+          "Thẩm định thành công 25+ khách hàng tiềm năng cao với tỷ lệ chuyển đổi 80% sang buổi họp chuyên sâu cùng ban giám đốc.",
+          "Soạn thảo hơn 10 bản đề xuất thương mại và báo giá kỹ thuật bằng tiếng Anh (lên tới $12,000+ USD/thương vụ), tuân thủ nghiêm ngặt hồ sơ mời thầu."
+        ]
+      },
+      {
+        "period": "11/2024 – 03/2025",
+        "company": "PiHome Việt Nam",
+        "logoUrl": "pihome.png",
+        "role": "Thực tập sinh Phát triển Kinh doanh",
+        "bullets": [
+          "Tìm kiếm và sàng lọc 60+ khách hàng tiềm năng thông qua nghiên cứu thị trường.",
+          "Điều phối thành công 3–5 buổi gặp gỡ hàng tuần với đối tác người bán.",
+          "Quản lý tính chính xác của dữ liệu CRM để theo dõi tiến độ chuyển đổi và KPI.",
+          "Hỗ trợ xây dựng tài liệu thuyết trình Demo phục vụ các cuộc họp đối tác.",
+          "Phối hợp với đội Marketing và Vận hành để may đo thông điệp tiếp cận theo từng phân khúc."
+        ]
+      },
+      {
+        "period": "02/2023 – 12/2023",
+        "company": "OESON Australia",
+        "logoUrl": "oeson.jpeg",
+        "role": "Thực tập sinh Bán hàng & Marketing",
+        "bullets": [
+          "Nghiên cứu đối thủ và phân tích thị trường để tham mưu cho chiến lược bán hàng.",
+          "Tổng hợp báo cáo hiệu suất định kỳ hàng tuần cho các chiến dịch đa kênh.",
+          "Gia tăng hơn 20% tương tác truyền thông thông qua việc tối ưu hóa nội dung tiếp cận.",
+          "Hỗ trợ chuẩn bị tài liệu thuyết trình cho các buổi chào bán giải pháp doanh nghiệp."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "period": "Tốt nghiệp: 08/2025",
+        "school": "University of Wollongong (Úc)",
+        "degree": "Thạc sĩ Phân tích Kinh doanh (Master of Business Analytics)"
+      },
+      {
+        "period": "Tốt nghiệp: 08/2024",
+        "school": "University of Wollongong (Úc)",
+        "degree": "Cử nhân Kinh doanh - Chuyên ngành Kinh doanh Quốc tế"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Chuyên môn Phân tích Kinh doanh Nâng cao SAS®",
+        "issuer": "Viện SAS & Đại học Wollongong",
+        "period": "Tháng 8/2025",
+        "skills": "Phân tích định lượng dữ liệu doanh nghiệp, Phần mềm SAS, Mô hình hóa thống kê & Dự báo chuyên sâu",
+        "imageUrl": "Certificate.jpeg"
+      },
+      {
+        "name": "Năng lực Anh ngữ Chuyên môn – Giao tiếp Doanh nghiệp Quốc tế",
+        "issuer": "IELTS Academic",
+        "period": "Chứng nhận Quốc tế",
+        "skills": "Thương thảo hợp đồng tiếng Anh C-level, Soạn thảo đề xuất thầu kỹ thuật",
+        "imageUrl": "ielts.jpg"
+      }
+    ],
+    "businessDevelopment": {
+      "payoo": {
+        "company": "Payoo (VietUnion)",
+        "badge": "Hạ tầng Thanh toán Doanh nghiệp",
+        "logo": "payoo.jpg",
+        "summary": "Tư vấn kiến trúc thanh toán B2B, triển khai mạng lưới SmartPOS, thanh toán từ xa qua link (Pay-by-Link), giải pháp trả góp thẻ tín dụng 0% và hệ thống đối soát giao dịch tự động cho các chuỗi bán lẻ đa điểm.",
+        "metrics": [
+          { "num": "11", "label": "Đối tác chuỗi đã kết nối" },
+          { "num": "~1 Tỷ VNĐ", "label": "GMV giao dịch ước tính/năm" },
+          { "num": "30%", "label": "Rút ngắn thời gian thẩm định" }
+        ],
+        "projects": [
+          {
+            "title": "Hợp tác triển khai Hạ tầng Thanh toán Đa kênh cùng Chuỗi Xe Điện Việt Thanh",
+            "tag": "Bán lẻ Giá trị cao & Trả góp 0%",
+            "description": "Tháo gỡ rào cản chi trả cho chuỗi bán lẻ xe điện với ticket size lớn (15M–45M VNĐ) trên 30+ showroom toàn quốc bằng phương thức trả góp thẻ tín dụng 0%, thanh toán từ xa qua Pay-by-link và đối soát tập trung.",
+            "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+          },
+          {
+            "title": "Mô hình Phân tầng Đối tác & Chiến lược Phát triển Khách hàng Doanh nghiệp",
+            "tag": "Chiến lược Phễu B2B",
+            "description": "Xây dựng ma trận chấm điểm đối tác Tier 1–3 dựa trên tốc độ luân chuyển dòng tiền GMV và độ phủ chi nhánh, tối ưu hóa thời gian Onboarding và chốt thành công các chuỗi lớn với GMV mục tiêu ~1 tỷ VNĐ/năm.",
+            "link": "#"
+          }
+        ]
+      },
+      "proscan": {
+        "company": "ProScan Global",
+        "badge": "Thiết bị Soi chiếu & Công nghệ Quốc tế",
+        "logo": "proscan.jpeg",
+        "summary": "Phụ trách nghiên cứu thị trường quốc tế, phân tích nhu cầu trang thiết bị an ninh ODM/OEM, đánh giá bài toán kinh tế của nhà phân phối và thiết lập cấu trúc hồ sơ mời thầu tại các khu vực: Châu Phi, Bỉ, Châu Đại Dương và Qatar.",
+        "projects": [
+          {
+            "title": "Báo cáo Nghiên cứu Chuyên sâu & Cơ hội Tăng trưởng Thị trường Châu Phi",
+            "tag": "Mở rộng Thị trường Mới nổi",
+            "description": "Phân tích dung lượng thị trường thiết bị cổng dò kim loại an ninh đạt 87M$–156M$ USD tại Châu Phi, đánh giá nhu cầu kiểm soát an ninh tại các đô thị trọng điểm và định vị sản phẩm ODM phù hợp ngân sách.",
+            "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing"
+          },
+          {
+            "title": "Báo cáo Nghiên cứu Chuyên sâu & Cơ hội Tăng trưởng Thị trường Bỉ",
+            "tag": "Thị trường Châu Âu & Tiêu chuẩn CE/EN",
+            "description": "Nghiên cứu cấu trúc thị trường Bỉ và Liên minh Châu Âu (EU), bóc tách các tiêu chuẩn kỹ thuật nghiêm ngặt, chuỗi cung ứng thiết bị soi chiếu công nghệ cao và mô hình tiếp cận qua kênh nhà phân phối bản địa.",
+            "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing"
+          },
+          {
+            "title": "Báo cáo Nghiên cứu Chuyên sâu & Cơ hội Tăng trưởng Thị trường Châu Đại Dương",
+            "tag": "Thị trường Úc & New Zealand",
+            "description": "Đánh giá nhu cầu hiện đại hóa hạ tầng giao thông và cảng biển tại Úc & New Zealand, xây dựng khung định giá cạnh tranh cho các giải pháp kiểm soát an ninh thương mại xuất khẩu.",
+            "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing"
+          },
+          {
+            "title": "Báo cáo Nghiên cứu Chuyên sâu & Cơ hội Tăng trưởng Thị trường Qatar",
+            "tag": "Hồ sơ Thầu Dự án Trung Đông",
+            "description": "Phân tích cơ hội tham gia các dự án thầu an ninh cho hạ tầng thương mại và sự kiện tầm cỡ tại Qatar, đáp ứng thông số kỹ thuật khắt khe và xây dựng mô hình hợp tác giá trị dài hạn cùng nhà thầu bản địa.",
+            "link": "https://drive.google.com/file/d/1E5JdiCafNWzWkhUc2Cb4bylKrICJxhr4/view?usp=sharing"
+          }
+        ]
+      }
+    },
+    "dataProjects": [
+      {
+        "title": "Hệ thống Tự động hóa Tổng hợp & Thu thập Tin tức Thị trường Fintech",
+        "category": "Automation & Webhook Pipeline",
+        "tools": "Google Apps Script, REST API, Triggers, Gmail API",
+        "description": "Xây dựng luồng tự động quét và chắt lọc tin tức thị trường FinTech trong 24–72 giờ, khử dữ liệu trùng lặp và gửi bản tin tổng hợp cho ban lãnh đạo qua email định kỳ."
+      },
+      {
+        "title": "Bảng điều khiển Giám sát Hiệu suất Đối tác & Tỷ lệ Chuyển đổi Deal",
+        "category": "Dashboard Thương mại",
+        "tools": "Power BI, DAX, Advanced Excel Modeling",
+        "description": "Thiết kế mô hình phân tích phễu khách hàng doanh nghiệp, đo lường tốc độ chốt giao dịch qua từng chặng và phát hiện các điểm nghẽn chuyển đổi trong vận hành."
+      }
+    ],
+    "projects": [
+      {
+        "tag": "Hạ tầng FinTech & Thanh toán Doanh nghiệp",
+        "title": "Case Study: Triển khai Hạ tầng Thanh toán Đa kênh Chuỗi Showroom Xe Điện Việt Thanh",
+        "description": "Phân tích bài toán gỡ bỏ rào cản thanh toán cho khách hàng mua xe điện giá trị cao (15M–45M VNĐ) trên 30+ showroom bằng giải pháp trả góp thẻ tín dụng 0%, thanh toán link từ xa và đối soát dòng tiền tập trung.",
+        "url": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
+      },
+      {
+        "tag": "Chiến lược Quản trị Dữ liệu & Phân tích",
+        "title": "Khung Quản trị Dữ liệu & Đưa ra Quyết định Chiến lược Doanh nghiệp",
+        "description": "Bài phân tích chuyên sâu về cách các tổ chức đánh giá giới hạn thống kê trong tập dữ liệu hành vi người dùng nhằm tránh sai lệch lấy mẫu và phân bổ nguồn lực kinh doanh tối ưu.",
+        "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis"
+      }
+    ],
+    "labels": {
+      "overview": "Tổng quan",
+      "capabilities": "Năng lực chuyên môn",
+      "careerPath": "Hành trình sự nghiệp",
+      "academic": "Học vấn & Bằng cấp",
+      "credentials": "Chứng chỉ & Giải thưởng",
+      "analytics": "Phân tích Dữ liệu & Tự động hóa",
+      "caseStudies": "Case Study Chiến lược",
+      "directConnection": "Kết nối trực tiếp",
+      "contactHeading": "Đồng hành Xây dựng Giá trị Chiến lược",
+      "contactSub": "Dù bạn muốn trao đổi về giải pháp thanh toán doanh nghiệp, tự động hóa dữ liệu hay cơ hội hợp tác kinh doanh mới, hãy gửi tin nhắn cho tôi.",
+      "sendBtn": "Gửi tin nhắn →",
+      "moreAbout": "Xem thêm về tôi ↓"
     }
-  ],
-  "experience": [
-    {
-      "period": "Oct 2025 – Present",
-      "company": "PAYOO (VIETUNION) – FinTech & Payments – Vietnam",
-      "logoUrl": "payoo.jpg",
-      "role": "Business Development Executive",
-      "bullets": [
-        "Acquired and managed 11 enterprise merchant accounts across retail, F&B, and lifestyle chains for omnichannel payment infrastructure adoption (SmartPOS, Gateway, QR).",
-        "Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by 30%.",
-        "Pitched tailored payment solutions to senior leadership, securing enterprise contracts with projected annual GMV of ~1B VND.",
-        "Shortened contract turnaround by 20% and collaborated with technical teams to ensure seamless merchant onboarding and SLA compliance."
-      ]
-    },
-    {
-      "period": "Oct 2025 – Mar 2026",
-      "company": "PROSCAN GLOBAL – Security Screening & Technology Solutions – Vietnam",
-      "logoUrl": "proscan.jpeg",
-      "role": "Business Development Executive",
-      "bullets": [
-        "Identified and mapped 70+ international B2B accounts across regional markets, evaluating distributor profiles to expand the overseas pipeline.",
-        "Initiated 15–20 qualified outbound contacts weekly, pitching ODM security screening solutions to prospective buyers and tender contractors.",
-        "Qualified 25+ high-intent leads with an 80% conversion rate to discovery meetings, seamlessly handing over to senior directors for closing.",
-        "Delivered 10+ tailored English commercial proposals and technical quotations (up to $12K+ USD/deal), ensuring full SLA and tender compliance."
-      ]
-    },
-    {
-      "period": "Nov 2024 – Mar 2025",
-      "company": "PiHome Vietnam",
-      "logoUrl": "pihome.png",
-      "role": "Business Development Intern",
-      "bullets": [
-        "Identified and qualified 60+ potential leads through market research and prospecting.",
-        "Scheduled 3–5 qualified meetings/week, contributing to seller engagement pipeline.",
-        "Maintained CRM data integrity to track lead progress and team KPIs.",
-        "Prepared demo decks and reports for stakeholder presentations.",
-        "Collaborated with marketing and operations teams to tailor outreach by segment."
-      ]
-    },
-    {
-      "period": "Feb 2023 – Dec 2023",
-      "company": "OESON Australia",
-      "logoUrl": "oeson.jpeg",
-      "role": "Sales and Marketing Intern",
-      "bullets": [
-        "Conducted competitor and market analysis to inform sales strategy.",
-        "Created weekly performance reports for multi-channel marketing campaigns.",
-        "Increased social media engagement by 20%+ through targeted content.",
-        "Supported team presentations and proposal development for business pitches.",
-        "Worked with sales, product, and marketing teams to improve lead quality."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "period": "Graduated: Aug 2025",
-      "school": "University of Wollongong",
-      "degree": "Master of Business Analytics"
-    },
-    {
-      "period": "Graduated: Aug 2024",
-      "school": "University of Wollongong",
-      "degree": "Bachelor of Business - International Business"
-    }
-  ],
-  "certifications": [
-    {
-      "name": "SAS® Academic Specialisation in Advanced Business Analytics",
-      "issuer": "SAS & University of Wollongong",
-      "period": "August 2025",
-      "skills": "Enterprise Business Analytics, SAS Software, Statistical Modeling & Advanced Predictive Insights",
-      "imageUrl": "Certificate.jpeg"
-    },
-    {
-      "name": "English Proficiency – Professional Working Competence",
-      "issuer": "IELTS Academic",
-      "period": "International Certified",
-      "skills": "Executive Cross-border Communication & Technical Proposals",
-      "imageUrl": "ielts.jpg"
-    }
-  ],
-  "businessDevelopment": {
-    "payoo": {
-      "company": "Payoo (VietUnion)",
-      "badge": "Enterprise Payment Infrastructure",
-      "logo": "payoo.jpg",
-      "summary": "Specialized in enterprise payment consulting, SmartPOS network rollouts, remote checkout solutions (Pay-by-Link), 0% credit card instalment programs, and automated settlement workflows for multi-location retail chains.",
-      "metrics": [
-        { "num": "11", "label": "Enterprise Merchants Acquired" },
-        { "num": "~1B VND", "label": "Projected Annual GMV Closed" },
-        { "num": "30%", "label": "Lead Qualification Accelerated" }
-      ],
-      "projects": [
-        {
-          "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
-          "tag": "High-Ticket Retail & 0% Instalment",
-          "description": "Eliminated checkout friction for nationwide EV retail (ticket size VND 15M–45M across 30+ showrooms) via 0% credit card instalments, remote Pay-by-link checkouts, and centralized multi-branch reconciliation.",
-          "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
-        },
-        {
-          "title": "Enterprise Account Tiering & Merchant Acquisition Model",
-          "tag": "Commercial Pipeline Strategy",
-          "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected annual GMV of ~1B VND.",
-          "link": "#"
-        }
-      ]
-    },
-    "proscan": {
-      "company": "ProScan Global",
-      "badge": "Security Screening & Cross-Border Tech",
-      "logo": "proscan.jpeg",
-      "summary": "Led cross-border market intelligence, mapped demand for ODM/OEM security inspection systems, evaluated distributor economics, and formulated international commercial tender proposals across key global regions: Africa, Belgium, Oceania, and Qatar.",
-      "projects": [
-        {
-          "title": "Africa Market Deep Insight and Growth Opportunity Report",
-          "tag": "Emerging Market Expansion",
-          "description": "In-depth market capacity analysis evaluating USD 87M–156M addressable demand for Walk-through Metal Detectors across Africa, defining urban infrastructure security needs and budget-aligned ODM product positioning.",
-          "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing"
-        },
-        {
-          "title": "Belgium Market Deep Insight and Growth Opportunity Report",
-          "tag": "European Market & Regulatory Compliance",
-          "description": "Comprehensive market intelligence assessing Belgium and European Union regulatory compliance (CE/EN standards), high-end security screening supply chains, and distributor-led market entry frameworks.",
-          "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing"
-        },
-        {
-          "title": "Oceania Market Deep Insight and Growth Opportunity Report",
-          "tag": "APAC & Oceania Strategic Fit",
-          "description": "Evaluated public security and transport hub modernization across Australia and New Zealand, formulating competitive commercial pricing tiers for walk-through inspection equipment.",
-          "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing"
-        },
-        {
-          "title": "Qatar Market Deep Insight and Growth Opportunity Report",
-          "tag": "Middle East High-Ticket Tenders",
-          "description": "Strategic analysis of Qatar and Middle East infrastructure tenders, detailing stringent technical specifications and structuring long-term cooperative value models with regional contractors.",
-          "link": "https://drive.google.com/file/d/1E5JdiCafNWzWkhUc2Cb4bylKrICJxhr4/view?usp=sharing"
-        }
-      ]
-    }
-  },
-  "dataProjects": [
-    {
-      "title": "Automated Market Intelligence & News Aggregator",
-      "category": "Automation & Webhook Pipeline",
-      "tools": "Google Apps Script, REST API, Triggers, Gmail API",
-      "description": "Architected an automated news monitoring pipeline fetching FinTech market intelligence within 24–72 hours, eliminating duplicate feeds, and distributing structured executive digests via email."
-    },
-    {
-      "title": "Merchant Performance & Pipeline Conversion Tracker",
-      "category": "Commercial Dashboard",
-      "tools": "Power BI, DAX, Advanced Excel Modeling",
-      "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking enterprise merchant accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
-    }
-  ],
-  "projects": [
-    {
-      "tag": "Enterprise Fintech & Payment Solutions",
-      "title": "How I Closed an Omnichannel Payment Partnership with Xe Điện Việt Thanh",
-      "description": "A strategic business case on eliminating checkout friction for high-ticket EV retail (VND 15M - 45M) across 30+ showrooms nationwide through 0% credit card instalments, remote Pay-by-link checkout, and automated reconciliation.",
-      "url": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh"
-    },
-    {
-      "tag": "Data Strategy & Analytics",
-      "title": "Data Governance & Strategic Decision-Making Frameworks",
-      "description": "A comprehensive analysis detailing how enterprise organizations evaluate statistical limitations in customer behavior datasets to avoid sampling fallacies and make objective capital allocation decisions.",
-      "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis"
-    }
-  ]
+  }
 }
