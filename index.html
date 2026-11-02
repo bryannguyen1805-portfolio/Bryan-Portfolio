@@ -23,7 +23,6 @@
       --border: rgba(226, 232, 240, 0.8);
       --np-dark: #0f172a;
       
-      /* Subtle, deep shadows for floating Bento feel */
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.03);
       --shadow-card: 0 8px 30px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(0,0,0,0.02);
       --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.08), 0 1px 5px rgba(0,0,0,0.02);
@@ -45,8 +44,9 @@
       font-size: 0.92rem;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      
-      /* Sub-mesh gradient background across the whole body */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background-image: 
         radial-gradient(at 80% 0%, hsla(210,100%,96%,1) 0px, transparent 50%),
         radial-gradient(at 0% 50%, hsla(210,100%,98%,1) 0px, transparent 50%);
@@ -60,6 +60,10 @@
       margin: 0 auto;
       padding: 0 24px;
     }
+    
+    main {
+      flex: 1 0 auto; /* Đảm bảo main tự co giãn đẩy footer xuống đáy */
+    }
 
     /* Scroll Progress Bar */
     #scrollProgress {
@@ -72,9 +76,7 @@
       z-index: 1001;
     }
 
-    /* ======================================================================= 
-       STICKY GLASSMORPHISM HEADER
-       ======================================================================= */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -138,7 +140,6 @@
       100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
-    /* Tabs Nav */
     .main-nav {
       display: flex;
       align-items: center;
@@ -214,7 +215,7 @@
     /* TAB PAGES SYSTEM */
     .page-section {
       display: none;
-      padding: 60px 0 80px;
+      padding: 40px 0 60px; /* Thêm margin tự nhiên cho các section */
       animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .page-section.active { display: block; }
@@ -222,10 +223,13 @@
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    
+    /* Gỡ bỏ padding thừa cho trang liên hệ */
+    #page-contact {
+      padding: 0;
+    }
 
-    /* ======================================================================= 
-       FULL-WIDTH HERO SECTION (Phá bỏ khung viền, Ảnh Cut-out tỷ lệ lớn)
-       ======================================================================= */
+    /* HERO SECTION */
     .hero-container {
       display: flex;
       align-items: center;
@@ -247,8 +251,6 @@
       justify-content: flex-end;
       z-index: 1;
     }
-
-    /* Hiệu ứng Glow mềm đằng sau ảnh đại diện */
     .hero-img-glow {
       position: absolute;
       top: 50%;
@@ -261,15 +263,12 @@
       z-index: -1;
       filter: blur(20px);
     }
-
-    /* Khung ảnh phong cách Soft Blob / Cut-out */
     .hero-img {
       width: 100%;
       max-width: 420px;
       height: auto;
       object-fit: cover;
       object-position: top center;
-      /* Tạo dáng bo viền bất đối xứng thanh thoát nếu ảnh vuông, không viền xám */
       border-radius: 40px 40px 40px 120px; 
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
       transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -307,8 +306,6 @@
       line-height: 1.6;
       font-weight: 500;
     }
-
-    /* Contact Row dang Pill (Micro-interactions) */
     .hero-contact-row {
       display: flex;
       flex-wrap: wrap;
@@ -336,9 +333,7 @@
       transform: translateY(-2px);
     }
 
-    /* ======================================================================= 
-       BENTO GRID LAYOUT (Cho phần About và Skills)
-       ======================================================================= */
+    /* BENTO GRID */
     .section-eyebrow {
       font-size: 0.75rem;
       font-weight: 800;
@@ -387,8 +382,6 @@
       box-shadow: var(--shadow-hover);
       border-color: var(--primary-light);
     }
-    
-    /* Trang trí góc thẻ (Micro-interaction accent) */
     .bento-card::after {
       content: "";
       position: absolute;
@@ -402,11 +395,8 @@
     }
     .bento-card:hover::after { opacity: 1; }
 
-    /* Chia lưới Bento: Thẻ Intro chiếm 12 cột, thẻ phụ chiếm 6 cột */
     .col-12 { grid-column: span 12; }
-    .col-8  { grid-column: span 8; }
     .col-6  { grid-column: span 6; }
-    .col-4  { grid-column: span 4; }
 
     .about-text {
       font-size: 1.05rem;
@@ -416,8 +406,6 @@
       z-index: 1;
     }
     .about-text strong { color: var(--np-dark); font-weight: 700; }
-
-    /* Visual anchor (Icon/Badge) trong thẻ Bento */
     .bento-icon-wrap {
       width: 44px;
       height: 44px;
@@ -441,7 +429,7 @@
       color: var(--np-dark);
     }
 
-    /* Skills Bento (3 cột) */
+    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -460,7 +448,7 @@
       padding: 6px 14px;
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: var(--radius-md); /* Giảm bo tròn để nhìn gai góc công nghệ hơn */
+      border-radius: var(--radius-md);
       font-size: 0.82rem;
       font-weight: 600;
       color: #334155;
@@ -468,7 +456,7 @@
     }
     .bento-card:hover .skill-chip { border-color: rgba(226, 232, 240, 0.9); }
 
-    /* TIMELINE (Minimalist Line) */
+    /* TIMELINE */
     .timeline { display: flex; flex-direction: column; gap: 24px; position: relative; }
     .timeline-card {
       background: var(--card-bg);
@@ -618,7 +606,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* CASE CARDS (Lưới ngang) */
+    /* CASE CARDS */
     .case-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -680,13 +668,11 @@
     }
 
     /* ======================================================================= 
-       LIÊN HỆ (NEIL PATEL STYLE) & CHUYỂN TIẾP TRƠN TRU (GRADIENT TRANSITION)
+       LIÊN HỆ & FOOTER (NP STYLE) - DÙNG CHUNG CHO TẤT CẢ TRANG
        ======================================================================= */
     .contact-wrapper {
-      /* Hiệu ứng dải màu tan dần từ nền trắng xám xuống Navy */
       background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
-      padding-top: 80px;
-      margin-top: 40px;
+      padding-top: 60px;
     }
     
     .np-contact-hero {
@@ -708,7 +694,6 @@
       margin: 0 auto 50px;
       line-height: 1.6;
     }
-
     .np-form {
       max-width: 760px;
       margin: 0 auto;
@@ -743,9 +728,7 @@
       transition: all 0.3s ease;
       outline: none;
     }
-    .np-input:focus {
-      border-bottom-color: var(--accent);
-    }
+    .np-input:focus { border-bottom-color: var(--accent); }
     .np-input::placeholder { color: rgba(255, 255, 255, 0.2); }
     textarea.np-input { resize: vertical; min-height: 80px; }
     
@@ -773,9 +756,9 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    /* MULTI-COLUMN FOOTER */
+    /* FOOTER */
     .np-footer {
-      background-color: var(--np-dark); /* Đồng bộ nền Navy với Contact */
+      background-color: var(--np-dark);
       color: #ffffff;
       padding: 0 24px 60px;
       border-top: 1px solid rgba(255,255,255,0.05);
@@ -823,8 +806,7 @@
     .np-footer-links a:hover { color: #ffffff; }
 
     /* ======================================================================= 
-       CỤM NÚT NỔI (MONOCHROME MINIMALIST)
-       - Nút trắng viền nhạt, Icon màu xám, chỉ hiện màu gốc khi Hover.
+       FLOATING WIDGET (MONOCHROME MINIMALIST)
        ======================================================================= */
     .floating-widget {
       position: fixed;
@@ -843,7 +825,7 @@
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(226, 232, 240, 0.8);
-      color: #64748b; /* Monochrome Icon */
+      color: #64748b;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -854,7 +836,6 @@
     }
     .float-btn svg { width: 20px; height: 20px; fill: currentColor; transition: fill 0.3s; }
     
-    /* Hover Effects cho từng nút */
     .float-btn.zalo-btn img { width: 100%; height: 100%; object-fit: contain; filter: grayscale(100%); transition: all 0.3s; }
     .float-btn.zalo-btn:hover { border-color: #0068ff; box-shadow: 0 6px 16px rgba(0, 104, 255, 0.15); transform: translateY(-4px); }
     .float-btn.zalo-btn:hover img { filter: grayscale(0%); }
@@ -875,9 +856,7 @@
     .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
     .btn-top:hover { background: var(--primary); transform: translateY(-4px) !important; }
 
-    /* ======================================================================= 
-       RESPONSIVE DI ĐỘNG (Xử lý Triệt để Typography và Layout)
-       ======================================================================= */
+    /* RESPONSIVE DI ĐỘNG */
     @media (max-width: 860px) {
       .container { padding: 0 20px; }
       body { font-size: 0.9rem; }
@@ -895,13 +874,7 @@
 
       .page-section { padding: 30px 0 40px; }
       
-      /* Hero Mobile */
-      .hero-container {
-        flex-direction: column-reverse;
-        padding: 20px 0 40px;
-        gap: 30px;
-        min-height: auto;
-      }
+      .hero-container { flex-direction: column-reverse; padding: 20px 0 40px; gap: 30px; min-height: auto; }
       .hero-content-col { text-align: center; }
       .hero-img-col { justify-content: center; }
       .hero-img { max-width: 220px; border-radius: 30px 30px 30px 80px; }
@@ -911,7 +884,6 @@
       .section-title { font-size: 1.4rem; margin-bottom: 24px; }
       .block-heading { font-size: 1.1rem; margin: 30px 0 16px; }
 
-      /* Bento Grid Mobile */
       .bento-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px; }
       .bento-card { padding: 24px; border-radius: var(--radius-lg); }
 
@@ -923,7 +895,7 @@
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
 
-      /* Form Neil Patel Mobile */
+      /* Form Contact Responsive */
       .contact-wrapper { padding-top: 40px; margin-top: 20px; }
       .np-contact-hero { padding: 30px 16px 50px; }
       .np-contact-title { font-size: 2.4rem; }
@@ -945,7 +917,7 @@
   <div id="scrollProgress"></div>
   <div id="top"></div>
 
-  <!-- STICKY GLASSMORPHISM HEADER -->
+  <!-- STICKY HEADER -->
   <header id="main-header">
     <div class="container nav-wrap">
       <div class="nav-top-row">
@@ -963,22 +935,19 @@
         </div>
       </div>
 
-      <!-- 5 TABS NAV -->
       <nav class="main-nav">
         <div class="nav-tab active" id="tab-about" onclick="switchPage('about')">About</div>
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
         <div class="nav-tab" id="tab-bd" onclick="switchPage('business-dev')">Business Development</div>
         <div class="nav-tab" id="tab-da" onclick="switchPage('data-analyst')">Data Analyst</div>
-        <div class="nav-tab" id="tab-contact" onclick="switchPage('contact')">Contact</div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- 1. TRANG GIỚI THIỆU (ABOUT) - BENTO GRID & FULL WIDTH -->
+    <!-- 1. ABOUT -->
     <section id="page-about" class="page-section active">
       <div class="container">
-        <!-- Hero Section -->
         <div class="hero-container">
           <div class="hero-content-col">
             <div class="hero-eyebrow" id="hero-eyebrow">Enterprise B2B & Fintech Specialist</div>
@@ -994,23 +963,16 @@
           
           <div class="hero-img-col">
             <div class="hero-img-glow"></div>
-            <!-- Ảnh nên dùng nền trong suốt (transparent PNG) để đẹp nhất -->
             <img id="avatar" src="avatar.png" alt="Bryan Nguyen" class="hero-img">
           </div>
         </div>
 
-        <!-- Bento Grid About -->
         <div class="section-header">
           <span class="section-eyebrow" id="about-eyebrow">Professional Philosophy</span>
           <h2 class="section-title" id="about-heading">Bridging Analytics & Commercial Growth</h2>
         </div>
         
-        <div class="bento-grid" id="about-container-bento">
-          <!-- Nội dung sẽ được render bằng JS vào 2 thẻ Bento:
-               Thẻ 1 (col-12): Khái quát
-               Thẻ 2 (col-6): Chuyên môn B2B
-               Thẻ 3 (col-6): Personal traits -->
-        </div>
+        <div class="bento-grid" id="about-container-bento"></div>
       </div>
     </section>
 
@@ -1053,7 +1015,6 @@
           </button>
         </div>
 
-        <!-- Tab Payoo -->
         <div id="bd-payoo" class="bd-subcontent active">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
@@ -1071,7 +1032,6 @@
           <div class="case-grid" id="bd-payoo-projects"></div>
         </div>
 
-        <!-- Tab ProScan -->
         <div id="bd-proscan" class="bd-subcontent">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
@@ -1105,81 +1065,77 @@
         <div class="timeline" id="da-cert-container"></div>
       </div>
     </section>
-
-    <!-- 5. CONTACT & FOOTER (KHỐI CHUYỂN TIẾP TRÀN VIỀN) -->
-    <section id="page-contact" class="page-section">
-      <div class="contact-wrapper">
-        <div class="np-contact-hero">
-          <div class="container" style="max-width: 800px;">
-            <h2 class="np-contact-title" id="contact-heading">How can I help?</h2>
-            <p class="np-contact-sub" id="contact-sub">Do you have a question or are you interested in working with me? Just fill out the form fields below.</p>
-            
-            <form class="np-form">
-              <div class="np-form-row">
-                <div class="np-input-group">
-                  <label id="lbl-fname">First Name</label>
-                  <input type="text" class="np-input" required>
-                </div>
-                <div class="np-input-group">
-                  <label id="lbl-lname">Last Name</label>
-                  <input type="text" class="np-input" required>
-                </div>
-              </div>
-              <div class="np-form-row">
-                <div class="np-input-group">
-                  <label id="lbl-email">Email Address</label>
-                  <input type="email" class="np-input" required>
-                </div>
-                <div class="np-input-group">
-                  <label id="lbl-subject">Subject / Company</label>
-                  <input type="text" class="np-input" required>
-                </div>
-              </div>
-              <div class="np-form-row">
-                <div class="np-input-group" style="width: 100%;">
-                  <label id="lbl-msg">Message</label>
-                  <textarea class="np-input" id="msg-ph" placeholder="Message (remember, short & sweet please)" required></textarea>
-                </div>
-              </div>
-              <div class="np-submit-wrap">
-                <button type="submit" class="np-btn-submit" id="submitBtn">SUBMIT</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <footer class="np-footer">
-          <div class="container np-footer-grid">
-            <div class="np-footer-col">
-              <h3 class="np-footer-logo">Bryan Nguyen</h3>
-              <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
-            </div>
-            <div class="np-footer-col">
-              <h4 id="footer-nav-title">NAVIGATE</h4>
-              <div class="np-footer-links">
-                <a onclick="switchPage('about')" id="f-about">About Me</a>
-                <a onclick="switchPage('resume')" id="f-resume">Resume</a>
-                <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
-                <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
-              </div>
-            </div>
-            <div class="np-footer-col">
-              <h4 id="footer-contact-title">DIRECT CONTACT</h4>
-              <div class="np-footer-links">
-                <a href="tel:0838673639">📞 0838 673 639</a>
-                <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
-                <a>📍 Ho Chi Minh City, Vietnam</a>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </section>
   </main>
 
-  <!-- ======================================================================= 
-       BỘ NÚT NỔI (MONOCHROME MINIMALIST)
-       ======================================================================= -->
+  <!-- 5. CONTACT & FOOTER (NGOÀI MAIN, DÙNG CHUNG CHO MỌI TRANG) -->
+  <div class="contact-wrapper" id="global-contact">
+    <div class="np-contact-hero">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="np-contact-title" id="contact-heading">How can I help?</h2>
+        <p class="np-contact-sub" id="contact-sub">Do you have a question or are you interested in working with me? Just fill out the form fields below.</p>
+        
+        <form class="np-form">
+          <div class="np-form-row">
+            <div class="np-input-group">
+              <label id="lbl-fname">First Name</label>
+              <input type="text" class="np-input" required>
+            </div>
+            <div class="np-input-group">
+              <label id="lbl-lname">Last Name</label>
+              <input type="text" class="np-input" required>
+            </div>
+          </div>
+          <div class="np-form-row">
+            <div class="np-input-group">
+              <label id="lbl-email">Email Address</label>
+              <input type="email" class="np-input" required>
+            </div>
+            <div class="np-input-group">
+              <label id="lbl-subject">Subject / Company</label>
+              <input type="text" class="np-input" required>
+            </div>
+          </div>
+          <div class="np-form-row">
+            <div class="np-input-group" style="width: 100%;">
+              <label id="lbl-msg">Message</label>
+              <textarea class="np-input" id="msg-ph" placeholder="Message (remember, short & sweet please)" required></textarea>
+            </div>
+          </div>
+          <div class="np-submit-wrap">
+            <button type="submit" class="np-btn-submit" id="submitBtn">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="np-footer">
+      <div class="container np-footer-grid">
+        <div class="np-footer-col">
+          <h3 class="np-footer-logo">Bryan Nguyen</h3>
+          <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
+        </div>
+        <div class="np-footer-col">
+          <h4 id="footer-nav-title">NAVIGATE</h4>
+          <div class="np-footer-links">
+            <a onclick="switchPage('about')" id="f-about">About Me</a>
+            <a onclick="switchPage('resume')" id="f-resume">Resume</a>
+            <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
+            <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
+          </div>
+        </div>
+        <div class="np-footer-col">
+          <h4 id="footer-contact-title">DIRECT CONTACT</h4>
+          <div class="np-footer-links">
+            <a href="tel:0838673639">📞 0838 673 639</a>
+            <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
+            <a>📍 Ho Chi Minh City, Vietnam</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FLOATING WIDGET -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn zalo-btn" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width: 22px; height: 22px;">
@@ -1213,7 +1169,7 @@
       }
 
       const tabs = document.querySelectorAll('.nav-tab');
-      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst'];
       const activeIdx = keys.indexOf(pageKey);
       if (activeIdx !== -1 && tabs[activeIdx]) {
         tabs[activeIdx].classList.add('active');
@@ -1246,6 +1202,7 @@
     }
 
     function renderContent(data) {
+      // NAV
       document.getElementById('page-title').innerText = data.profile.name + " | Enterprise Fintech Portfolio";
       document.getElementById('status-text').innerText = data.nav.status;
       document.getElementById('cv-btn').innerText = data.nav.downloadCv;
@@ -1254,7 +1211,6 @@
       document.getElementById('tab-resume').innerText = data.nav.resume;
       document.getElementById('tab-bd').innerText = data.nav.bd;
       document.getElementById('tab-da').innerText = data.nav.da;
-      document.getElementById('tab-contact').innerText = data.nav.contact;
 
       // HERO
       document.getElementById('hero-name').innerText = data.profile.name;
