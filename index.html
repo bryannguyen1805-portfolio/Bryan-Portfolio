@@ -61,11 +61,11 @@
       padding: 0 24px;
     }
     
+    /* Main đẩy nội dung giúp footer luôn dính đáy trang nếu nội dung ngắn */
     main {
-      flex: 1 0 auto; /* Đảm bảo main tự co giãn đẩy footer xuống đáy */
+      flex: 1 0 auto;
     }
 
-    /* Scroll Progress Bar */
     #scrollProgress {
       position: fixed;
       top: 0;
@@ -215,7 +215,7 @@
     /* TAB PAGES SYSTEM */
     .page-section {
       display: none;
-      padding: 40px 0 60px; /* Thêm margin tự nhiên cho các section */
+      padding: 40px 0 60px;
       animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .page-section.active { display: block; }
@@ -223,8 +223,8 @@
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
-    /* Gỡ bỏ padding thừa cho trang liên hệ */
+
+    /* Đảm bảo trang liên hệ khi hiển thị độc lập không bị dính padding top/bottom */
     #page-contact {
       padding: 0;
     }
@@ -667,12 +667,11 @@
       flex-grow: 1;
     }
 
-    /* ======================================================================= 
-       LIÊN HỆ & FOOTER (NP STYLE) - DÙNG CHUNG CHO TẤT CẢ TRANG
-       ======================================================================= */
+    /* LIÊN HỆ (NP STYLE) - DÙNG CHUNG CHO TẤT CẢ TRANG */
     .contact-wrapper {
       background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
       padding-top: 60px;
+      width: 100%;
     }
     
     .np-contact-hero {
@@ -756,12 +755,13 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    /* FOOTER */
+    /* MULTI-COLUMN FOOTER */
     .np-footer {
       background-color: var(--np-dark);
       color: #ffffff;
       padding: 0 24px 60px;
       border-top: 1px solid rgba(255,255,255,0.05);
+      width: 100%;
     }
     .np-footer-grid {
       display: grid;
@@ -805,9 +805,7 @@
     }
     .np-footer-links a:hover { color: #ffffff; }
 
-    /* ======================================================================= 
-       FLOATING WIDGET (MONOCHROME MINIMALIST)
-       ======================================================================= */
+    /* FLOATING WIDGET */
     .floating-widget {
       position: fixed;
       bottom: 30px;
@@ -895,7 +893,6 @@
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
 
-      /* Form Contact Responsive */
       .contact-wrapper { padding-top: 40px; margin-top: 20px; }
       .np-contact-hero { padding: 30px 16px 50px; }
       .np-contact-title { font-size: 2.4rem; }
@@ -905,7 +902,6 @@
       
       .np-footer-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; }
       
-      /* Floating Widget Mobile */
       .floating-widget { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { width: 40px; height: 40px; }
       .float-btn svg { width: 18px; height: 18px; }
@@ -940,6 +936,7 @@
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
         <div class="nav-tab" id="tab-bd" onclick="switchPage('business-dev')">Business Development</div>
         <div class="nav-tab" id="tab-da" onclick="switchPage('data-analyst')">Data Analyst</div>
+        <div class="nav-tab" id="tab-contact" onclick="switchPage('contact')">Contact</div>
       </nav>
     </div>
   </header>
@@ -1015,6 +1012,7 @@
           </button>
         </div>
 
+        <!-- Tab Payoo -->
         <div id="bd-payoo" class="bd-subcontent active">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
@@ -1032,6 +1030,7 @@
           <div class="case-grid" id="bd-payoo-projects"></div>
         </div>
 
+        <!-- Tab ProScan -->
         <div id="bd-proscan" class="bd-subcontent">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
@@ -1065,75 +1064,79 @@
         <div class="timeline" id="da-cert-container"></div>
       </div>
     </section>
+
+    <!-- 5. CONTACT (TAB MỚI) -->
+    <section id="page-contact" class="page-section">
+      <div class="container">
+        <div style="padding: 20px 0;">
+          <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">How can I help?</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Do you have a question or are you interested in working with me?</p>
+          
+          <div class="bento-card" style="max-width: 800px; padding: 40px;">
+            <form class="np-form" style="max-width: 100%;">
+              <div class="np-form-row">
+                <div class="np-input-group">
+                  <label id="lbl-fname" style="color: var(--text-muted);">First Name</label>
+                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                </div>
+                <div class="np-input-group">
+                  <label id="lbl-lname" style="color: var(--text-muted);">Last Name</label>
+                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                </div>
+              </div>
+              <div class="np-form-row">
+                <div class="np-input-group">
+                  <label id="lbl-email" style="color: var(--text-muted);">Email Address</label>
+                  <input type="email" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                </div>
+                <div class="np-input-group">
+                  <label id="lbl-subject" style="color: var(--text-muted);">Subject / Company</label>
+                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                </div>
+              </div>
+              <div class="np-form-row">
+                <div class="np-input-group" style="width: 100%;">
+                  <label id="lbl-msg" style="color: var(--text-muted);">Message</label>
+                  <textarea class="np-input" id="msg-ph" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Message (remember, short & sweet please)" required></textarea>
+                </div>
+              </div>
+              <div class="np-submit-wrap" style="text-align: left;">
+                <button type="submit" class="btn-primary" id="submitBtn" style="padding: 12px 30px; font-size: 0.95rem; border-radius: 8px;">SUBMIT MESSAGE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- 5. CONTACT & FOOTER (NGOÀI MAIN, DÙNG CHUNG CHO MỌI TRANG) -->
-  <div class="contact-wrapper" id="global-contact">
-    <div class="np-contact-hero">
-      <div class="container" style="max-width: 800px;">
-        <h2 class="np-contact-title" id="contact-heading">How can I help?</h2>
-        <p class="np-contact-sub" id="contact-sub">Do you have a question or are you interested in working with me? Just fill out the form fields below.</p>
-        
-        <form class="np-form">
-          <div class="np-form-row">
-            <div class="np-input-group">
-              <label id="lbl-fname">First Name</label>
-              <input type="text" class="np-input" required>
-            </div>
-            <div class="np-input-group">
-              <label id="lbl-lname">Last Name</label>
-              <input type="text" class="np-input" required>
-            </div>
-          </div>
-          <div class="np-form-row">
-            <div class="np-input-group">
-              <label id="lbl-email">Email Address</label>
-              <input type="email" class="np-input" required>
-            </div>
-            <div class="np-input-group">
-              <label id="lbl-subject">Subject / Company</label>
-              <input type="text" class="np-input" required>
-            </div>
-          </div>
-          <div class="np-form-row">
-            <div class="np-input-group" style="width: 100%;">
-              <label id="lbl-msg">Message</label>
-              <textarea class="np-input" id="msg-ph" placeholder="Message (remember, short & sweet please)" required></textarea>
-            </div>
-          </div>
-          <div class="np-submit-wrap">
-            <button type="submit" class="np-btn-submit" id="submitBtn">SUBMIT</button>
-          </div>
-        </form>
+  <!-- FOOTER CHUNG DƯỚI CÙNG (DÙNG CHUNG CHO MỌI TRANG) -->
+  <footer class="np-footer">
+    <div class="container np-footer-grid">
+      <div class="np-footer-col">
+        <h3 class="np-footer-logo">Bryan Nguyen</h3>
+        <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
+      </div>
+      <div class="np-footer-col">
+        <h4 id="footer-nav-title">NAVIGATE</h4>
+        <div class="np-footer-links">
+          <a onclick="switchPage('about')" id="f-about">About Me</a>
+          <a onclick="switchPage('resume')" id="f-resume">Resume</a>
+          <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
+          <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
+          <a onclick="switchPage('contact')" id="f-contact">Contact</a>
+        </div>
+      </div>
+      <div class="np-footer-col">
+        <h4 id="footer-contact-title">DIRECT CONTACT</h4>
+        <div class="np-footer-links">
+          <a href="tel:0838673639">📞 0838 673 639</a>
+          <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
+          <a>📍 Ho Chi Minh City, Vietnam</a>
+        </div>
       </div>
     </div>
-
-    <footer class="np-footer">
-      <div class="container np-footer-grid">
-        <div class="np-footer-col">
-          <h3 class="np-footer-logo">Bryan Nguyen</h3>
-          <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
-        </div>
-        <div class="np-footer-col">
-          <h4 id="footer-nav-title">NAVIGATE</h4>
-          <div class="np-footer-links">
-            <a onclick="switchPage('about')" id="f-about">About Me</a>
-            <a onclick="switchPage('resume')" id="f-resume">Resume</a>
-            <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
-            <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
-          </div>
-        </div>
-        <div class="np-footer-col">
-          <h4 id="footer-contact-title">DIRECT CONTACT</h4>
-          <div class="np-footer-links">
-            <a href="tel:0838673639">📞 0838 673 639</a>
-            <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
-            <a>📍 Ho Chi Minh City, Vietnam</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
+  </footer>
 
   <!-- FLOATING WIDGET -->
   <div class="floating-widget">
@@ -1169,7 +1172,7 @@
       }
 
       const tabs = document.querySelectorAll('.nav-tab');
-      const keys = ['about', 'resume', 'business-dev', 'data-analyst'];
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
       const activeIdx = keys.indexOf(pageKey);
       if (activeIdx !== -1 && tabs[activeIdx]) {
         tabs[activeIdx].classList.add('active');
@@ -1211,6 +1214,7 @@
       document.getElementById('tab-resume').innerText = data.nav.resume;
       document.getElementById('tab-bd').innerText = data.nav.bd;
       document.getElementById('tab-da').innerText = data.nav.da;
+      document.getElementById('tab-contact').innerText = data.nav.contact;
 
       // HERO
       document.getElementById('hero-name').innerText = data.profile.name;
@@ -1381,8 +1385,9 @@
       }
 
       // CONTACT & FOOTER
-      document.getElementById('contact-heading').innerText = data.labels.contactHeading;
-      document.getElementById('contact-sub').innerText = data.labels.contactSub;
+      document.getElementById('contact-heading-tab').innerText = data.labels.contactHeading;
+      document.getElementById('contact-sub-tab').innerText = data.labels.contactSub;
+      
       document.getElementById('lbl-fname').innerText = data.labels.firstName;
       document.getElementById('lbl-lname').innerText = data.labels.lastName;
       document.getElementById('lbl-email').innerText = data.labels.emailAddr;
@@ -1397,6 +1402,7 @@
       document.getElementById('f-resume').innerText = data.nav.resume;
       document.getElementById('f-bd').innerText = data.nav.bd;
       document.getElementById('f-da').innerText = data.nav.da;
+      document.getElementById('f-contact').innerText = data.nav.contact;
     }
 
     const scrollProgress = document.getElementById("scrollProgress");
