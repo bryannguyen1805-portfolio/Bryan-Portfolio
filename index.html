@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title id="page-title">Bryan Nguyen | Enterprise Solutions & Analytics Portfolio</title>
+  <title id="page-title">Bryan Nguyen | Enterprise Solutions & Analytics</title>
   
+  <!-- Cặp Font hiện đại: Sora (Heading tinh gọn, sắc sảo) & Plus Jakarta Sans (Nội dung thanh lịch) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -21,11 +22,11 @@
       --accent: #0ea5e9;
       --border: #e2e8f0;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-      --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
-      --shadow-hover: 0 12px 28px -4px rgba(15, 23, 42, 0.08);
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --radius-md: 12px;
+      --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+      --shadow-hover: 0 10px 24px -4px rgba(15, 23, 42, 0.08);
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --radius-md: 10px;
       --radius-pill: 9999px;
     }
 
@@ -35,14 +36,15 @@
       background-color: var(--bg);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      line-height: 1.65;
+      line-height: 1.6;
+      font-size: 0.92rem;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
     
     .container {
-      max-width: 1100px;
+      max-width: 1060px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -52,19 +54,19 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 3px;
+      height: 2.5px;
       background: linear-gradient(90deg, var(--primary), var(--accent));
       width: 0%;
       z-index: 1000;
     }
 
-    /* HEADER THEO PHONG CÁCH PIHOME */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
     }
@@ -72,56 +74,57 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 0;
+      padding: 12px 0;
       gap: 16px;
     }
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-shrink: 0;
     }
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.12rem;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.4px;
+      color: #0f172a;
     }
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 10px;
+      padding: 3px 9px;
       background: #ecfdf5;
       border: 1px solid #a7f3d0;
       color: #065f46;
       border-radius: var(--radius-pill);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       white-space: nowrap;
     }
     .status-dot {
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       background: #10b981;
       border-radius: 50%;
     }
 
-    /* 5 Main Nav Tabs (Desktop) */
+    /* 5 Main Nav Tabs */
     .main-nav {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       background: #f1f5f9;
-      padding: 4px;
+      padding: 3px;
       border-radius: var(--radius-pill);
       border: 1px solid var(--border);
     }
     .nav-tab {
-      padding: 8px 16px;
-      font-size: 0.86rem;
+      padding: 6px 14px;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-muted);
       border-radius: var(--radius-pill);
@@ -136,14 +139,14 @@
     .nav-tab.active {
       background: #ffffff;
       color: var(--primary);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     }
 
     /* Right Actions: Lang + CV Button */
     .nav-right-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-shrink: 0;
     }
     .lang-switcher {
@@ -151,37 +154,37 @@
       background: #f1f5f9;
       border: 1px solid var(--border);
       border-radius: var(--radius-pill);
-      padding: 3px;
-      gap: 2px;
+      padding: 2px;
+      gap: 1px;
     }
     .lang-btn {
       border: none;
       background: transparent;
-      padding: 4px 10px;
-      font-size: 0.75rem;
+      padding: 3px 8px;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--text-muted);
       border-radius: var(--radius-pill);
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.15s;
     }
     .lang-btn.active {
       background: #ffffff;
       color: var(--primary);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 18px;
+      padding: 7px 15px;
       background: var(--primary);
       color: #fff !important;
       border-radius: var(--radius-pill);
-      font-size: 0.84rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(0, 82, 204, 0.2);
+      box-shadow: 0 2px 6px rgba(0, 82, 204, 0.18);
       white-space: nowrap;
     }
     .btn-primary:hover {
@@ -192,48 +195,48 @@
     /* TAB PAGES SYSTEM */
     .page-section {
       display: none;
-      padding: 40px 0 80px;
-      animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 32px 0 60px;
+      animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .page-section.active {
       display: block;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* HERO SECTION (Chuẩn PiHome: Card lồng khung, tỷ lệ vàng) */
+    /* HERO SECTION */
     .hero-card {
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 40px;
+      padding: 32px;
       box-shadow: var(--shadow-card);
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 44px;
+      grid-template-columns: 240px 1fr;
+      gap: 36px;
       align-items: center;
     }
     .hero-img-box {
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
       border: 1px solid var(--border);
       background: #f1f5f9;
       width: 100%;
-      max-width: 300px;
+      max-width: 240px;
     }
     .hero-img {
       width: 100%;
-      height: 380px;
+      height: 310px;
       object-fit: cover;
       object-position: center 20%;
       display: block;
-      transition: transform 0.4s ease;
+      transition: transform 0.35s ease;
     }
     .hero-img-box:hover .hero-img {
       transform: scale(1.02);
@@ -242,52 +245,54 @@
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      padding: 5px 13px;
+      padding: 4px 11px;
       background: var(--primary-light);
       border: 1px solid rgba(0, 82, 204, 0.15);
       border-radius: var(--radius-pill);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 0.4px;
     }
     .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      line-height: 1.2;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.95rem;
+      font-weight: 700;
+      line-height: 1.22;
+      margin-bottom: 8px;
+      letter-spacing: -0.6px;
+      color: #0f172a;
     }
     .hero-subtitle {
-      font-size: 1.02rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
-      margin-bottom: 20px;
-      line-height: 1.6;
+      margin-bottom: 16px;
+      line-height: 1.5;
     }
 
     .hero-contact-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.9rem;
+      gap: 14px;
+      font-size: 0.84rem;
       color: var(--text-main);
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
     .hero-contact-row span {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .social-pills { display: flex; gap: 8px; flex-wrap: wrap; }
     .social-pill {
-      padding: 6px 14px;
+      padding: 5px 12px;
       background: #f8fafc;
       border: 1px solid var(--border);
       border-radius: var(--radius-pill);
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       font-weight: 600;
       color: var(--text-muted);
     }
@@ -299,100 +304,117 @@
     }
 
     /* SECTION HEADERS */
-    .section-header { margin-bottom: 24px; }
+    .section-header { margin-bottom: 20px; }
     .section-eyebrow {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       display: block;
     }
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.95rem;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.45rem;
       font-weight: 700;
       letter-spacing: -0.4px;
+      color: #0f172a;
     }
 
     .content-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 36px;
+      padding: 28px 32px;
       box-shadow: var(--shadow-card);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .about-text {
-      font-size: 1.02rem;
-      line-height: 1.85;
+      font-size: 0.92rem;
+      line-height: 1.8;
       color: #334155;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
     .about-text strong { color: var(--text-main); font-weight: 700; }
+
+    /* SUB-HEADINGS */
+    .block-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 30px 0 14px;
+      letter-spacing: -0.3px;
+      color: #0f172a;
+    }
 
     /* SKILLS CHIPS */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-bottom: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
     }
     .skill-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 22px;
       box-shadow: var(--shadow-card);
       transition: all 0.25s ease;
     }
     .skill-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-hover);
       border-color: rgba(0, 82, 204, 0.25);
     }
     .skill-card-header {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
     .skill-card-icon {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       background: var(--primary-light);
       color: var(--primary);
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
-    .chip-container { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.94rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+    .chip-container { display: flex; flex-wrap: wrap; gap: 6px; }
     .skill-chip {
-      padding: 6px 12px;
+      padding: 5px 11px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: var(--radius-pill);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
       color: #334155;
     }
 
     /* TIMELINE */
-    .timeline { display: flex; flex-direction: column; gap: 20px; }
+    .timeline { display: flex; flex-direction: column; gap: 16px; }
     .timeline-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 26px 30px;
+      padding: 22px 26px;
       box-shadow: var(--shadow-card);
       display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 24px;
+      grid-template-columns: 175px 1fr;
+      gap: 20px;
       transition: all 0.2s ease;
     }
     .timeline-card:hover {
@@ -401,54 +423,60 @@
     }
     .timeline-badge {
       display: inline-block;
-      padding: 5px 12px;
+      padding: 4px 10px;
       background: var(--primary-light);
       border: 1px solid rgba(0, 82, 204, 0.15);
       color: var(--primary);
       border-radius: var(--radius-pill);
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       font-weight: 700;
       white-space: nowrap;
     }
     .company-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 4px;
+      gap: 12px;
+      margin-bottom: 2px;
     }
     .company-logo {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       object-fit: contain;
       border-radius: 8px;
       background: #fff;
-      padding: 4px;
+      padding: 3px;
       border: 1px solid var(--border);
     }
+    .company-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
     .timeline-role {
-      font-size: 0.94rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--primary);
-      margin-top: 4px;
-      margin-bottom: 12px;
+      margin-top: 3px;
+      margin-bottom: 10px;
     }
     .timeline-desc {
       list-style: disc;
-      padding-left: 20px;
-      font-size: 0.9rem;
+      padding-left: 18px;
+      font-size: 0.88rem;
       color: #475569;
-      line-height: 1.7;
+      line-height: 1.65;
     }
-    .timeline-desc li { margin-bottom: 6px; }
+    .timeline-desc li { margin-bottom: 5px; }
 
     /* THUMBNAIL */
     .cert-thumb {
-      max-width: 320px;
+      max-width: 290px;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
-      margin-top: 14px;
+      margin-top: 12px;
       transition: all 0.25s ease;
       display: block;
     }
@@ -460,34 +488,34 @@
     /* SUB-TABS (Payoo vs ProScan) */
     .subnav-tabs {
       display: flex;
-      gap: 10px;
-      margin-bottom: 24px;
-      padding-bottom: 10px;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding-bottom: 6px;
     }
     .subnav-btn {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 20px;
+      padding: 8px 16px;
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: var(--radius-pill);
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: var(--text-muted);
       cursor: pointer;
       transition: all 0.2s;
     }
     .subnav-btn img {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       object-fit: contain;
     }
     .subnav-btn.active {
       background: var(--primary);
       color: #ffffff;
       border-color: var(--primary);
-      box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
+      box-shadow: 0 3px 10px rgba(0, 82, 204, 0.22);
     }
     .bd-subcontent { display: none; }
     .bd-subcontent.active { display: block; animation: fadeIn 0.25s ease; }
@@ -496,30 +524,32 @@
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 20px 0 10px;
-      padding: 16px;
+      gap: 12px;
+      margin: 18px 0 8px;
+      padding: 14px;
       background: #f8fafc;
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
     }
     .metric-item {
-      padding: 4px 12px;
+      padding: 2px 10px;
       border-right: 1px solid var(--border);
     }
     .metric-item:last-child { border-right: none; }
     .metric-num {
-      font-size: 1.4rem;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--primary);
       line-height: 1.2;
     }
     .metric-label {
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
-      margin-top: 4px;
+      margin-top: 3px;
+      letter-spacing: 0.3px;
     }
 
     /* CASE CARDS */
@@ -527,9 +557,9 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 30px;
+      padding: 24px;
       box-shadow: var(--shadow-card);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       position: relative;
       overflow: hidden;
       transition: all 0.25s ease;
@@ -539,7 +569,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 3.5px;
       height: 100%;
       background: linear-gradient(180deg, var(--primary), var(--accent));
     }
@@ -549,26 +579,28 @@
     }
     .case-tag {
       display: inline-block;
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       color: var(--primary);
       background: var(--primary-light);
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-bottom: 10px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-bottom: 8px;
     }
     .case-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
       line-height: 1.35;
+      letter-spacing: -0.3px;
     }
     .case-card p {
-      font-size: 0.94rem;
+      font-size: 0.88rem;
       color: #475569;
-      line-height: 1.65;
-      margin-bottom: 16px;
+      line-height: 1.6;
+      margin-bottom: 14px;
     }
 
     /* CONTACT */
@@ -576,73 +608,75 @@
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #fff;
       border-radius: var(--radius-xl);
-      padding: 44px;
+      padding: 36px;
       box-shadow: var(--shadow-card);
     }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 32px;
     }
     .contact-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      margin-bottom: 12px;
+      font-family: 'Sora', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.4px;
     }
     .contact-info p {
       color: #94a3b8;
-      font-size: 0.96rem;
-      margin-bottom: 24px;
-      line-height: 1.65;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
-    .contact-pill-list { display: flex; flex-direction: column; gap: 10px; }
-    .contact-pill-item { display: flex; align-items: center; gap: 10px; color: #e2e8f0; font-size: 0.92rem; }
+    .contact-pill-list { display: flex; flex-direction: column; gap: 8px; }
+    .contact-pill-item { display: flex; align-items: center; gap: 8px; color: #e2e8f0; font-size: 0.88rem; }
     
-    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form { display: flex; flex-direction: column; gap: 12px; }
     .contact-form input, .contact-form textarea {
       width: 100%;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-md);
-      padding: 13px 16px;
-      font-size: 0.92rem;
+      padding: 11px 14px;
+      font-size: 0.88rem;
       color: #fff;
       font-family: inherit;
     }
     .contact-form input::placeholder, .contact-form textarea::placeholder { color: #94a3b8; }
-    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form textarea { resize: vertical; min-height: 95px; }
     .btn-submit {
-      padding: 12px 24px;
+      padding: 11px 22px;
       background: var(--primary);
       color: #fff;
       border: none;
       border-radius: var(--radius-pill);
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s;
     }
     .btn-submit:hover { background: var(--primary-hover); }
 
-    /* FLOATING BUTTONS (Thu gọn tránh đè chữ trên mobile) */
+    /* FLOATING BUTTONS */
     .floating-widget {
       position: fixed;
-      bottom: 24px;
-      right: 20px;
+      bottom: 22px;
+      right: 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       z-index: 999;
     }
     .float-btn {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
       cursor: pointer;
       text-decoration: none;
       transition: all 0.2s;
@@ -651,38 +685,37 @@
     .btn-zalo { background: #fff; border: 1px solid #e2e8f0; padding: 4px; }
     .btn-zalo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
     .btn-phone { background: #ff334b; color: #fff; }
-    .btn-phone svg { width: 18px; height: 18px; fill: currentColor; }
+    .btn-phone svg { width: 17px; height: 17px; fill: currentColor; }
     .btn-linkedin { background: #0077b5; color: #fff; }
-    .btn-linkedin svg { width: 17px; height: 17px; fill: currentColor; }
+    .btn-linkedin svg { width: 16px; height: 16px; fill: currentColor; }
     .btn-top {
       background: #0f172a;
       color: #fff;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(8px);
+      transform: translateY(6px);
     }
     .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-    .btn-top svg { width: 16px; height: 16px; fill: currentColor; }
+    .btn-top svg { width: 15px; height: 15px; fill: currentColor; }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 30px 0;
+      padding: 26px 0;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       background: #ffffff;
     }
 
-    /* RESPONSIVE TRÊN DI ĐỘNG (FIX TRIỆT ĐỂ LỖI VỠ TRÀN & ẢNH TO) */
+    /* RESPONSIVE TRÊN DI ĐỘNG */
     @media (max-width: 860px) {
       .container { padding: 0 16px; }
 
-      /* 1. Header 2 hàng gọn gàng: Hàng 1 (Logo + Lang + CV), Hàng 2 (Nav 5 tab trượt ngang) */
       .nav-wrap {
         flex-direction: column;
         align-items: stretch;
-        padding: 10px 0;
-        gap: 10px;
+        padding: 8px 0;
+        gap: 8px;
       }
       .nav-top-row {
         display: flex;
@@ -690,93 +723,97 @@
         align-items: center;
         width: 100%;
       }
-      .nav-logo { font-size: 1.15rem; }
-      .status-badge { display: none; } /* Ẩn badge trên mobile để tiết kiệm diện tích */
-      .btn-primary { padding: 6px 14px; font-size: 0.78rem; }
-      .lang-btn { padding: 3px 8px; font-size: 0.7rem; }
+      .nav-logo { font-size: 1.05rem; }
+      .status-badge { display: none; }
+      .btn-primary { padding: 5px 12px; font-size: 0.74rem; }
+      .lang-btn { padding: 2px 7px; font-size: 0.68rem; }
 
       .main-nav {
         width: 100%;
         overflow-x: auto;
-        padding: 4px;
-        gap: 4px;
+        padding: 3px;
+        gap: 3px;
         -webkit-overflow-scrolling: touch;
         justify-content: flex-start;
       }
       .main-nav::-webkit-scrollbar { display: none; }
-      .nav-tab { padding: 6px 14px; font-size: 0.8rem; }
+      .nav-tab { padding: 5px 12px; font-size: 0.76rem; }
 
-      /* 2. Hero Card thu gọn, ảnh không còn choán màn hình */
       .hero-card {
-        padding: 24px 20px;
-        margin-bottom: 28px;
+        padding: 20px 16px;
+        margin-bottom: 22px;
       }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
         text-align: center;
       }
       .hero-img-box {
-        max-width: 180px;
+        max-width: 150px;
         margin: 0 auto;
-        border-radius: var(--radius-md);
       }
       .hero-img {
-        height: 220px;
+        height: 185px;
       }
       .hero-content h1 {
-        font-size: 1.85rem;
+        font-size: 1.45rem;
       }
       .hero-subtitle {
-        font-size: 0.92rem;
+        font-size: 0.86rem;
       }
       .hero-contact-row {
         justify-content: center;
-        gap: 10px;
-        font-size: 0.85rem;
+        gap: 8px;
+        font-size: 0.8rem;
       }
       .social-pills {
         justify-content: center;
       }
 
-      /* 3. Timeline và Content */
+      .section-title {
+        font-size: 1.25rem;
+      }
+      .block-heading {
+        font-size: 1.05rem;
+        margin: 24px 0 12px;
+      }
+
       .timeline-card {
         grid-template-columns: 1fr;
-        gap: 8px;
-        padding: 20px;
+        gap: 6px;
+        padding: 16px;
       }
       .content-card, .case-card, .contact-card {
-        padding: 20px;
+        padding: 18px;
       }
       .metric-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 6px;
       }
       .metric-item {
         border-right: none;
         border-bottom: 1px solid var(--border);
-        padding: 6px 0;
+        padding: 4px 0;
       }
       .metric-item:last-child { border-bottom: none; }
 
       .contact-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 20px;
       }
 
-      /* 4. Floating Widget góc phải dưới */
       .floating-widget {
-        bottom: 16px;
-        right: 12px;
-        gap: 6px;
+        bottom: 14px;
+        right: 10px;
+        gap: 5px;
       }
       .float-btn {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
       }
-      .btn-phone svg { width: 16px; height: 16px; }
-      .btn-linkedin svg { width: 15px; height: 15px; }
-      .btn-top svg { width: 14px; height: 14px; }
+      .btn-phone svg { width: 15px; height: 15px; }
+      .btn-linkedin svg { width: 14px; height: 14px; }
+      .btn-top svg { width: 13px; height: 13px; }
     }
   </style>
 </head>
@@ -785,7 +822,7 @@
   <div id="scrollProgress"></div>
   <div id="top"></div>
 
-  <!-- HEADER CẤU TRÚC PIHOME -->
+  <!-- HEADER -->
   <header>
     <div class="container nav-wrap">
       <div class="nav-top-row">
@@ -803,7 +840,7 @@
         </div>
       </div>
 
-      <!-- 5 TABS NAV TRƯỢT NGANG TRÊN MOBILE -->
+      <!-- 5 TABS NAV -->
       <nav class="main-nav">
         <div class="nav-tab active" id="tab-about" onclick="switchPage('about')">About</div>
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
@@ -855,19 +892,19 @@
         <h2 class="section-title" id="resume-heading">Comprehensive Resume</h2>
       </div>
 
-      <h3 style="font-size: 1.25rem; margin-bottom: 16px;" id="resume-skills-title">Core Capabilities & Tech Stack</h3>
+      <h3 class="block-heading" style="margin-top: 10px;" id="resume-skills-title">Core Capabilities & Tech Stack</h3>
       <div class="skills-grid" id="resume-skills-container"></div>
 
-      <h3 style="font-size: 1.25rem; margin: 36px 0 16px;" id="resume-exp-title">Work Experience</h3>
+      <h3 class="block-heading" id="resume-exp-title">Work Experience</h3>
       <div class="timeline" id="resume-experience-container"></div>
 
-      <h3 style="font-size: 1.25rem; margin: 36px 0 16px;" id="resume-edu-title">Academic Credentials</h3>
+      <h3 class="block-heading" id="resume-edu-title">Academic Credentials</h3>
       <div class="timeline" id="resume-education-container"></div>
 
-      <h3 style="font-size: 1.25rem; margin: 36px 0 16px;" id="resume-cert-title">Certifications & Accreditations</h3>
+      <h3 class="block-heading" id="resume-cert-title">Certifications & Accreditations</h3>
       <div class="timeline" id="resume-cert-container"></div>
 
-      <h3 style="font-size: 1.25rem; margin: 36px 0 16px;" id="resume-case-title">Executive Case Studies</h3>
+      <h3 class="block-heading" id="resume-case-title">Executive Case Studies</h3>
       <div id="resume-case-container"></div>
     </section>
 
@@ -890,36 +927,36 @@
       <!-- Tab Payoo -->
       <div id="bd-payoo" class="bd-subcontent active">
         <div class="content-card">
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-            <img src="payoo.jpg" alt="Payoo" class="company-logo" style="width:44px; height:44px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="payoo.jpg" alt="Payoo" class="company-logo">
             <div>
-              <h3 style="font-size:1.25rem;">Payoo (VietUnion) – Payment Infrastructure</h3>
+              <h3 class="company-title">Payoo (VietUnion) – Payment Infrastructure</h3>
               <span class="timeline-badge" id="bd-payoo-period">Oct 2025 – Present</span>
             </div>
           </div>
-          <p id="bd-payoo-summary" style="font-size:0.96rem; color:#475569; line-height:1.7;"></p>
+          <p id="bd-payoo-summary" style="font-size:0.92rem; color:#475569; line-height:1.65;"></p>
           
           <div class="metric-grid" id="bd-payoo-metrics"></div>
         </div>
 
-        <h3 style="font-size:1.25rem; margin-bottom:16px;" id="bd-payoo-proj-title">Key Merchant Solutions & Projects</h3>
+        <h3 class="block-heading" id="bd-payoo-proj-title">Key Merchant Solutions & Projects</h3>
         <div id="bd-payoo-projects"></div>
       </div>
 
       <!-- Tab ProScan -->
       <div id="bd-proscan" class="bd-subcontent">
         <div class="content-card">
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-            <img src="proscan.jpeg" alt="ProScan" class="company-logo" style="width:44px; height:44px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <img src="proscan.jpeg" alt="ProScan" class="company-logo">
             <div>
-              <h3 style="font-size:1.25rem;">ProScan Global – Security Screening & Technology</h3>
+              <h3 class="company-title">ProScan Global – Security Screening & Technology</h3>
               <span class="timeline-badge" id="bd-proscan-period">Oct 2025 – Mar 2026</span>
             </div>
           </div>
-          <p id="bd-proscan-summary" style="font-size:0.96rem; color:#475569; line-height:1.7;"></p>
+          <p id="bd-proscan-summary" style="font-size:0.92rem; color:#475569; line-height:1.65;"></p>
         </div>
 
-        <h3 style="font-size:1.25rem; margin-bottom:16px;" id="bd-proscan-proj-title">Market Research & Overseas Tender Pipeline</h3>
+        <h3 class="block-heading" id="bd-proscan-proj-title">Market Research & Overseas Tender Pipeline</h3>
         <div id="bd-proscan-projects"></div>
       </div>
     </section>
@@ -931,10 +968,10 @@
         <h2 class="section-title" id="da-heading">Data Analytics & Pipeline Engineering</h2>
       </div>
 
-      <h3 style="font-size:1.25rem; margin-bottom:16px;" id="da-proj-title">Analytical Systems & Data Projects</h3>
+      <h3 class="block-heading" style="margin-top: 10px;" id="da-proj-title">Analytical Systems & Data Projects</h3>
       <div class="skills-grid" id="da-projects-container"></div>
 
-      <h3 style="font-size:1.25rem; margin:36px 0 16px;" id="da-cert-title">Verified Analytics Credentials</h3>
+      <h3 class="block-heading" id="da-cert-title">Verified Analytics Credentials</h3>
       <div class="timeline" id="da-cert-container"></div>
     </section>
 
@@ -1081,7 +1118,7 @@
           <div class="skill-card">
             <div class="skill-card-header">
               <div class="skill-card-icon">${icon}</div>
-              <h3 style="font-size:1.08rem; font-weight:700;">${s.category}</h3>
+              <h3 class="skill-card-title">${s.category}</h3>
             </div>
             <div class="chip-container">
               ${s.items.map(item => `<span class="skill-chip">${item}</span>`).join('')}
@@ -1097,7 +1134,7 @@
           <div>
             <div class="company-header">
               ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo">` : ''}
-              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0;">${e.company}</h3>
+              <h3 class="company-title">${e.company}</h3>
             </div>
             <div class="timeline-role">${e.role}</div>
             <ul class="timeline-desc">
@@ -1112,7 +1149,7 @@
         <div class="timeline-card">
           <div><span class="timeline-badge">${ed.period}</span></div>
           <div>
-            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${ed.school}</h3>
+            <h3 class="company-title" style="margin-bottom:3px;">${ed.school}</h3>
             <div class="timeline-role">${ed.degree}</div>
             ${ed.imageUrl ? `
               <a href="${ed.imageUrl}" target="_blank" title="${currentLang === 'vi' ? 'Xem bằng tốt nghiệp phóng to' : 'View full degree'}">
@@ -1129,9 +1166,9 @@
           <div class="timeline-card">
             <div><span class="timeline-badge">${c.period}</span></div>
             <div>
-              <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${c.name}</h3>
+              <h3 class="company-title" style="margin-bottom:3px;">${c.name}</h3>
               <div class="timeline-role">${c.issuer}</div>
-              <p style="font-size:0.92rem; color:#64748b;">${c.skills}</p>
+              <p style="font-size:0.86rem; color:#64748b;">${c.skills}</p>
               ${c.imageUrl ? `
                 <a href="${c.imageUrl}" target="_blank" title="${currentLang === 'vi' ? 'Xem chứng chỉ phóng to' : 'View full certificate'}">
                   <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb">
@@ -1197,9 +1234,9 @@
         document.getElementById('da-projects-container').innerHTML = data.dataProjects.map(dp => `
           <div class="skill-card">
             <span class="case-tag">${dp.category}</span>
-            <h3 style="margin-top: 8px; margin-bottom: 10px;">${dp.title}</h3>
-            <p style="font-size: 0.92rem; color: #475569; margin-bottom: 16px;">${dp.description}</p>
-            <div style="font-size: 0.82rem; font-weight: 600; color: var(--primary);">
+            <h3 style="margin-top: 6px; margin-bottom: 8px;">${dp.title}</h3>
+            <p style="font-size: 0.88rem; color: #475569; margin-bottom: 14px;">${dp.description}</p>
+            <div style="font-size: 0.78rem; font-weight: 600; color: var(--primary);">
               <strong>Tech Stack:</strong> ${dp.tools}
             </div>
           </div>
