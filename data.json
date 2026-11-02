@@ -116,12 +116,14 @@
       {
         "period": "Graduated: Aug 2025",
         "school": "University of Wollongong",
-        "degree": "Master of Business Analytics"
+        "degree": "Master of Business Analytics",
+        "imageUrl": "master-degree.png"
       },
       {
         "period": "Graduated: Aug 2024",
         "school": "University of Wollongong",
-        "degree": "Bachelor of Business - International Business"
+        "degree": "Bachelor of Business - International Business",
+        "imageUrl": "bachelor-degree.png"
       }
     ],
     "certifications": [
@@ -358,12 +360,14 @@
       {
         "period": "Tốt nghiệp: 08/2025",
         "school": "University of Wollongong (Úc)",
-        "degree": "Thạc sĩ Phân tích Kinh doanh (Master of Business Analytics)"
+        "degree": "Thạc sĩ Phân tích Kinh doanh (Master of Business Analytics)",
+        "imageUrl": "master-degree.png"
       },
       {
         "period": "Tốt nghiệp: 08/2024",
         "school": "University of Wollongong (Úc)",
-        "degree": "Cử nhân Kinh doanh - Chuyên ngành Kinh doanh Quốc tế"
+        "degree": "Cử nhân Kinh doanh - Chuyên ngành Kinh doanh Quốc tế",
+        "imageUrl": "bachelor-degree.png"
       }
     ],
     "certifications": [
