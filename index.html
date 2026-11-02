@@ -423,18 +423,22 @@
     }
     .timeline-desc li { margin-bottom: 6px; }
 
-    /* CERTIFICATE THUMB */
+    /* CERTIFICATE & DEGREE THUMBNAIL */
     .cert-thumb {
-      max-width: 300px;
+      max-width: 320px;
       width: 100%;
       border-radius: 12px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
-      margin-top: 12px;
-      transition: all 0.25s;
+      margin-top: 14px;
+      transition: all 0.25s ease;
       display: block;
     }
-    .cert-thumb:hover { transform: scale(1.02); }
+    .cert-thumb:hover { 
+      transform: scale(1.02);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
 
     /* SUB-TABS (Payoo vs ProScan) */
     .subnav-tabs {
@@ -669,7 +673,6 @@
         </div>
         
         <div class="nav-right-actions">
-          <!-- Switcher Chọn Ngôn ngữ (EN | VI) -->
           <div class="lang-switcher">
             <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
             <button class="lang-btn" id="btn-vi" onclick="setLanguage('vi')">VI</button>
@@ -678,7 +681,6 @@
         </div>
       </div>
 
-      <!-- 5 MỤC NAV -->
       <nav class="main-nav">
         <div class="nav-tab active" id="tab-about" onclick="switchPage('about')">About</div>
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
@@ -734,12 +736,15 @@
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-exp-title">Work Experience</h3>
       <div class="timeline" id="resume-experience-container"></div>
 
+      <!-- ACADEMIC CREDENTIALS -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-edu-title">Academic Credentials</h3>
       <div class="timeline" id="resume-education-container"></div>
 
+      <!-- CERTIFICATIONS -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-cert-title">Certifications & Accreditations</h3>
       <div class="timeline" id="resume-cert-container"></div>
 
+      <!-- CASE STUDIES -->
       <h3 style="font-size: 1.3rem; margin: 36px 0 16px;" id="resume-case-title">Executive Case Studies</h3>
       <div id="resume-case-container"></div>
     </section>
@@ -760,7 +765,7 @@
         </button>
       </div>
 
-      <!-- Tab Payoo (Chứa Bảng Metric) -->
+      <!-- Tab Payoo -->
       <div id="bd-payoo" class="bd-subcontent active">
         <div class="content-card">
           <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
@@ -912,7 +917,6 @@
 
     // 4. Render toàn bộ nội dung theo ngôn ngữ đã chọn
     function renderContent(data) {
-      // Navbar & Headings
       document.getElementById('page-title').innerText = data.profile.name + " | Enterprise Fintech Portfolio";
       document.getElementById('status-text').innerText = data.nav.status;
       document.getElementById('cv-btn').innerText = data.nav.downloadCv;
@@ -923,7 +927,6 @@
       document.getElementById('tab-da').innerText = data.nav.da;
       document.getElementById('tab-contact').innerText = data.nav.contact;
 
-      // Profile & Hero
       document.getElementById('hero-name').innerText = data.profile.name;
       document.getElementById('hero-title').innerText = data.profile.title;
       document.getElementById('avatar').src = data.profile.avatarUrl;
@@ -931,14 +934,12 @@
       document.getElementById('email').innerText = data.profile.email;
       document.getElementById('location').innerText = data.profile.location;
 
-      // Floating buttons
       document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
       document.getElementById('float-phone').href = `tel:${data.profile.phone}`;
       if (data.profile.social && data.profile.social.linkedin) {
         document.getElementById('float-linkedin').href = data.profile.social.linkedin;
       }
 
-      // Contact
       document.getElementById('contact-phone').innerText = data.profile.phone;
       document.getElementById('contact-email').innerText = data.profile.email;
       document.getElementById('contact-location').innerText = data.profile.location;
@@ -946,7 +947,6 @@
       document.getElementById('contact-sub').innerText = data.labels.contactSub;
       document.getElementById('submitBtn').innerText = data.labels.sendBtn;
 
-      // Social links
       const socialWrap = document.getElementById('social-links');
       socialWrap.innerHTML = `
         <a href="${data.profile.social.linkedin}" target="_blank" class="social-pill">LinkedIn ↗</a>
@@ -954,7 +954,6 @@
         <a href="${data.profile.social.instagram}" target="_blank" class="social-pill">Instagram ↗</a>
       `;
 
-      // About
       document.getElementById('about-container').innerHTML = data.about.map(p => `<p>${p}</p>`).join('');
 
       // RESUME: Skills
@@ -990,13 +989,18 @@
         </div>
       `).join('');
 
-      // RESUME: Education
+      // RESUME: Education (Hiển thị hình ảnh bằng cấp Đại học và Thạc sĩ)
       document.getElementById('resume-education-container').innerHTML = data.education.map(ed => `
         <div class="timeline-card">
           <div><span class="timeline-badge">${ed.period}</span></div>
           <div>
             <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">${ed.school}</h3>
             <div class="timeline-role">${ed.degree}</div>
+            ${ed.imageUrl ? `
+              <a href="${ed.imageUrl}" target="_blank" title="${currentLang === 'vi' ? 'Xem bằng tốt nghiệp phóng to' : 'View full degree'}">
+                <img src="${ed.imageUrl}" alt="${ed.degree}" class="cert-thumb">
+              </a>
+            ` : ''}
           </div>
         </div>
       `).join('');
@@ -1011,7 +1015,7 @@
               <div class="timeline-role">${c.issuer}</div>
               <p style="font-size:0.92rem; color:#64748b;">${c.skills}</p>
               ${c.imageUrl ? `
-                <a href="${c.imageUrl}" target="_blank" title="Xem ảnh chứng chỉ">
+                <a href="${c.imageUrl}" target="_blank" title="${currentLang === 'vi' ? 'Xem chứng chỉ phóng to' : 'View full certificate'}">
                   <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb">
                 </a>
               ` : ''}
@@ -1085,7 +1089,7 @@
       }
     }
 
-    // 5. Thanh Progress Bar & Nút Back to top
+    // 5. Progress Bar & Back to top
     const backToTopBtn = document.getElementById("backToTopBtn");
     const scrollProgress = document.getElementById("scrollProgress");
 
