@@ -20,7 +20,7 @@
       --primary-hover: #0747a6;
       --accent: #0ea5e9;
       --border: #e2e8f0;
-      --np-dark: #0f172a; /* Lấy màu Navy đậm cho phong cách Corporate thay vì màu cam của NP */
+      --np-dark: #0f172a;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
       --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
       --shadow-hover: 0 10px 24px -4px rgba(15, 23, 42, 0.08);
@@ -337,6 +337,11 @@
       box-shadow: var(--shadow-card);
       transition: all 0.25s ease;
     }
+    .skill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(0, 82, 204, 0.25);
+    }
     .skill-card-header {
       display: flex;
       align-items: center;
@@ -436,7 +441,7 @@
       margin-top: 12px;
     }
 
-    /* SUB-TABS (Payoo vs ProScan) */
+    /* SUB-TABS */
     .subnav-tabs {
       display: flex;
       gap: 8px;
@@ -549,13 +554,10 @@
       margin-bottom: 14px;
     }
 
-    /* ======================================================================= 
-       TRANG LIÊN HỆ THEO PHONG CÁCH NEIL PATEL (Full-width, Bold Background) 
-       ======================================================================= */
+    /* TRANG LIÊN HỆ THEO PHONG CÁCH NEIL PATEL */
     #page-contact {
-      padding: 0 !important; /* Xóa khoảng trắng để full-width */
+      padding: 0 !important;
     }
-    
     .np-contact-hero {
       background-color: var(--np-dark);
       color: #ffffff;
@@ -576,7 +578,6 @@
       margin: 0 auto 40px;
       line-height: 1.6;
     }
-
     .np-form {
       max-width: 760px;
       margin: 0 auto;
@@ -644,7 +645,7 @@
       transform: translateY(-2px);
     }
 
-    /* Social Connect Section (Neil Patel Style) */
+    /* Social Connect Section */
     .np-social-section {
       background-color: #ffffff;
       padding: 70px 24px;
@@ -681,9 +682,7 @@
       color: var(--primary);
     }
 
-    /* ======================================================================= 
-       MULTI-COLUMN FOOTER (Neil Patel Style)
-       ======================================================================= */
+    /* MULTI-COLUMN FOOTER */
     .np-footer {
       background-color: var(--primary);
       color: #ffffff;
@@ -731,6 +730,57 @@
       color: #ffffff;
     }
 
+    /* ======================================================================= 
+       CỤM NÚT NỔI (FLOATING WIDGET) TÙY CHỈNH THEO YÊU CẦU MỚI
+       Thứ tự: Zalo (Trắng viền) -> LinkedIn (Xanh dương) -> Facebook (Xanh đậm) -> Email (Đỏ) -> Top (Đen)
+       ======================================================================= */
+    .floating-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+    }
+    .float-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .float-btn:hover { transform: translateY(-3px) scale(1.06); }
+    
+    .btn-zalo { background: #ffffff; border: 1px solid #e2e8f0; padding: 5px; }
+    .btn-zalo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+    
+    .btn-linkedin { background: #0077b5; color: #ffffff; }
+    .btn-linkedin svg { width: 18px; height: 18px; fill: currentColor; }
+
+    .btn-facebook { background: #1877f2; color: #ffffff; }
+    .btn-facebook svg { width: 20px; height: 20px; fill: currentColor; }
+    
+    .btn-email { background: #ef4444; color: #ffffff; }
+    .btn-email svg { width: 18px; height: 18px; fill: currentColor; }
+
+    .btn-top {
+      background: #0f172a;
+      color: #ffffff;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      margin-top: 4px; /* Tách biệt nút Top khỏi 4 nút MXH */
+    }
+    .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .btn-top svg { width: 16px; height: 16px; fill: currentColor; }
+
     /* RESPONSIVE DI ĐỘNG */
     @media (max-width: 860px) {
       .container { padding: 0 16px; }
@@ -773,6 +823,14 @@
       .np-social-icons { gap: 24px; }
       
       .np-footer-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      /* Floating Buttons Mobile */
+      .floating-widget { bottom: 16px; right: 12px; gap: 8px; }
+      .float-btn { width: 38px; height: 38px; }
+      .btn-linkedin svg { width: 15px; height: 15px; }
+      .btn-facebook svg { width: 16px; height: 16px; }
+      .btn-email svg { width: 15px; height: 15px; }
+      .btn-top svg { width: 14px; height: 14px; }
     }
   </style>
 </head>
@@ -933,7 +991,7 @@
     </section>
   </main>
 
-  <!-- 5. CONTACT (NP Style) - Nằm ngoài thẻ main.container để tràn viền 100% -->
+  <!-- 5. CONTACT (NP Style) - Tràn viền -->
   <section id="page-contact" class="page-section">
     
     <!-- Hero Contact Form -->
@@ -990,16 +1048,16 @@
           <a href="mailto:quangtritc1805@gmail.com" class="np-social-icon">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
-          <!-- Zalo -->
-          <a href="https://zalo.me/0838673639" target="_blank" class="np-social-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.964 2.016c-5.518 0-9.964 3.738-9.964 8.357 0 2.628 1.442 4.965 3.693 6.471-.242.92-1.074 2.822-1.127 2.964-.093.25.132.428.35.293 1.638-.99 3.428-2.228 3.757-2.457.993.286 2.071.45 3.293.45 5.518 0 9.964-3.738 9.964-8.357S17.482 2.016 11.964 2.016z"/></svg>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/Tori1005" target="_blank" class="np-social-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (NP Style) -->
+  <!-- FOOTER -->
   <footer class="np-footer">
     <div class="container np-footer-grid">
       <div class="np-footer-col">
@@ -1025,6 +1083,36 @@
       </div>
     </div>
   </footer>
+
+  <!-- ======================================================================= 
+       BỘ 5 NÚT NỔI: Zalo, LinkedIn, Facebook, Email, Top 
+       ======================================================================= -->
+  <div class="floating-widget">
+    <!-- Nút Zalo (Biểu tượng trắng viền mảnh) -->
+    <a href="https://zalo.me/0838673639" target="_blank" class="float-btn btn-zalo" id="float-zalo" title="Chat Zalo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+    </a>
+
+    <!-- Nút LinkedIn (Nền xanh lam) -->
+    <a href="#" target="_blank" class="float-btn btn-linkedin" id="float-linkedin" title="Kết nối LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+    </a>
+
+    <!-- Nút Facebook (Nền xanh đậm) -->
+    <a href="#" target="_blank" class="float-btn btn-facebook" id="float-facebook" title="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+    </a>
+
+    <!-- Nút Email (Nền đỏ) -->
+    <a href="mailto:quangtritc1805@gmail.com" class="float-btn btn-email" id="float-email" title="Gửi Email">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </a>
+
+    <!-- Nút Cuộn Lên Đầu Trang (Nền đen tuyền) -->
+    <div class="float-btn btn-top" id="backToTopBtn" title="Lên đầu trang">
+      <svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </div>
+  </div>
 
   <script>
     let globalData = null;
@@ -1092,6 +1180,16 @@
       document.getElementById('location').innerText = data.profile.location;
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
+
+      // Nút liên kết MXH lấy động từ data.json
+      document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
+      if (data.profile.social && data.profile.social.linkedin) {
+        document.getElementById('float-linkedin').href = data.profile.social.linkedin;
+      }
+      if (data.profile.social && data.profile.social.facebook) {
+        document.getElementById('float-facebook').href = data.profile.social.facebook;
+      }
+      document.getElementById('float-email').href = `mailto:${data.profile.email}`;
 
       const socialWrap = document.getElementById('social-links-hero');
       socialWrap.innerHTML = `
@@ -1229,7 +1327,7 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER (Neil Patel style text replacement)
+      // CONTACT & FOOTER
       document.getElementById('contact-heading').innerText = data.labels.contactHeading;
       document.getElementById('contact-sub').innerText = data.labels.contactSub;
       
@@ -1257,6 +1355,17 @@
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       scrollProgress.style.width = scrolled + "%";
+
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      if (winScroll > 260) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+    
+    document.getElementById("backToTopBtn").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     fetch('./data.json?v=' + Date.now())
