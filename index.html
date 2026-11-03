@@ -673,7 +673,6 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-    /* Thêm style khi gửi thành công */
     .form-success-msg {
       display: none;
       color: #10b981;
@@ -851,7 +850,6 @@
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
       
-      /* Form Contact Responsive */
       .contact-wrapper { padding-top: 40px; margin-top: 20px; }
       .np-contact-hero { padding: 30px 16px 50px; }
       .np-contact-title { font-size: 2.2rem; }
@@ -859,7 +857,6 @@
       .np-submit-wrap { text-align: center; }
       .np-btn-submit { width: 100%; padding: 14px 20px; }
       
-      /* Footer Mobile */
       .np-footer { padding: 0 20px 40px; }
       .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; padding-top: 40px; }
       .np-footer-col:first-child { grid-column: span 2; text-align: center; }
@@ -869,7 +866,6 @@
       .np-footer-links { gap: 10px; }
       .np-footer-links a { font-size: 0.85rem; }
       
-      /* Floating Widget Mobile */
       .floating-widget { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { width: 40px; height: 40px; }
       .float-btn svg { width: 18px; height: 18px; }
@@ -900,7 +896,6 @@
       </div>
 
       <nav class="main-nav">
-        <!-- ĐẢM BẢO ARRAY ĐIỀU HƯỚNG CÓ CHỨA 'contact' ĐỂ TRÁNH LỖI MẤT TRANG LIÊN HỆ -->
         <div class="nav-tab active" id="tab-about" onclick="switchPage('about')">About</div>
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
         <div class="nav-tab" id="tab-bd" onclick="switchPage('business-dev')">Business Development</div>
@@ -1057,16 +1052,14 @@
       </div>
     </section>
 
-    <!-- 5. CONTACT (CHỈNH LẠI CẤU TRÚC HIỂN THỊ TRONG TAB, LOẠI BỎ MÀU NỀN TỐI) -->
+    <!-- 5. CONTACT -->
     <section id="page-contact" class="page-section">
       <div class="container">
         <div style="padding: 20px 0;">
-          <!-- Tiêu đề mới thu hút HR / Headhunter -->
           <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">Let's Build Strategic Value</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Please leave your details if you are looking for a specialized B2B & FinTech talent.</p>
           
           <div class="bento-card" style="max-width: 800px; padding: 40px;">
-            <!-- Gắn ID cho form để xử lý Javascript submit -->
             <form id="hr-contact-form" class="np-form" style="max-width: 100%;">
               <div class="np-form-row">
                 <div class="np-input-group">
@@ -1091,14 +1084,12 @@
               <div class="np-form-row">
                 <div class="np-input-group" style="width: 100%;">
                   <label id="lbl-msg" style="color: var(--text-muted);">Message</label>
-                  <!-- Thay đổi Placeholder chuyên nghiệp hơn -->
                   <textarea id="msg" name="msg" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Share a brief JD or collaboration opportunity..." required></textarea>
                 </div>
               </div>
               <div class="np-submit-wrap" style="text-align: left;">
                 <button type="submit" class="btn-primary" id="submitBtn" style="padding: 12px 30px; font-size: 0.95rem; border-radius: 8px;">SUBMIT MESSAGE</button>
               </div>
-              <!-- Dòng thông báo thành công sau khi gửi form -->
               <p id="form-success-msg" class="form-success-msg"></p>
             </form>
           </div>
@@ -1107,7 +1098,7 @@
     </section>
   </main>
 
-  <!-- FOOTER CHUNG DƯỚI CÙNG (DÙNG CHUNG CHO MỌI TRANG) -->
+  <!-- FOOTER CHUNG DƯỚI CÙNG -->
   <footer class="np-footer">
     <div class="container np-footer-grid">
       <div class="np-footer-col">
@@ -1135,7 +1126,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING WIDGET BÊN TRÁI -->
+  <!-- FLOATING WIDGET -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn zalo-btn" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width: 22px; height: 22px;">
@@ -1207,7 +1198,6 @@
       }
     }
 
-    /* ĐIỀU KHIỂN LIGHTBOX XEM ẢNH */
     function openLightbox(src) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');
@@ -1224,7 +1214,6 @@
     });
 
     function renderContent(data) {
-      // NAV
       document.getElementById('page-title').innerText = data.profile.name + " | Enterprise Fintech Portfolio";
       document.getElementById('status-text').innerText = data.nav.status;
       document.getElementById('cv-btn').innerText = data.nav.downloadCv;
@@ -1235,7 +1224,6 @@
       document.getElementById('tab-da').innerText = data.nav.da;
       document.getElementById('tab-contact').innerText = data.nav.contact;
 
-      // HERO
       document.getElementById('hero-name').innerText = data.profile.name;
       document.getElementById('hero-title').innerText = data.profile.title;
       document.getElementById('avatar').src = data.profile.avatarUrl;
@@ -1243,7 +1231,6 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
-      // SOCIAL LINKS
       document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
       if (data.profile.social && data.profile.social.linkedin) {
         document.getElementById('float-linkedin').href = data.profile.social.linkedin;
@@ -1253,7 +1240,6 @@
       }
       document.getElementById('float-email').href = `mailto:${data.profile.email}`;
 
-      // BENTO GRID MAPPING 
       document.getElementById('about-eyebrow').innerText = data.labels.overview;
       if(data.about && data.about.length >= 3) {
         document.getElementById('about-container-bento').innerHTML = `
@@ -1284,7 +1270,6 @@
         `;
       }
 
-      // RESUME
       document.getElementById('resume-skills-title').innerText = data.labels.capabilities;
       document.getElementById('resume-exp-title').innerText = data.labels.careerPath;
       document.getElementById('resume-edu-title').innerText = data.labels.academic;
@@ -1415,7 +1400,7 @@
         `).join('');
       }
 
-      // CONTACT DYNAMIC UPDATE (Tiêu đề thay đổi theo ngôn ngữ để thu hút HR)
+      // CONTACT & FOOTER
       if (currentLang === 'vi') {
         document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
         document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
@@ -1436,7 +1421,6 @@
       document.getElementById('lbl-msg').innerText = data.labels.message;
       document.getElementById('submitBtn').innerText = data.labels.sendBtn;
       
-      // FOOTER
       document.getElementById('footer-nav-title').innerText = data.labels.footerNavigate;
       document.getElementById('footer-contact-title').innerText = data.labels.footerContact;
       document.getElementById('f-about').innerText = data.nav.about;
@@ -1446,24 +1430,19 @@
       document.getElementById('f-contact').innerText = data.nav.contact;
     }
 
-    /* ==============================================================
-       XỬ LÝ SUBMIT FORM VÀ GỬI DATA VỀ GOOGLE SHEETS
-       ============================================================== */
-    // ĐÂY LÀ CHỖ BẠN CẦN THAY THẾ BẰNG WEB APP URL CỦA GOOGLE APPS SCRIPT
-    const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+    /* GOOGLE APPS SCRIPT WEB APP INTEGRATION */
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKOkUHPMPszEf5W9Y7g63aFX_Wmh7ntV-xxpKxI3n8FX_GeTLbDT0XCVsPagcaCOuR/exec";
 
     document.getElementById("hr-contact-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Chặn hành vi tải lại trang mặc định
+      e.preventDefault();
       
       const submitBtn = document.getElementById("submitBtn");
       const successMsg = document.getElementById("form-success-msg");
       
-      // Đổi trạng thái nút thành Đang gửi
       const originalBtnText = submitBtn.innerText;
       submitBtn.innerText = currentLang === 'vi' ? 'Đang gửi...' : 'Sending...';
       submitBtn.disabled = true;
 
-      // Lấy dữ liệu từ form
       const formData = new FormData();
       formData.append("fname", document.getElementById("fname").value);
       formData.append("lname", document.getElementById("lname").value);
@@ -1471,23 +1450,21 @@
       formData.append("subject", document.getElementById("subject").value);
       formData.append("msg", document.getElementById("msg").value);
 
-      // Gửi dữ liệu đi
       fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        body: formData
+        body: formData,
+        mode: "no-cors"
       })
-      .then(response => {
-        // Hiện thông báo thành công
+      .then(() => {
         successMsg.style.display = "block";
-        document.getElementById("hr-contact-form").reset(); // Xóa trắng form
-        setTimeout(() => { successMsg.style.display = "none"; }, 5000); // Ẩn sau 5s
+        document.getElementById("hr-contact-form").reset();
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000);
       })
       .catch(error => {
         alert(currentLang === 'vi' ? "Đã có lỗi xảy ra. Vui lòng thử lại sau!" : "An error occurred. Please try again later!");
         console.error("Error submitting form!", error);
       })
       .finally(() => {
-        // Trả lại trạng thái nút ban đầu
         submitBtn.innerText = originalBtnText;
         submitBtn.disabled = false;
       });
