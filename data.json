@@ -67,10 +67,11 @@
         "logoUrl": "payoo.jpg",
         "role": "Business Development Executive",
         "bullets": [
-          "Acquired and managed <strong>11 enterprise merchant accounts</strong> across retail, F&B, and lifestyle chains for omnichannel payment infrastructure adoption.",
-          "Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by <strong>30%</strong>.",
-          "Pitched tailored payment solutions to senior leadership, securing enterprise contracts with projected annual GMV of <strong>~1B VND</strong>.",
-          "Shortened contract turnaround by <strong>20%</strong> and collaborated with technical teams to ensure seamless merchant onboarding and SLA compliance."
+          "<strong>Payment Infrastructure Expansion:</strong> Secured and onboarded <strong>15+ major enterprise accounts</strong> across retail, F&B, and lifestyle chains, driving omnichannel payment adoption.",
+          "<strong>Portfolio Optimization & Revenue Growth:</strong> Managed and cross-sold solutions across existing merchant accounts, increasing periodic transaction volume by <strong>25%</strong>.",
+          "<strong>Data-Driven Account Segmentation:</strong> Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by <strong>30%</strong>.",
+          "<strong>Strategic Enterprise Closing:</strong> Pitched bespoke payment infrastructure solutions directly to C-level executives and senior leadership, securing enterprise contracts scaling up to <strong>~1.2B VND</strong> in projected annual GMV.",
+          "<strong>Cross-Functional Operations:</strong> Streamlined contract turnaround by <strong>20%</strong> and collaborated with technical teams to ensure seamless merchant onboarding and <strong>100%</strong> stability across all payment touchpoints."
         ]
       },
       {
@@ -145,9 +146,9 @@
         "logo": "payoo.jpg",
         "summary": "I specialize in engineering enterprise payment architectures, rolling out SmartPOS networks, and designing automated reconciliation workflows that eliminate friction for multi-location retail chains.",
         "metrics": [
-          { "num": "11", "label": "Enterprise Partners" },
-          { "num": "~1B VND", "label": "Projected GMV Closed" },
-          { "num": "30%", "label": "Qualification Sped Up" }
+          { "num": "15+", "label": "Enterprise Partners" },
+          { "num": "~1.2B VND", "label": "Projected Annual GMV" },
+          { "num": "+25%", "label": "Volume Growth" }
         ],
         "projects": [
           {
@@ -344,10 +345,11 @@
         "logoUrl": "payoo.jpg",
         "role": "Chuyên viên Phát triển Kinh doanh (Enterprise B2B)",
         "bullets": [
-          "Khai thác và kết nối thành công <strong>11 chuỗi đối tác doanh nghiệp</strong> áp dụng giải pháp hạ tầng thanh toán đa kênh.",
-          "Xây dựng tiêu chuẩn phân tầng tài khoản (Tier 1–3) dựa trên quy mô GMV và độ phủ mạng lưới, rút ngắn thời gian thẩm định thêm <strong>30%</strong>.",
-          "Đàm phán trực tiếp với ban lãnh đạo đối tác, chốt các hợp đồng thương mại với GMV mục tiêu <strong>~1 tỷ VNĐ/năm</strong>.",
-          "Rút ngắn <strong>20%</strong> thời gian luân chuyển hợp đồng và đảm bảo quy trình Onboarding kỹ thuật chuẩn SLA."
+          "<strong>Mở rộng hạ tầng thanh toán:</strong> Khai thác và kết nối thành công <strong>15+ chuỗi đối tác doanh nghiệp lớn</strong> ngành bán lẻ, F&B và dịch vụ, thúc đẩy thanh toán đa kênh toàn diện.",
+          "<strong>Tối ưu danh mục & gia tăng doanh số:</strong> Quản trị và bán chéo (cross-sell) giải pháp cho các merchant hiện hữu, gia tăng <strong>25%</strong> sản lượng giao dịch định kỳ.",
+          "<strong>Phân tầng tài khoản theo dữ liệu:</strong> Xây dựng tiêu chuẩn phân tầng (Tier 1–3) dựa trên quy mô GMV và độ phủ mạng lưới, rút ngắn thời gian thẩm định lead thêm <strong>30%</strong>.",
+          "<strong>Chốt deal doanh nghiệp chiến lược:</strong> Đàm phán trực tiếp với ban lãnh đạo cấp C-level, xác lập các hợp đồng đối tác quy mô lên đến <strong>~1.2 tỷ VNĐ</strong> GMV mục tiêu hàng năm.",
+          "<strong>Vận hành liên chức năng:</strong> Rút ngắn <strong>20%</strong> thời gian luân chuyển hợp đồng, phối hợp chặt chẽ cùng đội ngũ kỹ thuật đảm bảo quy trình onboarding chuẩn SLA và độ ổn định <strong>100%</strong> trên toàn bộ điểm chạm."
         ]
       },
       {
@@ -422,9 +424,9 @@
         "logo": "payoo.jpg",
         "summary": "Tôi chuyên tư vấn kiến trúc thanh toán B2B, triển khai mạng lưới SmartPOS, thanh toán từ xa qua link (Pay-by-Link) và tối ưu hóa hệ thống đối soát giao dịch tự động cho các chuỗi bán lẻ đa điểm.",
         "metrics": [
-          { "num": "11", "label": "Đối tác Chuỗi Kết nối" },
-          { "num": "~1 Tỷ VNĐ", "label": "GMV Dự kiến" },
-          { "num": "30%", "label": "Tối ưu Thời gian Thẩm định" }
+          { "num": "15+", "label": "Đối tác Chuỗi Kết nối" },
+          { "num": "~1.2 Tỷ VNĐ", "label": "GMV Mục tiêu Hàng năm" },
+          { "num": "+25%", "label": "Tăng trưởng Sản lượng GD" }
         ],
         "projects": [
           {
