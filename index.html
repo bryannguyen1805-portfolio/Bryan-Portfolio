@@ -23,7 +23,6 @@
       --border: rgba(226, 232, 240, 0.8);
       --np-dark: #0f172a;
       
-      /* HIỆU ỨNG ĐỔ BÓNG (DROP SHADOW) CHO CÁC KHỐI */
       --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
       --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
@@ -347,6 +346,7 @@
     .col-12 { grid-column: span 12; }
     .col-6  { grid-column: span 6; }
 
+    /* Mặc định trên Desktop font-size là 1.05rem */
     .about-text { font-size: 1.05rem; line-height: 1.8; color: #334155; position: relative; z-index: 1; }
     .about-text strong { color: var(--np-dark); font-weight: 700; }
     .bento-icon-wrap {
@@ -509,7 +509,7 @@
     .bd-subcontent { display: none; }
     .bd-subcontent.active { display: block; animation: slideUpFade 0.3s ease; }
 
-    /* KHỐI PARTNER LOGO (CHỈ XUẤT HIỆN Ở PAYOO TAB) */
+    /* PARTNER LOGO SECTION */
     .partner-logo-section {
       background: var(--card-bg);
       border: 1px solid rgba(226, 232, 240, 0.6);
@@ -610,7 +610,7 @@
     }
     .case-card p { font-size: 0.92rem; color: #475569; line-height: 1.65; margin-bottom: 24px; flex-grow: 1; }
 
-    /* LIÊN HỆ & FOOTER */
+    /* LIÊN HỆ & FOOTER CHUNG DƯỚI CÙNG */
     .contact-wrapper {
       background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
       padding-top: 60px;
@@ -680,6 +680,7 @@
       border-top: 1px solid rgba(255,255,255,0.05);
       width: 100%;
     }
+    /* Mặc định trên desktop là grid 3 cột */
     .np-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; padding-top: 60px; }
     .np-footer-col h4 {
       font-family: 'Sora', sans-serif;
@@ -797,10 +798,13 @@
     .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
     .btn-top:hover { background: var(--primary); transform: translateY(-4px) !important; }
 
-    /* RESPONSIVE DI ĐỘNG */
+    /* ==========================================================
+       RESPONSIVE DI ĐỘNG - XỬ LÝ LỖI FONT TO & FOOTER RỜI RẠC
+       ========================================================== */
     @media (max-width: 860px) {
       .container { padding: 0 20px; }
       body { font-size: 0.9rem; }
+      
       .nav-wrap { flex-direction: column; align-items: stretch; padding: 12px 0; gap: 12px; }
       .nav-top-row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
       .nav-logo { font-size: 1.05rem; }
@@ -810,20 +814,33 @@
       .main-nav { width: 100%; overflow-x: auto; padding: 3px; gap: 4px; justify-content: flex-start; }
       .main-nav::-webkit-scrollbar { display: none; }
       .nav-tab { padding: 6px 12px; font-size: 0.8rem; }
+      
       .page-section { padding: 30px 0 40px; }
+      
+      /* Hero Mobile */
       .hero-container { flex-direction: column-reverse; padding: 20px 0 40px; gap: 30px; min-height: auto; }
       .hero-content-col { text-align: center; }
       .hero-img-col { justify-content: center; }
       .hero-img { max-width: 220px; border-radius: 30px 30px 30px 80px; }
       .hero-content h1 { font-size: 2.2rem; letter-spacing: -0.8px; }
       .hero-contact-row { justify-content: center; gap: 8px; }
+      
       .section-title { font-size: 1.4rem; margin-bottom: 24px; }
       .block-heading { font-size: 1.1rem; margin: 30px 0 16px; }
+      
+      /* GIẢI QUYẾT LỖI CỠ CHỮ TO TRONG PHẦN GIỚI THIỆU TRÊN MOBILE */
+      .about-text { 
+        font-size: 0.92rem !important; 
+        line-height: 1.6 !important; 
+      }
+      
       .bento-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px; }
       .bento-card { padding: 24px; border-radius: var(--radius-lg); }
+      
       .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 20px 24px; }
       .company-title { font-size: 1.05rem; }
       
+      /* Bar Logo Đối tác Mobile */
       .partner-logo-section { padding: 20px; }
       .partner-logo-grid { gap: 16px; }
       .partner-logo-grid img { max-height: 32px; max-width: 90px; }
@@ -832,13 +849,44 @@
       .metric-grid { grid-template-columns: 1fr; gap: 1px; }
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
+      
+      /* Form Contact Responsive */
       .contact-wrapper { padding-top: 40px; margin-top: 20px; }
       .np-contact-hero { padding: 30px 16px 50px; }
       .np-contact-title { font-size: 2.4rem; }
       .np-form-row { flex-direction: column; gap: 24px; margin-bottom: 24px; }
       .np-submit-wrap { text-align: center; }
       .np-btn-submit { width: 100%; padding: 14px 20px; }
-      .np-footer-grid { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; }
+      
+      /* GIẢI QUYẾT LỖI FOOTER TRÊN MOBILE: THU HẸP GAP VÀ CĂN CHỈNH LẠI GRID */
+      .np-footer {
+        padding: 0 20px 40px;
+      }
+      .np-footer-grid { 
+        grid-template-columns: 1fr 1fr; /* Chia làm 2 cột thay vì 1 cột thả dọc để tiết kiệm không gian */
+        gap: 30px 20px; 
+        padding-top: 40px; 
+      }
+      .np-footer-col:first-child {
+        grid-column: span 2; /* Phần logo Bryan Nguyen chiếm trọn dòng đầu */
+        text-align: center;
+      }
+      .np-footer-logo {
+        margin-bottom: 8px;
+        font-size: 1.3rem;
+      }
+      .np-footer-text {
+        margin: 0 auto;
+        font-size: 0.85rem;
+      }
+      .np-footer-col h4 {
+        margin-bottom: 14px;
+        font-size: 0.8rem;
+      }
+      .np-footer-links { gap: 10px; }
+      .np-footer-links a { font-size: 0.85rem; }
+      
+      /* Floating Widget Mobile */
       .floating-widget { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { width: 40px; height: 40px; }
       .float-btn svg { width: 18px; height: 18px; }
@@ -873,7 +921,6 @@
         <div class="nav-tab" id="tab-resume" onclick="switchPage('resume')">Resume</div>
         <div class="nav-tab" id="tab-bd" onclick="switchPage('business-dev')">Business Development</div>
         <div class="nav-tab" id="tab-da" onclick="switchPage('data-analyst')">Data Analyst</div>
-        <div class="nav-tab" id="tab-contact" onclick="switchPage('contact')">Contact</div>
       </nav>
     </div>
   </header>
@@ -972,7 +1019,7 @@
             <div class="metric-grid" id="bd-payoo-metrics"></div>
           </div>
 
-          <!-- BỔ SUNG BAR LOGO ĐỐI TÁC CỦA PAYOO TẠI ĐÂY -->
+          <!-- BAR LOGO ĐỐI TÁC CỦA PAYOO -->
           <div class="partner-logo-section">
             <div class="partner-logo-title" id="payoo-partner-title">Key Enterprise Partners</div>
             <div class="partner-logo-grid">
@@ -1025,79 +1072,76 @@
         <div class="timeline" id="da-cert-container"></div>
       </div>
     </section>
+  </main>
 
-    <!-- 5. CONTACT (TAB) -->
-    <section id="page-contact" class="page-section">
-      <div class="container">
-        <div style="padding: 20px 0;">
-          <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">How can I help?</h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Do you have a question or are you interested in working with me?</p>
-          
-          <div class="bento-card" style="max-width: 800px; padding: 40px;">
-            <form class="np-form" style="max-width: 100%;">
-              <div class="np-form-row">
-                <div class="np-input-group">
-                  <label id="lbl-fname" style="color: var(--text-muted);">First Name</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
-                </div>
-                <div class="np-input-group">
-                  <label id="lbl-lname" style="color: var(--text-muted);">Last Name</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
-                </div>
-              </div>
-              <div class="np-form-row">
-                <div class="np-input-group">
-                  <label id="lbl-email" style="color: var(--text-muted);">Email Address</label>
-                  <input type="email" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
-                </div>
-                <div class="np-input-group">
-                  <label id="lbl-subject" style="color: var(--text-muted);">Subject / Company</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
-                </div>
-              </div>
-              <div class="np-form-row">
-                <div class="np-input-group" style="width: 100%;">
-                  <label id="lbl-msg" style="color: var(--text-muted);">Message</label>
-                  <textarea class="np-input" id="msg-ph" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Message (remember, short & sweet please)" required></textarea>
-                </div>
-              </div>
-              <div class="np-submit-wrap" style="text-align: left;">
-                <button type="submit" class="btn-primary" id="submitBtn" style="padding: 12px 30px; font-size: 0.95rem; border-radius: 8px;">SUBMIT MESSAGE</button>
-              </div>
-            </form>
+  <!-- LIÊN HỆ & FOOTER CHUNG DƯỚI CÙNG -->
+  <div class="contact-wrapper">
+    <div class="np-contact-hero" id="page-contact">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="np-contact-title" id="contact-heading">How can I help?</h2>
+        <p class="np-contact-sub" id="contact-sub">Do you have a question or are you interested in working with me? Just fill out the form fields below.</p>
+        
+        <form class="np-form">
+          <div class="np-form-row">
+            <div class="np-input-group">
+              <label id="lbl-fname">First Name</label>
+              <input type="text" class="np-input" required>
+            </div>
+            <div class="np-input-group">
+              <label id="lbl-lname">Last Name</label>
+              <input type="text" class="np-input" required>
+            </div>
+          </div>
+          <div class="np-form-row">
+            <div class="np-input-group">
+              <label id="lbl-email">Email Address</label>
+              <input type="email" class="np-input" required>
+            </div>
+            <div class="np-input-group">
+              <label id="lbl-subject">Subject / Company</label>
+              <input type="text" class="np-input" required>
+            </div>
+          </div>
+          <div class="np-form-row">
+            <div class="np-input-group" style="width: 100%;">
+              <label id="lbl-msg">Message</label>
+              <textarea class="np-input" id="msg-ph" placeholder="Message (remember, short & sweet please)" required></textarea>
+            </div>
+          </div>
+          <div class="np-submit-wrap">
+            <button type="submit" class="np-btn-submit" id="submitBtn">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="np-footer">
+      <div class="container np-footer-grid">
+        <div class="np-footer-col">
+          <h3 class="np-footer-logo">Bryan Nguyen</h3>
+          <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
+        </div>
+        <div class="np-footer-col">
+          <h4 id="footer-nav-title">NAVIGATE</h4>
+          <div class="np-footer-links">
+            <a onclick="switchPage('about')" id="f-about">About Me</a>
+            <a onclick="switchPage('resume')" id="f-resume">Resume</a>
+            <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
+            <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
+            <a onclick="switchPage('contact')" id="f-contact">Contact</a>
+          </div>
+        </div>
+        <div class="np-footer-col">
+          <h4 id="footer-contact-title">DIRECT CONTACT</h4>
+          <div class="np-footer-links">
+            <a href="tel:0838673639">📞 0838 673 639</a>
+            <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
+            <a>📍 Ho Chi Minh City, Vietnam</a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER CHUNG DƯỚI CÙNG -->
-  <footer class="np-footer">
-    <div class="container np-footer-grid">
-      <div class="np-footer-col">
-        <h3 class="np-footer-logo">Bryan Nguyen</h3>
-        <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
-      </div>
-      <div class="np-footer-col">
-        <h4 id="footer-nav-title">NAVIGATE</h4>
-        <div class="np-footer-links">
-          <a onclick="switchPage('about')" id="f-about">About Me</a>
-          <a onclick="switchPage('resume')" id="f-resume">Resume</a>
-          <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
-          <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
-          <a onclick="switchPage('contact')" id="f-contact">Contact</a>
-        </div>
-      </div>
-      <div class="np-footer-col">
-        <h4 id="footer-contact-title">DIRECT CONTACT</h4>
-        <div class="np-footer-links">
-          <a href="tel:0838673639">📞 0838 673 639</a>
-          <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
-          <a>📍 Ho Chi Minh City, Vietnam</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <!-- FLOATING WIDGET BÊN TRÁI -->
   <div class="floating-widget">
@@ -1132,6 +1176,11 @@
       document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
 
+      if (pageKey === 'contact') {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        return; 
+      }
+
       const targetSection = document.getElementById(`page-${pageKey}`);
       if (targetSection) {
         targetSection.classList.add('active');
@@ -1139,7 +1188,7 @@
       }
 
       const tabs = document.querySelectorAll('.nav-tab');
-      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst'];
       const activeIdx = keys.indexOf(pageKey);
       if (activeIdx !== -1 && tabs[activeIdx]) {
         tabs[activeIdx].classList.add('active');
@@ -1197,7 +1246,6 @@
       document.getElementById('tab-resume').innerText = data.nav.resume;
       document.getElementById('tab-bd').innerText = data.nav.bd;
       document.getElementById('tab-da').innerText = data.nav.da;
-      document.getElementById('tab-contact').innerText = data.nav.contact;
 
       // HERO
       document.getElementById('hero-name').innerText = data.profile.name;
@@ -1380,9 +1428,8 @@
       }
 
       // CONTACT & FOOTER
-      document.getElementById('contact-heading-tab').innerText = data.labels.contactHeading;
-      document.getElementById('contact-sub-tab').innerText = data.labels.contactSub;
-      
+      document.getElementById('contact-heading').innerText = data.labels.contactHeading;
+      document.getElementById('contact-sub').innerText = data.labels.contactSub;
       document.getElementById('lbl-fname').innerText = data.labels.firstName;
       document.getElementById('lbl-lname').innerText = data.labels.lastName;
       document.getElementById('lbl-email').innerText = data.labels.emailAddr;
