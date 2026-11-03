@@ -7,7 +7,6 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- ĐÃ CẬP NHẬT FONT TIẾNG VIỆT CHO PLUS JAKARTA SANS -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&subset=vietnamese&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -24,7 +23,7 @@
       --border: rgba(226, 232, 240, 0.8);
       --np-dark: #0f172a;
       
-      /* CẬP NHẬT HIỆU ỨNG ĐỔ BÓNG (DROP SHADOW) CHO CÁC KHỐI */
+      /* HIỆU ỨNG ĐỔ BÓNG (DROP SHADOW) CHO CÁC KHỐI */
       --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
       --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
@@ -280,7 +279,7 @@
       color: var(--text-main);
       backdrop-filter: blur(8px);
       transition: all 0.25s ease;
-      box-shadow: var(--shadow-sm); /* Thêm shadow cho badge */
+      box-shadow: var(--shadow-sm); 
     }
     .contact-badge:hover {
       background: #ffffff;
@@ -362,12 +361,7 @@
       margin-bottom: 20px;
       color: var(--primary);
     }
-    /* SVG ICON STYLE TẠI ABOUT SECTION */
-    .bento-icon-wrap svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
+    .bento-icon-wrap svg { width: 20px; height: 20px; fill: currentColor; }
 
     .block-heading {
       font-family: 'Sora', sans-serif;
@@ -396,12 +390,7 @@
       border-color: var(--primary-light);
     }
 
-    .skill-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
+    .skill-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
     .skill-card-icon {
       width: 36px;
       height: 36px;
@@ -477,7 +466,6 @@
     .timeline-desc { list-style: disc; padding-left: 20px; font-size: 0.92rem; color: #475569; line-height: 1.7; }
     .timeline-desc li { margin-bottom: 8px; }
     
-    /* Hình ảnh bằng cấp (Có tính năng Lightbox) */
     .cert-thumb {
       max-width: 280px;
       width: 100%;
@@ -520,6 +508,44 @@
     }
     .bd-subcontent { display: none; }
     .bd-subcontent.active { display: block; animation: slideUpFade 0.3s ease; }
+
+    /* KHỐI PARTNER LOGO (CHỈ XUẤT HIỆN Ở PAYOO TAB) */
+    .partner-logo-section {
+      background: var(--card-bg);
+      border: 1px solid rgba(226, 232, 240, 0.6);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .partner-logo-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .partner-logo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .partner-logo-grid img {
+      max-height: 40px;
+      max-width: 120px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.7);
+      transition: all 0.3s ease;
+    }
+    .partner-logo-grid img:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
+    }
 
     /* METRIC GRID */
     .metric-grid {
@@ -682,7 +708,7 @@
     }
     .np-footer-links a:hover { color: #ffffff; }
 
-    /* LIGHTBOX CSS BẬT ẢNH POP-UP */
+    /* LIGHTBOX POP-UP CSS */
     .lightbox-modal {
       display: none;
       position: fixed;
@@ -797,6 +823,11 @@
       .bento-card { padding: 24px; border-radius: var(--radius-lg); }
       .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 20px 24px; }
       .company-title { font-size: 1.05rem; }
+      
+      .partner-logo-section { padding: 20px; }
+      .partner-logo-grid { gap: 16px; }
+      .partner-logo-grid img { max-height: 32px; max-width: 90px; }
+
       .subnav-tabs { flex-wrap: wrap; }
       .metric-grid { grid-template-columns: 1fr; gap: 1px; }
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
@@ -941,6 +972,21 @@
             <div class="metric-grid" id="bd-payoo-metrics"></div>
           </div>
 
+          <!-- BỔ SUNG BAR LOGO ĐỐI TÁC CỦA PAYOO TẠI ĐÂY -->
+          <div class="partner-logo-section">
+            <div class="partner-logo-title" id="payoo-partner-title">Key Enterprise Partners</div>
+            <div class="partner-logo-grid">
+              <img src="Việt thanh Logo.jpg" alt="Việt Thanh" onerror="this.style.display='none'">
+              <img src="DYM Logo.jpg" alt="DYM Medical Center" onerror="this.style.display='none'">
+              <img src="TDP logo.jpg" alt="TDP IELTS" onerror="this.style.display='none'">
+              <img src="Jalux Logo.jpg" alt="Jalux Taseco" onerror="this.style.display='none'">
+              <img src="PetJoy Logo.jpg" alt="Pet Joy" onerror="this.style.display='none'">
+              <img src="Utage logo.jpg" alt="Utage" onerror="this.style.display='none'">
+              <img src="British Logo.jpg" alt="British Academy" onerror="this.style.display='none'">
+              <img src="Highlands logo.png" alt="Highlands Coffee" onerror="this.style.display='none'">
+            </div>
+          </div>
+
           <h3 class="block-heading" id="bd-payoo-proj-title">Key Merchant Solutions & Projects</h3>
           <div class="case-grid" id="bd-payoo-projects"></div>
         </div>
@@ -1025,7 +1071,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER CHUNG DƯỚI CÙNG -->
   <footer class="np-footer">
     <div class="container np-footer-grid">
       <div class="np-footer-col">
@@ -1053,7 +1099,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING WIDGET -->
+  <!-- FLOATING WIDGET BÊN TRÁI -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn zalo-btn" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width: 22px; height: 22px;">
@@ -1161,7 +1207,17 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
-      // BENTO GRID MAPPING (THAY THẾ EMOJI BẰNG SVG TINH GỌN)
+      // SOCIAL LINKS
+      document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
+      if (data.profile.social && data.profile.social.linkedin) {
+        document.getElementById('float-linkedin').href = data.profile.social.linkedin;
+      }
+      if (data.profile.social && data.profile.social.facebook) {
+        document.getElementById('float-facebook').href = data.profile.social.facebook;
+      }
+      document.getElementById('float-email').href = `mailto:${data.profile.email}`;
+
+      // BENTO GRID MAPPING
       document.getElementById('about-eyebrow').innerText = data.labels.overview;
       if(data.about && data.about.length >= 3) {
         document.getElementById('about-container-bento').innerHTML = `
@@ -1198,7 +1254,6 @@
       document.getElementById('resume-edu-title').innerText = data.labels.academic;
       document.getElementById('resume-cert-title').innerText = data.labels.credentials;
 
-      // THAY EMOJI BẰNG SVG TRONG PHẦN SKILLS
       document.getElementById('resume-skills-container').innerHTML = data.skills.map((s, idx) => {
         let iconSvg = '';
         if (idx === 0) {
@@ -1272,6 +1327,8 @@
       if (data.businessDevelopment && data.businessDevelopment.payoo) {
         const payooData = data.businessDevelopment.payoo;
         document.getElementById('bd-payoo-summary').innerText = payooData.summary;
+        document.getElementById('payoo-partner-title').innerText = currentLang === 'vi' ? 'Đối tác & Khách hàng Tiêu biểu' : 'Key Enterprise Partners';
+        
         if (payooData.metrics) {
           document.getElementById('bd-payoo-metrics').innerHTML = payooData.metrics.map(m => `
             <div class="metric-item">
@@ -1295,6 +1352,7 @@
       if (data.businessDevelopment && data.businessDevelopment.proscan) {
         const proscanData = data.businessDevelopment.proscan;
         document.getElementById('bd-proscan-summary').innerText = proscanData.summary;
+        
         document.getElementById('bd-proscan-projects').innerHTML = proscanData.projects.map(p => `
           <div class="case-card">
             <span class="case-tag">${p.tag}</span>
