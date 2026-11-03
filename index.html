@@ -23,7 +23,6 @@
       --border: rgba(226, 232, 240, 0.8);
       --np-dark: #0f172a;
       
-      /* HIỆU ỨNG ĐỔ BÓNG (DROP SHADOW) CHO CÁC KHỐI */
       --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
       --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
       --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
@@ -179,6 +178,8 @@
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
       white-space: nowrap;
+      cursor: pointer;
+      border: none;
     }
     .btn-primary:hover {
       background: var(--primary-hover);
@@ -610,7 +611,7 @@
     }
     .case-card p { font-size: 0.92rem; color: #475569; line-height: 1.65; margin-bottom: 24px; flex-grow: 1; }
 
-    /* LIÊN HỆ & FOOTER (CHUNG DƯỚI CÙNG) */
+    /* LIÊN HỆ & FOOTER CHUNG DƯỚI CÙNG */
     .contact-wrapper {
       background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
       padding-top: 60px;
@@ -671,6 +672,15 @@
       background-color: var(--primary-light);
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    /* Thêm style khi gửi thành công */
+    .form-success-msg {
+      display: none;
+      color: #10b981;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 700;
+      font-family: 'Sora', sans-serif;
     }
 
     .np-footer {
@@ -841,13 +851,15 @@
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
       
+      /* Form Contact Responsive */
       .contact-wrapper { padding-top: 40px; margin-top: 20px; }
       .np-contact-hero { padding: 30px 16px 50px; }
-      .np-contact-title { font-size: 2.4rem; }
+      .np-contact-title { font-size: 2.2rem; }
       .np-form-row { flex-direction: column; gap: 24px; margin-bottom: 24px; }
       .np-submit-wrap { text-align: center; }
       .np-btn-submit { width: 100%; padding: 14px 20px; }
       
+      /* Footer Mobile */
       .np-footer { padding: 0 20px 40px; }
       .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; padding-top: 40px; }
       .np-footer-col:first-child { grid-column: span 2; text-align: center; }
@@ -857,6 +869,7 @@
       .np-footer-links { gap: 10px; }
       .np-footer-links a { font-size: 0.85rem; }
       
+      /* Floating Widget Mobile */
       .floating-widget { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { width: 40px; height: 40px; }
       .float-btn svg { width: 18px; height: 18px; }
@@ -1044,44 +1057,49 @@
       </div>
     </section>
 
-    <!-- 5. CONTACT (CHỈNH LẠI CẤU TRÚC HIỂN THỊ ĐỘC LẬP) -->
+    <!-- 5. CONTACT (CHỈNH LẠI CẤU TRÚC HIỂN THỊ TRONG TAB, LOẠI BỎ MÀU NỀN TỐI) -->
     <section id="page-contact" class="page-section">
       <div class="container">
         <div style="padding: 20px 0;">
-          <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">How can I help?</h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Do you have a question or are you interested in working with me?</p>
+          <!-- Tiêu đề mới thu hút HR / Headhunter -->
+          <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">Let's Build Strategic Value</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Please leave your details if you are looking for a specialized B2B & FinTech talent.</p>
           
           <div class="bento-card" style="max-width: 800px; padding: 40px;">
-            <form class="np-form" style="max-width: 100%;">
+            <!-- Gắn ID cho form để xử lý Javascript submit -->
+            <form id="hr-contact-form" class="np-form" style="max-width: 100%;">
               <div class="np-form-row">
                 <div class="np-input-group">
                   <label id="lbl-fname" style="color: var(--text-muted);">First Name</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <input type="text" id="fname" name="fname" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
                 </div>
                 <div class="np-input-group">
                   <label id="lbl-lname" style="color: var(--text-muted);">Last Name</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <input type="text" id="lname" name="lname" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
                 </div>
               </div>
               <div class="np-form-row">
                 <div class="np-input-group">
                   <label id="lbl-email" style="color: var(--text-muted);">Email Address</label>
-                  <input type="email" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <input type="email" id="email" name="email" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
                 </div>
                 <div class="np-input-group">
-                  <label id="lbl-subject" style="color: var(--text-muted);">Subject / Company</label>
-                  <input type="text" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <label id="lbl-subject" style="color: var(--text-muted);">Company / Role</label>
+                  <input type="text" id="subject" name="subject" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
                 </div>
               </div>
               <div class="np-form-row">
                 <div class="np-input-group" style="width: 100%;">
                   <label id="lbl-msg" style="color: var(--text-muted);">Message</label>
-                  <textarea class="np-input" id="msg-ph" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Message (remember, short & sweet please)" required></textarea>
+                  <!-- Thay đổi Placeholder chuyên nghiệp hơn -->
+                  <textarea id="msg" name="msg" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Share a brief JD or collaboration opportunity..." required></textarea>
                 </div>
               </div>
               <div class="np-submit-wrap" style="text-align: left;">
                 <button type="submit" class="btn-primary" id="submitBtn" style="padding: 12px 30px; font-size: 0.95rem; border-radius: 8px;">SUBMIT MESSAGE</button>
               </div>
+              <!-- Dòng thông báo thành công sau khi gửi form -->
+              <p id="form-success-msg" class="form-success-msg"></p>
             </form>
           </div>
         </div>
@@ -1089,7 +1107,7 @@
     </section>
   </main>
 
-  <!-- FOOTER CHUNG DƯỚI CÙNG -->
+  <!-- FOOTER CHUNG DƯỚI CÙNG (DÙNG CHUNG CHO MỌI TRANG) -->
   <footer class="np-footer">
     <div class="container np-footer-grid">
       <div class="np-footer-col">
@@ -1157,7 +1175,6 @@
       }
 
       const tabs = document.querySelectorAll('.nav-tab');
-      // Đảm bảo mảng keys CÓ chứa 'contact'
       const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
       const activeIdx = keys.indexOf(pageKey);
       if (activeIdx !== -1 && tabs[activeIdx]) {
@@ -1236,7 +1253,7 @@
       }
       document.getElementById('float-email').href = `mailto:${data.profile.email}`;
 
-      // BENTO GRID MAPPING
+      // BENTO GRID MAPPING 
       document.getElementById('about-eyebrow').innerText = data.labels.overview;
       if(data.about && data.about.length >= 3) {
         document.getElementById('about-container-bento').innerHTML = `
@@ -1398,18 +1415,28 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER
-      document.getElementById('contact-heading-tab').innerText = data.labels.contactHeading;
-      document.getElementById('contact-sub-tab').innerText = data.labels.contactSub;
+      // CONTACT DYNAMIC UPDATE (Tiêu đề thay đổi theo ngôn ngữ để thu hút HR)
+      if (currentLang === 'vi') {
+        document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
+        document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
+        document.getElementById('lbl-subject').innerText = "Công ty / Vị trí tuyển dụng";
+        document.getElementById('msg-ph').placeholder = "Chia sẻ JD hoặc mô tả ngắn gọn về cơ hội hợp tác...";
+        document.getElementById('form-success-msg').innerText = "Gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.";
+      } else {
+        document.getElementById('contact-heading-tab').innerText = "Let's Build Strategic Value";
+        document.getElementById('contact-sub-tab').innerText = "Please leave your details if you are looking for a specialized B2B & FinTech talent.";
+        document.getElementById('lbl-subject').innerText = "Company / Role";
+        document.getElementById('msg-ph').placeholder = "Share a brief JD or collaboration opportunity...";
+        document.getElementById('form-success-msg').innerText = "Message sent successfully! I'll get back to you soon.";
+      }
       
       document.getElementById('lbl-fname').innerText = data.labels.firstName;
       document.getElementById('lbl-lname').innerText = data.labels.lastName;
       document.getElementById('lbl-email').innerText = data.labels.emailAddr;
-      document.getElementById('lbl-subject').innerText = data.labels.subject;
       document.getElementById('lbl-msg').innerText = data.labels.message;
-      document.getElementById('msg-ph').placeholder = data.labels.message;
       document.getElementById('submitBtn').innerText = data.labels.sendBtn;
       
+      // FOOTER
       document.getElementById('footer-nav-title').innerText = data.labels.footerNavigate;
       document.getElementById('footer-contact-title').innerText = data.labels.footerContact;
       document.getElementById('f-about').innerText = data.nav.about;
@@ -1418,6 +1445,53 @@
       document.getElementById('f-da').innerText = data.nav.da;
       document.getElementById('f-contact').innerText = data.nav.contact;
     }
+
+    /* ==============================================================
+       XỬ LÝ SUBMIT FORM VÀ GỬI DATA VỀ GOOGLE SHEETS
+       ============================================================== */
+    // ĐÂY LÀ CHỖ BẠN CẦN THAY THẾ BẰNG WEB APP URL CỦA GOOGLE APPS SCRIPT
+    const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+    document.getElementById("hr-contact-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Chặn hành vi tải lại trang mặc định
+      
+      const submitBtn = document.getElementById("submitBtn");
+      const successMsg = document.getElementById("form-success-msg");
+      
+      // Đổi trạng thái nút thành Đang gửi
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = currentLang === 'vi' ? 'Đang gửi...' : 'Sending...';
+      submitBtn.disabled = true;
+
+      // Lấy dữ liệu từ form
+      const formData = new FormData();
+      formData.append("fname", document.getElementById("fname").value);
+      formData.append("lname", document.getElementById("lname").value);
+      formData.append("email", document.getElementById("email").value);
+      formData.append("subject", document.getElementById("subject").value);
+      formData.append("msg", document.getElementById("msg").value);
+
+      // Gửi dữ liệu đi
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        // Hiện thông báo thành công
+        successMsg.style.display = "block";
+        document.getElementById("hr-contact-form").reset(); // Xóa trắng form
+        setTimeout(() => { successMsg.style.display = "none"; }, 5000); // Ẩn sau 5s
+      })
+      .catch(error => {
+        alert(currentLang === 'vi' ? "Đã có lỗi xảy ra. Vui lòng thử lại sau!" : "An error occurred. Please try again later!");
+        console.error("Error submitting form!", error);
+      })
+      .finally(() => {
+        // Trả lại trạng thái nút ban đầu
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
 
     const scrollProgress = document.getElementById("scrollProgress");
     const mainHeader = document.getElementById("main-header");
