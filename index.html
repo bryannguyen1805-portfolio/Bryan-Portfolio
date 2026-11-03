@@ -59,7 +59,9 @@
     body.lang-en .np-contact-title, 
     body.lang-en .company-title,
     body.lang-en .contact-social-title,
-    body.lang-en .footer-group-title {
+    body.lang-en .footer-group-title,
+    body.lang-en .nav-logo-text,
+    body.lang-en .footer-logo-text {
       font-family: 'Sora', sans-serif;
     }
 
@@ -75,7 +77,9 @@
     body.lang-vi .case-card h3,
     body.lang-vi .skill-card-title,
     body.lang-vi .contact-social-title,
-    body.lang-vi .footer-group-title {
+    body.lang-vi .footer-group-title,
+    body.lang-vi .nav-logo-text,
+    body.lang-vi .footer-logo-text {
       font-family: 'Be Vietnam Pro', sans-serif !important;
       font-weight: 700;
     }
@@ -95,7 +99,7 @@
       z-index: 1001;
     }
 
-    /* HEADER */
+    /* HEADER & CỤM LOGO DẠNG NGANG */
     header {
       position: sticky;
       top: 0;
@@ -113,17 +117,32 @@
     .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 16px; }
     .nav-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
     
-    .nav-logo-img {
-      height: 38px;
-      max-height: 42px;
-      width: auto;
-      object-fit: contain;
+    /* BRAND LOCKUP HEADER */
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       cursor: pointer;
+      user-select: none;
+    }
+    .nav-logo-badge {
+      height: 38px;
+      width: 38px;
+      object-fit: cover;
+      border-radius: 9px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       display: block;
       transition: transform 0.25s ease;
     }
-    .nav-logo-img:hover {
+    .nav-brand:hover .nav-logo-badge {
       transform: scale(1.05);
+    }
+    .nav-logo-text {
+      font-size: 1.18rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--np-dark);
+      white-space: nowrap;
     }
 
     .status-badge {
@@ -753,7 +772,7 @@
       transform: translateY(-4px) scale(1.12);
     }
 
-    /* FOOTER */
+    /* FOOTER & CỤM LOGO FOOTER DẠNG NGANG */
     .np-footer {
       background-color: #0b1329;
       color: #ffffff;
@@ -767,18 +786,32 @@
       gap: 40px; 
     }
     
-    .footer-logo-img {
-      height: 42px;
-      max-height: 48px;
-      width: auto;
-      object-fit: contain;
+    /* BRAND LOCKUP FOOTER */
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       cursor: pointer;
-      display: block;
+      user-select: none;
       margin-bottom: 14px;
+    }
+    .footer-logo-badge {
+      height: 42px;
+      width: 42px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
       transition: transform 0.25s ease;
     }
-    .footer-logo-img:hover {
+    .footer-brand:hover .footer-logo-badge {
       transform: scale(1.05);
+    }
+    .footer-logo-text {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      white-space: nowrap;
     }
 
     .np-footer-desc {
@@ -943,8 +976,10 @@
       
       .nav-wrap { flex-direction: column; align-items: stretch; padding: 12px 0; gap: 12px; }
       .nav-top-row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-      .nav-logo-img { height: 32px; max-height: 36px; }
-      .footer-logo-img { height: 34px; max-height: 38px; }
+      .nav-logo-badge { height: 32px; width: 32px; }
+      .nav-logo-text { font-size: 1.05rem; }
+      .footer-logo-badge { height: 36px; width: 36px; }
+      .footer-logo-text { font-size: 1.35rem; }
       .status-badge { display: none; }
       .btn-primary { padding: 6px 14px; font-size: 0.78rem; }
       .lang-btn { padding: 3px 8px; font-size: 0.7rem; }
@@ -1014,8 +1049,14 @@
     <div class="container nav-wrap">
       <div class="nav-top-row">
         <div class="nav-left">
-          <!-- LOGO MỚI TRÊN HEADER ĐÃ CẬP NHẬT TÊN FILE BRYAN-LOGO-2.PNG -->
-          <img src="bryan-logo-2.png" alt="Bryan Nguyen" class="nav-logo-img" onclick="switchPage('about')">
+          <!-- CỤM LOGO DẠNG NGANG HEADER (ICON + TEXT) -->
+          <div class="nav-brand" onclick="switchPage('about')">
+            <img src="bryan-logo-2.png" 
+                 alt="Bryan Nguyen Logo" 
+                 class="nav-logo-badge" 
+                 onerror="if(!this.dataset.t1){this.dataset.t1=1; this.src='Bryan-logo-2.png';} else if(!this.dataset.t2){this.dataset.t2=1; this.src='Bryan-logo%202.png';}">
+            <span class="nav-logo-text">Bryan Nguyen</span>
+          </div>
           <span class="status-badge"><span class="status-dot"></span> <span id="status-text">Open to Connect</span></span>
         </div>
         
@@ -1141,7 +1182,7 @@
               <img src="Jalux Logo.jpg" alt="Jalux Taseco" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="PetJoy Logo.jpg" alt="Pet Joy" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="Utage logo.jpg" alt="Utage" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <img src="British Logo.jpg" alt="British Academy" onerror="this.style.display='none'">
+              <img src="British Logo.jpg" alt="British Academy" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="Highlands logo.png" alt="Highlands Coffee" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
           </div>
@@ -1258,8 +1299,14 @@
     <div class="container">
       <div class="np-footer-grid">
         <div class="np-footer-brand-col">
-          <!-- LOGO MỚI DƯỚI FOOTER ĐÃ CẬP NHẬT TÊN FILE BRYAN-LOGO-2.PNG -->
-          <img src="bryan-logo-2.png" alt="Bryan Nguyen" class="footer-logo-img" onclick="switchPage('about')">
+          <!-- CỤM LOGO DẠNG NGANG FOOTER (ICON + TEXT) -->
+          <div class="footer-brand" onclick="switchPage('about')">
+            <img src="bryan-logo-2.png" 
+                 alt="Bryan Nguyen Logo" 
+                 class="footer-logo-badge" 
+                 onerror="if(!this.dataset.t1){this.dataset.t1=1; this.src='Bryan-logo-2.png';} else if(!this.dataset.t2){this.dataset.t2=1; this.src='Bryan-logo%202.png';}">
+            <span class="footer-logo-text">Bryan Nguyen</span>
+          </div>
           <p class="np-footer-desc">Enterprise FinTech &<br>B2B Strategy.</p>
         </div>
 
@@ -1335,7 +1382,7 @@
       <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#FFFFFF" d="M13.5 19v-6.4h2.1l.3-2.5h-2.4V8.5c0-.7.2-1.2 1.3-1.2h1.4V5.1c-.2 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v1.9H8.5v2.5h2.1V19h2.9z"/></svg>
     </a>
     <a href="mailto:quangtritc1805@gmail.com" class="float-btn mail-btn" id="float-email" title="Gửi Email">
-      <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#4285F4" d="M2.5 6.5v11c0 .8.7 1.5 1.5 1.5h3v-8.5L2.5 6.5z"/><path fill="#34A853" d="M17 19h3c.8 0 1.5-.7 1.5-1.5v-11L17 10.5V19z"/><path fill="#EA4335" d="M17 10.5V5.2c0-1-.9-1.7-1.9-1.2L12 6.5 8.9 4c-1-.5-1.9.2-1.9 1.2v5.3l5 3.8 5-3.8z"/><path fill="#FBBC05" d="M2.5 6.5L7 10.5V5.2L4.6 3.4c-.9-.7-2.1-.1-2.1 1.1v2z"/><path fill="#C5221F" d="M21.5 4.5c0-1.2-1.2-1.8-2.1-1.1L17 5.2v5.3l4.5-4V4.5z"/></svg>
+      <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#4285F4" d="M2.5 6.5v11c0 .8.7 1.5 1.5 1.5h3v-8.5L2.5 6.5z"/><path fill="#34A853" d="M17 19h3c.8 0 1.5-.7 1.5-1.5v-11L17 10.5V19z"/><path fill="#EA4335" d="M17 10.5V5.2c0-1-.9-1.7-1.9-1.2L12 6.5 8.9 4c-1-.5-1.9.2-1.9 1.2v5.3l5 3.8 5-3.8z"/><path fill="#FBBC05" d="M2.5 6.5L7 10.5V5.2L4.6 3.4c-.9-.7-2.1-.1-2.1 1.1v2z"/><path fill="#C5221F" d="M21.5 4.5c0-1.2-1.8-2.1-1.1L17 5.2v5.3l4.5-4V4.5z"/></svg>
     </a>
     <button class="float-btn btn-top" id="backToTopBtn" title="Lên đầu trang">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
@@ -1751,7 +1798,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    fetch('./data.json?v=1.0.4')
+    fetch('./data.json?v=1.0.5')
       .then(res => res.json())
       .then(data => {
         globalData = data;
