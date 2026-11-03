@@ -510,7 +510,7 @@
     .bd-subcontent { display: none; }
     .bd-subcontent.active { display: block; animation: slideUpFade 0.3s ease; }
 
-    /* PARTNER LOGO SECTION */
+    /* PARTNER LOGO SECTION (HIỂN THỊ MÀU GỐC 100%) */
     .partner-logo-section {
       background: var(--card-bg);
       border: 1px solid rgba(226, 232, 240, 0.6);
@@ -534,18 +534,18 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 32px;
     }
     .partner-logo-grid img {
-      max-height: 40px;
-      max-width: 120px;
+      max-height: 42px;
+      max-width: 130px;
       object-fit: contain;
-      filter: grayscale(100%) opacity(0.7);
-      transition: all 0.3s ease;
+      filter: none; /* Bỏ trắng đen, hiển thị màu gốc chuẩn */
+      opacity: 1;   /* Đậm màu, sắc nét */
+      transition: transform 0.25s ease;
     }
     .partner-logo-grid img:hover {
-      filter: grayscale(0%) opacity(1);
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     /* METRIC GRID */
