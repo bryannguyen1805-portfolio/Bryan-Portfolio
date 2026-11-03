@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title id="page-title">Bryan Nguyen | Enterprise Solutions & Analytics</title>
   
+  <!-- TỐI ƯU KẾT NỐI FONT (PRECONNECT & DISPLAY=SWAP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -221,11 +222,11 @@
     .page-section {
       display: none;
       padding: 40px 0 60px;
-      animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: slideUpFade 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .page-section.active { display: block; }
     @keyframes slideUpFade {
-      from { opacity: 0; transform: translateY(12px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
@@ -263,9 +264,9 @@
       object-position: top center;
       border-radius: 40px 40px 40px 120px; 
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
-    .hero-img:hover { transform: translateY(-8px) scale(1.02); }
+    .hero-img:hover { transform: translateY(-6px) scale(1.02); }
 
     .hero-eyebrow {
       display: inline-flex;
@@ -751,11 +752,9 @@
       transform: translateY(-4px) scale(1.12);
     }
 
-    /* ==========================================================
-       FOOTER ĐƯỢC THIẾT KẾ LẠI THEO SCREENSHOT YÊU CẦU
-       ========================================================== */
+    /* FOOTER */
     .np-footer {
-      background-color: #0b1329; /* Tông màu xanh đen navy đậm sang trọng */
+      background-color: #0b1329;
       color: #ffffff;
       padding: 64px 24px 36px;
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -983,7 +982,6 @@
       .contact-social-divider { margin: 12px auto 26px; }
       .contact-social-icons { gap: 24px; }
       
-      /* Footer Mobile */
       .np-footer { padding: 40px 20px 30px; }
       .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
       .np-footer-brand-col { grid-column: span 2; }
@@ -1057,7 +1055,8 @@
           
           <div class="hero-img-col">
             <div class="hero-img-glow"></div>
-            <img id="avatar" src="avatar.png" alt="Bryan Nguyen" class="hero-img">
+            <!-- LAZY LOADING CHO ẢNH HERO -->
+            <img id="avatar" src="avatar.png" alt="Bryan Nguyen" class="hero-img" loading="eager" decoding="async">
           </div>
         </div>
 
@@ -1102,10 +1101,10 @@
 
         <div class="subnav-tabs">
           <button class="subnav-btn active" onclick="switchBDTab('payoo')">
-            <img src="payoo.jpg" alt="Payoo"> Payoo (VietUnion)
+            <img src="payoo.jpg" alt="Payoo" loading="lazy" decoding="async"> Payoo (VietUnion)
           </button>
           <button class="subnav-btn" onclick="switchBDTab('proscan')">
-            <img src="proscan.jpeg" alt="ProScan"> ProScan Global
+            <img src="proscan.jpeg" alt="ProScan" loading="lazy" decoding="async"> ProScan Global
           </button>
         </div>
 
@@ -1113,7 +1112,7 @@
         <div id="bd-payoo" class="bd-subcontent active">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
-              <img src="payoo.jpg" alt="Payoo" class="company-logo" style="width: 52px; height: 52px;">
+              <img src="payoo.jpg" alt="Payoo" class="company-logo" style="width: 52px; height: 52px;" loading="lazy" decoding="async">
               <div>
                 <h3 class="company-title" style="font-size: 1.3rem;">Payoo (VietUnion)</h3>
                 <span class="timeline-badge" id="bd-payoo-period" style="background: var(--primary-light);">Oct 2025 – Present</span>
@@ -1123,17 +1122,18 @@
             <div class="metric-grid" id="bd-payoo-metrics"></div>
           </div>
 
+          <!-- LOGO ĐỐI TÁC: ĐÃ BẬT LAZY LOADING VÀ DECODING ASYNC -->
           <div class="partner-logo-section">
             <div class="partner-logo-title" id="payoo-partner-title">Key Enterprise Partners</div>
             <div class="partner-logo-grid">
-              <img src="viet-thanh-logo.jpg" alt="Việt Thanh" onerror="this.onerror=null; this.src='Việt%20thanh%20Logo.jpg';">
-              <img src="DYM Logo.jpg" alt="DYM Medical Center" onerror="this.style.display='none'">
-              <img src="TDP logo.jpg" alt="TDP IELTS" onerror="this.style.display='none'">
-              <img src="Jalux Logo.jpg" alt="Jalux Taseco" onerror="this.style.display='none'">
-              <img src="PetJoy Logo.jpg" alt="Pet Joy" onerror="this.style.display='none'">
-              <img src="Utage logo.jpg" alt="Utage" onerror="this.style.display='none'">
-              <img src="British Logo.jpg" alt="British Academy" onerror="this.style.display='none'">
-              <img src="Highlands logo.png" alt="Highlands Coffee" onerror="this.style.display='none'">
+              <img src="viet-thanh-logo.jpg" alt="Việt Thanh" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Việt%20thanh%20Logo.jpg';">
+              <img src="DYM Logo.jpg" alt="DYM Medical Center" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="TDP logo.jpg" alt="TDP IELTS" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="Jalux Logo.jpg" alt="Jalux Taseco" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="PetJoy Logo.jpg" alt="Pet Joy" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="Utage logo.jpg" alt="Utage" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="British Logo.jpg" alt="British Academy" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="Highlands logo.png" alt="Highlands Coffee" loading="lazy" decoding="async" onerror="this.style.display='none'">
             </div>
           </div>
 
@@ -1145,7 +1145,7 @@
         <div id="bd-proscan" class="bd-subcontent">
           <div class="bento-card" style="margin-bottom: 30px;">
             <div class="company-header" style="margin-bottom: 16px;">
-              <img src="proscan.jpeg" alt="ProScan" class="company-logo" style="width: 52px; height: 52px;">
+              <img src="proscan.jpeg" alt="ProScan" class="company-logo" style="width: 52px; height: 52px;" loading="lazy" decoding="async">
               <div>
                 <h3 class="company-title" style="font-size: 1.3rem;">ProScan Global</h3>
                 <span class="timeline-badge" id="bd-proscan-period" style="background: var(--primary-light);">Oct 2025 – Mar 2026</span>
@@ -1233,7 +1233,7 @@
               <svg viewBox="0 0 24 24" width="34" height="34"><path fill="#4285F4" d="M2.5 6.5v11c0 .8.7 1.5 1.5 1.5h3v-8.5L2.5 6.5z"/><path fill="#34A853" d="M17 19h3c.8 0 1.5-.7 1.5-1.5v-11L17 10.5V19z"/><path fill="#EA4335" d="M17 10.5V5.2c0-1-.9-1.7-1.9-1.2L12 6.5 8.9 4c-1-.5-1.9.2-1.9 1.2v5.3l5 3.8 5-3.8z"/><path fill="#FBBC05" d="M2.5 6.5L7 10.5V5.2L4.6 3.4c-.9-.7-2.1-.1-2.1 1.1v2z"/><path fill="#C5221F" d="M21.5 4.5c0-1.2-1.2-1.8-2.1-1.1L17 5.2v5.3l4.5-4V4.5z"/></svg>
             </a>
             <a href="https://zalo.me/0838673639" target="_blank" class="contact-social-icon" id="connect-zalo" title="Zalo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="34" height="34" style="display:block;border-radius:7px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="34" height="34" style="display:block;border-radius:7px;" loading="lazy" decoding="async">
             </a>
             <a href="https://www.instagram.com/bryannguyen1805/" target="_blank" class="contact-social-icon" id="connect-instagram" title="Instagram">
               <svg viewBox="0 0 24 24" width="34" height="34"><defs><linearGradient id="igGrad2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGrad2)"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="#FFFFFF" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="#FFFFFF"/><rect x="4.5" y="4.5" width="15" height="15" rx="4" fill="none" stroke="#FFFFFF" stroke-width="1.8"/></svg>
@@ -1244,19 +1244,15 @@
     </section>
   </main>
 
-  <!-- =======================================================
-       FOOTER THEO GIAO DIỆN MỚI (ĐÃ BỎ DÒNG CHUYÊN TRANG)
-       ======================================================= -->
+  <!-- FOOTER CHUNG DƯỚI CÙNG -->
   <footer class="np-footer">
     <div class="container">
       <div class="np-footer-grid">
-        <!-- Cột 1: Tên thương hiệu & Định vị -->
         <div class="np-footer-brand-col">
           <h3 class="np-footer-logo">Bryan Nguyen</h3>
           <p class="np-footer-desc">Enterprise FinTech &<br>B2B Strategy.</p>
         </div>
 
-        <!-- Cột 2: Điều hướng & Lĩnh vực -->
         <div>
           <div>
             <h4 class="footer-group-title" id="f-title-nav">ĐIỀU HƯỚNG</h4>
@@ -1274,7 +1270,6 @@
           </div>
         </div>
 
-        <!-- Cột 3: Hoạt động & Liên hệ -->
         <div>
           <div>
             <h4 class="footer-group-title" id="f-title-act">HOẠT ĐỘNG</h4>
@@ -1292,23 +1287,18 @@
           </div>
         </div>
 
-        <!-- Cột 4: Kết nối với tôi (4 nút tròn trắng biểu tượng tối giản) -->
         <div class="np-footer-connect-col">
           <h4 class="footer-group-title" id="f-title-connect">KẾT NỐI VỚI TÔI</h4>
           <div class="footer-social-row">
-            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" class="footer-circle-btn" title="LinkedIn">
               <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
             </a>
-            <!-- Facebook -->
             <a href="https://www.facebook.com/Tori1005" target="_blank" class="footer-circle-btn" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <!-- Email -->
             <a href="mailto:quangtritc1805@gmail.com" class="footer-circle-btn" title="Email">
               <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </a>
-            <!-- Zalo -->
             <a href="https://zalo.me/0838673639" target="_blank" class="footer-circle-btn" title="Zalo" style="font-family: 'Sora', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: -0.2px;">
               Zalo
             </a>
@@ -1316,7 +1306,6 @@
         </div>
       </div>
 
-      <!-- Dòng bản quyền và địa chỉ phía dưới đường kẻ ngang -->
       <div class="footer-bottom">
         <p id="f-bottom-copy">Copyright © 2026 Bryan Nguyen. All Rights Reserved.</p>
         <p id="f-bottom-addr">Địa chỉ: Thành phố Hồ Chí Minh, Việt Nam</p>
@@ -1324,10 +1313,10 @@
     </div>
   </footer>
 
-  <!-- FLOATING WIDGET GÓC PHẢI -->
+  <!-- FLOATING WIDGET -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn zalo-btn" id="float-zalo" title="Chat Zalo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" style="display:block;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" style="display:block;" loading="lazy">
     </a>
     <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" class="float-btn in-btn" id="float-linkedin" title="Kết nối LinkedIn">
       <svg viewBox="0 0 24 24" width="24" height="24"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#FFFFFF" d="M19 19h-2.8v-4.4c0-1.1-.02-2.4-1.5-2.4-1.5 0-1.7 1.2-1.7 2.4V19h-2.8V9.9h2.7v1.2h.04c.4-.7 1.3-1.5 2.7-1.5 2.9 0 3.4 1.9 3.4 4.4V19zM6.5 8.7a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2zm1.4 10.3H5.1V9.9h2.8V19z"/></svg>
@@ -1343,7 +1332,7 @@
     </button>
   </div>
 
-  <!-- LIGHTBOX MODAL ĐỂ XEM ẢNH -->
+  <!-- LIGHTBOX MODAL -->
   <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
@@ -1353,7 +1342,6 @@
     let globalData = null;
     let currentLang = localStorage.getItem('site_lang') || 'en';
 
-    /* ĐIỀU HƯỚNG TAB & TỰ ĐỘNG CẬP NHẬT URL HASH */
     function switchPage(pageKey, updateHash = true) {
       const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
       if (!keys.includes(pageKey)) return;
@@ -1456,7 +1444,6 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
-      // FLOATING & CONNECT SOCIAL LINKS
       document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
       document.getElementById('connect-zalo').href = `https://zalo.me/${data.profile.phone}`;
       
@@ -1536,7 +1523,7 @@
           <div><span class="timeline-badge">${e.period}</span></div>
           <div>
             <div class="company-header">
-              ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo">` : ''}
+              ${e.logoUrl ? `<img src="${e.logoUrl}" alt="${e.company}" class="company-logo" loading="lazy" decoding="async">` : ''}
               <h3 class="company-title">${e.company}</h3>
             </div>
             <div class="timeline-role">${e.role}</div>
@@ -1554,7 +1541,7 @@
             <h3 class="company-title" style="margin-bottom:3px;">${ed.school}</h3>
             <div class="timeline-role">${ed.degree}</div>
             ${ed.imageUrl ? `
-                <img src="${ed.imageUrl}" alt="${ed.degree}" class="cert-thumb zoomable-img" title="Click to enlarge" onclick="openLightbox('${ed.imageUrl}')">
+                <img src="${ed.imageUrl}" alt="${ed.degree}" class="cert-thumb zoomable-img" loading="lazy" decoding="async" title="Click to enlarge" onclick="openLightbox('${ed.imageUrl}')">
             ` : ''}
           </div>
         </div>
@@ -1569,7 +1556,7 @@
               <div class="timeline-role">${c.issuer}</div>
               <p style="font-size:0.86rem; color:#64748b;">${c.skills}</p>
               ${c.imageUrl ? `
-                  <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb zoomable-img" title="Click to enlarge" onclick="openLightbox('${c.imageUrl}')">
+                  <img src="${c.imageUrl}" alt="${c.name}" class="cert-thumb zoomable-img" loading="lazy" decoding="async" title="Click to enlarge" onclick="openLightbox('${c.imageUrl}')">
               ` : ''}
             </div>
           </div>
@@ -1634,7 +1621,7 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER DYNAMIC TRANSLATION
+      // DYNAMIC TRANSLATION
       if (currentLang === 'vi') {
         document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
         document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
@@ -1643,7 +1630,6 @@
         document.getElementById('form-success-msg').innerText = "Gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.";
         document.getElementById('social-heading').innerText = "Hoặc kết nối với tôi qua...";
 
-        // Cập nhật Footer Tiếng Việt
         document.getElementById('f-title-nav').innerText = "ĐIỀU HƯỚNG";
         document.getElementById('f-link-about').innerText = "Giới thiệu";
         document.getElementById('f-link-resume').innerText = "Hồ sơ";
@@ -1665,7 +1651,6 @@
         document.getElementById('form-success-msg').innerText = "Message sent successfully! I'll get back to you soon.";
         document.getElementById('social-heading').innerText = "Or connect with me on...";
 
-        // Cập nhật Footer Tiếng Anh
         document.getElementById('f-title-nav').innerText = "NAVIGATION";
         document.getElementById('f-link-about').innerText = "About";
         document.getElementById('f-link-resume').innerText = "Resume";
@@ -1756,7 +1741,8 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    fetch('./data.json?v=' + Date.now())
+    /* NẠP DATA DÙNG CACHE CHUẨN VERSION THAY VÌ DATE.NOW() */
+    fetch('./data.json?v=1.0.2')
       .then(res => res.json())
       .then(data => {
         globalData = data;
