@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -60,8 +60,8 @@
     body.lang-en .company-title,
     body.lang-en .contact-social-title,
     body.lang-en .footer-group-title,
-    body.lang-en .nav-logo-text,
-    body.lang-en .footer-logo-text {
+    body.lang-en .nav-brand-text,
+    body.lang-en .footer-brand-text {
       font-family: 'Sora', sans-serif;
     }
 
@@ -78,10 +78,10 @@
     body.lang-vi .skill-card-title,
     body.lang-vi .contact-social-title,
     body.lang-vi .footer-group-title,
-    body.lang-vi .nav-logo-text,
-    body.lang-vi .footer-logo-text {
+    body.lang-vi .nav-brand-text,
+    body.lang-vi .footer-brand-text {
       font-family: 'Be Vietnam Pro', sans-serif !important;
-      font-weight: 700;
+      font-weight: 800;
     }
     
     a { color: inherit; text-decoration: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -99,7 +99,7 @@
       z-index: 1001;
     }
 
-    /* HEADER & CỤM LOGO DẠNG NGANG */
+    /* HEADER & BRAND TEMPLATE MỚI */
     header {
       position: sticky;
       top: 0;
@@ -117,7 +117,7 @@
     .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 16px; }
     .nav-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
     
-    /* BRAND LOCKUP HEADER */
+    /* BRAND LOCKUP HEADER (PHONG CÁCH HÌNH 2: ICON | BRYAN NGUYEN) */
     .nav-brand {
       display: flex;
       align-items: center;
@@ -129,20 +129,35 @@
       height: 38px;
       width: 38px;
       object-fit: cover;
-      border-radius: 9px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      object-position: top center;
       display: block;
       transition: transform 0.25s ease;
     }
     .nav-brand:hover .nav-logo-badge {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
-    .nav-logo-text {
-      font-size: 1.18rem;
+    .nav-brand-divider {
+      width: 2px;
+      height: 24px;
+      background: linear-gradient(180deg, #0284c7, #0052cc);
+      border-radius: 2px;
+      opacity: 0.85;
+    }
+    .nav-brand-text {
+      font-size: 1.25rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--np-dark);
-      white-space: nowrap;
+      letter-spacing: 0.6px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+    }
+    .brand-first {
+      color: var(--np-dark); /* Màu tối không trùng nền sáng */
+    }
+    .brand-last {
+      color: var(--primary); /* Màu xanh thương hiệu nổi bật */
     }
 
     .status-badge {
@@ -772,7 +787,7 @@
       transform: translateY(-4px) scale(1.12);
     }
 
-    /* FOOTER & CỤM LOGO FOOTER DẠNG NGANG */
+    /* FOOTER & CỤM LOGO FOOTER DẠNG NGANG (CHUẨN 100% THEO HÌNH 2) */
     .np-footer {
       background-color: #0b1329;
       color: #ffffff;
@@ -790,28 +805,44 @@
     .footer-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       cursor: pointer;
       user-select: none;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .footer-logo-badge {
-      height: 42px;
-      width: 42px;
+      height: 44px;
+      width: 44px;
       object-fit: cover;
-      border-radius: 10px;
+      object-position: top center;
       display: block;
       transition: transform 0.25s ease;
     }
     .footer-brand:hover .footer-logo-badge {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
-    .footer-logo-text {
-      font-size: 1.6rem;
+    .footer-brand-divider {
+      width: 2.5px;
+      height: 28px;
+      background: #0ea5e9;
+      border-radius: 2px;
+      opacity: 0.9;
+    }
+    .footer-brand-text {
+      font-size: 1.55rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #ffffff;
-      white-space: nowrap;
+      letter-spacing: 0.6px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-transform: uppercase;
+    }
+    .footer-brand-first {
+      color: #ffffff; /* Trắng chuẩn như hình 2 */
+    }
+    .footer-brand-last {
+      color: #0ea5e9; /* Xanh cyan/sky chuẩn như hình 2 */
     }
 
     .np-footer-desc {
@@ -977,9 +1008,11 @@
       .nav-wrap { flex-direction: column; align-items: stretch; padding: 12px 0; gap: 12px; }
       .nav-top-row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
       .nav-logo-badge { height: 32px; width: 32px; }
-      .nav-logo-text { font-size: 1.05rem; }
+      .nav-brand-divider { height: 20px; }
+      .nav-brand-text { font-size: 1.1rem; }
       .footer-logo-badge { height: 36px; width: 36px; }
-      .footer-logo-text { font-size: 1.35rem; }
+      .footer-brand-divider { height: 22px; }
+      .footer-brand-text { font-size: 1.35rem; }
       .status-badge { display: none; }
       .btn-primary { padding: 6px 14px; font-size: 0.78rem; }
       .lang-btn { padding: 3px 8px; font-size: 0.7rem; }
@@ -1049,13 +1082,17 @@
     <div class="container nav-wrap">
       <div class="nav-top-row">
         <div class="nav-left">
-          <!-- CỤM LOGO DẠNG NGANG HEADER (ICON + TEXT) -->
+          <!-- CỤM LOGO DẠNG NGANG THEO ĐÚNG TEMPLATE HÌNH 2 -->
           <div class="nav-brand" onclick="switchPage('about')">
             <img src="bryan-logo-2.png" 
-                 alt="Bryan Nguyen Logo" 
+                 alt="Bryan Nguyen" 
                  class="nav-logo-badge" 
                  onerror="if(!this.dataset.t1){this.dataset.t1=1; this.src='Bryan-logo-2.png';} else if(!this.dataset.t2){this.dataset.t2=1; this.src='Bryan-logo%202.png';}">
-            <span class="nav-logo-text">Bryan Nguyen</span>
+            <span class="nav-brand-divider"></span>
+            <div class="nav-brand-text">
+              <span class="brand-first">BRYAN</span>
+              <span class="brand-last">NGUYEN</span>
+            </div>
           </div>
           <span class="status-badge"><span class="status-dot"></span> <span id="status-text">Open to Connect</span></span>
         </div>
@@ -1179,7 +1216,7 @@
               <img src="viet-thanh-logo.jpg" alt="Việt Thanh" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Việt%20thanh%20Logo.jpg';">
               <img src="DYM Logo.jpg" alt="DYM Medical Center" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="TDP logo.jpg" alt="TDP IELTS" loading="lazy" decoding="async" onerror="this.style.display='none'">
-              <img src="Jalux Logo.jpg" alt="Jalux Taseco" loading="lazy" decoding="async" onerror="this.style.display='none'">
+              <img src="Jalux Logo.jpg" alt="Jalux Taseco" onerror="this.style.display='none'">
               <img src="PetJoy Logo.jpg" alt="Pet Joy" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="Utage logo.jpg" alt="Utage" loading="lazy" decoding="async" onerror="this.style.display='none'">
               <img src="British Logo.jpg" alt="British Academy" loading="lazy" decoding="async" onerror="this.style.display='none'">
@@ -1280,7 +1317,7 @@
               <svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#FFFFFF" d="M13.5 19v-6.4h2.1l.3-2.5h-2.4V8.5c0-.7.2-1.2 1.3-1.2h1.4V5.1c-.2 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v1.9H8.5v2.5h2.1V19h2.9z"/></svg>
             </a>
             <a href="mailto:quangtritc1805@gmail.com" class="contact-social-icon" id="connect-email" title="Email">
-              <svg viewBox="0 0 24 24" width="34" height="34"><path fill="#4285F4" d="M2.5 6.5v11c0 .8.7 1.5 1.5 1.5h3v-8.5L2.5 6.5z"/><path fill="#34A853" d="M17 19h3c.8 0 1.5-.7 1.5-1.5v-11L17 10.5V19z"/><path fill="#EA4335" d="M17 10.5V5.2c0-1-.9-1.7-1.9-1.2L12 6.5 8.9 4c-1-.5-1.9.2-1.9 1.2v5.3l5 3.8 5-3.8z"/><path fill="#FBBC05" d="M2.5 6.5L7 10.5V5.2L4.6 3.4c-.9-.7-2.1-.1-2.1 1.1v2z"/><path fill="#C5221F" d="M21.5 4.5c0-1.2-1.2-1.8-2.1-1.1L17 5.2v5.3l4.5-4V4.5z"/></svg>
+              <svg viewBox="0 0 24 24" width="34" height="34"><path fill="#4285F4" d="M2.5 6.5v11c0 .8.7 1.5 1.5 1.5h3v-8.5L2.5 6.5z"/><path fill="#34A853" d="M17 19h3c.8 0 1.5-.7 1.5-1.5v-11L17 10.5V19z"/><path fill="#EA4335" d="M17 10.5V5.2c0-1-.9-1.7-1.9-1.2L12 6.5 8.9 4c-1-.5-1.9.2-1.9 1.2v5.3l5 3.8 5-3.8z"/><path fill="#FBBC05" d="M2.5 6.5L7 10.5V5.2L4.6 3.4c-.9-.7-2.1-.1-2.1 1.1v2z"/><path fill="#C5221F" d="M21.5 4.5c0-1.2-1.8-2.1-1.1L17 5.2v5.3l4.5-4V4.5z"/></svg>
             </a>
             <a href="https://zalo.me/0838673639" target="_blank" class="contact-social-icon" id="connect-zalo" title="Zalo">
               <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="34" height="34" style="display:block;border-radius:7px;" loading="lazy" decoding="async">
@@ -1299,13 +1336,17 @@
     <div class="container">
       <div class="np-footer-grid">
         <div class="np-footer-brand-col">
-          <!-- CỤM LOGO DẠNG NGANG FOOTER (ICON + TEXT) -->
+          <!-- CỤM LOGO DẠNG NGANG FOOTER (CHUẨN 100% THEO HÌNH 2) -->
           <div class="footer-brand" onclick="switchPage('about')">
             <img src="bryan-logo-2.png" 
-                 alt="Bryan Nguyen Logo" 
+                 alt="Bryan Nguyen" 
                  class="footer-logo-badge" 
                  onerror="if(!this.dataset.t1){this.dataset.t1=1; this.src='Bryan-logo-2.png';} else if(!this.dataset.t2){this.dataset.t2=1; this.src='Bryan-logo%202.png';}">
-            <span class="footer-logo-text">Bryan Nguyen</span>
+            <span class="footer-brand-divider"></span>
+            <div class="footer-brand-text">
+              <span class="footer-brand-first">BRYAN</span>
+              <span class="footer-brand-last">NGUYEN</span>
+            </div>
           </div>
           <p class="np-footer-desc">Enterprise FinTech &<br>B2B Strategy.</p>
         </div>
@@ -1798,7 +1839,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    fetch('./data.json?v=1.0.5')
+    fetch('./data.json?v=1.0.6')
       .then(res => res.json())
       .then(data => {
         globalData = data;
