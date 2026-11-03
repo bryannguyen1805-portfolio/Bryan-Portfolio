@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&subset=vietnamese&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&subset=vietnamese&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -510,7 +510,7 @@
     .bd-subcontent { display: none; }
     .bd-subcontent.active { display: block; animation: slideUpFade 0.3s ease; }
 
-    /* PARTNER LOGO SECTION (HIỂN THỊ MÀU GỐC 100%) */
+    /* PARTNER LOGO SECTION */
     .partner-logo-section {
       background: var(--card-bg);
       border: 1px solid rgba(226, 232, 240, 0.6);
@@ -540,8 +540,8 @@
       max-height: 42px;
       max-width: 130px;
       object-fit: contain;
-      filter: none; /* Bỏ trắng đen, hiển thị màu gốc chuẩn */
-      opacity: 1;   /* Đậm màu, sắc nét */
+      filter: none;
+      opacity: 1;
       transition: transform 0.25s ease;
     }
     .partner-logo-grid img:hover {
@@ -611,28 +611,22 @@
     }
     .case-card p { font-size: 0.92rem; color: #475569; line-height: 1.65; margin-bottom: 24px; flex-grow: 1; }
 
-    /* LIÊN HỆ & FOOTER CHUNG DƯỚI CÙNG */
-    .contact-wrapper {
-      background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
-      padding-top: 60px;
-      width: 100%;
-    }
-    
-    .np-contact-hero { color: #ffffff; padding: 20px 24px 80px; text-align: center; }
+    /* FORM LIÊN HỆ */
+    .np-contact-hero { padding: 20px 0 30px; text-align: left; }
     .np-contact-title {
       font-family: 'Sora', sans-serif;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       font-weight: 800;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
+      letter-spacing: -1.2px;
+      margin-bottom: 12px;
     }
-    .np-contact-sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 50px; line-height: 1.6; }
-    .np-form { max-width: 760px; margin: 0 auto; text-align: left; }
-    .np-form-row { display: flex; gap: 40px; margin-bottom: 30px; }
+    .np-contact-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 700px; margin-bottom: 36px; line-height: 1.6; }
+    .np-form { max-width: 100%; margin: 0 auto; text-align: left; }
+    .np-form-row { display: flex; gap: 40px; margin-bottom: 26px; }
     .np-input-group { flex: 1; display: flex; flex-direction: column; }
     .np-input-group label {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-muted);
       margin-bottom: 6px;
       text-transform: uppercase;
       letter-spacing: 1.2px;
@@ -641,47 +635,97 @@
     .np-input {
       background: transparent;
       border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      color: #ffffff;
-      font-size: 1.05rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-main);
+      font-size: 1rem;
       padding: 10px 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
       transition: all 0.3s ease;
       outline: none;
     }
-    .np-input:focus { border-bottom-color: var(--accent); }
-    .np-input::placeholder { color: rgba(255, 255, 255, 0.2); }
-    textarea.np-input { resize: vertical; min-height: 80px; }
+    .np-input:focus { border-bottom-color: var(--primary); }
+    .np-input::placeholder { color: #94a3b8; }
+    textarea.np-input { resize: vertical; min-height: 90px; }
     
-    .np-submit-wrap { text-align: right; margin-top: 40px; }
+    .np-submit-wrap { text-align: left; margin-top: 32px; }
     .np-btn-submit {
-      background-color: #ffffff;
-      color: var(--np-dark);
+      background-color: var(--primary);
+      color: #ffffff;
       border: none;
-      padding: 16px 48px;
+      padding: 14px 40px;
       font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 800;
-      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-radius: 8px;
       cursor: pointer;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
     }
     .np-btn-submit:hover {
-      background-color: var(--primary-light);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 82, 204, 0.35);
     }
     .form-success-msg {
       display: none;
       color: #10b981;
-      text-align: center;
-      margin-top: 20px;
+      text-align: left;
+      margin-top: 16px;
       font-weight: 700;
       font-family: 'Sora', sans-serif;
+      font-size: 0.92rem;
     }
 
+    /* ==========================================================
+       SECTION MẠNG XÃ HỘI (OR CONNECT WITH ME ON...)
+       ========================================================== */
+    .contact-social-section {
+      text-align: center;
+      margin-top: 70px;
+      padding: 40px 0 20px;
+    }
+    .contact-social-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--np-dark);
+      letter-spacing: -0.5px;
+    }
+    .contact-social-divider {
+      width: 48px;
+      height: 2px;
+      background-color: #f15a24; /* Đường kẻ màu cam chuẩn như hình */
+      margin: 18px auto 44px;
+      border-radius: 2px;
+    }
+    .contact-social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+    }
+    .contact-social-icon {
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .contact-social-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .contact-social-icon:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER CHUNG */
     .np-footer {
       background-color: var(--np-dark);
       color: #ffffff;
@@ -850,13 +894,21 @@
       .metric-item { border-bottom: 1px solid var(--border); border-right: none; padding: 12px; }
       .metric-item:last-child { border-bottom: none; }
       
-      .contact-wrapper { padding-top: 40px; margin-top: 20px; }
-      .np-contact-hero { padding: 30px 16px 50px; }
+      /* Form Contact Responsive */
+      .np-contact-hero { padding: 20px 0 20px; }
       .np-contact-title { font-size: 2.2rem; }
       .np-form-row { flex-direction: column; gap: 24px; margin-bottom: 24px; }
       .np-submit-wrap { text-align: center; }
       .np-btn-submit { width: 100%; padding: 14px 20px; }
       
+      /* Social Connect Responsive */
+      .contact-social-section { margin-top: 48px; }
+      .contact-social-title { font-size: 1.6rem; }
+      .contact-social-divider { margin: 14px auto 30px; }
+      .contact-social-icons { gap: 28px; }
+      .contact-social-icon svg { width: 20px; height: 20px; }
+
+      /* Footer Mobile */
       .np-footer { padding: 0 20px 40px; }
       .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; padding-top: 40px; }
       .np-footer-col:first-child { grid-column: span 2; text-align: center; }
@@ -1052,46 +1104,79 @@
       </div>
     </section>
 
-    <!-- 5. CONTACT -->
+    <!-- 5. CONTACT (BAO GỒM FORM VÀ SECTION SOCIAL CONNECT MỚI) -->
     <section id="page-contact" class="page-section">
       <div class="container">
-        <div style="padding: 20px 0;">
-          <h2 class="np-contact-title" style="color: var(--np-dark); margin-bottom: 10px;" id="contact-heading-tab">Let's Build Strategic Value</h2>
-          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;" id="contact-sub-tab">Please leave your details if you are looking for a specialized B2B & FinTech talent.</p>
+        <!-- Khối Form -->
+        <div class="np-contact-hero">
+          <h2 class="np-contact-title" id="contact-heading-tab">Let's Build Strategic Value</h2>
+          <p class="np-contact-sub" id="contact-sub-tab">Please leave your details if you are looking for a specialized B2B & FinTech talent.</p>
           
-          <div class="bento-card" style="max-width: 800px; padding: 40px;">
-            <form id="hr-contact-form" class="np-form" style="max-width: 100%;">
+          <div class="bento-card" style="max-width: 820px; padding: 40px; margin: 0 auto;">
+            <form id="hr-contact-form" class="np-form">
               <div class="np-form-row">
                 <div class="np-input-group">
-                  <label id="lbl-fname" style="color: var(--text-muted);">First Name</label>
-                  <input type="text" id="fname" name="fname" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <label id="lbl-fname">First Name</label>
+                  <input type="text" id="fname" name="fname" class="np-input" required>
                 </div>
                 <div class="np-input-group">
-                  <label id="lbl-lname" style="color: var(--text-muted);">Last Name</label>
-                  <input type="text" id="lname" name="lname" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <label id="lbl-lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" class="np-input" required>
                 </div>
               </div>
               <div class="np-form-row">
                 <div class="np-input-group">
-                  <label id="lbl-email" style="color: var(--text-muted);">Email Address</label>
-                  <input type="email" id="email" name="email" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <label id="lbl-email">Email Address</label>
+                  <input type="email" id="email" name="email" class="np-input" required>
                 </div>
                 <div class="np-input-group">
-                  <label id="lbl-subject" style="color: var(--text-muted);">Company / Role</label>
-                  <input type="text" id="subject" name="subject" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" required>
+                  <label id="lbl-subject">Company / Role</label>
+                  <input type="text" id="subject" name="subject" class="np-input" required>
                 </div>
               </div>
               <div class="np-form-row">
                 <div class="np-input-group" style="width: 100%;">
-                  <label id="lbl-msg" style="color: var(--text-muted);">Message</label>
-                  <textarea id="msg" name="msg" class="np-input" style="color: var(--text-main); border-bottom-color: var(--border);" placeholder="Share a brief JD or collaboration opportunity..." required></textarea>
+                  <label id="lbl-msg">Message</label>
+                  <textarea id="msg" name="msg" class="np-input" placeholder="Share a brief JD or collaboration opportunity..." required></textarea>
                 </div>
               </div>
-              <div class="np-submit-wrap" style="text-align: left;">
-                <button type="submit" class="btn-primary" id="submitBtn" style="padding: 12px 30px; font-size: 0.95rem; border-radius: 8px;">SUBMIT MESSAGE</button>
+              <div class="np-submit-wrap">
+                <button type="submit" class="np-btn-submit" id="submitBtn">SUBMIT MESSAGE</button>
               </div>
               <p id="form-success-msg" class="form-success-msg"></p>
             </form>
+          </div>
+        </div>
+
+        <!-- SECTION MỚI: OR CONNECT WITH ME ON... (THEO HÌNH ẢNH YÊU CẦU) -->
+        <div class="contact-social-section">
+          <h3 class="contact-social-title" id="social-heading">Or connect with me on...</h3>
+          <div class="contact-social-divider"></div>
+          <div class="contact-social-icons">
+            <!-- 1. X (Twitter) -->
+            <a href="https://x.com" target="_blank" class="contact-social-icon" id="connect-x" title="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+
+            <!-- 2. Facebook -->
+            <a href="https://www.facebook.com/Tori1005" target="_blank" class="contact-social-icon" id="connect-fb" title="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+
+            <!-- 3. YouTube -->
+            <a href="https://youtube.com" target="_blank" class="contact-social-icon" id="connect-yt" title="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+
+            <!-- 4. LinkedIn -->
+            <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" class="contact-social-icon" id="connect-linkedin" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            </a>
+
+            <!-- 5. Instagram -->
+            <a href="https://www.instagram.com/bryannguyen1805/" target="_blank" class="contact-social-icon" id="connect-instagram" title="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1198,6 +1283,7 @@
       }
     }
 
+    /* ĐIỀU KHIỂN LIGHTBOX XEM ẢNH */
     function openLightbox(src) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');
@@ -1214,6 +1300,7 @@
     });
 
     function renderContent(data) {
+      // NAV
       document.getElementById('page-title').innerText = data.profile.name + " | Enterprise Fintech Portfolio";
       document.getElementById('status-text').innerText = data.nav.status;
       document.getElementById('cv-btn').innerText = data.nav.downloadCv;
@@ -1224,6 +1311,7 @@
       document.getElementById('tab-da').innerText = data.nav.da;
       document.getElementById('tab-contact').innerText = data.nav.contact;
 
+      // HERO
       document.getElementById('hero-name').innerText = data.profile.name;
       document.getElementById('hero-title').innerText = data.profile.title;
       document.getElementById('avatar').src = data.profile.avatarUrl;
@@ -1231,15 +1319,22 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
+      // FLOATING SOCIAL LINKS
       document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
       if (data.profile.social && data.profile.social.linkedin) {
         document.getElementById('float-linkedin').href = data.profile.social.linkedin;
+        document.getElementById('connect-linkedin').href = data.profile.social.linkedin;
       }
       if (data.profile.social && data.profile.social.facebook) {
         document.getElementById('float-facebook').href = data.profile.social.facebook;
+        document.getElementById('connect-fb').href = data.profile.social.facebook;
+      }
+      if (data.profile.social && data.profile.social.instagram) {
+        document.getElementById('connect-instagram').href = data.profile.social.instagram;
       }
       document.getElementById('float-email').href = `mailto:${data.profile.email}`;
 
+      // BENTO GRID MAPPING
       document.getElementById('about-eyebrow').innerText = data.labels.overview;
       if(data.about && data.about.length >= 3) {
         document.getElementById('about-container-bento').innerHTML = `
@@ -1270,6 +1365,7 @@
         `;
       }
 
+      // RESUME
       document.getElementById('resume-skills-title').innerText = data.labels.capabilities;
       document.getElementById('resume-exp-title').innerText = data.labels.careerPath;
       document.getElementById('resume-edu-title').innerText = data.labels.academic;
@@ -1400,19 +1496,21 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER
+      // CONTACT & FOOTER DYNAMIC TRANSLATION
       if (currentLang === 'vi') {
         document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
         document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
         document.getElementById('lbl-subject').innerText = "Công ty / Vị trí tuyển dụng";
-        document.getElementById('msg-ph').placeholder = "Chia sẻ JD hoặc mô tả ngắn gọn về cơ hội hợp tác...";
+        document.getElementById('msg').placeholder = "Chia sẻ JD hoặc mô tả ngắn gọn về cơ hội hợp tác...";
         document.getElementById('form-success-msg').innerText = "Gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.";
+        document.getElementById('social-heading').innerText = "Hoặc kết nối với tôi qua...";
       } else {
         document.getElementById('contact-heading-tab').innerText = "Let's Build Strategic Value";
         document.getElementById('contact-sub-tab').innerText = "Please leave your details if you are looking for a specialized B2B & FinTech talent.";
         document.getElementById('lbl-subject').innerText = "Company / Role";
-        document.getElementById('msg-ph').placeholder = "Share a brief JD or collaboration opportunity...";
+        document.getElementById('msg').placeholder = "Share a brief JD or collaboration opportunity...";
         document.getElementById('form-success-msg').innerText = "Message sent successfully! I'll get back to you soon.";
+        document.getElementById('social-heading').innerText = "Or connect with me on...";
       }
       
       document.getElementById('lbl-fname').innerText = data.labels.firstName;
