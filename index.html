@@ -7,7 +7,8 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- ĐÃ CẬP NHẬT FONT TIẾNG VIỆT CHO PLUS JAKARTA SANS -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&subset=vietnamese&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -23,9 +24,10 @@
       --border: rgba(226, 232, 240, 0.8);
       --np-dark: #0f172a;
       
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.03);
-      --shadow-card: 0 8px 30px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(0,0,0,0.02);
-      --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.08), 0 1px 5px rgba(0,0,0,0.02);
+      /* CẬP NHẬT HIỆU ỨNG ĐỔ BÓNG (DROP SHADOW) CHO CÁC KHỐI */
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+      --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
       
       --radius-xl: 28px;
       --radius-lg: 20px;
@@ -278,11 +280,12 @@
       color: var(--text-main);
       backdrop-filter: blur(8px);
       transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm); /* Thêm shadow cho badge */
     }
     .contact-badge:hover {
       background: #ffffff;
       border-color: var(--primary-light);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-card);
       transform: translateY(-2px);
     }
 
@@ -356,9 +359,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
       margin-bottom: 20px;
       color: var(--primary);
+    }
+    /* SVG ICON STYLE TẠI ABOUT SECTION */
+    .bento-icon-wrap svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
 
     .block-heading {
@@ -373,6 +381,39 @@
     /* SKILLS */
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
     .skill-card-title { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 800; margin-bottom: 16px; color: var(--np-dark); }
+    
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(226, 232, 240, 0.6);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-light);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .skill-card-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .skill-card-icon svg { width: 18px; height: 18px; fill: currentColor; }
+
     .chip-container { display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
     .skill-chip {
       padding: 6px 14px;
@@ -384,7 +425,7 @@
       color: #334155;
       transition: all 0.2s;
     }
-    .bento-card:hover .skill-chip { border-color: rgba(226, 232, 240, 0.9); }
+    .skill-card:hover .skill-chip { border-color: rgba(226, 232, 240, 0.9); }
 
     /* TIMELINE */
     .timeline { display: flex; flex-direction: column; gap: 24px; position: relative; }
@@ -543,7 +584,7 @@
     }
     .case-card p { font-size: 0.92rem; color: #475569; line-height: 1.65; margin-bottom: 24px; flex-grow: 1; }
 
-    /* LIÊN HỆ & FOOTER (CHUNG TẤT CẢ TRANG) */
+    /* LIÊN HỆ & FOOTER */
     .contact-wrapper {
       background: linear-gradient(180deg, var(--bg) 0%, var(--np-dark) 100%);
       padding-top: 60px;
@@ -641,7 +682,7 @@
     }
     .np-footer-links a:hover { color: #ffffff; }
 
-    /* LIGHTBOX CSS THÊM MỚI TẠI ĐÂY */
+    /* LIGHTBOX CSS BẬT ẢNH POP-UP */
     .lightbox-modal {
       display: none;
       position: fixed;
@@ -817,9 +858,18 @@
             <p class="hero-subtitle" id="hero-title"></p>
             
             <div class="hero-contact-row">
-              <span class="contact-badge">📍 <strong id="location"></strong></span>
-              <span class="contact-badge">📞 <strong id="phone"></strong></span>
-              <span class="contact-badge">✉️ <strong id="email"></strong></span>
+              <span class="contact-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <strong id="location"></strong>
+              </span>
+              <span class="contact-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <strong id="phone"></strong>
+              </span>
+              <span class="contact-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <strong id="email"></strong>
+              </span>
             </div>
           </div>
           
@@ -930,7 +980,7 @@
       </div>
     </section>
 
-    <!-- 5. CONTACT -->
+    <!-- 5. CONTACT (TAB) -->
     <section id="page-contact" class="page-section">
       <div class="container">
         <div style="padding: 20px 0;">
@@ -1022,7 +1072,7 @@
     </button>
   </div>
 
-  <!-- BỔ SUNG LIGHTBOX MODAL ĐỂ XEM ẢNH POP-UP -->
+  <!-- LIGHTBOX MODAL ĐỂ XEM ẢNH -->
   <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
@@ -1075,7 +1125,7 @@
       }
     }
 
-    /* HÀM ĐIỀU KHIỂN LIGHTBOX XEM ẢNH BẰNG POP-UP */
+    /* ĐIỀU KHIỂN LIGHTBOX XEM ẢNH */
     function openLightbox(src) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');
@@ -1111,30 +1161,26 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
-      // SOCIAL LINKS
-      document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
-      if (data.profile.social && data.profile.social.linkedin) {
-        document.getElementById('float-linkedin').href = data.profile.social.linkedin;
-      }
-      if (data.profile.social && data.profile.social.facebook) {
-        document.getElementById('float-facebook').href = data.profile.social.facebook;
-      }
-      document.getElementById('float-email').href = `mailto:${data.profile.email}`;
-
-      // BENTO GRID MAPPING
+      // BENTO GRID MAPPING (THAY THẾ EMOJI BẰNG SVG TINH GỌN)
       document.getElementById('about-eyebrow').innerText = data.labels.overview;
       if(data.about && data.about.length >= 3) {
         document.getElementById('about-container-bento').innerHTML = `
           <div class="bento-card col-12">
-            <div class="bento-icon-wrap">👋</div>
+            <div class="bento-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
             <p class="about-text" style="font-size: 1.15rem; font-family: 'Sora', sans-serif;">${data.about[0]}</p>
           </div>
           <div class="bento-card col-6">
-            <div class="bento-icon-wrap">💼</div>
+            <div class="bento-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
             <p class="about-text">${data.about[1]}</p>
           </div>
           <div class="bento-card col-6">
-            <div class="bento-icon-wrap">🚀</div>
+            <div class="bento-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
             <p class="about-text">${data.about[2]}</p>
           </div>
         `;
@@ -1152,12 +1198,20 @@
       document.getElementById('resume-edu-title').innerText = data.labels.academic;
       document.getElementById('resume-cert-title').innerText = data.labels.credentials;
 
+      // THAY EMOJI BẰNG SVG TRONG PHẦN SKILLS
       document.getElementById('resume-skills-container').innerHTML = data.skills.map((s, idx) => {
-        const icon = idx === 0 ? "💳" : idx === 1 ? "📊" : "💼";
+        let iconSvg = '';
+        if (idx === 0) {
+          iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>';
+        } else if (idx === 1) {
+          iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>';
+        } else {
+          iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>';
+        }
         return `
           <div class="skill-card">
             <div class="skill-card-header">
-              <div class="skill-card-icon">${icon}</div>
+              <div class="skill-card-icon">${iconSvg}</div>
               <h3 class="skill-card-title">${s.category}</h3>
             </div>
             <div class="chip-container">
@@ -1183,7 +1237,6 @@
         </div>
       `).join('');
 
-      // GIÁO DỤC: SỬ DỤNG LIGHTBOX THAY VÌ TARGET BLANK
       document.getElementById('resume-education-container').innerHTML = data.education.map(ed => `
         <div class="timeline-card">
           <div><span class="timeline-badge">${ed.period}</span></div>
@@ -1197,7 +1250,6 @@
         </div>
       `).join('');
 
-      // CHỨNG CHỈ: SỬ DỤNG LIGHTBOX THAY VÌ TARGET BLANK
       if (data.certifications) {
         const certHtml = data.certifications.map(c => `
           <div class="timeline-card">
