@@ -59,7 +59,9 @@
     body.lang-en .section-title, 
     body.lang-en .np-contact-title, 
     body.lang-en .company-title,
-    body.lang-en .contact-social-title {
+    body.lang-en .contact-social-title,
+    body.lang-en .footer-group-title,
+    body.lang-en .np-footer-logo {
       font-family: 'Sora', sans-serif;
     }
 
@@ -75,7 +77,9 @@
     body.lang-vi .company-title, 
     body.lang-vi .case-card h3,
     body.lang-vi .skill-card-title,
-    body.lang-vi .contact-social-title {
+    body.lang-vi .contact-social-title,
+    body.lang-vi .footer-group-title,
+    body.lang-vi .np-footer-logo {
       font-family: 'Be Vietnam Pro', sans-serif !important;
       font-weight: 700;
     }
@@ -747,39 +751,100 @@
       transform: translateY(-4px) scale(1.12);
     }
 
-    /* FOOTER CHUNG */
+    /* ==========================================================
+       FOOTER ĐƯỢC THIẾT KẾ LẠI THEO SCREENSHOT YÊU CẦU
+       ========================================================== */
     .np-footer {
-      background-color: var(--np-dark);
+      background-color: #0b1329; /* Tông màu xanh đen navy đậm sang trọng */
       color: #ffffff;
-      padding: 0 24px 60px;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 64px 24px 36px;
+      border-top: 1px solid rgba(255,255,255,0.06);
       width: 100%;
     }
-    .np-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; padding-top: 60px; }
-    .np-footer-col h4 {
-      font-size: 0.85rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: rgba(255, 255, 255, 0.4);
+    .np-footer-grid { 
+      display: grid; 
+      grid-template-columns: 1.4fr 1fr 1.1fr 1.1fr; 
+      gap: 40px; 
     }
     .np-footer-logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 800;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       letter-spacing: -0.5px;
+      color: #ffffff;
     }
-    .np-footer-text { font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); line-height: 1.6; max-width: 300px; }
-    .np-footer-links { display: flex; flex-direction: column; gap: 14px; }
-    .np-footer-links a {
-      font-size: 0.92rem;
-      color: rgba(255, 255, 255, 0.8);
+    .np-footer-desc {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 260px;
+    }
+    .footer-group-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .footer-subgroup {
+      margin-top: 28px;
+    }
+    .np-footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .np-footer-links a, .np-footer-links span {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
       cursor: pointer;
     }
-    .np-footer-links a:hover { color: #ffffff; }
+    .np-footer-links a:hover {
+      color: #ffffff;
+    }
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .footer-circle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0b1329;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 800;
+      font-size: 0.75rem;
+    }
+    .footer-circle-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255,255,255,0.25);
+    }
+    .footer-circle-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .footer-bottom {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.6;
+    }
 
     /* LIGHTBOX POP-UP CSS */
     .lightbox-modal {
@@ -918,14 +983,13 @@
       .contact-social-divider { margin: 12px auto 26px; }
       .contact-social-icons { gap: 24px; }
       
-      .np-footer { padding: 0 20px 40px; }
-      .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; padding-top: 40px; }
-      .np-footer-col:first-child { grid-column: span 2; text-align: center; }
-      .np-footer-logo { margin-bottom: 8px; font-size: 1.3rem; }
-      .np-footer-text { margin: 0 auto; font-size: 0.85rem; }
-      .np-footer-col h4 { margin-bottom: 14px; font-size: 0.8rem; }
-      .np-footer-links { gap: 10px; }
-      .np-footer-links a { font-size: 0.85rem; }
+      /* Footer Mobile */
+      .np-footer { padding: 40px 20px 30px; }
+      .np-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+      .np-footer-brand-col { grid-column: span 2; }
+      .np-footer-connect-col { grid-column: span 2; margin-top: 4px; }
+      .footer-subgroup { margin-top: 20px; }
+      .footer-bottom { margin-top: 36px; padding-top: 20px; }
       
       .floating-widget { bottom: 20px; right: 16px; gap: 8px; }
       .float-btn { width: 40px; height: 40px; }
@@ -1180,35 +1244,87 @@
     </section>
   </main>
 
-  <!-- FOOTER CHUNG DƯỚI CÙNG -->
+  <!-- =======================================================
+       FOOTER THEO GIAO DIỆN MỚI (ĐÃ BỎ DÒNG CHUYÊN TRANG)
+       ======================================================= -->
   <footer class="np-footer">
-    <div class="container np-footer-grid">
-      <div class="np-footer-col">
-        <h3 class="np-footer-logo">Bryan Nguyen</h3>
-        <p class="np-footer-text">© 2026, Bryan Nguyen.<br>Enterprise FinTech & B2B Strategy.</p>
-      </div>
-      <div class="np-footer-col">
-        <h4 id="footer-nav-title">NAVIGATE</h4>
-        <div class="np-footer-links">
-          <a onclick="switchPage('about')" id="f-about">About Me</a>
-          <a onclick="switchPage('resume')" id="f-resume">Resume</a>
-          <a onclick="switchPage('business-dev')" id="f-bd">Business Development</a>
-          <a onclick="switchPage('data-analyst')" id="f-da">Data Analyst</a>
-          <a onclick="switchPage('contact')" id="f-contact">Contact</a>
+    <div class="container">
+      <div class="np-footer-grid">
+        <!-- Cột 1: Tên thương hiệu & Định vị -->
+        <div class="np-footer-brand-col">
+          <h3 class="np-footer-logo">Bryan Nguyen</h3>
+          <p class="np-footer-desc">Enterprise FinTech &<br>B2B Strategy.</p>
+        </div>
+
+        <!-- Cột 2: Điều hướng & Lĩnh vực -->
+        <div>
+          <div>
+            <h4 class="footer-group-title" id="f-title-nav">ĐIỀU HƯỚNG</h4>
+            <div class="np-footer-links">
+              <a onclick="switchPage('about')" id="f-link-about">Giới thiệu</a>
+              <a onclick="switchPage('resume')" id="f-link-resume">Hồ sơ</a>
+            </div>
+          </div>
+          <div class="footer-subgroup">
+            <h4 class="footer-group-title" id="f-title-areas">LĨNH VỰC</h4>
+            <div class="np-footer-links">
+              <a onclick="switchPage('business-dev')" id="f-link-bd">Phát triển kinh doanh</a>
+              <a onclick="switchPage('data-analyst')" id="f-link-da">Phân tích dữ liệu</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 3: Hoạt động & Liên hệ -->
+        <div>
+          <div>
+            <h4 class="footer-group-title" id="f-title-act">HOẠT ĐỘNG</h4>
+            <div class="np-footer-links">
+              <a href="https://quangtritc1805.wixsite.com/website" target="_blank" id="f-link-portal">Fintech & Macro Portal</a>
+              <a onclick="switchPage('contact')" id="f-link-contact">Liên hệ</a>
+            </div>
+          </div>
+          <div class="footer-subgroup">
+            <h4 class="footer-group-title" id="f-title-contact">LIÊN HỆ</h4>
+            <div class="np-footer-links">
+              <a href="tel:0838673639">Hotline: 0838 673 639</a>
+              <a href="mailto:quangtritc1805@gmail.com">quangtritc1805@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 4: Kết nối với tôi (4 nút tròn trắng biểu tượng tối giản) -->
+        <div class="np-footer-connect-col">
+          <h4 class="footer-group-title" id="f-title-connect">KẾT NỐI VỚI TÔI</h4>
+          <div class="footer-social-row">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" class="footer-circle-btn" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 1.54-1.54c0-.85-.69-1.54-1.54-1.54a1.54 1.54 0 0 0-1.54 1.54c0 .85.69 1.54 1.54 1.54m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/Tori1005" target="_blank" class="footer-circle-btn" title="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:quangtritc1805@gmail.com" class="footer-circle-btn" title="Email">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <!-- Zalo -->
+            <a href="https://zalo.me/0838673639" target="_blank" class="footer-circle-btn" title="Zalo" style="font-family: 'Sora', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: -0.2px;">
+              Zalo
+            </a>
+          </div>
         </div>
       </div>
-      <div class="np-footer-col">
-        <h4 id="footer-contact-title">DIRECT CONTACT</h4>
-        <div class="np-footer-links">
-          <a href="tel:0838673639">📞 0838 673 639</a>
-          <a href="mailto:quangtritc1805@gmail.com">✉️ quangtritc1805@gmail.com</a>
-          <a>📍 Ho Chi Minh City, Vietnam</a>
-        </div>
+
+      <!-- Dòng bản quyền và địa chỉ phía dưới đường kẻ ngang -->
+      <div class="footer-bottom">
+        <p id="f-bottom-copy">Copyright © 2026 Bryan Nguyen. All Rights Reserved.</p>
+        <p id="f-bottom-addr">Địa chỉ: Thành phố Hồ Chí Minh, Việt Nam</p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING WIDGET -->
+  <!-- FLOATING WIDGET GÓC PHẢI -->
   <div class="floating-widget">
     <a href="https://zalo.me/0838673639" target="_blank" class="float-btn zalo-btn" id="float-zalo" title="Chat Zalo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" style="display:block;">
@@ -1262,7 +1378,6 @@
       }
     }
 
-    /* ĐỌC URL HASH BAN ĐẦU KHI TRUY CẬP TRỰC TIẾP (VD: /#contact, /#resume) */
     function handleInitialHash() {
       const hash = window.location.hash.replace('#', '');
       const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
@@ -1271,7 +1386,6 @@
       }
     }
 
-    /* BẮT SỰ KIỆN KHI NGƯỜI DÙNG BẤM NÚT BACK / FORWARD TRÊN TRÌNH DUYỆT */
     window.addEventListener('popstate', () => {
       const hash = window.location.hash.replace('#', '') || 'about';
       const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
@@ -1342,6 +1456,7 @@
       document.getElementById('phone').innerText = data.profile.phone;
       document.getElementById('email').innerText = data.profile.email;
 
+      // FLOATING & CONNECT SOCIAL LINKS
       document.getElementById('float-zalo').href = `https://zalo.me/${data.profile.phone}`;
       document.getElementById('connect-zalo').href = `https://zalo.me/${data.profile.phone}`;
       
@@ -1519,7 +1634,7 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER TRANSLATIONS
+      // CONTACT & FOOTER DYNAMIC TRANSLATION
       if (currentLang === 'vi') {
         document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
         document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
@@ -1527,6 +1642,21 @@
         document.getElementById('msg').placeholder = "Chia sẻ JD hoặc mô tả ngắn gọn về cơ hội hợp tác...";
         document.getElementById('form-success-msg').innerText = "Gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.";
         document.getElementById('social-heading').innerText = "Hoặc kết nối với tôi qua...";
+
+        // Cập nhật Footer Tiếng Việt
+        document.getElementById('f-title-nav').innerText = "ĐIỀU HƯỚNG";
+        document.getElementById('f-link-about').innerText = "Giới thiệu";
+        document.getElementById('f-link-resume').innerText = "Hồ sơ";
+        document.getElementById('f-title-areas').innerText = "LĨNH VỰC";
+        document.getElementById('f-link-bd').innerText = "Phát triển kinh doanh";
+        document.getElementById('f-link-da').innerText = "Phân tích dữ liệu";
+        document.getElementById('f-title-act').innerText = "HOẠT ĐỘNG";
+        document.getElementById('f-link-portal').innerText = "Fintech & Macro Portal";
+        document.getElementById('f-link-contact').innerText = "Liên hệ";
+        document.getElementById('f-title-contact').innerText = "LIÊN HỆ";
+        document.getElementById('f-title-connect').innerText = "KẾT NỐI VỚI TÔI";
+        document.getElementById('f-bottom-copy').innerText = "Copyright © 2026 Bryan Nguyen. All Rights Reserved.";
+        document.getElementById('f-bottom-addr').innerText = "Địa chỉ: Thành phố Hồ Chí Minh, Việt Nam";
       } else {
         document.getElementById('contact-heading-tab').innerText = "Let's Build Strategic Value";
         document.getElementById('contact-sub-tab').innerText = "Please leave your details if you are looking for a specialized B2B & FinTech talent.";
@@ -1534,6 +1664,21 @@
         document.getElementById('msg').placeholder = "Share a brief JD or collaboration opportunity...";
         document.getElementById('form-success-msg').innerText = "Message sent successfully! I'll get back to you soon.";
         document.getElementById('social-heading').innerText = "Or connect with me on...";
+
+        // Cập nhật Footer Tiếng Anh
+        document.getElementById('f-title-nav').innerText = "NAVIGATION";
+        document.getElementById('f-link-about').innerText = "About";
+        document.getElementById('f-link-resume').innerText = "Resume";
+        document.getElementById('f-title-areas').innerText = "PRACTICE AREAS";
+        document.getElementById('f-link-bd').innerText = "Business Development";
+        document.getElementById('f-link-da').innerText = "Data Analytics";
+        document.getElementById('f-title-act').innerText = "INITIATIVES";
+        document.getElementById('f-link-portal').innerText = "Fintech & Macro Portal";
+        document.getElementById('f-link-contact').innerText = "Contact";
+        document.getElementById('f-title-contact').innerText = "CONTACT";
+        document.getElementById('f-title-connect').innerText = "CONNECT WITH ME";
+        document.getElementById('f-bottom-copy').innerText = "Copyright © 2026 Bryan Nguyen. All Rights Reserved.";
+        document.getElementById('f-bottom-addr').innerText = "Location: Ho Chi Minh City, Vietnam";
       }
       
       document.getElementById('lbl-fname').innerText = data.labels.firstName;
@@ -1541,14 +1686,6 @@
       document.getElementById('lbl-email').innerText = data.labels.emailAddr;
       document.getElementById('lbl-msg').innerText = data.labels.message;
       document.getElementById('submitBtn').innerText = data.labels.sendBtn;
-      
-      document.getElementById('footer-nav-title').innerText = data.labels.footerNavigate;
-      document.getElementById('footer-contact-title').innerText = data.labels.footerContact;
-      document.getElementById('f-about').innerText = data.nav.about;
-      document.getElementById('f-resume').innerText = data.nav.resume;
-      document.getElementById('f-bd').innerText = data.nav.bd;
-      document.getElementById('f-da').innerText = data.nav.da;
-      document.getElementById('f-contact').innerText = data.nav.contact;
     }
 
     /* GOOGLE APPS SCRIPT WEB APP INTEGRATION */
@@ -1619,7 +1756,6 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    /* NẠP DỮ LIỆU VÀ TỰ ĐỘNG MỞ TAB THEO URL HASH */
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
