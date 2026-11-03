@@ -1059,7 +1059,6 @@
             <div class="metric-grid" id="bd-payoo-metrics"></div>
           </div>
 
-          <!-- LOGO ĐỐI TÁC: ĐÃ CẬP NHẬT CHUẨN VIET-THANH-LOGO.JPG VÀ DỰ PHÒNG TỰ ĐỘNG -->
           <div class="partner-logo-section">
             <div class="partner-logo-title" id="payoo-partner-title">Key Enterprise Partners</div>
             <div class="partner-logo-grid">
@@ -1238,7 +1237,11 @@
     let globalData = null;
     let currentLang = localStorage.getItem('site_lang') || 'en';
 
-    function switchPage(pageKey) {
+    /* ĐIỀU HƯỚNG TAB & TỰ ĐỘNG CẬP NHẬT URL HASH */
+    function switchPage(pageKey, updateHash = true) {
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
+      if (!keys.includes(pageKey)) return;
+
       document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
 
@@ -1246,15 +1249,36 @@
       if (targetSection) {
         targetSection.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (updateHash && window.location.hash !== `#${pageKey}`) {
+          history.pushState(null, null, `#${pageKey}`);
+        }
       }
 
       const tabs = document.querySelectorAll('.nav-tab');
-      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
       const activeIdx = keys.indexOf(pageKey);
       if (activeIdx !== -1 && tabs[activeIdx]) {
         tabs[activeIdx].classList.add('active');
       }
     }
+
+    /* ĐỌC URL HASH BAN ĐẦU KHI TRUY CẬP TRỰC TIẾP (VD: /#contact, /#resume) */
+    function handleInitialHash() {
+      const hash = window.location.hash.replace('#', '');
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
+      if (keys.includes(hash)) {
+        switchPage(hash, false);
+      }
+    }
+
+    /* BẮT SỰ KIỆN KHI NGƯỜI DÙNG BẤM NÚT BACK / FORWARD TRÊN TRÌNH DUYỆT */
+    window.addEventListener('popstate', () => {
+      const hash = window.location.hash.replace('#', '') || 'about';
+      const keys = ['about', 'resume', 'business-dev', 'data-analyst', 'contact'];
+      if (keys.includes(hash)) {
+        switchPage(hash, false);
+      }
+    });
 
     function switchBDTab(tabKey) {
       document.querySelectorAll('.subnav-btn').forEach(btn => btn.classList.remove('active'));
@@ -1495,7 +1519,7 @@
         `).join('');
       }
 
-      // CONTACT & FOOTER DYNAMIC TRANSLATION
+      // CONTACT & FOOTER TRANSLATIONS
       if (currentLang === 'vi') {
         document.getElementById('contact-heading-tab').innerText = "Mở Khoá Tăng Trưởng B2B & FinTech";
         document.getElementById('contact-sub-tab').innerText = "Vui lòng để lại thông tin nếu bạn đang tìm kiếm một nhân sự chuyên biệt, hoặc muốn trao đổi về cơ hội hợp tác.";
@@ -1595,13 +1619,18 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
+    /* NẠP DỮ LIỆU VÀ TỰ ĐỘNG MỞ TAB THEO URL HASH */
     fetch('./data.json?v=' + Date.now())
       .then(res => res.json())
       .then(data => {
         globalData = data;
         setLanguage(currentLang);
+        handleInitialHash();
       })
-      .catch(err => console.error("Lỗi nạp data.json:", err));
+      .catch(err => {
+        console.error("Lỗi nạp data.json:", err);
+        handleInitialHash();
+      });
   </script>
 </body>
 </html>
