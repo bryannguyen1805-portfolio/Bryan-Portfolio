@@ -64,8 +64,8 @@
         "image": {
           "@type": "ImageObject",
           "url": "https://bryanportfolio.io.vn/avatar.png",
-          "width": 1792,
-          "height": 2400
+          "width": 840,
+          "height": 1125
         },
         "telephone": "+84838673639",
         "email": "mailto:quangtritc1805@gmail.com",
@@ -185,7 +185,10 @@
   <link rel="preload" as="image" href="bryan-logo-2.png" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@700;800&display=swap">
+  </noscript>
 
   <style>
     :root {
@@ -517,7 +520,7 @@
     .hero-content-col { flex: 1 1 55%; max-width: 600px; z-index: 2; }
     .hero-img-col { flex: 1 1 45%; position: relative; display: flex; justify-content: flex-end; z-index: 1; }
     .hero-img-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(14,165,233,0.18) 0%, rgba(0,82,204,0.06) 40%, transparent 70%); border-radius: 50%; z-index: -1; filter: blur(20px); pointer-events: none; }
-    .hero-img { width: 100%; max-width: 420px; height: auto; object-fit: cover; object-position: top center; border-radius: 40px 40px 40px 120px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12); transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .hero-img { width: 100%; max-width: 420px; height: auto; aspect-ratio: 340 / 455; object-fit: cover; object-position: top center; border-radius: 40px 40px 40px 120px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12); transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
     .hero-img:hover { transform: translateY(-8px) scale(1.02); }
 
     .hero-badges-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
@@ -674,7 +677,7 @@
     .partner-logo-section { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius-lg); padding: 24px 32px; box-shadow: var(--shadow-card); margin-bottom: 30px; text-align: center; transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
     .partner-logo-title { font-size: 1rem; font-weight: 700; color: var(--text-muted); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
     .partner-logo-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px; }
-    .partner-logo-grid img { max-height: 42px; max-width: 130px; object-fit: contain; transition: transform 0.25s ease, background-color 0.3s ease; border-radius: 8px; }
+    .partner-logo-grid img { max-height: 42px; max-width: 130px; aspect-ratio: 130 / 42; object-fit: contain; transition: transform 0.25s ease, background-color 0.3s ease; border-radius: 8px; }
     html[data-theme="dark"] .partner-logo-grid img { background: #ffffff; padding: 6px 10px; max-height: 48px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
     .partner-logo-grid img:hover { transform: scale(1.06); }
 
@@ -1516,14 +1519,14 @@
             <a href="#business-dev" class="trust-view-link" id="home-partner-link" onclick="event.preventDefault(); switchPage('business-dev')">View Case Studies →</a>
           </div>
           <div class="partner-logo-grid">
-            <img src="Highlands%20logo.png" alt="Highlands Coffee" loading="lazy" decoding="async">
-            <img src="Jalux%20Logo.jpg" alt="Jalux Taseco Duty Free" loading="lazy" decoding="async">
-            <img src="DYM%20Logo.jpg" alt="DYM Medical Center" loading="lazy" decoding="async">
-            <img src="viet-thanh-logo.jpg" alt="Việt Thanh Music Center" loading="lazy" decoding="async">
-            <img src="TDP%20logo.jpg" alt="TDP IELTS" loading="lazy" decoding="async">
-            <img src="Utage%20logo.jpg" alt="Utage Hokkaido Sachi" loading="lazy" decoding="async">
-            <img src="British%20Logo.jpg" alt="British Preparatory Academy" loading="lazy" decoding="async">
-            <img src="PetJoy%20Logo.jpg" alt="Pet Joy" loading="lazy" decoding="async">
+            <img src="Highlands%20logo.png" alt="Highlands Coffee" width="130" height="42" loading="lazy" decoding="async">
+            <img src="Jalux%20Logo.jpg" alt="Jalux Taseco Duty Free" width="130" height="42" loading="lazy" decoding="async">
+            <img src="DYM%20Logo.jpg" alt="DYM Medical Center" width="130" height="42" loading="lazy" decoding="async">
+            <img src="viet-thanh-logo.jpg" alt="Việt Thanh Music Center" width="130" height="42" loading="lazy" decoding="async">
+            <img src="TDP%20logo.jpg" alt="TDP IELTS" width="130" height="42" loading="lazy" decoding="async">
+            <img src="Utage%20logo.jpg" alt="Utage Hokkaido Sachi" width="130" height="42" loading="lazy" decoding="async">
+            <img src="British%20Logo.jpg" alt="British Preparatory Academy" width="130" height="42" loading="lazy" decoding="async">
+            <img src="PetJoy%20Logo.jpg" alt="Pet Joy" width="130" height="42" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -1589,14 +1592,14 @@
           <div class="partner-logo-section">
             <div class="partner-logo-title" id="payoo-partner-title">Key Enterprise Partners</div>
             <div class="partner-logo-grid">
-              <img src="viet-thanh-logo.jpg" alt="Việt Thanh Music Center" loading="lazy" decoding="async">
-              <img src="DYM%20Logo.jpg" alt="DYM Medical Center" loading="lazy" decoding="async">
-              <img src="TDP%20logo.jpg" alt="TDP IELTS" loading="lazy" decoding="async">
-              <img src="Jalux%20Logo.jpg" alt="Jalux Taseco Duty Free" loading="lazy" decoding="async">
-              <img src="PetJoy%20Logo.jpg" alt="Pet Joy" loading="lazy" decoding="async">
-              <img src="Utage%20logo.jpg" alt="Utage Hokkaido Sachi" loading="lazy" decoding="async">
-              <img src="British%20Logo.jpg" alt="British Preparatory Academy" loading="lazy" decoding="async">
-              <img src="Highlands%20logo.png" alt="Highlands Coffee" loading="lazy" decoding="async">
+              <img src="viet-thanh-logo.jpg" alt="Việt Thanh Music Center" width="130" height="42" loading="lazy" decoding="async">
+              <img src="DYM%20Logo.jpg" alt="DYM Medical Center" width="130" height="42" loading="lazy" decoding="async">
+              <img src="TDP%20logo.jpg" alt="TDP IELTS" width="130" height="42" loading="lazy" decoding="async">
+              <img src="Jalux%20Logo.jpg" alt="Jalux Taseco Duty Free" width="130" height="42" loading="lazy" decoding="async">
+              <img src="PetJoy%20Logo.jpg" alt="Pet Joy" width="130" height="42" loading="lazy" decoding="async">
+              <img src="Utage%20logo.jpg" alt="Utage Hokkaido Sachi" width="130" height="42" loading="lazy" decoding="async">
+              <img src="British%20Logo.jpg" alt="British Preparatory Academy" width="130" height="42" loading="lazy" decoding="async">
+              <img src="Highlands%20logo.png" alt="Highlands Coffee" width="130" height="42" loading="lazy" decoding="async">
             </div>
           </div>
 
