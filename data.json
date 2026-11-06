@@ -468,6 +468,10 @@
       "footerNavigate": "NAVIGATE",
       "footerContact": "DIRECT CONTACT",
       "phone": "Phone Number / Zalo"
+    },
+    "seo": {
+      "title": "Bryan Nguyen | Enterprise B2B Development & FinTech Infrastructure",
+      "description": "Executive B2B & FinTech Portfolio of Bryan Nguyen (Quang Tri) — Specialist in Enterprise Payment Infrastructure at Payoo. 15+ corporate chains onboarded, combining analytics rigor with high-impact consultative selling."
     }
   },
   "vi": {
@@ -939,6 +943,10 @@
       "footerNavigate": "ĐIỀU HƯỚNG",
       "footerContact": "LIÊN HỆ TRỰC TIẾP",
       "phone": "Số điện thoại / Zalo"
+    },
+    "seo": {
+      "title": "Nguyễn Huỳnh Quang Trí (Bryan) | Phát triển Doanh nghiệp B2B & Hạ tầng FinTech",
+      "description": "Portfolio chuyên môn của Nguyễn Huỳnh Quang Trí (Bryan) — Phát triển Doanh nghiệp B2B & Hạ tầng FinTech tại Payoo. 15+ chuỗi đối tác lớn, kết hợp tư duy phân tích định lượng với đàm phán thương mại thực chiến."
     }
   }
 }
