@@ -24,39 +24,39 @@
       }
     },
     "about": [
-      "Hello, I'm <strong>Nguyen Huynh Quang Tri (Bryan)</strong>. I hold a <strong>Master’s degree in Business Analytics</strong> and a <strong>Bachelor’s degree in International Business</strong> from the University of Wollongong. Throughout my academic and professional journey, I am committed to applying data analytics not just as numbers on a screen, but as a practical tool to understand business development, improve pipeline performance, and facilitate strategic commercial decisions.",
-      "As a <strong>Business Development Executive</strong>, I have navigated real-world data, CRM workflows, campaign analysis, and customer insights. These experiences taught me how to combine analytical thinking with practical execution—collaborating cross-functionally with IT and operations, managing enterprise accounts, and adapting quickly in fast-paced FinTech environments.",
-      "I consider myself a curious and proactive learner, constantly honing my skills at the intersection of <strong>Data and Business Development</strong>. I am passionate about solving problems, exploring new ideas, and contributing to projects where creativity meets tangible results. Outside of work, I enjoy street photography, discovering new cultures, and staying inspired through everyday learning."
+      "<strong>Hi, I'm Bryan (Nguyen Huynh Quang Tri) — where analytical rigor meets B2B deal-making.</strong> In enterprise sales, big deals rarely stall because a product lacks features; they stall over cash-flow economics, legal turnaround, or operational headaches at the counter. With a <strong>Master of Business Analytics</strong> and a <strong>Bachelor of International Business from the University of Wollongong</strong>, I don't walk into client meetings with a generic sales script. I look at how a business actually collects money, where its staff lose time, and work closely with IT, Legal, Operations, and Finance to put together payment solutions that make commercial sense for both sides.",
+      "<strong>Hands-On Execution Across Multi-Branch Retail, Healthcare, Education & F&B.</strong> Bringing <strong>15+ enterprise chains</strong> on board at Payoo and running international tender outreach at ProScan taught me a simple rule: businesses don't buy payment terminals—they buy smoother operations. Whether it's helping a 30+ showroom EV chain close high-ticket sales through 0% instalments, or getting a Japanese-standard clinic live with multi-card acceptance and clean daily reporting, I measure my work by two things: <strong>higher checkout conversion at the point of sale</strong> and <strong>faster, automated T+1 reconciliation for the finance team</strong>.",
+      "<strong>Clear Numbers, Straight Talk, and Full Ownership.</strong> Behind every Power BI dashboard, merchant scoring model, and commercial proposal I build is a simple commitment: be someone partners and colleagues can count on. I use data modeling to take the guesswork out of pipeline forecasting, and when I'm off the clock, street photography keeps me curious and observant of how people interact in everyday life. If you're looking for a B2B & FinTech professional who can both read the numbers and close the deal, I'd love to connect."
     ],
     "skills": [
       {
-        "category": "Fintech & Payment Infrastructure",
+        "category": "FinTech & Payment Solutions",
         "items": [
-          "Omnichannel Solutions (SmartPOS, SoftPOS, QR)",
-          "0% Instalment Integration & Merchant Pricing (MDR)",
-          "Payment Gateway & Pay-by-Link",
-          "Reconciliation & Settlement Workflows",
-          "Enterprise Merchant Acquisition"
+          "Omnichannel Payments (SmartPOS, SoftPOS, Dynamic QR)",
+          "0% Credit Instalment & Merchant Pricing (MDR)",
+          "Payment Gateway, Pay-by-Link & VietQR Global",
+          "Automated T+1 Reconciliation & Settlement Flows",
+          "Enterprise Merchant Acquisition & Onboarding"
         ]
       },
       {
-        "category": "Data Analytics & Automation",
+        "category": "Commercial Analytics & Automation",
         "items": [
-          "Commercial Data Storytelling",
-          "Power BI (Visualizations, DAX)",
-          "Advanced Excel & Data Modeling",
-          "Workflow Automation (Apps Script, Webhooks)",
-          "Sales Funnel Conversion Analysis"
+          "Power BI & DAX (Pipeline & GMV Dashboards)",
+          "Advanced Excel Modeling & Forecasting",
+          "SAS® Statistical & Predictive Analysis",
+          "Sales Funnel & Conversion Analytics",
+          "Workflow Automation (Google Apps Script, REST API)"
         ]
       },
       {
-        "category": "Strategic B2B Sales & Leadership",
+        "category": "Enterprise B2B Sales & Account Management",
         "items": [
-          "Enterprise Lead Qualification",
-          "Value-Led Proposal Creation",
-          "Cross-functional Alignment (IT, Ops, Legal)",
-          "C-Level Negotiation",
-          "Multicultural Communication"
+          "Consultative Solution Selling & C-Level Pitching",
+          "Enterprise Lead Qualification (Tier 1–3 Matrix)",
+          "Bilingual Commercial Proposals & Tenders (EN/VI)",
+          "Cross-Functional Alignment (IT, Legal, Ops, Finance)",
+          "Key Account Growth & Cross-Selling"
         ]
       }
     ],
@@ -67,11 +67,11 @@
         "logoUrl": "payoo.jpg",
         "role": "Business Development Executive",
         "bullets": [
-          "<strong>Payment Infrastructure Expansion:</strong> Secured and onboarded <strong>15+ major enterprise accounts</strong> across retail, F&B, and lifestyle chains, driving omnichannel payment adoption.",
-          "<strong>Portfolio Optimization & Revenue Growth:</strong> Managed and cross-sold solutions across existing merchant accounts, increasing periodic transaction volume by <strong>25%</strong>.",
-          "<strong>Data-Driven Account Segmentation:</strong> Formulated account tiering criteria (Tier 1–3) based on GMV scale and network footprint, boosting lead qualification speed by <strong>30%</strong>.",
-          "<strong>Strategic Enterprise Closing:</strong> Pitched bespoke payment infrastructure solutions directly to C-level executives and senior leadership, securing enterprise contracts scaling up to <strong>~1.2B VND</strong> in projected annual GMV.",
-          "<strong>Cross-Functional Operations:</strong> Streamlined contract turnaround by <strong>20%</strong> and collaborated with technical teams to ensure seamless merchant onboarding and <strong>100%</strong> stability across all payment touchpoints."
+          "<strong>Enterprise Merchant Acquisition:</strong> Sourced, pitched, and onboarded <strong>15+ multi-branch enterprise chains</strong> across retail, F&B, healthcare, and education—managing the full cycle from prospecting to live terminals at the counter.",
+          "<strong>Account Growth & Cross-Selling:</strong> Grew periodic transaction volume by <strong>25%</strong> across existing merchants by identifying operational gaps and introducing 0% instalments, Pay-by-Link, and dynamic QR.",
+          "<strong>Data-Driven Pipeline Tiering:</strong> Built a Tier 1–3 merchant scoring framework based on projected GMV, store footprint, and integration readiness, cutting initial lead qualification time by <strong>30%</strong>.",
+          "<strong>C-Level Consultative Closing:</strong> Presented tailored payment architectures and MDR fee structures directly to business owners and C-level executives, closing contracts with up to <strong>~1.2B VND</strong> in projected annual GMV.",
+          "<strong>Cross-Functional Onboarding & SLA:</strong> Shortened contract turnaround by <strong>20%</strong> by coordinating closely across Legal, IT, and Operations, ensuring smooth rollouts and <strong>100%</strong> terminal uptime across all merchant touchpoints."
         ]
       },
       {
@@ -80,10 +80,10 @@
         "logoUrl": "proscan.jpeg",
         "role": "Business Development Executive",
         "bullets": [
-          "Identified and mapped <strong>70+ international B2B accounts</strong> across regional markets, evaluating distributor profiles to expand the overseas pipeline.",
-          "Initiated <strong>15–20 qualified outbound contacts</strong> weekly, pitching ODM security screening solutions to prospective buyers and tender contractors.",
-          "Qualified <strong>25+ high-intent leads</strong> with an <strong>80% conversion rate</strong> to discovery meetings, seamlessly handing over to senior directors for closing.",
-          "Delivered <strong>10+ tailored English commercial proposals</strong> and technical quotations (up to <strong>$12K+ USD/deal</strong>), ensuring full SLA compliance."
+          "Mapped and evaluated <strong>70+ international B2B accounts</strong>—including regional distributors, security system integrators, and tender contractors—across Africa, Europe, Oceania, and the Middle East.",
+          "Initiated <strong>15–20 targeted B2B outreach conversations</strong> per week, introducing ODM/OEM security screening equipment to overseas procurement leads.",
+          "Qualified <strong>25+ high-intent international prospects</strong>, achieving an <strong>80% conversion rate</strong> into discovery meetings with senior directors for commercial closing.",
+          "Drafted <strong>10+ bespoke English commercial proposals</strong> and technical quotations (up to <strong>$12,000+ USD per deal</strong>) aligned with international tender specifications and SLA timelines."
         ]
       },
       {
@@ -92,9 +92,9 @@
         "logoUrl": "pihome.png",
         "role": "Business Development Intern",
         "bullets": [
-          "Identified and qualified <strong>60+ potential leads</strong> through market research and prospecting.",
-          "Scheduled <strong>3–5 qualified meetings/week</strong>, contributing to seller engagement pipeline.",
-          "Prepared demo decks and reports for stakeholder presentations."
+          "Researched and qualified <strong>60+ prospective B2B accounts</strong> through targeted market mapping and outbound prospecting.",
+          "Booked <strong>3–5 qualified discovery meetings per week</strong>, keeping the sales team's consultation pipeline consistently active.",
+          "Prepared pitch decks, product demo materials, and weekly pipeline tracking reports for stakeholder reviews."
         ]
       },
       {
@@ -103,9 +103,9 @@
         "logoUrl": "oeson.jpeg",
         "role": "Sales and Marketing Intern",
         "bullets": [
-          "Conducted competitor and market analysis to inform sales strategy.",
-          "Created weekly performance reports for multi-channel marketing campaigns.",
-          "Supported team presentations and proposal development for business pitches."
+          "Conducted competitor benchmarking and market research to support B2B sales positioning in the Australian market.",
+          "Built weekly campaign performance reports across digital channels to track lead generation efficiency.",
+          "Collaborated with the sales team to prepare client pitch decks and commercial proposals."
         ]
       }
     ],
@@ -144,7 +144,7 @@
         "company": "Payoo (VietUnion)",
         "badge": "Enterprise Payment Infrastructure",
         "logo": "payoo.jpg",
-        "summary": "I specialize in engineering enterprise payment architectures, rolling out SmartPOS networks, and designing automated reconciliation workflows that eliminate friction for multi-location retail chains.",
+        "summary": "At Payoo, I work with multi-branch retail, healthcare, education, and hospitality chains to solve two practical problems: helping their customers pay more easily at the point of sale (SmartPOS, 0% instalments, Pay-by-Link, VietQR Global) and helping their finance teams reconcile multi-store revenue automatically every morning.",
         "metrics": [
           {
             "num": "15+",
@@ -163,16 +163,16 @@
           {
             "title": "Closing Omnichannel Payment Infrastructure with Xe Điện Việt Thanh",
             "tag": "High-Ticket Retail & 0% Instalment",
-            "description": "Eliminated checkout friction for nationwide EV retail (ticket size VND 15M–45M across 30+ showrooms) via 0% credit card instalments, remote Pay-by-link checkouts, and centralized multi-branch reconciliation.",
+            "description": "Removed upfront price barriers across 30+ nationwide EV showrooms (ticket size VND 15M–45M) by combining in-store SmartPOS, 0% credit card instalments, remote Pay-by-Link, and centralized T+1 branch reconciliation.",
             "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh",
             "kpis": [
               "30+ Showrooms",
               "15M–45M VND Ticket",
               "0% Instalment + Link"
             ],
-            "challenge": "With electric vehicle prices ranging from VND 15M to 45M across 30+ showrooms, many customers—especially parents purchasing vehicles for students—hesitated to pay the full amount upfront. Meanwhile, the head-office accounting team needed a more streamlined way to consolidate daily transactions across branches.",
-            "solution": "After assessing the chain's operational workflow, I collaborated with internal technical and operations teams to propose an integrated setup: in-store SmartPOS terminals, 0% credit card instalment plans across 30+ issuing banks, and remote Pay-by-Link checkout so parents could complete payments conveniently from home.",
-            "impact": "Provided showroom sales staff with a practical financing option to help customers complete purchases more comfortably, while standardizing automated T+1 reconciliation reports to reduce manual workload for the accounting team.",
+            "challenge": "With vehicle prices ranging from VND 15M to 45M across 30+ showrooms, customers frequently hesitate when facing a substantial upfront lump-sum payment, resulting in prolonged decision cycles and showroom drop-offs. Concurrently, the central finance team needed an automated framework to consolidate and reconcile daily transaction flows across decentralized branches.",
+            "solution": "Diagnosed showroom workflows to engineer a comprehensive payment infrastructure: deployed in-store SmartPOS terminals, integrated 0% credit card instalment solutions across 30+ issuing banks to ease checkout affordability, and provided remote Pay-by-Link capabilities for flexible customer payments.",
+            "impact": "Equipped showroom sales teams with a practical consultative closing tool to accelerate customer purchasing decisions and drive high-ticket conversion, while standardizing automated T+1 settlement reports to streamline central treasury reconciliation.",
             "stack": [
               "SmartPOS",
               "0% Credit Instalment",
@@ -184,16 +184,16 @@
           {
             "title": "Enterprise Account Tiering & Merchant Acquisition Model",
             "tag": "Commercial Pipeline Strategy",
-            "description": "Architected Tier 1–3 qualification criteria based on merchant GMV velocity and footprint, speeding up onboarding verification by 30% and securing anchor accounts with projected annual GMV of ~1B VND.",
+            "description": "Built a Tier 1–3 merchant scoring framework based on GMV potential and store footprint, cutting lead qualification time by ~30% and helping secure anchor enterprise chains with ~1B VND in projected annual GMV.",
             "link": "#",
             "kpis": [
               "~30% Faster Qualification",
               "Tier 1–3 Matrix",
               "~1B+ VND Anchor GMV"
             ],
-            "challenge": "In B2B merchant acquisition, treating multi-branch enterprise chains and single-store businesses with the same qualification workflow often leads to prolonged onboarding cycles and inefficient allocation of technical support.",
-            "solution": "Applying structured data analysis, I built a Tier 1–3 merchant evaluation framework based on projected GMV, store footprint, average ticket size (AOV), and integration readiness—allowing the team to propose appropriate MDR pricing and technical support early in the consultation.",
-            "impact": "Brought clearer prioritization to the B2B sales pipeline, shortened initial lead qualification time by roughly 30%, and supported smoother contract progression with multi-branch enterprise accounts.",
+            "challenge": "When a 30-store retail chain and a single-location shop go through the exact same qualification and onboarding workflow, two things happen: large enterprise deals get slowed down waiting for custom pricing and technical support, while the sales team spends disproportionate time on low-volume accounts.",
+            "solution": "Using historical pipeline data, I built a Tier 1–3 merchant scoring matrix that evaluates prospects upfront across four criteria: projected GMV, branch footprint, average order value (AOV), and technical integration needs. Each tier was mapped to a pre-aligned MDR fee range and support SLA right from the first discovery call.",
+            "impact": "Gave the commercial team a clear way to prioritize high-value accounts, reduced initial lead qualification time by roughly 30%, and kept contract negotiations moving smoothly for anchor deals around ~1B VND in annual GMV.",
             "stack": [
               "GMV Scoring Matrix",
               "MDR Pricing Structure",
@@ -202,18 +202,18 @@
             ]
           },
           {
-            "title": "Last-Mile Deal Execution & Onboarding: DYM Medical Center Vietnam",
+            "title": "Last-Mile Deal Execution & Go-Live: DYM Medical Center Vietnam",
             "tag": "Healthcare Payment Infrastructure",
-            "description": "Successfully executed the last-mile onboarding for DYM Medical Center, integrating comprehensive payment acceptance solutions to streamline patient checkout flows and centralize financial reconciliation for medical services.",
+            "description": "Led the end-to-end onboarding for DYM Medical Center—aligning Legal, Tech, and Operations to launch multi-card acceptance (JCB, Visa, Mastercard) and accurate daily medical billing reconciliation.",
             "link": "https://quangtritc1805.wixsite.com/website/post/last-mile-deal-execution-onboarding-payment-acceptance-for-dym-medical-center-vietnam",
             "kpis": [
               "Japanese Clinic Standard",
               "Reliable Go-Live",
               "Multi-Channel Acceptance"
             ],
-            "challenge": "As a Japanese-standard clinic serving expatriates and corporate clients, DYM Medical Center required high accuracy in medical fee collection, reliable acceptance of international cards (JCB, Visa, Mastercard), and clear daily financial reporting.",
-            "solution": "Acting as the point of coordination between the clinic and internal Legal, Technical, and Operations teams, I facilitated contract review, organized SmartPOS installation at reception counters, and guided cashier staff through hands-on operational workflows prior to go-live.",
-            "impact": "Ensured a smooth, reliable system launch that simplified counter checkout for international patients and met the clinic management's daily reconciliation standards.",
+            "challenge": "In enterprise B2B, getting a signature on the contract is only half the battle—a deal only generates value when terminals are live and transacting. As a Japanese-standard clinic serving expats and corporate clients, DYM Medical Center required spotless billing accuracy, reliable acceptance of JCB, Visa, and Mastercard, and daily reconciliation reports that matched their strict internal accounting rules.",
+            "solution": "I acted as the single point of coordination between DYM's management and our internal Legal, Technical, and Operations teams—working through contract clauses, scheduling SmartPOS installations at reception counters, and running hands-on training sessions with the clinic's cashiers before go-live day.",
+            "impact": "Delivered a smooth, zero-downtime launch. International patients now check out quickly using their preferred cards or QR, and the clinic's finance team receives clean, standardized daily settlement reports.",
             "stack": [
               "SmartPOS",
               "International Cards (JCB/Visa)",
@@ -222,18 +222,18 @@
             ]
           },
           {
-            "title": "Unlocking Enrollment Conversion: Education Payment Solutions",
-            "tag": "EdTech & Payment Solutions",
-            "description": "Led sourcing, pitching, and closing strategies to deploy tailored payment solutions (0% instalments & payment links) for an educational center. Focused on reducing checkout drop-offs for high-value courses and streamlining admission workflows.",
+            "title": "Removing the Upfront Tuition Barrier: Education Payment Solutions",
+            "tag": "EdTech & Enrollment Conversion",
+            "description": "Sourced, pitched, and closed an education center on combining 0% credit card instalments with remote Pay-by-Link—reducing enrollment drop-offs on high-value courses and simplifying tuition tracking.",
             "link": "https://quangtritc1805.wixsite.com/website/post/unlocking-enrollment-conversion-sourcing-pitching-and-closing-an-education-payment-solution-with",
             "kpis": [
               "Long-Term Courses",
               "Remote Link Checkout",
               "0% Tuition Instalment"
             ],
-            "challenge": "For educational centers offering long-term study programs, prospective students and parents often hesitate at the final registration step due to the financial pressure of paying full tuition in a single lump sum.",
-            "solution": "By listening closely to the admissions team's workflow challenges, I proposed combining 0% credit card instalments with remote Pay-by-Link checkouts, and worked with the center to prepare concise reference guides so counselors could clearly explain flexible tuition options.",
-            "impact": "Lowered upfront financial barriers for learners, gave admissions counselors a practical option when discussing full-course packages, and simplified real-time tuition tracking for the finance team.",
+            "challenge": "For education centers selling long-term study programs, prospects often love the curriculum during counseling but stall at the final step because paying the full tuition in a single lump sum feels too heavy upfront.",
+            "solution": "After sitting down with the admissions team to understand where consultations typically lost momentum, I proposed pairing 0% credit card instalments with remote Pay-by-Link checkouts. I also worked with their team to create a simple, one-page guide so admissions counselors could explain monthly tuition splits clearly and confidently.",
+            "impact": "Made full-course tuition far more approachable for learners, gave admissions staff a practical financial option to save hesitant enrollments, and allowed the finance team to track incoming tuition payments in real time.",
             "stack": [
               "0% Tuition Instalment",
               "Pay-by-Link",
@@ -242,18 +242,18 @@
             ]
           },
           {
-            "title": "Closing TDP IELTS: Turning Payment Options into Enrollment Closers",
-            "tag": "EdTech & High-Ticket Conversion",
-            "description": "Strategized and deployed a tailored payment infrastructure for TDP IELTS. Transformed standard payment options into a powerful sales tool to boost high-ticket course enrollments and eliminate end-of-funnel friction.",
+            "title": "Closing TDP IELTS: Turning Payment Options into an Enrollment Closer",
+            "tag": "EdTech & Consultative B2B Selling",
+            "description": "Pitched and launched a tailored payment setup for TDP IELTS—repositioning 0% tuition instalments from a back-office payment method into a front-line enrollment closing tool.",
             "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-tdp-ielts-turning-a-payment-option-into-an-enrollment-closer",
             "kpis": [
               "TDP IELTS Center",
               "3–12 Month Split",
               "Consultative B2B Pitch"
             ],
-            "challenge": "Intensive IELTS preparation courses represent a sizable investment for university students and young professionals. Relying mainly on traditional bank transfers meant the center had limited ways to offer structured monthly payment plans.",
-            "solution": "Rather than focusing only on technical features during meetings with TDP IELTS management, I presented a practical cost-benefit analysis showing how 0% instalment plans could support enrollment consultations, alongside a fee structure aligned with their course packages.",
-            "impact": "Enabled the center to offer flexible 3-to-12-month tuition split options, making full-pathway IELTS courses more accessible to students while modernizing counter checkout operations.",
+            "challenge": "Intensive IELTS pathway courses are a significant financial commitment for university students and young professionals. Because TDP IELTS relied primarily on standard bank transfers, counselors had no structured way to offer monthly payment plans—causing some learners to settle for shorter courses or delay enrollment.",
+            "solution": "Instead of walking into meetings with TDP's management to talk about terminal specs, I presented a straightforward commercial case: how offering 3-to-12-month 0% instalments could help their counselors close more full-pathway packages, paired with an MDR fee structure tailored to their course tiers.",
+            "impact": "Gave TDP IELTS a flexible 3-to-12-month tuition split option that made full-pathway courses accessible to more learners, while modernizing counter checkout and daily fee reconciliation.",
             "stack": [
               "0% Instalment Conversion",
               "SmartPOS",
@@ -263,17 +263,17 @@
           },
           {
             "title": "Behind the Scenes: Onboarding Jalux Taseco (JDV) & VietQR Global",
-            "tag": "Cross-Border Payment & Airport Retail",
-            "description": "Managed the end-to-end onboarding of Jalux Taseco (JDV), deploying VietQR Global to capture cross-border tourist spending. Streamlined payment acceptance at high-traffic airport retail locations to boost international transaction volumes.",
+            "tag": "Cross-Border Payments & Airport Retail",
+            "description": "Managed the end-to-end onboarding for Jalux Taseco (JDV) across international airport duty-free stores, rolling out VietQR Global and SmartPOS to capture foreign tourist spending at high speed.",
             "link": "https://quangtritc1805.wixsite.com/website/post/behind-the-scenes-of-a-major-deal-onboarding-jalux-taseco-jdv-and-rolling-out-vietqr-global",
             "kpis": [
               "Airport Duty-Free Retail",
               "VietQR Global",
               "Cross-Border Acceptance"
             ],
-            "challenge": "Operating duty-free and travel retail stores across international airports, Jalux Taseco (JDV) serves high volumes of international passengers on tight boarding schedules, requiring fast counter processing and broad cross-border payment acceptance.",
-            "solution": "Working closely with project teams on both sides, I coordinated the rollout of SmartPOS terminals integrated with VietQR Global alongside international card schemes, allowing foreign travelers to scan and pay using their home banking apps.",
-            "impact": "Expanded convenient payment choices for international travelers at the airport, shortened counter wait times during peak flight hours, and unified transaction reporting for store management.",
+            "challenge": "Operating duty-free and travel retail stores inside international airports, Jalux Taseco (JDV) serves travelers who are often minutes away from boarding. Every second at the checkout counter counts, and stores needed a reliable way to accept both international cards and foreign mobile banking apps without slowing down the line.",
+            "solution": "Working closely with project teams on both sides, I coordinated the rollout of SmartPOS terminals integrated with VietQR Global alongside international card schemes—allowing foreign travelers to simply open their home country's banking app, scan the QR code, and pay at the counter.",
+            "impact": "Expanded cross-border payment options for international passengers, shortened checkout queues during peak flight windows, and unified multi-store transaction reporting for JDV's management team.",
             "stack": [
               "VietQR Global",
               "Cross-Border QR",
@@ -283,17 +283,17 @@
           },
           {
             "title": "Pitching Payment Solutions to a Vet Hospital: The Pet Joy Case",
-            "tag": "Healthcare Payment Infrastructure",
-            "description": "Pitched and structured a tailored payment infrastructure for Pet Joy Veterinary Hospital. Focused on integrating seamless checkout options to handle high-value veterinary treatments and streamline clinic operations.",
+            "tag": "Healthcare & Veterinary Payments",
+            "description": "Designed and deployed an omnichannel payment setup for Pet Joy Veterinary Hospital—combining reception SmartPOS/QR with remote Pay-by-Link to handle unplanned emergency and inpatient care bills.",
             "link": "https://quangtritc1805.wixsite.com/website/post/pitching-payment-solutions-to-a-vet-hospital-the-pet-joy-case",
             "kpis": [
               "Multi-Branch Vet Clinic",
               "Inpatient & Emergency Care",
               "POS & Remote Link"
             ],
-            "challenge": "At Pet Joy Veterinary Hospital, emergency treatments and multi-day inpatient care often result in unplanned expenses for pet owners, creating a need for flexible payment acceptance both at the reception desk and remotely.",
-            "solution": "Following a review of the clinic's front-desk workflow, I structured a solution combining contactless SmartPOS/QR acceptance at reception with remote payment links that staff could easily share with pet owners via messaging apps.",
-            "impact": "Smoothed out fee collection across Pet Joy branches, reduced manual bank-transfer screenshot checks for receptionists, and offered pet owners a more convenient checkout experience.",
+            "challenge": "At Pet Joy Veterinary Hospital, emergency surgeries and multi-day inpatient stays often leave pet owners facing unexpected bills—frequently while they are away from the clinic. Meanwhile, front-desk staff were spending valuable time manually checking bank-transfer screenshots across messaging apps.",
+            "solution": "After observing how the reception desk handled checkouts and remote deposits, I structured a setup combining contactless SmartPOS and dynamic QR at the counter with instant Pay-by-Link URLs that receptionists could send directly to pet owners via messaging apps.",
+            "impact": "Made paying for urgent care smoother and more flexible for pet owners, eliminated manual screenshot verification for receptionists, and standardized fee reconciliation across Pet Joy's branches.",
             "stack": [
               "SmartPOS",
               "Contactless & QR",
@@ -303,17 +303,17 @@
           },
           {
             "title": "Pitching F&B Infrastructure: Onboarding Utage Japanese Restaurant & Bar",
-            "tag": "F&B Payment Infrastructure",
-            "description": "Approached, pitched, and successfully onboarded Utage Japanese Restaurant & Bar. Tailored a robust F&B payment infrastructure to accelerate counter checkout speed, secure multi-channel transactions, and streamline daily settlement.",
+            "tag": "F&B & Hospitality Payments",
+            "description": "Prospected, pitched, and onboarded Utage Japanese Restaurant & Bar—deploying portable wireless SmartPOS terminals to speed up tableside corporate card checkouts and late-night shift settlements.",
             "link": "https://quangtritc1805.wixsite.com/website/post/pitching-f-b-infrastructure-how-i-approached-and-onboarded-utage-japanese-restaurant-bar",
             "kpis": [
               "Japanese Fine Dining",
               "Tableside Checkout",
               "Corporate Cards & QR"
             ],
-            "challenge": "Utage Japanese Restaurant & Bar serves corporate groups and expatriate diners during busy evening hours with high average bill sizes, requiring reliable wireless terminals for tableside payment and fast late-night shift settlement.",
-            "solution": "I prospected the account, assessed their service workflow, and coordinated the deployment of portable wireless SmartPOS terminals supporting corporate cards (JCB, Visa, Mastercard), Apple Pay, and dynamic QR codes on a single device.",
-            "impact": "Enabled staff to complete tableside checkouts smoothly, minimized manual amount-entry errors, and helped cashiers wrap up end-of-shift settlements more quickly at night.",
+            "challenge": "Utage Japanese Restaurant & Bar caters to corporate groups and expatriate diners during busy evening service with high average bill sizes. Guests expect discreet, reliable tableside payment via corporate cards (especially JCB, Visa, and Mastercard), while cashiers needed a faster way to close out late-night shifts without manual entry errors.",
+            "solution": "I prospected the restaurant directly, observed their evening floor workflow, and coordinated the rollout of portable wireless SmartPOS terminals that support JCB, Visa, Mastercard, Apple Pay, and dynamic QR on a single handheld device.",
+            "impact": "Allowed service staff to complete tableside checkouts smoothly in seconds, reduced manual key-in mistakes, and helped cashiers wrap up end-of-shift settlements much faster at closing time.",
             "stack": [
               "Portable SmartPOS",
               "JCB / Visa / Mastercard",
@@ -327,21 +327,21 @@
         "company": "ProScan Global",
         "badge": "Security Screening & Cross-Border Tech",
         "logo": "proscan.jpeg",
-        "summary": "Managed an international market research team, analyzing demand for ODM/OEM security screening equipment, evaluating distributor economics, and structuring commercial tender proposals across Africa, Belgium, Oceania, and Qatar.",
+        "summary": "At ProScan Global, I worked with the international market research and B2B sales team to open overseas pipelines for ODM/OEM security screening equipment—sizing regional demand, evaluating local distributor economics, and writing tailored English tender proposals across Africa, Belgium, Oceania, and Qatar.",
         "projects": [
           {
-            "title": "Africa Market Deep Insight and Growth Opportunity Report",
+            "title": "Africa Market Sizing & B2B Distributor Strategy ($87M–$156M TAM)",
             "tag": "Emerging Market Expansion",
-            "description": "In-depth market capacity analysis evaluating USD 87M–156M addressable demand for Walk-through Metal Detectors across Africa, defining urban infrastructure security needs and budget-aligned ODM product positioning.",
+            "description": "Quantified USD 87M–156M in addressable demand for Walk-Through Metal Detectors across Africa, mapping regional distributor capabilities and matching tiered ODM product lines to local public procurement budgets.",
             "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing",
             "kpis": [
               "$87M–$156M Market Size",
               "Regional Distributor Map",
               "ODM Tiered Positioning"
             ],
-            "challenge": "Urban infrastructure development across Africa has created steady demand for Walk-Through Metal Detectors (WTMD), yet regional markets vary widely in public procurement budgets, operating environments, and local distributor capabilities.",
-            "solution": "Working with the market research team, I analyzed market sizing data ($87M–$156M addressable demand), categorized prospective regional distributors, and outlined a tiered ODM product lineup tailored to local budget constraints.",
-            "impact": "Provided management with a clear, data-backed market overview and a practical target list for outbound B2B distributor engagement across key African markets.",
+            "challenge": "Rapid urban infrastructure growth across Africa has driven steady demand for Walk-Through Metal Detectors (WTMD). However, approaching Africa as a single market is a common trap: public procurement budgets, power/environmental conditions, and local distributor capabilities vary dramatically across regions.",
+            "solution": "Collaborating with the market research team, I analyzed regional trade and tender data to size addressable demand ($87M–$156M USD), profiled prospective security distributors by country, and structured a tiered ODM product lineup aligned with local budget realities.",
+            "impact": "Gave leadership a clear, data-backed market entry roadmap and equipped the outbound B2B sales team with a prioritized distributor target list across key African markets.",
             "stack": [
               "Market Sizing (TAM/SAM)",
               "Distributor Evaluation",
@@ -350,18 +350,18 @@
             ]
           },
           {
-            "title": "Belgium Market Deep Insight and Growth Opportunity Report",
-            "tag": "European Market & Regulatory Compliance",
-            "description": "Comprehensive market intelligence assessing Belgium and European Union regulatory compliance (CE/EN standards), high-end security screening supply chains, and distributor-led market entry frameworks.",
+            "title": "Belgium & EU Market Entry: Regulatory Compliance & Integrator Channel",
+            "tag": "European Market & CE/EN Compliance",
+            "description": "Mapped EU regulatory requirements (CE/EN standards), benchmarked competitor pricing, and structured an OEM/ODM partnership model targeting security system integrators in Belgium.",
             "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing",
             "kpis": [
               "Belgium & EU Market",
               "CE & EN Standards",
               "B2B Integrator Channel"
             ],
-            "challenge": "Belgium and the broader EU market maintain steady demand for security screening across logistics hubs and public institutions, but require strict adherence to CE/EN technical certifications and regulatory compliance.",
-            "solution": "Collaborating with the research team, I reviewed EU certification requirements, benchmarked competitor pricing structures, and drafted an OEM/ODM partnership approach aimed at Belgian security system integrators.",
-            "impact": "Clarified pre-sale compliance requirements and helped the international sales team engage European security contractors with well-prepared technical documentation.",
+            "challenge": "Belgium and the broader European Union offer consistent high-value demand for security screening across logistics hubs and government facilities—but European buyers will not entertain a commercial pitch unless CE/EN technical certifications and supply-chain compliance are fully verified upfront.",
+            "solution": "Working with the research team, I audited the mandatory EU certification standards, benchmarked our pricing and technical specs against incumbent European suppliers, and designed a channel entry strategy focused on partnering with established Belgian security system integrators.",
+            "impact": "Clarified the exact pre-sale compliance checklist required for Europe and enabled the international sales team to approach Belgian integrators with credible, standards-ready technical documentation.",
             "stack": [
               "EU Regulatory Standards",
               "Competitor Benchmarking",
@@ -370,18 +370,18 @@
             ]
           },
           {
-            "title": "Oceania Market Deep Insight & Qatar Tender Strategy",
-            "tag": "APAC & Middle East",
-            "description": "Evaluated public security modernization across Australia and New Zealand, alongside strategic analysis of Qatar infrastructure tenders, structuring long-term cooperative value models with regional contractors.",
+            "title": "Oceania & Qatar Tender Pipeline: From Prospecting to Discovery Meetings",
+            "tag": "APAC & Middle East Tenders",
+            "description": "Tracked public and commercial security upgrades across Australia, New Zealand, and Qatar—qualifying regional contractors and writing tailored English commercial proposals ($12K+ USD scope) with an ~80% meeting conversion rate.",
             "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing",
             "kpis": [
               "Oceania & Qatar",
               "$12K+ USD Quotation Scope",
               "~80% Meeting Conversion"
             ],
-            "challenge": "Security modernization projects for commercial venues and public infrastructure in Australia, New Zealand, and Qatar require detailed English commercial proposals that align closely with contractor technical specifications and delivery timelines.",
-            "solution": "I coordinated with the team to research public and commercial project pipelines across Oceania and Qatar, qualified prospective tender contractors, and prepared customized English commercial proposals and technical quotations ($12K+ USD scope).",
-            "impact": "Helped qualify 25+ high-intent international leads, achieving an ~80% conversion rate to discovery meetings with senior management for deal progression.",
+            "challenge": "Winning B2B security equipment tenders for commercial venues and public infrastructure in Australia, New Zealand, and Qatar requires more than cold outreach—contractors expect detailed English commercial proposals that match their exact technical specs, Incoterms, and delivery schedules.",
+            "solution": "I worked with the team to monitor upcoming infrastructure and venue security projects across Oceania and Qatar, qualified prospective tender contractors, and personally drafted customized English commercial proposals and technical quotations ($12K+ USD per deal).",
+            "impact": "Qualified 25+ high-intent international accounts and converted roughly 80% of them into discovery meetings with senior directors to advance deal negotiations.",
             "stack": [
               "International B2B Tenders",
               "Commercial Proposals",
@@ -394,32 +394,32 @@
     },
     "dataProjects": [
       {
-        "title": "Automated Market Intelligence & News Aggregator",
-        "category": "Automation & Webhook Pipeline",
+        "title": "Automated FinTech Market Intelligence Digest",
+        "category": "Workflow Automation & API Pipeline",
         "tools": "Google Apps Script, REST API, Gmail API",
-        "description": "Architected an automated news monitoring pipeline fetching FinTech market intelligence within 24–72 hours, eliminating duplicate feeds, and distributing structured executive digests via email."
+        "description": "Built an automated script that pulls FinTech and payment industry updates every 24–72 hours, filters out duplicate articles, and emails a clean executive briefing to the team—saving hours of manual news scanning each week."
       },
       {
-        "title": "Merchant Performance & Pipeline Conversion Tracker",
-        "category": "Commercial Dashboard",
+        "title": "Enterprise B2B Pipeline & Merchant Tiering Dashboard",
+        "category": "Commercial BI & Revenue Analytics",
         "tools": "Power BI, DAX, Advanced Excel Modeling",
-        "description": "Constructed multi-tier account segmentation (Tier 1–3) tracking enterprise merchant accounts, visualizing stage-by-stage pipeline velocity and lead qualification bottlenecks."
+        "description": "Designed an interactive Power BI dashboard tracking enterprise merchants across Tier 1–3 segments—giving clear visibility into stage-by-stage conversion rates, projected GMV, and onboarding bottlenecks."
       }
     ],
     "projects": [
       {
-        "tag": "Data Strategy & Statistical Analysis",
-        "title": "Data Governance & Strategic Decision-Making Frameworks",
-        "description": "An analytical review of how organizations can identify statistical limitations and sampling biases in customer datasets to make more objective commercial decisions.",
+        "tag": "Data Quality & Commercial Decision-Making",
+        "title": "Controlling Sampling Bias in Commercial & Customer Analytics",
+        "description": "A practical framework for spotting incomplete CRM logs, survivorship bias, and skewed customer samples before they lead to costly commercial decisions.",
         "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis",
         "kpis": [
           "Data Quality Audit",
           "Sampling Bias Control",
           "Objective Decision-Making"
         ],
-        "challenge": "In commercial operations, teams sometimes rely on incomplete CRM logs or unrepresentative customer samples when evaluating campaign performance, which can lead to skewed conclusions.",
-        "solution": "Drawing on methodologies from my Master of Business Analytics at the University of Wollongong and SAS® training, I outlined a practical checklist to review data completeness, identify survivorship or selection bias, and cross-check assumptions before presenting recommendations.",
-        "impact": "Helps bridge quantitative analysis and day-to-day business planning, ensuring that commercial proposals and resource allocation are grounded in reliable data.",
+        "challenge": "In fast-moving commercial teams, campaign evaluations and product pitches are often built on incomplete CRM logs or feedback from only the most active customers—quietly introducing bias that can skew budget and sales decisions.",
+        "solution": "Applying statistical methodologies from my Master of Business Analytics at the University of Wollongong and SAS® training, I put together a practical data-audit checklist to verify sample representativeness, flag survivorship and selection bias, and stress-test assumptions before recommendations reach management.",
+        "impact": "Bridges academic statistical rigor with day-to-day B2B planning—ensuring commercial proposals, sales targets, and resource allocation are backed by reliable numbers.",
         "stack": [
           "Data Governance",
           "SAS® Statistical Modeling",
@@ -429,17 +429,17 @@
       },
       {
         "tag": "Commercial BI & Funnel Analytics",
-        "title": "B2B Sales Funnel Conversion & Quantitative Lead Scoring Analysis",
-        "description": "Applied Power BI, DAX, and structured data modeling to track stage-by-stage B2B deal progression, identify onboarding bottlenecks, and support merchant tiering.",
+        "title": "B2B Sales Funnel Conversion & Quantitative Lead Scoring Model",
+        "description": "Used Power BI, DAX, and Excel data modeling to track stage-by-stage B2B deal velocity, pinpoint onboarding bottlenecks, and power the Tier 1–3 merchant scoring framework.",
         "url": "#",
         "kpis": [
           "Power BI & DAX",
           "Stage-by-Stage Funnel",
           "+30% Qualification Speed"
         ],
-        "challenge": "As the number of prospective enterprise merchants grows, tracking deal stages across spreadsheets makes it difficult to spot where leads slow down—whether during initial qualification, fee negotiation, or contract review.",
-        "solution": "Built an analytical tracking model using Power BI, DAX measures, and Excel data modeling to monitor conversion rates across each sales stage and group merchants into Tier 1–3 segments based on GMV potential and store count.",
-        "impact": "Provided clear visibility into pipeline health, helped shorten lead qualification time by roughly 30%, and supported more accurate monthly transaction volume forecasting.",
+        "challenge": "As our enterprise prospect list grew, tracking deals across static spreadsheets made it hard to see where momentum was actually dropping—whether during initial qualification, MDR fee negotiation, legal review, or technical setup.",
+        "solution": "I built an end-to-end funnel tracking model using Power BI, DAX measures, and Excel data modeling to measure conversion rates and turnaround times at every stage, while scoring merchants into Tier 1–3 buckets based on GMV potential and branch count.",
+        "impact": "Gave the team clear visibility into pipeline health, helped cut initial lead qualification time by roughly 30%, and made monthly transaction volume (GMV) forecasting significantly more accurate.",
         "stack": [
           "Power BI",
           "DAX",
@@ -449,22 +449,22 @@
       }
     ],
     "labels": {
-      "overview": "Professional Philosophy",
-      "capabilities": "Core Capabilities",
-      "careerPath": "Work Experience",
+      "overview": "Commercial Philosophy",
+      "capabilities": "Core Strategic Competencies",
+      "careerPath": "Enterprise Career Track",
       "academic": "Academic Credentials",
-      "credentials": "Certifications",
-      "analytics": "Data Analytics & Engineering",
+      "credentials": "Verified Accreditations",
+      "analytics": "Data Analytics & Commercial Intelligence",
       "caseStudies": "Executive Case Studies",
-      "contactHeading": "How can I help?",
-      "contactSub": "Do you have a question or are you interested in working with me? Just fill out the form fields below.",
-      "sendBtn": "SUBMIT",
+      "contactHeading": "Let's Build Strategic Value",
+      "contactSub": "Looking for specialized enterprise B2B talent or interested in structured commercial partnerships? Leave your message below.",
+      "sendBtn": "SUBMIT INQUIRY",
       "socialHeading": "Or connect with me on...",
       "firstName": "First Name",
       "lastName": "Last Name",
-      "emailAddr": "Email Address",
-      "subject": "Subject / Company",
-      "message": "Message (remember, short & sweet please)",
+      "emailAddr": "Corporate Email",
+      "subject": "Company / Opportunity",
+      "message": "Message / Collaboration Details",
       "footerNavigate": "NAVIGATE",
       "footerContact": "DIRECT CONTACT"
     }
@@ -481,7 +481,7 @@
     },
     "profile": {
       "name": "Nguyễn Huỳnh Quang Trí (Bryan)",
-      "title": "Phát triển B2B Enterprise & Hạ tầng Fintech | Thạc sĩ Phân tích Kinh doanh",
+      "title": "Phát triển Doanh nghiệp B2B & Hạ tầng Fintech | Thạc sĩ Phân tích Kinh doanh",
       "avatarUrl": "avatar.png",
       "phone": "0838673639",
       "email": "quangtritc1805@gmail.com",
@@ -494,39 +494,39 @@
       }
     },
     "about": [
-      "Xin chào, tôi là <strong>Nguyễn Huỳnh Quang Trí (Bryan)</strong>. Tôi tốt nghiệp <strong>Thạc sĩ Phân tích Kinh doanh (Business Analytics)</strong> và <strong>Cử nhân Kinh doanh Quốc tế</strong> tại Đại học Wollongong. Trong suốt quá trình học tập và làm việc, tôi luôn nỗ lực ứng dụng phân tích dữ liệu không chỉ như những con số trên màn hình, mà như một công cụ thực tiễn để thấu hiểu hoạt động phát triển kinh doanh, cải thiện hiệu suất và hỗ trợ ra quyết định thương mại chiến lược.",
-      "Với vai trò <strong>Chuyên viên Phát triển Kinh doanh</strong>, tôi có cơ hội cọ xát với dữ liệu thực tế, quản trị quy trình CRM, phân tích chiến dịch và thấu hiểu chân dung khách hàng. Những trải nghiệm này giúp tôi biết cách kết hợp giữa tư duy phân tích và khả năng thực thi—từ việc phối hợp liên phòng ban với IT, Vận hành, đến việc quản lý tệp đối tác doanh nghiệp và thích ứng nhanh trong môi trường FinTech nhịp độ cao.",
-      "Tôi luôn xem mình là một người học hỏi chủ động và tò mò, không ngừng trau dồi bản thân tại điểm giao thoa giữa <strong>Dữ liệu và Phát triển Kinh doanh</strong>. Tôi đam mê giải quyết vấn đề, khám phá những ý tưởng mới và đóng góp vào các dự án nơi sự sáng tạo đi đôi với tính hiệu quả. Ngoài công việc, tôi tìm kiếm cảm hứng qua nhiếp ảnh đường phố, khám phá văn hóa và tinh thần học hỏi mỗi ngày."
+      "<strong>Xin chào, tôi là Nguyễn Huỳnh Quang Trí (Bryan) — người làm phát triển kinh doanh B2B bằng tư duy dữ liệu.</strong> Trong mảng khách hàng doanh nghiệp, một thương vụ lớn hiếm khi thất bại vì sản phẩm thiếu tính năng; nó thường vướng ở bài toán chi phí, tiến độ pháp lý, hoặc quy trình vận hành phức tạp tại quầy. Tốt nghiệp <strong>Thạc sĩ Phân tích Kinh doanh (Business Analytics)</strong> và <strong>Cử nhân Kinh doanh Quốc tế tại Đại học Wollongong (Úc)</strong>, tôi không tiếp cận khách hàng bằng một kịch bản chào hàng có sẵn. Tôi bắt đầu từ việc tìm hiểu dòng tiền của đối tác chảy như thế nào, thu ngân và kế toán đang vất vả ở khâu nào, rồi cùng các bộ phận IT, Pháp chế, Vận hành thiết kế giải pháp vừa tháo gỡ điểm nghẽn tại điểm bán, vừa tối ưu hiệu quả tài chính.",
+      "<strong>Thực chiến từ Chuỗi Bán lẻ, Y tế, Giáo dục đến Đấu thầu Quốc tế.</strong> Quá trình trực tiếp đưa <strong>hơn 15 chuỗi doanh nghiệp</strong> lên hệ thống thanh toán Payoo và phát triển các gói thầu thiết bị an ninh quốc tế tại ProScan giúp tôi thấm thía một điều: doanh nghiệp không mua một chiếc máy POS, họ mua sự trơn tru trong vận hành. Dù là triển khai trả góp 0% cho chuỗi hơn 30 showroom xe điện, hay chuẩn hóa luồng thu viện phí cho phòng khám chuẩn Nhật, tôi luôn bám sát hai thước đo thực chất nhất: <strong>tỷ lệ khách hàng thanh toán thành công tại điểm chạm</strong> và <strong>tốc độ đối soát, quyết toán dòng tiền tự động (T+1) cho kế toán hội sở</strong>.",
+      "<strong>Minh bạch trong con số, trọn vẹn trong cam kết.</strong> Đằng sau những bảng phân tích phễu bán hàng hay dashboard Power BI, điều tôi coi trọng nhất là chữ tín với khách hàng và sự rõ ràng với đồng đội. Dữ liệu giúp tôi loại bỏ sự cảm tính khi đánh giá pipeline, còn thói quen cầm máy chụp ảnh đường phố mỗi cuối tuần rèn cho tôi sự kiên nhẫn và góc nhìn quan sát tinh tế. Tôi luôn sẵn sàng đồng hành cùng các doanh nghiệp, tập đoàn đang tìm kiếm một nhân sự B2B & FinTech vừa vững chuyên môn phân tích, vừa quyết liệt trên bàn đàm phán."
     ],
     "skills": [
       {
-        "category": "Fintech & Hạ tầng Thanh toán",
+        "category": "FinTech & Hạ tầng Thanh toán",
         "items": [
-          "Thanh toán Đa kênh (SmartPOS, SoftPOS, QR)",
-          "Trả góp 0% Thẻ tín dụng & Biểu phí Merchant",
-          "Cổng thanh toán & Pay-by-Link",
-          "Quy trình Đối soát & Quyết toán dòng tiền",
-          "Thẩm định Khách hàng Doanh nghiệp"
+          "Thanh toán Đa kênh (SmartPOS, SoftPOS, QR Động)",
+          "Trả góp 0% Thẻ tín dụng & Thiết kế Biểu phí MDR",
+          "Cổng thanh toán, Pay-by-Link & VietQR Global",
+          "Quy trình Đối soát T+1 & Quyết toán Dòng tiền",
+          "Phát triển & Onboarding Khách hàng Doanh nghiệp"
         ]
       },
       {
-        "category": "Phân tích Dữ liệu & Tự động hóa",
+        "category": "Phân tích Dữ liệu Thương mại & Tự động hóa",
         "items": [
-          "Trực quan hóa Dữ liệu Thương mại",
-          "Power BI (Visualizations, DAX)",
-          "Data Modeling & Excel Nâng cao",
-          "Tự động hóa (Apps Script, Webhooks)",
-          "Phân tích Tỷ lệ chuyển đổi Phễu Bán hàng"
+          "Power BI & DAX (Dashboard Pipeline & GMV)",
+          "Excel Modeling Nâng cao & Dự báo Doanh số",
+          "Phân tích Thống kê & Dự báo bằng SAS®",
+          "Phân tích Chuyển đổi Phễu Bán hàng B2B",
+          "Tự động hóa Quy trình (Google Apps Script, REST API)"
         ]
       },
       {
-        "category": "Bán hàng B2B Chiến lược & Đàm phán",
+        "category": "Bán hàng B2B Chiến lược & Quản trị Đối tác",
         "items": [
-          "Thẩm định & Phân tầng Lead Enterprise",
-          "Xây dựng Hồ sơ Đề xuất Giá trị",
-          "Điều phối Liên bộ phận (IT, Pháp chế, Vận hành)",
-          "Đàm phán C-Level",
-          "Giao tiếp Đa văn hóa"
+          "Bán hàng Tư vấn Giải pháp & Đàm phán C-Level",
+          "Thẩm định & Phân tầng Khách hàng (Ma trận Tier 1–3)",
+          "Soạn thảo Proposal & Hồ sơ Thầu Song ngữ (Anh/Việt)",
+          "Điều phối Liên phòng ban (IT, Pháp chế, Vận hành, Kế toán)",
+          "Quản lý Key Account & Bán chéo (Cross-selling)"
         ]
       }
     ],
@@ -537,11 +537,11 @@
         "logoUrl": "payoo.jpg",
         "role": "Chuyên viên Phát triển Kinh doanh (Enterprise B2B)",
         "bullets": [
-          "<strong>Mở rộng hạ tầng thanh toán:</strong> Khai thác và kết nối thành công <strong>15+ chuỗi đối tác doanh nghiệp lớn</strong> ngành bán lẻ, F&B và dịch vụ, thúc đẩy thanh toán đa kênh toàn diện.",
-          "<strong>Tối ưu danh mục & gia tăng doanh số:</strong> Quản trị và bán chéo (cross-sell) giải pháp cho các merchant hiện hữu, gia tăng <strong>25%</strong> sản lượng giao dịch định kỳ.",
-          "<strong>Phân tầng tài khoản theo dữ liệu:</strong> Xây dựng tiêu chuẩn phân tầng (Tier 1–3) dựa trên quy mô GMV và độ phủ mạng lưới, rút ngắn thời gian thẩm định lead thêm <strong>30%</strong>.",
-          "<strong>Chốt deal doanh nghiệp chiến lược:</strong> Đàm phán trực tiếp với ban lãnh đạo cấp C-level, xác lập các hợp đồng đối tác quy mô lên đến <strong>~1.2 tỷ VNĐ</strong> GMV mục tiêu hàng năm.",
-          "<strong>Vận hành liên chức năng:</strong> Rút ngắn <strong>20%</strong> thời gian luân chuyển hợp đồng, phối hợp chặt chẽ cùng đội ngũ kỹ thuật đảm bảo quy trình onboarding chuẩn SLA và độ ổn định <strong>100%</strong> trên toàn bộ điểm chạm."
+          "<strong>Phát triển khách hàng chuỗi (Enterprise B2B):</strong> Trực tiếp tìm kiếm, đàm phán và đưa <strong>hơn 15 chuỗi doanh nghiệp</strong> thuộc các ngành bán lẻ, F&B, y tế, giáo dục lên hệ thống—theo sát từ buổi gặp đầu tiên đến khi thiết bị vận hành thực tế tại quầy.",
+          "<strong>Mở rộng doanh số trên tệp khách hàng hiện hữu:</strong> Tăng <strong>25%</strong> sản lượng giao dịch định kỳ nhờ chủ động rà soát nhu cầu thực tế của từng merchant để tư vấn tích hợp thêm trả góp 0%, Pay-by-Link và mã QR động.",
+          "<strong>Phân tầng pipeline bằng dữ liệu:</strong> Xây dựng bộ tiêu chí chấm điểm và phân nhóm đối tác (Tier 1–3) dựa trên quy mô GMV, số lượng chi nhánh và mức độ sẵn sàng tích hợp, rút ngắn <strong>30%</strong> thời gian thẩm định lead ban đầu.",
+          "<strong>Đàm phán trực tiếp với cấp quyết định (C-level):</strong> Thiết kế bài toán chi phí – lợi ích và cấu trúc biểu phí MDR sát với biên lợi nhuận của từng ngành, chốt thành công các hợp đồng quy mô lên đến <strong>~1,2 tỷ VNĐ</strong> GMV dự kiến hàng năm.",
+          "<strong>Điều phối triển khai & cam kết SLA:</strong> Phối hợp nhịp nhàng cùng Pháp chế, IT và Vận hành giúp rút ngắn <strong>20%</strong> thời gian hoàn tất hợp đồng, đảm bảo quá trình go-live đúng tiến độ và duy trì độ ổn định <strong>100%</strong> tại điểm bán."
         ]
       },
       {
@@ -550,10 +550,10 @@
         "logoUrl": "proscan.jpeg",
         "role": "Chuyên viên Phát triển Kinh doanh Quốc tế",
         "bullets": [
-          "Lập bản đồ và thẩm định hơn <strong>70 tài khoản doanh nghiệp quốc tế</strong>, đánh giá năng lực nhà phân phối.",
-          "Khởi tạo <strong>15–20 lượt liên hệ chất lượng</strong> mỗi tuần, chào hàng giải pháp máy soi an ninh ODM cho đối tác và nhà thầu dự án.",
-          "Thẩm định <strong>25+ khách hàng tiềm năng cao</strong> với tỷ lệ chuyển đổi <strong>80%</strong> sang buổi họp chuyên sâu.",
-          "Soạn thảo <strong>10+ bản đề xuất thương mại</strong> và báo giá kỹ thuật bằng tiếng Anh (lên tới <strong>$12,000+ USD/deal</strong>)."
+          "Lập bản đồ và đánh giá năng lực <strong>hơn 70 đối tác B2B quốc tế</strong>—bao gồm nhà phân phối khu vực, đơn vị tích hợp hệ thống (System Integrators) và nhà thầu dự án tại Châu Phi, Châu Âu, Châu Đại Dương và Trung Đông.",
+          "Thực hiện <strong>15–20 cuộc tiếp cận B2B chất lượng</strong> mỗi tuần, giới thiệu giải pháp thiết bị soi chiếu an ninh ODM/OEM tới bộ phận mua sắm và nhà thầu quốc tế.",
+          "Thẩm định thành công <strong>hơn 25 khách hàng tiềm năng cao</strong>, đạt tỷ lệ chuyển đổi <strong>80%</strong> sang các buổi họp chuyên sâu cùng Ban Giám đốc để đàm phán hợp đồng.",
+          "Trực tiếp soạn thảo <strong>hơn 10 bộ đề xuất thương mại (Commercial Proposals)</strong> và báo giá kỹ thuật bằng tiếng Anh (quy mô lên đến <strong>$12,000+ USD/deal</strong>), đáp ứng nghiêm ngặt tiêu chuẩn kỹ thuật của từng gói thầu."
         ]
       },
       {
@@ -562,9 +562,9 @@
         "role": "Thực tập sinh Phát triển Kinh doanh",
         "logoUrl": "pihome.png",
         "bullets": [
-          "Sàng lọc <strong>60+ khách hàng tiềm năng</strong> thông qua nghiên cứu thị trường.",
-          "Điều phối <strong>3–5 buổi gặp gỡ hàng tuần</strong> với đối tác người bán.",
-          "Hỗ trợ xây dựng tài liệu thuyết trình Demo phục vụ các cuộc họp đối tác."
+          "Nghiên cứu thị trường và sàng lọc <strong>hơn 60 khách hàng tiềm năng</strong> phù hợp với chân dung đối tác mục tiêu.",
+          "Thiết lập <strong>3–5 buổi họp tư vấn mỗi tuần</strong>, duy trì nguồn khách hàng đều đặn cho đội ngũ kinh doanh.",
+          "Chuẩn bị tài liệu thuyết trình, kịch bản demo sản phẩm và báo cáo theo dõi phễu khách hàng hằng tuần."
         ]
       },
       {
@@ -573,9 +573,9 @@
         "logoUrl": "oeson.jpeg",
         "role": "Thực tập sinh Bán hàng & Marketing",
         "bullets": [
-          "Nghiên cứu đối thủ và phân tích thị trường tham mưu cho chiến lược bán hàng.",
-          "Tổng hợp báo cáo hiệu suất định kỳ cho các chiến dịch đa kênh.",
-          "Hỗ trợ chuẩn bị tài liệu thuyết trình cho các buổi chào bán giải pháp."
+          "Thực hiện phân tích đối thủ cạnh tranh và nghiên cứu thị trường để cung cấp dữ liệu đầu vào cho chiến lược bán hàng tại thị trường Úc.",
+          "Tổng hợp báo cáo hiệu quả chiến dịch đa kênh hằng tuần, theo dõi chất lượng nguồn lead đổ về.",
+          "Hỗ trợ đội ngũ kinh doanh xây dựng slide thuyết trình và tài liệu đề xuất giải pháp cho khách hàng doanh nghiệp."
         ]
       }
     ],
@@ -614,7 +614,7 @@
         "company": "Payoo (VietUnion)",
         "badge": "Hạ tầng Thanh toán Doanh nghiệp",
         "logo": "payoo.jpg",
-        "summary": "Tôi chuyên tư vấn kiến trúc thanh toán B2B, triển khai mạng lưới SmartPOS, thanh toán từ xa qua link (Pay-by-Link) và tối ưu hóa hệ thống đối soát giao dịch tự động cho các chuỗi bán lẻ đa điểm.",
+        "summary": "Tại Payoo, tôi đồng hành cùng các chuỗi bán lẻ, y tế, giáo dục và F&B giải quyết trọn vẹn hai bài toán thực tế: giúp khách hàng của họ thanh toán dễ dàng hơn tại điểm chạm (SmartPOS, trả góp 0%, Pay-by-Link, VietQR Global) và giúp bộ phận kế toán hội sở tự động hóa quy trình đối soát doanh thu từ hàng chục chi nhánh mỗi sáng.",
         "metrics": [
           {
             "num": "15+",
@@ -633,16 +633,16 @@
           {
             "title": "Hợp tác Hạ tầng Thanh toán Đa kênh cùng Xe Điện Việt Thanh",
             "tag": "Bán lẻ Giá trị cao & Trả góp 0%",
-            "description": "Tháo gỡ rào cản chi trả cho chuỗi bán lẻ xe điện với ticket size lớn (15M–45M VNĐ) trên 30+ showroom bằng phương thức trả góp thẻ tín dụng 0%, thanh toán từ xa và đối soát tập trung.",
+            "description": "Tháo gỡ rào cản chi trả một lần cho chuỗi hơn 30 showroom xe điện (đơn giá 15M–45M VNĐ) thông qua tích hợp SmartPOS, trả góp 0% thẻ tín dụng, Pay-by-Link từ xa và đối soát dòng tiền T+1 tập trung.",
             "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-an-omnichannel-payment-partnership-with-xe-điện-việt-thanh",
             "kpis": [
               "30+ Showroom Toàn quốc",
               "15–45 Triệu VNĐ/Xe",
               "Trả góp 0% + Pay-by-Link"
             ],
-            "challenge": "Với mức giá từ 15–45 triệu VNĐ/xe trên hệ thống hơn 30 cửa hàng, nhiều khách hàng (đặc biệt là phụ huynh mua xe cho học sinh, sinh viên) thường cân nhắc kỹ khi phải thanh toán toàn bộ chi phí trong một lần. Đồng thời, bộ phận kế toán tại hội sở cần một giải pháp giúp tổng hợp giao dịch từ các chi nhánh thuận tiện hơn.",
-            "solution": "Qua quá trình tìm hiểu nhu cầu thực tế của chuỗi, tôi đã phối hợp cùng đội ngũ kỹ thuật và vận hành đề xuất bộ giải pháp gồm: thiết bị SmartPOS tại quầy, chương trình trả góp 0% qua thẻ tín dụng liên kết hơn 30 ngân hàng, và tính năng tạo link thanh toán từ xa (Pay-by-Link) để phụ huynh có thể thanh toán thuận tiện mà không cần trực tiếp đến cửa hàng.",
-            "impact": "Giải pháp giúp nhân viên tư vấn tại cửa hàng có thêm phương án tài chính linh hoạt để hỗ trợ khách hàng chốt đơn thuận lợi hơn, đồng thời chuẩn hóa báo cáo đối soát tự động (T+1) giúp bộ phận kế toán tiết kiệm đáng kể thời gian tổng hợp số liệu.",
+            "challenge": "Với đơn giá xe dao động từ 15M – 45M VNĐ trên toàn hệ thống hơn 30 showroom, nhiều khách hàng có tâm lý đắn đo khi phải chi trả một khoản tiền mặt lớn ngay trong một lần, khiến chu kỳ cân nhắc kéo dài và dễ phát sinh điểm nghẽn chuyển đổi tại quầy. Đồng thời, bộ phận kế toán tại hội sở gặp áp lực lớn khi phải tổng hợp và đối soát thủ công dòng tiền giao dịch phân tán từ hàng chục chi nhánh.",
+            "solution": "Khảo sát luồng vận hành thực tế tại chuỗi để thiết kế bộ giải pháp thanh toán toàn diện: triển khai thiết bị SmartPOS tại quầy, tích hợp chương trình trả góp 0% thẻ tín dụng liên kết hơn 30 ngân hàng để chia nhỏ kỳ hạn chi trả, và cung cấp giải pháp Pay-by-Link giúp khách hàng có thể thanh toán từ xa linh hoạt mà không bắt buộc phải quẹt thẻ trực tiếp tại showroom.",
+            "impact": "Trao cho đội ngũ tư vấn tại showroom một công cụ tài chính thiết thực để hỗ trợ khách hàng ra quyết định nhanh hơn, nâng cao tỷ lệ chốt đơn ở các dòng xe phân khúc cao, đồng thời tự động hóa báo cáo đối soát T+1 giúp kế toán hội sở quản trị dòng tiền tập trung, minh bạch.",
             "stack": [
               "SmartPOS",
               "Trả góp 0% Thẻ tín dụng",
@@ -652,18 +652,18 @@
             ]
           },
           {
-            "title": "Mô hình Phân tầng Đối tác Tier 1-3",
-            "tag": "Chiến lược Phễu B2B",
-            "description": "Xây dựng ma trận chấm điểm đối tác dựa trên GMV và độ phủ chi nhánh, tối ưu hóa thời gian Onboarding và chốt thành công các chuỗi lớn với GMV mục tiêu ~1 tỷ VNĐ.",
+            "title": "Mô hình Phân tầng Đối tác Doanh nghiệp (Tier 1–3)",
+            "tag": "Chiến lược Phễu B2B & Dữ liệu",
+            "description": "Xây dựng ma trận chấm điểm và phân nhóm khách hàng doanh nghiệp theo quy mô GMV và độ phủ chi nhánh, giúp rút ngắn ~30% thời gian thẩm định và chốt thành công các chuỗi lớn quy mô ~1 tỷ VNĐ GMV.",
             "link": "#",
             "kpis": [
               "+30% Tốc độ Thẩm định",
               "Ma trận Tier 1–3",
               "~1 Tỷ+ VNĐ GMV Mục tiêu"
             ],
-            "challenge": "Trong quá trình phát triển khách hàng doanh nghiệp (B2B), nếu tiếp cận dàn trải và áp dụng cùng một quy trình thẩm định cho mọi quy mô cửa hàng sẽ dễ dẫn đến kéo dài thời gian xử lý hồ sơ và chưa tối ưu hóa được nguồn lực hỗ trợ kỹ thuật.",
-            "solution": "Ứng dụng tư duy phân tích dữ liệu, tôi xây dựng bảng tiêu chí phân loại đối tác (Tier 1–3) dựa trên sản lượng giao dịch dự kiến (GMV), số lượng chi nhánh, giá trị đơn hàng trung bình và nhu cầu tích hợp kỹ thuật. Từ đó, mỗi nhóm đối tác được định hướng gói giải pháp và mức phí (MDR) phù hợp ngay từ bước tư vấn đầu tiên.",
-            "impact": "Giúp việc đánh giá và ưu tiên khách hàng tiềm năng rõ ràng hơn, rút ngắn khoảng 30% thời gian thẩm định ban đầu và hỗ trợ quá trình đàm phán, hoàn thiện hợp đồng với các chuỗi đối tác quy mô ~1 tỷ VNĐ GMV diễn ra mạch lạc, đúng tiến độ.",
+            "challenge": "Trong phát triển khách hàng B2B, nếu áp dụng chung một quy trình thẩm định cho cả chuỗi 30 cửa hàng lẫn một cửa hàng đơn lẻ, các thương vụ lớn sẽ bị kéo dài thời gian phê duyệt biểu phí và tích hợp kỹ thuật, trong khi nguồn lực của đội ngũ lại bị phân tán vào các hồ sơ quy mô nhỏ.",
+            "solution": "Dựa trên dữ liệu thực tế của phễu bán hàng, tôi thiết lập ma trận phân tầng đối tác Tier 1–3 ngay từ bước tiếp cận đầu tiên theo 4 tiêu chí: sản lượng giao dịch dự kiến (GMV), số lượng điểm bán, giá trị đơn hàng trung bình (AOV) và yêu cầu tích hợp hệ thống. Mỗi nhóm được định khung biểu phí MDR và mức cam kết hỗ trợ kỹ thuật (SLA) rõ ràng.",
+            "impact": "Giúp đội ngũ kinh doanh ưu tiên đúng nguồn lực cho các chuỗi trọng điểm, rút ngắn khoảng 30% thời gian thẩm định hồ sơ ban đầu và đẩy nhanh tiến độ ký kết với các khách hàng chủ lực quy mô ~1 tỷ VNĐ GMV/năm.",
             "stack": [
               "Ma trận Phân tầng GMV",
               "Cấu trúc Biểu phí MDR",
@@ -672,18 +672,18 @@
             ]
           },
           {
-            "title": "Thực thi Hợp đồng & Triển khai Thanh toán: DYM Medical Center Việt Nam",
+            "title": "Thực thi Hợp đồng & Go-Live Hạ tầng Thanh toán: DYM Medical Center",
             "tag": "Hạ tầng Thanh toán Y tế",
-            "description": "Quản trị chặng cuối (last-mile onboarding) cho Trung tâm Y khoa DYM, tích hợp thành công giải pháp thu hộ thanh toán đa kênh giúp chuẩn hóa luồng giao dịch bệnh nhân và đối soát dòng tiền y tế.",
+            "description": "Điều phối trọn vẹn giai đoạn triển khai thực tế (last-mile onboarding) cho hệ thống phòng khám chuẩn Nhật DYM, tích hợp thanh toán thẻ quốc tế (JCB, Visa, Mastercard) và chuẩn hóa đối soát viện phí hằng ngày.",
             "link": "https://quangtritc1805.wixsite.com/website/post/last-mile-deal-execution-onboarding-payment-acceptance-for-dym-medical-center-vietnam",
             "kpis": [
               "Chuẩn Phòng khám Nhật Bản",
               "Vận hành Ổn định",
               "Đa kênh Thẻ & QR"
             ],
-            "challenge": "DYM Medical Center là hệ thống phòng khám tiêu chuẩn Nhật Bản phục vụ nhiều khách hàng nước ngoài và doanh nghiệp. Do đặc thù ngành y tế, đối tác đặt yêu cầu rất kỹ lưỡng về tính chính xác trong quy trình thu viện phí, khả năng chấp nhận các dòng thẻ quốc tế (như JCB, Visa, Mastercard) và sự rõ ràng trong báo cáo đối soát.",
-            "solution": "Tôi đảm nhận vai trò cầu nối giữa đối tác và các bộ phận nội bộ (Pháp chế, Kỹ thuật, Vận hành) để rà soát kỹ từng điều khoản hợp đồng, phối hợp lắp đặt thiết bị SmartPOS tại quầy lễ tân, đồng thời trực tiếp hướng dẫn thao tác cho đội ngũ thu ngân trước ngày vận hành chính thức (Go-live).",
-            "impact": "Hệ thống thanh toán đi vào hoạt động ổn định, giúp quy trình thanh toán viện phí tại quầy diễn ra nhanh gọn cho bệnh nhân quốc tế và đáp ứng tốt tiêu chuẩn kiểm soát chứng từ của ban quản lý phòng khám.",
+            "challenge": "Trong bán hàng B2B, ký được hợp đồng mới chỉ là một nửa chặng đường—doanh thu thực sự chỉ phát sinh khi hệ thống vận hành trơn tru tại quầy. Là phòng khám tiêu chuẩn Nhật Bản phục vụ đông đảo chuyên gia nước ngoài và khách doanh nghiệp, DYM đặt yêu cầu rất khắt khe về độ chính xác khi thu viện phí, khả năng chấp nhận mượt mà các dòng thẻ quốc tế (đặc biệt là JCB, Visa, Mastercard) và báo cáo đối soát chi tiết mỗi ngày.",
+            "solution": "Đứng ở vị trí đầu mối điều phối giữa ban quản lý phòng khám và các phòng ban nội bộ (Pháp chế, Kỹ thuật, Vận hành), tôi theo sát việc rà soát từng điều khoản hợp đồng, lên lịch lắp đặt thiết bị SmartPOS tại quầy lễ tân, và trực tiếp đứng cạnh hướng dẫn đội ngũ thu ngân thao tác thực tế trước ngày vận hành chính thức (Go-live).",
+            "impact": "Đưa hệ thống vào vận hành đúng tiến độ với độ ổn định tuyệt đối. Bệnh nhân quốc tế thanh toán viện phí nhanh gọn tại quầy, đồng thời bộ phận kế toán của DYM có ngay báo cáo đối soát chuẩn xác theo đúng quy chuẩn kiểm toán Nhật Bản.",
             "stack": [
               "SmartPOS",
               "Thẻ Quốc tế JCB/Visa",
@@ -692,18 +692,18 @@
             ]
           },
           {
-            "title": "Khai phá Tỷ lệ Chuyển đổi Tuyển sinh: Giải pháp Thanh toán Giáo dục",
-            "tag": "EdTech & Giải pháp Thanh toán",
-            "description": "Trực tiếp tìm kiếm, tư vấn và chốt giải pháp thanh toán (Trả góp 0% & Payment link) cho trung tâm đào tạo. Tập trung tháo gỡ điểm nghẽn chi trả ở các khóa học giá trị cao và chuẩn hóa luồng doanh thu.",
+            "title": "Tháo gỡ Rào cản Học phí Đóng một lần: Giải pháp Thanh toán Giáo dục",
+            "tag": "EdTech & Tối ưu Chuyển đổi Ghi danh",
+            "description": "Trực tiếp tìm kiếm, tư vấn và chốt giải pháp kết hợp trả góp 0% học phí và thanh toán từ xa (Pay-by-Link) cho trung tâm đào tạo, giúp giảm tỷ lệ rớt học viên ở bước đóng phí cuối cùng.",
             "link": "https://quangtritc1805.wixsite.com/website/post/unlocking-enrollment-conversion-sourcing-pitching-and-closing-an-education-payment-solution-with",
             "kpis": [
               "Khóa học Dài hạn",
               "Pay-by-Link Từ xa",
               "Trả góp Học phí 0%"
             ],
-            "challenge": "Đối với các trung tâm giáo dục cung cấp lộ trình học dài hạn, học viên và phụ huynh đôi khi gặp áp lực khi phải đóng toàn bộ học phí trong một lần, dẫn đến việc trì hoãn quyết định đăng ký dù đã ưng ý về chương trình học.",
-            "solution": "Từ việc lắng nghe khó khăn của bộ phận tuyển sinh, tôi đã tư vấn giải pháp kết hợp giữa thanh toán trả góp 0% qua thẻ tín dụng và gửi link thanh toán từ xa (Pay-by-Link). Tôi cũng phối hợp cùng đối tác xây dựng tài liệu hướng dẫn ngắn gọn để tư vấn viên dễ dàng giới thiệu phương án chia nhỏ học phí cho học viên.",
-            "impact": "Giảm bớt rào cản tài chính ban đầu cho người học, hỗ trợ đội ngũ tư vấn tuyển sinh trao đổi tự tin hơn khi giới thiệu các khóa học trọn gói và giúp bộ phận kế toán theo dõi trạng thái thu học phí thuận tiện theo thời gian thực.",
+            "challenge": "Ở các trung tâm đào tạo có lộ trình học dài hạn, rất nhiều học viên đã ưng ý chương trình sau buổi tư vấn nhưng lại chần chừ ở bước đăng ký cuối cùng vì áp lực phải đóng toàn bộ học phí trong một lần duy nhất.",
+            "solution": "Từ việc ngồi lại lắng nghe những tình huống khiến tư vấn viên thường xuyên 'hụt' học viên, tôi đề xuất kết hợp trả góp 0% qua thẻ tín dụng cùng tính năng gửi link thanh toán từ xa (Pay-by-Link). Tôi cũng phối hợp với trung tâm soạn một cẩm nang ngắn gọn để đội ngũ tuyển sinh có thể tư vấn ngay cách chia nhỏ học phí theo tháng chỉ trong vài phút.",
+            "impact": "Giúp học viên nhẹ gánh chi phí ban đầu khi đăng ký khóa dài hạn, trao cho đội ngũ tuyển sinh một phương án tài chính thực tế để giữ chân người học, đồng thời giúp phòng kế toán theo dõi trạng thái thu học phí tự động theo thời gian thực.",
             "stack": [
               "Trả góp Học phí 0%",
               "Pay-by-Link",
@@ -712,18 +712,18 @@
             ]
           },
           {
-            "title": "Chốt Deal TDP IELTS: Biến Giải Pháp Thanh Toán Thành Lợi Thế Tuyển Sinh",
-            "tag": "EdTech & Tối ưu Chuyển đổi",
-            "description": "Tư vấn và triển khai hạ tầng thanh toán chuyên biệt cho trung tâm TDP IELTS. Biến các phương thức thanh toán trả góp thành công cụ chốt sale, giúp tăng tỷ lệ chuyển đổi học viên cho các khóa học IELTS giá trị cao.",
+            "title": "Chốt Deal TDP IELTS: Biến Phương thức Thanh toán Thành Lợi thế Tuyển sinh",
+            "tag": "EdTech & Bán hàng Tư vấn B2B",
+            "description": "Tư vấn và triển khai hạ tầng thanh toán cho TDP IELTS dưới góc độ thương mại: biến chương trình trả góp 0% học phí thành công cụ hỗ trợ tư vấn viên chốt các gói lộ trình IELTS dài hạn.",
             "link": "https://quangtritc1805.wixsite.com/website/post/how-i-closed-tdp-ielts-turning-a-payment-option-into-an-enrollment-closer",
             "kpis": [
               "TDP IELTS",
               "Chia kỳ 3–12 Tháng",
               "Tư vấn Giải pháp B2B"
             ],
-            "challenge": "Các khóa luyện thi IELTS chuyên sâu có mức học phí tương đối cao đối với tệp khách hàng là sinh viên và người mới đi làm. Ban đầu, trung tâm chủ yếu sử dụng chuyển khoản ngân hàng truyền thống nên chưa có nhiều lựa chọn hỗ trợ học viên chia kỳ thanh toán.",
-            "solution": "Trong các buổi làm việc cùng ban quản lý TDP IELTS, thay vì chỉ trình bày về tính năng kỹ thuật, tôi tập trung phân tích bài toán chi phí – lợi ích để cho thấy phương thức trả góp 0% có thể hỗ trợ trực tiếp cho khâu tư vấn khóa học như thế nào, đồng thời thiết kế biểu phí phù hợp với cơ cấu vận hành của trung tâm.",
-            "impact": "Giúp trung tâm bổ sung thêm phương thức thanh toán linh hoạt (chia kỳ 3–12 tháng), tạo điều kiện thuận lợi hơn cho học viên khi đăng ký các lộ trình học dài hạn và cải thiện trải nghiệm thanh toán tại quầy.",
+            "challenge": "Các khóa luyện thi IELTS chuyên sâu có mức học phí khá lớn đối với sinh viên và người mới đi làm. Khi trung tâm chỉ sử dụng hình thức chuyển khoản ngân hàng truyền thống, tư vấn viên thiếu công cụ hỗ trợ học viên chia nhỏ học phí theo tháng—dẫn đến việc nhiều học viên chỉ dám đăng ký khóa lẻ hoặc trì hoãn việc học.",
+            "solution": "Trong các buổi làm việc với ban quản lý TDP IELTS, thay vì trình bày về thông số kỹ thuật của máy POS, tôi đi thẳng vào bài toán kinh doanh: phân tích chi phí – lợi ích để chứng minh việc tích hợp trả góp 0% (kỳ hạn 3–12 tháng) sẽ giúp tăng tỷ lệ chốt các gói học trọn lộ trình như thế nào, đồng thời thiết kế biểu phí MDR khớp với từng phân khúc khóa học.",
+            "impact": "Giúp TDP IELTS bổ sung ngay phương án chia nhỏ học phí từ 3 đến 12 tháng, tạo đòn bẩy để đội ngũ tư vấn chốt các gói khóa học giá trị cao thuận lợi hơn và hiện đại hóa toàn bộ trải nghiệm thanh toán tại quầy.",
             "stack": [
               "Trả góp 0% Thẻ tín dụng",
               "SmartPOS",
@@ -732,18 +732,18 @@
             ]
           },
           {
-            "title": "Thương Vụ Trọng Điểm: Triển Khai Hạ Tầng Cho Jalux Taseco (JDV) & VietQR Global",
+            "title": "Hậu trường Thương vụ Lớn: Onboarding Jalux Taseco (JDV) & VietQR Global",
             "tag": "Thanh toán Xuyên biên giới & Bán lẻ Sân bay",
-            "description": "Quản trị toàn trình dự án Onboarding cho Jalux Taseco (JDV), triển khai giải pháp VietQR Global nhằm đón đầu dòng tiền chi tiêu từ du khách quốc tế. Tối ưu hạ tầng thanh toán tại các cửa hàng miễn thuế sân bay lưu lượng lớn.",
+            "description": "Quản trị toàn trình dự án triển khai hạ tầng thanh toán cho chuỗi cửa hàng miễn thuế sân bay Jalux Taseco (JDV), tích hợp VietQR Global và SmartPOS giúp đón trọn dòng chi tiêu của du khách quốc tế.",
             "link": "https://quangtritc1805.wixsite.com/website/post/behind-the-scenes-of-a-major-deal-onboarding-jalux-taseco-jdv-and-rolling-out-vietqr-global",
             "kpis": [
               "Bán lẻ Miễn thuế Sân bay",
               "VietQR Global",
               "Thanh toán Xuyên biên giới"
             ],
-            "challenge": "Vận hành hệ thống cửa hàng miễn thuế (Duty-Free) và bán lẻ tại các sân bay quốc tế, Jalux Taseco (JDV) phục vụ lượng lớn hành khách đa quốc tịch với thời gian dừng chân ngắn, đòi hỏi thao tác thanh toán tại quầy phải nhanh chóng và hỗ trợ đa dạng phương thức chi trả xuyên biên giới.",
-            "solution": "Tôi phối hợp chặt chẽ cùng đội ngũ dự án của hai bên để triển khai hệ thống thiết bị SmartPOS tích hợp giải pháp VietQR Global song song với các dòng thẻ quốc tế, giúp du khách nước ngoài có thể sử dụng ứng dụng ngân hàng từ quốc gia của họ để quét mã thanh toán trực tiếp tại quầy.",
-            "impact": "Mở rộng thêm kênh thanh toán tiện lợi cho du khách quốc tế tại sân bay, rút ngắn thời gian chờ tại quầy thu ngân vào các khung giờ cao điểm và hỗ trợ đồng bộ dữ liệu giao dịch về hệ thống quản lý của doanh nghiệp.",
+            "challenge": "Vận hành hệ thống cửa hàng miễn thuế (Duty-Free) và bán lẻ tại các sân bay quốc tế, Jalux Taseco (JDV) phục vụ lượng lớn hành khách đa quốc tịch luôn trong trạng thái vội vã trước giờ lên máy bay. Mọi thao tác tại quầy thu ngân đều phải tính bằng giây, đòi hỏi hệ thống vừa phải xử lý nhanh, vừa phải chấp nhận đa dạng phương thức thanh toán từ nhiều quốc gia.",
+            "solution": "Tôi phối hợp chặt chẽ cùng đội dự án của hai bên để triển khai đồng bộ hệ thống SmartPOS tích hợp giải pháp VietQR Global song song với các dòng thẻ quốc tế—cho phép du khách nước ngoài dùng chính ứng dụng ngân hàng tại quốc gia của họ để quét mã thanh toán trực tiếp tại quầy.",
+            "impact": "Mở rộng đáng kể phương thức chi trả tiện lợi cho du khách quốc tế tại sân bay, rút ngắn thời gian xếp hàng chờ thanh toán vào các khung giờ bay cao điểm và đồng bộ toàn bộ dữ liệu giao dịch về hệ thống quản trị trung tâm của JDV.",
             "stack": [
               "VietQR Global",
               "Thanh toán Xuyên biên giới",
@@ -752,18 +752,18 @@
             ]
           },
           {
-            "title": "Tư Vấn Giải Pháp Thanh Toán F&B: Case Study Bệnh Viện Thú Y Pet Joy",
+            "title": "Tư vấn Giải pháp Thanh toán cho Bệnh viện Thú y: Case Study Pet Joy",
             "tag": "Hạ tầng Thanh toán Y tế & Dịch vụ",
-            "description": "Tư vấn và thiết kế giải pháp hạ tầng thanh toán chuyên biệt cho Bệnh viện Thú y Pet Joy. Tập trung tối ưu quy trình thanh toán viện phí giá trị cao, giúp phòng khám vận hành mượt mà và nâng cao trải nghiệm khách hàng.",
+            "description": "Thiết kế và triển khai bộ giải pháp kết hợp SmartPOS/QR tại quầy và Pay-by-Link từ xa cho chuỗi Bệnh viện Thú y Pet Joy, giải quyết bài toán thu viện phí phát sinh trong các ca cấp cứu và lưu trú nội trú.",
             "link": "https://quangtritc1805.wixsite.com/website/post/pitching-payment-solutions-to-a-vet-hospital-the-pet-joy-case",
             "kpis": [
               "Chuỗi Phòng khám Thú y",
               "Điều trị & Lưu trú",
               "Đồng bộ QR & SmartPOS"
             ],
-            "challenge": "Tại hệ thống Bệnh viện Thú y Pet Joy, các ca cấp cứu hoặc điều trị nội trú dài ngày cho thú cưng thường phát sinh chi phí ngoài dự kiến của chủ nuôi. Do đó, phòng khám cần các phương thức thanh toán linh hoạt cả trực tiếp tại quầy lẫn thanh toán từ xa khi chủ nuôi gửi thú cưng lưu trú.",
-            "solution": "Qua khảo sát quy trình vận hành thực tế tại phòng khám, tôi đã tư vấn giải pháp kết hợp thiết bị SmartPOS chấp nhận thẻ chạm/QR tại quầy và công cụ tạo link thanh toán từ xa, giúp lễ tân dễ dàng gửi thông tin thanh toán qua tin nhắn cho khách hàng.",
-            "impact": "Giúp quy trình thu phí dịch vụ tại các chi nhánh Pet Joy diễn ra thuận tiện, giảm bớt thao tác kiểm tra chuyển khoản thủ công cho nhân viên lễ tân và mang lại trải nghiệm chu đáo hơn cho khách hàng.",
+            "challenge": "Tại hệ thống Bệnh viện Thú y Pet Joy, các ca cấp cứu hoặc điều trị nội trú dài ngày cho thú cưng thường phát sinh chi phí ngoài dự tính, và nhiều khi chủ nuôi không có mặt trực tiếp tại phòng khám để thanh toán. Ở chiều ngược lại, nhân viên lễ tân mất rất nhiều thời gian để kiểm tra thủ công từng ảnh chụp màn hình chuyển khoản qua tin nhắn.",
+            "solution": "Sau khi khảo sát thực tế luồng đón tiếp và thu phí tại quầy lễ tân, tôi đề xuất kết hợp thiết bị SmartPOS chấp nhận thẻ chạm/QR động tại quầy cùng công cụ tạo link thanh toán từ xa (Pay-by-Link), giúp lễ tân gửi yêu cầu thanh toán qua tin nhắn cho chủ nuôi chỉ trong vài thao tác.",
+            "impact": "Giúp việc thanh toán viện phí tại các chi nhánh Pet Joy trở nên linh hoạt và nhẹ nhàng hơn cho chủ nuôi, giải phóng nhân viên lễ tân khỏi việc đối chiếu ảnh chụp màn hình thủ công và chuẩn hóa báo cáo doanh thu cho bộ phận kế toán.",
             "stack": [
               "SmartPOS",
               "Contactless & Apple Pay",
@@ -772,18 +772,18 @@
             ]
           },
           {
-            "title": "Tiếp Cận & Triển Khai Hạ Tầng F&B: Nhà Hàng & Bar Utage",
-            "tag": "F&B & Hạ tầng Thanh toán",
-            "description": "Tiếp cận, thuyết phục và triển khai thành công hệ thống thanh toán cho Utage Japanese Restaurant & Bar. Tối ưu tốc độ thanh toán tại quầy, quản lý đa kênh và chuẩn hóa quy trình đối soát doanh thu hàng ngày.",
+            "title": "Chinh phục Khách hàng F&B Cao cấp: Onboarding Nhà hàng & Bar Nhật Utage",
+            "tag": "Hạ tầng Thanh toán F&B",
+            "description": "Chủ động tiếp cận, tư vấn và triển khai hệ thống SmartPOS cầm tay không dây cho Utage Japanese Restaurant & Bar, tối ưu tốc độ thanh toán thẻ doanh nghiệp tại bàn và rút ngắn thời gian kết toán ca khuya.",
             "link": "https://quangtritc1805.wixsite.com/website/post/pitching-f-b-infrastructure-how-i-approached-and-onboarded-utage-japanese-restaurant-bar",
             "kpis": [
               "Nhà hàng Nhật Cao cấp",
               "Thanh toán Tại bàn",
               "Thẻ Doanh nghiệp JCB/Visa"
             ],
-            "challenge": "Nhà hàng & Bar Nhật Bản Utage phục vụ nhiều nhóm khách doanh nghiệp và chuyên gia nước ngoài vào khung giờ tối với giá trị hóa đơn cao. Đối tác cần thiết bị thanh toán không dây ổn định để phục vụ thanh toán ngay tại bàn và tổng hợp doanh thu cuối ca nhanh chóng.",
-            "solution": "Tôi chủ động tiếp cận, tìm hiểu quy trình phục vụ của nhà hàng và tư vấn triển khai dòng máy SmartPOS cầm tay kết nối linh hoạt, hỗ trợ đầy đủ thẻ doanh nghiệp (JCB, Visa, Mastercard), Apple Pay và mã QR động trên cùng một thiết bị.",
-            "impact": "Hỗ trợ nhân viên phục vụ hoàn tất thanh toán nhanh gọn ngay tại bàn cho thực khách, hạn chế sai sót khi nhập số tiền thủ công và giúp bộ phận thu ngân rút ngắn thời gian đối soát khi kết thúc ca làm việc muộn.",
+            "challenge": "Nhà hàng & Bar Nhật Bản Utage phục vụ lượng lớn khách đoàn doanh nghiệp và chuyên gia nước ngoài vào khung giờ tối với giá trị hóa đơn cao. Đặc thù mô hình Fine Dining & Bar đòi hỏi nhân viên phải mang máy ra thanh toán trực tiếp tại bàn một cách lịch sự, nhanh chóng bằng thẻ công ty (JCB, Visa, Mastercard), đồng thời thu ngân cần chốt ca thật gọn vào đêm muộn.",
+            "solution": "Tôi trực tiếp khảo sát quy trình phục vụ giờ cao điểm của nhà hàng và tư vấn triển khai dòng máy SmartPOS cầm tay không dây, tích hợp trọn vẹn khả năng nhận thẻ quốc tế (JCB, Visa, Mastercard), Apple Pay và mã QR động trên cùng một thiết bị nhỏ gọn.",
+            "impact": "Giúp nhân viên phục vụ hoàn tất thao tác thanh toán tại bàn chỉ trong vài giây, loại bỏ sai sót khi nhập số tiền thủ công và giúp bộ phận thu ngân rút ngắn đáng kể thời gian đối soát, kết toán cuối ca.",
             "stack": [
               "SmartPOS Cầm tay",
               "Thẻ JCB / Visa / Master",
@@ -797,21 +797,21 @@
         "company": "ProScan Global",
         "badge": "Thiết bị Soi chiếu & Công nghệ Quốc tế",
         "logo": "proscan.jpeg",
-        "summary": "Quản lý đội nhóm nghiên cứu thị trường quốc tế, phân tích nhu cầu trang thiết bị an ninh ODM/OEM, đánh giá bài toán kinh tế của nhà phân phối và thiết lập cấu trúc hồ sơ mời thầu tại Châu Phi, Bỉ, Châu Đại Dương và Qatar.",
+        "summary": "Tại ProScan Global, tôi phối hợp cùng đội ngũ nghiên cứu thị trường và kinh doanh quốc tế mở rộng đường ống khách hàng B2B cho dòng thiết bị soi chiếu an ninh ODM/OEM—từ định lượng quy mô nhu cầu, đánh giá bài toán biên lợi nhuận của nhà phân phối bản địa, đến soạn thảo hồ sơ đề xuất thầu tiếng Anh tại Châu Phi, Bỉ, Châu Đại Dương và Qatar.",
         "projects": [
           {
-            "title": "Báo cáo Nghiên cứu Chuyên sâu Thị trường Châu Phi",
-            "tag": "Thị trường Mới nổi",
-            "description": "Phân tích dung lượng thị trường thiết bị an ninh đạt 87M$–156M$ USD tại Châu Phi, định vị sản phẩm ODM phù hợp ngân sách hạ tầng địa phương.",
+            "title": "Định lượng Thị trường & Chiến lược Nhà phân phối tại Châu Phi ($87M–$156M)",
+            "tag": "Mở rộng Thị trường Mới nổi",
+            "description": "Phân tích dung lượng thị trường khả dụng đạt 87M–156M USD cho dòng cổng dò kim loại (WTMD) tại Châu Phi, lập bản đồ năng lực nhà phân phối và định vị sản phẩm ODM theo ngân sách đầu tư công địa phương.",
             "link": "https://drive.google.com/file/d/1Id88MoapwzOdHTiLKk041NpURhzeCndg/view?usp=sharing",
             "kpis": [
               "$87M–$156M Dung lượng",
               "Bản đồ Nhà phân phối",
               "Định vị ODM Theo phân khúc"
             ],
-            "challenge": "Quá trình phát triển hạ tầng đô thị tại Châu Phi mở ra nhu cầu đáng kể về thiết bị cổng dò kim loại (WTMD). Tuy nhiên, mỗi quốc gia trong khu vực lại có sự khác biệt lớn về ngân sách đầu tư công, điều kiện vận hành và năng lực của các nhà phân phối bản địa.",
-            "solution": "Cùng với đội nhóm nghiên cứu thị trường, tôi tiến hành thu thập dữ liệu, ước tính quy mô thị trường khả dụng ($87M–$156M USD), phân loại nhóm nhà phân phối tiềm năng và đề xuất danh mục sản phẩm ODM theo phân khúc ngân sách phù hợp cho từng khu vực.",
-            "impact": "Cung cấp bức tranh tổng quan có cơ sở dữ liệu rõ ràng cho Ban Giám đốc, làm nền tảng để đội ngũ kinh doanh tiếp cận đúng nhóm nhà phân phối thiết bị an ninh tại thị trường Châu Phi.",
+            "challenge": "Quá trình đô thị hóa và nâng cấp an ninh công cộng tại Châu Phi tạo ra nhu cầu lớn về thiết bị cổng dò kim loại (WTMD). Tuy nhiên, không thể tiếp cận Châu Phi như một thị trường đồng nhất: ngân sách mua sắm công, điều kiện hạ tầng vận hành và năng lực tài chính của các nhà phân phối bản địa có sự chênh lệch rất lớn giữa các quốc gia.",
+            "solution": "Phối hợp cùng nhóm nghiên cứu thị trường, tôi bóc tách dữ liệu thương mại và đấu thầu để ước tính quy mô thị trường khả dụng ($87M–$156M USD), phân loại năng lực các nhà phân phối thiết bị an ninh theo từng khu vực, từ đó đề xuất danh mục sản phẩm ODM chia theo các phân khúc ngân sách sát với thực tế địa phương.",
+            "impact": "Cung cấp cho Ban Giám đốc bức tranh toàn cảnh có cơ sở dữ liệu vững chắc, đồng thời trao cho đội ngũ kinh doanh B2B danh sách nhà phân phối mục tiêu để bắt đầu chiến dịch tiếp cận trực tiếp.",
             "stack": [
               "Ước tính Quy mô Thị trường",
               "Đánh giá Nhà phân phối",
@@ -820,18 +820,18 @@
             ]
           },
           {
-            "title": "Báo cáo Cơ hội Tăng trưởng Thị trường Bỉ & EU",
-            "tag": "Thị trường Châu Âu",
-            "description": "Bóc tách các tiêu chuẩn kỹ thuật nghiêm ngặt (CE/EN), chuỗi cung ứng thiết bị soi chiếu công nghệ cao và mô hình tiếp cận qua kênh nhà phân phối bản địa.",
+            "title": "Thâm nhập Thị trường Bỉ & EU: Bài toán Tiêu chuẩn Kỹ thuật & Kênh Tích hợp",
+            "tag": "Thị trường Châu Âu & Chuẩn CE/EN",
+            "description": "Hệ thống hóa các rào cản chứng nhận kỹ thuật (CE/EN), đối sánh cấu trúc giá của đối thủ và thiết kế mô hình hợp tác OEM/ODM thông qua mạng lưới các đơn vị tích hợp hệ thống (System Integrators) tại Bỉ.",
             "link": "https://drive.google.com/file/d/1On9s3-V5DHakv0rL0X1Des_PYPqulV3G/view?usp=sharing",
             "kpis": [
               "Thị trường Bỉ & EU",
               "Tiêu chuẩn CE/EN",
               "Kênh Tích hợp Hệ thống"
             ],
-            "challenge": "Thị trường Bỉ và Liên minh Châu Âu (EU) có nhu cầu ổn định về thiết bị soi chiếu an ninh tại các cảng logistics và cơ quan hành chính, nhưng đòi hỏi tiêu chuẩn chứng nhận kỹ thuật (CE/EN) và quy định bảo mật rất chặt chẽ.",
-            "solution": "Tôi phối hợp cùng nhóm phân tích các yêu cầu tiêu chuẩn kỹ thuật của EU, đối sánh mặt bằng giá với các nhà cung cấp hiện hữu và xây dựng phương án hợp tác OEM/ODM hướng tới các công ty tích hợp hệ thống an ninh (System Integrators) tại Bỉ.",
-            "impact": "Giúp định hình rõ các điều kiện kỹ thuật cần chuẩn bị trước khi chào hàng, hỗ trợ đội ngũ kinh doanh quốc tế tiếp cận và trao đổi chuyên môn hiệu quả hơn với các đối tác châu Âu.",
+            "challenge": "Thị trường Bỉ và Liên minh Châu Âu (EU) có nhu cầu ổn định với biên lợi nhuận tốt cho thiết bị soi chiếu tại các trung tâm logistics và cơ quan hành chính. Tuy nhiên, tại Châu Âu, nếu chưa chứng minh được sự tuân thủ tuyệt đối các tiêu chuẩn kỹ thuật CE/EN và quy định an toàn chuỗi cung ứng, nhà cung cấp sẽ không có cơ hội bước vào vòng đàm phán thương mại.",
+            "solution": "Cùng đội ngũ nghiên cứu, tôi rà soát toàn bộ danh mục chứng nhận kỹ thuật bắt buộc của EU, đối sánh mặt bằng giá và thông số với các thương hiệu đang hiện diện tại chỗ, đồng thời xây dựng phương án thâm nhập thị trường thông qua việc hợp tác OEM/ODM với các công ty tích hợp hệ thống an ninh (System Integrators) bản địa tại Bỉ.",
+            "impact": "Làm rõ bộ tiêu chuẩn kỹ thuật bắt buộc cần hoàn thiện trước khi chào hàng, giúp đội ngũ kinh doanh quốc tế tự tin làm việc với các nhà thầu Châu Âu bằng bộ hồ sơ năng lực chuẩn chỉnh.",
             "stack": [
               "Tiêu chuẩn Kỹ thuật CE/EN",
               "Đối sánh Giá & Đối thủ",
@@ -840,18 +840,18 @@
             ]
           },
           {
-            "title": "Chiến lược Thị trường Châu Đại Dương & Thầu Qatar",
-            "tag": "APAC & Trung Đông",
-            "description": "Đánh giá nhu cầu hiện đại hóa hạ tầng giao thông tại Úc & New Zealand, đồng thời phân tích cơ hội tham gia các dự án thầu an ninh hạ tầng quy mô lớn tại Qatar.",
+            "title": "Phát triển Gói thầu tại Châu Đại Dương & Qatar: Từ Sàng lọc đến Bàn Đàm phán",
+            "tag": "Đấu thầu Quốc tế APAC & Trung Đông",
+            "description": "Theo dõi các dự án nâng cấp an ninh hạ tầng tại Úc, New Zealand và Qatar; sàng lọc nhà thầu và trực tiếp soạn thảo đề xuất thương mại tiếng Anh (quy mô $12,000+ USD/deal), đạt tỷ lệ ~80% chuyển đổi sang họp chuyên sâu.",
             "link": "https://drive.google.com/file/d/1EfhucENgb65OtBBbzuXS-w_U8fHjO7dU/view?usp=sharing",
             "kpis": [
               "Úc / NZ & Qatar",
               "Quy mô $12,000+ USD/Deal",
               "~80% Chuyển đổi Họp"
             ],
-            "challenge": "Các dự án nâng cấp an ninh cho sân vận động, tòa nhà thương mại và cơ sở hạ tầng tại Úc, New Zealand và Qatar thường yêu cầu hồ sơ đề xuất thương mại tiếng Anh chi tiết, đáp ứng đúng quy chuẩn kỹ thuật và tiến độ giao hàng của từng gói thầu.",
-            "solution": "Tôi cùng đội nhóm rà soát thông tin các dự án đầu tư công tại khu vực APAC và Trung Đông, sàng lọc danh sách nhà thầu tiềm năng và trực tiếp soạn thảo các bản đề xuất thương mại (Commercial Proposals) kèm báo giá kỹ thuật (quy mô từ $12,000+ USD/đơn hàng).",
-            "impact": "Hỗ trợ thiết lập kết nối với hơn 25 khách hàng tiềm năng có nhu cầu thực tế, đạt tỷ lệ chuyển đổi khoảng 80% sang các buổi họp trao đổi chuyên sâu cùng cấp quản lý để tiến tới đàm phán hợp đồng.",
+            "challenge": "Để tham gia cung ứng thiết bị an ninh cho các tòa nhà thương mại, sân vận động và dự án hạ tầng tại Úc, New Zealand hay Qatar, việc gửi email chào hàng đại trà gần như không mang lại hiệu quả. Các nhà thầu đòi hỏi hồ sơ đề xuất thương mại bằng tiếng Anh phải khớp chi tiết từ thông số kỹ thuật, điều kiện giao hàng quốc tế (Incoterms) đến cam kết bảo hành.",
+            "solution": "Tôi phối hợp cùng đội nhóm theo dõi sát danh mục các dự án đầu tư công và thương mại tại khu vực APAC và Trung Đông, sàng lọc các nhà thầu có nhu cầu thực tế, và trực tiếp soạn thảo hơn 10 bộ đề xuất thương mại (Commercial Proposals) kèm báo giá kỹ thuật chuyên biệt (quy mô từ $12,000+ USD/đơn hàng).",
+            "impact": "Thẩm định thành công hơn 25 đối tác quốc tế có nhu cầu mua sắm thực tế, đạt tỷ lệ chuyển đổi khoảng 80% sang các buổi họp chuyên sâu (Discovery Meetings) cùng cấp Giám đốc để tiến tới thương thảo hợp đồng.",
             "stack": [
               "Hồ sơ Thầu Quốc tế",
               "Soạn thảo Commercial Proposal",
@@ -864,32 +864,32 @@
     },
     "dataProjects": [
       {
-        "title": "Hệ thống Tự động hóa Thu thập Tin tức Fintech",
-        "category": "Automation & Webhook",
+        "title": "Hệ thống Tự động Thu thập & Điểm tin Thị trường FinTech",
+        "category": "Tự động hóa Quy trình & API",
         "tools": "Google Apps Script, REST API, Gmail API",
-        "description": "Xây dựng luồng tự động quét tin tức thị trường FinTech trong 24–72 giờ, khử dữ liệu trùng lặp và gửi bản tin tổng hợp cho ban lãnh đạo qua email."
+        "description": "Xây dựng luồng tự động thu thập tin tức thị trường FinTech và thanh toán trong khung 24–72 giờ, tự động lọc trùng lặp và gửi bản tin tóm tắt qua email cho đội ngũ—tiết kiệm hàng giờ rà soát tin tức thủ công mỗi tuần."
       },
       {
-        "title": "Dashboard Giám sát Hiệu suất & Chuyển đổi Deal",
-        "category": "Dashboard Thương mại",
-        "tools": "Power BI, DAX, Excel Modeling",
-        "description": "Thiết kế mô hình phân tích phễu khách hàng doanh nghiệp, đo lường tốc độ chốt giao dịch qua từng chặng và phát hiện các điểm nghẽn vận hành."
+        "title": "Dashboard Quản trị Phễu B2B & Phân tầng Merchant (Tier 1–3)",
+        "category": "Business Intelligence & Phân tích Thương mại",
+        "tools": "Power BI, DAX, Excel Data Modeling",
+        "description": "Thiết kế bảng điều khiển Power BI theo dõi danh mục khách hàng doanh nghiệp theo phân nhóm Tier 1–3, trực quan hóa tỷ lệ chuyển đổi qua từng chặng đàm phán, GMV dự kiến và cảnh báo sớm các hồ sơ đang bị nghẽn."
       }
     ],
     "projects": [
       {
-        "tag": "Chiến lược Dữ liệu & Thống kê",
-        "title": "Khung Quản trị Dữ liệu & Ra Quyết định Chiến lược",
-        "description": "Phân tích cách nhận diện các giới hạn thống kê và sai lệch lấy mẫu trong dữ liệu hành vi khách hàng, giúp doanh nghiệp đưa ra quyết định thương mại khách quan hơn.",
+        "tag": "Quản trị Chất lượng Dữ liệu & Ra Quyết định",
+        "title": "Kiểm soát Sai lệch Lấy mẫu (Sampling Bias) trong Phân tích Thương mại",
+        "description": "Bộ khung thực hành giúp nhận diện sớm dữ liệu CRM thiếu hụt, thiên lệch sống sót (survivorship bias) và mẫu khảo sát lệch trước khi đưa ra quyết định kinh doanh.",
         "url": "https://quangtritc1805.wixsite.com/website/post/understanding-the-limitations-of-data-for-accurate-insights-in-analysis",
         "kpis": [
           "Kiểm định Chất lượng Dữ liệu",
           "Hạn chế Sai lệch Mẫu",
           "Ra Quyết định Khách quan"
         ],
-        "challenge": "Trong hoạt động kinh doanh thực tế, việc đánh giá hiệu quả chiến dịch hoặc hành vi khách hàng đôi khi dựa trên dữ liệu CRM chưa đầy đủ hoặc mẫu khảo sát chưa mang tính đại diện, dễ dẫn đến nhận định chủ quan.",
-        "solution": "Vận dụng kiến thức từ chương trình Thạc sĩ Phân tích Kinh doanh (Đại học Wollongong) và chuyên môn SAS®, tôi tổng hợp bộ tiêu chí rà soát độ tin cậy của dữ liệu, nhận diện các sai lệch lấy mẫu (Sampling Bias) và kiểm chứng giả thuyết trước khi đưa vào báo cáo đề xuất.",
-        "impact": "Giúp kết nối giữa kiến thức phân tích định lượng và thực tiễn phát triển kinh doanh, hỗ trợ việc lập kế hoạch và phân bổ nguồn lực dựa trên số liệu thực chất.",
+        "challenge": "Trong thực tế vận hành kinh doanh, việc đánh giá hiệu quả chiến dịch hay hành vi khách hàng đôi khi được kết luận dựa trên dữ liệu CRM ghi nhận chưa đầy đủ hoặc mẫu khảo sát chỉ tập trung vào một nhóm khách hàng quen thuộc—dễ dẫn đến những quyết định phân bổ nguồn lực sai lệch.",
+        "solution": "Vận dụng phương pháp luận từ chương trình Thạc sĩ Phân tích Kinh doanh (Đại học Wollongong) và chuyên môn thống kê SAS®, tôi xây dựng bộ checklist kiểm định độ tin cậy của dữ liệu: rà soát tính đại diện của mẫu, phát hiện sớm survivorship bias / selection bias và kiểm chứng chéo các giả định trước khi trình bày báo cáo đề xuất.",
+        "impact": "Kết nối chặt chẽ giữa tư duy thống kê định lượng và bài toán lập kế hoạch kinh doanh hằng ngày, đảm bảo các đề xuất thương mại và dự báo doanh số luôn đứng trên nền tảng số liệu thực chất.",
         "stack": [
           "Quản trị Dữ liệu",
           "Phân tích Thống kê SAS®",
@@ -898,18 +898,18 @@
         ]
       },
       {
-        "tag": "Phân tích Phễu Thương mại & BI",
-        "title": "Phân tích Chuyển đổi Phễu B2B & Mô hình Chấm điểm Khách hàng Doanh nghiệp",
-        "description": "Ứng dụng Power BI, DAX và mô hình hóa dữ liệu để theo dõi tỷ lệ chuyển đổi qua từng bước tiếp cận đối tác, nhận diện điểm nghẽn hồ sơ và hỗ trợ phân tầng khách hàng.",
+        "tag": "Phân tích Phễu B2B & Business Intelligence",
+        "title": "Phân tích Chuyển đổi Phễu Bán hàng B2B & Mô hình Chấm điểm Lead",
+        "description": "Ứng dụng Power BI, hàm DAX và Excel Data Modeling để đo lường tốc độ dịch chuyển của từng thương vụ B2B, phát hiện điểm nghẽn quy trình và vận hành mô hình phân tầng merchant Tier 1–3.",
         "url": "#",
         "kpis": [
           "Power BI & DAX",
           "Theo dõi Phễu B2B",
           "+30% Tốc độ Thẩm định"
         ],
-        "challenge": "Khi số lượng khách hàng doanh nghiệp tiềm năng tăng lên, việc theo dõi tiến độ rời rạc trên các bảng tính thông thường khiến đội ngũ khó nhận biết chính xác hồ sơ đang bị chậm ở khâu thẩm định, đàm phán biểu phí hay hoàn thiện hợp đồng.",
-        "solution": "Xây dựng mô hình theo dõi và trực quan hóa dữ liệu bằng Power BI (kết hợp hàm DAX và Excel Modeling) để đo lường tỷ lệ chuyển đổi qua từng chặng của phễu bán hàng, đồng thời lượng hóa tiêu chí phân nhóm đối tác Tier 1–3.",
-        "impact": "Giúp theo dõi trực quan sức khỏe đường ống kinh doanh (Pipeline), hỗ trợ rút ngắn khoảng 30% thời gian sàng lọc ban đầu và dự báo sát hơn sản lượng giao dịch định kỳ.",
+        "challenge": "Khi số lượng khách hàng doanh nghiệp tiềm năng tăng nhanh, việc theo dõi tiến độ rời rạc trên các file bảng tính truyền thống khiến đội ngũ rất khó nhìn ra chính xác thương vụ đang bị chậm ở khâu nào: thẩm định ban đầu, đàm phán biểu phí MDR, rà soát pháp lý hay tích hợp kỹ thuật.",
+        "solution": "Tôi xây dựng mô hình dữ liệu và trực quan hóa trên Power BI (kết hợp DAX và Excel Modeling) để đo lường tỷ lệ chuyển đổi cũng như thời gian xử lý ở từng chặng của phễu B2B, đồng thời tự động chấm điểm và phân nhóm đối tác vào ma trận Tier 1–3 theo tiềm năng GMV và số lượng chi nhánh.",
+        "impact": "Mang lại góc nhìn trực quan, minh bạch về sức khỏe đường ống kinh doanh (Pipeline), góp phần rút ngắn khoảng 30% thời gian sàng lọc lead ban đầu và nâng cao độ chính xác khi dự báo sản lượng giao dịch (GMV) định kỳ.",
         "stack": [
           "Power BI",
           "DAX",
@@ -919,22 +919,22 @@
       }
     ],
     "labels": {
-      "overview": "Triết lý Nghề nghiệp",
-      "capabilities": "Năng lực Cốt lõi",
-      "careerPath": "Hành trình Sự nghiệp",
+      "overview": "Triết lý Kinh doanh",
+      "capabilities": "Năng lực Chuyên môn Cốt lõi",
+      "careerPath": "Hành trình Sự nghiệp & Thành tích",
       "academic": "Học vấn & Bằng cấp",
-      "credentials": "Chứng chỉ",
-      "analytics": "Phân tích & Tự động hóa",
+      "credentials": "Chứng nhận Chuyên ngành",
+      "analytics": "Phân tích Dữ liệu & Tự động hóa",
       "caseStudies": "Case Study Chuyên gia",
-      "contactHeading": "Tôi có thể giúp gì cho bạn?",
-      "contactSub": "Bạn có câu hỏi hoặc muốn trao đổi về cơ hội hợp tác? Hãy để lại thông tin bên dưới nhé.",
+      "contactHeading": "Mở Khoá Tăng Trưởng B2B & FinTech",
+      "contactSub": "Bạn đang tìm kiếm nhân sự B2B chuyên biệt hoặc muốn trao đổi về cơ hội hợp tác chiến lược? Hãy để lại thông tin bên dưới.",
       "sendBtn": "GỬI THÔNG TIN",
       "socialHeading": "Hoặc kết nối với tôi qua...",
       "firstName": "Tên",
       "lastName": "Họ",
       "emailAddr": "Địa chỉ Email",
-      "subject": "Chủ đề / Công ty",
-      "message": "Nội dung tin nhắn (Ngắn gọn và trực tiếp nhé)",
+      "subject": "Chủ đề / Doanh nghiệp",
+      "message": "Nội dung trao đổi hợp tác (Ngắn gọn và trực tiếp nhé)",
       "footerNavigate": "ĐIỀU HƯỚNG",
       "footerContact": "LIÊN HỆ TRỰC TIẾP"
     }
