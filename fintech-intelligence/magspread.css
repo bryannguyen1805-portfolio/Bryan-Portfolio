@@ -649,18 +649,180 @@ small, .ms-small {
   border: 1px solid var(--ms-border);
 }
 
+/* ─── MULTI-PAGE TAB NAVIGATION (BRYAN PORTFOLIO PARITY) ─── */
+.ms-page-section {
+  display: none;
+  animation: msPageSlideUp 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ms-page-section.active {
+  display: block;
+}
+
+@keyframes msPageSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ms-nav-tab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ms-text-secondary);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ms-nav-tab-btn:hover {
+  color: var(--ms-primary);
+  background-color: var(--ms-primary-ghost);
+}
+
+.ms-nav-tab-btn.active {
+  color: var(--ms-primary);
+  background-color: var(--ms-primary-light);
+  box-shadow: inset 0 -2px 0 var(--ms-primary);
+}
+
+[data-theme="dark"] .ms-nav-tab-btn.active {
+  color: #2DD4BF;
+  background-color: rgba(45, 212, 191, 0.15);
+  box-shadow: inset 0 -2px 0 #2DD4BF;
+}
+
+/* Quick Jump Cards on Today Tab */
+.ms-today-quick-jump {
+  padding: 24px 0 32px 0;
+}
+
+.ms-today-nav-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ms-today-jump-card {
+  background-color: var(--ms-surface-card);
+  border: 1px solid var(--ms-border);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ms-today-jump-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ms-primary);
+  box-shadow: 0 4px 12px rgba(19, 78, 74, 0.08);
+}
+
+.ms-jump-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.ms-jump-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ms-text-primary);
+  margin-bottom: 3px;
+}
+
+.ms-jump-desc {
+  font-size: 0.75rem;
+  color: var(--ms-text-muted);
+  line-height: 1.4;
+}
+
+.ms-jump-arrow {
+  margin-left: auto;
+  font-size: 1.1rem;
+  color: var(--ms-primary);
+  font-weight: 700;
+}
+
+/* Mobile Quick Tabs Strip */
+.ms-mobile-quick-tabs {
+  background-color: var(--ms-surface-card);
+  border-bottom: 1px solid var(--ms-border);
+  padding: 8px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.ms-mobile-quick-tabs::-webkit-scrollbar {
+  display: none;
+}
+.ms-quick-tabs-scroll {
+  display: flex;
+  gap: 6px;
+  width: max-content;
+}
+.ms-quick-tab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--ms-border);
+  background-color: var(--ms-surface-base);
+  color: var(--ms-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ms-quick-tab.active {
+  background-color: var(--ms-primary);
+  color: #FFFFFF;
+  border-color: var(--ms-primary);
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .ms-mobile-quick-tabs {
+    display: none !important;
+  }
+}
+
 /* ─── SECTION 02: COVER STORY / CORE THESIS ─── */
 .ms-cover-story {
-  padding-top: var(--space-xl);
+  padding-top: var(--space-md);
   padding-bottom: var(--space-xl);
   border-bottom: 2px solid var(--ms-border-dark);
 }
 
+.ms-cover-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
 .ms-cover-grid {
   display: grid;
-  grid-template-columns: 7fr 5fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: var(--space-xl);
-  align-items: start;
+  align-items: stretch;
+}
+
+.ms-cover-main-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ms-cover-badge-row {
@@ -671,10 +833,10 @@ small, .ms-small {
 }
 
 .ms-cover-headline {
-  font-family: var(--font-reading);
-  font-size: clamp(2.125rem, 2.6vw, 2.45rem); /* 34px - 39px Desktop */
+  font-family: var(--font-headline);
+  font-size: clamp(1.65rem, 2.3vw, 2.15rem);
   font-weight: 700;
-  line-height: 1.22;
+  line-height: 1.25;
   color: var(--ms-primary);
   margin-bottom: var(--space-sm);
   letter-spacing: -0.01em;
@@ -682,82 +844,45 @@ small, .ms-small {
 
 .ms-cover-subheadline {
   font-family: var(--font-reading);
-  font-size: 1.0625rem; /* 17px */
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--ms-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-sm);
-  border-left: 3px solid var(--ms-secondary);
-  padding-left: var(--space-sm);
+  padding-left: 2px;
 }
 
 .ms-cover-summary {
   font-family: var(--font-reading);
-  font-size: 0.96875rem; /* 15.5px */
-  line-height: 1.65;
-  color: var(--ms-text-primary);
-  margin-bottom: var(--space-md);
-}
-
-.ms-cover-insights-box {
-  background-color: var(--ms-surface-card);
-  border: 1px solid var(--ms-border);
-  border-left: 4px solid var(--ms-primary);
-  padding: var(--space-md);
-  margin-bottom: var(--space-md);
-}
-
-.ms-box-title {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ms-primary);
-  margin-bottom: var(--space-sm);
-}
-
-.ms-insight-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.ms-insight-item {
-  position: relative;
-  padding-left: 20px;
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--ms-text-primary);
-}
-.ms-insight-item::before {
-  content: "■";
-  position: absolute;
-  left: 0;
-  top: 1px;
-  color: var(--ms-secondary);
-  font-size: 0.65rem;
+  margin-bottom: 0;
 }
 
 .ms-cover-sidebar {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  height: 100%;
 }
 
 .ms-editorial-pullquote {
   background-color: var(--ms-surface-card);
   border: 1px solid var(--ms-border);
   border-top: 3px solid var(--ms-secondary);
-  padding: var(--space-md);
+  border-radius: 6px;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .ms-quote-text {
   font-family: var(--font-headline);
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   font-style: italic;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--ms-text-primary);
   margin-bottom: var(--space-sm);
 }
@@ -770,10 +895,53 @@ small, .ms-small {
   text-transform: uppercase;
 }
 
+/* Implication Banner (Balanced Full Width Below Top Grid) */
+.ms-implication-banner {
+  width: 100%;
+  margin-top: 4px;
+}
+
 .ms-implication-card {
   background-color: var(--ms-surface-card);
   border: 1px solid var(--ms-border);
-  padding: var(--space-md);
+  border-radius: 6px;
+  padding: 18px 22px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.ms-implication-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: 14px;
+}
+
+.ms-implication-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-implication-text {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ms-text-primary);
+  margin: 0;
+  text-align: justify;
+}
+
+.ms-implication-fintech {
+  background-color: var(--ms-surface-base);
+  padding: 14px 16px;
+  border-left: 4px solid var(--ms-primary);
+  border-radius: 0 6px 6px 0;
+}
+
+.ms-implication-watchpoint {
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+  line-height: 1.5;
+  padding-top: 10px;
+  border-top: 1px dashed var(--ms-border);
 }
 
 /* ─── SECTION 03: COMPACT MAGSPREAD MARKET PULSE ─── */
@@ -1559,8 +1727,69 @@ small, .ms-small {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  .ms-masthead-topbar,
-  .ms-masthead-meta-strip,
+  .ms-masthead-topbar {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 0 !important;
+    gap: 8px !important;
+  }
+  .ms-masthead-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .ms-home-link, #mastheadDate {
+    display: none !important;
+  }
+  .ms-back-link span {
+    display: none !important;
+  }
+  #btnOpenWelcomeIntro span,
+  #themeToggleBtn span {
+    font-size: 11px;
+  }
+  .ms-masthead-hero-title {
+    padding: 10px 0 8px 0;
+  }
+  .ms-newspaper-name {
+    font-size: 1.45rem !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.2 !important;
+  }
+  .ms-newspaper-sub {
+    font-size: 9.5px !important;
+    letter-spacing: 0.04em !important;
+    margin-bottom: 4px !important;
+  }
+  .ms-edition-badge-wrap {
+    margin-top: 6px !important;
+  }
+  .ms-cover-headline {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+  .ms-cover-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .ms-implication-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .ms-today-nav-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .ms-decision-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .ms-cover-story {
+    padding-top: 16px !important;
+    padding-bottom: 20px !important;
+  }
+  .ms-masthead-meta-strip {
+    display: none !important;
+  }
   .ms-footer-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -2496,53 +2725,116 @@ body {
   }
 
   /* Refined Typography Scale on Mobile (<= 768px) */
+  .ms-masthead-topbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 6px 0 !important;
+    gap: 6px !important;
+  }
+
+  .ms-masthead-brand-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .ms-masthead-brand-group .ms-back-link span {
+    display: none !important;
+  }
+
+  .ms-masthead-brand-group .ms-home-link span {
+    display: none !important;
+  }
+
+  #mastheadDate {
+    font-size: 0.6875rem !important;
+    white-space: nowrap !important;
+  }
+
+  #btnOpenWelcomeIntro {
+    padding: 3px 8px !important;
+    font-size: 0.6875rem !important;
+  }
+
+  #themeToggleBtn {
+    padding: 3px 8px !important;
+    font-size: 0.6875rem !important;
+  }
+
+  .ms-masthead-hero-title {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
   .ms-newspaper-name {
-    font-size: clamp(1.75rem, 7.5vw, 2.125rem) !important; /* 28px - 34px */
-    line-height: 1.12 !important;
+    font-size: 1.375rem !important; /* 22px */
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    margin: 4px 0 !important;
   }
 
   .ms-newspaper-sub {
-    font-size: 0.75rem !important; /* 12px */
-    letter-spacing: 0.06em !important;
+    font-size: 0.625rem !important; /* 10px */
+    letter-spacing: 0.05em !important;
+  }
+
+  .ms-edition-badge-wrap {
+    margin-top: 6px !important;
+  }
+
+  .ms-edition-badge-wrap .ms-badge {
+    font-size: 0.6875rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .ms-masthead-meta-strip {
+    display: none !important;
+  }
+
+  .ms-cover-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
   }
 
   .ms-cover-headline {
-    font-size: clamp(1.6rem, 6.5vw, 1.875rem) !important; /* 25.6px - 30px */
-    line-height: 1.22 !important;
+    font-size: 1.3rem !important;
+    line-height: 1.28 !important;
   }
 
-  .ms-cover-subheadline {
-    font-size: 1.05rem !important; /* 16.8px */
-    line-height: 1.5 !important;
+  .ms-implication-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
   .ms-section-heading {
-    font-size: clamp(1.3rem, 5.2vw, 1.5rem) !important; /* 20.8px - 24px */
+    font-size: clamp(1.2rem, 5vw, 1.4rem) !important;
     line-height: 1.25 !important;
   }
 
   .ms-lead-title {
-    font-size: clamp(1.3rem, 5.2vw, 1.5rem) !important; /* 20.8px - 24px */
+    font-size: clamp(1.2rem, 5vw, 1.375rem) !important;
     line-height: 1.25 !important;
   }
 
   .ms-subfeature-title {
-    font-size: 1.125rem !important; /* 18px */
+    font-size: 1.05rem !important;
     line-height: 1.3 !important;
   }
 
   .ms-news-card-title {
-    font-size: 1.0625rem !important; /* 17px */
+    font-size: 1rem !important;
     line-height: 1.35 !important;
   }
 
   .ms-pulse-value {
-    font-size: 1.35rem !important; /* 21.6px */
+    font-size: 1.25rem !important;
     line-height: 1.2 !important;
   }
 
   p, .ms-body {
-    font-size: 0.96875rem !important; /* 15.5px */
+    font-size: 0.9375rem !important;
     line-height: 1.6 !important;
   }
 
@@ -2563,32 +2855,6 @@ body {
   .ms-cover-badge-row {
     flex-wrap: wrap !important;
     gap: 6px !important;
-  }
-
-  .ms-masthead-topbar {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 8px 0 !important;
-  }
-
-  .ms-masthead-brand-group {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 6px 10px !important;
-  }
-
-  .ms-masthead-hero-title {
-    padding-top: var(--space-md) !important;
-    padding-bottom: var(--space-sm) !important;
-  }
-
-  .ms-masthead-meta-strip {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 6px !important;
-    font-size: 0.75rem !important;
   }
 
   .ms-footer-grid {

@@ -159,7 +159,8 @@ function renderAllSections() {
   renderPaymentRadar();
   renderExpertLearning();
   renderWatchlist();
-  // renderArchive();
+  renderArchive();
+  initFintechTabs();
 }
 
 // ─── SECTION 01: MASTHEAD ───
@@ -180,11 +181,7 @@ function renderMasthead() {
   }
 
   if (metaBar) {
-    metaBar.innerHTML = `
-      <div><strong>ĐỊA ĐIỂM:</strong> HÀ NỘI · TP. HỒ CHÍ MINH · TOÀN CẦU</div>
-      <div><strong>KHUNG THỜI GIAN:</strong> ${escapeHtml(EDITION_DATA.publicationGateStatus?.freshnessRatio || '0–24h: 11/21 (52,38%)')}</div>
-      <div><strong>TIÊU CHUẨN:</strong> MAGSPREAD EDITORIAL DESIGN SYSTEM V2.2.1</div>
-    `;
+    metaBar.style.display = 'none';
   }
 }
 
@@ -204,7 +201,6 @@ function renderCoverStory() {
 
   const lead = ct.leadArticle || {};
   const headline = lead.headline || ct.editorialHeadline || 'Sự kiện điều hành trọng tâm của phiên';
-  const eventId = lead.eventId || 'EVT-13';
   const sourceName = lead.sourceName || 'Báo Thanh Niên';
   const publishedAt = lead.publishedAt || '';
   const sourceUrl = lead.sourceUrl || '#';
@@ -213,11 +209,11 @@ function renderCoverStory() {
   if (headlineEl) headlineEl.textContent = headline;
 
   if (subheadlineEl) {
+    const cleanPubTime = publishedAt.split(' | ')[0].trim();
     subheadlineEl.innerHTML = `
-      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:6px 0 8px 0; font-size:0.8125rem;">
-        <span class="ms-badge ms-badge-rose" style="font-size:0.75rem; padding:2px 8px; font-weight:700; font-family:var(--font-mono);">[${escapeHtml(eventId)}]</span>
-        <span style="color:var(--ms-text-muted);">Nguồn gốc xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong> ${publishedAt ? `(${escapeHtml(publishedAt)})` : ''}</span>
-        <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-source-link" style="color:var(--ms-primary); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:3px;">
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:6px 0 10px 0; font-size:0.875rem;">
+        <span style="color:var(--ms-text-muted);">Nguồn xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong> ${cleanPubTime ? `(${escapeHtml(cleanPubTime)})` : ''}</span>
+        <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-source-link" style="color:var(--ms-primary); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
           <span>Đọc bài báo gốc</span>
           <span style="font-size:0.75rem;">↗</span>
         </a>
@@ -227,7 +223,7 @@ function renderCoverStory() {
 
   if (summaryEl) {
     summaryEl.innerHTML = `
-      <div style="font-size:0.9375rem; line-height:1.75; color:var(--ms-text-primary); margin-top:14px; text-align:justify;">
+      <div style="font-size:0.9375rem; line-height:1.75; color:var(--ms-text-primary); margin-top:10px; text-align:justify;">
         ${escapeHtml(summary)}
       </div>
     `;
@@ -243,13 +239,20 @@ function renderCoverStory() {
 
   if (implicationEl) {
     implicationEl.innerHTML = `
-      <div class="ms-box-title" style="font-size:0.875rem; font-weight:800; color:var(--ms-primary); margin-bottom:10px;">TÁC ĐỘNG THỊ TRƯỜNG & FINTECH LENS</div>
-      <p style="font-size:0.875rem; line-height:1.65; margin-bottom:12px; color:var(--ms-text-primary); text-align:justify;">${escapeHtml(ct.marketImpact || ct.whyItMatters || '')}</p>
-      <div style="background-color:var(--ms-surface-base); padding:12px 14px; border-left:4px solid var(--ms-primary); font-size:0.875rem; line-height:1.6; margin-bottom:12px; border-radius:0 4px 4px 0;">
-        <strong style="color:var(--ms-primary);">Góc nhìn FinTech & Cơ hội Payoo:</strong> ${escapeHtml(ct.fintechLensAction || ct.keyMarketImplication || '')}
-      </div>
-      <div style="font-size:0.8125rem; color:var(--ms-text-muted); line-height:1.5;">
-        <strong>Điều cần theo dõi:</strong> ${escapeHtml(ct.monitoringWatchpoint || 'Theo dõi sát diễn biến điều hành các phiên tiếp theo.')}
+      <div class="ms-implication-card">
+        <div class="ms-implication-grid">
+          <div class="ms-implication-col">
+            <div class="ms-box-title">TÁC ĐỘNG THỊ TRƯỜNG VĨ MÔ</div>
+            <p class="ms-implication-text">${escapeHtml(ct.marketImpact || ct.whyItMatters || '')}</p>
+          </div>
+          <div class="ms-implication-col ms-implication-fintech">
+            <div class="ms-box-title" style="color:var(--ms-primary);">GÓC NHÌN FINTECH & CƠ HỘI PAYOO</div>
+            <p class="ms-implication-text">${escapeHtml(ct.fintechLensAction || ct.keyMarketImplication || '')}</p>
+          </div>
+        </div>
+        <div class="ms-implication-watchpoint">
+          <strong>Điều cần theo dõi:</strong> ${escapeHtml(ct.monitoringWatchpoint || 'Theo dõi sát diễn biến điều hành các phiên tiếp theo.')}
+        </div>
       </div>
     `;
   }
@@ -403,17 +406,6 @@ function openPulseDetail(key) {
             ${escapeHtml(m.financialInterpretation || m.implication || m.statusReason || m.note || 'Chỉ số phản ánh trạng thái cân bằng vĩ mô và tính thanh khoản của hệ thống.')}
           </p>
         </div>
-
-        <!-- Field 11: Audit, Hash & Limitations -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px; font-family:var(--font-mono); font-size:0.75rem;">
-          <div style="text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:8px;">
-            KIỂM TOÁN DỮ LIỆU & BẰNG CHỨNG SHA-256 (FIELD 11)
-          </div>
-          <div>• Freshness Gate: <strong>${escapeHtml(m.freshnessStatus || 'PASS_WITHIN_72H')}</strong> (Age: ${escapeHtml(String(m.ageHoursAtT0 || 'N/A'))}h)</div>
-          <div>• Verification Status: <strong>${escapeHtml(m.verificationStatus || 'CURRENT_VERIFIED')}</strong></div>
-          <div style="word-break:break-all; margin-top:4px;">• SHA-256: <code>${escapeHtml(m.sha256 || 'N/A')}</code></div>
-          <div style="margin-top:4px;">• Evidence File: <code>${escapeHtml(m.evidencePath || 'N/A')}</code></div>
-        </div>
       </div>
     </div>
   `;
@@ -508,6 +500,7 @@ function renderNewsDesk() {
 }
 
 function renderNewsCardHtml(lead, isLead) {
+  const cleanTime = (lead.publisherPublishedAt || lead.publicationTimestamp || '').split(' | ')[0].trim();
   return `
     <article class="ms-news-lead-story">
       <div>
@@ -516,7 +509,7 @@ function renderNewsCardHtml(lead, isLead) {
           <span class="ms-badge ${lead.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
             [${escapeHtml(lead.strictCombinedTimeWindow || '24h')}]
           </span>
-          <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(lead.eventId)} · ${escapeHtml(lead.publisherPublishedAt || lead.publicationTimestamp || '')}</span>
+          ${cleanTime ? `<span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(cleanTime)}</span>` : ''}
         </div>
         <h2 class="ms-lead-title" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
           ${escapeHtml(lead.pageTitle || lead.title)}
@@ -552,7 +545,6 @@ function renderSubfeatureCardHtml(item) {
           <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:9px;">
             [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
           </span>
-          <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(item.eventId)}</span>
         </div>
         <h3 class="ms-subfeature-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
           ${escapeHtml(item.pageTitle || item.title)}
@@ -587,7 +579,6 @@ function renderStandardNewsCardHtml(item) {
               [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
             </span>
           </div>
-          <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(item.eventId)}</span>
         </div>
         <h3 class="ms-news-card-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
           ${escapeHtml(item.pageTitle || item.title)}
@@ -614,6 +605,8 @@ function openArticleReader(eventId) {
   const item = (EDITION_DATA.eligibleNewsList || []).find(x => x.eventId === eventId);
   if (!item) return;
 
+  const pubDate = (item.publisherPublishedAt || item.originalSourcePublishedAt || item.publicationTimestamp || '').split(' | ')[0].trim();
+
   const html = `
     <article style="font-size:1rem; line-height:1.75;">
       <!-- Article Header -->
@@ -622,7 +615,6 @@ function openArticleReader(eventId) {
         <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
           [${escapeHtml(item.strictCombinedTimeWindow || '0–24h')}]
         </span>
-        <span class="ms-xs" style="color:var(--ms-text-muted); margin-left:8px;">Mã sự kiện: ${escapeHtml(item.eventId)}</span>
       </div>
 
       <h2 style="font-family:var(--font-headline); font-size:1.875rem; line-height:1.25; color:var(--ms-primary); margin-bottom:12px;">
@@ -630,7 +622,7 @@ function openArticleReader(eventId) {
       </h2>
 
       <div style="font-family:var(--font-mono); font-size:0.8125rem; color:var(--ms-text-muted); padding-bottom:12px; margin-bottom:18px; border-bottom:1px solid var(--ms-border);">
-        Xuất bản: ${escapeHtml(item.publisherPublishedAt || item.publicationTimestamp || '')} | Nguồn gốc: ${escapeHtml(item.originalSourceName || item.author || '')} (${escapeHtml(item.originalSourcePublishedAt || '')})
+        Xuất bản: ${escapeHtml(pubDate)} | Nguồn: ${escapeHtml(item.originalSourceName || item.author || 'Báo chí')}
       </div>
 
       ${item.supportingQuote ? `
@@ -701,13 +693,11 @@ function openArticleReader(eventId) {
         <!-- Section H: Canonical Provenance & Sources -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-            H. NGUỒN BÀI GỐC ĐÃ XÁC MINH & BẰNG CHỨNG ĐỐI SOÁT
+            H. NGUỒN BÀI VIẾT GỐC & ĐỐI SOÁT BÁO CHÍ
           </h4>
           <div style="font-size:0.875rem; line-height:1.6; margin-bottom:12px;">
             <div>• Tác giả / Nguồn: <strong>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</strong></div>
-            <div>• Thời gian xuất bản gốc: <strong>${escapeHtml(item.originalSourcePublishedAt || item.publicationTimestamp || '')}</strong></div>
-            <div style="word-break:break-all; font-family:var(--font-mono); font-size:0.75rem; margin-top:4px;">• Mã băm SHA-256: <code>${escapeHtml(item.computedSha256 || 'N/A')}</code></div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; margin-top:2px;">• Snapshot Bằng chứng: <code>${escapeHtml(item.snapshotFile || 'N/A')}</code></div>
+            <div>• Thời gian xuất bản gốc: <strong>${escapeHtml(pubDate)}</strong></div>
           </div>
           <div>
             <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
@@ -721,7 +711,7 @@ function openArticleReader(eventId) {
     </article>
   `;
 
-  openDrawer(`Phân tích chuyên sâu: ${item.eventId}`, html);
+  openDrawer(item.pageTitle || item.title || 'Phân tích chuyên sâu', html);
 }
 
 
@@ -735,9 +725,6 @@ function renderConnectTheDots() {
     <article class="ms-dot-story-card">
       <div style="margin-bottom:8px;">
         <span class="ms-badge ms-badge-rose">PHÂN TÍCH CHUỖI SỰ KIỆN</span>
-        <span class="ms-xs" style="color:var(--ms-text-muted); margin-left:6px;">
-          Dẫn xuất từ: ${(cluster.originEventIds || []).join(', ')}
-        </span>
       </div>
       <h3 class="ms-dot-title">${escapeHtml(cluster.clusterTitle)}</h3>
       <p class="ms-dot-narrative">${escapeHtml(cluster.synthesisNarrative)}</p>
@@ -776,10 +763,6 @@ function renderMacroToMicro() {
       else if (layer.badge === 'INFERENCE') badgeClass = 'ms-badge-primary';
       else if (layer.badge === 'HYPOTHESIS') badgeClass = 'ms-badge-warning';
 
-      const eventsBadge = (layer.eventIds && layer.eventIds.length > 0)
-        ? `<span class="ms-badge ms-badge-rose" style="font-size:8px; padding:1px 5px; margin-left:4px;">${escapeHtml(layer.eventIds.join(', '))}</span>`
-        : '';
-
       const rawNum = layer.levelNumber || layer.level || layer.stageNumber || (lIdx != null ? lIdx + 1 : 1);
       let numVal = parseInt(rawNum, 10);
       if (isNaN(numVal) || numVal < 1) numVal = (lIdx != null ? lIdx + 1 : 1);
@@ -803,7 +786,6 @@ function renderMacroToMicro() {
             </div>
             <div>
               <span class="ms-badge ${badgeClass}" style="font-size:8px; padding:1px 5px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
-              ${eventsBadge}
             </div>
           </div>
           <div class="ms-layer-step-title">${escapeHtml(title)}</div>
@@ -818,7 +800,6 @@ function renderMacroToMicro() {
           <div>
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
               <span class="ms-badge ms-badge-secondary" style="font-size:9px;">ECONOMIC ANALYSIS CHAIN</span>
-              <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(chain.chainId)}</span>
             </div>
             <h3 class="ms-chain-title">${escapeHtml(chain.chainTitle)}</h3>
             <p class="ms-chain-thesis">${escapeHtml(chain.coreThesis)}</p>
@@ -874,11 +855,6 @@ function openMacroChainDrawer(chainId) {
         <p style="font-size:0.875rem; line-height:1.6; margin:0 0 8px 0; color:var(--ms-text-secondary);">
           ${escapeHtml(desc)}
         </p>
-        ${layer.eventIds && layer.eventIds.length > 0 ? `
-          <div style="font-size:0.75rem; color:var(--ms-text-muted); font-family:var(--font-mono);">
-            Căn cứ sự kiện: <strong>${escapeHtml(layer.eventIds.join(', '))}</strong>
-          </div>
-        ` : ''}
       </div>
     `;
   }).join('');
@@ -886,7 +862,7 @@ function openMacroChainDrawer(chainId) {
   const html = `
     <article style="font-size:0.9375rem; line-height:1.7;">
       <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-secondary">${escapeHtml(chain.chainId)}</span>
+        <span class="ms-badge ms-badge-secondary">CHUỖI PHÂN TÍCH</span>
         <h2 style="font-family:var(--font-headline); font-size:1.625rem; line-height:1.25; color:var(--ms-primary); margin:8px 0 6px 0;">
           ${escapeHtml(chain.chainTitle)}
         </h2>
@@ -922,7 +898,7 @@ function openMacroChainDrawer(chainId) {
     </article>
   `;
 
-  openDrawer(`Chuỗi truyền dẫn: ${chain.chainId}`, html);
+  openDrawer(chain.chainTitle || 'Chuỗi truyền dẫn vĩ mô → vi mô', html);
 }
 
 
@@ -943,7 +919,6 @@ function renderPaymentRadar() {
     const readinessBadge = readiness === 'CONFIRMED_EXISTING_CAPABILITY'
       ? '<span class="ms-badge ms-badge-success" style="font-size:9px;">NĂNG LỰC HIỆN HỮU</span>'
       : '<span class="ms-badge ms-badge-primary" style="font-size:9px;">TÍCH HỢP MỞ RỘNG</span>';
-    const events = (op.relevantEventIds || op.originEventIds || []).join(', ');
 
     return `
       <article class="ms-radar-card">
@@ -953,9 +928,6 @@ function renderPaymentRadar() {
             ${readinessBadge}
           </div>
           <h3 class="ms-radar-title">${escapeHtml(title)}</h3>
-          <div style="font-size:0.75rem; color:var(--ms-text-muted); margin-bottom:10px;">
-            Căn cứ sự kiện: <strong>${escapeHtml(events || 'EVT-18')}</strong>
-          </div>
           <div class="ms-radar-row">
             <strong>Tín hiệu thị trường:</strong> ${escapeHtml(op.marketSignal || '')}
           </div>
@@ -1332,6 +1304,97 @@ function openSheetsSchemaModal(editionId) {
 }
 
 
+// ─── TAB NAVIGATION CONTROLLER (BRYAN PORTFOLIO MULTI-PAGE PARITY) ───
+function switchFintechTab(tabKey, targetSubId) {
+  if (!tabKey) tabKey = 'today';
+  
+  const pages = {
+    today: 'page-today',
+    market: 'page-market',
+    analysis: 'page-analysis',
+    b2b: 'page-b2b',
+    archive: 'page-archive'
+  };
+  
+  const targetPageId = pages[tabKey] || 'page-today';
+
+  // 1. Toggle page sections visibility
+  document.querySelectorAll('.ms-page-section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  const activePage = document.getElementById(targetPageId);
+  if (activePage) {
+    activePage.classList.add('active');
+  }
+
+  // 2. Update desktop tab buttons
+  document.querySelectorAll('.ms-nav-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
+  });
+
+  // 3. Update mobile quick tabs
+  document.querySelectorAll('.ms-quick-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
+  });
+
+  // 4. Close mobile drawer if open
+  closeMobileDrawer();
+
+  // 5. Update browser URL hash cleanly
+  if (window.history && window.history.replaceState) {
+    window.history.replaceState(null, '', '#' + tabKey);
+  }
+
+  // 6. Scroll smoothly to target sub-section or top of page
+  if (targetSubId) {
+    setTimeout(() => {
+      const el = document.getElementById(targetSubId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 60);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function initFintechTabs() {
+  const hash = (window.location.hash || '').replace('#', '').toLowerCase();
+  const validTabs = ['today', 'market', 'analysis', 'b2b', 'archive'];
+  if (validTabs.includes(hash)) {
+    switchFintechTab(hash);
+  } else {
+    switchFintechTab('today');
+  }
+
+  window.addEventListener('hashchange', () => {
+    const newHash = (window.location.hash || '').replace('#', '').toLowerCase();
+    if (validTabs.includes(newHash)) {
+      switchFintechTab(newHash);
+    }
+  });
+}
+
+function openMobileDrawer() {
+  const mobileDrawer = document.getElementById('mobileNavDrawer');
+  if (mobileDrawer) {
+    mobileDrawer.classList.add('open');
+    mobileDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeMobileDrawer() {
+  const mobileDrawer = document.getElementById('mobileNavDrawer');
+  if (mobileDrawer) {
+    mobileDrawer.classList.remove('open');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
 // ─── FILTER & SEARCH EVENTS ───
 function setupEventListeners() {
   // Floating Contact Widget Toggle (Bryan Portfolio Parity)
@@ -1393,24 +1456,7 @@ function setupEventListeners() {
 
   // ─── NAVIGATION MEGA MENU & MOBILE DRAWER INTERACTIONS ───
   const mobileToggle = $('#mobileMenuToggle');
-  const mobileDrawer = $('#mobileNavDrawer');
   const mobileClose = $('#mobileDrawerClose');
-
-  function openMobileDrawer() {
-    if (mobileDrawer) {
-      mobileDrawer.classList.add('open');
-      mobileDrawer.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeMobileDrawer() {
-    if (mobileDrawer) {
-      mobileDrawer.classList.remove('open');
-      mobileDrawer.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  }
 
   function closeAllDropdowns() {
     $$('.ms-nav-group').forEach(g => {
@@ -1523,15 +1569,12 @@ function renderDecisionBrief() {
             ${priorityBadge}
           </div>
           <h3 class="ms-decision-card-title">${escapeHtml(sig.signalTitle)}</h3>
-          <div style="font-size:0.75rem; color:var(--ms-text-muted); margin-bottom:8px; font-family:var(--font-mono);">
-            Sự kiện căn cứ: <strong>${escapeHtml(eventsStr)}</strong>
-          </div>
           <p class="ms-decision-card-lead">
             <strong>Ý nghĩa B2B:</strong> ${escapeHtml(meaningSnippet)}
           </p>
         </div>
         <div style="border-top:1px solid var(--ms-border); padding-top:10px; margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-size:0.75rem; color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(sig.signalId || 'SIG-0' + (idx+1))}</span>
+          <span style="font-size:0.75rem; color:var(--ms-text-muted); font-weight:600;">TÍN HIỆU #${idx + 1}</span>
           <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openDecisionSignalDrawer('${escapeHtml(sig.signalId)}')">
             ĐỌC PHÂN TÍCH →
           </button>
@@ -1601,14 +1644,11 @@ function openDecisionSignalDrawer(signalId) {
     <article style="font-size:0.9375rem; line-height:1.7;">
       <!-- Header -->
       <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-rose">${escapeHtml(sig.signalId)}</span>
+        <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
         <span class="ms-badge ms-badge-neutral" style="margin-left:6px;">${escapeHtml(sig.confidenceLevel || 'HIGH_CONFIDENCE')}</span>
         <h2 style="font-family:var(--font-headline); font-size:1.625rem; line-height:1.25; color:var(--ms-primary); margin:10px 0 6px 0;">
           ${escapeHtml(sig.signalTitle)}
         </h2>
-        <div style="font-family:var(--font-mono); font-size:0.8125rem; color:var(--ms-text-muted);">
-          Sự kiện căn cứ: <strong>${escapeHtml((sig.relatedEventIds || []).join(', '))}</strong> | Ấn bản: ${escapeHtml(sig.editionId || '')}
-        </div>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:16px;">
@@ -1679,18 +1719,15 @@ function openDecisionSignalDrawer(signalId) {
         <!-- Section H: Evidence & Sources -->
         <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
           <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            H. BẰNG CHỨNG, EVENT IDS & LINK NGUỒN XÁC MINH
+            H. NGUỒN BÁO CHÍ THAM KHẢO & ĐỐI SOÁT
           </h4>
-          <div style="font-size:0.8125rem; font-family:var(--font-mono); color:var(--ms-text-muted); margin-bottom:8px;">
-            Event IDs: <strong>${escapeHtml((sig.relatedEventIds || []).join(', '))}</strong>
-          </div>
           ${urlsHtml}
         </div>
       </div>
     </article>
   `;
 
-  openDrawer(`Tín hiệu hành động: ${sig.signalId}`, html);
+  openDrawer(sig.signalTitle || 'Tín hiệu hành động điều hành', html);
 }
 
 
@@ -1942,6 +1979,10 @@ window.openDecisionSignalDrawer = openDecisionSignalDrawer;
 window.openMacroChainDrawer = openMacroChainDrawer;
 window.openArchiveDrawer = openArchiveDrawer;
 window.openSheetsSchemaModal = openSheetsSchemaModal;
+window.switchFintechTab = switchFintechTab;
+window.initFintechTabs = initFintechTabs;
+window.openMobileDrawer = openMobileDrawer;
+window.closeMobileDrawer = closeMobileDrawer;
 window.openVCardModal = openVCardModal;
 window.closeVCardModal = closeVCardModal;
 window.switchVCardTab = switchVCardTab;
