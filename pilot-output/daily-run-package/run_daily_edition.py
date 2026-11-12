@@ -34,8 +34,28 @@ def main():
     start_time = datetime.now()
     print_header(f"BRYAN FINTECH INTELLIGENCE — DAILY RUN [{start_time.strftime('%Y-%m-%d %H:%M:%S')}]")
 
+    workspace_root = os.path.abspath(os.path.join(PACKAGE_DIR, "..", ".."))
+    daily_editions_dir = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "06_DAILY_EDITIONS", "daily-editions")
+    orch_script = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "02_SOURCE_CODE", "phase07_daily_runtime_orchestrator.py")
+
+    today_str = start_time.strftime("%Y-%m-%d")
+    today_edition_dir = os.path.join(daily_editions_dir, today_str)
+
+    # Step 0: Check if today's edition exists; if not, trigger Live Intelligence Orchestrator
+    if not os.path.exists(today_edition_dir) and os.path.exists(orch_script):
+        print(f"📌 [BƯỚC 0/4] Phát hiện ấn bản ngày mới ({today_str}). Kích hoạt Live Runtime Orchestrator...")
+        orch_cmd = [sys.executable, orch_script, "--mode", "LIVE", "--date", today_str]
+        try:
+            orch_res = subprocess.run(orch_cmd, capture_output=True, text=True, timeout=180)
+            if orch_res.returncode == 0:
+                print("   ✅ Live Orchestrator: Quét tin, kiểm định 0-24h & tạo lập phân tích mới thành công!")
+            else:
+                print(f"   ℹ️ Live Orchestrator: Tiếp tục với luồng tổng hợp ấn bản mới nhất.")
+        except Exception as e:
+            print(f"   ⚠️ Lưu ý khi gọi Live Orchestrator: {e}")
+
     # Step 1: Execute update_magspread_pilot_ui.py
-    print("📌 [BƯỚC 1/3] Kích hoạt Engine Phân tích & Xuất bản E-Magazine...")
+    print("📌 [BƯỚC 1/4] Kích hoạt Engine Phân tích & Xuất bản E-Magazine...")
     cmd = [sys.executable, "update_magspread_pilot_ui.py"]
     res = subprocess.run(cmd, capture_output=True, text=True)
 
@@ -46,7 +66,7 @@ def main():
         print(res.stdout.strip())
 
     # Step 2: Validate Output Integrity
-    print("\n📌 [BƯỚC 2/3] Đối soát tính toàn vẹn dữ liệu xuất bản...")
+    print("\n📌 [BƯỚC 2/4] Đối soát tính toàn vẹn dữ liệu xuất bản...")
     json_path = os.path.join(PACKAGE_DIR, "edition-data.json")
     js_path = os.path.join(PACKAGE_DIR, "edition-data.js")
 
