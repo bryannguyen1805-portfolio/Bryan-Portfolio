@@ -4370,9 +4370,16 @@ i,
 }
 
 .ms-quote-text {
-  font-size: 1.25rem !important;
+  font-size: 0.96875rem !important;
   color: var(--ms-text-primary) !important;
-  margin-bottom: var(--space-sm) !important;
+  margin-bottom: 8px !important;
+}
+
+@media (max-width: 768px) {
+  .ms-quote-text {
+    font-size: 0.875rem !important;
+    line-height: 1.45 !important;
+  }
 }
 
 .ms-lead-quote {
