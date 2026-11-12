@@ -211,9 +211,9 @@ function renderCoverStory() {
   if (subheadlineEl) {
     const cleanPubTime = publishedAt.split(' | ')[0].trim();
     subheadlineEl.innerHTML = `
-      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:6px 0 10px 0; font-size:0.875rem;">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:2px 0 4px 0; font-size:0.8125rem;">
         <span style="color:var(--ms-text-muted);">Nguồn xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong> ${cleanPubTime ? `(${escapeHtml(cleanPubTime)})` : ''}</span>
-        <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-source-link" style="color:var(--ms-primary); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
+        <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-source-link" style="color:var(--ms-primary); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:3px;">
           <span>Đọc bài báo gốc</span>
           <span style="font-size:0.75rem;">↗</span>
         </a>
@@ -223,7 +223,7 @@ function renderCoverStory() {
 
   if (summaryEl) {
     summaryEl.innerHTML = `
-      <div style="font-size:0.9375rem; line-height:1.75; color:var(--ms-text-primary); margin-top:10px; text-align:justify;">
+      <div style="font-size:0.90625rem; line-height:1.65; color:var(--ms-text-primary); margin:0; text-align:justify;">
         ${escapeHtml(summary)}
       </div>
     `;
@@ -231,9 +231,9 @@ function renderCoverStory() {
 
   if (quoteEl) {
     quoteEl.innerHTML = `
-      <div class="ms-quote-text" style="font-size:1.0625rem; line-height:1.6; font-style:italic;">“${escapeHtml(ct.editorialPullQuote || '')}”</div>
-      ${ct.editorialSynthesis ? `<p style="font-size:0.875rem; line-height:1.65; margin:14px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
-      <div class="ms-quote-attribution" style="margin-top:12px; font-weight:800; font-size:0.75rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN FINTECH INTELLIGENCE</div>
+      <div class="ms-quote-text">“${escapeHtml(ct.editorialPullQuote || '')}”</div>
+      ${ct.editorialSynthesis ? `<p style="font-size:0.8125rem; line-height:1.55; margin:8px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
+      <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.6875rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN FINTECH INTELLIGENCE</div>
     `;
   }
 
@@ -241,12 +241,18 @@ function renderCoverStory() {
     implicationEl.innerHTML = `
       <div class="ms-implication-card">
         <div class="ms-implication-grid">
-          <div class="ms-implication-col">
-            <div class="ms-box-title">TÁC ĐỘNG THỊ TRƯỜNG VĨ MÔ</div>
+          <div class="ms-implication-col ms-implication-macro">
+            <div class="ms-implication-header" style="color:var(--ms-secondary);">
+              <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ms-secondary); flex-shrink:0;"></span>
+              <span>TÁC ĐỘNG THỊ TRƯỜNG VĨ MÔ</span>
+            </div>
             <p class="ms-implication-text">${escapeHtml(ct.marketImpact || ct.whyItMatters || '')}</p>
           </div>
           <div class="ms-implication-col ms-implication-fintech">
-            <div class="ms-box-title" style="color:var(--ms-primary);">GÓC NHÌN FINTECH & CƠ HỘI PAYOO</div>
+            <div class="ms-implication-header" style="color:var(--ms-primary);">
+              <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ms-primary); flex-shrink:0;"></span>
+              <span>GÓC NHÌN FINTECH &amp; CƠ HỘI PAYOO</span>
+            </div>
             <p class="ms-implication-text">${escapeHtml(ct.fintechLensAction || ct.keyMarketImplication || '')}</p>
           </div>
         </div>

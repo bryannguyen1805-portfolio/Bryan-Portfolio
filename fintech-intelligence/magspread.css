@@ -42,11 +42,11 @@
   --ms-info-bg: #DBEAFE;
   --ms-info-text: #1E40AF;
 
-  /* Typography Tokens — Strict Parity with Bryan Portfolio */
-  --font-headline: 'Sora', 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-reading: 'Be Vietnam Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'Plus Jakarta Sans', monospace; font-variant-numeric: tabular-nums;
+  /* Typography Tokens — Strict Parity with Bryan Portfolio (Unified Be Vietnam Pro) */
+  --font-headline: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-reading: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Roboto Mono', Menlo, Consolas, monospace;
 
   /* Typography Scale Tokens (Desktop >= 1024px) */
   --ms-text-masthead: clamp(2.25rem, 3.2vw, 2.75rem); /* 36px - 44px */
@@ -720,9 +720,10 @@ small, .ms-small {
   background-color: var(--ms-surface-card);
   border: 1px solid var(--ms-border);
   border-radius: 6px;
-  padding: 16px 18px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -734,29 +735,46 @@ small, .ms-small {
   box-shadow: 0 4px 12px rgba(19, 78, 74, 0.08);
 }
 
-.ms-jump-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
+.ms-jump-card-body {
+  flex: 1;
+}
+
+.ms-jump-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--ms-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .ms-jump-title {
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--ms-text-primary);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  line-height: 1.35;
 }
 
 .ms-jump-desc {
   font-size: 0.75rem;
   color: var(--ms-text-muted);
-  line-height: 1.4;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .ms-jump-arrow {
-  margin-left: auto;
-  font-size: 1.1rem;
   color: var(--ms-primary);
+  font-size: 1.125rem;
   font-weight: 700;
+  flex-shrink: 0;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.ms-today-jump-card:hover .ms-jump-arrow {
+  transform: translateX(4px);
 }
 
 /* Mobile Quick Tabs Strip */
@@ -815,49 +833,50 @@ small, .ms-small {
 .ms-cover-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: var(--space-xl);
+  gap: 24px;
   align-items: stretch;
 }
 
 .ms-cover-main-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .ms-cover-badge-row {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-sm);
+  margin-bottom: 4px;
 }
 
 .ms-cover-headline {
   font-family: var(--font-headline);
-  font-size: clamp(1.65rem, 2.3vw, 2.15rem);
+  font-size: clamp(1.45rem, 2.1vw, 1.85rem);
   font-weight: 700;
   line-height: 1.25;
   color: var(--ms-primary);
-  margin-bottom: var(--space-sm);
+  margin: 0;
   letter-spacing: -0.01em;
 }
 
 .ms-cover-subheadline {
   font-family: var(--font-reading);
-  font-size: 0.9375rem;
+  font-size: 0.84375rem;
   font-weight: 500;
   color: var(--ms-text-secondary);
-  line-height: 1.5;
-  margin-bottom: var(--space-sm);
-  padding-left: 2px;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
 }
 
 .ms-cover-summary {
   font-family: var(--font-reading);
-  font-size: 0.9375rem;
-  line-height: 1.7;
+  font-size: 0.90625rem;
+  line-height: 1.65;
   color: var(--ms-text-primary);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .ms-cover-sidebar {
@@ -871,28 +890,31 @@ small, .ms-small {
   border: 1px solid var(--ms-border);
   border-top: 3px solid var(--ms-secondary);
   border-radius: 6px;
-  padding: var(--space-md) var(--space-lg);
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .ms-quote-text {
-  font-family: var(--font-headline);
-  font-size: 1.125rem;
+  font-family: var(--font-reading);
+  font-size: 0.96875rem !important;
   font-style: italic;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.55;
   color: var(--ms-text-primary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: 8px;
 }
 
 .ms-quote-attribution {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: var(--ms-secondary);
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* Implication Banner (Balanced Full Width Below Top Grid) */
@@ -905,35 +927,55 @@ small, .ms-small {
   background-color: var(--ms-surface-card);
   border: 1px solid var(--ms-border);
   border-radius: 6px;
-  padding: 18px 22px;
+  padding: 16px 20px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }
 
 .ms-implication-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-  margin-bottom: 14px;
+  gap: 16px;
+  margin-bottom: 12px;
+  align-items: stretch;
 }
 
 .ms-implication-col {
   display: flex;
   flex-direction: column;
+  background-color: var(--ms-surface-base);
+  border: 1px solid var(--ms-border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.ms-implication-col.ms-implication-macro {
+  border-left: 3px solid var(--ms-secondary);
+}
+
+.ms-implication-col.ms-implication-fintech {
+  border-left: 3px solid var(--ms-primary);
+}
+
+.ms-implication-header {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .ms-implication-text {
   font-size: 0.875rem;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--ms-text-primary);
   margin: 0;
   text-align: justify;
-}
-
-.ms-implication-fintech {
-  background-color: var(--ms-surface-base);
-  padding: 14px 16px;
-  border-left: 4px solid var(--ms-primary);
-  border-radius: 0 6px 6px 0;
 }
 
 .ms-implication-watchpoint {
@@ -2846,15 +2888,98 @@ body {
   }
 
   .ms-badge {
-    max-width: 100% !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    text-align: center !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    font-size: 8px !important;
+    padding: 2px 5px !important;
   }
 
   .ms-cover-badge-row {
     flex-wrap: wrap !important;
     gap: 6px !important;
+  }
+
+  .ms-editorial-pullquote {
+    padding: 12px 14px !important;
+    margin-top: 6px !important;
+  }
+
+  .ms-quote-text {
+    font-size: 0.875rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .ms-quote-attribution {
+    font-size: 0.625rem !important;
+    margin-top: 6px !important;
+  }
+
+  /* Market Pulse 2x2 grid on Mobile (<= 768px) */
+  .ms-pulse-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .ms-pulse-card {
+    padding: 10px 12px !important;
+  }
+
+  .ms-pulse-label {
+    font-size: 0.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .ms-pulse-value {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+    margin: 4px 0 !important;
+  }
+
+  .ms-pulse-asof {
+    font-size: 0.6875rem !important;
+  }
+
+  .ms-pulse-context {
+    font-size: 0.6875rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Category Filter Chips: Single Horizontal Swipeable Row on Mobile */
+  .ms-filter-strip {
+    margin-bottom: 12px !important;
+  }
+
+  .ms-category-buttons {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 6px !important;
+    padding: 2px 0 6px 0 !important;
+    scrollbar-width: none !important;
+  }
+
+  .ms-category-buttons::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .ms-cat-btn {
+    flex-shrink: 0 !important;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+    white-space: nowrap !important;
+    height: 28px !important;
+  }
+
+  /* Today Jump Cards: 1 column on Mobile */
+  .ms-today-nav-cards {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .ms-today-jump-card {
+    padding: 12px 14px !important;
   }
 
   .ms-footer-grid {
