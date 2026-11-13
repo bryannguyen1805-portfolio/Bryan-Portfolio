@@ -49,12 +49,12 @@ function updateThemeIcon() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const btn = $('#themeToggleBtn');
   if (btn) {
-    // D-11: Clean, concise label preventing multiline overflow on mobile
+    btn.setAttribute('aria-label', isDark ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối');
+    btn.setAttribute('title', isDark ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối');
     btn.innerHTML = isDark
-      ? '<span class="ms-theme-text" style="font-size:12px; font-weight:700; letter-spacing:0.04em;">☼ BẢN SÁNG</span>'
-      : '<span class="ms-theme-text" style="font-size:12px; font-weight:700; letter-spacing:0.04em;">☽ BẢN TỐI</span>';
+      ? '<span class="ms-theme-icon" aria-hidden="true">☀️</span>'
+      : '<span class="ms-theme-icon" aria-hidden="true">🌙</span>';
   }
-  // D-13: Use optimized retina logos
   const logo = $('#headerBryanLogo');
   const footerLogo = $('#footerBryanLogo');
   const targetLogo = isDark ? './bnews-logo-dark-opt.png' : './bnews-logo-light-opt.png';
