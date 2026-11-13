@@ -57,7 +57,7 @@ def main():
 
     # Step 1: Execute update_magspread_pilot_ui.py
     print("📌 [BƯỚC 1/4] Kích hoạt Engine Phân tích & Xuất bản E-Magazine...")
-    cmd = [sys.executable, "update_magspread_pilot_ui.py"]
+    cmd = [sys.executable, "update_magspread_pilot_ui.py", "--date", today_str]
     res = subprocess.run(cmd, capture_output=True, text=True)
 
     if res.returncode != 0:

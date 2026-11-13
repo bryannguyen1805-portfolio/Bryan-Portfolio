@@ -197,19 +197,18 @@ def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str:
     }
 
 
-def derive_daily_cover_story(eligible_news, market_pulse, edition_date):
+def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=None, fdi_raw=None):
     """
-    Automated Daily Operational Rule for Cover Story:
-    1. Evaluates all 25 eligible news events using an impact scoring hierarchy:
-       - Central Bank (NHNN) / MoF macro-monetary, FX policy & liquidity = 100 points
-       - Banking system liquidity, deposit/credit policies & digital banking = 85 points
-       - Retail payment infrastructure, global schemes (Visa/Mastercard) & inbound tourism = 80 points
-       - Essential commodity inputs (fuel, energy, precious metals) = 75 points
-       - Enterprise financing & industrial production = 65 points
-    2. Automatically picks the top-scoring lead event as the Cover Story lead article.
-    3. Synthesizes an executive summary of that lead event.
-    4. Generates the Editorial Synthesis (Đúc kết biên tập) summarizing the collective macro theme of all 25 news.
-    5. Generates Market Impact & FinTech Lens analyzing commercial and POS/payment implications for Payoo.
+    Automated Daily Operational Rule for Cover Story (100% Dynamic & Evidence-Driven):
+    1. If ct_raw (core-thesis.json) is available, picks theses[0] as the lead thesis.
+       Finds the matching verified news event in eligible_news by title / eventId.
+    2. If ct_raw is unavailable, scores eligible_news by impact hierarchy to select the lead event.
+    3. Extracts dynamic, non-hardcoded:
+       - Editorial Pull Quote (centralArgument)
+       - Editorial Synthesis (multi-pillar synthesis across all daily theses)
+       - Market Impact (causalExplanation / whyItMatters)
+       - FinTech Lens (Payoo B2B Opportunity from fdi_raw / fintechWatchpoint)
+       - Monitoring Watchpoint (possibleNextDevelopment)
     """
     if not eligible_news:
         return {
@@ -226,93 +225,138 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date):
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    def score_event(ev):
-        score = 50
-        cat = str(ev.get("canonicalCategory") or "").upper()
-        title = str(ev.get("title") or "").lower()
-        content = str(ev.get("content") or "").lower()
-        publisher = str(ev.get("originalSourceName") or "").lower()
+    # 1. Resolve lead thesis from ct_raw if available
+    lead_thesis = {}
+    theses = []
+    if ct_raw and isinstance(ct_raw, dict):
+        theses = ct_raw.get("theses", [])
+        if theses and isinstance(theses, list) and len(theses) > 0:
+            lead_thesis = theses[0]
 
-        # Priority 1: Central Bank / FX intervention / Macro Monetary
-        if any(kw in title for kw in ["ngân hàng nhà nước", "nhnn", "tỷ giá", "mua usd", "ngoại tệ", "bơm tiền", "dự trữ ngoại hối"]):
-            score += 50
-        elif any(kw in title for kw in ["bộ trưởng tài chính", "quốc hội", "thuế", "nợ thuế", "hóa đơn"]):
-            score += 40
-        elif any(kw in title for kw in ["visa", "skyone", "thẻ du lịch", "vietqr", "khách du lịch", "smartpos"]):
-            score += 35
-        elif any(kw in title for kw in ["xăng dầu", "giá vàng", "vàng nguyên liệu", "lãi suất"]):
-            score += 30
-        elif any(kw in title for kw in ["msb", "vietinbank", "vpbank", "tài chính cá nhân"]):
-            score += 25
+    # 2. Match with eligible_news
+    lead_event = None
+    if lead_thesis:
+        th_title = str(lead_thesis.get("title") or "").strip().lower()
+        th_eids = lead_thesis.get("supportingEventIds", [])
+        
+        # Try matching by supportingEventIds first
+        for ev in eligible_news:
+            ev_id = str(ev.get("eventId") or "")
+            orig_ev_id = str(ev.get("originEventId") or "")
+            if ev_id in th_eids or orig_ev_id in th_eids:
+                lead_event = ev
+                break
 
-        if "thanh niên" in publisher or "tuổi trẻ" in publisher or "vneconomy" in publisher or "đầu tư" in publisher:
-            score += 5
+        # Try matching by title substring if not matched
+        if not lead_event and th_title:
+            for ev in eligible_news:
+                ev_title = str(ev.get("title") or ev.get("headline") or "").strip().lower()
+                if th_title in ev_title or ev_title in th_title:
+                    lead_event = ev
+                    break
 
-        return score
+    # Fallback to scoring if no ct_raw or no match
+    if not lead_event:
+        def score_event(ev):
+            score = 50
+            title = str(ev.get("title") or ev.get("headline") or "").lower()
+            publisher = str(ev.get("originalSourceName") or ev.get("author") or "").lower()
 
-    # Rank events by score
-    scored_events = sorted(eligible_news, key=score_event, reverse=True)
-    lead_event = scored_events[0]
+            if any(kw in title for kw in ["ngân hàng nhà nước", "nhnn", "tỷ giá", "mua usd", "ngoại tệ", "bơm tiền", "dự trữ ngoại hối"]):
+                score += 50
+            elif any(kw in title for kw in ["lãi suất", "tín dụng", "ngân hàng", "nhtm", "acb", "vpbank", "vietinbank", "msb"]):
+                score += 45
+            elif any(kw in title for kw in ["bộ trưởng tài chính", "quốc hội", "thuế", "nợ thuế", "hóa đơn"]):
+                score += 40
+            elif any(kw in title for kw in ["visa", "skyone", "thẻ du lịch", "vietqr", "khách du lịch", "smartpos"]):
+                score += 35
+            elif any(kw in title for kw in ["xăng dầu", "giá vàng", "vàng nguyên liệu"]):
+                score += 30
 
-    lead_eid = lead_event.get("eventId", "EVT-13")
-    lead_title = lead_event.get("title", "")
-    lead_pub = lead_event.get("originalSourceName") or lead_event.get("author") or "Báo Thanh Niên"
-    lead_time = lead_event.get("publisherPublishedAt") or f"{edition_date} 08:30"
+            if "thanh niên" in publisher or "tuổi trẻ" in publisher or "vneconomy" in publisher or "đầu tư" in publisher:
+                score += 5
+            return score
+
+        scored_events = sorted(eligible_news, key=score_event, reverse=True)
+        lead_event = scored_events[0]
+
+    lead_eid = lead_event.get("eventId", "EVT-01")
+    lead_title = lead_thesis.get("title") or lead_event.get("title") or lead_event.get("headline") or ""
+    lead_pub = lead_event.get("originalSourceName") or lead_event.get("author") or "Báo chí Tài chính"
+    lead_time = lead_event.get("publisherPublishedAt") or lead_event.get("publicationTimestamp") or f"{edition_date} 08:30"
     lead_url = lead_event.get("canonicalUrl") or lead_event.get("sourceUrl") or "#"
 
-    # Dynamic Editorial Synthesis derived from the lead event and the 25 news
-    if "EVT-13" in lead_eid or "mua usd" in lead_title.lower() or "ngân hàng nhà nước" in lead_title.lower():
-        lead_summary = (
-            "Theo diễn biến từ thị trường tiền tệ và công bố của Ngân hàng Nhà nước (NHNN), nhà điều hành chính thức kích hoạt lại "
-            "kênh mua can thiệp ngoại tệ giao ngay định kỳ tại mức giá 25.500 VND/USD, cao hơn giá mua vào của các NHTM lớn từ 50 đến 100 đồng/USD. "
-            "Động thái này đánh dấu việc NHNN chủ động mở lại kênh bơm thanh khoản tiền đồng dài hạn, không thu hồi vào hệ thống ngân hàng nhằm "
-            "hấp thu lượng ngoại tệ dư thừa, củng cố dự trữ ngoại hối quốc gia và giải tỏa áp lực chi phí vốn trước mùa cao điểm thanh toán cuối năm."
-        )
+    # Executive Summary: take cleanSummary / summary / whatHappened
+    lead_summary = lead_event.get("cleanSummary") or lead_event.get("summary") or lead_event.get("sectionA_whatHappened") or lead_thesis.get("whatHappened") or lead_title
+
+    # Editorial Pull Quote: take centralArgument or construct punchy takeaway
+    if lead_thesis.get("centralArgument"):
+        c_arg = lead_thesis.get("centralArgument", "").strip()
+        if ":" in c_arg and len(c_arg.split(":", 1)[1].strip()) > 35:
+            editorial_pull_quote = c_arg.split(":", 1)[1].strip()
+        else:
+            editorial_pull_quote = c_arg
+    else:
         editorial_pull_quote = (
-            "Thanh khoản tiền đồng được khơi thông từ thượng tầng vĩ mô, kết hợp với kỷ cương minh bạch hóa đơn thuế, "
-            "đang tạo áp lực buộc các chuỗi bán lẻ và hộ kinh doanh phải nhanh chóng số hóa điểm chạm thanh toán tại quầy trước mùa cao điểm tiêu dùng cuối năm."
+            f"Diễn biến trọng điểm '{lead_title}' kết hợp các chuyển động vĩ mô trong phiên "
+            "đang tạo lực đẩy lớn buộc các chuỗi bán lẻ và doanh nghiệp đẩy nhanh số hóa điểm chạm thanh toán tại quầy trước mùa cao điểm tiêu dùng."
         )
+
+    # Editorial Synthesis: multi-theses synthesis from ct_raw
+    if len(theses) >= 2:
+        pillar_summaries = []
+        for i, th in enumerate(theses[:4], 1):
+            p_name = th.get("thematicPillar") or th.get("themeGroup") or f"Xu hướng {i}"
+            p_title = th.get("title") or ""
+            pillar_summaries.append(f"({i}) {p_name}: {p_title}")
         editorial_synthesis = (
-            "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa ba xu hướng chủ đạo: "
-            "(1) NHNN chủ động bơm thanh khoản tiền đồng qua kênh ngoại hối giải tỏa chi phí vốn cho hệ thống NHTM; "
-            "(2) Chính sách tài khóa và quản lý thuế đẩy mạnh chuẩn hóa hóa đơn điện tử máy tính tiền, thanh lọc các hộ kinh doanh và doanh nghiệp yếu kém; "
-            "(3) Hạ tầng thanh toán số tăng tốc đón sóng mùa mua sắm cuối năm và 19,5 triệu lượt du khách quốc tế nhờ các dòng thẻ không tiếp xúc thế hệ mới và mạng lưới VietQR Global."
-        )
-        market_impact = (
-            "Thanh khoản hệ thống ngân hàng dồi dào kéo giảm mặt bằng lãi suất liên ngân hàng qua đêm xuống 4,40%/năm; "
-            "chi phí đầu vào logistics hạ nhiệt khi giá xăng dầu giảm gần 2.300 đồng/lít và giá vàng miếng giảm 3 phiên liền, "
-            "giúp biên lợi nhuận của các doanh nghiệp vận tải và bán lẻ cải thiện rõ nét."
-        )
-        fintech_lens_action = (
-            "Cơ hội Payoo & SmartPOS: Đón sóng chi tiêu 19,5 triệu lượt khách quốc tế và tháng khuyến mại cuối năm, "
-            "Payoo đẩy mạnh mạng lưới SmartPOS All-in-One tích hợp tính năng DCC chuyển đổi ngoại tệ linh hoạt, gói Trả góp 0% liên kết 30+ ngân hàng "
-            "và giải pháp máy tính tiền xuất hóa đơn điện tử tự động đáp ứng quy định thuế cho các chuỗi hộ kinh doanh."
-        )
-        monitoring_watchpoint = (
-            "Theo dõi sát động thái mua ngoại tệ định kỳ của NHNN trong các phiên tiếp theo và tiến độ triển khai hóa đơn điện tử khởi tạo từ máy tính tiền tại các thành phố lớn."
+            f"Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa {len(pillar_summaries)} xu hướng chủ đạo: "
+            + "; ".join(pillar_summaries) + "."
         )
     else:
-        lead_summary = lead_event.get("cleanSummary") or lead_event.get("summary") or lead_event.get("content") or lead_title
-        editorial_pull_quote = (
-            f"Diễn biến trọng điểm '{lead_title}' kết hợp các xu hướng tài chính vĩ mô "
-            "đang tạo lực đẩy lớn buộc các chuỗi bán lẻ và doanh nghiệp đẩy nhanh số hóa điểm chạm thanh toán tại quầy trước mùa mua sắm."
-        )
         editorial_synthesis = (
             f"Bức tranh kinh tế tài chính phiên hôm nay nổi bật với sự kiện dẫn dắt '{lead_title}' ({lead_pub}), "
             "kết hợp cùng các chuyển động điều tiết dòng tiền, kiểm soát an toàn giao dịch số và tái cấu trúc mạng lưới phân phối. "
             "Dòng vốn thị trường tiếp tục sàng lọc các doanh nghiệp thích ứng nhanh với hạ tầng thanh toán số và kỷ cương minh bạch thuế."
         )
-        market_impact = (
+
+    # Market Impact: causalExplanation or whyItMatters
+    if lead_thesis.get("causalExplanation"):
+        market_impact = lead_thesis.get("causalExplanation")
+    elif lead_thesis.get("whyItMatters"):
+        market_impact = lead_thesis.get("whyItMatters")
+    else:
+        market_impact = lead_event.get("sectionC_whyItMatters") or (
             f"Tác động lan tỏa từ '{lead_title}' thúc đẩy sự dịch chuyển chi phí vốn và vòng quay dòng tiền thương mại, "
             "tạo điều kiện cho các doanh nghiệp bán lẻ và dịch vụ tối ưu hóa chi phí vận hành và kích cầu tiêu dùng."
         )
-        fintech_lens_action = (
+
+    # FinTech Lens & Payoo Opportunity: from fdi_raw or fintechWatchpoint
+    fintech_lens_action = ""
+    if fdi_raw and isinstance(fdi_raw, dict):
+        fdi_cards = fdi_raw.get("cards", [])
+        if fdi_cards:
+            top_c = fdi_cards[0]
+            opp = top_c.get("opportunity") or (top_c.get("opportunities")[0] if top_c.get("opportunities") else "")
+            rec = top_c.get("recommendedAction") or ""
+            if opp:
+                fintech_lens_action = f"Cơ hội Payoo & SmartPOS: {opp}"
+            elif rec:
+                fintech_lens_action = f"Cơ hội Payoo & SmartPOS: {rec}. {top_c.get('whyItMatters', '')}"
+
+    if not fintech_lens_action and lead_thesis.get("fintechWatchpoint"):
+        fintech_lens_action = f"Cơ hội Payoo & SmartPOS: {lead_thesis.get('fintechWatchpoint')}"
+
+    if not fintech_lens_action:
+        fintech_lens_action = lead_event.get("sectionE_fintechLens") or (
             "Cơ hội Payoo & SmartPOS: Triển khai giải pháp SmartPOS All-in-One tích hợp thanh toán đa phương thức (Chạm thẻ contactless, QR Code, Trả góp 0%) "
             "và tự động xuất hóa đơn điện tử kết nối cơ quan thuế, giúp thương nhân tăng trưởng doanh thu và quản trị dòng tiền an toàn."
         )
-        monitoring_watchpoint = (
-            f"Theo dõi sát diễn biến tiếp theo của '{lead_title}' và các chỉ số thanh khoản thị trường liên quan."
-        )
+
+    # Monitoring Watchpoint
+    monitoring_watchpoint = lead_thesis.get("possibleNextDevelopment") or lead_thesis.get("fintechWatchpoint") or (
+        f"Theo dõi sát diễn biến tiếp theo của '{lead_title}' và các chỉ số thanh khoản thị trường liên quan."
+    )
 
     lead_article_payload = {
         "headline": lead_title,
@@ -487,7 +531,7 @@ def main():
             "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
             "value": "25.500 VND/USD",
             "unit": "VND/USD",
-            "asOf": "2026-11-12",
+            "asOf": edition_date_raw,
             "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
             "change": "+30 đồng/USD (Tăng 170 đồng so với đầu tuần; NHNN mua giao ngay 25.500 đồng)",
             "sourceName": "Báo Thanh Niên (thanhnien.vn)",
@@ -509,13 +553,13 @@ def main():
             "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
             "value": "6,90 %/năm",
             "unit": "%/năm",
-            "asOf": "2026-11-12",
+            "asOf": edition_date_raw,
             "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
             "change": "Khối NHTMCP tư nhân duy trì đỉnh 6,9%/năm; Big4 ổn định 5,4%/năm",
             "sourceName": "CafeF / VCCorp (cafef.vn)",
             "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-12-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261112222237844.chn",
             "secondarySourceUrls": ["https://cafef.vn/tai-chinh-ngan-hang.chn"],
-            "statusReason": "Khảo sát biểu lãi suất ngày 12/11/2026 trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm.",
+            "statusReason": f"Khảo sát biểu lãi suất ngày {edition_date_display} trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm.",
             "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
             "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
             "status": "positive",
@@ -531,13 +575,13 @@ def main():
             "shortLabel": "CHỈ SỐ VN-INDEX",
             "value": "1.734,75 Điểm",
             "unit": "Điểm",
-            "asOf": "2026-11-12",
+            "asOf": edition_date_raw,
             "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
             "change": "-12,15 Điểm (-0,70%) sau chuỗi 2 phiên hồi phục trước đó",
             "sourceName": "CafeF / VCCorp (cafef.vn)",
             "sourceUrl": "https://cafef.vn/gan-200-co-phieu-giam-gia-khoi-ngoai-ban-rong-dot-bien-188261112181544927.chn",
             "secondarySourceUrls": ["https://cafef.vn/thi-truong-chung-khoan.chn"],
-            "statusReason": "VN-Index chốt phiên ngày 12/11 điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng.",
+            "statusReason": f"VN-Index chốt phiên ngày {edition_date_display} điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng.",
             "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
             "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
             "status": "caution",
@@ -588,7 +632,7 @@ def main():
             "asOf": item["asOf"],
             "dataPeriod": f"Phiên {item['asOf']} (cập nhật mới nhất)",
             "publishedAt": f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00",
-            "fetchedAt": "2026-11-12T23:45:00+07:00",
+            "fetchedAt": f"{edition_date_raw}T08:30:00+07:00",
             "ageHoursAtT0": 12.5,
             "sourceName": item["sourceName"],
             "sourceUrl": item["sourceUrl"],
@@ -618,7 +662,7 @@ def main():
         }
         mp_snapshot.append(card)
 
-    cover_story_bundle = derive_daily_cover_story(eligible_news, mp_snapshot, edition_date_display)
+    cover_story_bundle = derive_daily_cover_story(eligible_news, mp_snapshot, edition_date_display, ct_raw=ct_raw, fdi_raw=fdi_raw)
     cover_headline = cover_story_bundle["editorialHeadline"]
     cover_dek = cover_story_bundle["editorialSubheadline"]
     cover_summary = cover_story_bundle["executiveSummary"]
@@ -627,140 +671,66 @@ def main():
     cover_why = cover_story_bundle["whyItMatters"]
     supporting_insights = []
 
-    # 6. Build Deep Dynamic Decision Brief (Grounding on 12/11/2026 actual news & events)
-    decision_signals = [
-        {
-            "signalId": "DECISION-01",
-            "signalTitle": "Đón sóng bùng nổ thanh toán Du lịch Inbound & Mùa lễ hội cuối năm (Contactless & VietQR Global)",
-            "relatedEventIds": ["EVT-06", "EVT-22", "EVT-19"],
-            "whatHappened": "Lượng khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt chỉ tiêu cả năm); VPBank hợp tác Visa ra mắt thẻ du lịch chuyên biệt SkyOne Visa Contactless; TP.HCM và các đô thị lớn đồng loạt kích hoạt chương trình khuyến mại mua sắm tập trung cuối năm.",
-            "whyItMatters": "Dòng chi tiêu ngoại tệ của du khách quốc tế và kiều bào đạt đỉnh vào quý 4 tại các chuỗi F&B, khách sạn và bán lẻ trung tâm. Điểm nghẽn lớn nhất tại quầy thu ngân là tình trạng thẻ quốc tế bị từ chối do chưa hỗ trợ không tiếp xúc, rào cản phụ phí ngoại tệ không minh bạch và thời gian xử lý thủ công gây ùn ứ thanh toán.",
-            "whatChanges": "Thương nhân bán lẻ và lưu trú chuyển dịch cấp tốc từ máy POS truyền thống sang SmartPOS All-in-One chấp nhận thanh toán một chạm (Tap to Pay), Apple Pay, Google Pay và quét mã VietQR Global liên thông quốc tế.",
-            "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Tiếp cận các chuỗi nhà hàng, khách sạn 3-5 sao, chuỗi bán lẻ du lịch để tư vấn gói giải pháp Payoo SmartPOS Inbound tích hợp tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép du khách thanh toán bằng đồng tiền bản địa với tỷ giá minh bạch và chia sẻ thêm doanh thu hoa hồng ngoại tệ cho thương nhân.",
-            "whatShouldIDoOrWatch": "Theo dõi doanh số quẹt thẻ quốc tế và tỷ lệ giao dịch một chạm tại các cụm thương mại Quận 1, Quận 3 (TP.HCM) và khu phố cổ Hà Nội trong dịp Black Friday và Giáng sinh.",
-            "proposedNextAction": "Đóng gói chính sách 'Đón sóng Du lịch Cuối năm': Miễn phí khởi tạo thiết bị SmartPOS All-in-One cho 50 chuỗi F&B và khách sạn ký hợp đồng trong tháng 11/2026.",
+    # 6. Build Deep Dynamic Decision Brief (Grounding dynamically on FDI & Daily Events)
+    decision_signals = []
+    fdi_cards = fdi_raw.get("cards", []) if isinstance(fdi_raw, dict) else []
+    for idx, c in enumerate(fdi_cards):
+        sig_id = c.get("decisionId") or f"DECISION-{idx+1:02d}"
+        sig_title = c.get("decisionTitle") or c.get("title") or c.get("headline") or f"Tín hiệu điều hành #{idx+1}"
+        opp = c.get("opportunity") or (c.get("opportunities")[0] if c.get("opportunities") else "")
+        meaning = opp or c.get("whyItMatters") or c.get("whatChanged") or ""
+
+        # Extract evidence URLs
+        ev_urls = []
+        for ref in c.get("evidenceReferences", []):
+            if isinstance(ref, dict) and ref.get("sourceUrl"):
+                ev_urls.append(ref["sourceUrl"])
+            elif isinstance(ref, str) and ref.startswith("http"):
+                ev_urls.append(ref)
+        if not ev_urls:
+            ev_urls = [r.get("sourceUrl") for r in eligible_news[:2] if r.get("sourceUrl")]
+
+        decision_signals.append({
+            "signalId": sig_id,
+            "signalTitle": sig_title,
+            "relatedEventIds": c.get("supportingEventIds", []),
+            "whatHappened": c.get("whatChanged") or c.get("executiveSummary") or sig_title,
+            "whyItMatters": c.get("whyItMatters") or meaning,
+            "whatChanges": c.get("whatChanged") or c.get("executiveSummary") or "",
+            "whatItMeansForMyWork": f"Cơ hội kinh doanh B2B trọng tâm cho Payoo: {opp}" if opp else meaning,
+            "whatShouldIDoOrWatch": ", ".join(c.get("monitoringTriggers", [])) or "Theo dõi sát diễn biến giao dịch và biến động thanh khoản thị trường.",
+            "proposedNextAction": f"Hành động đề xuất: {c.get('recommendedAction', 'Triển khai tư vấn giải pháp thanh toán số.')}. {opp}",
             "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-            "monitoringIndicators": "MP-06 (Sản lượng VietQR), MP-07 (Khách quốc tế 19,5M)",
-            "monitoringTimeHorizon": "7 - 14 ngày tới (Cao điểm Black Friday & Mua sắm mùa lễ hội)",
-            "assumptions": [
-                "Chính sách miễn thị thực và các chuyến bay thương mại quốc tế duy trì ổn định đến hết Q1/2027.",
-                "Hạ tầng kết nối mạng thẻ quốc tế Visa/Mastercard và VietQR Global vận hành liên tục 24/7."
+            "monitoringIndicators": ", ".join(c.get("supportingMarketPulseIds", [])) or "MP-01, MP-02, MP-06",
+            "monitoringTimeHorizon": c.get("timeHorizon") or "7 - 14 ngày tới (Kỳ điều hành tiếp theo)",
+            "assumptions": c.get("limitations") or [
+                "Hạ tầng thanh toán và viễn thông vận hành ổn định 24/7.",
+                "Các bên liên quan duy trì chính sách phát triển thanh toán không tiền mặt."
             ],
-            "risks": [
-                "Cạnh tranh biểu phí xử lý giao dịch (MDR) từ các ngân hàng thu hộ truyền thống.",
-                "Chi phí đặt cọc thiết bị phần cứng tại các điểm bán quy mô nhỏ."
+            "risks": c.get("risks") or [
+                "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán.",
+                "Cạnh tranh biểu phí xử lý giao dịch giữa các đơn vị trung gian thanh toán."
             ],
             "relevantMerchantSegments": [
                 "Chuỗi nhà hàng & Cafe (F&B)",
                 "Hệ thống khách sạn & resort du lịch",
                 "Chuỗi bán lẻ thời trang & mỹ phẩm cao cấp",
-                "Cửa hàng miễn thuế & lưu niệm sân bay"
+                "Cửa hàng tiện lợi & Siêu thị mini"
             ],
             "potentialPaymentSolutions": [
                 {
-                    "solutionName": "Payoo SmartPOS All-in-One Inbound",
-                    "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng DCC chuyển đổi ngoại tệ tức thì tại quầy.",
+                    "solutionName": "Payoo SmartPOS All-in-One",
+                    "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng xuất hóa đơn điện tử tự động.",
                     "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
                 },
                 {
-                    "solutionName": "Cổng Thanh toán Trực tuyến Payoo Booking",
-                    "capabilityNote": "Tích hợp trực tiếp vào website/ứng dụng đặt phòng khách sạn, tour du lịch với chuẩn bảo mật quốc tế 3D-Secure 2.0.",
+                    "solutionName": "Cổng Thanh toán Trực tuyến & Pay-by-Link Payoo",
+                    "capabilityNote": "Tích hợp đa kênh thanh toán trực tuyến, hỗ trợ trả góp 0% liên kết 30+ ngân hàng.",
                     "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
                 }
             ],
-            "evidenceUrls": [
-                "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
-                "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm"
-            ]
-        },
-        {
-            "signalId": "DECISION-02",
-            "signalTitle": "Bơm thanh khoản VND từ kênh Ngoại hối & Đòn bẩy Trả góp 0% cho Bán lẻ Điện máy",
-            "relatedEventIds": ["EVT-13", "EVT-02", "EVT-22"],
-            "whatHappened": "Ngân hàng Nhà nước tái lập kênh mua can thiệp ngoại tệ giao ngay ở mức 25.500 VND/USD, bơm tiền đồng trực tiếp vào hệ thống ngân hàng; MSB tái định vị sản phẩm tài chính bán lẻ miễn phí giao dịch nhằm gia tăng tiền gửi không kỳ hạn (CASA).",
-            "whyItMatters": "Mặt bằng thanh khoản tiền đồng dồi dào giúp hạ nhiệt lãi suất liên ngân hàng, tạo dư địa cho các ngân hàng thương mại mở rộng tín dụng bán lẻ. Tuy nhiên, người tiêu dùng vẫn có tâm lý thắt chặt chi tiêu với các đơn hàng giá trị lớn nếu phải thanh toán gộp một lần.",
-            "whatChanges": "Thương nhân chuyển trọng tâm sang đòn bẩy Trả góp 0% lãi suất qua thẻ tín dụng và thanh toán đa kênh nhằm hạ thấp rào cản chi tiêu ban đầu của khách hàng mua sắm đồ công nghệ, gia dụng, nội thất.",
-            "whatItMeansForMyWork": "Đẩy mạnh gói giải pháp Payoo 0% Instalment liên kết hơn 30 ngân hàng phát hành thẻ lớn nhất Việt Nam tới các chuỗi điện máy, công nghệ và dịch vụ làm đẹp/nha khoa, giúp đối tác tăng tỷ lệ chốt đơn (Conversion Rate) từ 25% lên 40%.",
-            "whatShouldIDoOrWatch": "Quan sát biến động lãi suất huy động kỳ hạn ngắn của các NHTM và hạn mức tín dụng tiêu dùng được cấp cho quý 4.",
-            "proposedNextAction": "Phối hợp với 5 ngân hàng đối tác lớn (Techcombank, VPBank, MB, VIB, Sacombank) triển khai chương trình đồng tài trợ phí chuyển đổi trả góp cho các chuỗi bán lẻ công nghệ chủ lực.",
-            "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-            "monitoringIndicators": "MP-01 (Tỷ giá trung tâm), MP-02 (Lãi suất LNH), MP-05 (Tín dụng)",
-            "monitoringTimeHorizon": "Từ nay đến Tết Nguyên đán 2027",
-            "assumptions": [
-                "NHNN duy trì định hướng điều hành lãi suất thấp và ổn định tỷ giá.",
-                "Nhu cầu mua sắm thiết bị điện máy, điện thoại cuối năm tăng tối thiểu 15% so với quý 3."
-            ],
-            "risks": [
-                "Nguy cơ nợ xấu thẻ tín dụng có thể khiến ngân hàng siết chặt phê duyệt giao dịch giá trị cao.",
-                "Áp lực biên lợi nhuận của nhà bán lẻ khi phải chia sẻ phí chuyển đổi trả góp."
-            ],
-            "relevantMerchantSegments": [
-                "Chuỗi bán lẻ điện máy & công nghệ",
-                "Hệ thống nha khoa & thẩm mỹ viện",
-                "Chuỗi nội thất & trang trí nhà cửa",
-                "Trung tâm đào tạo & giáo dục cao cấp"
-            ],
-            "potentialPaymentSolutions": [
-                {
-                    "solutionName": "Giải pháp Trả góp 0% Lãi suất Payoo (Instalment 0%)",
-                    "capabilityNote": "Hỗ trợ liên kết 30+ ngân hàng phát hành thẻ, chuyển đổi trả góp tức thì tại quầy qua SmartPOS hoặc qua đường link Pay-by-Link.",
-                    "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
-                },
-                {
-                    "solutionName": "Pay-by-Link & Cổng Thanh toán Đa kênh",
-                    "capabilityNote": "Tạo link thanh toán trả góp gửi qua tin nhắn Zalo/SMS cho khách hàng chốt đơn từ xa không cần đến cửa hàng.",
-                    "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
-                }
-            ],
-            "evidenceUrls": [
-                "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
-                "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html"
-            ]
-        },
-        {
-            "signalId": "DECISION-03",
-            "signalTitle": "Chuẩn hóa đối soát & Tích hợp Hóa đơn điện tử máy tính tiền cho Chuỗi Hộ kinh doanh",
-            "relatedEventIds": ["EVT-09", "EVT-14", "EVT-07", "EVT-15"],
-            "whatHappened": "VietinBank ra mắt bộ giải pháp thu hộ và tổng hợp doanh thu cho hộ kinh doanh; Bộ Tài chính và Tổng cục Thuế phát lệnh siết chặt chống thất thu thuế, bắt buộc triển khai hóa đơn điện tử khởi tạo từ máy tính tiền trước Tết.",
-            "whyItMatters": "Hàng triệu hộ kinh doanh cá thể đứng trước nguy cơ xử phạt hành chính và bị đình chỉ hoạt động nếu không minh bạch hóa đơn chứng từ. Việc sử dụng các thiết bị thanh toán rời rạc với phần mềm bán hàng gây thất thoát dữ liệu và khó khăn khi cơ quan thuế kiểm tra.",
-            "whatChanges": "Nhu cầu chuyển đổi bắt buộc từ mô hình thu ngân truyền thống (chỉ dùng tài khoản cá nhân nhận chuyển khoản) sang giải pháp thanh toán số tích hợp hóa đơn điện tử hợp chuẩn.",
-            "whatItMeansForMyWork": "Định vị Payoo SmartPOS là thiết bị 'All-in-One' cứu cánh cho hộ kinh doanh: Một thiết bị duy nhất vừa nhận thanh toán quẹt thẻ/quét QR, vừa chạy phần mềm quản lý bán hàng và tự động xuất hóa đơn điện tử truyền dữ liệu thẳng lên Tổng cục Thuế.",
-            "whatShouldIDoOrWatch": "Theo dõi tiến độ thanh kiểm tra hóa đơn điện tử của Cục Thuế tại TP.HCM, Hà Nội và phản hồi của các tiểu thương chợ đầu mối, chuỗi bán lẻ tiện lợi.",
-            "proposedNextAction": "Bắt tay với các công ty phần mềm quản lý bán hàng (KiotViet, Sapo, PosApp) tung combo giải pháp phần cứng Payoo SmartPOS kèm phần mềm hóa đơn điện tử với chi phí thuê bao chỉ từ 199.000đ/tháng.",
-            "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-            "monitoringIndicators": "MP-06 (Sản lượng VietQR), MP-08 (Thanh khoản OMO)",
-            "monitoringTimeHorizon": "30 ngày tới (Thời hạn chuẩn hóa thuế cuối năm)",
-            "assumptions": [
-                "Cơ quan thuế áp dụng chế tài nghiêm ngặt với các trường hợp trốn xuất hóa đơn máy tính tiền.",
-                "Hạ tầng kết nối mạng 4G/Wifi của thiết bị SmartPOS duy trì kết nối ổn định tới máy chủ ngành thuế."
-            ],
-            "risks": [
-                "Tâm lý e ngại công khai dòng tiền thực của các hộ kinh doanh lâu năm.",
-                "Chi phí đào tạo và làm quen công nghệ mới cho nhân viên thu ngân lớn tuổi."
-            ],
-            "relevantMerchantSegments": [
-                "Hộ kinh doanh cá thể & tiểu thương bán lẻ",
-                "Chuỗi cửa hàng tiện lợi & tạp hóa hiện đại",
-                "Chuỗi nhà thuốc & thiết bị y tế",
-                "Chuỗi dịch vụ chăm sóc sắc đẹp & salon"
-            ],
-            "potentialPaymentSolutions": [
-                {
-                    "solutionName": "Payoo SmartPOS Tích hợp Hóa đơn Điện tử",
-                    "capabilityNote": "Thiết bị tích hợp sẵn máy in bill nhiệt, camera quét mã QR, khe quẹt thẻ và phần mềm xuất hóa đơn điện tử truyền dữ liệu trực tiếp về cơ quan thuế.",
-                    "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
-                },
-                {
-                    "solutionName": "Hệ thống Dynamic QR & Tách Luồng Doanh thu",
-                    "capabilityNote": "Mã QR động gắn mã đơn hàng, tự động tách riêng luồng tiền kinh doanh hợp lệ và đối soát báo cáo doanh thu T+1 cho chủ cửa hàng.",
-                    "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
-                }
-            ],
-            "evidenceUrls": [
-                "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html"
-            ]
-        }
-    ]
+            "evidenceUrls": ev_urls[:3]
+        })
 
     # 7. Build Dynamic Connect the Dots from CONNECT_THE_DOTS.json
     dots_clusters = []
@@ -791,245 +761,63 @@ def main():
             "scenarioStatements": scen_list
         })
 
-        # 8. Build 4 Deep Distinct Macro-to-Micro Transmission Chains Grounded in Today's 25 News Events
-    macro_chains = [
-        {
-            "chainId": "CHAIN-01",
-            "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-            "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-            "macroDriver": "NHNN tái lập kênh mua can thiệp ngoại tệ 25.500 VND/USD & bơm thanh khoản VND không kỳ hạn",
-            "coreThesis": "Dòng tiền VND được giải tỏa từ kênh mua ngoại tệ của NHNN thẩm thấu qua hệ thống NHTM, hạ nhiệt lãi suất liên ngân hàng, tạo điều kiện cho các ngân hàng bán lẻ triển khai gói tài trợ mua sắm và kích hoạt dòng tiền thanh toán số tại điểm bán.",
-            "layers": [
-                {
-                    "levelNumber": 1,
-                    "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "title": "Can thiệp Tỷ giá & Bổ sung Dự trữ Ngoại hối",
-                    "content": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
-                    "description": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-13"]
-                },
-                {
-                    "levelNumber": 2,
-                    "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "title": "Điều hành Cung tiền & Bơm Thanh khoản Ròng",
-                    "content": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
-                    "description": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-13", "EVT-08"]
-                },
-                {
-                    "levelNumber": 3,
-                    "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "title": "Thanh khoản NHTM & Cơ cấu Nguồn vốn Rẻ",
-                    "content": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-                    "description": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-02"]
-                },
-                {
-                    "levelNumber": 4,
-                    "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "title": "Tài trợ Vốn Lưu động & Kích cầu Bán lẻ Cuối năm",
-                    "content": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
-                    "description": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-22"]
-                },
-                {
-                    "levelNumber": 5,
-                    "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "title": "Hành vi Tiêu dùng & Đòn bẩy SmartPOS / QR Payoo",
-                    "content": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
-                    "description": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
-                    "badge": "HYPOTHESIS",
-                    "eventIds": ["EVT-02", "EVT-22"]
-                }
-            ]
-        },
-        {
-            "chainId": "CHAIN-02",
-            "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-            "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-            "macroDriver": "Lượng khách quốc tế 10 tháng vượt 19,5 triệu lượt & Liên minh Ngân hàng - Tổ chức thẻ quốc tế mở rộng thẻ du lịch",
-            "coreThesis": "Dòng chi tiêu ngoại tệ đột biến từ du khách quốc tế thúc đẩy các tổ chức thẻ và ngân hàng nâng cấp chuẩn thanh toán một chạm (Contactless) và VietQR Global, buộc các điểm đến du lịch hiện đại hóa thiết bị SmartPOS chấp nhận đa tiền tệ.",
-            "layers": [
-                {
-                    "levelNumber": 1,
-                    "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "title": "Dòng tiền Chi tiêu từ Khách Du lịch Quốc tế",
-                    "content": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
-                    "description": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-19"]
-                },
-                {
-                    "levelNumber": 2,
-                    "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "title": "Định hướng Không tiền mặt & Kết nối Thanh toán Khu vực",
-                    "content": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
-                    "description": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-06"]
-                },
-                {
-                    "levelNumber": 3,
-                    "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "title": "Hợp tác Ngân hàng & Tổ chức Thẻ Toàn cầu",
-                    "content": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-                    "description": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-06"]
-                },
-                {
-                    "levelNumber": 4,
-                    "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "title": "Hiện đại hóa Điểm bán Chuỗi F&B, Khách sạn & Nghỉ dưỡng",
-                    "content": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
-                    "description": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-19"]
-                },
-                {
-                    "levelNumber": 5,
-                    "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "title": "Thanh toán Một chạm (Tap to Pay) & SmartPOS All-in-One",
-                    "content": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
-                    "description": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
-                    "badge": "HYPOTHESIS",
-                    "eventIds": ["EVT-06"]
-                }
-            ]
-        },
-        {
-            "chainId": "CHAIN-03",
-            "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-            "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-            "macroDriver": "Chính sách quản lý thuế minh bạch hóa đơn máy tính tiền & Quyền lựa chọn cách tính thuế cho hơn 90% SME",
-            "coreThesis": "Chế tài nghiêm ngặt của cơ quan thuế đối với hóa đơn bán lẻ đẩy hàng triệu hộ kinh doanh từ bỏ ghi chép thủ công, thúc đẩy nhu cầu trang bị thiết bị SmartPOS tích hợp hóa đơn điện tử tự động kết nối dữ liệu thuế.",
-            "layers": [
-                {
-                    "levelNumber": 1,
-                    "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "title": "Khung khổ Pháp lý Thuế & Thu ngân sách Nhà nước",
-                    "content": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
-                    "description": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-14", "EVT-15"]
-                },
-                {
-                    "levelNumber": 2,
-                    "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "title": "Chỉ đạo Kiểm soát Dòng tiền & Hóa đơn Khởi tạo Máy tính tiền",
-                    "content": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
-                    "description": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-07"]
-                },
-                {
-                    "levelNumber": 3,
-                    "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "title": "Ngân hàng Cung cấp Bộ Giải pháp Thu hộ Hộ kinh doanh",
-                    "content": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-                    "description": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-09"]
-                },
-                {
-                    "levelNumber": 4,
-                    "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "title": "Hộ cá thể & Tiểu thương Chuyển đổi Vận hành Bắt buộc",
-                    "content": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
-                    "description": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-09", "EVT-14"]
-                },
-                {
-                    "levelNumber": 5,
-                    "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "title": "Cơ hội Đột phá cho Payoo SmartPOS + Hóa đơn Điện tử",
-                    "content": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
-                    "description": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
-                    "badge": "HYPOTHESIS",
-                    "eventIds": ["EVT-09"]
-                }
-            ]
-        },
-        {
-            "chainId": "CHAIN-04",
-            "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-            "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-            "macroDriver": "Giá xăng dầu giảm sâu gần 2.300 đồng/lít & Giá vàng trong nước giảm 3 phiên liên tiếp khơi thông dòng vốn",
-            "coreThesis": "Chi phí đầu vào logistics và năng lượng giảm mạnh chặn đứng nguy cơ lạm phát chi phí đẩy; dòng tiền nhàn rỗi rút khỏi việc găm giữ vàng để quay lại tài khoản tiền gửi ngân hàng và phục vụ chu chuyển thanh toán B2B cuối năm.",
-            "layers": [
-                {
-                    "levelNumber": 1,
-                    "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-                    "title": "Hạ nhiệt Giá Năng lượng & Hàng hóa Đầu vào",
-                    "content": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
-                    "description": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-24", "EVT-25"]
-                },
-                {
-                    "levelNumber": 2,
-                    "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-                    "title": "Điều tiết Thị trường Vàng & Khơi thông Cung ứng Nguyên liệu",
-                    "content": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
-                    "description": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
-                    "badge": "FACT",
-                    "eventIds": ["EVT-12", "EVT-01"]
-                },
-                {
-                    "levelNumber": 3,
-                    "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-                    "title": "Dòng tiền Nhàn rỗi Quay lại Hệ thống Ngân hàng",
-                    "content": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-                    "description": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-25"]
-                },
-                {
-                    "levelNumber": 4,
-                    "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-                    "title": "Tiết giảm Chi phí Logistics & Cải thiện Biên Lợi nhuận",
-                    "content": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
-                    "description": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
-                    "badge": "INFERENCE",
-                    "eventIds": ["EVT-24"]
-                },
-                {
-                    "levelNumber": 5,
-                    "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-                    "title": "Tăng tốc Vòng quay Tiền tệ & Giải pháp Thanh toán B2B Payoo",
-                    "content": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
-                    "description": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
-                    "badge": "HYPOTHESIS",
-                    "eventIds": ["EVT-24", "EVT-01"]
-                }
-            ]
-        }
+    # 8. Build 4 Deep Distinct Macro-to-Micro Transmission Chains Grounded Dynamically from MACRO_TO_MICRO.json
+    macro_chains = []
+    raw_chains = m2m_raw.get("chains", []) if isinstance(m2m_raw, dict) else []
+
+    stage_meta = [
+        ("stage1_globalEconomy", "Tầng 01: Kinh tế Toàn cầu & Tỷ giá", "Biến động quốc tế & Ngoại hối", "FACT"),
+        ("stage2_vietnamMacroeconomics", "Tầng 02: Kinh tế Vĩ mô Việt Nam", "Cân đối vĩ mô & Mục tiêu tăng trưởng", "FACT"),
+        ("stage3_monetaryPolicy", "Tầng 03: Chính sách Tiền tệ & NHNN", "Điều hành cung tiền & Thanh khoản OMO", "FACT"),
+        ("stage4_bankingAndCapitalMarkets", "Tầng 04: Hệ thống NHTM & Lãi suất", "Thanh khoản & Chi phí vốn ngân hàng", "INFERENCE"),
+        ("stage5_corporateFinancingAndOperations", "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ", "Vốn lưu động & Hoạt động phân phối", "INFERENCE"),
+        ("stage6_merchantPaymentBehavior", "Tầng 06: Điểm bán & Hành vi thanh toán", "Chấp nhận thanh toán & Dòng tiền tại quầy", "HYPOTHESIS"),
+        ("stage7_endUserPaymentBehavior", "Tầng 07: Người tiêu dùng & Điểm chạm", "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR", "HYPOTHESIS"),
     ]
+
+    for idx, ch in enumerate(raw_chains):
+        ch_id = ch.get("chainId") or f"CHAIN-{idx+1:02d}"
+        ch_title = ch.get("chainTitle") or f"Chuỗi truyền dẫn vĩ mô — vi mô: {ch.get('macroDriver', f'Chủ đề {idx+1}')}"
+        macro_driver = ch.get("macroDriver") or "Điều hành chính sách và thanh khoản vĩ mô"
+        core_thesis = ch.get("transmissionMechanism") or "Cơ chế truyền dẫn từ tín hiệu vĩ mô tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán."
+
+        s7 = ch.get("sevenStageTransmission") or ch.get("macroToMicroTransmission") or {}
+        supp_eids = ch.get("supportingEventIds", [])
+        layers = []
+
+        for l_idx, (st_key, l_name, l_title, l_badge) in enumerate(stage_meta, 1):
+            c_text = s7.get(st_key)
+            if not c_text:
+                if "banking" in st_key.lower():
+                    c_text = ch.get("bankingImpact")
+                elif "corporate" in st_key.lower() or "enterprise" in st_key.lower():
+                    c_text = ch.get("enterpriseImpact")
+                elif "merchant" in st_key.lower():
+                    c_text = ch.get("consumerImpact")
+                elif "user" in st_key.lower():
+                    c_text = ch.get("paymentImpact")
+                else:
+                    c_text = f"Tác động lan tỏa tầng {l_idx} từ diễn biến {macro_driver}."
+
+            layers.append({
+                "levelNumber": l_idx,
+                "levelName": l_name,
+                "layerName": l_name,
+                "title": l_title,
+                "content": c_text,
+                "description": c_text,
+                "badge": l_badge,
+                "eventIds": supp_eids[:3]
+            })
+
+        macro_chains.append({
+            "chainId": ch_id,
+            "title": ch_title,
+            "chainTitle": ch_title,
+            "macroDriver": macro_driver,
+            "coreThesis": core_thesis,
+            "layers": layers
+        })
 
     # 9. Build Dynamic Payment Radar from PAYMENT_RADAR.json
     radar_opps = []

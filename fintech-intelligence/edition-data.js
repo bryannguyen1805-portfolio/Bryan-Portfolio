@@ -29,11 +29,11 @@ window.EDITION_DATA = {
       "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
       "change": "+30 đồng/USD (Tăng 170 đồng so với đầu tuần; NHNN mua giao ngay 25.500 đồng)",
       "unit": "VND/USD",
-      "observationAt": "2026-11-12T08:30:00+07:00",
-      "asOf": "2026-11-12",
-      "dataPeriod": "Phiên 2026-11-12 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-12T08:30:00+07:00",
-      "fetchedAt": "2026-11-12T23:45:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Thanh Niên (thanhnien.vn)",
       "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
@@ -57,7 +57,7 @@ window.EDITION_DATA = {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
           "Đơn vị phát hành & đối soát: Báo Thanh Niên (thanhnien.vn).",
-          "Kỳ dữ liệu: 2026-11-12 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ (thứ Hai & thứ Tư hàng tuần) ở mức 25.500 đồng/USD nhằm bổ sung dự trữ ngoại hối và bơm thanh khoản tiền đồng. Giá mua USD của các NHTM (VCB: 25.490 đồng, ACB: 25.500 đồng) hiện thấp hơn giá mua của NHNN từ 30 - 40 đồng."
         ]
@@ -75,11 +75,11 @@ window.EDITION_DATA = {
       "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
       "change": "Khối NHTMCP tư nhân duy trì đỉnh 6,9%/năm; Big4 ổn định 5,4%/năm",
       "unit": "%/năm",
-      "observationAt": "2026-11-12T08:30:00+07:00",
-      "asOf": "2026-11-12",
-      "dataPeriod": "Phiên 2026-11-12 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-12T08:30:00+07:00",
-      "fetchedAt": "2026-11-12T23:45:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp (cafef.vn)",
       "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-12-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261112222237844.chn",
@@ -90,7 +90,7 @@ window.EDITION_DATA = {
       "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Khảo sát biểu lãi suất ngày 12/11/2026 trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm.",
+      "statusReason": "Khảo sát biểu lãi suất ngày 13/11/2026 trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm.",
       "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
       "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
       "discoveryAudit": {
@@ -103,9 +103,9 @@ window.EDITION_DATA = {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp (cafef.vn).",
-          "Kỳ dữ liệu: 2026-11-12 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Khảo sát biểu lãi suất ngày 12/11/2026 trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm."
+          "Ý nghĩa điều hành: Khảo sát biểu lãi suất ngày 13/11/2026 trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm."
         ]
       }
     },
@@ -121,11 +121,11 @@ window.EDITION_DATA = {
       "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
       "change": "-12,15 Điểm (-0,70%) sau chuỗi 2 phiên hồi phục trước đó",
       "unit": "Điểm",
-      "observationAt": "2026-11-12T08:30:00+07:00",
-      "asOf": "2026-11-12",
-      "dataPeriod": "Phiên 2026-11-12 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-12T08:30:00+07:00",
-      "fetchedAt": "2026-11-12T23:45:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp (cafef.vn)",
       "sourceUrl": "https://cafef.vn/gan-200-co-phieu-giam-gia-khoi-ngoai-ban-rong-dot-bien-188261112181544927.chn",
@@ -136,7 +136,7 @@ window.EDITION_DATA = {
       "sha256": "8a3d64b182cb948aefb20c915f082e1858a729580bbf8d79a2958012bb294ca2",
       "status": "caution",
       "verificationStatus": "VERIFIED",
-      "statusReason": "VN-Index chốt phiên ngày 12/11 điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng.",
+      "statusReason": "VN-Index chốt phiên ngày 13/11/2026 điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng.",
       "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
       "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
       "discoveryAudit": {
@@ -149,9 +149,9 @@ window.EDITION_DATA = {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp (cafef.vn).",
-          "Kỳ dữ liệu: 2026-11-12 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: VN-Index chốt phiên ngày 12/11 điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng."
+          "Ý nghĩa điều hành: VN-Index chốt phiên ngày 13/11/2026 điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng."
         ]
       }
     },
@@ -171,7 +171,7 @@ window.EDITION_DATA = {
       "asOf": "10 tháng 2026",
       "dataPeriod": "Phiên 10 tháng 2026 (cập nhật mới nhất)",
       "publishedAt": "2026-10-31T23:59:59+07:00",
-      "fetchedAt": "2026-11-12T23:45:00+07:00",
+      "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Thanh Niên (thanhnien.vn)",
       "sourceUrl": "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm",
@@ -220,36 +220,36 @@ window.EDITION_DATA = {
     },
     "sec02_coverStory": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
-      "editorialHeadline": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên Báo Thanh Niên (12/11/2026 16:57 | Nguồn gốc: Báo Thanh Niên (2026-11-12T16:57:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên Báo Thanh Niên (12/11/2026 16:57 | Nguồn gốc: Báo Thanh Niên (2026-11-12T16:57:00+07:00))",
-      "executiveSummary": "Theo diễn biến từ thị trường tiền tệ và công bố của Ngân hàng Nhà nước (NHNN), nhà điều hành chính thức kích hoạt lại kênh mua can thiệp ngoại tệ giao ngay định kỳ tại mức giá 25.500 VND/USD, cao hơn giá mua vào của các NHTM lớn từ 50 đến 100 đồng/USD. Động thái này đánh dấu việc NHNN chủ động mở lại kênh bơm thanh khoản tiền đồng dài hạn, không thu hồi vào hệ thống ngân hàng nhằm hấp thu lượng ngoại tệ dư thừa, củng cố dự trữ ngoại hối quốc gia và giải tỏa áp lực chi phí vốn trước mùa cao điểm thanh toán cuối năm.",
+      "editorialHeadline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "executiveSummary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD.",
       "leadArticle": {
-        "headline": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
-        "eventId": "EVT-16",
-        "sourceName": "Báo Thanh Niên",
-        "publishedAt": "12/11/2026 16:57 | Nguồn gốc: Báo Thanh Niên (2026-11-12T16:57:00+07:00)",
-        "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
-        "summary": "Theo diễn biến từ thị trường tiền tệ và công bố của Ngân hàng Nhà nước (NHNN), nhà điều hành chính thức kích hoạt lại kênh mua can thiệp ngoại tệ giao ngay định kỳ tại mức giá 25.500 VND/USD, cao hơn giá mua vào của các NHTM lớn từ 50 đến 100 đồng/USD. Động thái này đánh dấu việc NHNN chủ động mở lại kênh bơm thanh khoản tiền đồng dài hạn, không thu hồi vào hệ thống ngân hàng nhằm hấp thu lượng ngoại tệ dư thừa, củng cố dự trữ ngoại hối quốc gia và giải tỏa áp lực chi phí vốn trước mùa cao điểm thanh toán cuối năm."
+        "headline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+        "eventId": "EVT-03",
+        "sourceName": "CafeF / VCCorp",
+        "publishedAt": "13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00)",
+        "sourceUrl": "https://cafef.vn/acb-vuot-moc-thuong-hieu-14-ty-usd-vao-top-3-ngan-hang-tu-nhan-gia-tri-nhat-viet-nam-188261112233717134.chn",
+        "summary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD."
       },
-      "editorialPullQuote": "Thanh khoản tiền đồng được khơi thông từ thượng tầng vĩ mô, kết hợp với kỷ cương minh bạch hóa đơn thuế, đang tạo áp lực buộc các chuỗi bán lẻ và hộ kinh doanh phải nhanh chóng số hóa điểm chạm thanh toán tại quầy trước mùa cao điểm tiêu dùng cuối năm.",
-      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa ba xu hướng chủ đạo: (1) NHNN chủ động bơm thanh khoản tiền đồng qua kênh ngoại hối giải tỏa chi phí vốn cho hệ thống NHTM; (2) Chính sách tài khóa và quản lý thuế đẩy mạnh chuẩn hóa hóa đơn điện tử máy tính tiền, thanh lọc các hộ kinh doanh và doanh nghiệp yếu kém; (3) Hạ tầng thanh toán số tăng tốc đón sóng mùa mua sắm cuối năm và 19,5 triệu lượt du khách quốc tế nhờ các dòng thẻ không tiếp xúc thế hệ mới và mạng lưới VietQR Global.",
-      "marketImpact": "Thanh khoản hệ thống ngân hàng dồi dào kéo giảm mặt bằng lãi suất liên ngân hàng qua đêm xuống 4,40%/năm; chi phí đầu vào logistics hạ nhiệt khi giá xăng dầu giảm gần 2.300 đồng/lít và giá vàng miếng giảm 3 phiên liền, giúp biên lợi nhuận của các doanh nghiệp vận tải và bán lẻ cải thiện rõ nét.",
-      "fintechLensAction": "Cơ hội Payoo & SmartPOS: Đón sóng chi tiêu 19,5 triệu lượt khách quốc tế và tháng khuyến mại cuối năm, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One tích hợp tính năng DCC chuyển đổi ngoại tệ linh hoạt, gói Trả góp 0% liên kết 30+ ngân hàng và giải pháp máy tính tiền xuất hóa đơn điện tử tự động đáp ứng quy định thuế cho các chuỗi hộ kinh doanh.",
-      "monitoringWatchpoint": "Theo dõi sát động thái mua ngoại tệ định kỳ của NHNN trong các phiên tiếp theo và tiến độ triển khai hóa đơn điện tử khởi tạo từ máy tính tiền tại các thành phố lớn.",
-      "whyItMatters": "Thanh khoản hệ thống ngân hàng dồi dào kéo giảm mặt bằng lãi suất liên ngân hàng qua đêm xuống 4,40%/năm; chi phí đầu vào logistics hạ nhiệt khi giá xăng dầu giảm gần 2.300 đồng/lít và giá vàng miếng giảm 3 phiên liền, giúp biên lợi nhuận của các doanh nghiệp vận tải và bán lẻ cải thiện rõ nét.",
-      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Đón sóng chi tiêu 19,5 triệu lượt khách quốc tế và tháng khuyến mại cuối năm, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One tích hợp tính năng DCC chuyển đổi ngoại tệ linh hoạt, gói Trả góp 0% liên kết 30+ ngân hàng và giải pháp máy tính tiền xuất hóa đơn điện tử tự động đáp ứng quy định thuế cho các chuỗi hộ kinh doanh."
+      "editorialPullQuote": "Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' với các dữ kiện trọng yếu (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm) tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước.",
+      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu.",
+      "marketImpact": "Cơ chế truyền dẫn: Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' qua các dữ kiện 0,5 điểm phần trăm, 6,3%/năm, 80.000 tỷ đồng tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "fintechLensAction": "Cơ hội Payoo & SmartPOS: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "monitoringWatchpoint": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước trong các kỳ tới.",
+      "whyItMatters": "Cơ chế truyền dẫn: Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' qua các dữ kiện 0,5 điểm phần trăm, 6,3%/năm, 80.000 tỷ đồng tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
     },
     "coreThesis": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
-      "editorialHeadline": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên Báo Thanh Niên (12/11/2026 16:57 | Nguồn gốc: Báo Thanh Niên (2026-11-12T16:57:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên Báo Thanh Niên (12/11/2026 16:57 | Nguồn gốc: Báo Thanh Niên (2026-11-12T16:57:00+07:00))",
-      "executiveSummary": "Theo diễn biến từ thị trường tiền tệ và công bố của Ngân hàng Nhà nước (NHNN), nhà điều hành chính thức kích hoạt lại kênh mua can thiệp ngoại tệ giao ngay định kỳ tại mức giá 25.500 VND/USD, cao hơn giá mua vào của các NHTM lớn từ 50 đến 100 đồng/USD. Động thái này đánh dấu việc NHNN chủ động mở lại kênh bơm thanh khoản tiền đồng dài hạn, không thu hồi vào hệ thống ngân hàng nhằm hấp thu lượng ngoại tệ dư thừa, củng cố dự trữ ngoại hối quốc gia và giải tỏa áp lực chi phí vốn trước mùa cao điểm thanh toán cuối năm.",
-      "whyItMatters": "Thanh khoản hệ thống ngân hàng dồi dào kéo giảm mặt bằng lãi suất liên ngân hàng qua đêm xuống 4,40%/năm; chi phí đầu vào logistics hạ nhiệt khi giá xăng dầu giảm gần 2.300 đồng/lít và giá vàng miếng giảm 3 phiên liền, giúp biên lợi nhuận của các doanh nghiệp vận tải và bán lẻ cải thiện rõ nét.",
+      "editorialHeadline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "executiveSummary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD.",
+      "whyItMatters": "Cơ chế truyền dẫn: Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' qua các dữ kiện 0,5 điểm phần trăm, 6,3%/năm, 80.000 tỷ đồng tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước trong ngành Ngân hàng, Tín dụng & Lãi suất.",
       "supportingInsights": [],
-      "editorialPullQuote": "Thanh khoản tiền đồng được khơi thông từ thượng tầng vĩ mô, kết hợp với kỷ cương minh bạch hóa đơn thuế, đang tạo áp lực buộc các chuỗi bán lẻ và hộ kinh doanh phải nhanh chóng số hóa điểm chạm thanh toán tại quầy trước mùa cao điểm tiêu dùng cuối năm.",
-      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Đón sóng chi tiêu 19,5 triệu lượt khách quốc tế và tháng khuyến mại cuối năm, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One tích hợp tính năng DCC chuyển đổi ngoại tệ linh hoạt, gói Trả góp 0% liên kết 30+ ngân hàng và giải pháp máy tính tiền xuất hóa đơn điện tử tự động đáp ứng quy định thuế cho các chuỗi hộ kinh doanh."
+      "editorialPullQuote": "Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' với các dữ kiện trọng yếu (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm) tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước.",
+      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
     },
     "sec04b_decisionBrief": {
       "sectionTitle": "TÍN HIỆU HÀNH ĐỘNG ĐIỀU HÀNH · DECISION BRIEF",
@@ -257,146 +257,193 @@ window.EDITION_DATA = {
       "signals": [
         {
           "signalId": "DECISION-01",
-          "signalTitle": "Đón sóng bùng nổ thanh toán Du lịch Inbound & Mùa lễ hội cuối năm (Contactless & VietQR Global)",
+          "signalTitle": "Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế",
           "relatedEventIds": [
-            "EVT-06",
-            "EVT-22",
-            "EVT-19"
+            "EVT-20261113-029",
+            "EVT-20261113-011",
+            "EVT-20261113-025",
+            "EVT-20261113-049"
           ],
-          "whatHappened": "Lượng khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt chỉ tiêu cả năm); VPBank hợp tác Visa ra mắt thẻ du lịch chuyên biệt SkyOne Visa Contactless; TP.HCM và các đô thị lớn đồng loạt kích hoạt chương trình khuyến mại mua sắm tập trung cuối năm.",
-          "whyItMatters": "Dòng chi tiêu ngoại tệ của du khách quốc tế và kiều bào đạt đỉnh vào quý 4 tại các chuỗi F&B, khách sạn và bán lẻ trung tâm. Điểm nghẽn lớn nhất tại quầy thu ngân là tình trạng thẻ quốc tế bị từ chối do chưa hỗ trợ không tiếp xúc, rào cản phụ phí ngoại tệ không minh bạch và thời gian xử lý thủ công gây ùn ứ thanh toán.",
-          "whatChanges": "Thương nhân bán lẻ và lưu trú chuyển dịch cấp tốc từ máy POS truyền thống sang SmartPOS All-in-One chấp nhận thanh toán một chạm (Tap to Pay), Apple Pay, Google Pay và quét mã VietQR Global liên thông quốc tế.",
-          "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Tiếp cận các chuỗi nhà hàng, khách sạn 3-5 sao, chuỗi bán lẻ du lịch để tư vấn gói giải pháp Payoo SmartPOS Inbound tích hợp tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép du khách thanh toán bằng đồng tiền bản địa với tỷ giá minh bạch và chia sẻ thêm doanh thu hoa hồng ngoại tệ cho thương nhân.",
-          "whatShouldIDoOrWatch": "Theo dõi doanh số quẹt thẻ quốc tế và tỷ lệ giao dịch một chạm tại các cụm thương mại Quận 1, Quận 3 (TP.HCM) và khu phố cổ Hà Nội trong dịp Black Friday và Giáng sinh.",
-          "proposedNextAction": "Đóng gói chính sách 'Đón sóng Du lịch Cuối năm': Miễn phí khởi tạo thiết bị SmartPOS All-in-One cho 50 chuỗi F&B và khách sạn ký hợp đồng trong tháng 11/2026.",
+          "whatHappened": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+          "whyItMatters": "Tác động lan tỏa từ sự chuyển dịch của Du lịch, Khách sạn & Bán lẻ Quốc tế mở ra cơ hội gia tăng doanh số thanh toán số và tối ưu chi phí đối soát.",
+          "whatChanges": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+          "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+          "whatShouldIDoOrWatch": "Doanh số giao dịch và tốc độ phủ điểm chấp nhận thanh toán tại Du lịch, Khách sạn & Bán lẻ Quốc tế.",
+          "proposedNextAction": "Hành động đề xuất: VALIDATE. Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
           "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-          "monitoringIndicators": "MP-06 (Sản lượng VietQR), MP-07 (Khách quốc tế 19,5M)",
-          "monitoringTimeHorizon": "7 - 14 ngày tới (Cao điểm Black Friday & Mua sắm mùa lễ hội)",
+          "monitoringIndicators": "MP-07",
+          "monitoringTimeHorizon": "IMMEDIATE_1_2_WEEKS",
           "assumptions": [
-            "Chính sách miễn thị thực và các chuyến bay thương mại quốc tế duy trì ổn định đến hết Q1/2027.",
-            "Hạ tầng kết nối mạng thẻ quốc tế Visa/Mastercard và VietQR Global vận hành liên tục 24/7."
+            "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
           ],
           "risks": [
-            "Cạnh tranh biểu phí xử lý giao dịch (MDR) từ các ngân hàng thu hộ truyền thống.",
-            "Chi phí đặt cọc thiết bị phần cứng tại các điểm bán quy mô nhỏ."
+            "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán."
           ],
           "relevantMerchantSegments": [
             "Chuỗi nhà hàng & Cafe (F&B)",
             "Hệ thống khách sạn & resort du lịch",
             "Chuỗi bán lẻ thời trang & mỹ phẩm cao cấp",
-            "Cửa hàng miễn thuế & lưu niệm sân bay"
+            "Cửa hàng tiện lợi & Siêu thị mini"
           ],
           "potentialPaymentSolutions": [
             {
-              "solutionName": "Payoo SmartPOS All-in-One Inbound",
-              "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng DCC chuyển đổi ngoại tệ tức thì tại quầy.",
+              "solutionName": "Payoo SmartPOS All-in-One",
+              "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng xuất hóa đơn điện tử tự động.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             },
             {
-              "solutionName": "Cổng Thanh toán Trực tuyến Payoo Booking",
-              "capabilityNote": "Tích hợp trực tiếp vào website/ứng dụng đặt phòng khách sạn, tour du lịch với chuẩn bảo mật quốc tế 3D-Secure 2.0.",
+              "solutionName": "Cổng Thanh toán Trực tuyến & Pay-by-Link Payoo",
+              "capabilityNote": "Tích hợp đa kênh thanh toán trực tuyến, hỗ trợ trả góp 0% liên kết 30+ ngân hàng.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             }
           ],
           "evidenceUrls": [
-            "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
-            "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm"
+            "https://tuoitre.vn/san-da-khau-tru-thue-toi-day-nguoi-ban-khong-con-phai-lap-hoa-don-100261112211123867.htm",
+            "https://thanhnien.vn/ra-san-bay-moi-biet-no-thue-lam-sao-cham-dut-185261112192114092.htm",
+            "https://thanhnien.vn/gia-vang-hom-nay-13112026-sjc-giam-1-trieu-van-cao-hon-the-gioi-tren-17-trieu-185261113071026369.htm"
           ]
         },
         {
           "signalId": "DECISION-02",
-          "signalTitle": "Bơm thanh khoản VND từ kênh Ngoại hối & Đòn bẩy Trả góp 0% cho Bán lẻ Điện máy",
+          "signalTitle": "Triển khai Giải pháp Thanh toán & Đối soát cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
           "relatedEventIds": [
-            "EVT-13",
-            "EVT-02",
-            "EVT-22"
+            "EVT-20261113-011",
+            "EVT-20261113-016"
           ],
-          "whatHappened": "Ngân hàng Nhà nước tái lập kênh mua can thiệp ngoại tệ giao ngay ở mức 25.500 VND/USD, bơm tiền đồng trực tiếp vào hệ thống ngân hàng; MSB tái định vị sản phẩm tài chính bán lẻ miễn phí giao dịch nhằm gia tăng tiền gửi không kỳ hạn (CASA).",
-          "whyItMatters": "Mặt bằng thanh khoản tiền đồng dồi dào giúp hạ nhiệt lãi suất liên ngân hàng, tạo dư địa cho các ngân hàng thương mại mở rộng tín dụng bán lẻ. Tuy nhiên, người tiêu dùng vẫn có tâm lý thắt chặt chi tiêu với các đơn hàng giá trị lớn nếu phải thanh toán gộp một lần.",
-          "whatChanges": "Thương nhân chuyển trọng tâm sang đòn bẩy Trả góp 0% lãi suất qua thẻ tín dụng và thanh toán đa kênh nhằm hạ thấp rào cản chi tiêu ban đầu của khách hàng mua sắm đồ công nghệ, gia dụng, nội thất.",
-          "whatItMeansForMyWork": "Đẩy mạnh gói giải pháp Payoo 0% Instalment liên kết hơn 30 ngân hàng phát hành thẻ lớn nhất Việt Nam tới các chuỗi điện máy, công nghệ và dịch vụ làm đẹp/nha khoa, giúp đối tác tăng tỷ lệ chốt đơn (Conversion Rate) từ 25% lên 40%.",
-          "whatShouldIDoOrWatch": "Quan sát biến động lãi suất huy động kỳ hạn ngắn của các NHTM và hạn mức tín dụng tiêu dùng được cấp cho quý 4.",
-          "proposedNextAction": "Phối hợp với 5 ngân hàng đối tác lớn (Techcombank, VPBank, MB, VIB, Sacombank) triển khai chương trình đồng tài trợ phí chuyển đổi trả góp cho các chuỗi bán lẻ công nghệ chủ lực.",
+          "whatHappened": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+          "whyItMatters": "Giải quyết triệt để bài toán công nợ và rủi ro quản lý tiền mặt cho các doanh nghiệp thuộc Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME).",
+          "whatChanges": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+          "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+          "whatShouldIDoOrWatch": "Phản hồi từ các đối tác thương mại thuộc Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME) và tỷ lệ số hóa thanh toán.",
+          "proposedNextAction": "Hành động đề xuất: INVESTIGATE. Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
           "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-          "monitoringIndicators": "MP-01 (Tỷ giá trung tâm), MP-02 (Lãi suất LNH), MP-05 (Tín dụng)",
-          "monitoringTimeHorizon": "Từ nay đến Tết Nguyên đán 2027",
+          "monitoringIndicators": "MP-01, MP-02, MP-06",
+          "monitoringTimeHorizon": "IMMEDIATE_1_2_WEEKS",
           "assumptions": [
-            "NHNN duy trì định hướng điều hành lãi suất thấp và ổn định tỷ giá.",
-            "Nhu cầu mua sắm thiết bị điện máy, điện thoại cuối năm tăng tối thiểu 15% so với quý 3."
+            "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
           ],
           "risks": [
-            "Nguy cơ nợ xấu thẻ tín dụng có thể khiến ngân hàng siết chặt phê duyệt giao dịch giá trị cao.",
-            "Áp lực biên lợi nhuận của nhà bán lẻ khi phải chia sẻ phí chuyển đổi trả góp."
+            "Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm."
           ],
           "relevantMerchantSegments": [
-            "Chuỗi bán lẻ điện máy & công nghệ",
-            "Hệ thống nha khoa & thẩm mỹ viện",
-            "Chuỗi nội thất & trang trí nhà cửa",
-            "Trung tâm đào tạo & giáo dục cao cấp"
+            "Chuỗi nhà hàng & Cafe (F&B)",
+            "Hệ thống khách sạn & resort du lịch",
+            "Chuỗi bán lẻ thời trang & mỹ phẩm cao cấp",
+            "Cửa hàng tiện lợi & Siêu thị mini"
           ],
           "potentialPaymentSolutions": [
             {
-              "solutionName": "Giải pháp Trả góp 0% Lãi suất Payoo (Instalment 0%)",
-              "capabilityNote": "Hỗ trợ liên kết 30+ ngân hàng phát hành thẻ, chuyển đổi trả góp tức thì tại quầy qua SmartPOS hoặc qua đường link Pay-by-Link.",
+              "solutionName": "Payoo SmartPOS All-in-One",
+              "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng xuất hóa đơn điện tử tự động.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             },
             {
-              "solutionName": "Pay-by-Link & Cổng Thanh toán Đa kênh",
-              "capabilityNote": "Tạo link thanh toán trả góp gửi qua tin nhắn Zalo/SMS cho khách hàng chốt đơn từ xa không cần đến cửa hàng.",
+              "solutionName": "Cổng Thanh toán Trực tuyến & Pay-by-Link Payoo",
+              "capabilityNote": "Tích hợp đa kênh thanh toán trực tuyến, hỗ trợ trả góp 0% liên kết 30+ ngân hàng.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             }
           ],
           "evidenceUrls": [
-            "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
-            "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html"
+            "https://thanhnien.vn/ra-san-bay-moi-biet-no-thue-lam-sao-cham-dut-185261112192114092.htm",
+            "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm"
           ]
         },
         {
           "signalId": "DECISION-03",
-          "signalTitle": "Chuẩn hóa đối soát & Tích hợp Hóa đơn điện tử máy tính tiền cho Chuỗi Hộ kinh doanh",
+          "signalTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
           "relatedEventIds": [
-            "EVT-09",
-            "EVT-14",
-            "EVT-07",
-            "EVT-15"
+            "EVT-20261113-058",
+            "EVT-20261113-007",
+            "EVT-20261113-005",
+            "EVT-20261113-001",
+            "EVT-20261113-040",
+            "EVT-20261113-048",
+            "EVT-20261113-023"
           ],
-          "whatHappened": "VietinBank ra mắt bộ giải pháp thu hộ và tổng hợp doanh thu cho hộ kinh doanh; Bộ Tài chính và Tổng cục Thuế phát lệnh siết chặt chống thất thu thuế, bắt buộc triển khai hóa đơn điện tử khởi tạo từ máy tính tiền trước Tết.",
-          "whyItMatters": "Hàng triệu hộ kinh doanh cá thể đứng trước nguy cơ xử phạt hành chính và bị đình chỉ hoạt động nếu không minh bạch hóa đơn chứng từ. Việc sử dụng các thiết bị thanh toán rời rạc với phần mềm bán hàng gây thất thoát dữ liệu và khó khăn khi cơ quan thuế kiểm tra.",
-          "whatChanges": "Nhu cầu chuyển đổi bắt buộc từ mô hình thu ngân truyền thống (chỉ dùng tài khoản cá nhân nhận chuyển khoản) sang giải pháp thanh toán số tích hợp hóa đơn điện tử hợp chuẩn.",
-          "whatItMeansForMyWork": "Định vị Payoo SmartPOS là thiết bị 'All-in-One' cứu cánh cho hộ kinh doanh: Một thiết bị duy nhất vừa nhận thanh toán quẹt thẻ/quét QR, vừa chạy phần mềm quản lý bán hàng và tự động xuất hóa đơn điện tử truyền dữ liệu thẳng lên Tổng cục Thuế.",
-          "whatShouldIDoOrWatch": "Theo dõi tiến độ thanh kiểm tra hóa đơn điện tử của Cục Thuế tại TP.HCM, Hà Nội và phản hồi của các tiểu thương chợ đầu mối, chuỗi bán lẻ tiện lợi.",
-          "proposedNextAction": "Bắt tay với các công ty phần mềm quản lý bán hàng (KiotViet, Sapo, PosApp) tung combo giải pháp phần cứng Payoo SmartPOS kèm phần mềm hóa đơn điện tử với chi phí thuê bao chỉ từ 199.000đ/tháng.",
+          "whatHappened": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' với các dữ kiện trọng yếu (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm) tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước.",
+          "whyItMatters": "Chi phí vốn ngân hàng ảnh hưởng trực tiếp đến biên lợi nhuận tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+          "whatChanges": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' với các dữ kiện trọng yếu (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm) tác động trực tiếp lên biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước.",
+          "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng.",
+          "whatShouldIDoOrWatch": "Biểu lãi suất huy động tại các NHTM và số liệu can thiệp thị trường của NHNN.",
+          "proposedNextAction": "Hành động đề xuất: MONITOR. Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng.",
           "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
-          "monitoringIndicators": "MP-06 (Sản lượng VietQR), MP-08 (Thanh khoản OMO)",
-          "monitoringTimeHorizon": "30 ngày tới (Thời hạn chuẩn hóa thuế cuối năm)",
+          "monitoringIndicators": "MP-02, MP-03, MP-05",
+          "monitoringTimeHorizon": "IMMEDIATE_1_2_WEEKS",
           "assumptions": [
-            "Cơ quan thuế áp dụng chế tài nghiêm ngặt với các trường hợp trốn xuất hóa đơn máy tính tiền.",
-            "Hạ tầng kết nối mạng 4G/Wifi của thiết bị SmartPOS duy trì kết nối ổn định tới máy chủ ngành thuế."
+            "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
           ],
           "risks": [
-            "Tâm lý e ngại công khai dòng tiền thực của các hộ kinh doanh lâu năm.",
-            "Chi phí đào tạo và làm quen công nghệ mới cho nhân viên thu ngân lớn tuổi."
+            "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống."
           ],
           "relevantMerchantSegments": [
-            "Hộ kinh doanh cá thể & tiểu thương bán lẻ",
-            "Chuỗi cửa hàng tiện lợi & tạp hóa hiện đại",
-            "Chuỗi nhà thuốc & thiết bị y tế",
-            "Chuỗi dịch vụ chăm sóc sắc đẹp & salon"
+            "Chuỗi nhà hàng & Cafe (F&B)",
+            "Hệ thống khách sạn & resort du lịch",
+            "Chuỗi bán lẻ thời trang & mỹ phẩm cao cấp",
+            "Cửa hàng tiện lợi & Siêu thị mini"
           ],
           "potentialPaymentSolutions": [
             {
-              "solutionName": "Payoo SmartPOS Tích hợp Hóa đơn Điện tử",
-              "capabilityNote": "Thiết bị tích hợp sẵn máy in bill nhiệt, camera quét mã QR, khe quẹt thẻ và phần mềm xuất hóa đơn điện tử truyền dữ liệu trực tiếp về cơ quan thuế.",
+              "solutionName": "Payoo SmartPOS All-in-One",
+              "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng xuất hóa đơn điện tử tự động.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             },
             {
-              "solutionName": "Hệ thống Dynamic QR & Tách Luồng Doanh thu",
-              "capabilityNote": "Mã QR động gắn mã đơn hàng, tự động tách riêng luồng tiền kinh doanh hợp lệ và đối soát báo cáo doanh thu T+1 cho chủ cửa hàng.",
+              "solutionName": "Cổng Thanh toán Trực tuyến & Pay-by-Link Payoo",
+              "capabilityNote": "Tích hợp đa kênh thanh toán trực tuyến, hỗ trợ trả góp 0% liên kết 30+ ngân hàng.",
               "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
             }
           ],
           "evidenceUrls": [
-            "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html"
+            "https://cafef.vn/acb-vuot-moc-thuong-hieu-14-ty-usd-vao-top-3-ngan-hang-tu-nhan-gia-tri-nhat-viet-nam-188261112233717134.chn",
+            "https://thanhnien.vn/tiep-tuc-keo-giam-lai-suat-ho-tro-thanh-khoan-185261112191709347.htm",
+            "https://cafef.vn/ngay-13-11-gui-duoi-1-ty-dong-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261112234438454.chn"
+          ]
+        },
+        {
+          "signalId": "DECISION-04",
+          "signalTitle": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+          "relatedEventIds": [
+            "EVT-20261113-025",
+            "EVT-20261113-049",
+            "EVT-20261113-005"
+          ],
+          "whatHappened": "Mặt bằng lãi suất tiền gửi 12 tháng 7%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+          "whyItMatters": "Đón đầu xu hướng chuyển dịch thanh toán số và chuẩn hóa tuân thủ dòng tiền.",
+          "whatChanges": "Mặt bằng lãi suất tiền gửi 12 tháng 7%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+          "whatItMeansForMyWork": "Cơ hội kinh doanh B2B trọng tâm cho Payoo: Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+          "whatShouldIDoOrWatch": "Văn bản hướng dẫn thi hành và tốc độ tiếp nhận giải pháp của thị trường.",
+          "proposedNextAction": "Hành động đề xuất: VALIDATE. Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+          "confidenceLevel": "HIGH_CONFIDENCE_GROUNDED",
+          "monitoringIndicators": "MP-03",
+          "monitoringTimeHorizon": "IMMEDIATE_1_2_WEEKS",
+          "assumptions": [
+            "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+          ],
+          "risks": [
+            "Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu."
+          ],
+          "relevantMerchantSegments": [
+            "Chuỗi nhà hàng & Cafe (F&B)",
+            "Hệ thống khách sạn & resort du lịch",
+            "Chuỗi bán lẻ thời trang & mỹ phẩm cao cấp",
+            "Cửa hàng tiện lợi & Siêu thị mini"
+          ],
+          "potentialPaymentSolutions": [
+            {
+              "solutionName": "Payoo SmartPOS All-in-One",
+              "capabilityNote": "Tích hợp đa phương thức: Chạm thẻ EMV Contactless, Apple/Google Pay, VietQR Global và tính năng xuất hóa đơn điện tử tự động.",
+              "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
+            },
+            {
+              "solutionName": "Cổng Thanh toán Trực tuyến & Pay-by-Link Payoo",
+              "capabilityNote": "Tích hợp đa kênh thanh toán trực tuyến, hỗ trợ trả góp 0% liên kết 30+ ngân hàng.",
+              "readinessType": "CONFIRMED_EXISTING_CAPABILITY"
+            }
+          ],
+          "evidenceUrls": [
+            "https://thanhnien.vn/gia-vang-hom-nay-13112026-sjc-giam-1-trieu-van-cao-hon-the-gioi-tren-17-trieu-185261113071026369.htm",
+            "https://tuoitre.vn/coop-online-duoc-vinh-danh-tai-giai-thuong-ban-le-chau-a-100261112211231028.htm",
+            "https://cafef.vn/ngay-13-11-gui-duoi-1-ty-dong-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261112234438454.chn"
           ]
         }
       ]
@@ -623,283 +670,428 @@ window.EDITION_DATA = {
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-          "macroDriver": "NHNN tái lập kênh mua can thiệp ngoại tệ 25.500 VND/USD & bơm thanh khoản VND không kỳ hạn",
-          "coreThesis": "Dòng tiền VND được giải tỏa từ kênh mua ngoại tệ của NHNN thẩm thấu qua hệ thống NHTM, hạ nhiệt lãi suất liên ngân hàng, tạo điều kiện cho các ngân hàng bán lẻ triển khai gói tài trợ mua sắm và kích hoạt dòng tiền thanh toán số tại điểm bán.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
+          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Can thiệp Tỷ giá & Bổ sung Dự trữ Ngoại hối",
-              "content": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
-              "description": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
+              "description": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-13"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Điều hành Cung tiền & Bơm Thanh khoản Ròng",
-              "content": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
-              "description": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-13",
-                "EVT-08"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Thanh khoản NHTM & Cơ cấu Nguồn vốn Rẻ",
-              "content": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-              "description": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-02"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Tài trợ Vốn Lưu động & Kích cầu Bán lẻ Cuối năm",
-              "content": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
-              "description": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-22"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Hành vi Tiêu dùng & Đòn bẩy SmartPOS / QR Payoo",
-              "content": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
-              "description": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-02",
-                "EVT-22"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-          "macroDriver": "Lượng khách quốc tế 10 tháng vượt 19,5 triệu lượt & Liên minh Ngân hàng - Tổ chức thẻ quốc tế mở rộng thẻ du lịch",
-          "coreThesis": "Dòng chi tiêu ngoại tệ đột biến từ du khách quốc tế thúc đẩy các tổ chức thẻ và ngân hàng nâng cấp chuẩn thanh toán một chạm (Contactless) và VietQR Global, buộc các điểm đến du lịch hiện đại hóa thiết bị SmartPOS chấp nhận đa tiền tệ.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "macroDriver": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Dòng tiền Chi tiêu từ Khách Du lịch Quốc tế",
-              "content": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
-              "description": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
+              "description": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-19"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Định hướng Không tiền mặt & Kết nối Thanh toán Khu vực",
-              "content": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
-              "description": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Hợp tác Ngân hàng & Tổ chức Thẻ Toàn cầu",
-              "content": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-              "description": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Hiện đại hóa Điểm bán Chuỗi F&B, Khách sạn & Nghỉ dưỡng",
-              "content": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
-              "description": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-19"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Thanh toán Một chạm (Tap to Pay) & SmartPOS All-in-One",
-              "content": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
-              "description": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-          "macroDriver": "Chính sách quản lý thuế minh bạch hóa đơn máy tính tiền & Quyền lựa chọn cách tính thuế cho hơn 90% SME",
-          "coreThesis": "Chế tài nghiêm ngặt của cơ quan thuế đối với hóa đơn bán lẻ đẩy hàng triệu hộ kinh doanh từ bỏ ghi chép thủ công, thúc đẩy nhu cầu trang bị thiết bị SmartPOS tích hợp hóa đơn điện tử tự động kết nối dữ liệu thuế.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "macroDriver": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Khung khổ Pháp lý Thuế & Thu ngân sách Nhà nước",
-              "content": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
-              "description": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-14",
-                "EVT-15"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Chỉ đạo Kiểm soát Dòng tiền & Hóa đơn Khởi tạo Máy tính tiền",
-              "content": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
-              "description": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-07"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Ngân hàng Cung cấp Bộ Giải pháp Thu hộ Hộ kinh doanh",
-              "content": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-              "description": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-09"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Hộ cá thể & Tiểu thương Chuyển đổi Vận hành Bắt buộc",
-              "content": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
-              "description": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-09",
-                "EVT-14"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Cơ hội Đột phá cho Payoo SmartPOS + Hóa đơn Điện tử",
-              "content": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
-              "description": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-09"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-          "macroDriver": "Giá xăng dầu giảm sâu gần 2.300 đồng/lít & Giá vàng trong nước giảm 3 phiên liên tiếp khơi thông dòng vốn",
-          "coreThesis": "Chi phí đầu vào logistics và năng lượng giảm mạnh chặn đứng nguy cơ lạm phát chi phí đẩy; dòng tiền nhàn rỗi rút khỏi việc găm giữ vàng để quay lại tài khoản tiền gửi ngân hàng và phục vụ chu chuyển thanh toán B2B cuối năm.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "macroDriver": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Hạ nhiệt Giá Năng lượng & Hàng hóa Đầu vào",
-              "content": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
-              "description": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-24",
-                "EVT-25"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Điều tiết Thị trường Vàng & Khơi thông Cung ứng Nguyên liệu",
-              "content": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
-              "description": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-12",
-                "EVT-01"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Dòng tiền Nhàn rỗi Quay lại Hệ thống Ngân hàng",
-              "content": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-              "description": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-25"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Tiết giảm Chi phí Logistics & Cải thiện Biên Lợi nhuận",
-              "content": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
-              "description": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-24"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Tăng tốc Vòng quay Tiền tệ & Giải pháp Thanh toán B2B Payoo",
-              "content": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
-              "description": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-24",
-                "EVT-01"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             }
           ]
@@ -912,283 +1104,428 @@ window.EDITION_DATA = {
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Điều hành Ngoại hối & Bơm thanh khoản VND kích hoạt Sức mua Bán lẻ",
-          "macroDriver": "NHNN tái lập kênh mua can thiệp ngoại tệ 25.500 VND/USD & bơm thanh khoản VND không kỳ hạn",
-          "coreThesis": "Dòng tiền VND được giải tỏa từ kênh mua ngoại tệ của NHNN thẩm thấu qua hệ thống NHTM, hạ nhiệt lãi suất liên ngân hàng, tạo điều kiện cho các ngân hàng bán lẻ triển khai gói tài trợ mua sắm và kích hoạt dòng tiền thanh toán số tại điểm bán.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
+          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Can thiệp Tỷ giá & Bổ sung Dự trữ Ngoại hối",
-              "content": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
-              "description": "NHNN tái lập kênh mua ngoại tệ giao ngay định kỳ tại mức 25.500 VND/USD (cao hơn giá mua của các NHTM), tạo trần kỹ thuật cho tỷ giá USD/VND và phát tín hiệu ưu tiên bổ sung dự trữ ngoại hối quốc gia trong bối cảnh thị trường quốc tế biến động.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
+              "description": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-13"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Điều hành Cung tiền & Bơm Thanh khoản Ròng",
-              "content": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
-              "description": "Nghiệp vụ mua ngoại tệ bơm trực tiếp lượng lớn tiền đồng không thời hạn thu hồi vào hệ thống, giải tỏa áp lực thanh khoản liên ngân hàng mà không cần phụ thuộc vào nghiệp vụ tái cấp vốn OMO ngắn hạn.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-13",
-                "EVT-08"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Thanh khoản NHTM & Cơ cấu Nguồn vốn Rẻ",
-              "content": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-              "description": "Các NHTM hạ nhiệt áp lực chi phí huy động vốn; những ngân hàng tiên phong như MSB tận dụng thanh khoản dồi dào để thiết kế lại hệ sinh thái tài chính cá nhân, miễn phí toàn bộ giao dịch nhằm thu hút nguồn tiền gửi không kỳ hạn (CASA) giá rẻ.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-02"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Tài trợ Vốn Lưu động & Kích cầu Bán lẻ Cuối năm",
-              "content": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
-              "description": "Doanh nghiệp bán lẻ và chuỗi phân phối tại TP.HCM và các đô thị lớn bước vào mùa khuyến mại cao điểm với chi phí vốn tài trợ lưu động dễ thở hơn, đẩy mạnh các gói kích cầu và liên kết thanh toán số để tăng vòng quay hàng tồn kho.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-22"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Hành vi Tiêu dùng & Đòn bẩy SmartPOS / QR Payoo",
-              "content": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
-              "description": "Người tiêu dùng cuối gia tăng chi tiêu nhờ các công cụ thanh toán trả góp 0% qua thẻ tín dụng và quét mã Dynamic QR tại quầy; Payoo SmartPOS All-in-One trở thành điểm chạm then chốt giúp tối ưu vận tốc dòng tiền và bảo toàn doanh thu cho thương nhân.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-02",
-                "EVT-22"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bùng nổ Du lịch Quốc tế & Mở rộng Thanh toán Xuyên biên giới",
-          "macroDriver": "Lượng khách quốc tế 10 tháng vượt 19,5 triệu lượt & Liên minh Ngân hàng - Tổ chức thẻ quốc tế mở rộng thẻ du lịch",
-          "coreThesis": "Dòng chi tiêu ngoại tệ đột biến từ du khách quốc tế thúc đẩy các tổ chức thẻ và ngân hàng nâng cấp chuẩn thanh toán một chạm (Contactless) và VietQR Global, buộc các điểm đến du lịch hiện đại hóa thiết bị SmartPOS chấp nhận đa tiền tệ.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "macroDriver": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Dòng tiền Chi tiêu từ Khách Du lịch Quốc tế",
-              "content": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
-              "description": "Khách quốc tế 10 tháng năm 2026 đạt 19,5 triệu lượt (vượt toàn bộ kế hoạch năm), mang lại dòng ngoại tệ chi tiêu trực tiếp rất lớn cho ngành lữ hành, khách sạn, ẩm thực và mua sắm tại Việt Nam.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
+              "description": "Biến động kinh tế toàn cầu, tỷ giá quốc tế và xu hướng lãi suất của các ngân hàng trung ương lớn duy trì môi trường quan sát trung tính.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-19"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Định hướng Không tiền mặt & Kết nối Thanh toán Khu vực",
-              "content": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
-              "description": "NHNN và các cơ quan quản lý khuyến khích mở rộng mạng lưới thanh toán không tiền mặt liên thông quốc tế (VietQR Global) và thúc đẩy các sản phẩm tài chính phục vụ kinh tế du lịch theo chuẩn quốc tế.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Hợp tác Ngân hàng & Tổ chức Thẻ Toàn cầu",
-              "content": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-              "description": "Các ngân hàng như VPBank hợp tác chiến lược cùng Visa ra mắt dòng thẻ SkyOne Visa tích hợp chip không tiếp xúc và công nghệ bảo mật 3D-Secure 2.0; hạ tầng chuyển mạch tập trung nâng cao tỷ lệ xử lý giao dịch ngoại tệ thành công.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Hiện đại hóa Điểm bán Chuỗi F&B, Khách sạn & Nghỉ dưỡng",
-              "content": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
-              "description": "Các doanh nghiệp lưu trú, lữ hành và ẩm thực loại bỏ rào cản tỷ giá cho du khách nhờ tính năng Chuyển đổi Ngoại tệ Động (DCC), cho phép khách quẹt thẻ thanh toán bằng chính đồng tiền bản địa và giảm tỷ lệ tranh chấp tra soát.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-19"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Thanh toán Một chạm (Tap to Pay) & SmartPOS All-in-One",
-              "content": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
-              "description": "Khách quốc tế hình thành thói quen chạm thẻ/điện thoại (Apple Pay, Google Pay) và quét mã VietQR Global tại quầy thu ngân dưới 3 giây; thiết bị Payoo SmartPOS All-in-One giúp thương nhân gia tăng giá trị đơn hàng bình quân lên hơn 30%.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-06"
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-058",
+                "EVT-20261113-002",
+                "EVT-20261113-007"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Quản lý Thuế & Số hóa Hóa đơn Điện tử tại Điểm bán",
-          "macroDriver": "Chính sách quản lý thuế minh bạch hóa đơn máy tính tiền & Quyền lựa chọn cách tính thuế cho hơn 90% SME",
-          "coreThesis": "Chế tài nghiêm ngặt của cơ quan thuế đối với hóa đơn bán lẻ đẩy hàng triệu hộ kinh doanh từ bỏ ghi chép thủ công, thúc đẩy nhu cầu trang bị thiết bị SmartPOS tích hợp hóa đơn điện tử tự động kết nối dữ liệu thuế.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "macroDriver": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Khung khổ Pháp lý Thuế & Thu ngân sách Nhà nước",
-              "content": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
-              "description": "Chính phủ và Quốc hội thúc đẩy hoàn thiện chính sách thuế, cho phép hơn 90% doanh nghiệp vừa và nhỏ lựa chọn phương thức tính thuế phù hợp, đồng thời siết chặt xử lý nợ thuế đất và chống thất thu ngân sách.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-14",
-                "EVT-15"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Chỉ đạo Kiểm soát Dòng tiền & Hóa đơn Khởi tạo Máy tính tiền",
-              "content": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
-              "description": "Tổng cục Thuế và Ban chỉ đạo 389 phát lệnh tăng cường thanh kiểm tra hóa đơn bán lẻ khởi tạo từ máy tính tiền và truy quét nguồn gốc hàng hóa trước cao điểm tiêu dùng Tết Đinh Mùi.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-07"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Ngân hàng Cung cấp Bộ Giải pháp Thu hộ Hộ kinh doanh",
-              "content": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-              "description": "Các định chế tài chính lớn như VietinBank cấp tốc triển khai bộ giải pháp quản lý thu chi chuyên biệt cho hộ kinh doanh cá thể, tự động phân tách tài khoản kinh doanh hợp chuẩn khỏi tài khoản cá nhân thông thường.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-09"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Hộ cá thể & Tiểu thương Chuyển đổi Vận hành Bắt buộc",
-              "content": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
-              "description": "Hàng loạt chuỗi cửa hàng tiện lợi, nhà thuốc và tiệm ăn chuyển từ thói quen nhận tiền mặt/chuyển khoản cá nhân sang thiết bị bán hàng thông minh có khả năng xuất hóa đơn điện tử tự động để tránh rủi ro thanh kiểm tra thuế.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-09",
-                "EVT-14"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Cơ hội Đột phá cho Payoo SmartPOS + Hóa đơn Điện tử",
-              "content": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
-              "description": "Nhu cầu bùng nổ đối với thiết bị Payoo SmartPOS thế hệ mới: Vừa xử lý quẹt thẻ, quét mã QR thu hộ, vừa đồng bộ phần mềm bán hàng xuất hóa đơn điện tử hợp lệ truyền trực tiếp lên cổng thuế trong một thao tác duy nhất tại quầy.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-09"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Hạ nhiệt Chi phí Vận tải Xăng dầu & Dòng tiền Doanh nghiệp chuyển dịch",
-          "macroDriver": "Giá xăng dầu giảm sâu gần 2.300 đồng/lít & Giá vàng trong nước giảm 3 phiên liên tiếp khơi thông dòng vốn",
-          "coreThesis": "Chi phí đầu vào logistics và năng lượng giảm mạnh chặn đứng nguy cơ lạm phát chi phí đẩy; dòng tiền nhàn rỗi rút khỏi việc găm giữ vàng để quay lại tài khoản tiền gửi ngân hàng và phục vụ chu chuyển thanh toán B2B cuối năm.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "macroDriver": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "coreThesis": "Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động liên hoàn qua hệ thống NHTM, khu vực doanh nghiệp, hộ gia đình và hành vi thanh toán.",
           "layers": [
             {
               "levelNumber": 1,
-              "levelName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "layerName": "Tầng 01: Vĩ mô & Kinh tế Quốc tế",
-              "title": "Hạ nhiệt Giá Năng lượng & Hàng hóa Đầu vào",
-              "content": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
-              "description": "Giá xăng dầu trong nước tiếp tục giảm mạnh tới gần 2.300 đồng/lít từ phiên 12/11 kết hợp giá vàng miếng SJC giảm liên tiếp 3 phiên, giúp giảm áp lực lạm phát chi phí đẩy và chặn đứng tâm lý đầu cơ tích trữ kim loại quý.",
+              "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
+              "title": "Biến động quốc tế & Ngoại hối",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-24",
-                "EVT-25"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 2,
-              "levelName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "layerName": "Tầng 02: Chính sách Tiền tệ & NHNN",
-              "title": "Điều tiết Thị trường Vàng & Khơi thông Cung ứng Nguyên liệu",
-              "content": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
-              "description": "Chính phủ rút ngắn thời hạn cấp phép xuất nhập khẩu vàng nguyên liệu; các doanh nghiệp hoạt động kém hiệu quả chủ động rút lui theo cơ chế thanh lọc tự nhiên của thị trường như phân tích của Bộ trưởng Tài chính.",
+              "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
+              "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-12",
-                "EVT-01"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 3,
-              "levelName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "layerName": "Tầng 03: Hệ thống NHTM & Chi phí Vốn",
-              "title": "Dòng tiền Nhàn rỗi Quay lại Hệ thống Ngân hàng",
-              "content": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-              "description": "Khi lợi suất đầu cơ vàng suy giảm, nguồn tiền nhàn rỗi trong dân cư và tổ chức chuyển dịch sang gửi tiết kiệm ngân hàng (hưởng lãi suất 12T lên tới 6,40%/năm) và cấp vốn lưu động phục vụ sản xuất công nghiệp quý 4.",
-              "badge": "INFERENCE",
+              "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
+              "title": "Điều hành cung tiền & Thanh khoản OMO",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "badge": "FACT",
               "eventIds": [
-                "EVT-25"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 4,
-              "levelName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "layerName": "Tầng 04: Doanh nghiệp, Bán lẻ & Chuỗi Cung ứng",
-              "title": "Tiết giảm Chi phí Logistics & Cải thiện Biên Lợi nhuận",
-              "content": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
-              "description": "Các doanh nghiệp vận tải, giao nhận và chuỗi bán lẻ tiết giảm từ 5% đến 8% chi phí nhiên liệu đầu vào, cải thiện đáng kể biên lợi nhuận hoạt động và có thêm dòng tiền thanh toán công nợ cho các nhà cung ứng.",
+              "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
+              "title": "Thanh khoản & Chi phí vốn ngân hàng",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-24"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             },
             {
               "levelNumber": 5,
-              "levelName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "layerName": "Tầng 05: Điểm chạm Tiêu dùng & Giải pháp Thanh toán",
-              "title": "Tăng tốc Vòng quay Tiền tệ & Giải pháp Thanh toán B2B Payoo",
-              "content": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
-              "description": "Vận tốc chu chuyển dòng tiền thương mại tăng tốc; các doanh nghiệp chuyển dịch mạnh sang cổng thanh toán B2B tự động (Payoo B2B Billing, Pay-by-link, Virtual Account) để tự động hóa đối soát công nợ T+1 và bảo toàn dòng vốn kinh doanh.",
+              "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
+              "title": "Vốn lưu động & Hoạt động phân phối",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "badge": "INFERENCE",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
+              ]
+            },
+            {
+              "levelNumber": 6,
+              "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
+              "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
+              "content": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
+              "description": "(Giả định phân tích) Điểm bán theo dõi biến động từ 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' để tối ưu hóa quản trị dòng tiền và chi phí vận hành.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-24",
-                "EVT-01"
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
+              ]
+            },
+            {
+              "levelNumber": 7,
+              "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
+              "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
+              "content": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "description": "(Giả định phân tích) Hành vi tiêu dùng của khách hàng chịu ảnh hưởng gián tiếp từ điều kiện kinh tế và thu nhập chung.",
+              "badge": "HYPOTHESIS",
+              "eventIds": [
+                "EVT-20261113-025",
+                "EVT-20261113-049",
+                "EVT-20261113-029"
               ]
             }
           ]
