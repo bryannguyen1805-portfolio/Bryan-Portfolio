@@ -4721,3 +4721,59 @@ section[id], main [id] {
     padding: 8px 14px !important;
   }
 }
+
+/* ==========================================================================
+   PHASE 08B R1.0.0 — FINAL ADJUSTMENTS (D-09, D-11, D-16)
+   ========================================================================== */
+
+/* D-09: Clear, consistent keyboard focus indicator (≥3:1 against both themes) */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #0E7490;
+  outline-offset: 2px;
+}
+html[data-theme="dark"] :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline-color: #5EEAD4;
+}
+
+/* D-11: One primary mobile navigation. Below 1024px the 4 Quick Tabs are the
+   single, always-visible navigation; the hamburger (which repeated exactly the
+   same 4 items) and the now-empty nav strip are hidden. Desktop is unchanged. */
+@media (max-width: 1023px) {
+  .ms-mobile-menu-btn,
+  .ms-nav-strip {
+    display: none !important;
+  }
+  .ms-quick-tab {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* D-16: Filter chips & search touch targets on touch layouts */
+@media (max-width: 1023px) {
+  .ms-filter-btn,
+  .ms-cat-btn {
+    min-height: 44px !important;
+  }
+  #newsSearchInput,
+  .ms-search-input {
+    min-height: 44px !important;
+    font-size: 16px !important; /* also prevents iOS auto-zoom on focus */
+  }
+}
+
+/* D-09: Visually hidden but available to assistive technologies */
+.ms-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

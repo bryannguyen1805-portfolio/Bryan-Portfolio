@@ -288,6 +288,8 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
     if not base_sm.endswith("."):
         base_sm += "."
 
+    # PHASE08B D-06: executive summary uses ONLY the authentic source summary.
+    # Legacy keyword-template context sentences are disabled (kept below for audit trail).
     context_sent = ""
     if any(k in core_hl_l for k in ["lãi suất", "tiền gửi", "kỳ hạn", "gửi dưới 1 tỷ"]):
         context_sent = " Sự phân hóa biểu lãi suất huy động giữa các nhà băng phản ánh chiến lược tối ưu hóa chi phí vốn (COF), gia tăng tỷ lệ CASA và chuẩn bị nguồn thanh khoản dồi dào phục vụ nhu cầu vay vốn cao điểm cuối năm."
@@ -304,7 +306,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         if ctx_cand and len(ctx_cand) > 30:
             context_sent = f" Diễn biến này trực tiếp tác động đến chi phí vốn, thanh khoản dòng tiền và chiến lược mở rộng kinh doanh của cộng đồng doanh nghiệp."
 
-    lead_summary = (base_sm + context_sent).strip()
+    # PHASE08B D-06: executive summary uses ONLY the authentic source summary.
+    # Legacy keyword-template context sentences above are retained for audit trail but disabled.
+    context_sent = ""
+    lead_summary = base_sm.strip()
 
     # 4. Editorial Pull Quote: executive quotation capturing strategic shift
     if any(k in core_hl_l for k in ["lãi suất", "tiền gửi", "kỳ hạn", "gửi dưới 1 tỷ"]):
@@ -326,7 +331,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         seen_titles = set()
         for i, th in enumerate(theses[:4], 1):
             p_name = th.get("thematicPillar") or th.get("themeGroup") or f"Xu hướng {i}"
-            p_title = th.get("title") or ""
+            p_title = (th.get("title") or "").strip().rstrip("?!.;:,").strip()
             if p_title in seen_titles:
                 continue
             seen_titles.add(p_title)
@@ -509,7 +514,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         pillar_summaries = []
         for i, th in enumerate(theses[:4], 1):
             p_name = th.get("thematicPillar") or th.get("themeGroup") or f"Xu hướng {i}"
-            p_title = th.get("title") or ""
+            p_title = (th.get("title") or "").strip().rstrip("?!.;:,").strip()
             pillar_summaries.append(f"({i}) {p_name}: {p_title}")
         editorial_synthesis = (
             f"Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa {len(pillar_summaries)} xu hướng chủ đạo: "
@@ -584,6 +589,61 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         "whyItMatters": market_impact,
         "keyMarketImplication": fintech_lens_action
     }
+
+
+def audit_content_repetition(edition_payload: dict) -> dict:
+    """
+    PHASE08B D-06 — Content repetition gate.
+    Splits every news summary / supportingQuote into sentences and flags any
+    sentence that appears in 2+ different articles (a sign of boilerplate
+    injection). Also checks a blocklist of known legacy boilerplate strings and
+    the '?;' join artifact. Writes logs/content-quality-audit.json and prints a
+    clear PASS/WARN line. It never mutates content.
+    """
+    import re
+    from collections import defaultdict
+    BLOCKLIST = [
+        "Sự kiện ghi nhận sự quan tâm đặc biệt của giới đầu tư",
+        "Diễn biến này đặt ra yêu cầu điều chỉnh chiến lược dòng tiền",
+        "Diễn biến này trực tiếp tác động đến chi phí vốn, thanh khoản dòng tiền",
+    ]
+    news = edition_payload.get("eligibleNewsList", []) or []
+    sent_map = defaultdict(set)
+    for item in news:
+        eid = item.get("eventId", "")
+        for field in ("summary", "supportingQuote"):
+            txt = str(item.get(field) or "")
+            for s in re.split(r"(?<=[.!?])\s+", txt):
+                s = s.strip()
+                if len(s) >= 40:
+                    sent_map[s].add(eid)
+    repeated = [{"sentence": s, "eventIds": sorted(ids), "count": len(ids)}
+                for s, ids in sent_map.items() if len(ids) >= 2]
+    payload_text = json.dumps(edition_payload, ensure_ascii=False)
+    blocklist_hits = {b: payload_text.count(b) for b in BLOCKLIST if b in payload_text}
+    join_artifacts = payload_text.count("?;")
+    status = "PASS" if not repeated and not blocklist_hits and join_artifacts == 0 else "WARN"
+    report = {
+        "editionId": edition_payload.get("editionId"),
+        "checkedAt": datetime.now().isoformat(),
+        "articlesChecked": len(news),
+        "repeatedSentencesAcrossArticles": repeated,
+        "blocklistHits": blocklist_hits,
+        "joinArtifactsQuestionSemicolon": join_artifacts,
+        "status": status,
+    }
+    try:
+        log_dir = os.path.join(PILOT_OUTPUT_DIR, "daily-run-package", "logs")
+        os.makedirs(log_dir, exist_ok=True)
+        with open(os.path.join(log_dir, "content-quality-audit.json"), "w", encoding="utf-8") as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+    if status == "PASS":
+        print(f"✅ Kiểm tra lặp nội dung (D-06): PASS — {len(news)} bài, 0 câu lặp, 0 câu mẫu, 0 lỗi '?;'")
+    else:
+        print(f"⚠️ Kiểm tra lặp nội dung (D-06): WARN — {len(repeated)} câu lặp, câu mẫu: {blocklist_hits}, '?;': {join_artifacts}")
+    return report
 
 
 def main():
@@ -693,40 +753,20 @@ def main():
         if not base_sapo.endswith("."):
             base_sapo += "."
 
-        # D-06 fix: Do not append generic repetitive boilerplate
-        enrich_sapo = ""
-        hl_lower = headline.lower()
-        # Only add domain-specific journalistic context if the base summary is very short (< 80 chars)
-        if len(base_sapo) < 80:
-            takeaway = sections_dict.get("sectionB_keyTakeaway", "") or sections_dict.get("sectionC_whyItMatters", "")
-            if takeaway and len(takeaway) > 20 and len(takeaway) < 160:
-                enrich_sapo = " " + takeaway.strip()
-                if not enrich_sapo.endswith("."):
-                    enrich_sapo += "."
+        # PHASE08B D-06: Sapo is strictly the source article summary.
+        # No generic or domain-template sentence is appended. If the source
+        # summary is short, the sapo stays short and honest.
+        final_sapo = base_sapo.strip()
 
-        final_sapo = (base_sapo + enrich_sapo).strip()
-
-        # Authentic distinct supporting quote (NEVER duplicate final_sapo or headline)
-        quote_cand = r.get("supportingQuote", "").strip()
-        if not quote_cand or quote_cand == summary or quote_cand == headline or quote_cand == final_sapo:
-            if "giá vàng" in hl_lower:
-                final_quote = "“Chênh lệch giá vàng trong nước và quốc tế duy trì mức cao tiếp tục tạo áp lực lên cân đối ngoại tệ và tâm lý của dòng tiền đầu tư tư nhân.”"
-            elif "co.op" in hl_lower:
-                final_quote = "“Mô hình O2O kết hợp siêu thị hiện hữu làm hub hoàn tất đơn hàng trực tuyến là bước đột phá khẳng định sức cạnh tranh của thương hiệu bán lẻ Việt.”"
-            elif "acb" in hl_lower:
-                final_quote = "“Kết quả định giá thương hiệu trên 1,4 tỷ USD phản ánh nền tảng hiệu quả hoạt động, chất lượng tài sản và tăng trưởng bền vững của ACB.”"
-            elif "thuế" in hl_lower or "hóa đơn" in hl_lower:
-                final_quote = "“Kỷ cương số hóa hóa đơn điện tử máy tính tiền là xu thế tất yếu giúp minh bạch hóa dòng tiền và bảo vệ uy tín kinh doanh của thương nhân.”"
-            elif "lãi suất" in hl_lower or "tiền gửi" in hl_lower:
-                final_quote = "“Khách hàng cá nhân ưu tiên lựa chọn các gói tiền gửi linh hoạt gắn liền với dịch vụ ngân hàng số và tiện ích thanh toán toàn diện.”"
-            elif "tỷ giá" in hl_lower or "usd" in hl_lower:
-                final_quote = "“Can thiệp ngoại hối định kỳ giúp hạ nhiệt căng thẳng tỷ giá và củng cố niềm tin vào sự ổn định của đồng nội tệ.”"
-            else:
-                final_quote = f"“{sections_dict.get('sectionG_practicalTakeaway') or 'Chủ động thích ứng với biến động chính sách và tăng tốc số hóa điểm chạm thanh toán là chìa khóa bảo vệ dòng tiền.'}”"
+        # PHASE08B D-06: Supporting quote must be authentic (from source data).
+        # No fabricated fallback quotes. Stored WITHOUT surrounding quote marks;
+        # the UI is responsible for typographic quotes.
+        quote_cand = str(r.get("supportingQuote", "") or "").strip().strip("“”\"'").strip()
+        if (not quote_cand or quote_cand == summary.strip() or quote_cand == headline.strip()
+                or quote_cand.rstrip(".") == final_sapo.rstrip(".")):
+            final_quote = ""
         else:
             final_quote = quote_cand
-            if not (final_quote.startswith("“") or final_quote.startswith('"')):
-                final_quote = f"“{final_quote}”"
 
         item = {
             "eventId": f"EVT-{idx+1:02d}",
@@ -1602,6 +1642,9 @@ def main():
         return obj
 
     edition_payload = sanitize_text_artifacts(edition_payload)
+
+    # PHASE08B D-06: Content repetition gate (pipeline-level quality check)
+    audit_content_repetition(edition_payload)
 
     # 13. Write to pilot-output/edition-data.json
     json_path = os.path.join(PILOT_OUTPUT_DIR, "edition-data.json")

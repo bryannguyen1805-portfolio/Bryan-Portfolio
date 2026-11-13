@@ -62,6 +62,19 @@ def main():
         except Exception as e:
             print(f"   ⚠️ Lưu ý khi gọi Live Orchestrator: {e}")
 
+    # PHASE08B: Engine parity guard — the workspace-root engine is the Source of Truth (Tier 2).
+    # If the package copy has drifted, re-sync it before running, so fixes are never lost.
+    root_engine = os.path.join(WORKSPACE_ROOT, "update_magspread_pilot_ui.py")
+    pkg_engine = os.path.join(PACKAGE_DIR, "update_magspread_pilot_ui.py")
+    if os.path.exists(root_engine) and os.path.abspath(root_engine) != os.path.abspath(pkg_engine):
+        import hashlib, shutil
+        def _sha(p):
+            with open(p, "rb") as fh:
+                return hashlib.sha256(fh.read()).hexdigest()
+        if not os.path.exists(pkg_engine) or _sha(root_engine) != _sha(pkg_engine):
+            shutil.copy2(root_engine, pkg_engine)
+            print("🔁 Đồng bộ Engine: update_magspread_pilot_ui.py (gốc → daily-run-package) để bảo đảm 1 nguồn mã duy nhất.")
+
     # Step 1: Execute update_magspread_pilot_ui.py
     print("📌 [BƯỚC 1/4] Kích hoạt Engine Phân tích & Xuất bản E-Magazine...")
     cmd = [sys.executable, "update_magspread_pilot_ui.py", "--date", today_str]

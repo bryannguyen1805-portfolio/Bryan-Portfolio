@@ -555,8 +555,10 @@ function clearNewsSearchAndFilter() {
   currentCategoryFilter = 'ALL';
   const searchInput = $('#newsSearchInput');
   if (searchInput) searchInput.value = '';
-  $$('.ms-filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.category === 'ALL');
+  $$('.ms-cat-btn').forEach(b => {
+    const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
+    b.classList.toggle('active', isAll);
+    b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
   });
   renderNewsDesk();
 }
@@ -1396,14 +1398,20 @@ function switchFintechTab(tabKey, targetSubId) {
     activePage.classList.add('active');
   }
 
-  // 2. Update desktop tab buttons
-  document.querySelectorAll('.ms-nav-tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
+  // 2. Update desktop tab buttons with strict ARIA tab pattern
+  const desktopTabs = Array.from(document.querySelectorAll('.ms-nav-tab-btn:not(#navTabArchive)'));
+  desktopTabs.forEach(btn => {
+    const isActive = btn.getAttribute('data-tab') === tabKey;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    btn.setAttribute('tabindex', isActive ? '0' : '-1');
   });
 
   // 3. Update mobile quick tabs
-  document.querySelectorAll('.ms-quick-tab').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
+  document.querySelectorAll('.ms-quick-tab:not(#quickTabArchive)').forEach(btn => {
+    const isActive = btn.getAttribute('data-tab') === tabKey;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
 
   // 4. Close mobile drawer if open
@@ -1448,6 +1456,38 @@ function initFintechTabs() {
       switchFintechTab(newHash);
     }
   });
+
+  // WAI-ARIA Keyboard Navigation for Tablist (ArrowLeft, ArrowRight, Home, End)
+  const tablist = document.querySelector('.ms-nav-menu[role="tablist"]');
+  if (tablist) {
+    tablist.addEventListener('keydown', (e) => {
+      const tabs = Array.from(tablist.querySelectorAll('.ms-nav-tab-btn:not(#navTabArchive)'));
+      const currentIndex = tabs.findIndex(t => t.classList.contains('active'));
+      if (currentIndex === -1) return;
+      let nextIndex = currentIndex;
+
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        nextIndex = (currentIndex + 1) % tabs.length;
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        nextIndex = 0;
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        nextIndex = tabs.length - 1;
+      }
+
+      if (nextIndex !== currentIndex) {
+        const nextTab = tabs[nextIndex];
+        const tabKey = nextTab.getAttribute('data-tab');
+        switchFintechTab(tabKey);
+        nextTab.focus();
+      }
+    });
+  }
 }
 
 function openMobileDrawer() {
@@ -1493,8 +1533,12 @@ function setupEventListeners() {
   // Category buttons in News Desk
   $$('.ms-cat-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      $$('.ms-cat-btn').forEach(b => b.classList.remove('active'));
+      $$('.ms-cat-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       currentCategoryFilter = btn.getAttribute('data-cat') || 'ALL';
       renderNewsDesk();
     });
