@@ -4562,6 +4562,29 @@ section[id], main [id] {
     box-sizing: border-box !important;
   }
 
+  .ms-learning-grid,
+  .ms-radar-grid,
+  .ms-watchlist-grid,
+  .ms-decision-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .ms-learning-card,
+  .ms-radar-card,
+  .ms-watchlist-card,
+  .ms-decision-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
   .ms-lead-meta,
   .ms-pulse-top,
   .ms-cover-badge-row,
