@@ -22,7 +22,14 @@ import json
 import subprocess
 from datetime import datetime
 
-PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if os.path.basename(CURRENT_DIR) == "daily-run-package":
+    PACKAGE_DIR = CURRENT_DIR
+    WORKSPACE_ROOT = os.path.abspath(os.path.join(PACKAGE_DIR, "..", ".."))
+else:
+    WORKSPACE_ROOT = CURRENT_DIR
+    PACKAGE_DIR = os.path.join(WORKSPACE_ROOT, "pilot-output", "daily-run-package")
+
 os.chdir(PACKAGE_DIR)
 
 def print_header(title):
@@ -34,7 +41,7 @@ def main():
     start_time = datetime.now()
     print_header(f"BRYAN FINTECH INTELLIGENCE — DAILY RUN [{start_time.strftime('%Y-%m-%d %H:%M:%S')}]")
 
-    workspace_root = os.path.abspath(os.path.join(PACKAGE_DIR, "..", ".."))
+    workspace_root = WORKSPACE_ROOT
     daily_editions_dir = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "06_DAILY_EDITIONS", "daily-editions")
     orch_script = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "02_SOURCE_CODE", "phase07_daily_runtime_orchestrator.py")
 
@@ -92,8 +99,8 @@ def main():
     print(f"   - Bài đinh trang nhất: {lead_headline}")
 
     # Step 3: Automatically Sync into Web Subpage (fintech-intelligence/)
-    web_portal_dir = os.path.abspath(os.path.join(PACKAGE_DIR, "..", "..", "fintech-intelligence"))
-    workspace_root = os.path.abspath(os.path.join(PACKAGE_DIR, "..", ".."))
+    web_portal_dir = os.path.join(WORKSPACE_ROOT, "fintech-intelligence")
+    workspace_root = WORKSPACE_ROOT
 
     # Auto cache-busting timestamp injection in index.html to eliminate CDN/browser caching
     html_path = os.path.join(PACKAGE_DIR, "index.html")
