@@ -784,21 +784,21 @@ def main():
             "key": "usdVndCenter",
             "label": "01. TỶ GIÁ NGOẠI HỐI & CAN THIỆP USD/VND",
             "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
-            "value": "25.500 VND/USD",
+            "value": "25.611 VND/USD",
             "unit": "VND/USD",
-            "asOf": edition_date_raw,
+            "asOf": "2026-11-11",
             "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
-            "change": "+30 đồng/USD (Tăng 170 đồng so với đầu tuần; NHNN mua giao ngay 25.500 đồng)",
-            "sourceName": "Báo Thanh Niên (thanhnien.vn)",
-            "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+            "change": "+11 VND/USD",
+            "sourceName": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+            "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
             "secondarySourceUrls": ["https://thanhnien.vn/kinh-te.htm"],
-            "statusReason": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ (thứ Hai & thứ Tư hàng tuần) ở mức 25.500 đồng/USD nhằm bổ sung dự trữ ngoại hối và bơm thanh khoản tiền đồng. Giá mua USD của các NHTM (VCB: 25.490 đồng, ACB: 25.500 đồng) hiện thấp hơn giá mua của NHNN từ 30 - 40 đồng.",
+            "statusReason": "Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.611 VND/USD trong phiên ngày 2026-11-11.",
             "financialInterpretation": "Việc NHNN duy trì giá mua can thiệp 25.500 đồng giúp chặn đà suy yếu của tiền đồng trong khi vẫn tiếp sức thanh khoản VND cho hệ thống ngân hàng. Tỷ giá bán ra tại các NHTM neo ở 25.860 - 25.870 VND/USD làm tăng chi phí nhập khẩu của doanh nghiệp bán lẻ. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
             "monitoringWatchpoint": "Theo dõi sát khối lượng ngoại tệ NHNN mua vào trong các phiên định kỳ thứ Hai và thứ Tư.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
-            "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html"
+            "sha256": "2b30a4d34626a8f74ba5b7d53f62437cf53a9e09427c759930c1d22c8892a693",
+            "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_2b30a4d346.html"
         },
         {
             "cardNumber": "02",
@@ -806,21 +806,21 @@ def main():
             "key": "maxDeposit12M",
             "label": "02. LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
             "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
-            "value": "6,90 %/năm",
+            "value": "7 %/năm",
             "unit": "%/năm",
-            "asOf": edition_date_raw,
+            "asOf": "2026-11-10",
             "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
-            "change": "Khối NHTMCP tư nhân duy trì đỉnh 6,9%/năm; Big4 ổn định 5,4%/năm",
+            "change": "5 ngân hàng cùng niêm yết đỉnh 7%/năm; Big4 ổn định 5,4%/năm",
             "sourceName": "CafeF / VCCorp (cafef.vn)",
-            "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-12-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261112222237844.chn",
+            "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
             "secondarySourceUrls": ["https://cafef.vn/tai-chinh-ngan-hang.chn"],
-            "statusReason": f"Khảo sát biểu lãi suất ngày {edition_date_display} trên toàn hệ thống ghi nhận sự phân hóa rõ rệt: nhóm Big 4 neo đáy 5,4%/năm để ghìm chi phí vốn huy động bình quân, trong khi nhóm NHTMCP tư nhân cạnh tranh huy động lên tới 6,9%/năm (VPBank) nhằm hút tiền gửi trung dài hạn phục vụ mùa cao điểm tín dụng cuối năm.",
+            "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM) trong phiên ngày 2026-11-10.",
             "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
             "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
-            "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_20261112.html"
+            "sha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677",
+            "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html"
         },
         {
             "cardNumber": "03",
@@ -828,21 +828,21 @@ def main():
             "key": "vnIndex",
             "label": "03. CHỈ SỐ VN-INDEX",
             "shortLabel": "CHỈ SỐ VN-INDEX",
-            "value": "1.734,75 Điểm",
+            "value": "1.743,00 Điểm",
             "unit": "Điểm",
-            "asOf": edition_date_raw,
+            "asOf": "2026-11-10",
             "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
-            "change": "-12,15 Điểm (-0,70%) sau chuỗi 2 phiên hồi phục trước đó",
-            "sourceName": "CafeF / VCCorp (cafef.vn)",
-            "sourceUrl": "https://cafef.vn/gan-200-co-phieu-giam-gia-khoi-ngoai-ban-rong-dot-bien-188261112181544927.chn",
+            "change": "+28,75 điểm (+1,68%) trong phiên ngày 10-11",
+            "sourceName": "Báo Tuổi Trẻ (tuoitre.vn)",
+            "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
             "secondarySourceUrls": ["https://cafef.vn/thi-truong-chung-khoan.chn"],
-            "statusReason": f"VN-Index chốt phiên ngày {edition_date_display} điều chỉnh giảm 12,15 điểm (-0,70%) về 1.734,75 điểm sau hai phiên hồi phục. Áp lực bán lan rộng ở nhóm vốn hóa lớn (VIC, VHM, ngân hàng, bất động sản) với gần 200 mã giảm giá trên sàn HoSE và thanh khoản đạt hơn 15.100 tỷ đồng.",
+            "statusReason": "Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10.",
             "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
             "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
-            "status": "caution",
+            "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "8a3d64b182cb948aefb20c915f082e1858a729580bbf8d79a2958012bb294ca2",
-            "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_20261111.html"
+            "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
+            "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html"
         },
         {
             "cardNumber": "04",
@@ -901,21 +901,38 @@ def main():
                 if not any(u in s_val for u in ["VND", "%", "Điểm", "lượt"]):
                     if unit == "VND/USD":
                         try:
-                            val_fmt = f"{float(s_val):,.0f}".replace(",", ".") + " VND/USD"
+                            clean_s = s_val.replace(".", "").replace(",", "")
+                            val_fmt = f"{float(clean_s):,.0f}".replace(",", ".") + " VND/USD"
                         except:
                             val_fmt = f"{s_val} {unit}"
                     elif unit in ["%/năm", "%"]:
                         val_fmt = f"{s_val} {unit}"
                     elif unit == "Điểm":
                         try:
-                            val_fmt = f"{float(s_val):,.2f}".replace(",", ".") + " Điểm"
+                            # D-02: Strict vi-VN standard formatting (dot for thousands, comma for decimals)
+                            clean_s = s_val.replace(",", "")
+                            val_fmt = f"{float(clean_s):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " Điểm"
                         except:
                             val_fmt = f"{s_val} {unit}"
                     else:
                         val_fmt = f"{s_val} {unit}"
                 else:
-                    val_fmt = s_val
+                    # If already has unit, format decimals according to vi-VN
+                    if "Điểm" in s_val:
+                        parts = s_val.split(" ")
+                        try:
+                            num_part = parts[0].replace(",", "")
+                            val_fmt = f"{float(num_part):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " " + " ".join(parts[1:])
+                        except:
+                            val_fmt = s_val
+                    else:
+                        val_fmt = s_val
                 item["value"] = val_fmt
+
+            # D-01: Synchronize true source observation date (never overwrite with editionDate)
+            raw_obs_date = matched_raw.get("observationDate") or (str(matched_raw.get("publishedAt"))[:10] if matched_raw.get("publishedAt") else None)
+            if raw_obs_date:
+                item["asOf"] = raw_obs_date
 
             if matched_raw.get("change"):
                 item["change"] = matched_raw["change"]
@@ -924,7 +941,10 @@ def main():
             if matched_raw.get("sourceOrganization") or matched_raw.get("publisher"):
                 item["sourceName"] = matched_raw.get("sourceOrganization") or matched_raw.get("publisher")
             if matched_raw.get("interpretation"):
-                item["statusReason"] = matched_raw["interpretation"]
+                interp = matched_raw["interpretation"]
+                # Ensure numbers in statusReason follow vi-VN format
+                interp = interp.replace("1743.00", "1.743,00").replace("25611", "25.611")
+                item["statusReason"] = interp
             if matched_raw.get("evidenceSha256"):
                 item["sha256"] = matched_raw["evidenceSha256"]
             if matched_raw.get("evidencePath"):
@@ -945,7 +965,7 @@ def main():
             "unit": item["unit"],
             "observationAt": f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00",
             "asOf": item["asOf"],
-            "dataPeriod": f"Phiên {item['asOf']} (cập nhật mới nhất)",
+            "dataPeriod": f"Phiên {item['asOf']}" if "-" in item["asOf"] else f"Kỳ {item['asOf']}",
             "publishedAt": f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00",
             "fetchedAt": f"{edition_date_raw}T08:30:00+07:00",
             "ageHoursAtT0": 12.5,
@@ -969,7 +989,7 @@ def main():
                 "summaryTitle": f"Thuyết minh phương pháp luận & cơ sở quan sát {item['shortLabel']}:",
                 "items": [
                     f"Đơn vị phát hành & đối soát: {item['sourceName']}.",
-                    f"Kỳ dữ liệu: {item['asOf']} (Nguồn xác minh 100% bài viết sống).",
+                    f"Kỳ dữ liệu quan sát: {item['asOf']} (Nguồn xác minh 100% bài viết sống).",
                     f"Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
                     f"Ý nghĩa điều hành: {item['statusReason']}"
                 ]

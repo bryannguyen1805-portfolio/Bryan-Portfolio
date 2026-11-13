@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./fintech-favicon.png">
   <link rel="apple-touch-icon" href="./fintech-favicon.png">
-  <link rel="stylesheet" href="./magspread.css?v=1794585030">
+  <link rel="stylesheet" href="./magspread.css?v=1794589106">
 </head>
 <body>
   <!-- ======================================================================
@@ -63,7 +63,7 @@
       <div class="ms-masthead-topbar">
         <div class="ms-masthead-brand-group">
           <a href="../index.html" class="ms-back-link" title="Quay về Bryan Portfolio">
-            <img src="./bnews-logo-light.png" id="headerBryanLogo" alt="BRYAN NEWS | FINTECH INTELLIGENCE" class="nav-logo-img" style="height:36px; width:auto; object-fit:contain;" loading="eager" fetchpriority="high">
+            <img src="./bnews-logo-light.png" id="headerBryanLogo" alt="BRYAN NEWS | FINTECH INTELLIGENCE" class="nav-logo-img" width="119" height="36" style="height:36px; width:119px; aspect-ratio:1024/309; object-fit:contain;" loading="eager" fetchpriority="high">
             <span style="margin-left:6px; font-size:11.5px; font-weight:700;">← VỀ BRYAN PORTFOLIO</span>
           </a>
           <span style="color:var(--ms-border); margin:0 4px;">|</span>
@@ -130,8 +130,8 @@
           </button>
         </li>
 
-        <!-- Tab 05: LƯU TRỮ -->
-        <li class="ms-nav-group" role="none">
+        <!-- Tab 05: LƯU TRỮ (Ẩn khỏi UI theo D-03; dữ liệu backend được bảo toàn 100%) -->
+        <li class="ms-nav-group" role="none" style="display:none !important;" id="navGroupArchive">
           <button class="ms-nav-tab-btn" role="tab" id="navTabArchive" data-tab="archive" onclick="switchFintechTab('archive')">
             <span class="ms-nav-num">05.</span> LƯU TRỮ
           </button>
@@ -154,7 +154,7 @@
       <button class="ms-quick-tab" data-tab="market" onclick="switchFintechTab('market')">02. Thị trường &amp; Tin</button>
       <button class="ms-quick-tab" data-tab="analysis" onclick="switchFintechTab('analysis')">03. Phân tích</button>
       <button class="ms-quick-tab" data-tab="b2b" onclick="switchFintechTab('b2b')">04. Cơ hội B2B</button>
-      <button class="ms-quick-tab" data-tab="archive" onclick="switchFintechTab('archive')">05. Lưu trữ</button>
+      <button class="ms-quick-tab" data-tab="archive" style="display:none !important;" id="quickTabArchive" onclick="switchFintechTab('archive')">05. Lưu trữ</button>
     </div>
   </div>
 
@@ -185,7 +185,7 @@
           <span>04. CƠ HỘI B2B &amp; PAYOO</span>
         </button>
       </div>
-      <div class="ms-accordion-item">
+      <div class="ms-accordion-item" style="display:none !important;" id="drawerItemArchive">
         <button class="ms-accordion-header" onclick="switchFintechTab('archive'); closeMobileDrawer();">
           <span>05. LƯU TRỮ ẤN BẢN</span>
         </button>
@@ -438,8 +438,8 @@
       </section>
     </div>
 
-    <!-- PAGE 05: LƯU TRỮ -->
-    <div id="page-archive" class="ms-page-section" role="tabpanel">
+    <!-- PAGE 05: LƯU TRỮ (Ẩn khỏi giao diện người dùng theo D-03; dữ liệu backend bảo toàn 100%) -->
+    <div id="page-archive" class="ms-page-section" role="tabpanel" style="display:none !important;">
       <section class="ms-archive-section" id="archiveSection">
         <div class="ms-container">
           <div class="ms-section-header">
@@ -477,13 +477,13 @@
   <!-- ======================================================================
        SECTION 10: EDITORIAL FOOTER
        ====================================================================== -->
-    <footer class="ms-footer" id="siteFooter">
+  <footer class="ms-footer" id="siteFooter">
     <div class="ms-container">
       <div class="ms-footer-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:32px; padding:36px 0 28px 0;">
         <!-- Col 1: Brand & Bio -->
         <div class="ms-footer-col">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-            <img src="./bnews-logo-light.png" id="footerBryanLogo" alt="BRYAN NEWS | FINTECH INTELLIGENCE" style="height:38px; width:auto; object-fit:contain;" loading="lazy">
+            <img src="./bnews-logo-light.png" id="footerBryanLogo" alt="BRYAN NEWS | FINTECH INTELLIGENCE" width="126" height="38" style="height:38px; width:126px; aspect-ratio:1024/309; object-fit:contain;" loading="lazy">
           </div>
           <p style="font-size:0.8125rem; line-height:1.65; color:var(--ms-text-secondary); margin:0 0 10px 0;">
             <strong>Nguyễn Huỳnh Quang Trí (Bryan)</strong> — Chuyên gia Phát triển Doanh nghiệp B2B &amp; Hạ tầng FinTech tại Payoo. Nền tảng nghiên cứu tài chính và kinh tế số cá nhân áp dụng chuẩn thiết kế MagSpread.
@@ -743,7 +743,7 @@
     </button>
   </div>
 
-  <script src="./edition-data.js?v=1794585030"></script>
-  <script src="./magspread.js?v=1794585030"></script>
+  <script src="./edition-data.js?v=1794589106"></script>
+  <script src="./magspread.js?v=1794589106"></script>
 </body>
 </html>

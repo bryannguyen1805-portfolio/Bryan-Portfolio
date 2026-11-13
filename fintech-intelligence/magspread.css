@@ -4459,12 +4459,24 @@ section[id], main [id] {
 /* ==========================================================================
    V2.2.4 UNIFIED CATEGORY PAGE TOP ALIGNMENT & LOGO SIZING
    ========================================================================== */
-#headerBryanLogo,
-#footerBryanLogo {
-  height: 38px !important;
-  width: auto !important;
-  max-width: 180px !important;
+/* ==========================================================================
+   PHASE 08A: CRITICAL REMEDIATION (D-04 CLS & D-05 ZERO MOBILE OVERFLOW)
+   ========================================================================== */
+#headerBryanLogo {
+  width: 119px !important;
+  height: 36px !important;
+  aspect-ratio: 1024 / 309 !important;
   object-fit: contain !important;
+  contain-intrinsic-size: 119px 36px !important;
+  display: block !important;
+}
+
+#footerBryanLogo {
+  width: 126px !important;
+  height: 38px !important;
+  aspect-ratio: 1024 / 309 !important;
+  object-fit: contain !important;
+  contain-intrinsic-size: 126px 38px !important;
   display: block !important;
 }
 
@@ -4487,6 +4499,8 @@ section[id], main [id] {
 #page-archive #archiveSection .ms-section-header {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  min-height: 48px !important;
+  align-items: flex-end !important;
 }
 
 .ms-page-section > section:first-of-type .ms-section-kicker,
@@ -4496,6 +4510,11 @@ section[id], main [id] {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
   .ms-page-section > section:first-of-type,
   #page-today > .ms-cover-story,
   #page-market > .ms-market-pulse-section,
@@ -4503,5 +4522,59 @@ section[id], main [id] {
   #page-b2b > .ms-decision-section,
   #page-archive > .ms-archive-section {
     padding-top: 20px !important;
+  }
+
+  .ms-news-editorial-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  #newsLeadContainer,
+  #newsSubContainer {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ms-news-lead-story,
+  .ms-subfeature-card,
+  .ms-news-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .ms-news-subfeatures {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ms-lead-meta,
+  .ms-pulse-top,
+  .ms-cover-badge-row,
+  .ms-chain-meta,
+  .ms-news-card-footer,
+  .ms-subfeature-card .ms-subfeature-meta {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .ms-lead-title,
+  .ms-subfeature-title,
+  .ms-news-card-title,
+  .ms-lead-quote,
+  .ms-lead-summary {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
   }
 }

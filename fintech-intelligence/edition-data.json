@@ -29,10 +29,10 @@
       "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
       "change": "+11 VND/USD",
       "unit": "VND/USD",
-      "observationAt": "2026-11-13T08:30:00+07:00",
-      "asOf": "2026-11-13",
-      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "observationAt": "2026-11-11T08:30:00+07:00",
+      "asOf": "2026-11-11",
+      "dataPeriod": "Phiên 2026-11-11",
+      "publishedAt": "2026-11-11T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
@@ -57,7 +57,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
           "Đơn vị phát hành & đối soát: Tạp chí Kinh tế Việt Nam (VnEconomy).",
-          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-11 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25611 VND/USD cho ngày 2026-11-11."
         ]
@@ -73,12 +73,12 @@
       "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
       "value": "7 %/năm",
       "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
-      "change": "Khối NHTMCP tư nhân duy trì đỉnh 6,9%/năm; Big4 ổn định 5,4%/năm",
+      "change": "5 ngân hàng cùng niêm yết đỉnh 7%/năm; Big4 ổn định 5,4%/năm",
       "unit": "%/năm",
-      "observationAt": "2026-11-13T08:30:00+07:00",
-      "asOf": "2026-11-13",
-      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "observationAt": "2026-11-10T08:30:00+07:00",
+      "asOf": "2026-11-10",
+      "dataPeriod": "Phiên 2026-11-10",
+      "publishedAt": "2026-11-10T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp",
@@ -103,7 +103,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM)."
         ]
@@ -117,14 +117,14 @@
       "tierNumber": 1,
       "label": "03. CHỈ SỐ VN-INDEX",
       "shortLabel": "CHỈ SỐ VN-INDEX",
-      "value": "1.743.00 Điểm",
+      "value": "1.743,00 Điểm",
       "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
       "change": "+28.75 điểm",
       "unit": "Điểm",
-      "observationAt": "2026-11-13T08:30:00+07:00",
-      "asOf": "2026-11-13",
-      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "observationAt": "2026-11-10T08:30:00+07:00",
+      "asOf": "2026-11-10",
+      "dataPeriod": "Phiên 2026-11-10",
+      "publishedAt": "2026-11-10T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Tuổi Trẻ",
@@ -134,9 +134,9 @@
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
       "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
-      "status": "caution",
+      "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10.",
+      "statusReason": "Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10.",
       "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
       "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
       "discoveryAudit": {
@@ -149,9 +149,9 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
           "Đơn vị phát hành & đối soát: Báo Tuổi Trẻ.",
-          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10."
+          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10."
         ]
       }
     },
@@ -169,7 +169,7 @@
       "unit": "%",
       "observationAt": "2026-10-31T23:59:59+07:00",
       "asOf": "10 tháng 2026",
-      "dataPeriod": "Phiên 10 tháng 2026 (cập nhật mới nhất)",
+      "dataPeriod": "Kỳ 10 tháng 2026",
       "publishedAt": "2026-10-31T23:59:59+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
@@ -195,7 +195,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM:",
         "items": [
           "Đơn vị phát hành & đối soát: Báo Thanh Niên (thanhnien.vn).",
-          "Kỳ dữ liệu: 10 tháng 2026 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 10 tháng 2026 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Lượng khách quốc tế ghi nhận mức tăng trưởng bứt phá gần 37% sau 10 tháng năm 2026 nhờ chính sách thị thực thuận lợi và các chiến dịch quảng bá điểm đến quốc tế. Ngành du lịch và các địa phương trọng điểm (TP.HCM, Đà Nẵng, Phú Quốc) tăng tốc chuẩn hóa hệ thống sản phẩm và hạ tầng đón khách."
         ]

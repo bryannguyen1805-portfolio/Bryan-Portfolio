@@ -284,6 +284,7 @@ function renderPulseCard(m) {
   const badgeClass = m.verificationStatus === '72H_NOT_VERIFIED' ? 'ms-badge-warning' : (st === 'positive' ? 'ms-badge-success' : (st === 'negative' ? 'ms-badge-error' : 'ms-badge-primary'));
 
   const shortContext = m.referenceValue ? m.referenceValue : (m.note || '');
+  const asOfLabel = (m.asOf && m.asOf.includes('tháng')) ? `Kỳ: ${escapeHtml(m.asOf)}` : `Phiên: ${escapeHtml(m.asOf)}`;
 
   return `
     <article class="ms-pulse-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')">
@@ -293,7 +294,7 @@ function renderPulseCard(m) {
           <span class="ms-badge ${badgeClass}" style="font-size:9px; padding:2px 6px;">${escapeHtml(badgeText)}</span>
         </div>
         <div class="ms-pulse-value">${escapeHtml(m.value)}</div>
-        <div class="ms-pulse-asof">Phiên: ${escapeHtml(m.asOf)}</div>
+        <div class="ms-pulse-asof">${asOfLabel}</div>
         <div class="ms-pulse-context">${escapeHtml(shortContext)}</div>
       </div>
       <div class="ms-pulse-open-btn">
@@ -1313,14 +1314,14 @@ function openSheetsSchemaModal(editionId) {
 
 // ─── TAB NAVIGATION CONTROLLER (BRYAN PORTFOLIO MULTI-PAGE PARITY) ───
 function switchFintechTab(tabKey, targetSubId) {
-  if (!tabKey) tabKey = 'today';
+  // D-03: Redirect any legacy #archive access cleanly to #today
+  if (!tabKey || tabKey === 'archive') tabKey = 'today';
   
   const pages = {
     today: 'page-today',
     market: 'page-market',
     analysis: 'page-analysis',
-    b2b: 'page-b2b',
-    archive: 'page-archive'
+    b2b: 'page-b2b'
   };
   
   const targetPageId = pages[tabKey] || 'page-today';
@@ -1369,8 +1370,10 @@ function switchFintechTab(tabKey, targetSubId) {
 
 function initFintechTabs() {
   const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-  const validTabs = ['today', 'market', 'analysis', 'b2b', 'archive'];
-  if (validTabs.includes(hash)) {
+  const validTabs = ['today', 'market', 'analysis', 'b2b'];
+  if (hash === 'archive') {
+    switchFintechTab('today');
+  } else if (validTabs.includes(hash)) {
     switchFintechTab(hash);
   } else {
     switchFintechTab('today');
@@ -1378,7 +1381,9 @@ function initFintechTabs() {
 
   window.addEventListener('hashchange', () => {
     const newHash = (window.location.hash || '').replace('#', '').toLowerCase();
-    if (validTabs.includes(newHash)) {
+    if (newHash === 'archive') {
+      switchFintechTab('today');
+    } else if (validTabs.includes(newHash)) {
       switchFintechTab(newHash);
     }
   });
