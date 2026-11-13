@@ -870,33 +870,32 @@ def main():
         }
     ]
 
-    # Dynamic synchronization from live daily market-pulse.json if available
+    # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
     raw_indicators = mp_raw.get("indicators", []) if isinstance(mp_raw, dict) else []
-    raw_ind_map = {ind.get("indicatorId"): ind for ind in raw_indicators if isinstance(ind, dict)}
 
     for item in CORE_4_DEFS:
-        matched_raw = raw_ind_map.get(item["indicatorId"])
-        if not matched_raw:
-            for ind in raw_indicators:
-                if not isinstance(ind, dict):
-                    continue
-                name = (ind.get("indicatorName") or "").lower()
-                if item["key"] == "usdVndCenter" and ("tỷ giá" in name or "usd" in name):
-                    matched_raw = ind
-                    break
-                elif item["key"] == "maxDeposit12M" and ("lãi suất" in name or "deposit" in name):
-                    matched_raw = ind
-                    break
-                elif item["key"] == "vnIndex" and ("vn-index" in name or "chứng khoán" in name):
-                    matched_raw = ind
-                    break
-                elif item["key"] == "inboundTourists" and ("du lịch" in name or "khách" in name or "vietqr" in name):
-                    matched_raw = ind
-                    break
+        matched_raw = None
+        for ind in raw_indicators:
+            if not isinstance(ind, dict):
+                continue
+            name = (ind.get("indicatorName") or "").lower()
+            r_unit = (ind.get("unit") or "").lower()
+            if item["key"] == "usdVndCenter" and ("tỷ giá" in name or "usd" in name) and "vnd" in r_unit:
+                matched_raw = ind
+                break
+            elif item["key"] == "maxDeposit12M" and ("tiền gửi" in name or "12t" in name or "huy động" in name) and "%" in r_unit:
+                matched_raw = ind
+                break
+            elif item["key"] == "vnIndex" and ("vn-index" in name or "chứng khoán" in name) and "điểm" in r_unit:
+                matched_raw = ind
+                break
+            elif item["key"] == "inboundTourists" and ("du lịch" in name or "khách quốc tế" in name) and "%" in r_unit:
+                matched_raw = ind
+                break
 
         if matched_raw:
             val = matched_raw.get("actualValue") or matched_raw.get("currentValue")
-            unit = matched_raw.get("unit") or item["unit"]
+            unit = item["unit"]
             if val is not None and str(val).strip():
                 s_val = str(val).strip()
                 if not any(u in s_val for u in ["VND", "%", "Điểm", "lượt"]):
@@ -920,10 +919,6 @@ def main():
 
             if matched_raw.get("change"):
                 item["change"] = matched_raw["change"]
-            if matched_raw.get("observationDate"):
-                item["asOf"] = matched_raw["observationDate"]
-            elif matched_raw.get("publishedAt"):
-                item["asOf"] = matched_raw["publishedAt"][:10]
             if matched_raw.get("sourceUrl") and matched_raw["sourceUrl"].startswith("http"):
                 item["sourceUrl"] = matched_raw["sourceUrl"]
             if matched_raw.get("sourceOrganization") or matched_raw.get("publisher"):
@@ -1444,7 +1439,7 @@ def main():
     # 12. Assemble Complete Editorial Sections
     editorial_sections = {
         "sec01_masthead": {
-            "portalTitle": "Bryan FinTech Intelligence",
+            "portalTitle": "BRYAN NEWS | FINTECH INTELLIGENCE",
             "tagline": "Tạp chí & Cổng thông tin thị trường tài chính, thanh toán số, ngân hàng và cơ hội B2B — Phong cách tạp chí biên tập MagSpread cao cấp.",
             "editionDateDisplay": f"Phiên ngày {edition_date_display} — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
             "bryanPortfolioUrl": "../index.html",
@@ -1516,7 +1511,7 @@ def main():
             "sectionSubtitle": "Lịch sử dữ liệu và truy vấn các ấn bản đã xuất bản"
         },
         "sec10_footer": {
-            "copyright": "© 2026 Bryan FinTech Intelligence. Bản quyền thuộc về Bryan Nguyen.",
+            "copyright": "© 2026 BRYAN NEWS | FINTECH INTELLIGENCE. Bản quyền thuộc về Bryan Nguyen.",
             "disclaimer": "Báo cáo phân tích phục vụ mục đích thông tin chuyên ngành, không cấu thành lời khuyên đầu tư tài chính trực tiếp."
         }
     }
@@ -1547,7 +1542,7 @@ def main():
         except Exception:
             ed_number_val = 27
 
-    edition_number_display = f"ẤN BẢN SỐ {ed_number_val} · 25 SỰ KIỆN XÁC MINH (0–24H: {count_0_24}/25 · {ratio_0_24:.1f}%)"
+    edition_number_display = f"ẤN BẢN SỐ {ed_number_val}"
 
     edition_payload = {
         "editionId": edition_id,
