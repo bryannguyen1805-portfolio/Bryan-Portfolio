@@ -94,6 +94,19 @@ def main():
     # Step 3: Automatically Sync into Web Subpage (fintech-intelligence/)
     web_portal_dir = os.path.abspath(os.path.join(PACKAGE_DIR, "..", "..", "fintech-intelligence"))
     workspace_root = os.path.abspath(os.path.join(PACKAGE_DIR, "..", ".."))
+
+    # Auto cache-busting timestamp injection in index.html to eliminate CDN/browser caching
+    html_path = os.path.join(PACKAGE_DIR, "index.html")
+    if os.path.exists(html_path):
+        import re
+        ts = int(datetime.now().timestamp())
+        with open(html_path, "r", encoding="utf-8") as f:
+            h_text = f.read()
+        h_text = re.sub(r'edition-data\.js(\?v=[^"]*)?', f'edition-data.js?v={ts}', h_text)
+        h_text = re.sub(r'magspread\.js(\?v=[^"]*)?', f'magspread.js?v={ts}', h_text)
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(h_text)
+
     if os.path.exists(web_portal_dir):
         import shutil
         for fn in ["index.html", "edition-data.js", "edition-data.json", "magspread.css", "magspread.js", "zalo-icon.svg"]:
