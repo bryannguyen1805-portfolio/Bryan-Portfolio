@@ -231,7 +231,7 @@ function renderCoverStory() {
 
   if (quoteEl) {
     quoteEl.innerHTML = `
-      <div class="ms-quote-text">“${escapeHtml(ct.editorialPullQuote || '')}”</div>
+      <div class="ms-quote-text">“${escapeHtml(ct.editorialPullQuote ? ct.editorialPullQuote.replace(/^[“”"\']+|[“”"\']+$/g, '') : '')}”</div>
       ${ct.editorialSynthesis ? `<p style="font-size:0.8125rem; line-height:1.55; margin:8px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
       <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.6875rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN FINTECH INTELLIGENCE</div>
     `;
