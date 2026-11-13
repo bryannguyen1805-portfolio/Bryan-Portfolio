@@ -1557,11 +1557,22 @@ function renderDecisionBrief() {
     const meaning = sig.whatItMeansForMyWork || sig.whyItMatters || '';
     const meaningSnippet = meaning.length > 160 ? meaning.slice(0, 160) + '...' : meaning;
     
-    let categoryBadge = 'CHIẾN LƯỢC ĐIỀU HÀNH';
-    if (idx === 0) categoryBadge = 'BẢO MẬT & CHỐNG GIAN LẬN';
-    else if (idx === 1) categoryBadge = 'HẠ TẦNG AN NINH DỮ LIỆU';
-    else if (idx === 2) categoryBadge = 'TUÂN THỦ THUẾ & ĐIỂM BÁN';
-    else if (idx === 3) categoryBadge = 'DÒNG TIỀN GIÁO DỤC TỰ CHỦ';
+    let categoryBadge = sig.categoryBadge || '';
+    if (!categoryBadge) {
+      if (sig.decisionCategory === 'COMMERCIAL_OPPORTUNITY' || /du lịch|khách sạn|quốc tế/i.test(sig.signalTitle)) {
+        categoryBadge = 'DU LỊCH & THANH TOÁN QUỐC TẾ';
+      } else if (sig.decisionCategory === 'MARKET_OPPORTUNITY' || /sme|hộ kinh doanh|chuỗi/i.test(sig.signalTitle)) {
+        categoryBadge = 'HỘ KINH DOANH & CHUỖI SME';
+      } else if (sig.decisionCategory === 'MONITORING_REQUIRED' || /ngoại hối|lãi suất|thanh khoản/i.test(sig.signalTitle)) {
+        categoryBadge = 'NGOẠI HỐI & LÃI SUẤT ĐIỀU HÀNH';
+      } else if (sig.decisionCategory === 'STRATEGIC_SIGNAL' || /xe điện|bán lẻ|điện máy/i.test(sig.signalTitle)) {
+        categoryBadge = 'BÁN LẺ GIÁ TRỊ CAO & XE ĐIỆN';
+      } else if (sig.decisionCategory) {
+        categoryBadge = sig.decisionCategory.replace(/_/g, ' ');
+      } else {
+        categoryBadge = 'CHIẾN LƯỢC ĐIỀU HÀNH';
+      }
+    }
 
     const priorityBadge = sig.confidenceLevel === 'HIGH_CONFIDENCE_GROUNDED'
       ? '<span class="ms-badge ms-badge-rose" style="font-size:9px;">ƯU TIÊN CAO</span>'
@@ -1754,7 +1765,8 @@ function renderWatchlist() {
   container.innerHTML = watchlist.map((item, idx) => {
     const wId = item.watchlistId || `WL-0${idx + 1}`;
     const indicator = item.category || item.sourceOrIndicator || 'Chỉ báo trọng yếu';
-    const title = item.itemTitle || item.signalTracked || 'Biến số theo dõi';
+    let title = item.itemTitle || item.signalTracked || 'Biến số theo dõi';
+    title = title.replace(new RegExp('^' + wId + '[:\\s\\-\\.]*', 'i'), '');
     const desc = item.description || item.conditionChangingAssessment || '';
     const impact = item.impactLevel || 'HIGH';
     const action = item.possibleAction || (impact === 'HIGH' ? 'Kích hoạt kịch bản điều hòa thanh khoản & dòng tiền' : 'Theo dõi biến động phiên tiếp theo');
