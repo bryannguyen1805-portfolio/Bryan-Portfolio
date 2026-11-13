@@ -1348,6 +1348,10 @@ small, .ms-small {
   line-height: 1.6;
   color: var(--ms-text-secondary);
   margin-bottom: var(--space-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .ms-news-card-footer {

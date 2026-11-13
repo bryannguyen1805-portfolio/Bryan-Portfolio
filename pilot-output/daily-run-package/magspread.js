@@ -521,9 +521,9 @@ function renderNewsCardHtml(lead, isLead) {
           ${escapeHtml(lead.pageTitle || lead.title)}
         </h2>
         <p class="ms-lead-summary">${escapeHtml(lead.summary || lead.supportingQuote || '')}</p>
-        ${lead.supportingQuote ? `
+        ${lead.supportingQuote && lead.supportingQuote.trim() !== (lead.summary || '').trim() ? `
           <div class="ms-lead-quote">
-            “${escapeHtml(lead.supportingQuote)}”
+            ${lead.supportingQuote.startsWith('“') ? escapeHtml(lead.supportingQuote) : `“${escapeHtml(lead.supportingQuote)}”`}
           </div>
         ` : ''}
       </div>
@@ -555,8 +555,8 @@ function renderSubfeatureCardHtml(item) {
         <h3 class="ms-subfeature-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
           ${escapeHtml(item.pageTitle || item.title)}
         </h3>
-        <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px;">
-          ${escapeHtml((item.summary || item.supportingQuote || '').slice(0, 160))}...
+        <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
+          ${escapeHtml(item.summary || item.supportingQuote || '')}
         </p>
       </div>
       <div class="ms-news-card-footer">
@@ -589,7 +589,7 @@ function renderStandardNewsCardHtml(item) {
         <h3 class="ms-news-card-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
           ${escapeHtml(item.pageTitle || item.title)}
         </h3>
-        <p class="ms-news-card-summary">${escapeHtml((item.summary || item.supportingQuote || '').slice(0, 150))}...</p>
+        <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
       </div>
       <div class="ms-news-card-footer">
         <span>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
