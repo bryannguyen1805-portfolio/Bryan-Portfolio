@@ -221,16 +221,16 @@ window.EDITION_DATA = {
     "sec02_coverStory": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
       "editorialHeadline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên Báo Thanh Niên (13/11/2026 09:06 | Nguồn gốc: Báo Thanh Niên (2026-11-13T09:06:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên Báo Thanh Niên (13/11/2026 09:06 | Nguồn gốc: Báo Thanh Niên (2026-11-13T09:06:00+07:00))",
-      "executiveSummary": "Giá vàng trong nước tiếp tục đi xuống nhưng đà giảm ít hơn thế giới. Mức chênh lệch kỷ lục giữa giá vàng miếng trong nước và thế giới tiếp tục phản ánh áp lực nguồn cung và tâm lý phòng thủ thận trọng của dòng vốn thị trường. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
+      "executiveSummary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
       "leadArticle": {
         "headline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-        "eventId": "EVT-01",
-        "sourceName": "Báo Thanh Niên",
-        "publishedAt": "13/11/2026 09:06 | Nguồn gốc: Báo Thanh Niên (2026-11-13T09:06:00+07:00)",
-        "sourceUrl": "https://thanhnien.vn/gia-vang-hom-nay-13112026-sjc-giam-1-trieu-van-cao-hon-the-gioi-tren-17-trieu-185261113071026369.htm",
-        "summary": "Giá vàng trong nước tiếp tục đi xuống nhưng đà giảm ít hơn thế giới. Mức chênh lệch kỷ lục giữa giá vàng miếng trong nước và thế giới tiếp tục phản ánh áp lực nguồn cung và tâm lý phòng thủ thận trọng của dòng vốn thị trường. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới."
+        "eventId": "EVT-10",
+        "sourceName": "CafeF / VCCorp",
+        "publishedAt": "13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00)",
+        "sourceUrl": "https://cafef.vn/ngay-13-11-gui-duoi-1-ty-dong-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261112234438454.chn",
+        "summary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới."
       },
       "editorialPullQuote": "“Định giá thương hiệu vượt 1,4 tỷ USD của các NHTM đầu ngành phản ánh bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, an toàn vốn và tiên phong số hóa điểm chạm khách hàng.”",
       "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu.",
@@ -243,9 +243,9 @@ window.EDITION_DATA = {
     "coreThesis": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
       "editorialHeadline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên Báo Thanh Niên (13/11/2026 09:06 | Nguồn gốc: Báo Thanh Niên (2026-11-13T09:06:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên Báo Thanh Niên (13/11/2026 09:06 | Nguồn gốc: Báo Thanh Niên (2026-11-13T09:06:00+07:00))",
-      "executiveSummary": "Giá vàng trong nước tiếp tục đi xuống nhưng đà giảm ít hơn thế giới. Mức chênh lệch kỷ lục giữa giá vàng miếng trong nước và thế giới tiếp tục phản ánh áp lực nguồn cung và tâm lý phòng thủ thận trọng của dòng vốn thị trường. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
+      "executiveSummary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
       "whyItMatters": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
       "supportingInsights": [],
       "editorialPullQuote": "“Định giá thương hiệu vượt 1,4 tỷ USD của các NHTM đầu ngành phản ánh bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, an toàn vốn và tiên phong số hóa điểm chạm khách hàng.”",
