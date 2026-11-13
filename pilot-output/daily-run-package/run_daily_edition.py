@@ -41,8 +41,9 @@ def main():
     today_str = start_time.strftime("%Y-%m-%d")
     today_edition_dir = os.path.join(daily_editions_dir, today_str)
 
-    # Step 0: Check if today's edition exists; if not, trigger Live Intelligence Orchestrator
-    if not os.path.exists(today_edition_dir) and os.path.exists(orch_script):
+    # Step 0: Check if today's edition exists and has completed verified-news.json; if not, trigger Live Intelligence Orchestrator
+    has_completed_edition = os.path.exists(today_edition_dir) and os.path.exists(os.path.join(today_edition_dir, "verified-news.json"))
+    if not has_completed_edition and os.path.exists(orch_script):
         print(f"📌 [BƯỚC 0/4] Phát hiện ấn bản ngày mới ({today_str}). Kích hoạt Live Runtime Orchestrator...")
         orch_cmd = [sys.executable, orch_script, "--mode", "LIVE", "--date", today_str]
         try:
