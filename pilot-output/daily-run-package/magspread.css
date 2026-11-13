@@ -4858,3 +4858,111 @@ html[data-theme="dark"] :where(a, button, input, select, textarea, [tabindex]):f
     padding: 8px 12px !important;
   }
 }
+
+
+/* ─── ROUND 2 POLISH: STICKY NAV, ICON TOGGLE & MOBILE ALIGNMENT ─── */
+
+/* Desktop hide utility */
+@media (min-width: 1024px) {
+  .ms-hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Icon-only Theme Toggle Button */
+.ms-theme-toggle-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--ms-border) !important;
+  background-color: var(--ms-surface-card) !important;
+  color: var(--ms-text-primary) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.ms-theme-toggle-btn:hover {
+  background-color: var(--ms-border) !important;
+  color: var(--ms-primary) !important;
+  transform: scale(1.06) !important;
+}
+
+.ms-theme-icon {
+  font-size: 1.125rem !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* VnEconomy-Style Sticky Mobile Navigation Bar */
+.ms-mobile-quick-tabs {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 500 !important;
+  background-color: var(--ms-surface-base) !important;
+  border-bottom: 2px solid var(--ms-primary) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="cream"] .ms-mobile-quick-tabs {
+  background-color: #FFFDF7 !important;
+  border-bottom: 2px solid #007A70 !important;
+}
+
+[data-theme="dark"] .ms-mobile-quick-tabs {
+  background-color: #0A1B1A !important;
+  border-bottom: 2px solid #007A70 !important;
+}
+
+/* Mobile Alignment Fix: Unify All Section Headers to Exact Left Margin */
+@media (max-width: 768px) {
+  .ms-section-header,
+  .ms-page-section > section:first-of-type .ms-section-header,
+  #page-market #marketPulse .ms-section-header,
+  #page-market #newsDesk .ms-section-header,
+  #page-analysis #macroToMicro .ms-section-header,
+  #page-analysis #expertLearning .ms-section-header,
+  #page-b2b #decisionBrief .ms-section-header,
+  #page-b2b #paymentRadar .ms-section-header,
+  #page-b2b #decisionWatchlist .ms-section-header,
+  #page-archive #archiveSection .ms-section-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 1px solid var(--ms-border) !important;
+    min-height: auto !important;
+  }
+
+  .ms-section-title-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .ms-section-kicker,
+  .ms-section-heading {
+    text-align: left !important;
+    align-self: flex-start !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}

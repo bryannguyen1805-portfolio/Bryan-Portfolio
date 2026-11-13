@@ -2180,26 +2180,24 @@ function closeWelcomeModal() {
   const modal = document.getElementById('welcome-modal-backdrop');
   if (modal) {
     modal.classList.remove('open');
-    const isOtherModalOpen = document.querySelector('.ms-modal-backdrop.open, .ms-drawer.open, .vcard-modal-backdrop.open');
-    if (!isOtherModalOpen) {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = '';
   }
   try {
+    localStorage.setItem('bryan_fintech_welcome_shown_v1', 'true');
     sessionStorage.setItem('bryan_fintech_welcome_shown', 'true');
   } catch (e) {}
 }
 
 function checkWelcomeModalOnLoad() {
   try {
-    const shown = sessionStorage.getItem('bryan_fintech_welcome_shown');
+    const shown = localStorage.getItem('bryan_fintech_welcome_shown_v1') || sessionStorage.getItem('bryan_fintech_welcome_shown');
     if (!shown) {
       setTimeout(() => {
         openWelcomeModal();
-      }, 400);
+      }, 500);
     }
   } catch (e) {
-    console.warn('[MagSpread] Session storage inaccessible:', e);
+    console.warn('[MagSpread] Storage inaccessible:', e);
   }
 }
 
