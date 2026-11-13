@@ -23,9 +23,10 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// ─── THEME CONTROLLER ───
+// ─── THEME CONTROLLER (D-15 Consolidated Storage) ───
 function initTheme() {
-  const saved = localStorage.getItem('ms-theme');
+  // Read from site_theme (Bryan Portfolio) or ms-theme with seamless fallback
+  const saved = localStorage.getItem('site_theme') || localStorage.getItem('ms-theme');
   if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.setAttribute('data-theme', 'dark');
   } else {
@@ -38,6 +39,8 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
+  // D-15: Synchronize both keys to avoid cross-domain/app conflicts
+  localStorage.setItem('site_theme', next);
   localStorage.setItem('ms-theme', next);
   updateThemeIcon();
 }
@@ -46,19 +49,22 @@ function updateThemeIcon() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const btn = $('#themeToggleBtn');
   if (btn) {
+    // D-11: Clean, concise label preventing multiline overflow on mobile
     btn.innerHTML = isDark
-      ? '<span style="font-size:14px;">☼ BẬT BẢN SÁNG (CREAM)</span>'
-      : '<span style="font-size:14px;">☽ BẬT BẢN TỐI (EDITORIAL)</span>';
+      ? '<span class="ms-theme-text" style="font-size:12px; font-weight:700; letter-spacing:0.04em;">☼ BẢN SÁNG</span>'
+      : '<span class="ms-theme-text" style="font-size:12px; font-weight:700; letter-spacing:0.04em;">☽ BẢN TỐI</span>';
   }
-  // Sync Bryan Portfolio Logo correctly
+  // D-13: Use optimized retina logos
   const logo = $('#headerBryanLogo');
   const footerLogo = $('#footerBryanLogo');
-  const targetLogo = isDark ? './bnews-logo-dark.png' : './bnews-logo-light.png';
+  const targetLogo = isDark ? './bnews-logo-dark-opt.png' : './bnews-logo-light-opt.png';
   if (logo) logo.src = targetLogo;
   if (footerLogo) footerLogo.src = targetLogo;
 }
 
-// ─── DRAWER CONTROLLER ───
+// ─── DRAWER CONTROLLER (D-09 Accessible Modal Management) ───
+let drawerLastFocusedElement = null;
+
 function openDrawer(title, htmlContent) {
   const drawer = $('#sideDrawer');
   const backdrop = $('#drawerBackdrop');
@@ -66,20 +72,37 @@ function openDrawer(title, htmlContent) {
   const contentEl = $('#drawerContent');
 
   if (!drawer || !backdrop) return;
+  drawerLastFocusedElement = document.activeElement;
   titleEl.textContent = title;
   contentEl.innerHTML = htmlContent;
 
+  drawer.setAttribute('aria-hidden', 'false');
   backdrop.classList.add('open');
   drawer.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Move focus into dialog close button
+  setTimeout(() => {
+    const closeBtn = $('#drawerCloseBtn');
+    if (closeBtn) closeBtn.focus();
+  }, 50);
 }
 
 function closeDrawer() {
   const drawer = $('#sideDrawer');
   const backdrop = $('#drawerBackdrop');
-  if (drawer) drawer.classList.remove('open');
+  if (drawer) {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
   if (backdrop) backdrop.classList.remove('open');
   document.body.style.overflow = '';
+
+  // Return focus to triggering element
+  if (drawerLastFocusedElement && typeof drawerLastFocusedElement.focus === 'function') {
+    drawerLastFocusedElement.focus();
+    drawerLastFocusedElement = null;
+  }
 }
 
 // ─── DATA LOADING ───
@@ -450,15 +473,35 @@ function renderNewsDesk() {
   const standardGrid = $('#newsStandardGrid');
   const countBadge = $('#newsCountBadge');
 
-  if (countBadge) countBadge.textContent = `${filtered.length} BÀI ĐỦ ĐIỀU KIỆN (ĐÃ LOẠI REJECTED)`;
+  // D-08: Distinguish total eligible count from filtered search count
+  const totalEligible = newsList.length;
+  if (countBadge) {
+    if (filtered.length === totalEligible) {
+      countBadge.textContent = `${totalEligible} BÀI ĐỦ ĐIỀU KIỆN (ĐÃ LOẠI REJECTED)`;
+    } else if (filtered.length > 0) {
+      countBadge.textContent = `ĐANG HIỂN THỊ: ${filtered.length}/${totalEligible} BÀI PHÙ HỢP`;
+    } else {
+      countBadge.textContent = `0 BÀI PHÙ HỢP (TRÊN TỔNG SỐ ${totalEligible} BÀI ĐỦ ĐIỀU KIỆN)`;
+    }
+  }
 
+  // D-08: Rich Empty State with clear search action
   if (filtered.length === 0) {
     if (editorialGrid) editorialGrid.style.display = 'none';
     if (standardGrid) {
       standardGrid.style.display = 'block';
       standardGrid.innerHTML = `
-        <div style="padding:36px; text-align:center; background-color:var(--ms-surface-card); border:1px solid var(--ms-border); border-radius:4px;">
-          <p style="margin:0; font-size:0.9375rem; color:var(--ms-text-secondary);">Không tìm thấy bài báo nào phù hợp với bộ lọc hiện tại.</p>
+        <div class="ms-search-empty-state" style="padding:48px 24px; text-align:center; background-color:var(--ms-surface-card); border:1px solid var(--ms-border); margin:20px 0;">
+          <div style="font-size:2.25rem; margin-bottom:12px;" aria-hidden="true">🔍</div>
+          <h3 style="font-family:var(--font-headline); font-size:1.125rem; font-weight:700; color:var(--ms-text-primary); margin:0 0 8px 0;">
+            Không tìm thấy bản tin phù hợp
+          </h3>
+          <p style="font-size:0.875rem; color:var(--ms-text-secondary); max-width:480px; margin:0 auto 20px auto; line-height:1.6;">
+            Không có bài viết nào khớp với từ khóa "<strong>${escapeHtml(currentSearchTerm || '')}</strong>"${currentCategoryFilter !== 'ALL' ? ` trong chuyên mục <strong>${escapeHtml(currentCategoryFilter)}</strong>` : ''}.
+          </p>
+          <button type="button" class="ms-btn ms-btn-primary ms-btn-sm" onclick="clearNewsSearchAndFilter()" style="min-height:38px; padding:0 20px; font-weight:600;">
+            ← Xóa tìm kiếm & Hiện tất cả tin
+          </button>
         </div>
       `;
     }
@@ -507,6 +550,18 @@ function renderNewsDesk() {
   }
 }
 
+function clearNewsSearchAndFilter() {
+  currentSearchTerm = '';
+  currentCategoryFilter = 'ALL';
+  const searchInput = $('#newsSearchInput');
+  if (searchInput) searchInput.value = '';
+  $$('.ms-filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.category === 'ALL');
+  });
+  renderNewsDesk();
+}
+window.clearNewsSearchAndFilter = clearNewsSearchAndFilter;
+
 function renderNewsCardHtml(lead, isLead) {
   const cleanTime = (lead.publisherPublishedAt || lead.publicationTimestamp || '').split(' | ')[0].trim();
   return `
@@ -517,10 +572,12 @@ function renderNewsCardHtml(lead, isLead) {
           <span class="ms-badge ${lead.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
             [${escapeHtml(lead.strictCombinedTimeWindow || '24h')}]
           </span>
-          ${cleanTime ? `<span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(cleanTime)}</span>` : ''}
+          ${cleanTime ? `<span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono); font-size:12px;">${escapeHtml(cleanTime)}</span>` : ''}
         </div>
-        <h2 class="ms-lead-title" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
-          ${escapeHtml(lead.pageTitle || lead.title)}
+        <h2 class="ms-lead-title">
+          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
+            ${escapeHtml(lead.pageTitle || lead.title)}
+          </button>
         </h2>
         <p class="ms-lead-summary">${escapeHtml(lead.summary || lead.supportingQuote || '')}</p>
         ${lead.supportingQuote && lead.supportingQuote.trim() !== (lead.summary || '').trim() ? `
@@ -549,25 +606,27 @@ function renderSubfeatureCardHtml(item) {
     <article class="ms-subfeature-card">
       <div>
         <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-          <span class="ms-badge ms-badge-primary" style="font-size:9px;">${escapeHtml(item.category || 'Tài chính')}</span>
-          <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:9px;">
+          <span class="ms-badge ms-badge-primary" style="font-size:12px;">${escapeHtml(item.category || 'Tài chính')}</span>
+          <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:12px;">
             [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
           </span>
         </div>
-        <h3 class="ms-subfeature-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-          ${escapeHtml(item.pageTitle || item.title)}
+        <h3 class="ms-subfeature-title">
+          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+            ${escapeHtml(item.pageTitle || item.title)}
+          </button>
         </h3>
         <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
           ${escapeHtml(item.summary || item.supportingQuote || '')}
         </p>
       </div>
       <div class="ms-news-card-footer">
-        <span style="font-size:0.75rem;">${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
+        <span style="font-size:12px;">${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
         <div style="display:flex; gap:8px;">
           <button class="ms-btn ms-btn-ghost ms-btn-sm" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
             Phân tích
           </button>
-          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center; font-size:0.75rem;">
+          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center; font-size:12px;">
             Bài gốc ↗
           </a>
         </div>
@@ -588,8 +647,10 @@ function renderStandardNewsCardHtml(item) {
             </span>
           </div>
         </div>
-        <h3 class="ms-news-card-title" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-          ${escapeHtml(item.pageTitle || item.title)}
+        <h3 class="ms-news-card-title">
+          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+            ${escapeHtml(item.pageTitle || item.title)}
+          </button>
         </h3>
         <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
       </div>

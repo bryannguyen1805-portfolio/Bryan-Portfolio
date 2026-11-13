@@ -126,6 +126,8 @@ def main():
             "zalo-icon.svg",
             "bnews-logo-light.png",
             "bnews-logo-dark.png",
+            "bnews-logo-light-opt.png",
+            "bnews-logo-dark-opt.png",
             "bnews-logo-light.webp",
             "bnews-logo-dark.webp",
             "fintech-favicon.png",

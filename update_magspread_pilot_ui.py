@@ -688,34 +688,21 @@ def main():
         else:
             time_window = "0–24h"
 
-        # Rich 2-sentence journalistic standfirst (Sapo)
+        # Rich journalistic standfirst (Sapo) — strictly authentic to source article
         base_sapo = summary.strip() if summary else headline
         if not base_sapo.endswith("."):
             base_sapo += "."
 
+        # D-06 fix: Do not append generic repetitive boilerplate
         enrich_sapo = ""
         hl_lower = headline.lower()
-        if len(base_sapo) < 140 or base_sapo.count(".") <= 1:
-            if "giá vàng" in hl_lower or "sjc" in hl_lower:
-                enrich_sapo = " Mức chênh lệch kỷ lục giữa giá vàng miếng trong nước và thế giới tiếp tục phản ánh áp lực nguồn cung và tâm lý phòng thủ thận trọng của dòng vốn thị trường."
-            elif "co.op" in hl_lower or "bán lẻ" in hl_lower:
-                enrich_sapo = " Mô hình kết hợp mạng lưới phân phối hiện hữu với hạ tầng số hóa giúp giải tỏa điểm nghẽn vận chuyển và đáp ứng nhu cầu giao dịch tăng vọt mùa cuối năm."
-            elif "acb" in hl_lower or "forbes" in hl_lower:
-                enrich_sapo = " Vị thế định giá thương hiệu khẳng định uy tín tài chính và chiến lược đẩy mạnh chất lượng tài sản của các NHTM tư nhân đầu ngành."
-            elif "thuế" in hl_lower or "hóa đơn" in hl_lower or "xuất cảnh" in hl_lower:
-                enrich_sapo = " Các chế tài quản lý thuế mới đặt ra yêu cầu tuân thủ cấp thiết đối với hộ kinh doanh và doanh nghiệp trong việc chuẩn hóa hóa đơn điện tử."
-            elif "lãi suất" in hl_lower or "tiền gửi" in hl_lower or "kỳ hạn" in hl_lower:
-                enrich_sapo = " Động thái phân hóa biểu lãi suất huy động giữa các nhà băng cho thấy chiến lược cạnh tranh thu hút tiền gửi CASA và tối ưu hóa chi phí vốn."
-            elif "tỷ giá" in hl_lower or "usd" in hl_lower:
-                enrich_sapo = " Động thái điều hành của Ngân hàng Nhà nước đóng vai trò then chốt trong việc giải tỏa áp lực thanh khoản ngoại hối và ổn định tâm lý thị trường."
-            elif "chứng khoán" in hl_lower or "cổ phiếu" in hl_lower or "lên sàn" in hl_lower or "gda" in hl_lower:
-                enrich_sapo = " Sự kiện niêm yết mới mở ra cơ hội tiếp cận dòng vốn dài hạn và nâng cao tính minh bạch quản trị cho các doanh nghiệp quy mô lớn."
-            else:
-                ctx = sections_dict.get("sectionC_whyItMatters", "")
-                if ctx and len(ctx) > 30 and len(ctx) < 150:
-                    enrich_sapo = f" Diễn biến này đặt ra yêu cầu điều chỉnh chiến lược dòng tiền và tối ưu hóa vận hành cho các đơn vị liên quan."
-                else:
-                    enrich_sapo = " Sự kiện ghi nhận sự quan tâm đặc biệt của giới đầu tư đối với triển vọng kinh doanh và chu kỳ phục hồi kinh tế."
+        # Only add domain-specific journalistic context if the base summary is very short (< 80 chars)
+        if len(base_sapo) < 80:
+            takeaway = sections_dict.get("sectionB_keyTakeaway", "") or sections_dict.get("sectionC_whyItMatters", "")
+            if takeaway and len(takeaway) > 20 and len(takeaway) < 160:
+                enrich_sapo = " " + takeaway.strip()
+                if not enrich_sapo.endswith("."):
+                    enrich_sapo += "."
 
         final_sapo = (base_sapo + enrich_sapo).strip()
 
@@ -1600,6 +1587,21 @@ def main():
             }
         ]
     }
+
+    # D-06 fix: recursively sanitize text to eliminate punctuation artifacts like '?;'
+    def sanitize_text_artifacts(obj):
+        if isinstance(obj, str):
+            cleaned = obj.replace("?;", "? ").replace(" ,", ",").replace(" ;", ";")
+            while "  " in cleaned:
+                cleaned = cleaned.replace("  ", " ")
+            return cleaned.strip()
+        elif isinstance(obj, list):
+            return [sanitize_text_artifacts(item) for item in obj]
+        elif isinstance(obj, dict):
+            return {k: sanitize_text_artifacts(v) for k, v in obj.items()}
+        return obj
+
+    edition_payload = sanitize_text_artifacts(edition_payload)
 
     # 13. Write to pilot-output/edition-data.json
     json_path = os.path.join(PILOT_OUTPUT_DIR, "edition-data.json")
