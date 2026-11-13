@@ -44,7 +44,7 @@
       "sha256": "2b30a4d34626a8f74ba5b7d53f62437cf53a9e09427c759930c1d22c8892a693",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Tỷ giá trung tâm USD/VND ghi nhận ở mức 25611 VND/USD cho ngày 2026-11-11.",
+      "statusReason": "Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.611 VND/USD cho ngày 2026-11-11.",
       "financialInterpretation": "Việc NHNN duy trì giá mua can thiệp 25.500 đồng giúp chặn đà suy yếu của tiền đồng trong khi vẫn tiếp sức thanh khoản VND cho hệ thống ngân hàng. Tỷ giá bán ra tại các NHTM neo ở 25.860 - 25.870 VND/USD làm tăng chi phí nhập khẩu của doanh nghiệp bán lẻ. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
       "monitoringWatchpoint": "Theo dõi sát khối lượng ngoại tệ NHNN mua vào trong các phiên định kỳ thứ Hai và thứ Tư.",
       "discoveryAudit": {
@@ -59,7 +59,7 @@
           "Đơn vị phát hành & đối soát: Tạp chí Kinh tế Việt Nam (VnEconomy).",
           "Kỳ dữ liệu quan sát: 2026-11-11 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25611 VND/USD cho ngày 2026-11-11."
+          "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.611 VND/USD cho ngày 2026-11-11."
         ]
       }
     },
@@ -220,35 +220,35 @@
     },
     "sec02_coverStory": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
-      "editorialHeadline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
-      "executiveSummary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Sự phân hóa biểu lãi suất huy động giữa các nhà băng phản ánh chiến lược tối ưu hóa chi phí vốn (COF), gia tăng tỷ lệ CASA và chuẩn bị nguồn thanh khoản dồi dào phục vụ nhu cầu vay vốn cao điểm cuối năm.",
+      "editorialHeadline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "executiveSummary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD. Vị thế định giá thương hiệu khẳng định uy tín tài chính và chiến lược đẩy mạnh chất lượng tài sản của các NHTM tư nhân đầu ngành. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
       "leadArticle": {
-        "headline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-        "eventId": "EVT-10",
+        "headline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+        "eventId": "EVT-03",
         "sourceName": "CafeF / VCCorp",
-        "publishedAt": "13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00)",
-        "sourceUrl": "https://cafef.vn/ngay-13-11-gui-duoi-1-ty-dong-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261112234438454.chn",
-        "summary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Sự phân hóa biểu lãi suất huy động giữa các nhà băng phản ánh chiến lược tối ưu hóa chi phí vốn (COF), gia tăng tỷ lệ CASA và chuẩn bị nguồn thanh khoản dồi dào phục vụ nhu cầu vay vốn cao điểm cuối năm."
+        "publishedAt": "13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00)",
+        "sourceUrl": "https://cafef.vn/acb-vuot-moc-thuong-hieu-14-ty-usd-vao-top-3-ngan-hang-tu-nhan-gia-tri-nhat-viet-nam-188261112233717134.chn",
+        "summary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD. Vị thế định giá thương hiệu khẳng định uy tín tài chính và chiến lược đẩy mạnh chất lượng tài sản của các NHTM tư nhân đầu ngành. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới."
       },
-      "editorialPullQuote": "“Sự phân hóa mặt bằng lãi suất tiết kiệm giữa các nhà băng phản ánh nỗ lực tối ưu hóa chi phí vốn huy động, kích thích dòng tiền gửi CASA và chuẩn bị dư địa giải ngân tín dụng sản xuất cuối năm.”",
-      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu.",
+      "editorialPullQuote": "“Định giá thương hiệu vượt 1,4 tỷ USD của các NHTM đầu ngành phản ánh bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, an toàn vốn và tiên phong số hóa điểm chạm khách hàng.”",
+      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 2 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam; (2) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu.",
       "marketImpact": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
       "fintechLensAction": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng.",
-      "monitoringWatchpoint": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Lãi suất (6,3%/năm) gắn với VPBank trong các kỳ tới.",
+      "monitoringWatchpoint": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Biến động lãi suất (0,5 điểm phần trăm) gắn với Ngân hàng Nhà nước trong các kỳ tới.",
       "whyItMatters": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
       "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng."
     },
     "coreThesis": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
-      "editorialHeadline": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
-      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 01:31 | Nguồn gốc: CafeF / VCCorp (2026-11-13T01:31:00+07:00))",
-      "executiveSummary": "Lãi suất tiết kiệm kỳ hạn 6 tháng tại các ngân hàng đang có sự chênh lệch đáng kể giữa các nhà băng và giữa hai hình thức gửi tại quầy, gửi online. Với khoản tiền gửi dưới 1 tỷ đồng, số tiền lãi khách hàng nhận được sẽ phụ thuộc vào ngân hàng, số tiền gửi và sản phẩm tiết kiệm lựa chọn. Sự phân hóa biểu lãi suất huy động giữa các nhà băng phản ánh chiến lược tối ưu hóa chi phí vốn (COF), gia tăng tỷ lệ CASA và chuẩn bị nguồn thanh khoản dồi dào phục vụ nhu cầu vay vốn cao điểm cuối năm.",
+      "editorialHeadline": "ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam",
+      "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (13/11/2026 07:30 | Nguồn gốc: CafeF / VCCorp (2026-11-13T07:30:00+07:00))",
+      "executiveSummary": "ACB vừa được Forbes Việt Nam vinh danh trong danh sách Top 50 Thương hiệu dẫn đầu Việt Nam 2026 với giá trị thương hiệu đạt 1,403 tỷ USD. Vị thế định giá thương hiệu khẳng định uy tín tài chính và chiến lược đẩy mạnh chất lượng tài sản của các NHTM tư nhân đầu ngành. Kết quả này khẳng định bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, củng cố uy tín an toàn vốn và đẩy mạnh số hóa dịch vụ tài chính cá nhân trong chu kỳ kinh tế mới.",
       "whyItMatters": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
       "supportingInsights": [],
-      "editorialPullQuote": "“Sự phân hóa mặt bằng lãi suất tiết kiệm giữa các nhà băng phản ánh nỗ lực tối ưu hóa chi phí vốn huy động, kích thích dòng tiền gửi CASA và chuẩn bị dư địa giải ngân tín dụng sản xuất cuối năm.”",
+      "editorialPullQuote": "“Định giá thương hiệu vượt 1,4 tỷ USD của các NHTM đầu ngành phản ánh bước chuyển dịch chiến lược từ tăng trưởng quy mô sang tối ưu hóa chất lượng tài sản, an toàn vốn và tiên phong số hóa điểm chạm khách hàng.”",
       "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng."
     },
     "sec04b_decisionBrief": {
@@ -692,9 +692,9 @@
               "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -702,13 +702,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
-              "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -716,13 +716,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-              "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -730,13 +730,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; Việt Nam: 80.000 tỷ đồng).",
-              "description": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; Việt Nam: 80.000 tỷ đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -744,13 +744,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -762,9 +762,9 @@
               "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -776,9 +776,9 @@
               "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             }
           ]
@@ -799,8 +799,8 @@
               "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -809,12 +809,12 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -823,12 +823,12 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
-              "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -837,12 +837,12 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (ACB: 25.500 đồng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
-              "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (ACB: 25.500 đồng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -851,12 +851,12 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
-              "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -869,8 +869,8 @@
               "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -883,8 +883,8 @@
               "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             }
@@ -902,13 +902,13 @@
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
-              "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -916,13 +916,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -930,13 +930,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
-              "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -944,13 +944,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 1 tỷ đồng; Doanh nghiệp: 10 tỷ đồng).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 1 tỷ đồng; Doanh nghiệp: 10 tỷ đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -958,13 +958,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
-              "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -976,9 +976,9 @@
               "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -990,9 +990,9 @@
               "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             }
           ]
@@ -1009,13 +1009,13 @@
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
-              "description": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1023,13 +1023,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu).",
-              "description": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1037,13 +1037,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
-              "description": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1051,13 +1051,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 120,9 triệu đồng/lượng; ACB: 25.500 đồng).",
-              "description": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 120,9 triệu đồng/lượng; ACB: 25.500 đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1065,13 +1065,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
-              "description": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1085,7 +1085,7 @@
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1099,7 +1099,7 @@
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             }
           ]
@@ -1126,9 +1126,9 @@
               "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1136,13 +1136,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
-              "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1150,13 +1150,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-              "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Ngân hàng, Tín dụng & Lãi suất.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1164,13 +1164,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; Việt Nam: 80.000 tỷ đồng).",
-              "description": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; Việt Nam: 80.000 tỷ đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Ngân hàng Nhà nước: 0,5 điểm phần trăm; VPBank: 6,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1178,13 +1178,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1196,9 +1196,9 @@
               "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             },
             {
@@ -1210,9 +1210,9 @@
               "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-005",
-                "EVT-20261113-001",
-                "EVT-20261113-023"
+                "EVT-20261113-058",
+                "EVT-20261113-007",
+                "EVT-20261113-005"
               ]
             }
           ]
@@ -1233,8 +1233,8 @@
               "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1243,12 +1243,12 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'ACB vượt mốc thương hiệu 1,4 tỷ USD, vào Top 3 ngân hàng tư nhân giá trị nhất Việt Nam'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1257,12 +1257,12 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
-              "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1271,12 +1271,12 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (ACB: 25.500 đồng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
-              "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (ACB: 25.500 đồng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 5,10%; Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm): 4,98%).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1285,12 +1285,12 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
-              "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1303,8 +1303,8 @@
               "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             },
@@ -1317,8 +1317,8 @@
               "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-040",
-                "EVT-20261113-060",
+                "EVT-20261113-058",
+                "EVT-20261113-002",
                 "EVT-20261113-007"
               ]
             }
@@ -1336,13 +1336,13 @@
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
-              "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1350,13 +1350,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1364,13 +1364,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
-              "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1378,13 +1378,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 1 tỷ đồng; Doanh nghiệp: 10 tỷ đồng).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 1 tỷ đồng; Doanh nghiệp: 10 tỷ đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng; Ngân hàng Nhà nước: 0,5 điểm phần trăm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1392,13 +1392,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
-              "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1410,9 +1410,9 @@
               "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             },
             {
@@ -1424,9 +1424,9 @@
               "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261113-026",
-                "EVT-20261113-016",
-                "EVT-20261113-011"
+                "EVT-20261113-025",
+                "EVT-20261113-054",
+                "EVT-20261113-007"
               ]
             }
           ]
@@ -1443,13 +1443,13 @@
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
-              "description": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
+              "content": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
+              "description": "Tác động từ bối cảnh quốc tế qua sự kiện: 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu' tác động lên cán cân thanh toán và dòng vốn ngoại tệ.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1457,13 +1457,13 @@
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu).",
-              "description": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu).",
+              "content": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
+              "description": "Diễn biến kinh tế vĩ mô Việt Nam, tăng trưởng kinh tế và các cân đối lớn liên quan trực tiếp đến 'Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu'.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1471,13 +1471,13 @@
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
-              "description": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
+              "content": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+              "description": "Định hướng điều hành tiền tệ, thanh khoản thị trường mở và chính sách tỷ giá của Ngân hàng Nhà nước thích ứng với Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1485,13 +1485,13 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 120,9 triệu đồng/lượng; ACB: 25.500 đồng).",
-              "description": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 120,9 triệu đồng/lượng; ACB: 25.500 đồng).",
+              "content": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
+              "description": "Hệ thống NHTM điều chỉnh chi phí vốn, thanh khoản và danh mục tín dụng (SJC: 120,9 triệu đồng/lượng).",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1499,13 +1499,13 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
-              "description": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
+              "content": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
+              "description": "Cộng đồng doanh nghiệp tối ưu chi phí vay vốn, quản trị rủi ro thanh khoản và số hóa quy trình thu chi.",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1519,7 +1519,7 @@
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             },
             {
@@ -1533,7 +1533,7 @@
               "eventIds": [
                 "EVT-20261113-025",
                 "EVT-20261113-049",
-                "EVT-20261113-040"
+                "EVT-20261113-029"
               ]
             }
           ]

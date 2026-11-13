@@ -822,6 +822,8 @@ small, .ms-small {
   padding-top: var(--space-md);
   padding-bottom: var(--space-xl);
   border-bottom: 2px solid var(--ms-border-dark);
+  min-height: 440px;
+  contain-intrinsic-size: 100% 440px;
 }
 
 .ms-cover-layout {
@@ -842,6 +844,7 @@ small, .ms-small {
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
+  min-height: 280px;
 }
 
 .ms-cover-badge-row {
