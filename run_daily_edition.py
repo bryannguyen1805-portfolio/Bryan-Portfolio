@@ -102,14 +102,28 @@ def main():
         ts = int(datetime.now().timestamp())
         with open(html_path, "r", encoding="utf-8") as f:
             h_text = f.read()
-        h_text = re.sub(r'edition-data\.js(\?v=[^"]*)?', f'edition-data.js?v={ts}', h_text)
-        h_text = re.sub(r'magspread\.js(\?v=[^"]*)?', f'magspread.js?v={ts}', h_text)
+        h_text = re.sub(r'href="(?:\.\/)?magspread\.css(?:\?v=[^"]*)?"', f'href="./magspread.css?v={ts}"', h_text)
+        h_text = re.sub(r'src="(?:\.\/)?edition-data\.js(?:\?v=[^"]*)?"', f'src="./edition-data.js?v={ts}"', h_text)
+        h_text = re.sub(r'src="(?:\.\/)?magspread\.js(?:\?v=[^"]*)?"', f'src="./magspread.js?v={ts}"', h_text)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(h_text)
 
     if os.path.exists(web_portal_dir):
         import shutil
-        for fn in ["index.html", "edition-data.js", "edition-data.json", "magspread.css", "magspread.js", "zalo-icon.svg"]:
+        for fn in [
+            "index.html",
+            "edition-data.js",
+            "edition-data.json",
+            "magspread.css",
+            "magspread.js",
+            "zalo-icon.svg",
+            "bnews-logo-light.png",
+            "bnews-logo-dark.png",
+            "bnews-logo-light.webp",
+            "bnews-logo-dark.webp",
+            "fintech-favicon.png",
+            "fintech-favicon.webp",
+        ]:
             src = os.path.join(PACKAGE_DIR, fn)
             dst = os.path.join(web_portal_dir, fn)
             if os.path.exists(src):
