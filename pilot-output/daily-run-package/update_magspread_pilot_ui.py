@@ -870,6 +870,71 @@ def main():
         }
     ]
 
+    # Dynamic synchronization from live daily market-pulse.json if available
+    raw_indicators = mp_raw.get("indicators", []) if isinstance(mp_raw, dict) else []
+    raw_ind_map = {ind.get("indicatorId"): ind for ind in raw_indicators if isinstance(ind, dict)}
+
+    for item in CORE_4_DEFS:
+        matched_raw = raw_ind_map.get(item["indicatorId"])
+        if not matched_raw:
+            for ind in raw_indicators:
+                if not isinstance(ind, dict):
+                    continue
+                name = (ind.get("indicatorName") or "").lower()
+                if item["key"] == "usdVndCenter" and ("tỷ giá" in name or "usd" in name):
+                    matched_raw = ind
+                    break
+                elif item["key"] == "maxDeposit12M" and ("lãi suất" in name or "deposit" in name):
+                    matched_raw = ind
+                    break
+                elif item["key"] == "vnIndex" and ("vn-index" in name or "chứng khoán" in name):
+                    matched_raw = ind
+                    break
+                elif item["key"] == "inboundTourists" and ("du lịch" in name or "khách" in name or "vietqr" in name):
+                    matched_raw = ind
+                    break
+
+        if matched_raw:
+            val = matched_raw.get("actualValue") or matched_raw.get("currentValue")
+            unit = matched_raw.get("unit") or item["unit"]
+            if val is not None and str(val).strip():
+                s_val = str(val).strip()
+                if not any(u in s_val for u in ["VND", "%", "Điểm", "lượt"]):
+                    if unit == "VND/USD":
+                        try:
+                            val_fmt = f"{float(s_val):,.0f}".replace(",", ".") + " VND/USD"
+                        except:
+                            val_fmt = f"{s_val} {unit}"
+                    elif unit in ["%/năm", "%"]:
+                        val_fmt = f"{s_val} {unit}"
+                    elif unit == "Điểm":
+                        try:
+                            val_fmt = f"{float(s_val):,.2f}".replace(",", ".") + " Điểm"
+                        except:
+                            val_fmt = f"{s_val} {unit}"
+                    else:
+                        val_fmt = f"{s_val} {unit}"
+                else:
+                    val_fmt = s_val
+                item["value"] = val_fmt
+
+            if matched_raw.get("change"):
+                item["change"] = matched_raw["change"]
+            if matched_raw.get("observationDate"):
+                item["asOf"] = matched_raw["observationDate"]
+            elif matched_raw.get("publishedAt"):
+                item["asOf"] = matched_raw["publishedAt"][:10]
+            if matched_raw.get("sourceUrl") and matched_raw["sourceUrl"].startswith("http"):
+                item["sourceUrl"] = matched_raw["sourceUrl"]
+            if matched_raw.get("sourceOrganization") or matched_raw.get("publisher"):
+                item["sourceName"] = matched_raw.get("sourceOrganization") or matched_raw.get("publisher")
+            if matched_raw.get("interpretation"):
+                item["statusReason"] = matched_raw["interpretation"]
+            if matched_raw.get("evidenceSha256"):
+                item["sha256"] = matched_raw["evidenceSha256"]
+            if matched_raw.get("evidencePath"):
+                item["evidencePath"] = matched_raw["evidencePath"]
+
     for item in CORE_4_DEFS:
         card = {
             "cardNumber": item["cardNumber"],
@@ -945,8 +1010,32 @@ def main():
         if not ev_urls:
             ev_urls = [r.get("sourceUrl") for r in eligible_news[:2] if r.get("sourceUrl")]
 
+        cat = c.get("decisionCategory") or "STRATEGIC_SIGNAL"
+        category_map = {
+            "COMMERCIAL_OPPORTUNITY": "DU LỊCH & THANH TOÁN QUỐC TẾ",
+            "MARKET_OPPORTUNITY": "HỘ KINH DOANH & CHUỖI SME",
+            "MONITORING_REQUIRED": "NGOẠI HỐI & LÃI SUẤT ĐIỀU HÀNH",
+            "STRATEGIC_SIGNAL": "BÁN LẺ GIÁ TRỊ CAO & XE ĐIỆN",
+            "REGULATORY_COMPLIANCE": "TUÂN THỦ PHÁP LÝ & THUẾ",
+            "FINANCIAL_RISK": "QUẢN TRỊ RỦI RO DÒNG TIỀN"
+        }
+        badge = category_map.get(cat)
+        if not badge:
+            if any(k in sig_title.lower() for k in ["du lịch", "khách sạn", "quốc tế"]):
+                badge = "DU LỊCH & THANH TOÁN QUỐC TẾ"
+            elif any(k in sig_title.lower() for k in ["sme", "hộ kinh doanh", "chuỗi"]):
+                badge = "HỘ KINH DOANH & CHUỖI SME"
+            elif any(k in sig_title.lower() for k in ["ngoại hối", "lãi suất", "thanh khoản"]):
+                badge = "NGOẠI HỐI & LÃI SUẤT ĐIỀU HÀNH"
+            elif any(k in sig_title.lower() for k in ["xe điện", "bán lẻ", "điện máy"]):
+                badge = "BÁN LẺ GIÁ TRỊ CAO & XE ĐIỆN"
+            else:
+                badge = "CHIẾN LƯỢC ĐIỀU HÀNH"
+
         decision_signals.append({
             "signalId": sig_id,
+            "decisionCategory": cat,
+            "categoryBadge": badge,
             "signalTitle": sig_title,
             "relatedEventIds": c.get("supportingEventIds", []),
             "whatHappened": c.get("whatChanged") or c.get("executiveSummary") or sig_title,
@@ -1289,73 +1378,75 @@ def main():
     }
 
     # 11. Build Dynamic Monitoring Watchlist (Section 08B)
+    # Dynamically generated for the 4 core domains based on daily edition lead events & financial variables
+    dynamic_watchlist_items = [
+        {
+            "watchlistId": "WL-01",
+            "itemTitle": "Biến động Biểu Lãi suất Tiết kiệm & Năng lực Cung ứng Tín dụng Cuối năm",
+            "signalTracked": "Mặt bằng lãi suất huy động 6-12 tháng tại các NHTM lớn & tăng trưởng tiền gửi CASA",
+            "category": "Ngân hàng & Lãi suất",
+            "impactLevel": "HIGH",
+            "description": "Giám sát sự phân hóa lãi suất tiền gửi giữa nhóm Big 4 và khối NHTMCP tư nhân để đánh giá áp lực chi phí vốn (COF), thanh khoản liên ngân hàng và dư địa giải ngân tín dụng phục vụ sản xuất kinh doanh.",
+            "conditionChangingAssessment": "Nếu lãi suất liên ngân hàng qua đêm vượt 5,0%/năm hoặc CASA suy giảm, các ngân hàng thương mại có thể nâng nhẹ lãi suất cho vay đầu ra.",
+            "possibleAction": "Đẩy mạnh các gói tài trợ vốn lưu động linh hoạt và triển khai tài khoản định danh Virtual Account giúp doanh nghiệp thu hồi dòng tiền nhanh chóng.",
+            "observationHorizon": "7 ngày tới",
+            "metric": "Lãi suất huy động 12T & Lãi suất liên ngân hàng qua đêm",
+            "threshold": "Lãi suất liên ngân hàng vượt ngưỡng 5,0%/năm"
+        },
+        {
+            "watchlistId": "WL-02",
+            "itemTitle": "Động thái Mua Ngoại tệ Can thiệp của NHNN & Ổn định Tỷ giá USD/VND",
+            "signalTracked": "Khối lượng mua ngoại tệ giao ngay định kỳ tại mức giá can thiệp & thanh khoản OMO",
+            "category": "Chính sách Tiền tệ & Tỷ giá",
+            "impactLevel": "HIGH",
+            "description": "Theo dõi sát các phiên can thiệp mua USD giao ngay định kỳ của NHNN nhằm củng cố dự trữ ngoại hối quốc gia, hấp thu dòng ngoại tệ dồi dào và bơm tiền đồng ổn định ra lưu thông.",
+            "conditionChangingAssessment": "Nếu chênh lệch tỷ giá thị trường tự do nới rộng trên 1,5% so với giá mua can thiệp, áp lực bảo vệ tỷ giá và kiểm soát cung tiền sẽ gia tăng.",
+            "possibleAction": "Kích hoạt tính năng chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) trên hệ thống SmartPOS tại các điểm chấp nhận thanh toán quốc tế.",
+            "observationHorizon": "Phiên định kỳ hàng tuần",
+            "metric": "Tỷ giá mua can thiệp USD/VND & Dự trữ ngoại hối",
+            "threshold": "Chênh lệch tỷ giá tự do nới rộng > 1,5%"
+        },
+        {
+            "watchlistId": "WL-03",
+            "itemTitle": "Tiến độ Triển khai Hóa đơn Điện tử Khởi tạo từ Máy tính tiền cho SME & Hộ Kinh doanh",
+            "signalTracked": "Chính sách lựa chọn phương pháp tính thuế của hơn 90% SME & kỷ cương minh bạch hóa doanh thu điểm bán",
+            "category": "Thuế & Quản trị Doanh nghiệp",
+            "impactLevel": "MEDIUM",
+            "description": "Giám sát tiến độ kết nối hóa đơn điện tử tự động từ phần mềm tính tiền đến cổng Tổng cục Thuế, hướng đến minh bạch dòng tiền kinh doanh và giảm thiểu rủi ro pháp lý cho hộ kinh doanh bán lẻ.",
+            "conditionChangingAssessment": "Nếu ngành Thuế đẩy mạnh thanh tra hóa đơn điện tử tự động trên diện rộng, các chuỗi F&B và bán lẻ sẽ phải chuyển đổi 100% thiết bị tính tiền sang hệ thống POS thông minh.",
+            "possibleAction": "Cung cấp gói giải pháp SmartPOS Payoo All-in-One tích hợp sẵn phần mềm xuất hóa đơn điện tử khởi tạo từ máy tính tiền tuân thủ chuẩn Thông tư của Bộ Tài chính.",
+            "observationHorizon": "Tháng 11-12/2026",
+            "metric": "Tỷ lệ hộ kinh doanh áp dụng HĐĐT máy tính tiền",
+            "threshold": "Tỷ lệ hoàn thành kết nối đạt trên 85%"
+        },
+        {
+            "watchlistId": "WL-04",
+            "itemTitle": "Sức mua Bán lẻ Mùa Cao điểm Cuối năm & Động lực Chi tiêu Du lịch Quốc tế",
+            "signalTracked": "Tốc độ tăng trưởng doanh số bán lẻ hàng hóa, lượng khách du lịch quốc tế (19,5 triệu lượt) & sản lượng thanh toán số",
+            "category": "Bán lẻ, Tiêu dùng & Thanh toán Số",
+            "impactLevel": "MEDIUM",
+            "description": "Theo dõi đà phục hồi của tổng mức bán lẻ hàng hóa và dịch vụ tiêu dùng trong các tháng cao điểm lễ hội, cùng làn sóng khách quốc tế gia tăng chi tiêu không tiền mặt tại các đô thị lớn.",
+            "conditionChangingAssessment": "Nếu chỉ số giá tiêu dùng tăng nhanh hoặc biên độ giá vàng biến động mạnh hút dòng tiền đầu cơ, sức mua của người tiêu dùng đối với nhóm hàng không thiết yếu có thể bị thu hẹp.",
+            "possibleAction": "Phối hợp với các chuỗi bán lẻ điện máy, thời trang và ẩm thực triển khai chương trình Trả góp 0% lãi suất qua thẻ và đẩy mạnh thanh toán mã VietQR Global.",
+            "observationHorizon": "Mùa cao điểm mua sắm",
+            "metric": "Sản lượng giao dịch quẹt thẻ quốc tế & Doanh thu thanh toán số",
+            "threshold": "Doanh số giao dịch thanh toán số tăng trưởng > 25% YoY"
+        }
+    ]
+
     monitoring_watchlist = {
         "sectionTitle": "ĐIỀU CẦN THEO DÕI TIẾP (MONITORING WATCHLIST)",
-        "sectionSubtitle": "Các biến số, ngưỡng kích hoạt hành động và sự kiện trọng yếu cần giám sát trong 7 ngày tới",
-        "watchlistItems": [
-            {
-                "watchlistId": "WL-01",
-                "itemTitle": "WL-01: Động thái mua ngoại tệ giao ngay định kỳ của NHNN (25.500 VND/USD)",
-                "signalTracked": "Tỷ giá can thiệp 25.500 VND/USD & Quy mô bơm tiền đồng vào hệ thống",
-                "category": "Chính sách tiền tệ & Tỷ giá",
-                "impactLevel": "HIGH",
-                "description": "Giám sát các phiên mua ngoại tệ giao ngay định kỳ thứ Hai và thứ Tư để đánh giá lượng tiền đồng thực bơm vào hệ thống và độ ổn định tỷ giá.",
-                "conditionChangingAssessment": "Nếu tỷ giá thị trường tự do nới rộng khoảng cách chênh lệch trên 1,5% so với giá can thiệp, NHNN có thể điều chỉnh tần suất hoặc công cụ can thiệp.",
-                "possibleAction": "Cân đối vị thế trạng thái ngoại hối và chuẩn bị thanh khoản tiền đồng đón đầu nguồn cung vốn mới.",
-                "observationHorizon": "7 ngày tới",
-                "metric": "Tỷ giá mua can thiệp 25.500 VND/USD",
-                "threshold": "Chênh lệch tỷ giá tự do > 1,5% so với can thiệp"
-            },
-            {
-                "watchlistId": "WL-02",
-                "itemTitle": "WL-02: Nghị định mới về cấp phép xuất nhập khẩu vàng nguyên liệu",
-                "signalTracked": "Tiến độ ban hành Nghị định sửa đổi Nghị định 24/2012/NĐ-CP và chênh lệch giá vàng",
-                "category": "Thị trường vốn & Kim loại quý",
-                "impactLevel": "HIGH",
-                "description": "Theo dõi việc rút ngắn thời hạn cấp phép nhập khẩu, xuất khẩu vàng nguyên liệu cho các doanh nghiệp sản xuất và biến động giá vàng miếng SJC.",
-                "conditionChangingAssessment": "Nếu nguồn cung vàng nguyên liệu được khơi thông, chênh lệch giá vàng trong nước và thế giới sẽ thu hẹp dưới 3 triệu đồng/lượng.",
-                "possibleAction": "Tư vấn khách hàng doanh nghiệp tập trung dòng tiền vào hoạt động sản xuất kinh doanh thay vì găm giữ tài sản kim loại quý.",
-                "observationHorizon": "7 ngày tới",
-                "metric": "Chênh lệch giá vàng trong nước vs thế giới",
-                "threshold": "Chênh lệch thu hẹp dưới 3 triệu đồng/lượng"
-            },
-            {
-                "watchlistId": "WL-03",
-                "itemTitle": "WL-03: Động thái bán ròng của khối ngoại tại FPT & nhóm cổ phiếu công nghệ",
-                "signalTracked": "Khối lượng xả hàng cổ phiếu FPT của nhà đầu tư nước ngoài và thanh khoản thị trường",
-                "category": "Thị trường vốn & Cổ phiếu",
-                "impactLevel": "MEDIUM",
-                "description": "Giám sát áp lực chốt lời của dòng vốn ngoại sau đợt điều chỉnh sâu của nhóm cổ phiếu bán dẫn toàn cầu (Nvidia bốc hơi hơn 450 tỷ USD).",
-                "conditionChangingAssessment": "Nếu khối ngoại ngừng bán ròng và quay lại mua ròng, tâm lý thị trường chứng khoán sẽ phục hồi quanh mốc 1.750 điểm.",
-                "possibleAction": "Bảo toàn tỷ trọng danh mục cổ phiếu cơ bản, không sử dụng đòn bẩy margin quá mức tại các nhóm nhạy cảm theo xu hướng công nghệ thế giới.",
-                "observationHorizon": "Phiên ngày 13-14/11/2026",
-                "metric": "Giá trị mua/bán ròng khối ngoại",
-                "threshold": "Bán ròng vượt 500 tỷ đồng/phiên"
-            },
-            {
-                "watchlistId": "WL-04",
-                "itemTitle": "WL-04: Biến động giá xăng dầu chu kỳ mới & chi phí vận hành mùa Tết 2027",
-                "signalTracked": "Mức điều chỉnh giá xăng RON 95, dầu DO từ 15 giờ ngày 12/11",
-                "category": "Hàng hóa & Chuỗi cung ứng",
-                "impactLevel": "MEDIUM",
-                "description": "Theo dõi đà giảm tiếp theo của giá xăng dầu trong nước để đánh giá mức độ giảm áp lực chi phí vận tải và logistics hàng hóa cuối năm.",
-                "conditionChangingAssessment": "Nếu giá nhiên liệu duy trì vùng thấp, biên lợi nhuận của các đơn vị vận chuyển và giao hàng thương mại điện tử sẽ được cải thiện đáng kể.",
-                "possibleAction": "Đẩy mạnh hợp tác với các đơn vị vận chuyển triển khai giải pháp thanh toán không tiền mặt trên các chặng giao nhận.",
-                "observationHorizon": "Chu kỳ điều hành 7 ngày",
-                "metric": "Mức biến động giá xăng dầu",
-                "threshold": "Điều chỉnh biên độ > 3% so với kỳ trước"
-            }
-        ],
-        "items": []
+        "sectionSubtitle": "4 Biến số kinh tế vĩ mô, ngưỡng kích hoạt hành động và chỉ báo trọng yếu trong kỳ điều hành",
+        "watchlistItems": dynamic_watchlist_items,
+        "items": dynamic_watchlist_items
     }
-    monitoring_watchlist["items"] = monitoring_watchlist["watchlistItems"]
 
     # 12. Assemble Complete Editorial Sections
     editorial_sections = {
         "sec01_masthead": {
             "portalTitle": "Bryan FinTech Intelligence",
             "tagline": "Tạp chí & Cổng thông tin thị trường tài chính, thanh toán số, ngân hàng và cơ hội B2B — Phong cách tạp chí biên tập MagSpread cao cấp.",
-            "editionDateDisplay": f"Thứ Năm, ngày 12 tháng 11 năm 2026 — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
+            "editionDateDisplay": f"Phiên ngày {edition_date_display} — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
             "bryanPortfolioUrl": "../index.html",
             "portfolioTitle": "Quay về Bryan Portfolio",
             "topics": [
