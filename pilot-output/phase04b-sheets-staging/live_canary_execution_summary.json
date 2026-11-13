@@ -1,0 +1,344 @@
+{
+  "executionTimestamp": "2026-11-09T01:22:08.296111+07:00",
+  "spreadsheetId": "10MG2RSmh7MtX3x7Ej1u0NFD-rp6rqXXXOhQi11hkvy8",
+  "serviceAccount": "magspread-sheets-sync@bryan-fintech-intelligence.iam.gserviceaccount.com",
+  "projectId": "bryan-fintech-intelligence",
+  "stages": {
+    "stage1_metadata": {
+      "status": "PASS",
+      "title": "Bryan FinTech Intelligence — Archive STAGING",
+      "tabCount": 7,
+      "discoveredTabs": [
+        "EDITIONS",
+        "NEWS_EVENTS",
+        "EDITORIAL_SECTIONS",
+        "MARKET_PULSE_HISTORY",
+        "EVENT_REGISTRY",
+        "SOURCE_LEDGER",
+        "PUBLISH_AUDIT"
+      ]
+    },
+    "stage2_schema_headers": {
+      "status": "PASS",
+      "tabs": {
+        "EDITIONS": {
+          "status": "PASS",
+          "columnCount": 15,
+          "columns": [
+            "editionId",
+            "editionNumber",
+            "editionDate",
+            "displayDate",
+            "cutoffTime",
+            "publicationStatus",
+            "gateStatus",
+            "freshnessRatio",
+            "eligibleCount",
+            "count0To24h",
+            "count24To48h",
+            "count48To72h",
+            "leadStoryTitle",
+            "macroTheme",
+            "archivedAt"
+          ]
+        },
+        "NEWS_EVENTS": {
+          "status": "PASS",
+          "columnCount": 20,
+          "columns": [
+            "editionId",
+            "eventId",
+            "stt",
+            "headline",
+            "category",
+            "tier",
+            "sourceName",
+            "canonicalUrl",
+            "originalSourcePublishedAt",
+            "timeDeltaFromCutoff",
+            "timeWindowBucket",
+            "verificationStatus",
+            "dedupStatus",
+            "isFollowUp",
+            "followUpTo",
+            "evidenceSha256",
+            "verifiedFactSummary",
+            "macroToMicro",
+            "fintechImpact",
+            "prediction"
+          ]
+        },
+        "EDITORIAL_SECTIONS": {
+          "status": "PASS",
+          "columnCount": 11,
+          "columns": [
+            "editionId",
+            "sectionKey",
+            "sectionTitle",
+            "editorialRating",
+            "primaryThesis",
+            "transmissionMechanism",
+            "actionableRecommendations",
+            "riskFactors",
+            "monitoringChecklist",
+            "sectionWordCount",
+            "lastEditedAt"
+          ]
+        },
+        "MARKET_PULSE_HISTORY": {
+          "status": "PASS",
+          "columnCount": 14,
+          "columns": [
+            "editionId",
+            "indicatorId",
+            "indicatorName",
+            "category",
+            "tier",
+            "currentValue",
+            "previousValue",
+            "changeAbsolute",
+            "changePercent",
+            "unit",
+            "trendSignal",
+            "sourceAgency",
+            "measurementDate",
+            "verificationStatus"
+          ]
+        },
+        "EVENT_REGISTRY": {
+          "status": "PASS",
+          "columnCount": 13,
+          "columns": [
+            "eventId",
+            "canonicalUrl",
+            "normalizedHeadlineSignature",
+            "originalTitle",
+            "primaryEntity",
+            "eventDate",
+            "publicationDate",
+            "firstDiscoveredInEdition",
+            "duplicateCount",
+            "isFollowUp",
+            "followUpToEventId",
+            "lifecycleStatus",
+            "registeredAt"
+          ]
+        },
+        "SOURCE_LEDGER": {
+          "status": "PASS",
+          "columnCount": 12,
+          "columns": [
+            "collectionRunId",
+            "sourceUrl",
+            "sourceDomain",
+            "sourceChannel",
+            "originalTitle",
+            "retrievalTimestamp",
+            "httpStatus",
+            "rawContentSha256",
+            "evidenceSnapshotFile",
+            "verificationOutcome",
+            "gateAuditSummary",
+            "associatedEventId"
+          ]
+        },
+        "PUBLISH_AUDIT": {
+          "status": "PASS",
+          "columnCount": 12,
+          "columns": [
+            "auditLogId",
+            "editionId",
+            "action",
+            "performedBy",
+            "gateDecision",
+            "freshnessRatioRecorded",
+            "verifiedCountRecorded",
+            "localJsonChecksum",
+            "sheetsSyncStatus",
+            "rollbackReferenceCheckpoint",
+            "notes",
+            "timestamp"
+          ]
+        }
+      }
+    },
+    "stage3_canary_write": {
+      "EDITIONS": {
+        "status": "PASS",
+        "updatedCells": 15
+      },
+      "NEWS_EVENTS": {
+        "status": "PASS",
+        "updatedCells": 20
+      },
+      "EDITORIAL_SECTIONS": {
+        "status": "PASS",
+        "updatedCells": 11
+      },
+      "MARKET_PULSE_HISTORY": {
+        "status": "PASS",
+        "updatedCells": 14
+      },
+      "EVENT_REGISTRY": {
+        "status": "PASS",
+        "updatedCells": 13
+      },
+      "SOURCE_LEDGER": {
+        "status": "PASS",
+        "updatedCells": 12
+      },
+      "PUBLISH_AUDIT": {
+        "status": "PASS",
+        "updatedCells": 12
+      }
+    },
+    "stage4_readback_parity": {
+      "EDITIONS": {
+        "status": "PASS",
+        "fieldsVerified": 15,
+        "mismatchCount": 0
+      },
+      "NEWS_EVENTS": {
+        "status": "PASS",
+        "fieldsVerified": 20,
+        "mismatchCount": 0
+      },
+      "EDITORIAL_SECTIONS": {
+        "status": "PASS",
+        "fieldsVerified": 11,
+        "mismatchCount": 0
+      },
+      "MARKET_PULSE_HISTORY": {
+        "status": "PASS",
+        "fieldsVerified": 14,
+        "mismatchCount": 0
+      },
+      "EVENT_REGISTRY": {
+        "status": "PASS",
+        "fieldsVerified": 13,
+        "mismatchCount": 0
+      },
+      "SOURCE_LEDGER": {
+        "status": "PASS",
+        "fieldsVerified": 12,
+        "mismatchCount": 0
+      },
+      "PUBLISH_AUDIT": {
+        "status": "PASS",
+        "fieldsVerified": 12,
+        "mismatchCount": 0
+      }
+    },
+    "stage5_idempotency": {
+      "EDITIONS": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "NEWS_EVENTS": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "EDITORIAL_SECTIONS": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "MARKET_PULSE_HISTORY": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "EVENT_REGISTRY": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "SOURCE_LEDGER": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      },
+      "PUBLISH_AUDIT": {
+        "status": "PASS",
+        "totalRowsAfterRepeat": 2,
+        "duplicateCreated": false
+      }
+    },
+    "stage6_error_handling": {
+      "bad_tab": {
+        "status": "PASS",
+        "httpStatus": 400
+      },
+      "invalid_token": {
+        "status": "PASS",
+        "httpStatus": 401
+      },
+      "malformed_range": {
+        "status": "PASS",
+        "httpStatus": 400
+      }
+    },
+    "stage7_cleanup": {
+      "EDITIONS": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "NEWS_EVENTS": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "EDITORIAL_SECTIONS": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "MARKET_PULSE_HISTORY": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "EVENT_REGISTRY": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "SOURCE_LEDGER": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      },
+      "PUBLISH_AUDIT": {
+        "status": "PASS",
+        "remainingRows": 1,
+        "headerIntact": true
+      }
+    },
+    "stage8_baseline_integrity": {
+      "magspread-preview.html": {
+        "sha256": "a7679251c49d4f30485a90e36191eeaf6185313625e264878273b1e79a6577d4",
+        "status": "MATCH_100%"
+      },
+      "magspread.css": {
+        "sha256": "82d7c64209e3b726d7e0c7cf4e29524ad336c03b151369ff360aba82b6ce49ba",
+        "status": "MATCH_100%"
+      },
+      "magspread.js": {
+        "sha256": "860a21903aa03ab31ec597d8cff8fcdb028b63b1d8ca10adffb90318dbf2ce6c",
+        "status": "MATCH_100%"
+      },
+      "edition-data.json": {
+        "sha256": "c95a591a4b695e51f980737d0f5c3a85e498023292c1c62e63daed0bf3dbe67a",
+        "status": "MATCH_100%"
+      },
+      "edition-data.js": {
+        "sha256": "9d819ad6323ac42e13eabb16c5b5150cf306192739524bd6317d1efbf8f9a694",
+        "status": "MATCH_100%"
+      }
+    }
+  },
+  "verdict": "LIVE_CANARY_PASS"
+}

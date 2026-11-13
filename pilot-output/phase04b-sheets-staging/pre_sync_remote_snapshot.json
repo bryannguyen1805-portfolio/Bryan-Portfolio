@@ -1,0 +1,132 @@
+{
+  "timestamp": 1794162545.539178,
+  "spreadsheetId": "10MG2RSmh7MtX3x7Ej1u0NFD-rp6rqXXXOhQi11hkvy8",
+  "title": "Bryan FinTech Intelligence \u2014 Archive STAGING",
+  "tabs": {
+    "EDITIONS": [
+      [
+        "editionId",
+        "editionNumber",
+        "editionDate",
+        "displayDate",
+        "cutoffTime",
+        "publicationStatus",
+        "gateStatus",
+        "freshnessRatio",
+        "eligibleCount",
+        "count0To24h",
+        "count24To48h",
+        "count48To72h",
+        "leadStoryTitle",
+        "macroTheme",
+        "archivedAt"
+      ]
+    ],
+    "NEWS_EVENTS": [
+      [
+        "editionId",
+        "eventId",
+        "stt",
+        "headline",
+        "category",
+        "tier",
+        "sourceName",
+        "canonicalUrl",
+        "originalSourcePublishedAt",
+        "timeDeltaFromCutoff",
+        "timeWindowBucket",
+        "verificationStatus",
+        "dedupStatus",
+        "isFollowUp",
+        "followUpTo",
+        "evidenceSha256",
+        "verifiedFactSummary",
+        "macroToMicro",
+        "fintechImpact",
+        "prediction"
+      ]
+    ],
+    "EDITORIAL_SECTIONS": [
+      [
+        "editionId",
+        "sectionKey",
+        "sectionTitle",
+        "editorialRating",
+        "primaryThesis",
+        "transmissionMechanism",
+        "actionableRecommendations",
+        "riskFactors",
+        "monitoringChecklist",
+        "sectionWordCount",
+        "lastEditedAt"
+      ]
+    ],
+    "MARKET_PULSE_HISTORY": [
+      [
+        "editionId",
+        "indicatorId",
+        "indicatorName",
+        "category",
+        "tier",
+        "currentValue",
+        "previousValue",
+        "changeAbsolute",
+        "changePercent",
+        "unit",
+        "trendSignal",
+        "sourceAgency",
+        "measurementDate",
+        "verificationStatus"
+      ]
+    ],
+    "EVENT_REGISTRY": [
+      [
+        "eventId",
+        "canonicalUrl",
+        "normalizedHeadlineSignature",
+        "originalTitle",
+        "primaryEntity",
+        "eventDate",
+        "publicationDate",
+        "firstDiscoveredInEdition",
+        "duplicateCount",
+        "isFollowUp",
+        "followUpToEventId",
+        "lifecycleStatus",
+        "registeredAt"
+      ]
+    ],
+    "SOURCE_LEDGER": [
+      [
+        "collectionRunId",
+        "sourceUrl",
+        "sourceDomain",
+        "sourceChannel",
+        "originalTitle",
+        "retrievalTimestamp",
+        "httpStatus",
+        "rawContentSha256",
+        "evidenceSnapshotFile",
+        "verificationOutcome",
+        "gateAuditSummary",
+        "associatedEventId"
+      ]
+    ],
+    "PUBLISH_AUDIT": [
+      [
+        "auditLogId",
+        "editionId",
+        "action",
+        "performedBy",
+        "gateDecision",
+        "freshnessRatioRecorded",
+        "verifiedCountRecorded",
+        "localJsonChecksum",
+        "sheetsSyncStatus",
+        "rollbackReferenceCheckpoint",
+        "notes",
+        "timestamp"
+      ]
+    ]
+  }
+}

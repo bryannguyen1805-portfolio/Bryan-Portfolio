@@ -1,0 +1,2 @@
+auditLogId,editionId,action,performedBy,gateDecision,freshnessRatioRecorded,verifiedCountRecorded,localJsonChecksum,sheetsSyncStatus,rollbackReferenceCheckpoint,notes,timestamp
+AUDIT-PILOT25-20261109003808,EDITION-2026-11-08-PILOT25,STAGING_SYNC,AI_QA_LEAD,APPROVED_FOR_PUBLICATION,52.38%,21,c95a591a4b695e51f980737d0f5c3a85e498023292c1c62e63daed0bf3dbe67a,STAGING_DRY_RUN_PASS,CHECKPOINT-03-PHASE04A-ACCEPTED,Staging dry-run transformation passed 100% schema compliance. Production release remains locked.,2026-11-09T00:38:08.945502+07:00
