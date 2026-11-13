@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=optional" rel="stylesheet">
   <link rel="icon" type="image/png" href="./fintech-favicon.png">
   <link rel="apple-touch-icon" href="./fintech-favicon.png">
-  <link rel="stylesheet" href="./magspread.css?v=1794594194">
+  <link rel="stylesheet" href="./magspread.css?v=1794595719">
 </head>
 <body>
   <!-- Accessibility Skip Link (D-09) -->
@@ -111,7 +111,10 @@
           <span class="ms-masthead-sep" aria-hidden="true" style="color:var(--ms-border); margin:0 4px;">|</span>
           <span id="mastheadDate" class="ms-xs" style="font-size:12px;">THỨ SÁU, 13/11/2026</span>
         </div>
-        <div style="display:flex; align-items:center; gap:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button id="btnOpenMobileNav" class="ms-btn ms-btn-outline ms-btn-sm ms-hide-desktop" onclick="openMobileDrawer()" aria-label="Mở danh mục ấn bản" style="font-weight:700; font-size:12px; padding:0 10px;">
+            <span style="margin-right:4px;">☰</span> DANH MỤC
+          </button>
           <button id="btnOpenWelcomeIntro" class="ms-btn ms-btn-ghost ms-btn-sm" onclick="openWelcomeModal()" aria-label="Giới thiệu bản tin" title="Xem giới thiệu mục tiêu và cấu trúc ấn bản">
             <span>ℹ GIỚI THIỆU BẢN TIN</span>
           </button>
@@ -166,9 +169,6 @@
             <span class="ms-nav-num">04.</span> CƠ HỘI B2B
           </button>
         </li>
-            <span class="ms-nav-num">04.</span> CƠ HỘI B2B
-          </button>
-        </li>
 
         <!-- Tab 05: LƯU TRỮ (Ẩn khỏi UI theo D-03; dữ liệu backend được bảo toàn 100%) -->
         <li class="ms-nav-group" role="none" style="display:none !important;" id="navGroupArchive">
@@ -190,6 +190,9 @@
   <!-- Mobile Horizontal Quick Tabs Bar -->
   <div class="ms-mobile-quick-tabs ms-hide-desktop" aria-label="Danh mục nhanh di động">
     <div class="ms-quick-tabs-scroll">
+      <button class="ms-quick-tab ms-quick-tab-drawer" type="button" onclick="openMobileDrawer()" aria-label="Mở danh mục đầy đủ" style="font-weight:700; background:var(--ms-surface-card); color:var(--ms-primary); border:1px solid var(--ms-border);">
+        <span style="margin-right:4px;">☰</span> Danh mục
+      </button>
       <button class="ms-quick-tab active" data-tab="today" onclick="switchFintechTab('today')">01. Hôm nay</button>
       <button class="ms-quick-tab" data-tab="market" onclick="switchFintechTab('market')">02. Thị trường &amp; Tin tức</button>
       <button class="ms-quick-tab" data-tab="analysis" onclick="switchFintechTab('analysis')">03. Phân tích &amp; Học tập</button>
@@ -321,7 +324,7 @@
               <span class="ms-section-kicker">MARKET INTELLIGENCE TERMINAL</span>
               <h2 class="ms-section-heading">NHỊP ĐẬP THỊ TRƯỜNG (MARKET PULSE)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               4 CHỈ SỐ TRỌNG TÂM · NGUỒN BÁO CHÍ XÁC THỰC 100%
             </div>
           </div>
@@ -340,7 +343,6 @@
               <span class="ms-section-kicker">EDITORIAL DISPATCHES</span>
               <h2 class="ms-section-heading">BÀN TIN TỨC (THE NEWS DESK)</h2>
             </div>
-            <span class="ms-badge ms-badge-primary" id="newsCountBadge" role="status" aria-live="polite">25 BÀI ĐỦ ĐIỀU KIỆN</span>
           </div>
 
           <!-- Filter and Search Strip -->
@@ -388,7 +390,7 @@
               <span class="ms-section-kicker">ECONOMIC IMPACT CHAIN</span>
               <h2 class="ms-section-heading">CHUỖI TRUYỀN DẪN VĨ MÔ → VI MÔ (MACRO TO MICRO)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               VĨ MÔ → NGÂN HÀNG → DOANH NGHIỆP → TIÊU DÙNG → THANH TOÁN
             </div>
           </div>
@@ -407,7 +409,7 @@
               <span class="ms-section-kicker">EXPERT FINANCIAL EDUCATION</span>
               <h2 class="ms-section-heading">GÓC CHUYÊN MÔN FINTECH (BRYAN'S FINTECH LENS)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               GIẢI THÍCH THUẬT NGỮ &amp; BÀI HỌC THỰC CHIẾN TÀI CHÍNH
             </div>
           </div>
@@ -429,7 +431,7 @@
               <span class="ms-section-kicker">EXECUTIVE DECISION BRIEF · QUYẾT ĐỊNH &amp; HÀNH ĐỘNG</span>
               <h2 class="ms-section-heading">NHỮNG TÍN HIỆU TÔI CẦN CHÚ Ý HÔM NAY</h2>
             </div>
-            <span class="ms-badge ms-badge-rose" style="font-size:10px; letter-spacing:0.06em;">DÀNH RIÊNG CHO PHÁT TRIỂN B2B &amp; PAYOO</span>
+            <span class="ms-badge ms-badge-rose ms-section-note ms-hide-mobile" style="font-size:10px; letter-spacing:0.06em;">DÀNH RIÊNG CHO PHÁT TRIỂN B2B &amp; PAYOO</span>
           </div>
           <p class="ms-decision-lead-text">
             Bản tóm tắt điều hành chuyển hóa tin tức phiên hôm nay thành góc nhìn chiến lược, tác động dòng tiền và đề xuất hành động thực tiễn cho từng phân khúc khách hàng.
@@ -448,7 +450,7 @@
               <span class="ms-section-kicker">B2B COMMERCIAL INTELLIGENCE</span>
               <h2 class="ms-section-heading">RADAR CƠ HỘI THANH TOÁN B2B (PAYMENT RADAR)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               CƠ HỘI THƯƠNG MẠI CHO DOANH NGHIỆP &amp; GIẢI PHÁP PAYOO
             </div>
           </div>
@@ -467,7 +469,7 @@
               <span class="ms-section-kicker">MONITORING RADAR · QUAN SÁT CÓ ĐIỀU KIỆN</span>
               <h2 class="ms-section-heading">ĐIỀU CẦN THEO DÕI TIẾP (MONITORING WATCHLIST)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               4 CHỈ BÁO &amp; NGƯỠNG KÍCH HOẠT HÀNH ĐỘNG TUẦN TỚI
             </div>
           </div>
@@ -488,7 +490,7 @@
               <span class="ms-section-kicker">HISTORICAL ARCHIVE &amp; VERIFICATION AUDIT</span>
               <h2 class="ms-section-heading">LƯU TRỮ ẤN BẢN (EDITION ARCHIVE)</h2>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
+            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
               TRA CỨU LỊCH SỬ ẤN BẢN THEO NGÀY
             </div>
           </div>
@@ -784,7 +786,7 @@
     </button>
   </div>
 
-  <script src="./edition-data.js?v=1794594300"></script>
-  <script src="./magspread.js?v=1794594300"></script>
+  <script src="./edition-data.js?v=1794595719"></script>
+  <script src="./magspread.js?v=1794595719"></script>
 </body>
 </html>

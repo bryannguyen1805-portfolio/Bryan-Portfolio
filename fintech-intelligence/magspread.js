@@ -472,17 +472,8 @@ function renderNewsDesk() {
   const editorialGrid = $('.ms-news-editorial-grid');
   const standardGrid = $('#newsStandardGrid');
   const countBadge = $('#newsCountBadge');
-
-  // D-08: Distinguish total eligible count from filtered search count
-  const totalEligible = newsList.length;
   if (countBadge) {
-    if (filtered.length === totalEligible) {
-      countBadge.textContent = `${totalEligible} BÀI ĐỦ ĐIỀU KIỆN (ĐÃ LOẠI REJECTED)`;
-    } else if (filtered.length > 0) {
-      countBadge.textContent = `ĐANG HIỂN THỊ: ${filtered.length}/${totalEligible} BÀI PHÙ HỢP`;
-    } else {
-      countBadge.textContent = `0 BÀI PHÙ HỢP (TRÊN TỔNG SỐ ${totalEligible} BÀI ĐỦ ĐIỀU KIỆN)`;
-    }
+    countBadge.remove();
   }
 
   // D-08: Rich Empty State with clear search action
@@ -508,33 +499,38 @@ function renderNewsDesk() {
     return;
   }
 
-  if (editorialGrid) editorialGrid.style.display = 'grid';
-
-  // DYNAMIC REFLOW BASED ON RESULTS COUNT
+  // DYNAMIC REFLOW: ZERO ORPHAN POLICY FOR CATEGORY AND SEARCH FILTERS
   if (filtered.length === 1) {
-    editorialGrid.style.gridTemplateColumns = '1fr';
+    if (editorialGrid) {
+      editorialGrid.style.display = 'grid';
+      editorialGrid.style.gridTemplateColumns = '1fr';
+    }
     if (subContainer) subContainer.style.display = 'none';
     if (standardGrid) standardGrid.style.display = 'none';
     if (leadContainer) {
       leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
     }
-  } else if (filtered.length === 2) {
-    editorialGrid.style.gridTemplateColumns = '1fr 1fr';
-    if (subContainer) {
-      subContainer.style.display = 'block';
-      subContainer.innerHTML = renderSubfeatureCardHtml(filtered[1]);
-    }
-    if (standardGrid) standardGrid.style.display = 'none';
-    if (leadContainer) {
-      leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
+  } else if (filtered.length % 2 === 0) {
+    // When results count is even (e.g. 2, 4, 10):
+    // Render balanced 2-column grid in standardGrid with 0 orphan cards!
+    if (editorialGrid) editorialGrid.style.display = 'none';
+    if (standardGrid) {
+      standardGrid.style.display = 'grid';
+      standardGrid.innerHTML = filtered.map(item => renderStandardNewsCardHtml(item)).join('');
     }
   } else {
-    editorialGrid.style.gridTemplateColumns = '';
-    if (subContainer) subContainer.style.display = 'flex';
+    // When results count is odd (e.g. 3, 5, 7, 9, 25):
+    // Editorial grid takes 3 items (1 lead + 2 subfeatures);
+    // remaining is (odd - 3) = EVEN, which fills 2-column standardGrid with 0 orphan cards!
+    if (editorialGrid) {
+      editorialGrid.style.display = 'grid';
+      editorialGrid.style.gridTemplateColumns = '';
+    }
     if (leadContainer) {
       leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
     }
     if (subContainer) {
+      subContainer.style.display = 'flex';
       const subFeatures = filtered.slice(1, 3);
       subContainer.innerHTML = subFeatures.map(item => renderSubfeatureCardHtml(item)).join('');
     }
