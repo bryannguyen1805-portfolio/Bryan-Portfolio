@@ -4455,3 +4455,53 @@ i,
 section[id], main [id] {
   scroll-margin-top: 64px !important;
 }
+
+/* ==========================================================================
+   V2.2.4 UNIFIED CATEGORY PAGE TOP ALIGNMENT & LOGO SIZING
+   ========================================================================== */
+#headerBryanLogo,
+#footerBryanLogo {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.ms-page-section > section:first-of-type,
+#page-today > .ms-cover-story,
+#page-market > .ms-market-pulse-section,
+#page-analysis > .ms-macro-micro-section,
+#page-b2b > .ms-decision-section,
+#page-archive > .ms-archive-section {
+  padding-top: 28px !important;
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+
+.ms-page-section > section:first-of-type .ms-section-header,
+#page-today .ms-cover-story-kicker-bar,
+#page-market #marketPulse .ms-section-header,
+#page-analysis #macroToMicro .ms-section-header,
+#page-b2b #decisionBrief .ms-section-header,
+#page-archive #archiveSection .ms-section-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.ms-page-section > section:first-of-type .ms-section-kicker,
+#page-today .ms-cover-story-kicker-bar {
+  margin-top: 0 !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 768px) {
+  .ms-page-section > section:first-of-type,
+  #page-today > .ms-cover-story,
+  #page-market > .ms-market-pulse-section,
+  #page-analysis > .ms-macro-micro-section,
+  #page-b2b > .ms-decision-section,
+  #page-archive > .ms-archive-section {
+    padding-top: 20px !important;
+  }
+}

@@ -53,7 +53,7 @@ function updateThemeIcon() {
   // Sync Bryan Portfolio Logo correctly
   const logo = $('#headerBryanLogo');
   const footerLogo = $('#footerBryanLogo');
-  const targetLogo = isDark ? '../bryan-logo-2.webp' : '../bryan-logo-light.webp';
+  const targetLogo = isDark ? './bnews-logo-dark.png' : './bnews-logo-light.png';
   if (logo) logo.src = targetLogo;
   if (footerLogo) footerLogo.src = targetLogo;
 }
@@ -171,10 +171,11 @@ function renderMasthead() {
 
   if (dateEl) dateEl.textContent = (EDITION_DATA.dayOfWeek ? (EDITION_DATA.dayOfWeek.toUpperCase() + ', ') : '') + (EDITION_DATA.editionDate || '11/11/2026');
   if (editionBadge) {
+    const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').split('·')[0].trim();
     const isPreviewOnly = EDITION_DATA.publicationGateStatus?.status === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY' || EDITION_DATA.publicationGateStatus?.gateStatus === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY';
     const badgeLabel = EDITION_DATA.publicationGateStatus?.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN';
     const badgeSuffix = isPreviewOnly ? ` · ${badgeLabel}` : '';
-    editionBadge.textContent = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 24') + badgeSuffix;
+    editionBadge.textContent = baseEdition + badgeSuffix;
     if (isPreviewOnly) {
       editionBadge.className = 'ms-badge ms-badge-warning';
     }
@@ -233,7 +234,7 @@ function renderCoverStory() {
     quoteEl.innerHTML = `
       <div class="ms-quote-text">“${escapeHtml(ct.editorialPullQuote ? ct.editorialPullQuote.replace(/^[“”"\']+|[“”"\']+$/g, '') : '')}”</div>
       ${ct.editorialSynthesis ? `<p style="font-size:0.8125rem; line-height:1.55; margin:8px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
-      <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.6875rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN FINTECH INTELLIGENCE</div>
+      <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.6875rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN NEWS | FINTECH INTELLIGENCE</div>
     `;
   }
 

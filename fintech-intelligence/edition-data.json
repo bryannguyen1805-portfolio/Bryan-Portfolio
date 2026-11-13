@@ -3,7 +3,7 @@
   "editionDate": "13/11/2026",
   "dayOfWeek": "Thứ Sáu",
   "editionCutoffAt": "2026-11-13T09:28:45.112309+07:00",
-  "editionNumber": "ẤN BẢN SỐ 28 · 25 SỰ KIỆN XÁC MINH (0–24H: 24/25 · 96.0%)",
+  "editionNumber": "ẤN BẢN SỐ 28",
   "publicationGateStatus": {
     "status": "PASS_25_EVENTS_24H_80PCT",
     "publicBadgeLabel": "ĐÃ XÁC MINH · 0–24H: 24/25 (96.0%)",
@@ -29,10 +29,10 @@
       "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
       "change": "+11 VND/USD",
       "unit": "VND/USD",
-      "observationAt": "2026-11-11T08:30:00+07:00",
-      "asOf": "2026-11-11",
-      "dataPeriod": "Phiên 2026-11-11 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-11T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
@@ -57,7 +57,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
           "Đơn vị phát hành & đối soát: Tạp chí Kinh tế Việt Nam (VnEconomy).",
-          "Kỳ dữ liệu: 2026-11-11 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25611 VND/USD cho ngày 2026-11-11."
         ]
@@ -71,26 +71,26 @@
       "tierNumber": 1,
       "label": "02. LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
       "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
-      "value": "2.8 %/năm",
+      "value": "7 %/năm",
       "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
-      "change": "+2.1 điểm %",
+      "change": "Khối NHTMCP tư nhân duy trì đỉnh 6,9%/năm; Big4 ổn định 5,4%/năm",
       "unit": "%/năm",
-      "observationAt": "2026-10-02T08:30:00+07:00",
-      "asOf": "2026-10-02",
-      "dataPeriod": "Phiên 2026-10-02 (cập nhật mới nhất)",
-      "publishedAt": "2026-10-02T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp",
-      "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-hut-khoi-thi-truong-hon-53000-ty-dong-lai-suat-lien-ngan-hang-bien-dong-manh-trong-tuan-qua-188261005135654704.chn",
+      "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
       "secondarySourceUrls": [
         "https://cafef.vn/tai-chinh-ngan-hang.chn"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_3455539292.html",
-      "sha256": "3455539292a77e5aad12d687b19bad4578fdd88e561ee2b57ffe4d2c4ef31af0",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html",
+      "sha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Quan sát gần nhất (2.8 %/năm ngày 2026-10-02) đã vượt trần độ tươi 72.0h theo quy chuẩn (STALE_OBSERVATION: Lãi suất liên ngân hàng qua đêm đã vượt trần 72.0h (942.5h > 72.0h).).",
+      "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM).",
       "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
       "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
       "discoveryAudit": {
@@ -103,9 +103,9 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu: 2026-10-02 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Quan sát gần nhất (2.8 %/năm ngày 2026-10-02) đã vượt trần độ tươi 72.0h theo quy chuẩn (STALE_OBSERVATION: Lãi suất liên ngân hàng qua đêm đã vượt trần 72.0h (942.5h > 72.0h).)."
+          "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM)."
         ]
       }
     },
@@ -117,26 +117,26 @@
       "tierNumber": 1,
       "label": "03. CHỈ SỐ VN-INDEX",
       "shortLabel": "CHỈ SỐ VN-INDEX",
-      "value": "7 %/năm",
+      "value": "1.743.00 Điểm",
       "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
-      "change": "-12,15 Điểm (-0,70%) sau chuỗi 2 phiên hồi phục trước đó",
+      "change": "+28.75 điểm",
       "unit": "Điểm",
-      "observationAt": "2026-11-10T08:30:00+07:00",
-      "asOf": "2026-11-10",
-      "dataPeriod": "Phiên 2026-11-10 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-10T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13 (cập nhật mới nhất)",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
-      "sourceName": "CafeF / VCCorp",
-      "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+      "sourceName": "Báo Tuổi Trẻ",
+      "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
       "secondarySourceUrls": [
         "https://cafef.vn/thi-truong-chung-khoan.chn"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html",
-      "sha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677",
+      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
+      "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
       "status": "caution",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM).",
+      "statusReason": "Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10.",
       "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
       "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
       "discoveryAudit": {
@@ -148,10 +148,10 @@
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
-          "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
+          "Đơn vị phát hành & đối soát: Báo Tuổi Trẻ.",
+          "Kỳ dữ liệu: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM)."
+          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10."
         ]
       }
     },
@@ -163,26 +163,26 @@
       "tierNumber": 1,
       "label": "04. KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM",
       "shortLabel": "KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM",
-      "value": "1.743.00 Điểm",
+      "value": "+36,8 %",
       "referenceValue": "10 tháng 2026: Tăng gần 37% | TP.HCM chuẩn hóa 5 giá trị thương hiệu du lịch quốc tế",
-      "change": "+28.75 điểm",
+      "change": "+36,8% YoY sau 10 tháng; đòn bẩy từ chính sách mở rộng visa và sản phẩm du lịch mới",
       "unit": "%",
-      "observationAt": "2026-11-10T08:30:00+07:00",
-      "asOf": "2026-11-10",
-      "dataPeriod": "Phiên 2026-11-10 (cập nhật mới nhất)",
-      "publishedAt": "2026-11-10T08:30:00+07:00",
+      "observationAt": "2026-10-31T23:59:59+07:00",
+      "asOf": "10 tháng 2026",
+      "dataPeriod": "Phiên 10 tháng 2026 (cập nhật mới nhất)",
+      "publishedAt": "2026-10-31T23:59:59+07:00",
       "fetchedAt": "2026-11-13T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
-      "sourceName": "Báo Tuổi Trẻ",
-      "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+      "sourceName": "Báo Thanh Niên (thanhnien.vn)",
+      "sourceUrl": "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm",
       "secondarySourceUrls": [
         "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
-      "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
+      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_20261106.html",
+      "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10.",
+      "statusReason": "Lượng khách quốc tế ghi nhận mức tăng trưởng bứt phá gần 37% sau 10 tháng năm 2026 nhờ chính sách thị thực thuận lợi và các chiến dịch quảng bá điểm đến quốc tế. Ngành du lịch và các địa phương trọng điểm (TP.HCM, Đà Nẵng, Phú Quốc) tăng tốc chuẩn hóa hệ thống sản phẩm và hạ tầng đón khách.",
       "financialInterpretation": "Dòng khách quốc tế tăng trưởng gần 37% tạo cú hích doanh thu trực tiếp cho ngành dịch vụ lữ hành, lưu trú khách sạn, chuỗi nhà hàng ẩm thực và bán lẻ quà lưu niệm. Nhu cầu điểm bán trang bị máy SmartPOS chấp nhận đa thẻ quốc tế (Visa, Mastercard, JCB, Amex) và mã VietQR Global bùng nổ, thúc đẩy sản lượng giao dịch thanh toán không tiền mặt và nguồn thu phí dịch vụ cho các trung gian thanh toán.",
       "monitoringWatchpoint": "Theo dõi mức chi tiêu bình quân của du khách quốc tế và sản lượng quẹt thẻ quốc tế trong mùa cao điểm cuối năm.",
       "discoveryAudit": {
@@ -194,17 +194,17 @@
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM:",
         "items": [
-          "Đơn vị phát hành & đối soát: Báo Tuổi Trẻ.",
-          "Kỳ dữ liệu: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
+          "Đơn vị phát hành & đối soát: Báo Thanh Niên (thanhnien.vn).",
+          "Kỳ dữ liệu: 10 tháng 2026 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1743.00 Điểm trong phiên ngày 2026-11-10."
+          "Ý nghĩa điều hành: Lượng khách quốc tế ghi nhận mức tăng trưởng bứt phá gần 37% sau 10 tháng năm 2026 nhờ chính sách thị thực thuận lợi và các chiến dịch quảng bá điểm đến quốc tế. Ngành du lịch và các địa phương trọng điểm (TP.HCM, Đà Nẵng, Phú Quốc) tăng tốc chuẩn hóa hệ thống sản phẩm và hạ tầng đón khách."
         ]
       }
     }
   ],
   "editorialSections": {
     "sec01_masthead": {
-      "portalTitle": "Bryan FinTech Intelligence",
+      "portalTitle": "BRYAN NEWS | FINTECH INTELLIGENCE",
       "tagline": "Tạp chí & Cổng thông tin thị trường tài chính, thanh toán số, ngân hàng và cơ hội B2B — Phong cách tạp chí biên tập MagSpread cao cấp.",
       "editionDateDisplay": "Phiên ngày 13/11/2026 — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
       "bryanPortfolioUrl": "../index.html",
@@ -2281,7 +2281,7 @@
       "sectionSubtitle": "Lịch sử dữ liệu và truy vấn các ấn bản đã xuất bản"
     },
     "sec10_footer": {
-      "copyright": "© 2026 Bryan FinTech Intelligence. Bản quyền thuộc về Bryan Nguyen.",
+      "copyright": "© 2026 BRYAN NEWS | FINTECH INTELLIGENCE. Bản quyền thuộc về Bryan Nguyen.",
       "disclaimer": "Báo cáo phân tích phục vụ mục đích thông tin chuyên ngành, không cấu thành lời khuyên đầu tư tài chính trực tiếp."
     }
   },
