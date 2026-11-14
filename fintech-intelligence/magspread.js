@@ -546,7 +546,6 @@ function renderNewsDesk() {
       }
     }
   }
-  }
 }
 
 function clearNewsSearchAndFilter() {
