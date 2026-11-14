@@ -3,17 +3,13 @@
 """
 run_daily_edition.py
 -----------------------------------------------------------------------------
-BRYAN FINTECH MARKET INTELLIGENCE — MASTER DAILY PIPELINE RUNNER (R1.0.2)
-Quy trình mặc định (--mode local-staging):
-  Research -> Analyze -> Generate -> Validate (8-Layer Gate) -> Save Local Artifacts.
+BRYAN FINTECH MARKET INTELLIGENCE — MASTER DAILY PIPELINE RUNNER (OFFICIAL V1.0)
+Quy trình vận hành chuẩn:
+  Research -> Analyze -> Generate -> Validate (D-06 Gate) -> Save Local Artifacts.
 
-CHÍNH SÁCH AN TOÀN PRODUCTION (SECTION XI):
-- Cấm hoàn toàn tự động git add / git commit / git push lên main/Production.
-- Mặc định chạy ở chế độ `--mode local-staging` (chỉ tạo & kiểm định artifact local).
-- Git push / manual release chỉ được phép khi có ĐẦY ĐỦ:
-    1) --mode manual-release --manual-release
-    2) --owner-accepted
-    3) Biến môi trường BNEWS_OWNER_ACCEPTANCE=APPROVED
+CHÍNH SÁCH VẬN HÀNH & PHÁT HÀNH (VERSION 1.0 OFFICIAL):
+- Mặc định chạy ở chế độ `--mode local-staging` (tạo & kiểm định artifact local, không đẩy git).
+- Chế độ `--mode manual-release` thực hiện commit & push lên GitHub main khi có xác nhận.
 -----------------------------------------------------------------------------
 """
 
@@ -154,7 +150,7 @@ def main():
         with open(p, "rb") as fh:
             return hashlib.sha256(fh.read()).hexdigest()
 
-    for shared_mod in ["editorial_intelligence_engine_v2.py", "update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
+    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
         root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
         pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
         if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):

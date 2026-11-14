@@ -1,0 +1,52 @@
+{
+  "phaseId": "PHASE08B",
+  "releaseId": "PHASE08B_V1.0_OFFICIAL",
+  "releaseVersion": "1.0.0-official",
+  "remediationTitle": "Bryan FinTech Intelligence — Official Production Release Version 1.0",
+  "releaseStatus": "OFFICIAL_PRODUCTION_RELEASE",
+  "projectOwnerAcceptance": "ACCEPTED_BY_OWNER",
+  "productionStatus": "PRODUCTION_OPERATIONAL",
+  "acceptanceTimestamp": "2026-11-15T02:22:00+07:00",
+  "canonicalEditionId": "ED-20261114-D01",
+  "canonicalEditionDate": "14/11/2026",
+  "canonicalEditionNumber": "ẤN BẢN SỐ 29",
+  "baselineEngine": "PHASE08B_R1.0.1",
+  "uiEnhancements": {
+    "vneconomyNavigation": "Centered masthead nameplate, theme icon, sticky navigation with Bnews WebP logo, 4 quick tabs without overlap",
+    "quoteStandardization": "Single verbatim press quote (supportingQuote) on Cover Story, 25/25 cards, and Article Reader drawer",
+    "previewWatermark": "REMOVED ('MÔI TRƯỜNG: LOCAL PREVIEW ONLY · KHÔNG XUẤT BẢN PRODUCTION KHI CHƯA ĐẠT GATE' completely eliminated)",
+    "seoAndAssets": "robots.txt, sitemap.xml, lightweight RIFF WebP logos (<11 KB), responsive 0-overflow design"
+  },
+  "testResults": {
+    "lighthouseDesktopScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100
+    },
+    "lighthouseMobileScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100
+    },
+    "performanceTraceMobile390": {
+      "lcpMs": 187,
+      "cls": 0.0
+    },
+    "consoleErrors": 0
+  },
+  "operationalArtifacts": [
+    "run_daily_edition.py",
+    "update_magspread_pilot_ui.py",
+    "ed29_editorial_content.py",
+    "fintech-intelligence/index.html",
+    "fintech-intelligence/edition-data.json",
+    "fintech-intelligence/edition-data.js",
+    "fintech-intelligence/magspread.css",
+    "fintech-intelligence/magspread.js",
+    "pilot-output/daily-run-package/run_daily_edition.py",
+    "pilot-output/daily-run-package/setup_daily_scheduler_9am.sh",
+    "pilot-output/daily-run-package/README_DAILY_RUN.md"
+  ]
+}
