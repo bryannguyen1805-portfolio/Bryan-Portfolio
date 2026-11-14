@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
+  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
   "cards": [
     {
       "decisionId": "DECISION-01",
@@ -29,31 +29,31 @@
         "RADAR-01"
       ],
       "supportingEventIds": [
+        "EVT-20261114-053",
+        "EVT-20261114-008",
+        "EVT-20261114-068",
         "EVT-20261114-011",
         "EVT-20261114-076",
-        "EVT-20261114-025",
-        "EVT-20261114-058",
-        "EVT-20261114-008",
-        "EVT-20261114-034",
-        "EVT-20261114-039",
-        "EVT-20261114-054",
-        "EVT-20261114-068",
-        "EVT-20261114-040",
-        "EVT-20261114-007",
-        "EVT-20261114-019",
-        "EVT-20261114-035",
-        "EVT-20261114-002",
-        "EVT-20261114-010",
-        "EVT-20261114-053",
-        "EVT-20261114-063",
-        "EVT-20261114-006",
         "EVT-20261114-048",
-        "EVT-20261114-044",
-        "EVT-20261114-043",
-        "EVT-20261114-015",
-        "EVT-20261114-024",
+        "EVT-20261114-039",
+        "EVT-20261114-073",
+        "EVT-20261114-064",
+        "EVT-20261114-007",
+        "EVT-20261114-052",
+        "EVT-20261114-054",
+        "EVT-20261114-014",
+        "EVT-20261114-006",
         "EVT-20261114-001",
-        "EVT-20261114-052"
+        "EVT-20261114-059",
+        "EVT-20261114-058",
+        "EVT-20261114-035",
+        "EVT-20261114-044",
+        "EVT-20261114-024",
+        "EVT-20261114-040",
+        "EVT-20261114-025",
+        "EVT-20261114-019",
+        "EVT-20261114-063",
+        "EVT-20261114-015"
       ],
       "supportingMarketPulseIds": [
         "MP-07"
@@ -80,6 +80,39 @@
       ],
       "evidenceReferences": [
         {
+          "referenceId": "EVT-20261114-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T11:59:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
+          "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
+          "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
+        },
+        {
+          "referenceId": "EVT-20261114-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T12:18:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
+        },
+        {
+          "referenceId": "EVT-20261114-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T09:21:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
+          "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
           "referenceId": "EVT-20261114-011",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://thanhnien.vn/hang-viet-len-san-ngoai-de-hay-kho-185261113201431574.htm",
@@ -102,48 +135,15 @@
           "supportingQuote": "Liên quan đến vấn đề huy động vốn, các nguồn lực tăng trưởng cho cả giai đoạn và trong nhiệm kỳ này..."
         },
         {
-          "referenceId": "EVT-20261114-025",
+          "referenceId": "EVT-20261114-048",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
-          "canonicalUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-14T11:37:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_028_d0b3a6b3bb.html",
-          "evidenceSha256": "d0b3a6b3bbec8c21a8c06d98ee7768d88e9921ed5df3f400a19b6d4d91b6e589",
-          "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
-        },
-        {
-          "referenceId": "EVT-20261114-058",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
-          "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "sourceUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
           "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
-          "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
-          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
-        },
-        {
-          "referenceId": "EVT-20261114-008",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
-          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
-          "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
-        },
-        {
-          "referenceId": "EVT-20261114-034",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T18:15:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
+          "publishedAt": "2026-11-14T13:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
+          "evidenceSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
+          "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
           "referenceId": "EVT-20261114-039",
@@ -157,37 +157,26 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
-          "referenceId": "EVT-20261114-054",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
-          "canonicalUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
-          "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
-          "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
-        },
-        {
-          "referenceId": "EVT-20261114-068",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
+          "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
+          "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_071_158869ee61.html",
-          "evidenceSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04",
-          "supportingQuote": "Nhận định được ông Kenichi Yamato, Tổng giám đốc Krungsri, đưa ra tại lễ công bố hoàn tất chuyển nhượng vốn SFinance, tổ chức ngày 10/11 tại Hà Nội."
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
+          "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
+          "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-040",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
-          "canonicalUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-13T20:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_043_ac75464e5b.html",
-          "evidenceSha256": "ac75464e5bb7985e41f9a11dcbbfbacff2ec6a0fbfc5f68d61b09609991aeb1f",
-          "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
+          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
+          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T20:34:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
+          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
+          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
         {
           "referenceId": "EVT-20261114-007",
@@ -201,136 +190,48 @@
           "supportingQuote": "Tại thị trường tiêu thụ rau quả lớn Trung Quốc, hàng hóa của Thái Lan chiếm vị trí số 1 nhờ mở được \"luồng xanh\". Trong khi đó Việt Nam vẫn chưa thiết lập được cơ chế đặc biệt này."
         },
         {
-          "referenceId": "EVT-20261114-019",
+          "referenceId": "EVT-20261114-052",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:05:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_022_c019431874.html",
-          "evidenceSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d",
-          "supportingQuote": "Tại dự thảo lần thứ 14 trình Chính phủ, Bộ Công Thương cho hay dự thảo nghị định quy định không tiếp tục sử dụng Quỹ bình ổn giá xăng dầu là biện pháp bình ổn giá."
+          "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
+          "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T08:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
+          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-035",
+          "referenceId": "EVT-20261114-054",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
-          "canonicalUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
-          "publisher": "Báo Thanh Niên",
+          "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
+          "canonicalUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
+          "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_038_46aa6b83f1.html",
-          "evidenceSha256": "46aa6b83f1721d4663c48d27dd39639838dee66b8e84b6a1a0fdea5f9a64e98c",
-          "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
+          "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
+          "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
+          "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
         },
         {
-          "referenceId": "EVT-20261114-002",
+          "referenceId": "EVT-20261114-014",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
+          "sourceUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
           "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T07:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_002_088d40f5f1.html",
-          "evidenceSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea",
-          "supportingQuote": "Sau giai đoạn trầm lắng về nguồn cung, thị trường căn hộ TP.HCM và các khu vực lân cận đang ghi nhận lượng hàng mở bán mới gia tăng đáng kể."
-        },
-        {
-          "referenceId": "EVT-20261114-010",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
-          "referenceId": "EVT-20261114-053",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
-          "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T09:47:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_056_aba64138d4.html",
-          "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
-          "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
-        },
-        {
-          "referenceId": "EVT-20261114-063",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
-          "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
-          "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
-          "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
+          "publishedAt": "2026-11-14T13:35:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
+          "evidenceSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
+          "supportingQuote": "Theo tờ Wall Street Journal (WSJ) ngày 13-11, vốn hóa thị trường Nvidia giảm từ khoảng 5.770 tỉ USD kể từ thời điểm đạt đỉnh ngày 6-10 xuống còn khoảng 3.920 tỉ USD vào cuối phiên"
         },
         {
           "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
-        },
-        {
-          "referenceId": "EVT-20261114-048",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
-          "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T11:17:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_051_9e373dfc5d.html",
-          "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
-          "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
-        },
-        {
-          "referenceId": "EVT-20261114-044",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
-          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
+          "evidenceSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
-        },
-        {
-          "referenceId": "EVT-20261114-043",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
-          "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T11:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_046_f273a4bc36.html",
-          "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
-          "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
-        },
-        {
-          "referenceId": "EVT-20261114-015",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
-          "canonicalUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-14T06:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_018_cb7419778f.html",
-          "evidenceSha256": "cb7419778f82873b3191fc9935ace5120c6d72a6780a3dd9f26ced0f29c9f8d6",
-          "supportingQuote": "Khung giá phát điện mặt trời 2026 mới của Bộ Công thương đưa giá điện mặt trời có pin lưu trữ cao nhất. Việc này kỳ vọng sẽ hấp dẫn vốn đầu tư, từ đó tăng tốc nguồn điện tái tạo, b"
-        },
-        {
-          "referenceId": "EVT-20261114-024",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
-          "canonicalUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T21:29:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_027_9305aa3ba2.html",
-          "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e",
-          "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
         },
         {
           "referenceId": "EVT-20261114-001",
@@ -344,15 +245,114 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-052",
+          "referenceId": "EVT-20261114-059",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-          "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
-          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
-          "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
+          "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T14:10:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
+          "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
+        },
+        {
+          "referenceId": "EVT-20261114-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
+          "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T11:17:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
+          "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
+          "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
+        },
+        {
+          "referenceId": "EVT-20261114-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
+          "canonicalUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T08:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_46aa6b83f1.html",
+          "evidenceSha256": "46aa6b83f1721d4663c48d27dd39639838dee66b8e84b6a1a0fdea5f9a64e98c",
+          "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
+        },
+        {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
+          "referenceId": "EVT-20261114-024",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
+          "canonicalUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T21:29:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_9305aa3ba2.html",
+          "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e",
+          "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
+        },
+        {
+          "referenceId": "EVT-20261114-040",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
+          "canonicalUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-13T20:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_ac75464e5b.html",
+          "evidenceSha256": "ac75464e5bb7985e41f9a11dcbbfbacff2ec6a0fbfc5f68d61b09609991aeb1f",
+          "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
+        },
+        {
+          "referenceId": "EVT-20261114-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
+          "canonicalUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T11:37:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_d0b3a6b3bb.html",
+          "evidenceSha256": "d0b3a6b3bbec8c21a8c06d98ee7768d88e9921ed5df3f400a19b6d4d91b6e589",
+          "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
+        },
+        {
+          "referenceId": "EVT-20261114-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T11:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
+          "evidenceSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
+          "supportingQuote": "Phiên điều hành giá xăng dầu ngày 12-11 tiếp tục giảm mạnh cho tất cả các mặt hàng xăng dầu, ghi nhận là lần thứ tư liên tiếp giảm với xăng dầu, riêng mặt hàng dầu diesel có một ph"
+        },
+        {
+          "referenceId": "EVT-20261114-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
+          "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T09:47:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
+          "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
+          "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
+        },
+        {
+          "referenceId": "EVT-20261114-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
+          "canonicalUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_018_cb7419778f.html",
+          "evidenceSha256": "cb7419778f82873b3191fc9935ace5120c6d72a6780a3dd9f26ced0f29c9f8d6",
+          "supportingQuote": "Khung giá phát điện mặt trời 2026 mới của Bộ Công thương đưa giá điện mặt trời có pin lưu trữ cao nhất. Việc này kỳ vọng sẽ hấp dẫn vốn đầu tư, từ đó tăng tốc nguồn điện tái tạo, b"
         },
         {
           "referenceId": "MP-07",
@@ -454,31 +454,31 @@
         "RADAR-03"
       ],
       "supportingEventIds": [
-        "EVT-20261114-043",
-        "EVT-20261114-048",
-        "EVT-20261114-040",
-        "EVT-20261114-063",
+        "EVT-20261114-053",
         "EVT-20261114-058",
+        "EVT-20261114-040",
+        "EVT-20261114-073",
+        "EVT-20261114-068",
+        "EVT-20261114-048",
+        "EVT-20261114-064",
         "EVT-20261114-008",
-        "EVT-20261114-010",
         "EVT-20261114-001",
         "EVT-20261114-052",
-        "EVT-20261114-068",
-        "EVT-20261114-025",
+        "EVT-20261114-059",
+        "EVT-20261114-014",
         "EVT-20261114-044",
-        "EVT-20261114-053",
+        "EVT-20261114-019",
+        "EVT-20261114-025",
+        "EVT-20261114-006",
+        "EVT-20261114-063",
         "EVT-20261114-076",
         "EVT-20261114-035",
         "EVT-20261114-054",
-        "EVT-20261114-002",
         "EVT-20261114-007",
         "EVT-20261114-011",
         "EVT-20261114-015",
         "EVT-20261114-024",
-        "EVT-20261114-039",
-        "EVT-20261114-034",
-        "EVT-20261114-006",
-        "EVT-20261114-019"
+        "EVT-20261114-039"
       ],
       "supportingMarketPulseIds": [
         "MP-02",
@@ -515,24 +515,24 @@
       ],
       "evidenceReferences": [
         {
-          "referenceId": "EVT-20261114-043",
+          "referenceId": "EVT-20261114-053",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
           "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T11:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_046_f273a4bc36.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
           "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
           "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
         },
         {
-          "referenceId": "EVT-20261114-048",
+          "referenceId": "EVT-20261114-058",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
           "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T11:17:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_051_9e373dfc5d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
           "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
           "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
         },
@@ -548,48 +548,59 @@
           "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-008",
+          "referenceId": "EVT-20261114-048",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
-          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
-          "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
+          "sourceUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T13:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
+          "evidenceSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
+          "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261114-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T12:18:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
           "referenceId": "EVT-20261114-001",
@@ -609,20 +620,53 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
-          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
+          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-068",
+          "referenceId": "EVT-20261114-059",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_071_158869ee61.html",
-          "evidenceSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04",
-          "supportingQuote": "Nhận định được ông Kenichi Yamato, Tổng giám đốc Krungsri, đưa ra tại lễ công bố hoàn tất chuyển nhượng vốn SFinance, tổ chức ngày 10/11 tại Hà Nội."
+          "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T14:10:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
+          "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
+        },
+        {
+          "referenceId": "EVT-20261114-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:35:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
+          "evidenceSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
+          "supportingQuote": "Theo tờ Wall Street Journal (WSJ) ngày 13-11, vốn hóa thị trường Nvidia giảm từ khoảng 5.770 tỉ USD kể từ thời điểm đạt đỉnh ngày 6-10 xuống còn khoảng 3.920 tỉ USD vào cuối phiên"
+        },
+        {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
+          "referenceId": "EVT-20261114-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T11:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
+          "evidenceSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
+          "supportingQuote": "Phiên điều hành giá xăng dầu ngày 12-11 tiếp tục giảm mạnh cho tất cả các mặt hàng xăng dầu, ghi nhận là lần thứ tư liên tiếp giảm với xăng dầu, riêng mặt hàng dầu diesel có một ph"
         },
         {
           "referenceId": "EVT-20261114-025",
@@ -636,24 +680,24 @@
           "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
         },
         {
-          "referenceId": "EVT-20261114-044",
+          "referenceId": "EVT-20261114-006",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
-          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
+          "evidenceSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
-          "referenceId": "EVT-20261114-053",
+          "referenceId": "EVT-20261114-063",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
           "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:47:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_056_aba64138d4.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
           "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
           "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
         },
@@ -689,17 +733,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
           "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
           "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
-        },
-        {
-          "referenceId": "EVT-20261114-002",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T07:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_002_088d40f5f1.html",
-          "evidenceSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea",
-          "supportingQuote": "Sau giai đoạn trầm lắng về nguồn cung, thị trường căn hộ TP.HCM và các khu vực lân cận đang ghi nhận lượng hàng mở bán mới gia tăng đáng kể."
         },
         {
           "referenceId": "EVT-20261114-007",
@@ -757,39 +790,6 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
-          "referenceId": "EVT-20261114-034",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T18:15:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
-        },
-        {
-          "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
-        },
-        {
-          "referenceId": "EVT-20261114-019",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:05:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_022_c019431874.html",
-          "evidenceSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d",
-          "supportingQuote": "Tại dự thảo lần thứ 14 trình Chính phủ, Bộ Công Thương cho hay dự thảo nghị định quy định không tiếp tục sử dụng Quỹ bình ổn giá xăng dầu là biện pháp bình ổn giá."
-        },
-        {
           "referenceId": "MP-02",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Lãi suất liên ngân hàng qua đêm",
@@ -808,19 +808,19 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         },
         {
           "referenceId": "MP-05",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
-          "currentValue": null,
-          "unit": null,
-          "observationPeriod": "",
-          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-da-co-co-che-loai-tru-17-trieu-ty-dong-ra-khoi-room-tin-dung-188261025124958826.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_2079708f4a.html",
-          "evidenceSha256": "2079708f4aba9dfa28a946afa6cbfdc6424311fafe13e766032f26967dbc8da4"
+          "currentValue": "10.24",
+          "unit": "%",
+          "observationPeriod": "2026-08-31",
+          "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_0e21bba958.html",
+          "evidenceSha256": "0e21bba9580d0108bd581edd87195d6db987b91a9732fef0e337fb247134a268"
         }
       ]
     },
@@ -850,9 +850,9 @@
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingMarketPulseIds": [
         "MP-03"
@@ -890,35 +890,35 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
@@ -930,8 +930,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         }
       ]
     }
@@ -962,31 +962,31 @@
         "RADAR-01"
       ],
       "supportingEventIds": [
+        "EVT-20261114-053",
+        "EVT-20261114-008",
+        "EVT-20261114-068",
         "EVT-20261114-011",
         "EVT-20261114-076",
-        "EVT-20261114-025",
-        "EVT-20261114-058",
-        "EVT-20261114-008",
-        "EVT-20261114-034",
-        "EVT-20261114-039",
-        "EVT-20261114-054",
-        "EVT-20261114-068",
-        "EVT-20261114-040",
-        "EVT-20261114-007",
-        "EVT-20261114-019",
-        "EVT-20261114-035",
-        "EVT-20261114-002",
-        "EVT-20261114-010",
-        "EVT-20261114-053",
-        "EVT-20261114-063",
-        "EVT-20261114-006",
         "EVT-20261114-048",
-        "EVT-20261114-044",
-        "EVT-20261114-043",
-        "EVT-20261114-015",
-        "EVT-20261114-024",
+        "EVT-20261114-039",
+        "EVT-20261114-073",
+        "EVT-20261114-064",
+        "EVT-20261114-007",
+        "EVT-20261114-052",
+        "EVT-20261114-054",
+        "EVT-20261114-014",
+        "EVT-20261114-006",
         "EVT-20261114-001",
-        "EVT-20261114-052"
+        "EVT-20261114-059",
+        "EVT-20261114-058",
+        "EVT-20261114-035",
+        "EVT-20261114-044",
+        "EVT-20261114-024",
+        "EVT-20261114-040",
+        "EVT-20261114-025",
+        "EVT-20261114-019",
+        "EVT-20261114-063",
+        "EVT-20261114-015"
       ],
       "supportingMarketPulseIds": [
         "MP-07"
@@ -1013,6 +1013,39 @@
       ],
       "evidenceReferences": [
         {
+          "referenceId": "EVT-20261114-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T11:59:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
+          "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
+          "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
+        },
+        {
+          "referenceId": "EVT-20261114-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T12:18:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
+        },
+        {
+          "referenceId": "EVT-20261114-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T09:21:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
+          "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
           "referenceId": "EVT-20261114-011",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://thanhnien.vn/hang-viet-len-san-ngoai-de-hay-kho-185261113201431574.htm",
@@ -1035,48 +1068,15 @@
           "supportingQuote": "Liên quan đến vấn đề huy động vốn, các nguồn lực tăng trưởng cho cả giai đoạn và trong nhiệm kỳ này..."
         },
         {
-          "referenceId": "EVT-20261114-025",
+          "referenceId": "EVT-20261114-048",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
-          "canonicalUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-14T11:37:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_028_d0b3a6b3bb.html",
-          "evidenceSha256": "d0b3a6b3bbec8c21a8c06d98ee7768d88e9921ed5df3f400a19b6d4d91b6e589",
-          "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
-        },
-        {
-          "referenceId": "EVT-20261114-058",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
-          "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
+          "sourceUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
           "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
-          "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
-          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
-        },
-        {
-          "referenceId": "EVT-20261114-008",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
-          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
-          "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
-        },
-        {
-          "referenceId": "EVT-20261114-034",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T18:15:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
+          "publishedAt": "2026-11-14T13:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
+          "evidenceSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
+          "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
           "referenceId": "EVT-20261114-039",
@@ -1090,37 +1090,26 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
-          "referenceId": "EVT-20261114-054",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
-          "canonicalUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
-          "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
-          "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
-        },
-        {
-          "referenceId": "EVT-20261114-068",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
+          "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
+          "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_071_158869ee61.html",
-          "evidenceSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04",
-          "supportingQuote": "Nhận định được ông Kenichi Yamato, Tổng giám đốc Krungsri, đưa ra tại lễ công bố hoàn tất chuyển nhượng vốn SFinance, tổ chức ngày 10/11 tại Hà Nội."
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
+          "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
+          "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-040",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
-          "canonicalUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-13T20:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_043_ac75464e5b.html",
-          "evidenceSha256": "ac75464e5bb7985e41f9a11dcbbfbacff2ec6a0fbfc5f68d61b09609991aeb1f",
-          "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
+          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
+          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T20:34:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
+          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
+          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
         {
           "referenceId": "EVT-20261114-007",
@@ -1134,136 +1123,48 @@
           "supportingQuote": "Tại thị trường tiêu thụ rau quả lớn Trung Quốc, hàng hóa của Thái Lan chiếm vị trí số 1 nhờ mở được \"luồng xanh\". Trong khi đó Việt Nam vẫn chưa thiết lập được cơ chế đặc biệt này."
         },
         {
-          "referenceId": "EVT-20261114-019",
+          "referenceId": "EVT-20261114-052",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:05:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_022_c019431874.html",
-          "evidenceSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d",
-          "supportingQuote": "Tại dự thảo lần thứ 14 trình Chính phủ, Bộ Công Thương cho hay dự thảo nghị định quy định không tiếp tục sử dụng Quỹ bình ổn giá xăng dầu là biện pháp bình ổn giá."
+          "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
+          "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T08:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
+          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-035",
+          "referenceId": "EVT-20261114-054",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
-          "canonicalUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
-          "publisher": "Báo Thanh Niên",
+          "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
+          "canonicalUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
+          "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_038_46aa6b83f1.html",
-          "evidenceSha256": "46aa6b83f1721d4663c48d27dd39639838dee66b8e84b6a1a0fdea5f9a64e98c",
-          "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
+          "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
+          "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
+          "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
         },
         {
-          "referenceId": "EVT-20261114-002",
+          "referenceId": "EVT-20261114-014",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
+          "sourceUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
           "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T07:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_002_088d40f5f1.html",
-          "evidenceSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea",
-          "supportingQuote": "Sau giai đoạn trầm lắng về nguồn cung, thị trường căn hộ TP.HCM và các khu vực lân cận đang ghi nhận lượng hàng mở bán mới gia tăng đáng kể."
-        },
-        {
-          "referenceId": "EVT-20261114-010",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
-          "referenceId": "EVT-20261114-053",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
-          "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T09:47:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_056_aba64138d4.html",
-          "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
-          "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
-        },
-        {
-          "referenceId": "EVT-20261114-063",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
-          "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
-          "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
-          "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
+          "publishedAt": "2026-11-14T13:35:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
+          "evidenceSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
+          "supportingQuote": "Theo tờ Wall Street Journal (WSJ) ngày 13-11, vốn hóa thị trường Nvidia giảm từ khoảng 5.770 tỉ USD kể từ thời điểm đạt đỉnh ngày 6-10 xuống còn khoảng 3.920 tỉ USD vào cuối phiên"
         },
         {
           "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
-        },
-        {
-          "referenceId": "EVT-20261114-048",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
-          "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T11:17:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_051_9e373dfc5d.html",
-          "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
-          "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
-        },
-        {
-          "referenceId": "EVT-20261114-044",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
-          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
+          "evidenceSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
-        },
-        {
-          "referenceId": "EVT-20261114-043",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
-          "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T11:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_046_f273a4bc36.html",
-          "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
-          "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
-        },
-        {
-          "referenceId": "EVT-20261114-015",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
-          "canonicalUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
-          "publisher": "Báo Thanh Niên",
-          "publishedAt": "2026-11-14T06:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_018_cb7419778f.html",
-          "evidenceSha256": "cb7419778f82873b3191fc9935ace5120c6d72a6780a3dd9f26ced0f29c9f8d6",
-          "supportingQuote": "Khung giá phát điện mặt trời 2026 mới của Bộ Công thương đưa giá điện mặt trời có pin lưu trữ cao nhất. Việc này kỳ vọng sẽ hấp dẫn vốn đầu tư, từ đó tăng tốc nguồn điện tái tạo, b"
-        },
-        {
-          "referenceId": "EVT-20261114-024",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
-          "canonicalUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T21:29:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_027_9305aa3ba2.html",
-          "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e",
-          "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
         },
         {
           "referenceId": "EVT-20261114-001",
@@ -1277,15 +1178,114 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-052",
+          "referenceId": "EVT-20261114-059",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-          "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
-          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
-          "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
+          "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T14:10:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
+          "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
+        },
+        {
+          "referenceId": "EVT-20261114-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
+          "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T11:17:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
+          "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
+          "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
+        },
+        {
+          "referenceId": "EVT-20261114-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
+          "canonicalUrl": "https://thanhnien.vn/thuong-mai-dien-tu-thuan-viet-khang-dinh-suc-canh-tranh-tai-giai-thuong-chau-a-185261113175655307.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T08:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_46aa6b83f1.html",
+          "evidenceSha256": "46aa6b83f1721d4663c48d27dd39639838dee66b8e84b6a1a0fdea5f9a64e98c",
+          "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
+        },
+        {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
+          "referenceId": "EVT-20261114-024",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
+          "canonicalUrl": "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T21:29:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_9305aa3ba2.html",
+          "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e",
+          "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
+        },
+        {
+          "referenceId": "EVT-20261114-040",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
+          "canonicalUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-13T20:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_ac75464e5b.html",
+          "evidenceSha256": "ac75464e5bb7985e41f9a11dcbbfbacff2ec6a0fbfc5f68d61b09609991aeb1f",
+          "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
+        },
+        {
+          "referenceId": "EVT-20261114-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
+          "canonicalUrl": "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T11:37:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_d0b3a6b3bb.html",
+          "evidenceSha256": "d0b3a6b3bbec8c21a8c06d98ee7768d88e9921ed5df3f400a19b6d4d91b6e589",
+          "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
+        },
+        {
+          "referenceId": "EVT-20261114-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T11:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
+          "evidenceSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
+          "supportingQuote": "Phiên điều hành giá xăng dầu ngày 12-11 tiếp tục giảm mạnh cho tất cả các mặt hàng xăng dầu, ghi nhận là lần thứ tư liên tiếp giảm với xăng dầu, riêng mặt hàng dầu diesel có một ph"
+        },
+        {
+          "referenceId": "EVT-20261114-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
+          "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T09:47:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
+          "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
+          "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
+        },
+        {
+          "referenceId": "EVT-20261114-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
+          "canonicalUrl": "https://thanhnien.vn/tang-gia-dien-mat-troi-khuyen-khich-dau-tu-pin-luu-tru-18526111320091118.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-14T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_018_cb7419778f.html",
+          "evidenceSha256": "cb7419778f82873b3191fc9935ace5120c6d72a6780a3dd9f26ced0f29c9f8d6",
+          "supportingQuote": "Khung giá phát điện mặt trời 2026 mới của Bộ Công thương đưa giá điện mặt trời có pin lưu trữ cao nhất. Việc này kỳ vọng sẽ hấp dẫn vốn đầu tư, từ đó tăng tốc nguồn điện tái tạo, b"
         },
         {
           "referenceId": "MP-07",
@@ -1387,31 +1387,31 @@
         "RADAR-03"
       ],
       "supportingEventIds": [
-        "EVT-20261114-043",
-        "EVT-20261114-048",
-        "EVT-20261114-040",
-        "EVT-20261114-063",
+        "EVT-20261114-053",
         "EVT-20261114-058",
+        "EVT-20261114-040",
+        "EVT-20261114-073",
+        "EVT-20261114-068",
+        "EVT-20261114-048",
+        "EVT-20261114-064",
         "EVT-20261114-008",
-        "EVT-20261114-010",
         "EVT-20261114-001",
         "EVT-20261114-052",
-        "EVT-20261114-068",
-        "EVT-20261114-025",
+        "EVT-20261114-059",
+        "EVT-20261114-014",
         "EVT-20261114-044",
-        "EVT-20261114-053",
+        "EVT-20261114-019",
+        "EVT-20261114-025",
+        "EVT-20261114-006",
+        "EVT-20261114-063",
         "EVT-20261114-076",
         "EVT-20261114-035",
         "EVT-20261114-054",
-        "EVT-20261114-002",
         "EVT-20261114-007",
         "EVT-20261114-011",
         "EVT-20261114-015",
         "EVT-20261114-024",
-        "EVT-20261114-039",
-        "EVT-20261114-034",
-        "EVT-20261114-006",
-        "EVT-20261114-019"
+        "EVT-20261114-039"
       ],
       "supportingMarketPulseIds": [
         "MP-02",
@@ -1448,24 +1448,24 @@
       ],
       "evidenceReferences": [
         {
-          "referenceId": "EVT-20261114-043",
+          "referenceId": "EVT-20261114-053",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
           "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T11:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_046_f273a4bc36.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
           "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
           "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng."
         },
         {
-          "referenceId": "EVT-20261114-048",
+          "referenceId": "EVT-20261114-058",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
           "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T11:17:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_051_9e373dfc5d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
           "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
           "supportingQuote": "Theo đó, khách hàng được vay bằng VND với thời hạn tối đa 6 tháng."
         },
@@ -1481,48 +1481,59 @@
           "supportingQuote": "Ngày 10.11.2026 tại khách sạn Fairmont Hà Nội, Ngân hàng TMCP Công Thương Việt Nam (VietinBank) chính thức công bố ba phân hạng Khách hàng Ưu tiên mới của VietinBank Premium gồm Pl"
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-008",
+          "referenceId": "EVT-20261114-048",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-          "publisher": "Báo Đầu tư",
-          "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
-          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
-          "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
+          "sourceUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-14T13:30:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
+          "evidenceSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
+          "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261114-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "2026-11-14T12:18:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
           "referenceId": "EVT-20261114-001",
@@ -1542,20 +1553,53 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
-          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
+          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-068",
+          "referenceId": "EVT-20261114-059",
           "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-          "publisher": "CafeF / VCCorp",
-          "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_071_158869ee61.html",
-          "evidenceSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04",
-          "supportingQuote": "Nhận định được ông Kenichi Yamato, Tổng giám đốc Krungsri, đưa ra tại lễ công bố hoàn tất chuyển nhượng vốn SFinance, tổ chức ngày 10/11 tại Hà Nội."
+          "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T14:10:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
+          "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
+        },
+        {
+          "referenceId": "EVT-20261114-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:35:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
+          "evidenceSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
+          "supportingQuote": "Theo tờ Wall Street Journal (WSJ) ngày 13-11, vốn hóa thị trường Nvidia giảm từ khoảng 5.770 tỉ USD kể từ thời điểm đạt đỉnh ngày 6-10 xuống còn khoảng 3.920 tỉ USD vào cuối phiên"
+        },
+        {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
+          "referenceId": "EVT-20261114-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T11:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
+          "evidenceSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
+          "supportingQuote": "Phiên điều hành giá xăng dầu ngày 12-11 tiếp tục giảm mạnh cho tất cả các mặt hàng xăng dầu, ghi nhận là lần thứ tư liên tiếp giảm với xăng dầu, riêng mặt hàng dầu diesel có một ph"
         },
         {
           "referenceId": "EVT-20261114-025",
@@ -1569,24 +1613,24 @@
           "supportingQuote": "Trung tâm thương mại AEON MALL Hạ Long có vốn đầu tư hơn 5.140 tỉ đồng chính thức khai trương, bổ sung điểm mua sắm, vui chơi, giải trí mới cho người dân và du khách đến Quảng Ninh"
         },
         {
-          "referenceId": "EVT-20261114-044",
+          "referenceId": "EVT-20261114-006",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
-          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
+          "evidenceSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
-          "referenceId": "EVT-20261114-053",
+          "referenceId": "EVT-20261114-063",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
           "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:47:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_056_aba64138d4.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
           "evidenceSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
           "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T"
         },
@@ -1622,17 +1666,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
           "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
           "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
-        },
-        {
-          "referenceId": "EVT-20261114-002",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-14T07:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_002_088d40f5f1.html",
-          "evidenceSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea",
-          "supportingQuote": "Sau giai đoạn trầm lắng về nguồn cung, thị trường căn hộ TP.HCM và các khu vực lân cận đang ghi nhận lượng hàng mở bán mới gia tăng đáng kể."
         },
         {
           "referenceId": "EVT-20261114-007",
@@ -1690,39 +1723,6 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
-          "referenceId": "EVT-20261114-034",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T18:15:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
-        },
-        {
-          "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
-        },
-        {
-          "referenceId": "EVT-20261114-019",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:05:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_022_c019431874.html",
-          "evidenceSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d",
-          "supportingQuote": "Tại dự thảo lần thứ 14 trình Chính phủ, Bộ Công Thương cho hay dự thảo nghị định quy định không tiếp tục sử dụng Quỹ bình ổn giá xăng dầu là biện pháp bình ổn giá."
-        },
-        {
           "referenceId": "MP-02",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Lãi suất liên ngân hàng qua đêm",
@@ -1741,19 +1741,19 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         },
         {
           "referenceId": "MP-05",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
-          "currentValue": null,
-          "unit": null,
-          "observationPeriod": "",
-          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-da-co-co-che-loai-tru-17-trieu-ty-dong-ra-khoi-room-tin-dung-188261025124958826.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_2079708f4a.html",
-          "evidenceSha256": "2079708f4aba9dfa28a946afa6cbfdc6424311fafe13e766032f26967dbc8da4"
+          "currentValue": "10.24",
+          "unit": "%",
+          "observationPeriod": "2026-08-31",
+          "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_0e21bba958.html",
+          "evidenceSha256": "0e21bba9580d0108bd581edd87195d6db987b91a9732fef0e337fb247134a268"
         }
       ]
     },
@@ -1783,9 +1783,9 @@
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingMarketPulseIds": [
         "MP-03"
@@ -1823,35 +1823,35 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
@@ -1863,15 +1863,15 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         }
       ]
     }
   ],
   "totalDecisionCards": 4,
   "fiveQuestionsExecutiveSynthesis": {
-    "question1_whatIsMarketChanging": "Thị trường đang chuyển động theo các trục vĩ mô chính: Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM. Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Định hướng điều hành thanh khoản và can thiệp thị trường mở từ 'Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú' nhằm hạ nhiệt áp lực chi phí vốn liên ngân hàng, ổn định tỷ giá và khơi thông dòng tiền trên thị trường tài chính.",
+    "question1_whatIsMarketChanging": "Thị trường đang chuyển động theo các trục vĩ mô chính: Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM. Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Định hướng điều hành thanh khoản và can thiệp thị trường mở từ 'Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh' nhằm hạ nhiệt áp lực chi phí vốn liên ngân hàng, ổn định tỷ giá và khơi thông dòng tiền trên thị trường tài chính.",
     "question2_macroImpactOnBanksEnterprisesConsumers": "Ngân hàng duy trì cân đối chi phí huy động và thanh khoản; doanh nghiệp đối mặt với chi phí vốn chọn lọc nhưng hưởng lợi từ dòng tiền thông suốt hơn; người tiêu dùng duy trì tâm lý tích lũy phòng thủ kết hợp tập trung mua sắm có kế hoạch vào các dịp khuyến mại.",
     "question3_cashlessPaymentOpportunities": "Các cơ hội thương mại nổi bật nhất cho thanh toán không tiền mặt bao gồm: (1) Du lịch, Khách sạn & Bán lẻ Quốc tế: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.; (2) Logistics & Chuyển phát Hàng nặng: Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.; (3) Bán lẻ Giá trị cao, Điện máy & Xe điện: Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến..",
     "question4_keyWatchSignals": "Các tín hiệu điều hành và thị trường trọng điểm cần bám sát: Du lịch, Khách sạn & Bán lẻ Quốc tế: theo dõi Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.; Logistics & Chuyển phát Hàng nặng: theo dõi Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm ; Bán lẻ Giá trị cao, Điện máy & Xe điện: theo dõi Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phâ.",

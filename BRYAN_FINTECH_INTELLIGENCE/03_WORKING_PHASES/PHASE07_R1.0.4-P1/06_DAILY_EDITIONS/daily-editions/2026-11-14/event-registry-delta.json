@@ -1,16 +1,64 @@
 {
   "schemaVersion": "5.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
+  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
   "newlyRegisteredEventsCount": 25,
   "events": [
     {
-      "eventId": "EVT-20261114-043",
+      "eventId": "EVT-20261114-059",
+      "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+      "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-14T14:10:00+07:00",
+      "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426"
+    },
+    {
+      "eventId": "EVT-20261114-014",
+      "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+      "headline": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-14T13:35:00+07:00",
+      "evidenceSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4"
+    },
+    {
+      "eventId": "EVT-20261114-044",
+      "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+      "headline": "Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-14T13:32:00+07:00",
+      "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186"
+    },
+    {
+      "eventId": "EVT-20261114-048",
+      "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+      "headline": "SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-14T13:30:00+07:00",
+      "evidenceSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de"
+    },
+    {
+      "eventId": "EVT-20261114-008",
+      "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+      "headline": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-14T12:18:00+07:00",
+      "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02"
+    },
+    {
+      "eventId": "EVT-20261114-053",
       "canonicalUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
       "headline": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
       "publisher": "CafeF / VCCorp",
       "publishedAt": "2026-11-14T11:59:00+07:00",
       "evidenceSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d"
+    },
+    {
+      "eventId": "EVT-20261114-019",
+      "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+      "headline": "Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-14T11:53:00+07:00",
+      "evidenceSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8"
     },
     {
       "eventId": "EVT-20261114-025",
@@ -29,7 +77,7 @@
       "evidenceSha256": "f29847713d05bc1a9774a848c57bc623e645bb84ee6b720359c012abb6754dee"
     },
     {
-      "eventId": "EVT-20261114-048",
+      "eventId": "EVT-20261114-058",
       "canonicalUrl": "https://cafef.vn/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-do-phu-nu-lam-chu-lai-suat-chi-tu-78-nam-den-het-quy-i-2027-188261114111748694.chn",
       "headline": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027",
       "publisher": "CafeF / VCCorp",
@@ -37,15 +85,15 @@
       "evidenceSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63"
     },
     {
-      "eventId": "EVT-20261114-044",
+      "eventId": "EVT-20261114-006",
       "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
       "headline": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "publisher": "Báo Tuổi Trẻ",
       "publishedAt": "2026-11-14T10:50:00+07:00",
-      "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53"
+      "evidenceSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7"
     },
     {
-      "eventId": "EVT-20261114-053",
+      "eventId": "EVT-20261114-063",
       "canonicalUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
       "headline": "Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú",
       "publisher": "CafeF / VCCorp",
@@ -61,7 +109,7 @@
       "evidenceSha256": "50cfcd1b9e91bdd762a9e589c79b91603fccd709bbe9d7be534bce3f84cd2dba"
     },
     {
-      "eventId": "EVT-20261114-058",
+      "eventId": "EVT-20261114-068",
       "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
       "headline": "Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?",
       "publisher": "CafeF / VCCorp",
@@ -74,7 +122,7 @@
       "headline": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
       "publisher": "Báo Đầu tư",
       "publishedAt": "2026-11-14T08:30:00+07:00",
-      "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a"
+      "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895"
     },
     {
       "eventId": "EVT-20261114-035",
@@ -93,28 +141,12 @@
       "evidenceSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc"
     },
     {
-      "eventId": "EVT-20261114-063",
+      "eventId": "EVT-20261114-073",
       "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
       "headline": "VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành",
       "publisher": "CafeF / VCCorp",
       "publishedAt": "2026-11-14T08:00:00+07:00",
       "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a"
-    },
-    {
-      "eventId": "EVT-20261114-068",
-      "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-      "headline": "Krungsri hoàn tất sở hữu 100% SFinance, khẳng định cam kết phát triển dài hạn tại Việt Nam",
-      "publisher": "CafeF / VCCorp",
-      "publishedAt": "2026-11-14T08:00:00+07:00",
-      "evidenceSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04"
-    },
-    {
-      "eventId": "EVT-20261114-002",
-      "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-      "headline": "Nguồn cung tăng, giá nhà TP.HCM có giảm?",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-14T07:30:00+07:00",
-      "evidenceSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea"
     },
     {
       "eventId": "EVT-20261114-007",
@@ -149,7 +181,7 @@
       "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e"
     },
     {
-      "eventId": "EVT-20261114-010",
+      "eventId": "EVT-20261114-064",
       "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
       "headline": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
       "publisher": "Báo Tuổi Trẻ",
@@ -171,38 +203,6 @@
       "publisher": "Báo Tuổi Trẻ",
       "publishedAt": "2026-11-13T19:21:00+07:00",
       "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192"
-    },
-    {
-      "eventId": "EVT-20261114-034",
-      "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-      "headline": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-13T18:15:00+07:00",
-      "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c"
-    },
-    {
-      "eventId": "EVT-20261114-006",
-      "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-      "headline": "Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-13T17:59:00+07:00",
-      "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328"
-    },
-    {
-      "eventId": "EVT-20261114-019",
-      "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-      "headline": "Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-13T17:05:00+07:00",
-      "evidenceSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d"
-    },
-    {
-      "eventId": "EVT-20261114-008",
-      "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-      "headline": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
-      "publisher": "Báo Đầu tư",
-      "publishedAt": "2026-11-13T16:38:00+07:00",
-      "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac"
     }
   ]
 }

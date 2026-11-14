@@ -3,9 +3,9 @@
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
   "editionDate": "2026-11-14",
-  "executionId": "EXEC-20261114-132658-2ab47319",
+  "executionId": "EXEC-20261114-142902-b731a8dd",
   "executionMode": "LIVE",
-  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
+  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
   "readinessClassification": {
     "engineeringReadiness": "ENGINEERING_PASS",
     "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
@@ -37,6 +37,7 @@
     "shortfallReasons": [],
     "coveredResearchDomains": [
       "Banking & credit growth",
+      "Capital markets & VN-Index",
       "Corporate bonds & capital raising",
       "Deposit & lending interest rates",
       "Exchange rate & FX",
@@ -46,24 +47,24 @@
       "Tax, compliance, fraud, cybersecurity"
     ],
     "publisherDistribution": {
-      "CafeF / VCCorp": 7,
-      "Báo Thanh Niên": 6,
       "Báo Tuổi Trẻ": 9,
-      "Tạp chí Kinh tế Việt Nam (VnEconomy)": 1,
-      "Báo Đầu tư": 2
+      "CafeF / VCCorp": 7,
+      "Báo Đầu tư": 2,
+      "Báo Thanh Niên": 6,
+      "Tạp chí Kinh tế Việt Nam (VnEconomy)": 1
     }
   },
   "marketPulseStatusBreakdown": {
     "totalIndicators": 8,
-    "verifiedNumericCount": 5,
+    "verifiedNumericCount": 6,
     "staleObservationCount": 1,
-    "qualitativeUpdateOnlyCount": 2
+    "qualitativeUpdateOnlyCount": 1
   },
   "factAuditSummary": {
-    "totalRawFacts": 10,
-    "uniqueVerifiedFacts": 10,
+    "totalRawFacts": 7,
+    "uniqueVerifiedFacts": 7,
     "duplicateFactsIntercepted": 0,
-    "entitiesReboundFromQuote": 10,
+    "entitiesReboundFromQuote": 7,
     "ambiguousOrUnverifiedEntities": 0
   }
 }

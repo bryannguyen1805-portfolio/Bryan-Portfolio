@@ -2,9 +2,9 @@
   "schemaVersion": "5.0.0",
   "editionId": "ED-20261114-D01",
   "editionDate": "2026-11-14",
-  "executionId": "EXEC-20261114-132658-2ab47319",
+  "executionId": "EXEC-20261114-142902-b731a8dd",
   "executionMode": "LIVE",
-  "runTimestamp": "2026-11-14T13:26:58.890684+07:00",
+  "runTimestamp": "2026-11-14T14:29:02.377323+07:00",
   "overallRuntimeStatus": "PASS",
   "publicationAllowed": true,
   "productionStatus": "NOT_APPROVED",
@@ -20,8 +20,8 @@
       "stepNumber": 1,
       "stepName": "Runtime Initialization & Config Validation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:26:58.891223+07:00",
-      "completedAt": "2026-11-14T13:26:58.892277+07:00",
+      "startedAt": "2026-11-14T14:29:02.377670+07:00",
+      "completedAt": "2026-11-14T14:29:02.378338+07:00",
       "inputReferences": [
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_RUNTIME_CONFIG.json",
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE06_DATA_CONTRACT_V4_0_0.json",
@@ -44,8 +44,8 @@
       "stepNumber": 2,
       "stepName": "Timezone & Execution Window Calculation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:26:58.892282+07:00",
-      "completedAt": "2026-11-14T13:26:58.892303+07:00",
+      "startedAt": "2026-11-14T14:29:02.378342+07:00",
+      "completedAt": "2026-11-14T14:29:02.378356+07:00",
       "inputReferences": [
         "run_timestamp"
       ],
@@ -56,9 +56,9 @@
       ],
       "metrics": {
         "timezone": "Asia/Ho_Chi_Minh (UTC+07:00)",
-        "executionT0": "2026-11-14T13:26:58.890684+07:00",
-        "window0To24hStart": "2026-11-13T13:26:58.890684+07:00",
-        "windowMax72hStart": "2026-11-11T13:26:58.890684+07:00"
+        "executionT0": "2026-11-14T14:29:02.377323+07:00",
+        "window0To24hStart": "2026-11-13T14:29:02.377323+07:00",
+        "windowMax72hStart": "2026-11-11T14:29:02.377323+07:00"
       },
       "errorDetails": null
     },
@@ -67,8 +67,8 @@
       "stepNumber": 3,
       "stepName": "Historical Event Registry Loading",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:26:58.892305+07:00",
-      "completedAt": "2026-11-14T13:26:58.901449+07:00",
+      "startedAt": "2026-11-14T14:29:02.378357+07:00",
+      "completedAt": "2026-11-14T14:29:02.385695+07:00",
       "inputReferences": [
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/06_TESTS/fixtures",
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/VERIFIED_NEWS_DATABASE.json"
@@ -88,8 +88,8 @@
       "stepNumber": 4,
       "stepName": "Live News Candidate Discovery",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:26:58.901459+07:00",
-      "completedAt": "2026-11-14T13:27:38.807486+07:00",
+      "startedAt": "2026-11-14T14:29:02.385702+07:00",
+      "completedAt": "2026-11-14T14:29:35.540742+07:00",
       "inputReferences": [
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/05_LIVE_DATA/raw_evidence"
       ],
@@ -108,8 +108,8 @@
       "stepNumber": 5,
       "stepName": "Source Provenance Verification",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807503+07:00",
-      "completedAt": "2026-11-14T13:27:38.807505+07:00",
+      "startedAt": "2026-11-14T14:29:35.540754+07:00",
+      "completedAt": "2026-11-14T14:29:35.540756+07:00",
       "inputReferences": [
         "state.news_res.discovery.rawCandidates"
       ],
@@ -134,8 +134,8 @@
       "stepNumber": 6,
       "stepName": "Timestamp & Freshness Window Validation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807507+07:00",
-      "completedAt": "2026-11-14T13:27:38.807508+07:00",
+      "startedAt": "2026-11-14T14:29:35.540758+07:00",
+      "completedAt": "2026-11-14T14:29:35.540759+07:00",
       "inputReferences": [
         "state.news_res.step05_sourceVerification"
       ],
@@ -144,8 +144,8 @@
       ],
       "metrics": {
         "inputCount": 61,
-        "windowEligibleCount": 51,
-        "rejectedStaleOrInvalidCount": 10
+        "windowEligibleCount": 50,
+        "rejectedStaleOrInvalidCount": 11
       },
       "errorDetails": null
     },
@@ -154,8 +154,8 @@
       "stepNumber": 7,
       "stepName": "Cross-Day & Intra-Day Deduplication",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807509+07:00",
-      "completedAt": "2026-11-14T13:27:38.807511+07:00",
+      "startedAt": "2026-11-14T14:29:35.540760+07:00",
+      "completedAt": "2026-11-14T14:29:35.540761+07:00",
       "inputReferences": [
         "state.news_res.step06_windowValidation"
       ],
@@ -163,8 +163,8 @@
         "state.news_res.step07_deduplication"
       ],
       "metrics": {
-        "inputCount": 51,
-        "dedupVerifiedCount": 46,
+        "inputCount": 50,
+        "dedupVerifiedCount": 45,
         "duplicatesRemovedCount": 5
       },
       "errorDetails": null
@@ -174,8 +174,8 @@
       "stepNumber": 8,
       "stepName": "Financial Fact & Entity Binding Verification",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807512+07:00",
-      "completedAt": "2026-11-14T13:27:38.807513+07:00",
+      "startedAt": "2026-11-14T14:29:35.540763+07:00",
+      "completedAt": "2026-11-14T14:29:35.540764+07:00",
       "inputReferences": [
         "state.news_res.step07_deduplication"
       ],
@@ -184,10 +184,10 @@
       ],
       "metrics": {
         "factVerifiedCandidateCount": 44,
-        "totalRawFacts": 10,
-        "uniqueVerifiedFactsCount": 10,
+        "totalRawFacts": 7,
+        "uniqueVerifiedFactsCount": 7,
         "duplicateFactsInterceptedCount": 0,
-        "reboundEntitiesCount": 10,
+        "reboundEntitiesCount": 7,
         "ambiguousOrUnverifiedEntitiesCount": 0
       },
       "errorDetails": null
@@ -197,8 +197,8 @@
       "stepNumber": 9,
       "stepName": "25-Event / 24h Quota Gate",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807515+07:00",
-      "completedAt": "2026-11-14T13:27:38.807516+07:00",
+      "startedAt": "2026-11-14T14:29:35.540770+07:00",
+      "completedAt": "2026-11-14T14:29:35.540771+07:00",
       "inputReferences": [
         "state.news_res.selectedEvents"
       ],
@@ -219,6 +219,7 @@
         "shortfallReasons": [],
         "coveredResearchDomains": [
           "Banking & credit growth",
+          "Capital markets & VN-Index",
           "Corporate bonds & capital raising",
           "Deposit & lending interest rates",
           "Exchange rate & FX",
@@ -228,11 +229,11 @@
           "Tax, compliance, fraud, cybersecurity"
         ],
         "publisherDistribution": {
-          "CafeF / VCCorp": 7,
-          "Báo Thanh Niên": 6,
           "Báo Tuổi Trẻ": 9,
-          "Tạp chí Kinh tế Việt Nam (VnEconomy)": 1,
-          "Báo Đầu tư": 2
+          "CafeF / VCCorp": 7,
+          "Báo Đầu tư": 2,
+          "Báo Thanh Niên": 6,
+          "Tạp chí Kinh tế Việt Nam (VnEconomy)": 1
         }
       },
       "errorDetails": null
@@ -242,8 +243,8 @@
       "stepNumber": 10,
       "stepName": "Market Pulse Evidence Acquisition & Extraction",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:38.807523+07:00",
-      "completedAt": "2026-11-14T13:27:41.327165+07:00",
+      "startedAt": "2026-11-14T14:29:35.540772+07:00",
+      "completedAt": "2026-11-14T14:29:45.120945+07:00",
       "inputReferences": [
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/MARKET_PULSE_8.json",
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/03_INDICATOR_CONFIG/market_pulse_indicator_specs.json",
@@ -256,7 +257,7 @@
         "totalIndicatorsExtracted": 8,
         "evidenceFilesVerified": 8,
         "discoveryEngineInvoked": true,
-        "discoveredObservationsCount": 1,
+        "discoveredObservationsCount": 5,
         "eightSearchesExecuted": 8
       },
       "errorDetails": null
@@ -266,8 +267,8 @@
       "stepNumber": 11,
       "stepName": "Market Pulse Verification & Freshness Evaluation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.327173+07:00",
-      "completedAt": "2026-11-14T13:27:41.327176+07:00",
+      "startedAt": "2026-11-14T14:29:45.120952+07:00",
+      "completedAt": "2026-11-14T14:29:45.120954+07:00",
       "inputReferences": [
         "state.mp_res.indicators"
       ],
@@ -276,9 +277,9 @@
       ],
       "metrics": {
         "totalIndicators": 8,
-        "verifiedQuantitativeCount": 5,
+        "verifiedQuantitativeCount": 6,
         "staleObservationCount": 1,
-        "qualitativeUpdateCount": 2
+        "qualitativeUpdateCount": 1
       },
       "errorDetails": null
     },
@@ -287,8 +288,8 @@
       "stepNumber": 12,
       "stepName": "Core Thesis Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.327177+07:00",
-      "completedAt": "2026-11-14T13:27:41.331269+07:00",
+      "startedAt": "2026-11-14T14:29:45.120956+07:00",
+      "completedAt": "2026-11-14T14:29:45.124893+07:00",
       "inputReferences": [
         "state.news_res.selectedEvents",
         "state.mp_res.indicators"
@@ -299,7 +300,7 @@
       "metrics": {
         "totalThesesGenerated": 4,
         "themeGroupsCovered": 4,
-        "claimsGenerated": 20
+        "claimsGenerated": 18
       },
       "errorDetails": null
     },
@@ -308,8 +309,8 @@
       "stepNumber": 13,
       "stepName": "Connect the Dots Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.331272+07:00",
-      "completedAt": "2026-11-14T13:27:41.334173+07:00",
+      "startedAt": "2026-11-14T14:29:45.124897+07:00",
+      "completedAt": "2026-11-14T14:29:45.127564+07:00",
       "inputReferences": [
         "state.news_res.selectedEvents",
         "state.mp_res.indicators"
@@ -327,8 +328,8 @@
       "stepNumber": 14,
       "stepName": "Macro-to-Micro Transmission Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.334181+07:00",
-      "completedAt": "2026-11-14T13:27:41.338369+07:00",
+      "startedAt": "2026-11-14T14:29:45.127567+07:00",
+      "completedAt": "2026-11-14T14:29:45.131937+07:00",
       "inputReferences": [
         "state.news_res.selectedEvents",
         "state.mp_res.indicators"
@@ -347,8 +348,8 @@
       "stepNumber": 15,
       "stepName": "Payment Opportunity Radar Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.338372+07:00",
-      "completedAt": "2026-11-14T13:27:41.339708+07:00",
+      "startedAt": "2026-11-14T14:29:45.131946+07:00",
+      "completedAt": "2026-11-14T14:29:45.133319+07:00",
       "inputReferences": [
         "state.news_res.selectedEvents",
         "state.mp_res.indicators"
@@ -369,8 +370,8 @@
       "stepNumber": 16,
       "stepName": "Financial Decision Intelligence Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.339710+07:00",
-      "completedAt": "2026-11-14T13:27:41.339782+07:00",
+      "startedAt": "2026-11-14T14:29:45.133324+07:00",
+      "completedAt": "2026-11-14T14:29:45.133425+07:00",
       "inputReferences": [
         "state.theses_bundle",
         "state.chains_bundle",
@@ -390,8 +391,8 @@
       "stepNumber": 17,
       "stepName": "Evidence Crosswalk & Schema Validation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.339784+07:00",
-      "completedAt": "2026-11-14T13:27:41.342887+07:00",
+      "startedAt": "2026-11-14T14:29:45.133428+07:00",
+      "completedAt": "2026-11-14T14:29:45.136317+07:00",
       "inputReferences": [
         "state.theses_bundle",
         "state.dots_bundle",
@@ -415,8 +416,8 @@
       "stepNumber": 18,
       "stepName": "Daily JSON Package Generation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.342898+07:00",
-      "completedAt": "2026-11-14T13:27:41.397855+07:00",
+      "startedAt": "2026-11-14T14:29:45.136321+07:00",
+      "completedAt": "2026-11-14T14:29:45.185806+07:00",
       "inputReferences": [
         "state.theses_bundle",
         "state.dots_bundle",
@@ -432,7 +433,7 @@
       ],
       "metrics": {
         "preparedDailyComponentsCount": 17,
-        "combinedEditionSha256": "9ea716cf10f30936b658fe4149d4b227dbbe1b67e031f7c8fd3d326767871881",
+        "combinedEditionSha256": "f148d88359e56d2db8f30406d4fca63e55da6900f917fdbd96880737d2306495",
         "frontendPortalCandidateReady": true,
         "magspreadCandidateReady": true
       },
@@ -443,8 +444,8 @@
       "stepNumber": 19,
       "stepName": "Google Sheets Staging Dry-Run Validation",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.397875+07:00",
-      "completedAt": "2026-11-14T13:27:41.407829+07:00",
+      "startedAt": "2026-11-14T14:29:45.185824+07:00",
+      "completedAt": "2026-11-14T14:29:45.194507+07:00",
       "inputReferences": [
         "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/phase04b_staging_tables_readonly.json",
         "state.payloads"
@@ -467,8 +468,8 @@
       "stepNumber": 20,
       "stepName": "Daily Execution Report & Release Audit",
       "status": "PASS",
-      "startedAt": "2026-11-14T13:27:41.407843+07:00",
-      "completedAt": "2026-11-14T13:27:41.521314+07:00",
+      "startedAt": "2026-11-14T14:29:45.194519+07:00",
+      "completedAt": "2026-11-14T14:29:45.299952+07:00",
       "inputReferences": [
         "state.payloads",
         "state.sheets_bundle"
@@ -479,9 +480,9 @@
       ],
       "metrics": {
         "sealedFilesCount": 21,
-        "editionManifestSha256": "cef54599dd428b2d7cebd215a93a4d48fab2c9627480cd6b6d38c9b7d0242c5b",
-        "executionId": "EXEC-20261114-132658-2ab47319",
-        "executionDir": "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/06_DAILY_EDITIONS/daily-editions/2026-11-14/executions/EXEC-20261114-132658-2ab47319"
+        "editionManifestSha256": "7029ed6d55296260f841b788a6f05057ee74811bd3189a041d940073652c7208",
+        "executionId": "EXEC-20261114-142902-b731a8dd",
+        "executionDir": "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/06_DAILY_EDITIONS/daily-editions/2026-11-14/executions/EXEC-20261114-142902-b731a8dd"
       },
       "errorDetails": null
     }

@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
+  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
   "signals": [
     {
       "radarId": "RADAR-01",
@@ -180,15 +180,15 @@
       ],
       "triggerEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -222,35 +222,35 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
@@ -262,8 +262,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         }
       ]
     },
@@ -297,12 +297,12 @@
         "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
       ],
       "triggerEventIds": [
-        "EVT-20261114-039",
-        "EVT-20261114-006"
+        "EVT-20261114-044",
+        "EVT-20261114-039"
       ],
       "supportingEventIds": [
-        "EVT-20261114-039",
-        "EVT-20261114-006"
+        "EVT-20261114-044",
+        "EVT-20261114-039"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -323,6 +323,17 @@
       "counterEvidence": [],
       "evidenceReferences": [
         {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
           "referenceId": "EVT-20261114-039",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/quang-tri-thu-hon-3000-ti-dong-ngan-sach-trong-mot-thang-tien-den-tu-dau-100261113180553662.htm",
@@ -332,17 +343,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
-        },
-        {
-          "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
         }
       ]
     }
@@ -524,15 +524,15 @@
       ],
       "triggerEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
-        "EVT-20261114-058",
-        "EVT-20261114-063",
-        "EVT-20261114-010"
+        "EVT-20261114-068",
+        "EVT-20261114-073",
+        "EVT-20261114-064"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -566,35 +566,35 @@
           "supportingQuote": "Cập nhật mới nhất sáng 14/11, giá vàng trong nước đồng loạt giảm 500 nghìn đồng/lượng."
         },
         {
-          "referenceId": "EVT-20261114-058",
+          "referenceId": "EVT-20261114-068",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "canonicalUrl": "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T09:21:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_061_446126275f.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
         },
         {
-          "referenceId": "EVT-20261114-063",
+          "referenceId": "EVT-20261114-073",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "canonicalUrl": "https://cafef.vn/vietinbank-tang-toc-chang-ve-dich-2026-vung-vang-chat-luong-tai-san-dan-dau-hieu-qua-van-hanh-188261113182727616.chn",
           "publisher": "CafeF / VCCorp",
           "publishedAt": "2026-11-14T08:00:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
           "evidenceSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-010",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
           "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
           "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
@@ -606,8 +606,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
+          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
         }
       ]
     },
@@ -641,12 +641,12 @@
         "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
       ],
       "triggerEventIds": [
-        "EVT-20261114-039",
-        "EVT-20261114-006"
+        "EVT-20261114-044",
+        "EVT-20261114-039"
       ],
       "supportingEventIds": [
-        "EVT-20261114-039",
-        "EVT-20261114-006"
+        "EVT-20261114-044",
+        "EVT-20261114-039"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -667,6 +667,17 @@
       "counterEvidence": [],
       "evidenceReferences": [
         {
+          "referenceId": "EVT-20261114-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T13:32:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+          "evidenceSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+          "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki"
+        },
+        {
           "referenceId": "EVT-20261114-039",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/quang-tri-thu-hon-3000-ti-dong-ngan-sach-trong-mot-thang-tien-den-tu-dau-100261113180553662.htm",
@@ -676,17 +687,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
-        },
-        {
-          "referenceId": "EVT-20261114-006",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T17:59:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-          "evidenceSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-          "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ , để tháo gỡ khó khăn cho người nộ"
         }
       ]
     }

@@ -1,0 +1,226 @@
+{
+  "version": "1.3.1",
+  "updatedAt": "2026-11-10T09:25:00+07:00",
+  "contractCompatibility": "V3.0.4",
+  "indicators": {
+    "MP-01": {
+      "indicatorId": "MP-01",
+      "indicatorName": "Tỷ giá trung tâm USD/VND",
+      "metricDefinition": "Tỷ giá trung tâm của đồng Việt Nam với Đô la Mỹ do Ngân hàng Nhà nước Việt Nam (NHNN) công bố chính thức vào mỗi ngày làm việc.",
+      "canonicalUnit": "VND/USD",
+      "primarySource": "Ngân hàng Nhà nước Việt Nam (SBV)",
+      "approvedDomains": [
+        "thoibaotaichinhvietnam.vn",
+        "sbv.gov.vn",
+        "portal.vietcombank.com.vn",
+        "tuoitre.vn",
+        "cafef.vn",
+        "vneconomy.vn"
+      ],
+      "expectedFrequency": "OFFICIAL_BUSINESS_DAY",
+      "freshnessMaxAgeHours": 48.0,
+      "methodology": "Trích xuất tỷ giá trung tâm chính thức từ cổng thông tin NHNN hoặc thông báo ngân hàng lưu ký. Phân biệt rõ tỷ giá trung tâm với tỷ giá mua/bán thương mại và tỷ giá thị trường tự do.",
+      "scopeRules": {
+        "allowCommercialSpot": false,
+        "allowFreeMarket": false
+      },
+      "calculationRules": {
+        "changeCalculation": "CurrentRate - PreviousBusinessDayRate",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "DAILY"
+    },
+    "MP-02": {
+      "indicatorId": "MP-02",
+      "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+      "metricDefinition": "Lãi suất bình quân liên ngân hàng kỳ hạn qua đêm (overnight interbank rate) phản ánh thanh khoản ngắn hạn của hệ thống tổ chức tín dụng.",
+      "canonicalUnit": "%/năm",
+      "primarySource": "Ngân hàng Nhà nước Việt Nam (SBV)",
+      "approvedDomains": [
+        "sbv.gov.vn",
+        "tuoitre.vn",
+        "cafef.vn",
+        "vneconomy.vn",
+        "thanhnien.vn"
+      ],
+      "expectedFrequency": "INTERBANK_OBSERVATION_FREQUENCY",
+      "freshnessMaxAgeHours": 72.0,
+      "methodology": "Trích xuất lãi suất kỳ hạn qua đêm từ báo cáo thị trường tiền tệ NHNN. Phân biệt rõ kỳ hạn qua đêm với 1 tuần, 1 tháng và lãi suất điều hành (tái cấp vốn/tái chiết khấu).",
+      "scopeRules": {
+        "enforce72hCeilingOnObservationDate": true,
+        "rejectRuntimeDateFallback": true
+      },
+      "calculationRules": {
+        "changeCalculation": "CurrentRate - PreviousSessionRate",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "DAILY"
+    },
+    "MP-03": {
+      "indicatorId": "MP-03",
+      "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+      "metricDefinition": "Lãi suất tiền gửi tiết kiệm kỳ hạn 12 tháng cao nhất quan sát được trên tập hợp các ngân hàng thương mại được khảo sát.",
+      "canonicalUnit": "%/năm",
+      "primarySource": "Biểu lãi suất niêm yết của các NHTM Việt Nam",
+      "approvedDomains": [
+        "sbv.gov.vn",
+        "portal.vietcombank.com.vn",
+        "bidv.com.vn",
+        "vietinbank.vn",
+        "techcombank.com",
+        "vpbank.com.vn",
+        "laodong.vn",
+        "cafef.vn",
+        "vneconomy.vn"
+      ],
+      "expectedFrequency": "BANK_PUBLISHED_RATE_CHANGES",
+      "freshnessMaxAgeHours": 168.0,
+      "methodology": "Khảo sát biểu lãi suất 12 tháng từ vũ trụ ngân hàng được công bố. Ghi nhận ngân hàng, kênh áp dụng (online/quầy), điều kiện tiền gửi và phân loại 'HIGHEST_OBSERVED_AMONG_SCANNED_BANKS'.",
+      "scopeRules": {
+        "allow13MonthComparison": false,
+        "discloseCoverageUniverse": true,
+        "disclosePromotionalTerms": true
+      },
+      "calculationRules": {
+        "changeCalculation": "CurrentMax - PreviousComparableMax",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "PERIODIC"
+    },
+    "MP-04": {
+      "indicatorId": "MP-04",
+      "indicatorName": "Chỉ số VN-Index",
+      "metricDefinition": "Điểm số đóng cửa phiên giao dịch của chỉ số VN-Index đại diện cho Sở Giao dịch Chứng khoán TP. Hồ Chí Minh (HOSE).",
+      "canonicalUnit": "Điểm",
+      "primarySource": "Sở Giao dịch Chứng khoán TP. Hồ Chí Minh (HOSE) / Nguồn tài chính được cấp phép",
+      "approvedDomains": [
+        "danviet.vn",
+        "thoibaotaichinhvietnam.vn",
+        "hsx.vn",
+        "cafef.vn",
+        "vietstock.vn",
+        "vneconomy.vn",
+        "tuoitre.vn"
+      ],
+      "expectedFrequency": "TRADING_SESSION_FREQUENCY",
+      "freshnessMaxAgeHours": 48.0,
+      "methodology": "Trích xuất điểm số chốt phiên đóng cửa chính thức. Kiểm tra tính toán: Thay đổi = Đóng cửa hiện tại - Đóng cửa phiên trước.",
+      "scopeRules": {
+        "allowIntradayAsClosing": false,
+        "validateArithmetic": true
+      },
+      "calculationRules": {
+        "changeCalculation": "CurrentClose - PreviousClose",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "DAILY"
+    },
+    "MP-05": {
+      "indicatorId": "MP-05",
+      "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+      "metricDefinition": "Tỷ lệ tăng trưởng dư nợ tín dụng toàn nền kinh tế so với cuối năm trước (YTD) hoặc so với cùng kỳ năm trước (YoY) do NHNN hoặc Tổng cục Thống kê công bố.",
+      "canonicalUnit": "%",
+      "primarySource": "Ngân hàng Nhà nước Việt Nam (SBV) / Tổng cục Thống kê (GSO)",
+      "approvedDomains": [
+        "sbv.gov.vn",
+        "gso.gov.vn",
+        "vneconomy.vn",
+        "baodautu.vn",
+        "cafef.vn",
+        "tuoitre.vn"
+      ],
+      "expectedFrequency": "OFFICIAL_CREDIT_REPORTING_CYCLE",
+      "freshnessMaxAgeHours": 720.0,
+      "methodology": "Trích xuất số liệu tăng trưởng tín dụng chính thức kèm ngày chốt số liệu và kỳ báo cáo. Phân biệt rõ YTD, YoY, tăng trưởng theo tháng và chỉ tiêu mục tiêu cả năm.",
+      "scopeRules": {
+        "rejectHardcodedDate": true,
+        "preserveRealObservationPeriod": true
+      },
+      "calculationRules": {
+        "changeCalculation": "Only compared with equivalent periodic observation",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "MONTHLY"
+    },
+    "MP-06": {
+      "indicatorId": "MP-06",
+      "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+      "metricDefinition": "Sản lượng hoặc giá trị giao dịch thanh toán qua mã VietQR xử lý qua hệ thống Công ty Cổ phần Thanh toán Quốc gia Việt Nam (NAPAS).",
+      "canonicalUnit": "tỷ giao dịch",
+      "primarySource": "Công ty Cổ phần Thanh toán Quốc gia Việt Nam (NAPAS) / NHNN",
+      "approvedDomains": [
+        "napas.com.vn",
+        "sbv.gov.vn",
+        "anninhthudo.vn",
+        "cafef.vn",
+        "vneconomy.vn",
+        "baodautu.vn"
+      ],
+      "expectedFrequency": "VIETQR_REPORTING_CYCLE",
+      "freshnessMaxAgeHours": 2160.0,
+      "methodology": "Trích xuất sản lượng giao dịch mã VietQR riêng biệt. Thực hiện chuẩn hóa số học rõ ràng (100 triệu = 0.1 tỷ). Bắt buộc tách bạch scope: Không gộp tổng sản lượng toàn hệ thống NAPAS (ATM, POS, chuyển khoản) thành sản lượng VietQR.",
+      "scopeRules": {
+        "rejectTotalNapasVolume": true,
+        "enforceExplicitUnitConversion": true
+      },
+      "calculationRules": {
+        "changeCalculation": "Only compared with equivalent period observation",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "QUARTERLY"
+    },
+    "MP-07": {
+      "indicatorId": "MP-07",
+      "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+      "metricDefinition": "Tổng lượng khách quốc tế đến Việt Nam trong tháng hoặc lũy kế năm do Cục Du lịch Quốc gia Việt Nam hoặc Tổng cục Thống kê công bố.",
+      "canonicalUnit": "triệu lượt",
+      "primarySource": "Tổng cục Thống kê (GSO) / Cục Du lịch Quốc gia Việt Nam",
+      "approvedDomains": [
+        "gso.gov.vn",
+        "vietnamtourism.gov.vn",
+        "nhandan.vn",
+        "tuoitre.vn",
+        "cafef.vn",
+        "vneconomy.vn"
+      ],
+      "expectedFrequency": "OFFICIAL_MONTHLY_REPORTING_CYCLE",
+      "freshnessMaxAgeHours": 720.0,
+      "methodology": "Trích xuất lượng khách quốc tế kèm kỳ báo cáo cụ thể (tháng hoặc lũy kế). Phân biệt rõ khách nội địa và quốc tế, và giữa số liệu tháng đơn lẻ với số lũy kế năm.",
+      "scopeRules": {
+        "distinguishMonthlyFromYTD": true,
+        "rejectHardcodedDate": true
+      },
+      "calculationRules": {
+        "changeCalculation": "Compared with exact same period of previous year (YoY)",
+        "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
+      },
+      "updateFrequency": "MONTHLY"
+    },
+    "MP-08": {
+      "indicatorId": "MP-08",
+      "indicatorName": "Bơm / Hút ròng OMO của NHNN",
+      "metricDefinition": "Khối lượng thanh khoản ròng được Ngân hàng Nhà nước bơm ra hoặc hút về qua nghiệp vụ thị trường mở (OMO) trong phiên điều hành.",
+      "canonicalUnit": "tỷ VND",
+      "primarySource": "Ngân hàng Nhà nước Việt Nam (SBV) / Bản tin Thị trường Mở",
+      "approvedDomains": [
+        "sbv.gov.vn",
+        "cafef.vn",
+        "vneconomy.vn",
+        "baodautu.vn",
+        "vietstock.vn"
+      ],
+      "expectedFrequency": "OMO_OPERATION_AUCTION_FREQUENCY",
+      "freshnessMaxAgeHours": 2160.0,
+      "methodology": "Tính toán Bơm/Hút ròng OMO = Khối lượng cho vay cầm cố (repo trúng thầu) - Khối lượng đáo hạn cùng kỳ. Không dùng riêng khối lượng trúng thầu làm số liệu bơm ròng.",
+      "scopeRules": {
+        "reconcileRepoWithMaturities": true,
+        "requireCompleteComponents": true
+      },
+      "calculationRules": {
+        "netFormula": "RepoInjections - RepoMaturities",
+        "directionRule": "UP if net > 0 (bơm ròng) else DOWN if net < 0 (hút ròng) else FLAT if net == 0 else UNKNOWN"
+      },
+      "updateFrequency": "DAILY"
+    }
+  }
+}
