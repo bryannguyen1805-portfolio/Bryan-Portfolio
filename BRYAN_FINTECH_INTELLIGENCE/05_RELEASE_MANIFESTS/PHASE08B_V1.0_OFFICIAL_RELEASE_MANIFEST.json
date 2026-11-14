@@ -5,17 +5,62 @@
   "remediationTitle": "Bryan FinTech Intelligence — Official Production Release Version 1.0",
   "releaseStatus": "OFFICIAL_PRODUCTION_RELEASE",
   "projectOwnerAcceptance": "ACCEPTED_BY_OWNER",
+  "uiAcceptanceStatus": "ACCEPTED_DESKTOP_AND_MOBILE_V1.0",
   "productionStatus": "PRODUCTION_OPERATIONAL",
-  "acceptanceTimestamp": "2026-11-15T02:22:00+07:00",
+  "acceptanceTimestamp": "2026-11-15T03:40:00+07:00",
   "canonicalEditionId": "ED-20261114-D01",
   "canonicalEditionDate": "14/11/2026",
   "canonicalEditionNumber": "ẤN BẢN SỐ 29",
   "baselineEngine": "PHASE08B_R1.0.1",
   "uiEnhancements": {
-    "vneconomyNavigation": "Centered masthead nameplate, theme icon, sticky navigation with Bnews WebP logo, 4 quick tabs without overlap",
+    "vneconomyNavigation": "3-tier VnEconomy navigation with 1024x309 RIFF WebP Bnews logo, icon theme toggle, sticky desktop/mobile bars, and 4 quick tabs without overlap",
+    "mastheadAndBrandIdentity": "Optically centered 1024x309 Bnews | fintech RIFF WebP & PNG logos (pads L:20, R:20, T:9, B:8); h1 visually hidden (sr-only); .ms-newspaper-sub hidden on Desktop & Mobile",
+    "desktopLaptopUi": "3-column minmax(0, 1fr) auto minmax(0, 1fr) masthead with uniform 42px square controls (#btnOpenCategoryDrawer, #headerQuickSearchForm, #mastheadEditionBadge, #themeToggleBtn) and 62px centered logo (logoCenterX diff=0px, centerY diff=0px, overflowX=0)",
+    "mobileUi": "3-column minmax(0, 1fr) auto minmax(0, 1fr) masthead with uniform 40x40px square icon controls (#btnOpenCategoryDrawer, #btnMobileSearchDrawer, #themeToggleBtn) and centered 44px/40px logo on 390x844 and 360x740 (logoCenterX diff=0px, centerY diff=0px, overflowX=0)",
+    "b2bDecisionDrawer": "Full-width 100vw mobile drawer on <=768px, single-line .ms-solution-pill (24.2px height) stacked cleanly above solution title, raw enum strings (CONFIRMED_EXISTING_CAPABILITY, HIGH_CONFIDENCE_GROUNDED) eliminated",
     "quoteStandardization": "Single verbatim press quote (supportingQuote) on Cover Story, 25/25 cards, and Article Reader drawer",
     "previewWatermark": "REMOVED ('MÔI TRƯỜNG: LOCAL PREVIEW ONLY · KHÔNG XUẤT BẢN PRODUCTION KHI CHƯA ĐẠT GATE' completely eliminated)",
-    "seoAndAssets": "robots.txt, sitemap.xml, lightweight RIFF WebP logos (<11 KB), responsive 0-overflow design"
+    "seoAndAssets": "robots.txt, sitemap.xml, high-resolution 1024x309 RIFF WebP logos (148,072 B light / 135,960 B dark), optimized WebP favicon (4,450 B), responsive 0-overflow design"
+  },
+  "uiVerificationMetrics": {
+    "desktopLaptop": {
+      "testedViewports": [
+        "1440x900",
+        "1900px clientWidth"
+      ],
+      "logoCenterXDiffPx": 0,
+      "verticalCenterYDiffPx": 0,
+      "overflowX": 0,
+      "consoleErrors": 0,
+      "consoleWarnings": 0
+    },
+    "mobile": {
+      "viewport390x844": {
+        "logoCenterXDiffPx": 0,
+        "verticalCenterYDiffPx": 0,
+        "gapSearchToLogoPx": 20.1,
+        "overflowX": 0
+      },
+      "viewport360x740": {
+        "logoCenterXDiffPx": 0,
+        "verticalCenterYDiffPx": 0,
+        "gapSearchToLogoPx": 11.7,
+        "overflowX": 0
+      },
+      "b2bDecisionDrawer390x844": {
+        "drawerWidthPx": 390,
+        "maxSolutionPillHeightPx": 24.2,
+        "rawReadinessEnumsVisible": false,
+        "rawConfidenceEnumsVisible": false
+      }
+    },
+    "sha256Checksums": {
+      "fintech-intelligence/index.html": "933cc9d530f3e1c4b3388eaf20b44cc6e3d8f9233e932274c228b49bae9cd95c",
+      "fintech-intelligence/magspread.css": "213aa625824a58d3b07df9b025ede9b72547e3eddb71af21faff8c46e92c7424",
+      "fintech-intelligence/magspread.js": "5cbed60f38ca321a387c94f92e96b1b83df3f0357463ead27e131823deab9b69",
+      "fintech-intelligence/bnews-logo-light-opt.webp": "9353ef33849b0bd15923a8bac38817ff49ad61efe9a3986e40386dc8c2ec8c80",
+      "fintech-intelligence/bnews-logo-dark-opt.webp": "e470da8e6b3d38693549e1266a50659dad82960dfe3c9330894527a640044db"
+    }
   },
   "testResults": {
     "lighthouseDesktopScores": {

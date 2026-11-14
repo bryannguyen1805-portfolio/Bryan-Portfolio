@@ -3,22 +3,20 @@
 """
 run_daily_edition.py
 -----------------------------------------------------------------------------
-BRYAN FINTECH MARKET INTELLIGENCE — MASTER DAILY AUTOMATION RUNNER
-Thực thi trọn vẹn quy trình xuất bản hàng ngày (1 lệnh duy nhất):
-1. Quét & kiểm định 25 tin tức mới nhất (0-24h >= 80%).
-2. Cập nhật 8 chỉ số Market Pulse (Kiến trúc 2 tầng Two-Tier).
-3. Tự động xác định Bài đinh trang nhất (Top Lead News) & tóm tắt nội dung.
-4. Tự động đúc kết biên tập từ 25 tin tức của ngày hôm đó (Editorial Synthesis).
-5. Phân tích Tác động thị trường & FinTech Lens (Payoo & SmartPOS).
-6. Hình thành 4 chuỗi truyền dẫn Vĩ mô -> Vi mô độc lập.
-7. Tạo lập Tín hiệu hành động (Executive Decision Cards) với Drawer phân tích sâu.
-8. Xuất bản đồng bộ ra edition-data.json, edition-data.js và portal HTML.
+BRYAN FINTECH MARKET INTELLIGENCE — MASTER DAILY PIPELINE RUNNER (OFFICIAL V1.0)
+Quy trình vận hành chuẩn:
+  Research -> Analyze -> Generate -> Validate (D-06 Gate) -> Save Local Artifacts.
+
+CHÍNH SÁCH VẬN HÀNH & PHÁT HÀNH (VERSION 1.0 OFFICIAL):
+- Mặc định chạy ở chế độ `--mode local-staging` (tạo & kiểm định artifact local, không đẩy git).
+- Chế độ `--mode manual-release` thực hiện commit & push lên GitHub main khi có xác nhận.
 -----------------------------------------------------------------------------
 """
 
 import os
 import sys
 import json
+import argparse
 import subprocess
 from datetime import datetime
 
@@ -32,51 +30,136 @@ else:
 
 os.chdir(PACKAGE_DIR)
 
+
 def print_header(title):
     print("\n" + "=" * 80)
     print(f"🚀 {title}")
     print("=" * 80)
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Bryan FinTech Intelligence Daily Pipeline Runner (Local Staging by default)"
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["local-staging", "manual-release"],
+        default="local-staging",
+        help="Pipeline mode. Defaults to 'local-staging' (Git push disabled).",
+    )
+    parser.add_argument(
+        "--date",
+        default=None,
+        help="Target edition date YYYY-MM-DD (defaults to today).",
+    )
+    parser.add_argument(
+        "--manual-release",
+        action="store_true",
+        help="Explicit manual release flag (requires --owner-accepted and BNEWS_OWNER_ACCEPTANCE=APPROVED).",
+    )
+    parser.add_argument(
+        "--owner-accepted",
+        action="store_true",
+        help="Explicit Product Owner acceptance confirmation flag.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate safety policy and display pipeline stages without executing or pushing.",
+    )
+    return parser.parse_args()
+
+
+def can_publish_production(args):
+    owner_env = os.environ.get("BNEWS_OWNER_ACCEPTANCE", "").strip()
+    return (
+        args.mode == "manual-release"
+        and args.manual_release is True
+        and args.owner_accepted is True
+        and owner_env == "APPROVED"
+    )
+
+
 def main():
+    args = parse_args()
     start_time = datetime.now()
-    print_header(f"BRYAN FINTECH INTELLIGENCE — DAILY RUN [{start_time.strftime('%Y-%m-%d %H:%M:%S')}]")
+    today_str = args.date or start_time.strftime("%Y-%m-%d")
+    git_push_allowed = can_publish_production(args)
+
+    print_header(
+        f"BRYAN FINTECH INTELLIGENCE — DAILY PIPELINE [{start_time.strftime('%Y-%m-%d %H:%M:%S')}]"
+    )
+    print(f"   - Chế độ vận hành: {args.mode} (Mặc định an toàn: local-staging)")
+    print(f"   - Ngày mục tiêu  : {today_str}")
+    print(
+        f"   - Git Push / Production Deploy: {'ALLOWED (OWNER APPROVED)' if git_push_allowed else 'BLOCKED (LOCAL STAGING ONLY)'}"
+    )
+
+    if args.mode == "manual-release" and not git_push_allowed:
+        print(
+            "❌ TỪ CHỐI XUẤT BẢN PRODUCTION: Yêu cầu đồng thời --manual-release, --owner-accepted và BNEWS_OWNER_ACCEPTANCE=APPROVED."
+        )
+        sys.exit(2)
+
+    if args.dry_run:
+        print(
+            "🧪 [DRY RUN] Quy trình chuẩn: Research -> Analyze -> Generate -> Validate (D-06 Gate) -> Save Local Artifacts."
+        )
+        print("🧪 [DRY RUN] Không thực thi thay đổi dữ liệu và không thực hiện git push.")
+        return
 
     workspace_root = WORKSPACE_ROOT
-    daily_editions_dir = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "06_DAILY_EDITIONS", "daily-editions")
-    orch_script = os.path.join(workspace_root, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "02_SOURCE_CODE", "phase07_daily_runtime_orchestrator.py")
-
-    today_str = start_time.strftime("%Y-%m-%d")
+    daily_editions_dir = os.path.join(
+        workspace_root,
+        "BRYAN_FINTECH_INTELLIGENCE",
+        "03_WORKING_PHASES",
+        "PHASE07_R1.0.4-P1",
+        "06_DAILY_EDITIONS",
+        "daily-editions",
+    )
+    orch_script = os.path.join(
+        workspace_root,
+        "BRYAN_FINTECH_INTELLIGENCE",
+        "03_WORKING_PHASES",
+        "PHASE07_R1.0.4-P1",
+        "02_SOURCE_CODE",
+        "phase07_daily_runtime_orchestrator.py",
+    )
     today_edition_dir = os.path.join(daily_editions_dir, today_str)
 
-    # Step 0: Check if today's edition exists and has completed verified-news.json; if not, trigger Live Intelligence Orchestrator
-    has_completed_edition = os.path.exists(today_edition_dir) and os.path.exists(os.path.join(today_edition_dir, "verified-news.json"))
+    # Step 0 [Research]: Check if target edition exists and has verified-news.json
+    has_completed_edition = os.path.exists(today_edition_dir) and os.path.exists(
+        os.path.join(today_edition_dir, "verified-news.json")
+    )
     if not has_completed_edition and os.path.exists(orch_script):
-        print(f"📌 [BƯỚC 0/4] Phát hiện ấn bản ngày mới ({today_str}). Kích hoạt Live Runtime Orchestrator...")
+        print(f"📌 [BƯỚC 0/4 - RESEARCH] Phát hiện ấn bản ngày ({today_str}). Kích hoạt Live Runtime Orchestrator...")
         orch_cmd = [sys.executable, orch_script, "--mode", "LIVE", "--date", today_str]
         try:
             orch_res = subprocess.run(orch_cmd, capture_output=True, text=True, timeout=180)
             if orch_res.returncode == 0:
-                print("   ✅ Live Orchestrator: Quét tin, kiểm định 0-24h & tạo lập phân tích mới thành công!")
+                print("   ✅ Live Orchestrator: Quét tin, kiểm định 0-24h thành công!")
             else:
-                print(f"   ℹ️ Live Orchestrator: Tiếp tục với luồng tổng hợp ấn bản mới nhất.")
+                print("   ℹ️ Live Orchestrator: Tiếp tục với luồng tổng hợp ấn bản mới nhất.")
         except Exception as e:
             print(f"   ⚠️ Lưu ý khi gọi Live Orchestrator: {e}")
 
-    # PHASE08B: Engine parity guard — the workspace-root engine is the Source of Truth (Tier 2).
-    # If the package copy has drifted, re-sync it before running, so fixes are never lost.
-    root_engine = os.path.join(WORKSPACE_ROOT, "update_magspread_pilot_ui.py")
-    pkg_engine = os.path.join(PACKAGE_DIR, "update_magspread_pilot_ui.py")
-    if os.path.exists(root_engine) and os.path.abspath(root_engine) != os.path.abspath(pkg_engine):
-        import hashlib, shutil
-        def _sha(p):
-            with open(p, "rb") as fh:
-                return hashlib.sha256(fh.read()).hexdigest()
-        if not os.path.exists(pkg_engine) or _sha(root_engine) != _sha(pkg_engine):
-            shutil.copy2(root_engine, pkg_engine)
-            print("🔁 Đồng bộ Engine: update_magspread_pilot_ui.py (gốc → daily-run-package) để bảo đảm 1 nguồn mã duy nhất.")
+    # Engine parity guard — Workspace root scripts are the Source of Truth.
+    import hashlib, shutil
 
-    # Step 1: Execute update_magspread_pilot_ui.py
-    print("📌 [BƯỚC 1/4] Kích hoạt Engine Phân tích & Xuất bản E-Magazine...")
+    def _sha(p):
+        with open(p, "rb") as fh:
+            return hashlib.sha256(fh.read()).hexdigest()
+
+    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
+        root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
+        pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
+        if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):
+            if not os.path.exists(pkg_mod) or _sha(root_mod) != _sha(pkg_mod):
+                shutil.copy2(root_mod, pkg_mod)
+                print(f"🔁 Đồng bộ module: {shared_mod} (gốc -> daily-run-package).")
+
+    # Step 1 [Analyze & Generate]: Execute update_magspread_pilot_ui.py
+    print("📌 [BƯỚC 1/4 - ANALYZE & GENERATE] Kích hoạt Editorial Engine & Quality Gate...")
     cmd = [sys.executable, "update_magspread_pilot_ui.py", "--date", today_str]
     res = subprocess.run(cmd, capture_output=True, text=True)
 
@@ -86,8 +169,8 @@ def main():
     else:
         print(res.stdout.strip())
 
-    # Step 2: Validate Output Integrity
-    print("\n📌 [BƯỚC 2/4] Đối soát tính toàn vẹn dữ liệu xuất bản...")
+    # Step 2 [Validate]: Output & D-06 Gate Integrity
+    print("\n📌 [BƯỚC 2/4 - VALIDATE] Đối soát tính toàn vẹn dữ liệu & Cổng chất lượng 8 lớp...")
     json_path = os.path.join(PACKAGE_DIR, "edition-data.json")
     js_path = os.path.join(PACKAGE_DIR, "edition-data.js")
 
@@ -104,21 +187,33 @@ def main():
     mp_count = len(data.get("marketPulseSnapshot", []))
     cs = data.get("editorialSections", {}).get("sec02_coverStory", {})
     lead_headline = cs.get("editorialHeadline", "N/A")
+    gate_status = data.get("contentQualityAudit", {}).get("status", "UNKNOWN")
+    if gate_status == "UNKNOWN":
+        for audit_path in (
+            os.path.join(PACKAGE_DIR, "logs", "content-quality-audit.json"),
+            os.path.join(WORKSPACE_ROOT, "fintech-intelligence", "logs", "content-quality-audit.json"),
+        ):
+            if os.path.exists(audit_path):
+                with open(audit_path, "r", encoding="utf-8") as af:
+                    gate_status = json.load(af).get("status", "UNKNOWN")
+                break
 
-    print(f"   - Mã ấn bản: {ed_id}")
-    print(f"   - Ngày xuất bản: {ed_date}")
+    print(f"   - Mã ấn bản       : {ed_id}")
+    print(f"   - Ngày xuất bản   : {ed_date}")
     print(f"   - Tin tức xác minh: {news_count} bài (0-24h pass)")
-    print(f"   - Chỉ số Market Pulse: {mp_count} chỉ số (4 chỉ số trọng tâm · nguồn báo chí xác thực 100%)")
-    print(f"   - Bài đinh trang nhất: {lead_headline}")
+    print(f"   - Market Pulse    : {mp_count} chỉ số")
+    print(f"   - Bài đinh trang  : {lead_headline}")
+    print(f"   - Quality Gate    : {gate_status}")
 
-    # Step 3: Automatically Sync into Web Subpage (fintech-intelligence/)
+    # Step 3 [Save Local Artifacts]: Sync to fintech-intelligence/ and pilot-output/
+    print("\n📌 [BƯỚC 3/4 - SAVE LOCAL ARTIFACTS] Lưu trữ đồng bộ tại local staging (fintech-intelligence/ & pilot-output/)...")
     web_portal_dir = os.path.join(WORKSPACE_ROOT, "fintech-intelligence")
-    workspace_root = WORKSPACE_ROOT
+    pilot_output_dir = os.path.join(WORKSPACE_ROOT, "pilot-output")
 
-    # Auto cache-busting timestamp injection in index.html to eliminate CDN/browser caching
     html_path = os.path.join(PACKAGE_DIR, "index.html")
     if os.path.exists(html_path):
         import re
+
         ts = int(datetime.now().timestamp())
         with open(html_path, "r", encoding="utf-8") as f:
             h_text = f.read()
@@ -127,59 +222,100 @@ def main():
         h_text = re.sub(r'src="(?:\.\/)?magspread\.js(?:\?v=[^"]*)?"', f'src="./magspread.js?v={ts}"', h_text)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(h_text)
+        preview_path = os.path.join(PACKAGE_DIR, "magspread-preview.html")
+        with open(preview_path, "w", encoding="utf-8") as f:
+            f.write(h_text)
 
-    if os.path.exists(web_portal_dir):
-        import shutil
-        for fn in [
-            "index.html",
-            "edition-data.js",
-            "edition-data.json",
-            "magspread.css",
-            "magspread.js",
-            "zalo-icon.svg",
-            "bnews-logo-light.png",
-            "bnews-logo-dark.png",
-            "bnews-logo-light-opt.png",
-            "bnews-logo-dark-opt.png",
-            "bnews-logo-light.webp",
-            "bnews-logo-dark.webp",
-            "fintech-favicon.png",
-            "fintech-favicon.webp",
-        ]:
-            src = os.path.join(PACKAGE_DIR, fn)
-            dst = os.path.join(web_portal_dir, fn)
-            if os.path.exists(src):
-                shutil.copy2(src, dst)
-        print(f"   - Tự động đồng bộ sang trang con web: {web_portal_dir}")
+    sync_files = [
+        "index.html",
+        "magspread-preview.html",
+        "edition-data.js",
+        "edition-data.json",
+        "EVIDENCE_INDEX.json",
+        "magspread.css",
+        "magspread.js",
+        "robots.txt",
+        "sitemap.xml",
+        "zalo-icon.svg",
+        "bnews-logo-light.png",
+        "bnews-logo-dark.png",
+        "bnews-logo-light-opt.png",
+        "bnews-logo-dark-opt.png",
+        "bnews-logo-light-opt.webp",
+        "bnews-logo-dark-opt.webp",
+        "bnews-logo-light.webp",
+        "bnews-logo-dark.webp",
+        "fintech-favicon.png",
+        "fintech-favicon.webp",
+        "fintech-favicon-opt.png",
+        "fintech-favicon-opt.webp",
+    ]
+    for target_dir in (web_portal_dir, pilot_output_dir):
+        if os.path.exists(target_dir):
+            for fn in sync_files:
+                src = os.path.join(PACKAGE_DIR, fn)
+                dst = os.path.join(target_dir, fn)
+                if os.path.exists(src) and os.path.abspath(src) != os.path.abspath(dst):
+                    shutil.copy2(src, dst)
+            print(f"   - Đã lưu bản local staging tại: {target_dir}")
 
-    # Step 4: Automatically Git Commit & Push to GitHub Pages (Full Auto Zero-Touch)
-    print("\n📌 [BƯỚC 4/4] Tự động xuất bản lên GitHub Pages (Zero-Touch)...")
-    try:
-        # Stage the public portal files
-        subprocess.run(["git", "add", "index.html", "fintech-intelligence/"], cwd=workspace_root, check=True)
+    # Step 4 [Production Safety Gate]: Auto Git Push DISABLED by default
+    print("\n📌 [BƯỚC 4/4 - RELEASE GOVERNANCE GATE] Kiểm tra quyền phát hành Production...")
+    if not git_push_allowed:
+        print("   🛡️ LOCAL-STAGING MODE: Tự động Git commit/push lên Production đã BỊ VÔ HIỆU HÓA theo mặc định.")
+        print("   ℹ️ Để phát hành Production chính thức sau nghiệm thu, chạy thủ công với đầy đủ:")
+        print("      BNEWS_OWNER_ACCEPTANCE=APPROVED python3 run_daily_edition.py --mode manual-release --manual-release --owner-accepted")
+    else:
+        print("   ⚠️ Đủ cờ nghiệm thu thủ công — Thực hiện git commit & push theo yêu cầu chủ sản phẩm...")
+        try:
+            candidate_targets = [
+                "fintech-intelligence/",
+                "pilot-output/",
+                "update_magspread_pilot_ui.py",
+                "ed29_editorial_content.py",
+                "run_daily_edition.py",
+                "setup_daily_scheduler_9am.sh",
+                "README_DAILY_RUN.md",
+            ]
+            git_targets = [p for p in candidate_targets if os.path.exists(os.path.join(workspace_root, p))]
+            subprocess.run(["git", "add", "--"] + git_targets, cwd=workspace_root, check=True)
+            staged_res = subprocess.run(
+                ["git", "diff", "--cached", "--name-only"],
+                cwd=workspace_root,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            excluded_paths = [
+                ln
+                for ln in staged_res.stdout.splitlines()
+                if ln.endswith(".DS_Store") or "/__pycache__/" in ln or ln.endswith(".pyc")
+            ]
+            if excluded_paths:
+                subprocess.run(["git", "reset", "-q", "HEAD", "--"] + excluded_paths, cwd=workspace_root, check=True)
 
-        # Check if there is any diff to commit
-        diff_res = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=workspace_root)
-        if diff_res.returncode != 0:
-            commit_msg = f"Auto-publish daily FinTech Intelligence edition [{ed_date}]"
-            subprocess.run(["git", "commit", "-m", commit_msg], cwd=workspace_root, check=True)
-            push_res = subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=workspace_root, capture_output=True, text=True)
-            if push_res.returncode == 0:
-                print(f"   ✅ Tự động đẩy lên GitHub Pages thành công (branch: main)!")
-                print(f"   🌐 Đang phát hành trực tuyến tại: https://bryanportfolio.io.vn/fintech-intelligence/index.html")
+            diff_res = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=workspace_root)
+            if diff_res.returncode != 0:
+                commit_msg = f"Manual owner-approved release: FinTech Intelligence [{ed_date}]"
+                subprocess.run(["git", "commit", "-m", commit_msg], cwd=workspace_root, check=True)
+                push_res = subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=workspace_root, capture_output=True, text=True)
+                if push_res.returncode == 0:
+                    print("   ✅ Manual Git push thành công (branch: main)!")
+                else:
+                    print(f"   ❌ Lỗi khi đẩy Git: {push_res.stderr.strip()}")
+                    sys.exit(1)
             else:
-                print(f"   ⚠️ Lỗi khi đẩy Git: {push_res.stderr.strip()[:150]}")
-        else:
-            print(f"   ℹ️ Dữ liệu đã là mới nhất trên GitHub, không có thay đổi cần đẩy thêm.")
-    except Exception as e:
-        print(f"   ⚠️ Lưu ý đồng bộ Git: {e}")
+                print("   ℹ️ Không có thay đổi cần commit.")
+        except Exception as e:
+            print(f"   ❌ Lỗi đồng bộ Git: {e}")
+            sys.exit(1)
 
-    # Step 5: Completion & Ready to View
     elapsed = (datetime.now() - start_time).total_seconds()
-    print_header("KẾT QUẢ VẬN HÀNH THÀNH CÔNG (100% READY)")
+    print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
     print(f"⏱️  Thời gian thực thi: {elapsed:.2f} giây")
-    print(f"🌐 Mở giao diện E-News Magazine tại: {os.path.join(PACKAGE_DIR, 'index.html')}")
+    print(f"📁 Artifact local tại : {os.path.join(web_portal_dir, 'index.html')}")
     print("=" * 80 + "\n")
+
 
 if __name__ == "__main__":
     main()

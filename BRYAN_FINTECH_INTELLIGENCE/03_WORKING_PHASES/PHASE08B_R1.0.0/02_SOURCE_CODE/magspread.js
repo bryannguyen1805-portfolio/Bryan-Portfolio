@@ -23,10 +23,17 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// ─── THEME CONTROLLER (D-15 Consolidated Storage) ───
+// ─── THEME CONTROLLER (D-15 Single Canonical Storage: site_theme) ───
 function initTheme() {
-  // Read from site_theme (Bryan Portfolio) or ms-theme with seamless fallback
-  const saved = localStorage.getItem('site_theme') || localStorage.getItem('ms-theme');
+  let saved = localStorage.getItem('site_theme');
+  const legacy = localStorage.getItem('ms-theme');
+  if (!saved && (legacy === 'dark' || legacy === 'light')) {
+    saved = legacy;
+    localStorage.setItem('site_theme', saved);
+  }
+  if (legacy !== null) {
+    localStorage.removeItem('ms-theme');
+  }
   if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.setAttribute('data-theme', 'dark');
   } else {
@@ -39,9 +46,9 @@ function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
-  // D-15: Synchronize both keys to avoid cross-domain/app conflicts
+  // D-15: Single canonical key 'site_theme' only
   localStorage.setItem('site_theme', next);
-  localStorage.setItem('ms-theme', next);
+  localStorage.removeItem('ms-theme');
   updateThemeIcon();
 }
 
@@ -55,15 +62,117 @@ function updateThemeIcon() {
       ? '<span class="ms-theme-icon" aria-hidden="true">☀️</span>'
       : '<span class="ms-theme-icon" aria-hidden="true">🌙</span>';
   }
-  const logo = $('#headerBryanLogo');
+  const targetLogo = isDark ? './bnews-logo-dark-opt.webp?v=1794692000' : './bnews-logo-light-opt.webp?v=1794692000';
+  const headerLogo = $('#headerBryanLogo');
+  const desktopStickyLogo = $('#desktopStickyLogo');
+  const mobileLogo = $('#mobileBryanLogo');
+  const drawerLogo = $('#drawerBryanLogo');
   const footerLogo = $('#footerBryanLogo');
-  const targetLogo = isDark ? './bnews-logo-dark-opt.png' : './bnews-logo-light-opt.png';
-  if (logo) logo.src = targetLogo;
+  if (headerLogo) headerLogo.src = targetLogo;
+  if (desktopStickyLogo) desktopStickyLogo.src = targetLogo;
+  if (mobileLogo) mobileLogo.src = targetLogo;
+  if (drawerLogo) drawerLogo.src = targetLogo;
   if (footerLogo) footerLogo.src = targetLogo;
+  $$('.ms-nav-logo-img').forEach(img => { img.src = targetLogo; });
 }
 
-// ─── DRAWER CONTROLLER (D-09 Accessible Modal Management) ───
+// ─── UNIFIED ACCESSIBLE FOCUS TRAP & DRAWER CONTROLLER (D-09) ───
 let drawerLastFocusedElement = null;
+let activeTrapState = null;
+
+function setBackgroundInert(isInert, activeEl) {
+  const landmarks = document.querySelectorAll(
+    '#contactTopBar, body > header, body > nav, .ms-mobile-quick-tabs, #mainContent, body > footer, .ms-floating-launcher-container, .floating-widget'
+  );
+  landmarks.forEach(el => {
+    if (activeEl && el.contains(activeEl)) return;
+    if (isInert) {
+      el.setAttribute('aria-hidden', 'true');
+      el.inert = true;
+    } else {
+      el.removeAttribute('aria-hidden');
+      el.inert = false;
+    }
+  });
+}
+
+function getFocusableElements(container) {
+  if (!container) return [];
+  return Array.from(container.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )).filter(el => !el.closest('[aria-hidden="true"]') && el.offsetParent !== null);
+}
+
+function activateFocusTrap(modalEl, onClose, triggerOverride) {
+  if (!modalEl) return;
+  const prevTrigger = triggerOverride || document.activeElement;
+  if (activeTrapState && activeTrapState.keydownHandler) {
+    document.removeEventListener('keydown', activeTrapState.keydownHandler, true);
+  }
+  modalEl.setAttribute('aria-hidden', 'false');
+  setBackgroundInert(true, modalEl);
+
+  const keydownHandler = (e) => {
+    if (!activeTrapState || activeTrapState.modalEl !== modalEl) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      e.stopPropagation();
+      onClose();
+      return;
+    }
+    if (e.key === 'Tab') {
+      const focusables = getFocusableElements(modalEl);
+      if (focusables.length === 0) {
+        e.preventDefault();
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first || !modalEl.contains(document.activeElement)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last || !modalEl.contains(document.activeElement)) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  };
+
+  document.addEventListener('keydown', keydownHandler, true);
+  activeTrapState = { modalEl, prevTrigger, keydownHandler };
+
+  setTimeout(() => {
+    if (!modalEl.classList.contains('open')) return;
+    const focusables = getFocusableElements(modalEl);
+    if (focusables.length > 0) {
+      focusables[0].focus();
+    } else {
+      if (!modalEl.hasAttribute('tabindex')) modalEl.setAttribute('tabindex', '-1');
+      modalEl.focus();
+    }
+  }, 40);
+}
+
+function deactivateFocusTrap(modalEl, restoreFocus = true) {
+  if (modalEl) modalEl.setAttribute('aria-hidden', 'true');
+  const stillOpen = document.querySelector('#sideDrawer.open, #mobileNavDrawer.open, #welcome-modal-backdrop.open, #contact-modal-backdrop.open');
+  if (!stillOpen) {
+    setBackgroundInert(false);
+    document.body.style.overflow = '';
+  }
+  if (activeTrapState && (!modalEl || activeTrapState.modalEl === modalEl)) {
+    const { prevTrigger, keydownHandler } = activeTrapState;
+    if (keydownHandler) document.removeEventListener('keydown', keydownHandler, true);
+    activeTrapState = null;
+    if (restoreFocus && !stillOpen && prevTrigger && typeof prevTrigger.focus === 'function' && document.contains(prevTrigger)) {
+      prevTrigger.focus();
+    }
+  }
+}
 
 function openDrawer(title, htmlContent) {
   const drawer = $('#sideDrawer');
@@ -76,33 +185,23 @@ function openDrawer(title, htmlContent) {
   titleEl.textContent = title;
   contentEl.innerHTML = htmlContent;
 
-  drawer.setAttribute('aria-hidden', 'false');
   backdrop.classList.add('open');
   drawer.classList.add('open');
   document.body.style.overflow = 'hidden';
-
-  // Move focus into dialog close button
-  setTimeout(() => {
-    const closeBtn = $('#drawerCloseBtn');
-    if (closeBtn) closeBtn.focus();
-  }, 50);
+  activateFocusTrap(drawer, closeDrawer, drawerLastFocusedElement);
 }
 
-function closeDrawer() {
+function closeDrawer(restoreFocus = true) {
   const drawer = $('#sideDrawer');
   const backdrop = $('#drawerBackdrop');
-  if (drawer) {
-    drawer.classList.remove('open');
-    drawer.setAttribute('aria-hidden', 'true');
+  if (!drawer || !drawer.classList.contains('open')) {
+    if (drawer) drawer.setAttribute('aria-hidden', 'true');
+    return;
   }
+  drawer.classList.remove('open');
   if (backdrop) backdrop.classList.remove('open');
-  document.body.style.overflow = '';
-
-  // Return focus to triggering element
-  if (drawerLastFocusedElement && typeof drawerLastFocusedElement.focus === 'function') {
-    drawerLastFocusedElement.focus();
-    drawerLastFocusedElement = null;
-  }
+  deactivateFocusTrap(drawer, restoreFocus !== false);
+  drawerLastFocusedElement = null;
 }
 
 // ─── DATA LOADING ───
@@ -190,23 +289,56 @@ function renderAllSections() {
 function renderMasthead() {
   const dateEl = $('#mastheadDate');
   const editionBadge = $('#mastheadEditionBadge');
+  const drawerBadge = $('#drawerEditionBadge');
   const metaBar = $('#mastheadMetaBar');
 
   if (dateEl) dateEl.textContent = (EDITION_DATA.dayOfWeek ? (EDITION_DATA.dayOfWeek.toUpperCase() + ', ') : '') + (EDITION_DATA.editionDate || '11/11/2026');
-  if (editionBadge) {
+  if (editionBadge || drawerBadge) {
     const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').split('·')[0].trim();
     const isPreviewOnly = EDITION_DATA.publicationGateStatus?.status === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY' || EDITION_DATA.publicationGateStatus?.gateStatus === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY';
     const badgeLabel = EDITION_DATA.publicationGateStatus?.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN';
     const badgeSuffix = isPreviewOnly ? ` · ${badgeLabel}` : '';
-    editionBadge.textContent = baseEdition + badgeSuffix;
-    if (isPreviewOnly) {
-      editionBadge.className = 'ms-badge ms-badge-warning';
+    const finalText = baseEdition + badgeSuffix;
+    if (editionBadge) {
+      editionBadge.textContent = finalText;
+      if (isPreviewOnly) editionBadge.className = 'ms-badge ms-badge-warning ms-edition-pill';
+    }
+    if (drawerBadge) {
+      drawerBadge.textContent = finalText;
+      if (isPreviewOnly) drawerBadge.className = 'ms-badge ms-badge-warning';
     }
   }
 
   if (metaBar) {
     metaBar.style.display = 'none';
   }
+}
+
+function formatEditorialSynthesisHtml(rawSynthesis) {
+  const text = (rawSynthesis || '').trim();
+  if (!text) return '';
+  // Split enumerated items like "(1) ... (2) ... (3) ... (4) ..." for clean executive scanning
+  const firstMarkerIdx = text.search(/\(\d+\)\s+/);
+  if (firstMarkerIdx === -1) {
+    return `<p class="ms-synthesis-lead">${escapeHtml(text)}</p>`;
+  }
+  const intro = text.slice(0, firstMarkerIdx).trim().replace(/:\s*$/, '');
+  const rest = text.slice(firstMarkerIdx).trim();
+  const parts = rest.split(/(?=\(\d+\)\s+)/).map(s => s.trim()).filter(Boolean);
+  const listHtml = parts.map(part => {
+    const m = part.match(/^\((\d+)\)\s*([\s\S]+)$/);
+    if (!m) return `<li class="ms-synthesis-item">${escapeHtml(part)}</li>`;
+    return `
+      <li class="ms-synthesis-item">
+        <span class="ms-synthesis-num">${escapeHtml(m[1])}</span>
+        <span class="ms-synthesis-copy">${escapeHtml(m[2])}</span>
+      </li>
+    `;
+  }).join('');
+  return `
+    ${intro ? `<p class="ms-synthesis-lead">${escapeHtml(intro)}:</p>` : ''}
+    <ul class="ms-synthesis-list">${listHtml}</ul>
+  `;
 }
 
 // ─── SECTION 02: COVER STORY / CORE THESIS ───
@@ -217,7 +349,8 @@ function renderCoverStory() {
   const headlineEl = $('#coverHeadline');
   const subheadlineEl = $('#coverSubheadline');
   const summaryEl = $('#coverSummary');
-  const quoteEl = $('#coverPullQuote');
+  const verbatimQuoteEl = $('#coverVerbatimQuote');
+  const synthesisEl = $('#coverPullQuote');
   const implicationEl = $('#coverImplication');
   const coverDateEl = $('#coverDate');
 
@@ -229,6 +362,7 @@ function renderCoverStory() {
   const publishedAt = lead.publishedAt || '';
   const sourceUrl = lead.sourceUrl || '#';
   const summary = lead.summary || ct.executiveSummary || '';
+  const totalNews = (EDITION_DATA.eligibleNewsList || []).length || 25;
 
   if (headlineEl) headlineEl.textContent = headline;
 
@@ -247,17 +381,43 @@ function renderCoverStory() {
 
   if (summaryEl) {
     summaryEl.innerHTML = `
-      <div style="font-size:0.90625rem; line-height:1.65; color:var(--ms-text-primary); margin:0; text-align:justify;">
+      <div class="ms-cover-sapo-text">
         ${escapeHtml(summary)}
       </div>
     `;
   }
 
-  if (quoteEl) {
-    quoteEl.innerHTML = `
-      <div class="ms-quote-text">“${escapeHtml(ct.editorialPullQuote ? ct.editorialPullQuote.replace(/^[“”"\']+|[“”"\']+$/g, '') : '')}”</div>
-      ${ct.editorialSynthesis ? `<p style="font-size:0.8125rem; line-height:1.55; margin:8px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
-      <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.6875rem; letter-spacing:0.04em;">■ ĐÚC KẾT BIÊN TẬP TỪ 25 BẢN TIN TRONG PHIÊN · BRYAN NEWS | FINTECH INTELLIGENCE</div>
+  const rawQuote = (ct.supportingQuote || ct.editorialPullQuote || lead.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
+  if (verbatimQuoteEl) {
+    if (rawQuote) {
+      verbatimQuoteEl.innerHTML = `
+        <blockquote class="ms-cover-source-quote">
+          <div class="ms-quote-text">“${escapeHtml(rawQuote)}”</div>
+          <footer class="ms-quote-attribution">■ TRÍCH DẪN NGUYÊN VĂN TỪ BÀI BÁO GỐC · ${escapeHtml((sourceName || 'BÁO CHÍ').toUpperCase())}</footer>
+        </blockquote>
+      `;
+    } else {
+      verbatimQuoteEl.innerHTML = '';
+    }
+  }
+
+  if (synthesisEl) {
+    const synthHtml = ct.editorialSynthesis
+      ? formatEditorialSynthesisHtml(ct.editorialSynthesis)
+      : (rawQuote ? `<p class="ms-synthesis-lead">Tổng hợp bối cảnh và dòng sự kiện xác minh trong phiên.</p>` : '');
+    synthesisEl.innerHTML = `
+      <div>
+        <div class="ms-synthesis-header">
+          <span class="ms-synthesis-kicker">■ ĐÚC KẾT TOÀN CẢNH PHIÊN</span>
+          <span class="ms-badge ms-badge-primary">${totalNews} SỰ KIỆN XÁC MINH</span>
+        </div>
+        ${synthHtml}
+      </div>
+      <div class="ms-synthesis-footer">
+        <button type="button" class="ms-btn ms-btn-primary ms-btn-sm ms-synthesis-cta" onclick="switchFintechTab('market', 'newsDesk')">
+          Đọc toàn bộ ${totalNews} bản tin xác minh →
+        </button>
+      </div>
     `;
   }
 
@@ -314,16 +474,16 @@ function renderPulseCard(m) {
       <div>
         <div class="ms-pulse-top">
           <span class="ms-pulse-label">${escapeHtml(m.shortLabel || m.label)}</span>
-          <span class="ms-badge ${badgeClass}" style="font-size:9px; padding:2px 6px;">${escapeHtml(badgeText)}</span>
+          <span class="ms-badge ${badgeClass}" style="font-size:12px; padding:2px 6px;">${escapeHtml(badgeText)}</span>
         </div>
         <div class="ms-pulse-value">${escapeHtml(m.value)}</div>
         <div class="ms-pulse-asof">${asOfLabel}</div>
         <div class="ms-pulse-context">${escapeHtml(shortContext)}</div>
       </div>
-      <div class="ms-pulse-open-btn">
-        <span>Chi tiết & Nguồn</span>
-        <span>→</span>
-      </div>
+      <button type="button" class="ms-pulse-open-btn" aria-label="Xem chi tiết và nguồn ${escapeHtml(m.shortLabel || m.label)}" onclick="event.stopPropagation(); openPulseDetail('${escapeHtml(m.key)}');">
+        <span>Chi tiết &amp; Nguồn</span>
+        <span aria-hidden="true">→</span>
+      </button>
     </article>
   `;
 }
@@ -360,8 +520,8 @@ function openPulseDetail(key) {
       </div>
 
       ${m.verificationStatus === '72H_NOT_VERIFIED' ? `
-        <div style="background-color:rgba(217, 119, 6, 0.1); border:1px solid #d97706; padding:12px 16px; border-radius:4px; margin-bottom:18px;">
-          <div style="font-weight:700; color:#d97706; margin-bottom:4px;">⚠️ THÔNG BÁO KIỂM ĐỊNH FRESHNESS 72H</div>
+        <div style="background-color:var(--ms-warning-bg); border:1px solid var(--ms-warning); padding:12px 16px; border-radius:4px; margin-bottom:18px;">
+          <div style="font-weight:700; color:var(--ms-warning-text); margin-bottom:4px;">⚠️ THÔNG BÁO KIỂM ĐỊNH FRESHNESS 72H</div>
           <div style="font-size:0.875rem; line-height:1.6;">
             Số liệu phiên quan sát chưa có công bố chính thức kèm timestamp đối soát trong vòng 72 giờ qua. Để đảm bảo tính trung thực báo chí tài chính, giá trị hiển thị là <strong>Chưa xác minh trong 72h</strong>.
             <br>Giá trị tham khảo gần nhất: <strong>${escapeHtml(m.referenceValue || 'Kỳ quan sát trước')}</strong>.
@@ -370,8 +530,8 @@ function openPulseDetail(key) {
       ` : ''}
 
       ${m.key === 'vietqrVolume' ? `
-        <div style="background-color:rgba(14, 116, 144, 0.1); border:1px solid #0e7490; padding:12px 16px; border-radius:4px; margin-bottom:18px;">
-          <div style="font-weight:700; color:#0e7490; margin-bottom:4px;">📌 LƯU Ý PHẠM VI DỮ LIỆU (SCOPE SEPARATION)</div>
+        <div style="background-color:var(--ms-primary-light); border:1px solid var(--ms-primary); padding:12px 16px; border-radius:4px; margin-bottom:18px;">
+          <div style="font-weight:700; color:var(--ms-primary); margin-bottom:4px;">📌 LƯU Ý PHẠM VI DỮ LIỆU (SCOPE SEPARATION)</div>
           <div style="font-size:0.875rem; line-height:1.6;">
             Mức tăng trưởng <strong>${escapeHtml(m.value)}</strong> là số liệu áp dụng riêng cho luồng khách du lịch quốc tế và các điểm bán chấp nhận <strong>VietQR Global (Inbound & Cross-border)</strong>. Tuyệt đối không đồng nhất với tổng sản lượng giao dịch toàn hệ thống NAPAS.
           </div>
@@ -450,12 +610,16 @@ function renderNewsDesk() {
   const newsList = EDITION_DATA.eligibleNewsList || [];
   
   // Filter
+  const needle = (currentSearchTerm || '').toLowerCase();
   let filtered = newsList.filter(item => {
     const matchCat = currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter;
-    const matchSearch = !currentSearchTerm || 
-      (item.title && item.title.toLowerCase().includes(currentSearchTerm.toLowerCase())) ||
-      (item.summary && item.summary.toLowerCase().includes(currentSearchTerm.toLowerCase())) ||
-      (item.author && item.author.toLowerCase().includes(currentSearchTerm.toLowerCase()));
+    const matchSearch = !needle || 
+      (item.title && item.title.toLowerCase().includes(needle)) ||
+      (item.summary && item.summary.toLowerCase().includes(needle)) ||
+      (item.supportingQuote && item.supportingQuote.toLowerCase().includes(needle)) ||
+      (item.category && item.category.toLowerCase().includes(needle)) ||
+      (item.publisher && item.publisher.toLowerCase().includes(needle)) ||
+      (item.author && item.author.toLowerCase().includes(needle));
     return matchCat && matchSearch;
   });
 
@@ -473,25 +637,26 @@ function renderNewsDesk() {
   const standardGrid = $('#newsStandardGrid');
   const countBadge = $('#newsCountBadge');
   if (countBadge) {
-    countBadge.remove();
+    countBadge.textContent = `${filtered.length}/${newsList.length} bài`;
+  }
+  const counterBar = $('#newsResultCounterBar');
+  if (counterBar) {
+    counterBar.textContent = `${filtered.length} bài phù hợp trên tổng ${newsList.length} bài đủ điều kiện.`;
   }
 
-  // D-08: Rich Empty State with clear search action
+  // D-08: Rich Empty State with exact spec wording & reset control
   if (filtered.length === 0) {
     if (editorialGrid) editorialGrid.style.display = 'none';
+    if (leadContainer) leadContainer.innerHTML = '';
+    if (subContainer) subContainer.innerHTML = '';
     if (standardGrid) {
       standardGrid.style.display = 'block';
       standardGrid.innerHTML = `
-        <div class="ms-search-empty-state" style="padding:48px 24px; text-align:center; background-color:var(--ms-surface-card); border:1px solid var(--ms-border); margin:20px 0;">
-          <div style="font-size:2.25rem; margin-bottom:12px;" aria-hidden="true">🔍</div>
-          <h3 style="font-family:var(--font-headline); font-size:1.125rem; font-weight:700; color:var(--ms-text-primary); margin:0 0 8px 0;">
-            Không tìm thấy bản tin phù hợp
-          </h3>
-          <p style="font-size:0.875rem; color:var(--ms-text-secondary); max-width:480px; margin:0 auto 20px auto; line-height:1.6;">
-            Không có bài viết nào khớp với từ khóa "<strong>${escapeHtml(currentSearchTerm || '')}</strong>"${currentCategoryFilter !== 'ALL' ? ` trong chuyên mục <strong>${escapeHtml(currentCategoryFilter)}</strong>` : ''}.
-          </p>
-          <button type="button" class="ms-btn ms-btn-primary ms-btn-sm" onclick="clearNewsSearchAndFilter()" style="min-height:38px; padding:0 20px; font-weight:600;">
-            ← Xóa tìm kiếm & Hiện tất cả tin
+        <div class="ms-empty-state" role="status">
+          <div style="font-size:2rem; margin-bottom:10px;" aria-hidden="true">🔍</div>
+          <p>Không tìm thấy bản tin phù hợp với từ khóa hoặc bộ lọc hiện tại.</p>
+          <button type="button" class="ms-filter-reset-btn" onclick="clearNewsSearchAndFilter()">
+            Xóa bộ lọc
           </button>
         </div>
       `;
@@ -507,8 +672,14 @@ function renderNewsDesk() {
       editorialGrid.style.display = 'grid';
       editorialGrid.style.gridTemplateColumns = '1fr';
     }
-    if (subContainer) subContainer.style.display = 'none';
-    if (standardGrid) standardGrid.style.display = 'none';
+    if (subContainer) {
+      subContainer.style.display = 'none';
+      subContainer.innerHTML = '';
+    }
+    if (standardGrid) {
+      standardGrid.style.display = 'none';
+      standardGrid.innerHTML = '';
+    }
     if (leadContainer) {
       leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
     }
@@ -516,6 +687,8 @@ function renderNewsDesk() {
     // When results count is even (e.g. 2, 4, 10):
     // Render balanced 2-column grid in standardGrid with 0 orphan cards!
     if (editorialGrid) editorialGrid.style.display = 'none';
+    if (leadContainer) leadContainer.innerHTML = '';
+    if (subContainer) subContainer.innerHTML = '';
     if (standardGrid) {
       standardGrid.style.display = 'grid';
       standardGrid.innerHTML = filtered.map(item => renderStandardNewsCardHtml(item)).join('');
@@ -543,6 +716,7 @@ function renderNewsDesk() {
         standardGrid.innerHTML = remaining.map(item => renderStandardNewsCardHtml(item)).join('');
       } else {
         standardGrid.style.display = 'none';
+        standardGrid.innerHTML = '';
       }
     }
   }
@@ -552,21 +726,56 @@ function clearNewsSearchAndFilter() {
   currentSearchTerm = '';
   currentCategoryFilter = 'ALL';
   const searchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
   if (searchInput) searchInput.value = '';
+  if (headerSearchInput) headerSearchInput.value = '';
+  if (drawerSearchInput) drawerSearchInput.value = '';
   $$('.ms-cat-btn').forEach(b => {
     const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
     b.classList.toggle('active', isAll);
     b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
   });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
   renderNewsDesk();
 }
 window.clearNewsSearchAndFilter = clearNewsSearchAndFilter;
 
+function renderEditorialQuoteBlock(item) {
+  const raw = (item.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
+  if (!raw) return '';
+  return `
+    <blockquote class="ms-card-editorial-quote">
+      <span class="ms-card-editorial-quote-label">Trích dẫn nguồn báo chí</span>
+      “${escapeHtml(raw)}”
+    </blockquote>
+  `;
+}
+
 function renderNewsCardHtml(lead, isLead) {
   const cleanTime = (lead.publisherPublishedAt || lead.publicationTimestamp || '').split(' | ')[0].trim();
+  const natureText = lead.analysisNature || lead.sectionB_context || '';
+  const impactText = lead.analysisMarketImpact || lead.sectionC_whyItMatters || '';
+  const leadBreakdownHtml = (isLead && (natureText || impactText)) ? `
+    <div class="ms-lead-analysis-preview">
+      ${natureText ? `
+        <div class="ms-lead-analysis-col">
+          <div class="ms-lead-analysis-label">01. Bản chất &amp; Cơ chế tác động</div>
+          <p class="ms-lead-analysis-text">${escapeHtml(natureText)}</p>
+        </div>
+      ` : ''}
+      ${impactText ? `
+        <div class="ms-lead-analysis-col">
+          <div class="ms-lead-analysis-label">02. Tác động thị trường &amp; Hàm ý</div>
+          <p class="ms-lead-analysis-text">${escapeHtml(impactText)}</p>
+        </div>
+      ` : ''}
+    </div>
+  ` : '';
+
   return `
     <article class="ms-news-lead-story">
-      <div>
+      <div class="ms-lead-body-wrap">
         <div class="ms-lead-meta">
           <span class="ms-badge ms-badge-rose">${escapeHtml(lead.category || 'Tin tức')}</span>
           <span class="ms-badge ${lead.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
@@ -580,11 +789,8 @@ function renderNewsCardHtml(lead, isLead) {
           </button>
         </h2>
         <p class="ms-lead-summary">${escapeHtml(lead.summary || lead.supportingQuote || '')}</p>
-        ${lead.supportingQuote && lead.supportingQuote.trim() !== (lead.summary || '').trim() ? `
-          <div class="ms-lead-quote">
-            ${lead.supportingQuote.startsWith('“') ? escapeHtml(lead.supportingQuote) : `“${escapeHtml(lead.supportingQuote)}”`}
-          </div>
-        ` : ''}
+        ${renderEditorialQuoteBlock(lead)}
+        ${leadBreakdownHtml}
       </div>
       <div class="ms-news-card-footer">
         <span>Nguồn: <strong>${escapeHtml(lead.author || lead.originalSourceName || 'Báo chí')}</strong></span>
@@ -619,6 +825,7 @@ function renderSubfeatureCardHtml(item) {
         <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
           ${escapeHtml(item.summary || item.supportingQuote || '')}
         </p>
+        ${renderEditorialQuoteBlock(item)}
       </div>
       <div class="ms-news-card-footer">
         <span style="font-size:12px;">${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
@@ -653,6 +860,7 @@ function renderStandardNewsCardHtml(item) {
           </button>
         </h3>
         <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
+        ${renderEditorialQuoteBlock(item)}
       </div>
       <div class="ms-news-card-footer">
         <span>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
@@ -695,81 +903,75 @@ function openArticleReader(eventId) {
       </div>
 
       ${item.supportingQuote ? `
-        <blockquote style="font-family:var(--font-headline); font-style:italic; font-size:1.0625rem; padding:12px 18px; background-color:var(--ms-surface-alt); border-left:3px solid var(--ms-secondary); margin-bottom:20px; border-radius:0 4px 4px 0;">
-          “${escapeHtml(item.supportingQuote)}”
+        <blockquote class="ms-card-editorial-quote" style="font-family:var(--font-headline); font-style:italic; font-size:1.0625rem; padding:12px 18px; border-left:3px solid var(--ms-primary); margin:0 0 20px 0;">
+          <span class="ms-card-editorial-quote-label" style="color:var(--ms-primary);">Trích dẫn nguyên văn từ bài báo gốc</span>
+          “${escapeHtml(item.supportingQuote.replace(/^[“”"']+|[“”"']+$/g, '').trim())}”
         </blockquote>
       ` : ''}
 
-      <!-- 8-Section Comprehensive Editorial Analysis -->
-      <div style="display:flex; flex-direction:column; gap:20px;">
-        
-        <!-- Section A: What Happened -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
+      <!-- 4-Part Deep Event-Specific Editorial Analysis (D-06 R1.0.1) -->
+      <div style="display:flex; flex-direction:column; gap:18px;">
+
+        <!-- Sapo / Summary -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            A. CHUYỆN GÌ ĐÃ XẢY RA? (SỰ KIỆN CỐT LÕI)
+            TÓM TẮT SỰ KIỆN (SAPO)
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6;">${escapeHtml(item.sectionA_whatHappened || item.summary || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.summary || item.sectionA_whatHappened || '')}</p>
         </section>
 
-        <!-- Section B: Context -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
+        <!-- 01. Nature of Event -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            B. BỐI CẢNH THỊ TRƯỜNG & PHÁP LÝ
+            01. Bản chất sự kiện
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6;">${escapeHtml(item.sectionB_context || item.explanation || 'Sự kiện diễn ra trong bối cảnh toàn ngành tài chính - ngân hàng đang nâng cấp hạ tầng bảo mật và chuẩn hóa quy trình dữ liệu.')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisNature || item.sectionB_context || '')}</p>
         </section>
 
-        <!-- Section C: Why It Matters -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
+        <!-- 02. Transmission Mechanism -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            C. VÌ SAO QUAN TRỌNG?
+            02. Cơ chế tác động
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6;">${escapeHtml(item.sectionC_whyItMatters || item.importance || 'Ảnh hưởng trực tiếp đến an toàn tài sản của người dân và uy tín vận hành của các định chế tài chính.')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
         </section>
 
-        <!-- Section D: Macro-to-Micro Transmission -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
+        <!-- 03. Market Impact -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            D. CƠ CHẾ TRUYỀN DẪN VĨ MÔ → VI MÔ
+            03. Tác động thị trường
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6; font-family:var(--font-mono); color:var(--ms-secondary);">${escapeHtml(item.sectionD_macroMicro || item.macroToMicroText || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
         </section>
 
-        <!-- Section E: FinTech & Payment Lens -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px; border-left:4px solid var(--ms-primary);">
+        <!-- 04. Implications & Watchlist Signal -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:4px solid var(--ms-primary);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            E. GÓC NHÌN FINTECH & THANH TOÁN
+            04. Hàm ý và tín hiệu theo dõi
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6;">${escapeHtml(item.sectionE_fintechLens || item.fintechImpact || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
         </section>
 
-        <!-- Section F: Scenarios & Watchlist -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            F. KỊCH BẢN & ĐIỀU CẦN THEO DÕI
+        ${item.sectionE_fintechLens ? `
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
+          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
+            GÓC NHÌN FINTECH &amp; B2B
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6;">${escapeHtml(item.sectionF_scenariosWatchlist || item.forecast || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.sectionE_fintechLens)}</p>
         </section>
+        ` : ''}
 
-        <!-- Section G: Practical Takeaways -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            G. BÀI HỌC HOẶC ỨNG DỤNG THỰC TẾ
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.6; font-weight:600;">${escapeHtml(item.sectionG_practicalTakeaway || item.takeaway || '')}</p>
-        </section>
-
-        <!-- Section H: Canonical Provenance & Sources -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-radius:4px;">
+        <!-- Source Provenance -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-            H. NGUỒN BÀI VIẾT GỐC & ĐỐI SOÁT BÁO CHÍ
+            NGUỒN BÀI VIẾT GỐC &amp; ĐỐI SOÁT BÁO CHÍ
           </h4>
           <div style="font-size:0.875rem; line-height:1.6; margin-bottom:12px;">
             <div>• Tác giả / Nguồn: <strong>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</strong></div>
             <div>• Thời gian xuất bản gốc: <strong>${escapeHtml(pubDate)}</strong></div>
           </div>
           <div>
-            <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
+            <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-btn ms-btn-primary ms-btn-sm" style="display:inline-flex; align-items:center; gap:6px; min-height:44px;">
               <span>Đọc bài viết gốc trên ${escapeHtml(item.originalSourceName || 'báo')}</span>
               <span>↗</span>
             </a>
@@ -826,7 +1028,8 @@ function renderMacroToMicro() {
   }
 
   flowContainer.innerHTML = chains.map(chain => {
-    const layersHtml = (chain.layers || []).map((layer, lIdx) => {
+    const layers = chain.layers || [];
+    const layersHtml = layers.map((layer, lIdx) => {
       let badgeClass = 'ms-badge-neutral';
       if (layer.badge === 'FACT') badgeClass = 'ms-badge-success';
       else if (layer.badge === 'INFERENCE') badgeClass = 'ms-badge-primary';
@@ -836,10 +1039,11 @@ function renderMacroToMicro() {
       let numVal = parseInt(rawNum, 10);
       if (isNaN(numVal) || numVal < 1) numVal = (lIdx != null ? lIdx + 1 : 1);
       const lvlNum = String(numVal).padStart(2, '0');
-      let lvlName = layer.levelName || layer.layerName || layer.stageName || `Tầng ${lvlNum}`;
+      let lvlName = layer.levelName || layer.layerName || layer.stageName || `Khâu ${lvlNum}`;
       if (typeof lvlName !== 'string' || lvlName.includes('undefined')) {
-        lvlName = `Tầng ${lvlNum}`;
+        lvlName = `Khâu ${lvlNum}`;
       }
+      lvlName = lvlName.replace(/^Tầng\s*\d+\s*[:·-]\s*/i, '').trim() || lvlName;
       let title = layer.title || layer.stageTitle || layer.layerName || `Tác động tầng ${lvlNum}`;
       if (typeof title !== 'string' || title.includes('undefined')) {
         title = `Tác động tầng ${lvlNum}`;
@@ -849,26 +1053,25 @@ function renderMacroToMicro() {
       return `
         <div class="ms-chain-layer-step">
           <div class="ms-layer-step-header">
-            <div style="display:flex; align-items:center; gap:4px;">
-              <span class="ms-layer-num">${escapeHtml(lvlNum)}</span>
-              <strong class="ms-layer-name">${escapeHtml(lvlName)}</strong>
+            <div class="ms-layer-step-top">
+              <span class="ms-layer-num">TẦNG ${escapeHtml(lvlNum)}</span>
+              <span class="ms-badge ${badgeClass} ms-layer-badge">[${escapeHtml(layer.badge || 'FACT')}]</span>
             </div>
-            <div>
-              <span class="ms-badge ${badgeClass}" style="font-size:8px; padding:1px 5px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
-            </div>
+            <div class="ms-layer-name">${escapeHtml(lvlName)}</div>
           </div>
-          <div class="ms-layer-step-title">${escapeHtml(title)}</div>
-          <div class="ms-layer-step-desc">${escapeHtml(desc)}</div>
+          <h4 class="ms-layer-step-title">${escapeHtml(title)}</h4>
+          <p class="ms-layer-step-desc">${escapeHtml(desc)}</p>
         </div>
       `;
-    }).join('<div class="ms-chain-connector">➔</div>');
+    }).join('');
 
     return `
       <article class="ms-analysis-chain-card">
         <div class="ms-chain-header">
           <div>
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-              <span class="ms-badge ms-badge-secondary" style="font-size:9px;">ECONOMIC ANALYSIS CHAIN</span>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
+              <span class="ms-badge ms-badge-secondary" style="font-size:12px;">ECONOMIC ANALYSIS CHAIN</span>
+              <span class="ms-badge ms-badge-neutral" style="font-size:12px;">${layers.length} TẦNG TRUYỀN DẪN</span>
             </div>
             <h3 class="ms-chain-title">${escapeHtml(chain.chainTitle)}</h3>
             <p class="ms-chain-thesis">${escapeHtml(chain.coreThesis)}</p>
@@ -879,7 +1082,7 @@ function renderMacroToMicro() {
             </button>
           </div>
         </div>
-        <div class="ms-chain-layers-flow">
+        <div class="ms-chain-layers-flow" data-layer-count="${layers.length}">
           ${layersHtml}
         </div>
       </article>
@@ -916,7 +1119,7 @@ function openMacroChainDrawer(chainId) {
           <div style="font-family:var(--font-mono); font-size:0.8125rem; font-weight:800; color:var(--ms-primary);">
             LỚP ${lvlNum} · ${escapeHtml(lvlName)}
           </div>
-          <span class="ms-badge ${badgeClass}" style="font-size:9px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
+          <span class="ms-badge ${badgeClass}" style="font-size:12px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
         </div>
         <h4 style="font-family:var(--font-headline); font-size:1rem; margin:0 0 6px 0; color:var(--ms-text-primary);">
           ${escapeHtml(title)}
@@ -942,7 +1145,7 @@ function openMacroChainDrawer(chainId) {
 
       <div style="margin-bottom:20px;">
         <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-          5 TẦNG TRUYỀN DẪN TÁC ĐỘNG (TRANSMISSION LAYERS)
+          ${(chain.layers || []).length} TẦNG TRUYỀN DẪN TÁC ĐỘNG (TRANSMISSION LAYERS)
         </h4>
         ${layersList}
       </div>
@@ -986,8 +1189,8 @@ function renderPaymentRadar() {
     const bdAction = op.proposedBDAction || op.proposedBdAction || 'Tiếp cận ban điều hành các chuỗi bán lẻ';
     const readiness = op.solutionReadiness || 'CONFIRMED_EXISTING_CAPABILITY';
     const readinessBadge = readiness === 'CONFIRMED_EXISTING_CAPABILITY'
-      ? '<span class="ms-badge ms-badge-success" style="font-size:9px;">NĂNG LỰC HIỆN HỮU</span>'
-      : '<span class="ms-badge ms-badge-primary" style="font-size:9px;">TÍCH HỢP MỞ RỘNG</span>';
+      ? '<span class="ms-badge ms-badge-success" style="font-size:12px;">NĂNG LỰC HIỆN HỮU</span>'
+      : '<span class="ms-badge ms-badge-primary" style="font-size:12px;">TÍCH HỢP MỞ RỘNG</span>';
 
     return `
       <article class="ms-radar-card">
@@ -1178,7 +1381,7 @@ function renderArchive() {
       <tr>
         <td style="white-space:nowrap;">
           <strong>${escapeHtml(displayDate)}</strong>
-          <div style="font-size:0.6875rem; font-family:var(--font-mono); color:var(--ms-text-muted);">${escapeHtml(editionId)}</div>
+          <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">${escapeHtml(editionId)}</div>
         </td>
         <td style="white-space:nowrap; font-weight:600;">${escapeHtml(ed.number || '')}</td>
         <td>
@@ -1186,7 +1389,7 @@ function renderArchive() {
           <div style="font-size:0.75rem; color:var(--ms-text-muted);">Tỷ lệ mới 0–24h: <strong>${escapeHtml(ed.freshness || '')}</strong> · ${escapeHtml(ed.newsCount || '')}</div>
         </td>
         <td>
-          <span class="ms-badge ${badgeClass}" style="font-size:10px;">${escapeHtml(statusText)}</span>
+          <span class="ms-badge ${badgeClass}" style="font-size:12px;">${escapeHtml(statusText)}</span>
         </td>
         <td style="white-space:nowrap; text-align:right;">
           <button type="button" class="ms-btn ms-btn-primary ms-btn-xs js-archive-drawer-btn" style="margin-right:6px;" data-edition-id="${escapeHtml(editionId)}">
@@ -1264,9 +1467,9 @@ function openArchiveDrawer(editionId) {
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
           ${mp.slice(0, 8).map(card => `
             <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:8px 10px; font-size:0.75rem;">
-              <div style="font-family:var(--font-mono); color:var(--ms-text-muted); font-size:9px;">${escapeHtml(card.cardNumber || '')}. ${escapeHtml(card.shortLabel || card.label || '')}</div>
+              <div style="font-family:var(--font-mono); color:var(--ms-text-muted); font-size:12px;">${escapeHtml(card.cardNumber || '')}. ${escapeHtml(card.shortLabel || card.label || '')}</div>
               <div style="font-family:var(--font-headline); font-size:0.9375rem; font-weight:700; color:var(--ms-primary);">${escapeHtml(card.value || 'N/A')} ${escapeHtml(card.unit || '')}</div>
-              <div style="font-size:9px; color:var(--ms-text-muted);">Phiên: ${escapeHtml(card.asOf || '')}</div>
+              <div style="font-size:12px; color:var(--ms-text-muted);">Phiên: ${escapeHtml(card.asOf || '')}</div>
             </div>
           `).join('')}
         </div>
@@ -1405,15 +1608,24 @@ function switchFintechTab(tabKey, targetSubId) {
     btn.setAttribute('tabindex', isActive ? '0' : '-1');
   });
 
-  // 3. Update mobile quick tabs
+  // 3. Update mobile quick tabs with matching ARIA tab semantics
   document.querySelectorAll('.ms-quick-tab:not(#quickTabArchive)').forEach(btn => {
     const isActive = btn.getAttribute('data-tab') === tabKey;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    btn.setAttribute('tabindex', isActive ? '0' : '-1');
   });
 
+  // 3B. Highlight active workspace card inside slide-out menu drawer & clear topic pills when leaving market
+  document.querySelectorAll('.ms-drawer-ws-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-drawer-tab') === tabKey);
+  });
+  if (tabKey !== 'market') {
+    document.querySelectorAll('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
+  }
+
   // 4. Close mobile drawer if open
-  closeMobileDrawer();
+  closeMobileDrawer(false);
 
   // 5. Update browser URL hash cleanly
   if (window.history && window.history.replaceState) {
@@ -1455,11 +1667,11 @@ function initFintechTabs() {
     }
   });
 
-  // WAI-ARIA Keyboard Navigation for Tablist (ArrowLeft, ArrowRight, Home, End)
-  const tablist = document.querySelector('.ms-nav-menu[role="tablist"]');
-  if (tablist) {
-    tablist.addEventListener('keydown', (e) => {
-      const tabs = Array.from(tablist.querySelectorAll('.ms-nav-tab-btn:not(#navTabArchive)'));
+  // WAI-ARIA Keyboard Navigation for Desktop & Mobile Tablists (ArrowLeft, ArrowRight, Home, End)
+  function bindTablistKeyboard(tablistEl, tabSelector) {
+    if (!tablistEl) return;
+    tablistEl.addEventListener('keydown', (e) => {
+      const tabs = Array.from(tablistEl.querySelectorAll(tabSelector));
       const currentIndex = tabs.findIndex(t => t.classList.contains('active'));
       if (currentIndex === -1) return;
       let nextIndex = currentIndex;
@@ -1486,24 +1698,113 @@ function initFintechTabs() {
       }
     });
   }
+  bindTablistKeyboard(document.querySelector('.ms-nav-menu[role="tablist"]'), '.ms-nav-tab-btn:not(#navTabArchive)');
+  bindTablistKeyboard(document.querySelector('.ms-quick-tablist[role="tablist"], .ms-quick-tabs-scroll[role="tablist"]'), '.ms-quick-tab:not(#quickTabArchive)');
 }
 
-function openMobileDrawer() {
+let navDrawerTrigger = null;
+
+function openMobileDrawer(focusSearch = false) {
   const mobileDrawer = document.getElementById('mobileNavDrawer');
-  if (mobileDrawer) {
-    mobileDrawer.classList.add('open');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+  const backdrop = document.getElementById('navDrawerBackdrop');
+  if (!mobileDrawer) return;
+  navDrawerTrigger = document.activeElement;
+  closeDrawer(false);
+  closeContactModal(false);
+  closeWelcomeModal(false);
+  mobileDrawer.classList.add('open');
+  if (backdrop) {
+    backdrop.classList.add('open');
+    backdrop.setAttribute('aria-hidden', 'false');
+  }
+  const opener = document.getElementById('btnOpenCategoryDrawer');
+  if (opener) opener.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+  activateFocusTrap(mobileDrawer, closeMobileDrawer, navDrawerTrigger);
+  if (focusSearch) {
+    setTimeout(() => {
+      const searchEl = document.getElementById('drawerSearchInput');
+      if (searchEl) searchEl.focus();
+    }, 80);
   }
 }
 
-function closeMobileDrawer() {
+function closeMobileDrawer(restoreFocus = true) {
   const mobileDrawer = document.getElementById('mobileNavDrawer');
-  if (mobileDrawer) {
+  const backdrop = document.getElementById('navDrawerBackdrop');
+  if (backdrop) {
+    backdrop.classList.remove('open');
+    backdrop.setAttribute('aria-hidden', 'true');
+  }
+  const opener = document.getElementById('btnOpenCategoryDrawer');
+  if (opener) opener.setAttribute('aria-expanded', 'false');
+  if (mobileDrawer && mobileDrawer.classList.contains('open')) {
     mobileDrawer.classList.remove('open');
+    deactivateFocusTrap(mobileDrawer, restoreFocus !== false);
+  } else if (mobileDrawer) {
     mobileDrawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
   }
+  navDrawerTrigger = null;
+}
+
+function navigateToNewsCategory(catKey) {
+  const targetCat = catKey || 'ALL';
+  currentCategoryFilter = targetCat;
+  currentSearchTerm = '';
+  const newsSearchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
+  if (newsSearchInput) newsSearchInput.value = '';
+  if (headerSearchInput) headerSearchInput.value = '';
+  if (drawerSearchInput) drawerSearchInput.value = '';
+
+  $$('.ms-cat-btn').forEach(b => {
+    const isMatch = (b.getAttribute('data-cat') || '') === targetCat;
+    b.classList.toggle('active', isMatch);
+    b.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+  });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => {
+    const oc = btn.getAttribute('onclick') || '';
+    btn.classList.toggle('active', oc.includes(`'${targetCat}'`));
+  });
+
+  renderNewsDesk();
+  switchFintechTab('market', 'newsDesk');
+}
+
+function executePortalSearch(rawQuery) {
+  const term = (rawQuery || '').trim();
+  currentCategoryFilter = 'ALL';
+  currentSearchTerm = term;
+  $$('.ms-cat-btn').forEach(b => {
+    const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
+    b.classList.toggle('active', isAll);
+    b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
+  });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
+  const newsSearchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
+  if (newsSearchInput) newsSearchInput.value = term;
+  if (headerSearchInput) headerSearchInput.value = term;
+  if (drawerSearchInput) drawerSearchInput.value = term;
+
+  renderNewsDesk();
+  switchFintechTab('market', 'newsDesk');
+}
+
+function handleHeaderQuickSearch(event) {
+  if (event) event.preventDefault();
+  const input = $('#headerQuickSearchInput');
+  executePortalSearch(input ? input.value : '');
+  return false;
+}
+
+function handleDrawerSearch(event) {
+  if (event) event.preventDefault();
+  const input = $('#drawerSearchInput');
+  executePortalSearch(input ? input.value : '');
+  return false;
 }
 
 // ─── FILTER & SEARCH EVENTS ───
@@ -1684,14 +1985,14 @@ function renderDecisionBrief() {
     }
 
     const priorityBadge = sig.confidenceLevel === 'HIGH_CONFIDENCE_GROUNDED'
-      ? '<span class="ms-badge ms-badge-rose" style="font-size:9px;">ƯU TIÊN CAO</span>'
-      : '<span class="ms-badge ms-badge-primary" style="font-size:9px;">TRỌNG TÂM</span>';
+      ? '<span class="ms-badge ms-badge-rose" style="font-size:12px;">ƯU TIÊN CAO</span>'
+      : '<span class="ms-badge ms-badge-primary" style="font-size:12px;">TRỌNG TÂM</span>';
 
     return `
       <article class="ms-compact-decision-card">
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-            <span class="ms-badge ms-badge-secondary" style="font-size:9px;">${escapeHtml(categoryBadge)}</span>
+            <span class="ms-badge ms-badge-secondary" style="font-size:12px;">${escapeHtml(categoryBadge)}</span>
             ${priorityBadge}
           </div>
           <h3 class="ms-decision-card-title">${escapeHtml(sig.signalTitle)}</h3>
@@ -1738,13 +2039,12 @@ function openDecisionSignalDrawer(signalId) {
       pillLabel = 'Ý TƯỞNG PHÁT TRIỂN MỚI';
     }
     return `
-      <div style="background-color:var(--ms-surface-base); padding:10px 14px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-primary); border-radius:4px; margin-bottom:8px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+      <div class="ms-b2b-solution-item" style="background-color:var(--ms-surface-base); padding:12px 14px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-primary); border-radius:4px; margin-bottom:10px;">
+        <div style="margin-bottom:6px;">
           <span class="ms-solution-pill ${pillClass}">${pillLabel}</span>
-          <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(sol.readinessType || '')}</span>
         </div>
-        <div style="font-weight:700; font-size:0.875rem; color:var(--ms-text-primary);">${escapeHtml(sol.solutionName)}</div>
-        <p style="font-size:0.8125rem; margin:4px 0 0 0; color:var(--ms-text-secondary); line-height:1.5;">${escapeHtml(sol.capabilityNote)}</p>
+        <div style="font-weight:700; font-size:0.9375rem; color:var(--ms-text-primary); line-height:1.4;">${escapeHtml(sol.solutionName)}</div>
+        <p style="font-size:0.84375rem; margin:4px 0 0 0; color:var(--ms-text-secondary); line-height:1.55;">${escapeHtml(sol.capabilityNote)}</p>
       </div>
     `;
   }).join('');
@@ -1766,13 +2066,19 @@ function openDecisionSignalDrawer(signalId) {
     </div>
   `).join('');
 
+  const confLabel = (!sig.confidenceLevel || String(sig.confidenceLevel).includes('HIGH'))
+    ? 'ĐỘ TIN CẬY CAO · ĐÃ XÁC MINH'
+    : 'TRỌNG TÂM ĐIỀU HÀNH';
+
   const html = `
     <article style="font-size:0.9375rem; line-height:1.7;">
       <!-- Header -->
-      <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
-        <span class="ms-badge ms-badge-neutral" style="margin-left:6px;">${escapeHtml(sig.confidenceLevel || 'HIGH_CONFIDENCE')}</span>
-        <h2 style="font-family:var(--font-headline); font-size:1.625rem; line-height:1.25; color:var(--ms-primary); margin:10px 0 6px 0;">
+      <div style="padding-bottom:14px; margin-bottom:16px; border-bottom:2px solid var(--ms-border);">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
+          <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
+          <span class="ms-badge ms-badge-neutral">${confLabel}</span>
+        </div>
+        <h2 style="font-family:var(--font-headline); font-size:clamp(1.25rem, 4.5vw, 1.55rem); line-height:1.3; color:var(--ms-primary); margin:0;">
           ${escapeHtml(sig.signalTitle)}
         </h2>
       </div>
@@ -1885,7 +2191,7 @@ function renderWatchlist() {
       <div class="ms-watchlist-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
           <div class="ms-watchlist-indicator">${escapeHtml(wId)} · ${escapeHtml(indicator)}</div>
-          <span class="ms-badge ${impact === 'HIGH' ? 'ms-badge-error' : 'ms-badge-warning'}" style="font-size:8px; padding:1px 5px;">${escapeHtml(impact)}</span>
+          <span class="ms-badge ${impact === 'HIGH' ? 'ms-badge-error' : 'ms-badge-warning'}" style="font-size:12px; padding:1px 5px;">${escapeHtml(impact)}</span>
         </div>
         <h4 class="ms-watchlist-title">${escapeHtml(title)}</h4>
         <div class="ms-watchlist-desc">
@@ -2033,17 +2339,23 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Global Scroll Handler
-window.addEventListener('scroll', () => {
+// Global Scroll Handler (Back To Top + VnEconomy-style Sticky Nav Brand State)
+function updateStickyNavState() {
   const btn = document.getElementById('backToTopBtn');
   if (btn) {
-    if (window.scrollY > 350) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
+    btn.classList.toggle('show', window.scrollY > 350);
   }
-}, { passive: true });
+  const masthead = document.getElementById('masthead');
+  const isSticky = masthead ? (masthead.getBoundingClientRect().bottom <= 6) : (window.scrollY > 140);
+  const desktopNav = document.getElementById('desktopNavStrip');
+  const mobileNav = document.getElementById('mobileStickyNav');
+  if (desktopNav) desktopNav.classList.toggle('is-sticky', isSticky);
+  if (mobileNav) mobileNav.classList.toggle('is-sticky', isSticky);
+}
+
+window.addEventListener('scroll', updateStickyNavState, { passive: true });
+window.addEventListener('resize', updateStickyNavState, { passive: true });
+document.addEventListener('DOMContentLoaded', updateStickyNavState);
 
 // Centralized Click & Event Delegation
 document.addEventListener('click', (e) => {
@@ -2110,6 +2422,10 @@ window.switchFintechTab = switchFintechTab;
 window.initFintechTabs = initFintechTabs;
 window.openMobileDrawer = openMobileDrawer;
 window.closeMobileDrawer = closeMobileDrawer;
+window.navigateToNewsCategory = navigateToNewsCategory;
+window.executePortalSearch = executePortalSearch;
+window.handleHeaderQuickSearch = handleHeaderQuickSearch;
+window.handleDrawerSearch = handleDrawerSearch;
 window.openVCardModal = openVCardModal;
 window.closeVCardModal = closeVCardModal;
 window.switchVCardTab = switchVCardTab;
@@ -2126,26 +2442,31 @@ console.log('[MagSpread] All P0 Drawer, Modal & Contact controllers successfully
    V2.2.3 R1: INDEPENDENT POPUP SYSTEMS (CONTACT POPUP & EDITORIAL WELCOME)
    ========================================================================== */
 
+let contactModalTrigger = null;
+let welcomeModalTrigger = null;
+
 function openContactModal() {
-  closeWelcomeModal();
-  closeDrawer();
+  contactModalTrigger = document.activeElement;
+  closeWelcomeModal(false);
+  closeDrawer(false);
   switchVCardTab(currentVCardTab);
   const modal = document.getElementById('contact-modal-backdrop') || document.getElementById('vcard-modal-backdrop');
   if (modal) {
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    activateFocusTrap(modal, closeContactModal, contactModalTrigger);
   }
 }
 
-function closeContactModal() {
+function closeContactModal(restoreFocus = true) {
   const modal = document.getElementById('contact-modal-backdrop') || document.getElementById('vcard-modal-backdrop');
-  if (modal) {
-    modal.classList.remove('open');
-    const isOtherModalOpen = document.querySelector('.vcard-modal-backdrop.open, .ms-modal-backdrop.open, .ms-drawer.open');
-    if (!isOtherModalOpen) {
-      document.body.style.overflow = '';
-    }
+  if (!modal || !modal.classList.contains('open')) {
+    if (modal) modal.setAttribute('aria-hidden', 'true');
+    return;
   }
+  modal.classList.remove('open');
+  deactivateFocusTrap(modal, restoreFocus !== false);
+  contactModalTrigger = null;
 }
 
 function openVCardModal() {
@@ -2167,23 +2488,28 @@ function closeFabMenu() {
   if (fw) fw.classList.remove('menu-open');
 }
 
-// ─── EDITORIAL WELCOME MODAL CONTROLLERS (R3 RESTORATION) ───
+// ─── EDITORIAL WELCOME MODAL CONTROLLERS (R3 RESTORATION + D-09 FOCUS TRAP) ───
 function openWelcomeModal() {
-  closeContactModal();
-  closeDrawer();
+  welcomeModalTrigger = document.activeElement;
+  closeContactModal(false);
+  closeDrawer(false);
   const modal = document.getElementById('welcome-modal-backdrop');
   if (modal) {
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    activateFocusTrap(modal, closeWelcomeModal, welcomeModalTrigger);
   }
 }
 
-function closeWelcomeModal() {
+function closeWelcomeModal(restoreFocus = true) {
   const modal = document.getElementById('welcome-modal-backdrop');
-  if (modal) {
+  if (modal && modal.classList.contains('open')) {
     modal.classList.remove('open');
-    document.body.style.overflow = '';
+    deactivateFocusTrap(modal, restoreFocus !== false);
+  } else if (modal) {
+    modal.setAttribute('aria-hidden', 'true');
   }
+  welcomeModalTrigger = null;
   try {
     localStorage.setItem('bryan_fintech_welcome_shown_v1', 'true');
     sessionStorage.setItem('bryan_fintech_welcome_shown', 'true');
