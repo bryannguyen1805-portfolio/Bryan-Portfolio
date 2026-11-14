@@ -2,7 +2,7 @@ window.EDITION_DATA = {
   "editionId": "ED-20261114-D01",
   "editionDate": "14/11/2026",
   "dayOfWeek": "Thứ Bảy",
-  "editionCutoffAt": "2026-11-14T13:26:58.890684+07:00",
+  "editionCutoffAt": "2026-11-14T14:29:02.377323+07:00",
   "editionNumber": "ẤN BẢN SỐ 29",
   "publicationGateStatus": {
     "status": "PASS_25_EVENTS_24H_80PCT",
@@ -25,28 +25,29 @@ window.EDITION_DATA = {
       "tierNumber": 1,
       "label": "01. TỶ GIÁ NGOẠI HỐI & CAN THIỆP USD/VND",
       "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
-      "value": "25.618 VND/USD",
-      "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
-      "change": "+3 VND/USD",
+      "value": "25.637 VND/USD",
+      "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 - Bán 26.868 đồng | VCB: 25.500 - 25.910 đồng | BIDV: 25.540 - 25.920 đồng",
+      "change": "+22 VND/USD",
       "unit": "VND/USD",
-      "observationAt": "2026-11-13T08:30:00+07:00",
-      "asOf": "2026-11-13",
-      "dataPeriod": "Phiên 2026-11-13",
-      "publishedAt": "2026-11-13T08:30:00+07:00",
+      "observationAt": "2026-11-14T08:30:00+07:00",
+      "asOf": "2026-11-14",
+      "dataPeriod": "Phiên 2026-11-14",
+      "publishedAt": "2026-11-14T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
-      "sourceName": "CafeF / VCCorp",
-      "sourceUrl": "https://cafef.vn/linh-hoat-cac-giai-phap-on-dinh-ty-gia-18826111013535336.chn",
+      "sourceName": "Thời báo Tài chính Việt Nam",
+      "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
       "secondarySourceUrls": [
-        "https://thanhnien.vn/kinh-te.htm"
+        "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia",
+        "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_49fc23f9b4.html",
-      "sha256": "49fc23f9b408d71cb27dc81e9247868f5ca597ab57c07d2e9911d17701219a56",
+      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_ec01cc05aa.html",
+      "sha256": "ec01cc05aa2f20416a85163cd6dbece9c5990b87b3b0faa660f7b2eecd342333",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Tỷ giá trung tâm USD/VND ghi nhận ở mức 25600 VND/USD cho ngày 2026-11-10.",
-      "financialInterpretation": "Việc NHNN duy trì giá mua can thiệp 25.500 đồng giúp chặn đà suy yếu của tiền đồng trong khi vẫn tiếp sức thanh khoản VND cho hệ thống ngân hàng. Tỷ giá bán ra tại các NHTM neo ở 25.860 - 25.870 VND/USD làm tăng chi phí nhập khẩu của doanh nghiệp bán lẻ. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
-      "monitoringWatchpoint": "Theo dõi sát khối lượng ngoại tệ NHNN mua vào trong các phiên định kỳ thứ Hai và thứ Tư.",
+      "statusReason": "Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.637 VND/USD cho ngày 2026-11-14.",
+      "financialInterpretation": "Tỷ giá trung tâm tăng lên 25.637 VND/USD khi chỉ số DXY vượt mốc 103,41 điểm, kéo giá bán USD tại Vietcombank (25.910 đồng) và BIDV (25.920 đồng) tăng hơn 130 đồng. Việc NHNN duy trì giá mua tham khảo 25.500 đồng giúp ổn định kỳ vọng tỷ giá, nhưng chi phí thanh toán nhập khẩu của doanh nghiệp bán lẻ vẫn chịu áp lực. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
+      "monitoringWatchpoint": "Theo dõi sát diễn biến chỉ số DXY trên vùng 103 điểm và biên độ niêm yết USD tại các NHTM quốc doanh trong tuần tới.",
       "discoveryAudit": {
         "searchQuery": "TỶ GIÁ CAN THIỆP USD/VND",
         "searchRequestId": "SRCH-REQ-MP-01-20261112",
@@ -56,10 +57,10 @@ window.EDITION_DATA = {
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
-          "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
+          "Đơn vị phát hành & đối soát: Thời báo Tài chính Việt Nam.",
+          "Kỳ dữ liệu quan sát: 2026-11-14 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25600 VND/USD cho ngày 2026-11-10."
+          "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.637 VND/USD cho ngày 2026-11-14."
         ]
       }
     },
@@ -81,16 +82,16 @@ window.EDITION_DATA = {
       "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
-      "sourceName": "CafeF / VCCorp",
-      "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+      "sourceName": "CafeF / VCCorp (cafef.vn)",
+      "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
       "secondarySourceUrls": [
         "https://cafef.vn/tai-chinh-ngan-hang.chn"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
-      "sha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html",
+      "sha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 6.4 %/năm (NHTM).",
+      "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM) trong phiên ngày 2026-11-13.",
       "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
       "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
       "discoveryAudit": {
@@ -102,10 +103,10 @@ window.EDITION_DATA = {
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
-          "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
+          "Đơn vị phát hành & đối soát: CafeF / VCCorp (cafef.vn).",
           "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 6.4 %/năm (NHTM)."
+          "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM) trong phiên ngày 2026-11-13."
         ]
       }
     },
@@ -117,9 +118,9 @@ window.EDITION_DATA = {
       "tierNumber": 1,
       "label": "03. CHỈ SỐ VN-INDEX",
       "shortLabel": "CHỈ SỐ VN-INDEX",
-      "value": "1.748,50 Điểm",
-      "referenceValue": "Thanh khoản HoSE: 16.850 tỷ đồng | Khối ngoại cân bằng | 240 mã tăng",
-      "change": "+5,50 Điểm (+0,32%) trong phiên ngày 2026-11-13",
+      "value": "1.734,93 Điểm",
+      "referenceValue": "Thanh khoản HoSE: 15.138 tỷ đồng (656,7 triệu CP) | Khối ngoại mua ròng 310,8 tỷ đồng | 108 mã tăng / 192 mã giảm",
+      "change": "+0,18 Điểm (+0,01%) phiên 2026-11-13; +9,57 Điểm (+0,55%) tuần 9–13/11",
       "unit": "Điểm",
       "observationAt": "2026-11-13T08:30:00+07:00",
       "asOf": "2026-11-13",
@@ -127,18 +128,19 @@ window.EDITION_DATA = {
       "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
-      "sourceName": "Báo Tuổi Trẻ",
-      "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+      "sourceName": "Báo Dân Việt (danviet.vn)",
+      "sourceUrl": "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
       "secondarySourceUrls": [
-        "https://cafef.vn/thi-truong-chung-khoan.chn"
+        "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
+        "https://thoibaotaichinhvietnam.vn/"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
-      "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
+      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
+      "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10.",
-      "financialInterpretation": "Thị trường duy trì sắc xanh tích cực phản ánh sự hấp thụ tốt của dòng tiền nội quanh vùng 1.745 - 1.750 điểm. Thanh khoản đạt gần 17.000 tỷ đồng cho thấy tâm lý nhà đầu tư dần ổn định. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
-      "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng kháng cự 1.750 điểm và động thái giải ngân của khối ngoại.",
+      "statusReason": "Chỉ số VN-Index đóng cửa tại 1.734,93 Điểm trong phiên ngày 2026-11-13.",
+      "financialInterpretation": "VN-Index hồi phục và trụ vững quanh vùng 1.735 điểm sau nhịp điều chỉnh, chấm dứt chuỗi hai tuần giảm điểm nhờ lực cầu bắt đáy và động thái mua ròng hơn 310,8 tỷ đồng của khối ngoại trong phiên cuối tuần. Tuy nhiên thanh khoản còn thận trọng (15.138 tỷ đồng), thúc đẩy các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu dòng tiền hoạt động.",
+      "monitoringWatchpoint": "Theo dõi khả năng bứt phá của VN-Index qua vùng kháng cự 1.740 - 1.750 điểm và tính bền vững của dòng vốn ngoại trong tuần tới.",
       "discoveryAudit": {
         "searchQuery": "CHỈ SỐ VN-INDEX",
         "searchRequestId": "SRCH-REQ-MP-03-20261112",
@@ -148,10 +150,10 @@ window.EDITION_DATA = {
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
-          "Đơn vị phát hành & đối soát: Báo Tuổi Trẻ.",
+          "Đơn vị phát hành & đối soát: Báo Dân Việt (danviet.vn).",
           "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
-          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10."
+          "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1.734,93 Điểm trong phiên ngày 2026-11-13."
         ]
       }
     },
@@ -226,7 +228,7 @@ window.EDITION_DATA = {
       "executiveSummary": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng. Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm.",
       "leadArticle": {
         "headline": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
-        "eventId": "EVT-01",
+        "eventId": "EVT-06",
         "sourceName": "CafeF / VCCorp",
         "publishedAt": "14/11/2026 11:59 | Nguồn gốc: CafeF / VCCorp (2026-11-14T11:59:00+07:00)",
         "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
@@ -234,7 +236,7 @@ window.EDITION_DATA = {
       },
       "editorialPullQuote": "“Cam kết bảo lãnh tín dụng 1.000 tỷ đồng là bước đi quyết định giúp tháo gỡ điểm nghẽn pháp lý dự án, giải phóng nguồn lực tài sản bị đóng băng và khôi phục niềm tin của người mua nhà cũng như thị trường bất động sản.”",
       "pullQuote": "“Cam kết bảo lãnh tín dụng 1.000 tỷ đồng là bước đi quyết định giúp tháo gỡ điểm nghẽn pháp lý dự án, giải phóng nguồn lực tài sản bị đóng băng và khôi phục niềm tin của người mua nhà cũng như thị trường bất động sản.”",
-      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu.",
+      "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu.",
       "marketImpact": "Cam kết cung ứng hạn mức tín dụng 1.000 tỷ đồng từ phía ngân hàng để xử lý nghĩa vụ tài chính tại dự án CT6 Kiến Hưng là chỉ dấu quan trọng cho thấy cơ chế tái cấu trúc vốn và giải phóng tài sản đóng băng đang phát huy tác dụng. Động thái này giúp tháo gỡ điểm nghẽn pháp lý kéo dài, giải tỏa áp lực trích lập dự phòng rủi ro cho các tổ chức tín dụng liên quan và bảo vệ trực tiếp quyền lợi sở hữu nhà ở của người dân. Trên bình diện vĩ mô, việc khơi thông các dự án vướng mắc pháp lý đóng vai trò đòn bẩy kích hoạt lại dòng vốn lưu thông trong lĩnh vực xây dựng, bất động sản và các dịch vụ thương mại phụ trợ, đồng thời củng cố niềm tin của thị trường tín dụng bán lẻ trước thềm cao điểm cuối năm.",
       "fintechLensAction": "Cơ hội Payoo & SmartPOS: Tận dụng cơ chế giải tỏa vướng mắc cho các dự án khu dân cư và điểm thương mại, Payoo đẩy mạnh cung cấp giải pháp Payoo SmartPOS All-in-One và cổng thanh toán cư dân, hỗ trợ ban quản lý và điểm kinh doanh thu phí dịch vụ, hóa đơn tiện ích và các giao dịch chuyển nhượng tài sản số một cách minh bạch, an toàn và tức thì.",
       "monitoringWatchpoint": "Theo dõi sát tiến độ giải ngân gói bảo lãnh 1.000 tỷ đồng, quy trình cấp giấy chứng nhận quyền sở hữu nhà ở cho cư dân CT6 Kiến Hưng và động thái điều hành hạn mức tín dụng bất động sản của NHNN trong quý 4/2026.",
@@ -262,31 +264,31 @@ window.EDITION_DATA = {
           "categoryBadge": "DU LỊCH & THANH TOÁN QUỐC TẾ",
           "signalTitle": "Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế",
           "relatedEventIds": [
+            "EVT-20261114-053",
+            "EVT-20261114-008",
+            "EVT-20261114-068",
             "EVT-20261114-011",
             "EVT-20261114-076",
-            "EVT-20261114-025",
-            "EVT-20261114-058",
-            "EVT-20261114-008",
-            "EVT-20261114-034",
-            "EVT-20261114-039",
-            "EVT-20261114-054",
-            "EVT-20261114-068",
-            "EVT-20261114-040",
-            "EVT-20261114-007",
-            "EVT-20261114-019",
-            "EVT-20261114-035",
-            "EVT-20261114-002",
-            "EVT-20261114-010",
-            "EVT-20261114-053",
-            "EVT-20261114-063",
-            "EVT-20261114-006",
             "EVT-20261114-048",
-            "EVT-20261114-044",
-            "EVT-20261114-043",
-            "EVT-20261114-015",
-            "EVT-20261114-024",
+            "EVT-20261114-039",
+            "EVT-20261114-073",
+            "EVT-20261114-064",
+            "EVT-20261114-007",
+            "EVT-20261114-052",
+            "EVT-20261114-054",
+            "EVT-20261114-014",
+            "EVT-20261114-006",
             "EVT-20261114-001",
-            "EVT-20261114-052"
+            "EVT-20261114-059",
+            "EVT-20261114-058",
+            "EVT-20261114-035",
+            "EVT-20261114-044",
+            "EVT-20261114-024",
+            "EVT-20261114-040",
+            "EVT-20261114-025",
+            "EVT-20261114-019",
+            "EVT-20261114-063",
+            "EVT-20261114-015"
           ],
           "whatHappened": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
           "whyItMatters": "Tác động lan tỏa từ sự chuyển dịch của Du lịch, Khách sạn & Bán lẻ Quốc tế mở ra cơ hội gia tăng doanh số thanh toán số và tối ưu chi phí đối soát.",
@@ -322,9 +324,9 @@ window.EDITION_DATA = {
             }
           ],
           "evidenceUrls": [
-            "https://thanhnien.vn/hang-viet-len-san-ngoai-de-hay-kho-185261113201431574.htm",
-            "https://vneconomy.vn/thu-tuong-nhan-manh-viec-tao-mot-the-che-cong-khai-minh-bach-va-de-thuc-hien.htm",
-            "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm"
+            "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
+            "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+            "https://cafef.vn/gui-tiet-kiem-dung-ten-hai-vo-chong-mot-nguoi-co-duoc-tu-rut-tien-188261114072153819.chn"
           ]
         },
         {
@@ -378,31 +380,31 @@ window.EDITION_DATA = {
           "categoryBadge": "NGOẠI HỐI & LÃI SUẤT ĐIỀU HÀNH",
           "signalTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
           "relatedEventIds": [
-            "EVT-20261114-043",
-            "EVT-20261114-048",
-            "EVT-20261114-040",
-            "EVT-20261114-063",
+            "EVT-20261114-053",
             "EVT-20261114-058",
+            "EVT-20261114-040",
+            "EVT-20261114-073",
+            "EVT-20261114-068",
+            "EVT-20261114-048",
+            "EVT-20261114-064",
             "EVT-20261114-008",
-            "EVT-20261114-010",
             "EVT-20261114-001",
             "EVT-20261114-052",
-            "EVT-20261114-068",
-            "EVT-20261114-025",
+            "EVT-20261114-059",
+            "EVT-20261114-014",
             "EVT-20261114-044",
-            "EVT-20261114-053",
+            "EVT-20261114-019",
+            "EVT-20261114-025",
+            "EVT-20261114-006",
+            "EVT-20261114-063",
             "EVT-20261114-076",
             "EVT-20261114-035",
             "EVT-20261114-054",
-            "EVT-20261114-002",
             "EVT-20261114-007",
             "EVT-20261114-011",
             "EVT-20261114-015",
             "EVT-20261114-024",
-            "EVT-20261114-039",
-            "EVT-20261114-034",
-            "EVT-20261114-006",
-            "EVT-20261114-019"
+            "EVT-20261114-039"
           ],
           "whatHappened": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
           "whyItMatters": "Chi phí vốn ngân hàng ảnh hưởng trực tiếp đến biên lợi nhuận tài trợ vốn của doanh nghiệp và người tiêu dùng.",
@@ -450,9 +452,9 @@ window.EDITION_DATA = {
           "signalTitle": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
           "relatedEventIds": [
             "EVT-20261114-001",
-            "EVT-20261114-058",
-            "EVT-20261114-063",
-            "EVT-20261114-010"
+            "EVT-20261114-068",
+            "EVT-20261114-073",
+            "EVT-20261114-064"
           ],
           "whatHappened": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
           "whyItMatters": "Đón đầu xu hướng chuyển dịch thanh toán số và chuẩn hóa tuân thủ dòng tiền.",
@@ -502,37 +504,37 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Ngân hàng, Tín dụng & Lãi suất",
           "originEventIds": [
-            "EVT-01",
-            "EVT-04",
-            "EVT-20",
-            "EVT-12",
-            "EVT-08",
-            "EVT-25",
-            "EVT-19",
-            "EVT-03",
-            "EVT-09",
-            "EVT-13",
-            "EVT-02",
-            "EVT-05",
             "EVT-06",
-            "EVT-07",
             "EVT-10",
-            "EVT-11",
+            "EVT-24",
+            "EVT-18",
             "EVT-14",
+            "EVT-04",
+            "EVT-23",
+            "EVT-05",
+            "EVT-09",
             "EVT-15",
+            "EVT-01",
+            "EVT-02",
+            "EVT-03",
+            "EVT-07",
+            "EVT-08",
+            "EVT-11",
+            "EVT-12",
+            "EVT-13",
             "EVT-16",
             "EVT-17",
-            "EVT-18",
+            "EVT-19",
+            "EVT-20",
             "EVT-21",
             "EVT-22",
-            "EVT-23",
-            "EVT-24"
+            "EVT-25"
           ],
           "synthesisNarrative": "Từ quan sát vĩ mô và mặt bằng lãi suất ('Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng'), các NHTM chủ động cân đối thanh khoản và biên lãi thuần (NIM), tác động trực tiếp lên điều kiện cấp vốn cho doanh nghiệp ('HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027') và thúc đẩy ứng dụng các kênh thu hộ tự động.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
             "FACT: FACT-20261110-003",
-            "FACT: FACT-20261110-005"
+            "FACT: FACT-20261110-004",
+            "FACT: FACT-20261110-006"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Các NHTM tái cơ cấu danh mục tài sản sinh lời, thận trọng kiểm soát rủi ro nợ xấu và thanh khoản.",
@@ -545,41 +547,41 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
           "originEventIds": [
-            "EVT-06",
-            "EVT-04",
-            "EVT-25",
-            "EVT-03",
-            "EVT-09",
-            "EVT-12",
-            "EVT-13",
-            "EVT-01",
             "EVT-02",
+            "EVT-12",
+            "EVT-10",
+            "EVT-04",
             "EVT-05",
+            "EVT-09",
+            "EVT-15",
+            "EVT-18",
+            "EVT-01",
+            "EVT-03",
+            "EVT-06",
             "EVT-07",
             "EVT-08",
-            "EVT-10",
             "EVT-11",
+            "EVT-13",
             "EVT-14",
-            "EVT-15",
             "EVT-16",
             "EVT-17",
-            "EVT-18",
             "EVT-19",
             "EVT-20",
             "EVT-21",
             "EVT-22",
             "EVT-23",
-            "EVT-24"
+            "EVT-24",
+            "EVT-25"
           ],
-          "synthesisNarrative": "Động thái điều hành tỷ giá và thị trường mở ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú') tạo kênh truyền dẫn lan tỏa đến dòng tiền của khối doanh nghiệp XNK ('HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027'), đòi hỏi các giải pháp thanh toán ngoại tệ và phòng vệ rủi ro biến động giá trị đồng tiền.",
+          "synthesisNarrative": "Động thái điều hành tỷ giá và thị trường mở ('Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh') tạo kênh truyền dẫn lan tỏa đến dòng tiền của khối doanh nghiệp XNK ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú'), đòi hỏi các giải pháp thanh toán ngoại tệ và phòng vệ rủi ro biến động giá trị đồng tiền.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
             "FACT: FACT-20261110-003",
-            "FACT: FACT-20261110-009"
+            "FACT: FACT-20261110-004",
+            "FACT: FACT-20261110-001"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Khối NHTM điều chỉnh chênh lệch giá mua bán USD và cân đối trạng thái ngoại hối liên ngân hàng.",
-            "INFERENCE 2: [OBSERVED] Tín hiệu can thiệp tỷ giá và cung tiền OMO từ NHNN định hình thanh khoản hệ thống ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú')."
+            "INFERENCE 2: [OBSERVED] Tín hiệu can thiệp tỷ giá và cung tiền OMO từ NHNN định hình thanh khoản hệ thống ('Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh')."
           ],
           "scenarioStatements": [
             "SCENARIO: [SUPPORTED_INFERENCE] Cổng thanh toán quốc tế và chuyển đổi ngoại tệ tức thời đáp ứng nhu cầu thanh toán xuyên biên giới an toàn."
@@ -588,41 +590,41 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
           "originEventIds": [
-            "EVT-23",
-            "EVT-18",
-            "EVT-04",
-            "EVT-16",
             "EVT-05",
-            "EVT-21",
-            "EVT-09",
-            "EVT-03",
-            "EVT-11",
-            "EVT-13",
-            "EVT-10",
-            "EVT-14",
-            "EVT-15",
             "EVT-22",
-            "EVT-24",
-            "EVT-07",
-            "EVT-02",
-            "EVT-12",
-            "EVT-17",
+            "EVT-10",
+            "EVT-20",
+            "EVT-11",
             "EVT-25",
+            "EVT-15",
+            "EVT-03",
+            "EVT-07",
+            "EVT-09",
+            "EVT-17",
             "EVT-01",
-            "EVT-06",
-            "EVT-08",
+            "EVT-02",
+            "EVT-16",
             "EVT-19",
-            "EVT-20"
+            "EVT-13",
+            "EVT-08",
+            "EVT-18",
+            "EVT-21",
+            "EVT-04",
+            "EVT-06",
+            "EVT-12",
+            "EVT-14",
+            "EVT-23",
+            "EVT-24"
           ],
-          "synthesisNarrative": "Chính sách tài khóa mở rộng kết hợp thanh kiểm tra tuân thủ ('Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế') lan tỏa đến các dự án đầu tư và hoạt động sản xuất (''Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục'), thúc đẩy chuyển đổi số quy trình kế toán và hóa đơn điện tử máy tính tiền.",
+          "synthesisNarrative": "Chính sách tài khóa mở rộng kết hợp thanh kiểm tra tuân thủ ('Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk') lan tỏa đến các dự án đầu tư và hoạt động sản xuất (''Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục'), thúc đẩy chuyển đổi số quy trình kế toán và hóa đơn điện tử máy tính tiền.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
+            "FACT: FACT-20261110-001",
             "FACT: FACT-20261110-003",
             "FACT: FACT-20261110-004"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Ngân hàng thương mại ưu tiên cấp bảo lãnh thanh toán và tài trợ vốn cho các dự án hạ tầng trọng điểm.",
-            "INFERENCE 2: [OBSERVED] Tăng tốc giải ngân vốn đầu tư công và chính sách quản lý thuế dẫn dắt dòng tiền thị trường ('Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế')."
+            "INFERENCE 2: [OBSERVED] Tăng tốc giải ngân vốn đầu tư công và chính sách quản lý thuế dẫn dắt dòng tiền thị trường ('Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk')."
           ],
           "scenarioStatements": [
             "SCENARIO: [SUPPORTED_INFERENCE] Tích hợp máy tính tiền khởi tạo hóa đơn điện tử tự động kết nối máy thanh toán SmartPOS chuẩn hóa dữ liệu."
@@ -631,37 +633,37 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
           "originEventIds": [
-            "EVT-03",
-            "EVT-12",
-            "EVT-10",
-            "EVT-19",
-            "EVT-11",
-            "EVT-04",
             "EVT-09",
-            "EVT-13",
+            "EVT-18",
             "EVT-16",
-            "EVT-25",
+            "EVT-23",
+            "EVT-17",
+            "EVT-05",
+            "EVT-10",
+            "EVT-15",
+            "EVT-20",
             "EVT-01",
             "EVT-02",
-            "EVT-05",
+            "EVT-03",
+            "EVT-04",
             "EVT-06",
             "EVT-07",
             "EVT-08",
+            "EVT-11",
+            "EVT-12",
+            "EVT-13",
             "EVT-14",
-            "EVT-15",
-            "EVT-17",
-            "EVT-18",
-            "EVT-20",
+            "EVT-19",
             "EVT-21",
             "EVT-22",
-            "EVT-23",
-            "EVT-24"
+            "EVT-24",
+            "EVT-25"
           ],
           "synthesisNarrative": "Làn sóng mở rộng kênh bán lẻ và dịch vụ tiêu dùng ('Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu') liên kết chặt chẽ với hoạt động vận chuyển chuỗi cung ứng ('VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành'), tạo nhu cầu bùng nổ cho các phương thức thanh toán không tiền mặt tại điểm bán.",
           "factStatements": [
-            "FACT: FACT-20261110-001",
-            "FACT: FACT-20261110-005",
-            "FACT: FACT-20261110-006"
+            "FACT: FACT-20261110-002",
+            "FACT: FACT-20261110-006",
+            "FACT: FACT-20261110-007"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Ngân hàng và tổ chức thẻ đẩy mạnh chương trình ưu đãi thanh toán và hạn mức thẻ tín dụng.",
@@ -680,37 +682,37 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Ngân hàng, Tín dụng & Lãi suất",
           "originEventIds": [
-            "EVT-01",
-            "EVT-04",
-            "EVT-20",
-            "EVT-12",
-            "EVT-08",
-            "EVT-25",
-            "EVT-19",
-            "EVT-03",
-            "EVT-09",
-            "EVT-13",
-            "EVT-02",
-            "EVT-05",
             "EVT-06",
-            "EVT-07",
             "EVT-10",
-            "EVT-11",
+            "EVT-24",
+            "EVT-18",
             "EVT-14",
+            "EVT-04",
+            "EVT-23",
+            "EVT-05",
+            "EVT-09",
             "EVT-15",
+            "EVT-01",
+            "EVT-02",
+            "EVT-03",
+            "EVT-07",
+            "EVT-08",
+            "EVT-11",
+            "EVT-12",
+            "EVT-13",
             "EVT-16",
             "EVT-17",
-            "EVT-18",
+            "EVT-19",
+            "EVT-20",
             "EVT-21",
             "EVT-22",
-            "EVT-23",
-            "EVT-24"
+            "EVT-25"
           ],
           "synthesisNarrative": "Từ quan sát vĩ mô và mặt bằng lãi suất ('Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng'), các NHTM chủ động cân đối thanh khoản và biên lãi thuần (NIM), tác động trực tiếp lên điều kiện cấp vốn cho doanh nghiệp ('HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027') và thúc đẩy ứng dụng các kênh thu hộ tự động.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
             "FACT: FACT-20261110-003",
-            "FACT: FACT-20261110-005"
+            "FACT: FACT-20261110-004",
+            "FACT: FACT-20261110-006"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Các NHTM tái cơ cấu danh mục tài sản sinh lời, thận trọng kiểm soát rủi ro nợ xấu và thanh khoản.",
@@ -723,41 +725,41 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
           "originEventIds": [
-            "EVT-06",
-            "EVT-04",
-            "EVT-25",
-            "EVT-03",
-            "EVT-09",
-            "EVT-12",
-            "EVT-13",
-            "EVT-01",
             "EVT-02",
+            "EVT-12",
+            "EVT-10",
+            "EVT-04",
             "EVT-05",
+            "EVT-09",
+            "EVT-15",
+            "EVT-18",
+            "EVT-01",
+            "EVT-03",
+            "EVT-06",
             "EVT-07",
             "EVT-08",
-            "EVT-10",
             "EVT-11",
+            "EVT-13",
             "EVT-14",
-            "EVT-15",
             "EVT-16",
             "EVT-17",
-            "EVT-18",
             "EVT-19",
             "EVT-20",
             "EVT-21",
             "EVT-22",
             "EVT-23",
-            "EVT-24"
+            "EVT-24",
+            "EVT-25"
           ],
-          "synthesisNarrative": "Động thái điều hành tỷ giá và thị trường mở ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú') tạo kênh truyền dẫn lan tỏa đến dòng tiền của khối doanh nghiệp XNK ('HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027'), đòi hỏi các giải pháp thanh toán ngoại tệ và phòng vệ rủi ro biến động giá trị đồng tiền.",
+          "synthesisNarrative": "Động thái điều hành tỷ giá và thị trường mở ('Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh') tạo kênh truyền dẫn lan tỏa đến dòng tiền của khối doanh nghiệp XNK ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú'), đòi hỏi các giải pháp thanh toán ngoại tệ và phòng vệ rủi ro biến động giá trị đồng tiền.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
             "FACT: FACT-20261110-003",
-            "FACT: FACT-20261110-009"
+            "FACT: FACT-20261110-004",
+            "FACT: FACT-20261110-001"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Khối NHTM điều chỉnh chênh lệch giá mua bán USD và cân đối trạng thái ngoại hối liên ngân hàng.",
-            "INFERENCE 2: [OBSERVED] Tín hiệu can thiệp tỷ giá và cung tiền OMO từ NHNN định hình thanh khoản hệ thống ('Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú')."
+            "INFERENCE 2: [OBSERVED] Tín hiệu can thiệp tỷ giá và cung tiền OMO từ NHNN định hình thanh khoản hệ thống ('Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh')."
           ],
           "scenarioStatements": [
             "SCENARIO: [SUPPORTED_INFERENCE] Cổng thanh toán quốc tế và chuyển đổi ngoại tệ tức thời đáp ứng nhu cầu thanh toán xuyên biên giới an toàn."
@@ -766,41 +768,41 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
           "originEventIds": [
-            "EVT-23",
-            "EVT-18",
-            "EVT-04",
-            "EVT-16",
             "EVT-05",
-            "EVT-21",
-            "EVT-09",
-            "EVT-03",
-            "EVT-11",
-            "EVT-13",
-            "EVT-10",
-            "EVT-14",
-            "EVT-15",
             "EVT-22",
-            "EVT-24",
-            "EVT-07",
-            "EVT-02",
-            "EVT-12",
-            "EVT-17",
+            "EVT-10",
+            "EVT-20",
+            "EVT-11",
             "EVT-25",
+            "EVT-15",
+            "EVT-03",
+            "EVT-07",
+            "EVT-09",
+            "EVT-17",
             "EVT-01",
-            "EVT-06",
-            "EVT-08",
+            "EVT-02",
+            "EVT-16",
             "EVT-19",
-            "EVT-20"
+            "EVT-13",
+            "EVT-08",
+            "EVT-18",
+            "EVT-21",
+            "EVT-04",
+            "EVT-06",
+            "EVT-12",
+            "EVT-14",
+            "EVT-23",
+            "EVT-24"
           ],
-          "synthesisNarrative": "Chính sách tài khóa mở rộng kết hợp thanh kiểm tra tuân thủ ('Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế') lan tỏa đến các dự án đầu tư và hoạt động sản xuất (''Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục'), thúc đẩy chuyển đổi số quy trình kế toán và hóa đơn điện tử máy tính tiền.",
+          "synthesisNarrative": "Chính sách tài khóa mở rộng kết hợp thanh kiểm tra tuân thủ ('Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk') lan tỏa đến các dự án đầu tư và hoạt động sản xuất (''Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục'), thúc đẩy chuyển đổi số quy trình kế toán và hóa đơn điện tử máy tính tiền.",
           "factStatements": [
-            "FACT: FACT-20261110-002",
+            "FACT: FACT-20261110-001",
             "FACT: FACT-20261110-003",
             "FACT: FACT-20261110-004"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Ngân hàng thương mại ưu tiên cấp bảo lãnh thanh toán và tài trợ vốn cho các dự án hạ tầng trọng điểm.",
-            "INFERENCE 2: [OBSERVED] Tăng tốc giải ngân vốn đầu tư công và chính sách quản lý thuế dẫn dắt dòng tiền thị trường ('Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế')."
+            "INFERENCE 2: [OBSERVED] Tăng tốc giải ngân vốn đầu tư công và chính sách quản lý thuế dẫn dắt dòng tiền thị trường ('Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk')."
           ],
           "scenarioStatements": [
             "SCENARIO: [SUPPORTED_INFERENCE] Tích hợp máy tính tiền khởi tạo hóa đơn điện tử tự động kết nối máy thanh toán SmartPOS chuẩn hóa dữ liệu."
@@ -809,37 +811,37 @@ window.EDITION_DATA = {
         {
           "clusterTitle": "Kết nối đa sự kiện: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
           "originEventIds": [
-            "EVT-03",
-            "EVT-12",
-            "EVT-10",
-            "EVT-19",
-            "EVT-11",
-            "EVT-04",
             "EVT-09",
-            "EVT-13",
+            "EVT-18",
             "EVT-16",
-            "EVT-25",
+            "EVT-23",
+            "EVT-17",
+            "EVT-05",
+            "EVT-10",
+            "EVT-15",
+            "EVT-20",
             "EVT-01",
             "EVT-02",
-            "EVT-05",
+            "EVT-03",
+            "EVT-04",
             "EVT-06",
             "EVT-07",
             "EVT-08",
+            "EVT-11",
+            "EVT-12",
+            "EVT-13",
             "EVT-14",
-            "EVT-15",
-            "EVT-17",
-            "EVT-18",
-            "EVT-20",
+            "EVT-19",
             "EVT-21",
             "EVT-22",
-            "EVT-23",
-            "EVT-24"
+            "EVT-24",
+            "EVT-25"
           ],
           "synthesisNarrative": "Làn sóng mở rộng kênh bán lẻ và dịch vụ tiêu dùng ('Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu') liên kết chặt chẽ với hoạt động vận chuyển chuỗi cung ứng ('VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành'), tạo nhu cầu bùng nổ cho các phương thức thanh toán không tiền mặt tại điểm bán.",
           "factStatements": [
-            "FACT: FACT-20261110-001",
-            "FACT: FACT-20261110-005",
-            "FACT: FACT-20261110-006"
+            "FACT: FACT-20261110-002",
+            "FACT: FACT-20261110-006",
+            "FACT: FACT-20261110-007"
           ],
           "inferenceStatements": [
             "INFERENCE 1: [OBSERVED] Ngân hàng và tổ chức thẻ đẩy mạnh chương trình ưu đãi thanh toán và hạn mức thẻ tín dụng.",
@@ -871,8 +873,8 @@ window.EDITION_DATA = {
               "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -885,8 +887,8 @@ window.EDITION_DATA = {
               "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -899,8 +901,8 @@ window.EDITION_DATA = {
               "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -913,8 +915,8 @@ window.EDITION_DATA = {
               "description": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -927,8 +929,8 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -941,8 +943,8 @@ window.EDITION_DATA = {
               "description": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -955,8 +957,8 @@ window.EDITION_DATA = {
               "description": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             }
@@ -978,9 +980,9 @@ window.EDITION_DATA = {
               "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -988,13 +990,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú).",
+              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh).",
+              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1006,9 +1008,9 @@ window.EDITION_DATA = {
               "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1020,9 +1022,9 @@ window.EDITION_DATA = {
               "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1034,9 +1036,9 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1048,9 +1050,9 @@ window.EDITION_DATA = {
               "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1062,9 +1064,9 @@ window.EDITION_DATA = {
               "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             }
           ]
@@ -1085,9 +1087,9 @@ window.EDITION_DATA = {
               "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1095,13 +1097,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế).",
+              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk).",
+              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1113,9 +1115,9 @@ window.EDITION_DATA = {
               "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1123,13 +1125,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 120 triệu USD; HDBank: 7,8%/năm).",
+              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 120 triệu USD; HDBank: 7,8%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1141,9 +1143,9 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1155,9 +1157,9 @@ window.EDITION_DATA = {
               "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1169,9 +1171,9 @@ window.EDITION_DATA = {
               "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             }
           ]
@@ -1193,7 +1195,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1207,7 +1209,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1221,7 +1223,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1235,7 +1237,7 @@ window.EDITION_DATA = {
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1249,7 +1251,7 @@ window.EDITION_DATA = {
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1263,7 +1265,7 @@ window.EDITION_DATA = {
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1277,7 +1279,7 @@ window.EDITION_DATA = {
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             }
@@ -1305,8 +1307,8 @@ window.EDITION_DATA = {
               "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1319,8 +1321,8 @@ window.EDITION_DATA = {
               "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1333,8 +1335,8 @@ window.EDITION_DATA = {
               "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1347,8 +1349,8 @@ window.EDITION_DATA = {
               "description": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1361,8 +1363,8 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1375,8 +1377,8 @@ window.EDITION_DATA = {
               "description": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             },
@@ -1389,8 +1391,8 @@ window.EDITION_DATA = {
               "description": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-043",
-                "EVT-20261114-048",
+                "EVT-20261114-053",
+                "EVT-20261114-058",
                 "EVT-20261114-040"
               ]
             }
@@ -1412,9 +1414,9 @@ window.EDITION_DATA = {
               "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1422,13 +1424,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú).",
+              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh).",
+              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1440,9 +1442,9 @@ window.EDITION_DATA = {
               "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1454,9 +1456,9 @@ window.EDITION_DATA = {
               "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1468,9 +1470,9 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1482,9 +1484,9 @@ window.EDITION_DATA = {
               "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1496,9 +1498,9 @@ window.EDITION_DATA = {
               "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-053",
-                "EVT-20261114-048",
-                "EVT-20261114-008"
+                "EVT-20261114-014",
+                "EVT-20261114-063",
+                "EVT-20261114-058"
               ]
             }
           ]
@@ -1519,9 +1521,9 @@ window.EDITION_DATA = {
               "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1529,13 +1531,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế).",
+              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk).",
+              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk).",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1547,9 +1549,9 @@ window.EDITION_DATA = {
               "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1557,13 +1559,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 120 triệu USD; HDBank: 7,8%/năm).",
+              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 120 triệu USD; HDBank: 7,8%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1575,9 +1577,9 @@ window.EDITION_DATA = {
               "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1589,9 +1591,9 @@ window.EDITION_DATA = {
               "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             },
             {
@@ -1603,9 +1605,9 @@ window.EDITION_DATA = {
               "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261114-006",
+                "EVT-20261114-008",
                 "EVT-20261114-024",
-                "EVT-20261114-048"
+                "EVT-20261114-058"
               ]
             }
           ]
@@ -1627,7 +1629,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1641,7 +1643,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1655,7 +1657,7 @@ window.EDITION_DATA = {
               "badge": "FACT",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1669,7 +1671,7 @@ window.EDITION_DATA = {
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1683,7 +1685,7 @@ window.EDITION_DATA = {
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1697,7 +1699,7 @@ window.EDITION_DATA = {
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             },
@@ -1711,7 +1713,7 @@ window.EDITION_DATA = {
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-001",
-                "EVT-20261114-063",
+                "EVT-20261114-073",
                 "EVT-20261114-035"
               ]
             }
@@ -1739,10 +1741,10 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-20"
+            "EVT-24"
           ],
           "originEventIds": [
-            "EVT-20"
+            "EVT-24"
           ]
         },
         {
@@ -1761,10 +1763,10 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-11"
+            "EVT-17"
           ],
           "originEventIds": [
-            "EVT-11"
+            "EVT-17"
           ]
         },
         {
@@ -1783,16 +1785,16 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-03",
-            "EVT-08",
-            "EVT-12",
-            "EVT-19"
+            "EVT-09",
+            "EVT-14",
+            "EVT-18",
+            "EVT-23"
           ],
           "originEventIds": [
-            "EVT-03",
-            "EVT-08",
-            "EVT-12",
-            "EVT-19"
+            "EVT-09",
+            "EVT-14",
+            "EVT-18",
+            "EVT-23"
           ]
         },
         {
@@ -1811,12 +1813,12 @@ window.EDITION_DATA = {
           "priority": "P2_MEDIUM",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-21",
-            "EVT-23"
+            "EVT-03",
+            "EVT-25"
           ],
           "originEventIds": [
-            "EVT-21",
-            "EVT-23"
+            "EVT-03",
+            "EVT-25"
           ]
         }
       ]
@@ -1841,10 +1843,10 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-20"
+            "EVT-24"
           ],
           "originEventIds": [
-            "EVT-20"
+            "EVT-24"
           ]
         },
         {
@@ -1863,10 +1865,10 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-11"
+            "EVT-17"
           ],
           "originEventIds": [
-            "EVT-11"
+            "EVT-17"
           ]
         },
         {
@@ -1885,16 +1887,16 @@ window.EDITION_DATA = {
           "priority": "P1_HIGH",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-03",
-            "EVT-08",
-            "EVT-12",
-            "EVT-19"
+            "EVT-09",
+            "EVT-14",
+            "EVT-18",
+            "EVT-23"
           ],
           "originEventIds": [
-            "EVT-03",
-            "EVT-08",
-            "EVT-12",
-            "EVT-19"
+            "EVT-09",
+            "EVT-14",
+            "EVT-18",
+            "EVT-23"
           ]
         },
         {
@@ -1913,12 +1915,12 @@ window.EDITION_DATA = {
           "priority": "P2_MEDIUM",
           "confidenceLevel": "MEDIUM",
           "relevantEventIds": [
-            "EVT-21",
-            "EVT-23"
+            "EVT-03",
+            "EVT-25"
           ],
           "originEventIds": [
-            "EVT-21",
-            "EVT-23"
+            "EVT-03",
+            "EVT-25"
           ]
         }
       ]
@@ -2471,12 +2473,183 @@ window.EDITION_DATA = {
   "eligibleNewsList": [
     {
       "eventId": "EVT-01",
-      "originEventId": "EVT-20261114-043",
-      "candidateId": "CAND-20261114-043",
+      "originEventId": "EVT-20261114-059",
+      "candidateId": "CAND-20261114-059",
+      "title": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
+      "pageTitle": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
+      "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
+      "summary": "Nhiều người nuôi đang đuối vì giá trứng gà công nghiệp ở mức thấp kéo dài, thậm chí phần lớn phải bán dưới giá thành chăn nuôi. Trong khi đó, trên thị trường, có nơi siêu thị chỉ bán 2.000 đồng/quả. Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
+      "category": "Doanh nghiệp",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 14:10 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T14:10:00+07:00)",
+      "publicationTimestamp": "14/11/2026 14:10",
+      "originalSourcePublishedAt": "2026-11-14T14:10:00+07:00",
+      "originalSourceName": "Báo Tuổi Trẻ",
+      "author": "Báo Tuổi Trẻ",
+      "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+      "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
+      "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2",
+      "facts": [],
+      "sectionA_whatHappened": "Nhiều người nuôi đang đuối vì giá trứng gà công nghiệp ở mức thấp kéo dài, thậm chí phần lớn phải bán dưới giá thành chăn nuôi. Trong khi đó, trên thị trường, có nơi siêu thị chỉ bán 2.000 đồng/quả. Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
+      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
+      "sectionC_whyItMatters": "Dữ kiện thị trường (Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của Báo Tuổi Trẻ.",
+      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (Báo Tuổi Trẻ) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
+      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
+      "computedSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
+      "snapshotFile": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-02",
+      "originEventId": "EVT-20261114-014",
+      "candidateId": "CAND-20261114-014",
+      "title": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
+      "pageTitle": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
+      "headline": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
+      "summary": "Nvidia đã mất khoảng 1.850 tỉ USD giá trị vốn hóa chỉ trong hơn một tháng, khi cổ phiếu của hãng liên tục lao dốc kể từ mức đỉnh ngày 6-10. Động thái can thiệp ngoại hối chủ động từ cơ quan quản lý giúp hạ nhiệt áp lực tỷ giá, khơi thông thanh khoản tiền đồng và củng cố niềm tin vào sự ổn định của kinh tế vĩ mô.",
+      "category": "Thị trường vốn",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 13:35 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T13:35:00+07:00)",
+      "publicationTimestamp": "14/11/2026 13:35",
+      "originalSourcePublishedAt": "2026-11-14T13:35:00+07:00",
+      "originalSourceName": "Báo Tuổi Trẻ",
+      "author": "Báo Tuổi Trẻ",
+      "canonicalUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+      "sourceUrl": "https://tuoitre.vn/nvidia-mat-1850-ti-usd-von-hoa-ke-tu-luc-lap-dinh-100261114123847597.htm",
+      "supportingQuote": "Theo tờ Wall Street Journal (WSJ) ngày 13-11, vốn hóa thị trường Nvidia giảm từ khoảng 5.770 tỉ USD kể từ thời điểm đạt đỉnh ngày 6-10 xuống còn khoảng 3.920 tỉ USD vào cuối phiên",
+      "facts": [],
+      "sectionA_whatHappened": "Nvidia đã mất khoảng 1.850 tỉ USD giá trị vốn hóa chỉ trong hơn một tháng, khi cổ phiếu của hãng liên tục lao dốc kể từ mức đỉnh ngày 6-10. Động thái can thiệp ngoại hối chủ động từ cơ quan quản lý giúp hạ nhiệt áp lực tỷ giá, khơi thông thanh khoản tiền đồng và củng cố niềm tin vào sự ổn định của kinh tế vĩ mô.",
+      "sectionB_context": "Thị trường chứng khoán chứng kiến sự phân hóa dòng tiền giữa các nhóm ngành, đi kèm áp lực tái cơ cấu danh mục của khối ngoại trước biến động tài chính quốc tế.",
+      "sectionC_whyItMatters": "Biến động giao dịch (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh) tác động trực tiếp đến định giá tài sản, tâm lý thị trường chứng khoán và dòng vốn đầu tư gián tiếp nước ngoài.",
+      "sectionD_macroMicro": "Biến động vĩ mô & Tâm lý thị trường vốn (Báo Tuổi Trẻ) → Nhà đầu tư tổ chức & khối ngoại cơ cấu danh mục cổ phiếu → Dòng tiền dịch chuyển giữa các nhóm ngành then chốt → Tác động đến thanh khoản và chi phí huy động vốn.",
+      "sectionE_fintechLens": "Tối ưu hóa nền tảng giao dịch trực tuyến, kết nối tự động tiền gửi chứng khoán và tài khoản ngân hàng (Virtual Account) để bảo đảm thanh khoản giao dịch tức thời.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Tối ưu hóa quy trình luân chuyển dòng tiền, hạn chế lưu trữ tiền mặt và khai thác các kênh tài trợ vốn số hóa.",
+      "computedSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
+      "snapshotFile": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-03",
+      "originEventId": "EVT-20261114-044",
+      "candidateId": "CAND-20261114-044",
+      "title": "Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh",
+      "pageTitle": "Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh",
+      "headline": "Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh",
+      "summary": "Doanh nghiệp vừa và nhỏ hay hộ kinh doanh giờ đây cũng có thể dễ dàng và thuận tiện sử dụng dữ liệu và AI để phân tích, đánh giá và dự báo kết quả kinh doanh trong tương lai.",
+      "category": "Doanh nghiệp",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 13:32 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T13:32:00+07:00)",
+      "publicationTimestamp": "14/11/2026 13:32",
+      "originalSourcePublishedAt": "2026-11-14T13:32:00+07:00",
+      "originalSourceName": "Báo Tuổi Trẻ",
+      "author": "Báo Tuổi Trẻ",
+      "canonicalUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+      "sourceUrl": "https://tuoitre.vn/cach-dung-ai-phan-tich-hieu-qua-du-bao-xu-huong-kinh-doanh-100261114103310248.htm",
+      "supportingQuote": "ThS Trần Triệu Quân - giảng viên Trường đại học Kinh tế - Tài chính TP.HCM - hướng dẫn cách sử dụng ứng dụng Airtable để xây dựng hệ thống quản lý dữ liệu, trực quan hóa kết quả ki",
+      "facts": [],
+      "sectionA_whatHappened": "Doanh nghiệp vừa và nhỏ hay hộ kinh doanh giờ đây cũng có thể dễ dàng và thuận tiện sử dụng dữ liệu và AI để phân tích, đánh giá và dự báo kết quả kinh doanh trong tương lai.",
+      "sectionB_context": "Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
+      "sectionC_whyItMatters": "Dữ kiện (Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh) đặt ra yêu cầu tuân thủ pháp lý tức thì cho hộ kinh doanh, thúc đẩy ứng dụng máy tính tiền tích hợp hóa đơn điện tử để phòng ngừa rủi ro xử phạt thuế.",
+      "sectionD_macroMicro": "Chính sách thuế & Kỷ cương hóa đơn (Báo Tuổi Trẻ) → Cơ quan Thuế phối hợp đơn vị giải pháp số hóa điểm bán → Hộ kinh doanh trang bị máy tính tiền kết nối dữ liệu tự động → Khách hàng nhận hóa đơn minh bạch.",
+      "sectionE_fintechLens": "Cung ứng thiết bị All-in-One Payoo SmartPOS tích hợp phần mềm bán hàng và hóa đơn điện tử máy tính tiền khởi tạo từ POS, tự động truyền dữ liệu thuế chuẩn hóa.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Kết nối giải pháp máy tính tiền có hóa đơn điện tử với cổng của cơ quan thuế để bảo đảm tuân thủ pháp lý và minh bạch sổ sách kế toán.",
+      "computedSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
+      "snapshotFile": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-04",
+      "originEventId": "EVT-20261114-048",
+      "candidateId": "CAND-20261114-048",
+      "title": "SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026",
+      "pageTitle": "SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026",
+      "headline": "SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026",
+      "summary": "Ngày 12/11, tại lễ vinh danh 50 thương hiệu dẫn đầu năm 2026 do Forbes Việt Nam tổ chức, Ngân hàng TMCP Sài Gòn – Hà Nội (SHB) được xướng tên ở vị trí thứ 10 trong bảng xếp hạng, với giá trị thương hiệu đạt 836 triệu USD.",
+      "category": "Ngân hàng",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 13:30 | Nguồn gốc: CafeF / VCCorp (2026-11-14T13:30:00+07:00)",
+      "publicationTimestamp": "14/11/2026 13:30",
+      "originalSourcePublishedAt": "2026-11-14T13:30:00+07:00",
+      "originalSourceName": "CafeF / VCCorp",
+      "author": "CafeF / VCCorp",
+      "canonicalUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+      "sourceUrl": "https://cafef.vn/shb-duoc-forbes-viet-nam-vinh-danh-trong-top-10-thuong-hieu-dan-dau-nam-2026-188261114124719999.chn",
+      "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021.",
+      "facts": [],
+      "sectionA_whatHappened": "Ngày 12/11, tại lễ vinh danh 50 thương hiệu dẫn đầu năm 2026 do Forbes Việt Nam tổ chức, Ngân hàng TMCP Sài Gòn – Hà Nội (SHB) được xướng tên ở vị trí thứ 10 trong bảng xếp hạng, với giá trị thương hiệu đạt 836 triệu USD.",
+      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
+      "sectionC_whyItMatters": "Dữ kiện thị trường (SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của CafeF.",
+      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (CafeF) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
+      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
+      "computedSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
+      "snapshotFile": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-05",
+      "originEventId": "EVT-20261114-008",
+      "candidateId": "CAND-20261114-008",
+      "title": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
+      "pageTitle": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
+      "headline": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
+      "summary": "Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, Vinamilk được quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và quan hệ hợp tác chặt chẽ với ngành nông nghiệp Mỹ.",
+      "category": "Doanh nghiệp",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 12:18 | Nguồn gốc: Báo Đầu tư (2026-11-14T12:18:00+07:00)",
+      "publicationTimestamp": "14/11/2026 12:18",
+      "originalSourcePublishedAt": "2026-11-14T12:18:00+07:00",
+      "originalSourceName": "Báo Đầu tư",
+      "author": "Báo Đầu tư",
+      "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+      "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+      "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt",
+      "facts": [
+        {
+          "factId": "FACT-20261110-001",
+          "eventId": "EVT-20261114-008",
+          "metricName": "Doanh thu",
+          "extractedExpression": "120 triệu USD",
+          "numericValue": "120",
+          "unit": "triệu USD",
+          "scale": "triệu",
+          "originalExtractedEntity": "Doanh nghiệp",
+          "verifiedEntity": "Doanh nghiệp",
+          "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+          "entityBindingNote": "Chủ thể 'Doanh nghiệp' được xác minh từ tiêu đề bài viết và số liệu trong contextQuote.",
+          "reportingPeriod": null,
+          "polarity": null,
+          "factType": "OBSERVATION",
+          "verificationStatus": "VERIFIED",
+          "contextQuote": "Với doanh thu hơn 120 triệu USD mỗi năm, Driftwood hiện là một trong những nhà cung ứng sữa học đường chủ lực cho nhiều trường học tại Nam California.",
+          "isDuplicate": false,
+          "duplicateOfFactId": null
+        }
+      ],
+      "sectionA_whatHappened": "Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, Vinamilk được quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và quan hệ hợp tác chặt chẽ với ngành nông nghiệp Mỹ.",
+      "sectionB_context": "Việt Nam tiếp tục thu hút nguồn vốn đầu tư hạ tầng logistics chiến lược và mở rộng quan hệ hợp tác công nghệ bán dẫn với các tập đoàn công nghiệp hàng đầu khu vực.",
+      "sectionC_whyItMatters": "Dữ kiện quy mô (Doanh thu: 120 triệu USD) giải tỏa điểm nghẽn lưu thông logistics, thúc đẩy chuỗi cung ứng công nghệ cao và mở rộng khả năng tiếp cận vốn đầu tư dài hạn.",
+      "sectionD_macroMicro": "Quy hoạch hạ tầng & Chiến lược FDI (Doanh nghiệp) → Doanh nghiệp đầu tư giải ngân vốn xây dựng & công nghệ → Doanh nghiệp phụ trợ và nhà thầu tiếp cận dòng tiền dự án → Gia tăng việc làm và giao dịch thanh toán B2B.",
+      "sectionE_fintechLens": "Ứng dụng giải pháp Quản lý dòng tiền số (Cash Management) và Tài trợ chuỗi cung ứng (Supply Chain Finance) cho các nhà thầu hạ tầng và đối tác công nghệ cao.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Doanh thu: 120 triệu USD) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Tối ưu hóa quy trình luân chuyển dòng tiền, hạn chế lưu trữ tiền mặt và khai thác các kênh tài trợ vốn số hóa.",
+      "computedSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+      "snapshotFile": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-06",
+      "originEventId": "EVT-20261114-053",
+      "candidateId": "CAND-20261114-053",
       "title": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
       "pageTitle": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
       "headline": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
-      "summary": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng. Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm.",
+      "summary": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 11:59 | Nguồn gốc: CafeF / VCCorp (2026-11-14T11:59:00+07:00)",
@@ -2488,7 +2661,7 @@ window.EDITION_DATA = {
       "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
       "supportingQuote": "TAND TP Hà Nội ra quyết định ngày 18/11 tới sẽ xét xử bị cáo Lê Thanh Thản (sinh năm 1950, Tổng giám đốc Công ty Bemes), về tội Lừa dối khách hàng.",
       "facts": [],
-      "sectionA_whatHappened": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng. Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm.",
+      "sectionA_whatHappened": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng.",
       "sectionB_context": "Ngân hàng Nhà nước và hệ thống NHTM duy trì điều hành thanh khoản linh hoạt, kiểm soát biến động tỷ giá và cân đối hài hòa mặt bằng lãi suất huy động - cho vay.",
       "sectionC_whyItMatters": "Dữ kiện điều hành (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng) quyết định chi phí vốn đầu vào, thanh khoản liên ngân hàng và khả năng cung ứng tín dụng cho nền kinh tế của CafeF.",
       "sectionD_macroMicro": "Điều hành tiền tệ & Thanh khoản NHNN (CafeF) → Hệ thống NHTM điều chỉnh lãi suất huy động và chỉ tiêu tín dụng → Doanh nghiệp tối ưu chi phí lãi vay và kế hoạch vốn lưu động → Người dân tiếp cận vốn vay sản xuất kinh doanh.",
@@ -2496,11 +2669,41 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Chủ động cân đối kỳ hạn nguồn vốn, thương lượng hạn mức tín dụng ưu đãi và kiểm soát chặt chẽ hệ số an toàn vốn lưu động.",
       "computedSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
-      "snapshotFile": "raw_evidence_store/snapshot_live_046_f273a4bc36.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-02",
+      "eventId": "EVT-07",
+      "originEventId": "EVT-20261114-019",
+      "candidateId": "CAND-20261114-019",
+      "title": "Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?",
+      "pageTitle": "Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?",
+      "headline": "Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?",
+      "summary": "Với sự hỗ trợ của thuế và xu hướng giá thế giới giảm đã khiến cho giá xăng dầu liên tục giảm mạnh chỉ trong vòng nửa tháng qua. Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
+      "category": "Doanh nghiệp",
+      "strictCombinedTimeWindow": "0–24h",
+      "publisherPublishedAt": "14/11/2026 11:53 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T11:53:00+07:00)",
+      "publicationTimestamp": "14/11/2026 11:53",
+      "originalSourcePublishedAt": "2026-11-14T11:53:00+07:00",
+      "originalSourceName": "Báo Tuổi Trẻ",
+      "author": "Báo Tuổi Trẻ",
+      "canonicalUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+      "sourceUrl": "https://tuoitre.vn/xang-dau-giam-gia-lien-tiep-co-mat-hang-giam-toi-gan-5000-dong-lit-vi-sao-100261114110857379.htm",
+      "supportingQuote": "Phiên điều hành giá xăng dầu ngày 12-11 tiếp tục giảm mạnh cho tất cả các mặt hàng xăng dầu, ghi nhận là lần thứ tư liên tiếp giảm với xăng dầu, riêng mặt hàng dầu diesel có một ph",
+      "facts": [],
+      "sectionA_whatHappened": "Với sự hỗ trợ của thuế và xu hướng giá thế giới giảm đã khiến cho giá xăng dầu liên tục giảm mạnh chỉ trong vòng nửa tháng qua. Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
+      "sectionB_context": "Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
+      "sectionC_whyItMatters": "Dữ kiện (Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?) đặt ra yêu cầu tuân thủ pháp lý tức thì cho hộ kinh doanh, thúc đẩy ứng dụng máy tính tiền tích hợp hóa đơn điện tử để phòng ngừa rủi ro xử phạt thuế.",
+      "sectionD_macroMicro": "Chính sách thuế & Kỷ cương hóa đơn (Báo Tuổi Trẻ) → Cơ quan Thuế phối hợp đơn vị giải pháp số hóa điểm bán → Hộ kinh doanh trang bị máy tính tiền kết nối dữ liệu tự động → Khách hàng nhận hóa đơn minh bạch.",
+      "sectionE_fintechLens": "Cung ứng thiết bị All-in-One Payoo SmartPOS tích hợp phần mềm bán hàng và hóa đơn điện tử máy tính tiền khởi tạo từ POS, tự động truyền dữ liệu thuế chuẩn hóa.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionG_practicalTakeaway": "Kết nối giải pháp máy tính tiền có hóa đơn điện tử với cổng của cơ quan thuế để bảo đảm tuân thủ pháp lý và minh bạch sổ sách kế toán.",
+      "computedSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
+      "snapshotFile": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "eventId": "EVT-08",
       "originEventId": "EVT-20261114-025",
       "candidateId": "CAND-20261114-025",
       "title": "Thêm điểm mua sắm, giải trí bên vịnh di sản thế giới Hạ Long",
@@ -2530,7 +2733,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-03",
+      "eventId": "EVT-09",
       "originEventId": "EVT-20261114-001",
       "candidateId": "CAND-20261114-001",
       "title": "Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu",
@@ -2581,9 +2784,9 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-04",
-      "originEventId": "EVT-20261114-048",
-      "candidateId": "CAND-20261114-048",
+      "eventId": "EVT-10",
+      "originEventId": "EVT-20261114-058",
+      "candidateId": "CAND-20261114-058",
       "title": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027",
       "pageTitle": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027",
       "headline": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027",
@@ -2601,7 +2804,7 @@ window.EDITION_DATA = {
       "facts": [
         {
           "factId": "FACT-20261110-001",
-          "eventId": "EVT-20261114-048",
+          "eventId": "EVT-20261114-058",
           "metricName": "Lãi suất",
           "extractedExpression": "7,8%/năm",
           "numericValue": "7.8",
@@ -2621,7 +2824,7 @@ window.EDITION_DATA = {
         },
         {
           "factId": "FACT-20261110-002",
-          "eventId": "EVT-20261114-048",
+          "eventId": "EVT-20261114-058",
           "metricName": "Lãi suất",
           "extractedExpression": "8,3%/năm",
           "numericValue": "8.3",
@@ -2648,13 +2851,13 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Lãi suất: 7,8%/năm; Lãi suất: 8,3%/năm) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Chủ động cân đối kỳ hạn nguồn vốn, thương lượng hạn mức tín dụng ưu đãi và kiểm soát chặt chẽ hệ số an toàn vốn lưu động.",
       "computedSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
-      "snapshotFile": "raw_evidence_store/snapshot_live_051_9e373dfc5d.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-05",
-      "originEventId": "EVT-20261114-044",
-      "candidateId": "CAND-20261114-044",
+      "eventId": "EVT-11",
+      "originEventId": "EVT-20261114-006",
+      "candidateId": "CAND-20261114-006",
       "title": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "pageTitle": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "headline": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
@@ -2677,18 +2880,18 @@ window.EDITION_DATA = {
       "sectionE_fintechLens": "Cung ứng thiết bị All-in-One Payoo SmartPOS tích hợp phần mềm bán hàng và hóa đơn điện tử máy tính tiền khởi tạo từ POS, tự động truyền dữ liệu thuế chuẩn hóa.",
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Kết nối giải pháp máy tính tiền có hóa đơn điện tử với cổng của cơ quan thuế để bảo đảm tuân thủ pháp lý và minh bạch sổ sách kế toán.",
-      "computedSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
-      "snapshotFile": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+      "computedSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
+      "snapshotFile": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-06",
-      "originEventId": "EVT-20261114-053",
-      "candidateId": "CAND-20261114-053",
+      "eventId": "EVT-12",
+      "originEventId": "EVT-20261114-063",
+      "candidateId": "CAND-20261114-063",
       "title": "Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú",
       "pageTitle": "Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú",
       "headline": "Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú",
-      "summary": "Công an xã Đại Thanh (Hà Nội) vừa vận động thành công Nguyễn Chí Thanh (SN 2002) – đối tượng chiếm đoạt 40 triệu đồng khi giao dịch đổi tiền – ra đầu thú. Động thái can thiệp ngoại hối chủ động từ cơ quan quản lý giúp hạ nhiệt áp lực tỷ giá, khơi thông thanh khoản tiền đồng và củng cố niềm tin vào sự ổn định của kinh tế vĩ mô.",
+      "summary": "Công an xã Đại Thanh (Hà Nội) vừa vận động thành công Nguyễn Chí Thanh (SN 2002) – đối tượng chiếm đoạt 40 triệu đồng khi giao dịch đổi tiền – ra đầu thú.",
       "category": "Kinh tế vĩ mô",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 09:47 | Nguồn gốc: CafeF / VCCorp (2026-11-14T09:47:00+07:00)",
@@ -2700,7 +2903,7 @@ window.EDITION_DATA = {
       "sourceUrl": "https://cafef.vn/ha-noi-thuyet-phuc-doi-tuong-lua-dao-tien-doi-ngoai-te-ra-dau-thu-18826111409480828.chn",
       "supportingQuote": "Qua công tác xác minh, kiên trì tuyên truyền và phối hợp với gia đình, Công an xã Đại Thanh (TP Hà Nội) đã vận động thành công đối tượng Nguyễn Chí Thanh (SN 2002, trú tại phường T",
       "facts": [],
-      "sectionA_whatHappened": "Công an xã Đại Thanh (Hà Nội) vừa vận động thành công Nguyễn Chí Thanh (SN 2002) – đối tượng chiếm đoạt 40 triệu đồng khi giao dịch đổi tiền – ra đầu thú. Động thái can thiệp ngoại hối chủ động từ cơ quan quản lý giúp hạ nhiệt áp lực tỷ giá, khơi thông thanh khoản tiền đồng và củng cố niềm tin vào sự ổn định của kinh tế vĩ mô.",
+      "sectionA_whatHappened": "Công an xã Đại Thanh (Hà Nội) vừa vận động thành công Nguyễn Chí Thanh (SN 2002) – đối tượng chiếm đoạt 40 triệu đồng khi giao dịch đổi tiền – ra đầu thú.",
       "sectionB_context": "Cơ quan chức năng và hệ thống ngân hàng siết chặt kỷ cương định danh tài khoản số, đẩy mạnh phòng ngừa tội phạm công nghệ cao và bảo vệ an toàn tài sản số cho người dùng.",
       "sectionC_whyItMatters": "Dữ kiện cảnh báo (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú) làm nổi bật rủi ro an ninh tài khoản, buộc các định chế tài chính và người dùng nâng cao cảnh giác, siết chặt định danh sinh trắc học để bảo vệ tiền gửi.",
       "sectionD_macroMicro": "Cảnh báo an ninh mạng & Cơ chế pháp lý (CafeF) → Ngân hàng siết chặt xác thực sinh trắc học & làm sạch tài khoản → Điểm giao dịch & ví điện tử loại bỏ tài khoản ảo → Người dùng bảo toàn số dư thanh toán.",
@@ -2708,11 +2911,11 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Thực hiện định danh eKYC và sinh trắc học 100% tài khoản thanh toán, tuyệt đối không cho mượn hoặc thuê tài khoản giao dịch tài chính.",
       "computedSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
-      "snapshotFile": "raw_evidence_store/snapshot_live_056_aba64138d4.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-07",
+      "eventId": "EVT-13",
       "originEventId": "EVT-20261114-076",
       "candidateId": "CAND-20261114-076",
       "title": "Thủ tướng nhấn mạnh việc tạo một thể chế công khai, minh bạch và dễ thực hiện",
@@ -2742,9 +2945,9 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-08",
-      "originEventId": "EVT-20261114-058",
-      "candidateId": "CAND-20261114-058",
+      "eventId": "EVT-14",
+      "originEventId": "EVT-20261114-068",
+      "candidateId": "CAND-20261114-068",
       "title": "Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?",
       "pageTitle": "Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?",
       "headline": "Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?",
@@ -2768,11 +2971,11 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Chủ động cân đối kỳ hạn nguồn vốn, thương lượng hạn mức tín dụng ưu đãi và kiểm soát chặt chẽ hệ số an toàn vốn lưu động.",
       "computedSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
-      "snapshotFile": "raw_evidence_store/snapshot_live_061_446126275f.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_071_446126275f.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-09",
+      "eventId": "EVT-15",
       "originEventId": "EVT-20261114-052",
       "candidateId": "CAND-20261114-052",
       "title": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
@@ -2818,12 +3021,12 @@ window.EDITION_DATA = {
       "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
-      "snapshotFile": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+      "computedSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+      "snapshotFile": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-10",
+      "eventId": "EVT-16",
       "originEventId": "EVT-20261114-035",
       "candidateId": "CAND-20261114-035",
       "title": "Thương mại điện tử thuần Việt khẳng định sức cạnh tranh tại giải thưởng châu Á",
@@ -2853,7 +3056,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-11",
+      "eventId": "EVT-17",
       "originEventId": "EVT-20261114-054",
       "candidateId": "CAND-20261114-054",
       "title": "Bason Logistics và hành trình 9 năm phát triển chuỗi cung ứng bền vững",
@@ -2883,9 +3086,9 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-12",
-      "originEventId": "EVT-20261114-063",
-      "candidateId": "CAND-20261114-063",
+      "eventId": "EVT-18",
+      "originEventId": "EVT-20261114-073",
+      "candidateId": "CAND-20261114-073",
       "title": "VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành",
       "pageTitle": "VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành",
       "headline": "VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành",
@@ -2903,7 +3106,7 @@ window.EDITION_DATA = {
       "facts": [
         {
           "factId": "FACT-20261110-001",
-          "eventId": "EVT-20261114-063",
+          "eventId": "EVT-20261114-073",
           "metricName": "Tăng trưởng tín dụng",
           "extractedExpression": "10%",
           "numericValue": "10",
@@ -2923,7 +3126,7 @@ window.EDITION_DATA = {
         },
         {
           "factId": "FACT-20261110-002",
-          "eventId": "EVT-20261114-063",
+          "eventId": "EVT-20261114-073",
           "metricName": "Tăng trưởng tín dụng",
           "extractedExpression": "1,8%",
           "numericValue": "1.8",
@@ -2950,112 +3153,11 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Tăng trưởng tín dụng: 10%; Tăng trưởng tín dụng: 1,8%) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Chủ động cân đối kỳ hạn nguồn vốn, thương lượng hạn mức tín dụng ưu đãi và kiểm soát chặt chẽ hệ số an toàn vốn lưu động.",
       "computedSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
-      "snapshotFile": "raw_evidence_store/snapshot_live_066_4d3d140a14.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-13",
-      "originEventId": "EVT-20261114-068",
-      "candidateId": "CAND-20261114-068",
-      "title": "Krungsri hoàn tất sở hữu 100% SFinance, khẳng định cam kết phát triển dài hạn tại Việt Nam",
-      "pageTitle": "Krungsri hoàn tất sở hữu 100% SFinance, khẳng định cam kết phát triển dài hạn tại Việt Nam",
-      "headline": "Krungsri hoàn tất sở hữu 100% SFinance, khẳng định cam kết phát triển dài hạn tại Việt Nam",
-      "summary": "Tại lễ chúc mừng hoàn tất chuyển nhượng và chuyển đổi thành công SFinance, ngày 10/11, Chủ tịch kiêm tổng giám đốc Krungsri khẳng định cam kết đầu tư dài hạn tại Việt Nam thông qua SFinance.",
-      "category": "Ngân hàng",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "14/11/2026 08:00 | Nguồn gốc: CafeF / VCCorp (2026-11-14T08:00:00+07:00)",
-      "publicationTimestamp": "14/11/2026 08:00",
-      "originalSourcePublishedAt": "2026-11-14T08:00:00+07:00",
-      "originalSourceName": "CafeF / VCCorp",
-      "author": "CafeF / VCCorp",
-      "canonicalUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-      "sourceUrl": "https://cafef.vn/krungsri-hoan-tat-so-huu-100-sfinance-khang-dinh-cam-ket-phat-trien-dai-han-tai-viet-nam-188261113143757195.chn",
-      "supportingQuote": "Nhận định được ông Kenichi Yamato, Tổng giám đốc Krungsri, đưa ra tại lễ công bố hoàn tất chuyển nhượng vốn SFinance, tổ chức ngày 10/11 tại Hà Nội.",
-      "facts": [
-        {
-          "factId": "FACT-20261110-001",
-          "eventId": "EVT-20261114-068",
-          "metricName": "Tỷ lệ sở hữu cổ phần",
-          "extractedExpression": "50%",
-          "numericValue": "50",
-          "unit": "%",
-          "scale": "tỷ lệ %",
-          "originalExtractedEntity": "SHB",
-          "verifiedEntity": "SHB",
-          "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
-          "entityBindingNote": "Chủ thể 'SHB' xuất hiện trực tiếp trong contextQuote.",
-          "reportingPeriod": "15/10",
-          "polarity": null,
-          "factType": "POLICY_THRESHOLD",
-          "verificationStatus": "VERIFIED",
-          "contextQuote": "Ngày 15/10, Krungsri hoàn tất nhận chuyển nhượng 50% vốn còn lại từ SHB, nâng tỷ lệ sở hữu SFinance lên 100%.",
-          "isDuplicate": false,
-          "duplicateOfFactId": null
-        },
-        {
-          "factId": "FACT-20261110-002",
-          "eventId": "EVT-20261114-068",
-          "metricName": "Tỷ lệ sở hữu cổ phần",
-          "extractedExpression": "100%",
-          "numericValue": "100",
-          "unit": "%",
-          "scale": "tỷ lệ %",
-          "originalExtractedEntity": "SHB",
-          "verifiedEntity": "SHB",
-          "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
-          "entityBindingNote": "Chủ thể 'SHB' xuất hiện trực tiếp trong contextQuote.",
-          "reportingPeriod": "15/10",
-          "polarity": null,
-          "factType": "POLICY_THRESHOLD",
-          "verificationStatus": "VERIFIED",
-          "contextQuote": "Ngày 15/10, Krungsri hoàn tất nhận chuyển nhượng 50% vốn còn lại từ SHB, nâng tỷ lệ sở hữu SFinance lên 100%.",
-          "isDuplicate": false,
-          "duplicateOfFactId": null
-        }
-      ],
-      "sectionA_whatHappened": "Tại lễ chúc mừng hoàn tất chuyển nhượng và chuyển đổi thành công SFinance, ngày 10/11, Chủ tịch kiêm tổng giám đốc Krungsri khẳng định cam kết đầu tư dài hạn tại Việt Nam thông qua SFinance.",
-      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
-      "sectionC_whyItMatters": "Dữ kiện thị trường (Tỷ lệ sở hữu cổ phần: 50%; Tỷ lệ sở hữu cổ phần: 100%) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của SHB.",
-      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (SHB) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
-      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Tỷ lệ sở hữu cổ phần: 50%; Tỷ lệ sở hữu cổ phần: 100%) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "158869ee61fbf0d1b1652ab448b8562d3b87146164e39b5ab561768ca3676f04",
-      "snapshotFile": "raw_evidence_store/snapshot_live_071_158869ee61.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-14",
-      "originEventId": "EVT-20261114-002",
-      "candidateId": "CAND-20261114-002",
-      "title": "Nguồn cung tăng, giá nhà TP.HCM có giảm?",
-      "pageTitle": "Nguồn cung tăng, giá nhà TP.HCM có giảm?",
-      "headline": "Nguồn cung tăng, giá nhà TP.HCM có giảm?",
-      "summary": "Thị trường bất động sản TP.HCM và vùng phụ cận bước vào những tháng cuối năm 2026 với tín hiệu khởi sắc về nguồn cung, khi dự kiến có khoảng 10.000 căn hộ mới rục rịch bung hàng. Liệu giá nhà có giảm?.",
-      "category": "Doanh nghiệp",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "14/11/2026 07:30 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T07:30:00+07:00)",
-      "publicationTimestamp": "14/11/2026 07:30",
-      "originalSourcePublishedAt": "2026-11-14T07:30:00+07:00",
-      "originalSourceName": "Báo Tuổi Trẻ",
-      "author": "Báo Tuổi Trẻ",
-      "canonicalUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-      "sourceUrl": "https://tuoitre.vn/nguon-cung-tang-gia-nha-tphcm-co-giam-100261113201436923.htm",
-      "supportingQuote": "Sau giai đoạn trầm lắng về nguồn cung, thị trường căn hộ TP.HCM và các khu vực lân cận đang ghi nhận lượng hàng mở bán mới gia tăng đáng kể.",
-      "facts": [],
-      "sectionA_whatHappened": "Thị trường bất động sản TP.HCM và vùng phụ cận bước vào những tháng cuối năm 2026 với tín hiệu khởi sắc về nguồn cung, khi dự kiến có khoảng 10.000 căn hộ mới rục rịch bung hàng. Liệu giá nhà có giảm?.",
-      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
-      "sectionC_whyItMatters": "Dữ kiện thị trường (Nguồn cung tăng, giá nhà TP.HCM có giảm?) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của Báo Tuổi Trẻ.",
-      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (Báo Tuổi Trẻ) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
-      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Nguồn cung tăng, giá nhà TP.HCM có giảm?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "088d40f5f1790721c65467d8b1e9f5856cf78da0388693c599e9812b96df50ea",
-      "snapshotFile": "raw_evidence_store/snapshot_live_002_088d40f5f1.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-15",
+      "eventId": "EVT-19",
       "originEventId": "EVT-20261114-007",
       "candidateId": "CAND-20261114-007",
       "title": "Mở 'luồng xanh' cho nông sản tươi vào Trung Quốc",
@@ -3085,7 +3187,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-16",
+      "eventId": "EVT-20",
       "originEventId": "EVT-20261114-011",
       "candidateId": "CAND-20261114-011",
       "title": "Hàng Việt lên sàn ngoại dễ hay khó?",
@@ -3115,7 +3217,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-17",
+      "eventId": "EVT-21",
       "originEventId": "EVT-20261114-015",
       "candidateId": "CAND-20261114-015",
       "title": "Tăng giá điện mặt trời, khuyến khích đầu tư pin lưu trữ",
@@ -3145,7 +3247,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-18",
+      "eventId": "EVT-22",
       "originEventId": "EVT-20261114-024",
       "candidateId": "CAND-20261114-024",
       "title": "'Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục",
@@ -3175,9 +3277,9 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-19",
-      "originEventId": "EVT-20261114-010",
-      "candidateId": "CAND-20261114-010",
+      "eventId": "EVT-23",
+      "originEventId": "EVT-20261114-064",
+      "candidateId": "CAND-20261114-064",
       "title": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
       "pageTitle": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
       "headline": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
@@ -3201,11 +3303,11 @@ window.EDITION_DATA = {
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Chủ động cân đối kỳ hạn nguồn vốn, thương lượng hạn mức tín dụng ưu đãi và kiểm soát chặt chẽ hệ số an toàn vốn lưu động.",
       "computedSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-      "snapshotFile": "raw_evidence_store/snapshot_live_012_dae6f0cc17.html",
+      "snapshotFile": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-20",
+      "eventId": "EVT-24",
       "originEventId": "EVT-20261114-040",
       "candidateId": "CAND-20261114-040",
       "title": "VietinBank Premium công bố ba phân hạng Khách hàng Ưu tiên mới",
@@ -3235,7 +3337,7 @@ window.EDITION_DATA = {
       "verificationStatus": "VERIFIED"
     },
     {
-      "eventId": "EVT-21",
+      "eventId": "EVT-25",
       "originEventId": "EVT-20261114-039",
       "candidateId": "CAND-20261114-039",
       "title": "Quảng Trị thu hơn 3.000 tỉ đồng ngân sách trong một tháng, tiền đến từ đâu?",
@@ -3262,167 +3364,6 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
       "computedSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
       "snapshotFile": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-22",
-      "originEventId": "EVT-20261114-034",
-      "candidateId": "CAND-20261114-034",
-      "title": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
-      "pageTitle": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
-      "headline": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
-      "summary": "Cục Đăng kiểm Việt Nam đang lấy ý kiến sửa đổi, bổ sung một số điều của các Nghị định trong lĩnh vực sản xuất, lắp ráp, nhập khẩu phương tiện giao thông đường bộ.",
-      "category": "Doanh nghiệp",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "13/11/2026 18:15 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-13T18:15:00+07:00)",
-      "publicationTimestamp": "13/11/2026 18:15",
-      "originalSourcePublishedAt": "2026-11-13T18:15:00+07:00",
-      "originalSourceName": "Báo Tuổi Trẻ",
-      "author": "Báo Tuổi Trẻ",
-      "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-      "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-      "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản",
-      "facts": [],
-      "sectionA_whatHappened": "Cục Đăng kiểm Việt Nam đang lấy ý kiến sửa đổi, bổ sung một số điều của các Nghị định trong lĩnh vực sản xuất, lắp ráp, nhập khẩu phương tiện giao thông đường bộ.",
-      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
-      "sectionC_whyItMatters": "Dữ kiện thị trường (Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của Báo Tuổi Trẻ.",
-      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (Báo Tuổi Trẻ) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
-      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-      "snapshotFile": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-23",
-      "originEventId": "EVT-20261114-006",
-      "candidateId": "CAND-20261114-006",
-      "title": "Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế",
-      "pageTitle": "Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế",
-      "headline": "Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế",
-      "summary": "Chính phủ giao Bộ Tài chính hoàn thiện hồ sơ trình Quốc hội xem xét xóa nợ lệ phí môn bài và tiền chậm nộp cho người đã ngừng kinh doanh. Kỷ cương siết chặt quản lý thuế và chế tài hóa đơn điện tử đặt ra yêu cầu tuân thủ cấp thiết, thúc đẩy các doanh nghiệp và hộ kinh doanh nhanh chóng số hóa sổ sách và minh bạch hóa dòng tiền.",
-      "category": "Doanh nghiệp",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "13/11/2026 17:59 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-13T17:59:00+07:00)",
-      "publicationTimestamp": "13/11/2026 17:59",
-      "originalSourcePublishedAt": "2026-11-13T17:59:00+07:00",
-      "originalSourceName": "Báo Tuổi Trẻ",
-      "author": "Báo Tuổi Trẻ",
-      "canonicalUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-      "sourceUrl": "https://tuoitre.vn/thong-qua-ho-so-de-trinh-quoc-hoi-go-vuong-dong-ma-so-thue-cho-doanh-nghiep-100261113152944353.htm",
-      "supportingQuote": "Ngày 12-11, Chính phủ ban hành Nghị quyết 364 thông qua hồ sơ dự án nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ, để tháo gỡ khó khăn cho người nộ",
-      "facts": [],
-      "sectionA_whatHappened": "Chính phủ giao Bộ Tài chính hoàn thiện hồ sơ trình Quốc hội xem xét xóa nợ lệ phí môn bài và tiền chậm nộp cho người đã ngừng kinh doanh. Kỷ cương siết chặt quản lý thuế và chế tài hóa đơn điện tử đặt ra yêu cầu tuân thủ cấp thiết, thúc đẩy các doanh nghiệp và hộ kinh doanh nhanh chóng số hóa sổ sách và minh bạch hóa dòng tiền.",
-      "sectionB_context": "Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
-      "sectionC_whyItMatters": "Dữ kiện (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế) đặt ra yêu cầu tuân thủ pháp lý tức thì cho hộ kinh doanh, thúc đẩy ứng dụng máy tính tiền tích hợp hóa đơn điện tử để phòng ngừa rủi ro xử phạt thuế.",
-      "sectionD_macroMicro": "Chính sách thuế & Kỷ cương hóa đơn (Báo Tuổi Trẻ) → Cơ quan Thuế phối hợp đơn vị giải pháp số hóa điểm bán → Hộ kinh doanh trang bị máy tính tiền kết nối dữ liệu tự động → Khách hàng nhận hóa đơn minh bạch.",
-      "sectionE_fintechLens": "Cung ứng thiết bị All-in-One Payoo SmartPOS tích hợp phần mềm bán hàng và hóa đơn điện tử máy tính tiền khởi tạo từ POS, tự động truyền dữ liệu thuế chuẩn hóa.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Kết nối giải pháp máy tính tiền có hóa đơn điện tử với cổng của cơ quan thuế để bảo đảm tuân thủ pháp lý và minh bạch sổ sách kế toán.",
-      "computedSha256": "0df6116a7893da0e256e9aa443490c7bff462578229870a3bab2adb7d768d328",
-      "snapshotFile": "raw_evidence_store/snapshot_live_007_0df6116a78.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-24",
-      "originEventId": "EVT-20261114-019",
-      "candidateId": "CAND-20261114-019",
-      "title": "Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?",
-      "pageTitle": "Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?",
-      "headline": "Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?",
-      "summary": "Bộ Công Thương đang đề xuất bỏ Quỹ bình ổn giá xăng dầu khỏi các biện pháp bình ổn giá, và bổ sung các công cụ điều hành giá trong trường hợp cần thiết. Thị trường hàng hóa năng lượng thiết yếu và kim loại quý ghi nhận diễn biến điều hành linh hoạt nhằm thu hẹp chênh lệch giá, bảo đảm cung ứng và ổn định tâm lý thị trường.",
-      "category": "Doanh nghiệp",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "13/11/2026 17:05 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-13T17:05:00+07:00)",
-      "publicationTimestamp": "13/11/2026 17:05",
-      "originalSourcePublishedAt": "2026-11-13T17:05:00+07:00",
-      "originalSourceName": "Báo Tuổi Trẻ",
-      "author": "Báo Tuổi Trẻ",
-      "canonicalUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-      "sourceUrl": "https://tuoitre.vn/bo-quy-binh-on-xang-dau-cong-cu-nao-kem-gia-khi-co-bien-dong-manh-100261113163914281.htm",
-      "supportingQuote": "Tại dự thảo lần thứ 14 trình Chính phủ, Bộ Công Thương cho hay dự thảo nghị định quy định không tiếp tục sử dụng Quỹ bình ổn giá xăng dầu là biện pháp bình ổn giá.",
-      "facts": [],
-      "sectionA_whatHappened": "Bộ Công Thương đang đề xuất bỏ Quỹ bình ổn giá xăng dầu khỏi các biện pháp bình ổn giá, và bổ sung các công cụ điều hành giá trong trường hợp cần thiết. Thị trường hàng hóa năng lượng thiết yếu và kim loại quý ghi nhận diễn biến điều hành linh hoạt nhằm thu hẹp chênh lệch giá, bảo đảm cung ứng và ổn định tâm lý thị trường.",
-      "sectionB_context": "Thị trường hàng hóa năng lượng thiết yếu và kim loại quý ghi nhận diễn biến điều hành linh hoạt nhằm thu hẹp chênh lệch giá, bảo đảm cung ứng và ổn định tâm lý thị trường.",
-      "sectionC_whyItMatters": "Biến động dữ kiện (Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?) tác động trực tiếp lên chi phí đầu vào của chuỗi bán lẻ, giao thông vận tải và chi tiêu hàng ngày của người dân.",
-      "sectionD_macroMicro": "Điều hành giá & Cung cầu thị trường (Báo Tuổi Trẻ) → Doanh nghiệp đầu mối điều chỉnh bảng giá niêm yết → Đơn vị phân phối bán lẻ tối ưu chi phí vận hành → Người tiêu dùng thích ứng chi tiêu sinh hoạt.",
-      "sectionE_fintechLens": "Phổ cập giải pháp thanh toán không dùng tiền mặt tại trạm xăng dầu và cửa hàng kim hoàn qua mã Dynamic QR gắn biển số xe hoặc mã hóa đơn, đối soát tự động theo ca.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Bỏ quỹ bình ổn xăng dầu: Công cụ nào kìm giá khi có biến động mạnh?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Tối ưu hóa quy trình luân chuyển dòng tiền, hạn chế lưu trữ tiền mặt và khai thác các kênh tài trợ vốn số hóa.",
-      "computedSha256": "c019431874b706c078965a75972fbf0137f3f7a7667141081739ab86835ecf1d",
-      "snapshotFile": "raw_evidence_store/snapshot_live_022_c019431874.html",
-      "verificationStatus": "VERIFIED"
-    },
-    {
-      "eventId": "EVT-25",
-      "originEventId": "EVT-20261114-008",
-      "candidateId": "CAND-20261114-008",
-      "title": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
-      "pageTitle": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
-      "headline": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
-      "summary": "Ttại lễ vinh danh 50 thương hiệu dẫn đầu năm 2026 do Forbes Việt Nam vừa tổ chức, Ngân hàng TMCP Sài Gòn – Hà Nội (SHB) được xướng tên ở vị trí thứ 10 trong bảng xếp hạng, với giá trị thương hiệu đạt 836 triệu USD.",
-      "category": "Doanh nghiệp",
-      "strictCombinedTimeWindow": "0–24h",
-      "publisherPublishedAt": "13/11/2026 16:38 | Nguồn gốc: Báo Đầu tư (2026-11-13T16:38:00+07:00)",
-      "publicationTimestamp": "13/11/2026 16:38",
-      "originalSourcePublishedAt": "2026-11-13T16:38:00+07:00",
-      "originalSourceName": "Báo Đầu tư",
-      "author": "Báo Đầu tư",
-      "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-      "sourceUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
-      "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu.",
-      "facts": [
-        {
-          "factId": "FACT-20261110-001",
-          "eventId": "EVT-20261114-008",
-          "metricName": "Lợi nhuận",
-          "extractedExpression": "14.309 tỷ đồng",
-          "numericValue": "14309",
-          "unit": "tỷ đồng",
-          "scale": "tỷ",
-          "originalExtractedEntity": "SHB",
-          "verifiedEntity": "SHB",
-          "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
-          "entityBindingNote": "Chủ thể 'SHB' xuất hiện trực tiếp trong contextQuote.",
-          "reportingPeriod": "năm 2026",
-          "polarity": "UP",
-          "factType": "OBSERVATION",
-          "verificationStatus": "VERIFIED",
-          "contextQuote": "Trong 9 tháng đầu năm 2026, SHB lãi trước thuế đạt hơn 14.309 tỷ đồng, tăng gần 17% so với cùng kỳ năm 2025.",
-          "isDuplicate": false,
-          "duplicateOfFactId": null
-        },
-        {
-          "factId": "FACT-20261110-002",
-          "eventId": "EVT-20261114-008",
-          "metricName": "Tăng trưởng lợi nhuận",
-          "extractedExpression": "17%",
-          "numericValue": "17",
-          "unit": "%",
-          "scale": "tỷ lệ %",
-          "originalExtractedEntity": "SHB",
-          "verifiedEntity": "SHB",
-          "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
-          "entityBindingNote": "Chủ thể 'SHB' xuất hiện trực tiếp trong contextQuote.",
-          "reportingPeriod": "năm 2026",
-          "polarity": "UP",
-          "factType": "OBSERVATION",
-          "verificationStatus": "VERIFIED",
-          "contextQuote": "Trong 9 tháng đầu năm 2026, SHB lãi trước thuế đạt hơn 14.309 tỷ đồng, tăng gần 17% so với cùng kỳ năm 2025.",
-          "isDuplicate": false,
-          "duplicateOfFactId": null
-        }
-      ],
-      "sectionA_whatHappened": "Ttại lễ vinh danh 50 thương hiệu dẫn đầu năm 2026 do Forbes Việt Nam vừa tổ chức, Ngân hàng TMCP Sài Gòn – Hà Nội (SHB) được xướng tên ở vị trí thứ 10 trong bảng xếp hạng, với giá trị thương hiệu đạt 836 triệu USD.",
-      "sectionB_context": "Sức mua tiêu dùng nội địa và thương mại bán lẻ bước vào cao điểm cuối năm, tạo lực đẩy quan trọng cho các hoạt động sản xuất kinh doanh và luân chuyển vốn.",
-      "sectionC_whyItMatters": "Dữ kiện thị trường (Lợi nhuận: 14.309 tỷ đồng; Tăng trưởng lợi nhuận: 17%) kích hoạt lực cầu tiêu dùng, tối ưu hóa vòng quay hàng tồn kho và cải thiện dòng tiền hoạt động của SHB.",
-      "sectionD_macroMicro": "Kích cầu thị trường & Mùa vụ tiêu dùng (SHB) → Nhà bán lẻ triển khai chương trình khuyến mãi và đa dạng hóa thanh toán → Người tiêu dùng tăng tần suất chi tiêu tại quầy → Doanh thu và dòng tiền bán hàng tăng tốc.",
-      "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Lợi nhuận: 14.309 tỷ đồng; Tăng trưởng lợi nhuận: 17%) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
-      "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
-      "snapshotFile": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
       "verificationStatus": "VERIFIED"
     }
   ],

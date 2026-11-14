@@ -77,6 +77,8 @@ def load_file_flexible(dir_path: str, candidate_names: list, fallback_dir: str =
     raise FileNotFoundError(f"Cannot find any of {candidate_names} in {dir_path} or {fallback_dir}")
 
 
+_USED_ENRICH_SENTENCES = set()
+
 def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: dict = None, is_cover: bool = False) -> str:
     """
     Quy chuẩn biên tập Standfirst / Sapo chuyên nghiệp (Bryan Fintech Intelligence Rule):
@@ -142,7 +144,8 @@ def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: di
                     cand += "."
                 enrich = cand
 
-    if enrich and enrich not in base:
+    if enrich and enrich not in base and (is_cover or enrich not in _USED_ENRICH_SENTENCES):
+        _USED_ENRICH_SENTENCES.add(enrich)
         return f"{base} {enrich}".strip()
     return base
 
@@ -899,21 +902,24 @@ def main():
             "key": "usdVndCenter",
             "label": "01. TỶ GIÁ NGOẠI HỐI & CAN THIỆP USD/VND",
             "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
-            "value": "25.618 VND/USD",
+            "value": "25.637 VND/USD",
             "unit": "VND/USD",
-            "asOf": last_trading_day,
-            "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
-            "change": "+3 VND/USD",
-            "sourceName": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
-            "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
-            "secondarySourceUrls": ["https://thanhnien.vn/kinh-te.htm"],
-            "statusReason": f"Tỷ giá trung tâm USD/VND ghi nhận ở mức 25.618 VND/USD trong phiên ngày {last_trading_day}.",
-            "financialInterpretation": "Việc NHNN duy trì giá mua can thiệp 25.500 đồng giúp chặn đà suy yếu của tiền đồng trong khi vẫn tiếp sức thanh khoản VND cho hệ thống ngân hàng. Tỷ giá bán ra tại các NHTM neo ở 25.860 - 25.870 VND/USD làm tăng chi phí nhập khẩu của doanh nghiệp bán lẻ. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
-            "monitoringWatchpoint": "Theo dõi sát khối lượng ngoại tệ NHNN mua vào trong các phiên định kỳ thứ Hai và thứ Tư.",
+            "asOf": edition_date_raw,
+            "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 - Bán 26.868 đồng | VCB: 25.500 - 25.910 đồng | BIDV: 25.540 - 25.920 đồng",
+            "change": "+22 VND/USD so với cuối tuần trước (DXY: 103,41 điểm)",
+            "sourceName": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn)",
+            "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
+            "secondarySourceUrls": [
+                "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia",
+                "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm"
+            ],
+            "statusReason": f"Tỷ giá trung tâm do Ngân hàng Nhà nước công bố ở mức 25.637 VND/USD (tăng 22 đồng so với cuối tuần trước); Cục Quản lý ngoại hối niêm yết giá mua - bán tham khảo tại 25.500 - 26.868 VND/USD.",
+            "financialInterpretation": "Tỷ giá trung tâm tăng lên 25.637 VND/USD khi chỉ số DXY vượt mốc 103,41 điểm, kéo giá bán USD tại Vietcombank (25.910 đồng) và BIDV (25.920 đồng) tăng hơn 130 đồng. Việc NHNN duy trì giá mua tham khảo 25.500 đồng giúp ổn định kỳ vọng tỷ giá, nhưng chi phí thanh toán nhập khẩu của doanh nghiệp bán lẻ vẫn chịu áp lực. Với giải pháp Payoo và SmartPOS, công cụ chuyển đổi ngoại tệ Dynamic Currency Conversion (DCC) tại quầy giúp điểm bán minh bạch tỷ giá và hạn chế rủi ro trượt giá cho du khách quốc tế.",
+            "monitoringWatchpoint": "Theo dõi sát diễn biến chỉ số DXY trên vùng 103 điểm và biên độ niêm yết USD tại các NHTM quốc doanh trong tuần tới.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "2b30a4d34626a8f74ba5b7d53f62437cf53a9e09427c759930c1d22c8892a693",
-            "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_2b30a4d346.html"
+            "sha256": "e85f1c3f619b7a8d2409b1910145974189b2c07cdf7e6bfde8c95f7c721c974a",
+            "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_e85f1c3f61.html"
         },
         {
             "cardNumber": "02",
@@ -943,21 +949,24 @@ def main():
             "key": "vnIndex",
             "label": "03. CHỈ SỐ VN-INDEX",
             "shortLabel": "CHỈ SỐ VN-INDEX",
-            "value": "1.748,50 Điểm",
+            "value": "1.734,93 Điểm",
             "unit": "Điểm",
             "asOf": last_trading_day,
-            "referenceValue": "Thanh khoản HoSE: 16.850 tỷ đồng | Khối ngoại cân bằng | 240 mã tăng",
-            "change": f"+5,50 Điểm (+0,32%) trong phiên ngày {last_trading_day}",
-            "sourceName": "Báo Tuổi Trẻ (tuoitre.vn)",
-            "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
-            "secondarySourceUrls": ["https://cafef.vn/thi-truong-chung-khoan.chn"],
-            "statusReason": f"Chỉ số VN-Index đóng cửa phiên cuối tuần tại 1.748,50 Điểm trong phiên ngày {last_trading_day}.",
-            "financialInterpretation": "Thị trường duy trì sắc xanh tích cực phản ánh sự hấp thụ tốt của dòng tiền nội quanh vùng 1.745 - 1.750 điểm. Thanh khoản đạt gần 17.000 tỷ đồng cho thấy tâm lý nhà đầu tư dần ổn định. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
-            "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng kháng cự 1.750 điểm và động thái giải ngân của khối ngoại.",
+            "referenceValue": "Thanh khoản HoSE: 15.138 tỷ đồng (656,7 triệu CP) | Khối ngoại mua ròng 310,8 tỷ đồng | 108 mã tăng / 192 mã giảm",
+            "change": f"+0,18 Điểm (+0,01%) phiên {last_trading_day}; +9,57 Điểm (+0,55%) tuần 9–13/11",
+            "sourceName": "Báo Dân Việt (danviet.vn)",
+            "sourceUrl": "https://danviet.vn/vn-index-giang-co-quanh-1735-diem-khoi-ngoai-bat-ngo-xuong-tien-d1474782.html",
+            "secondarySourceUrls": [
+                "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
+                "https://thoibaotaichinhvietnam.vn/"
+            ],
+            "statusReason": f"Chỉ số VN-Index kết phiên ngày {last_trading_day} tại 1.734,93 Điểm (+0,18 điểm, tương ứng +0,01%; tính chung cả tuần tăng 9,57 điểm tương đương +0,55%), thanh khoản HoSE đạt 15.138 tỷ đồng với khối ngoại đảo chiều mua ròng 310,8 tỷ đồng.",
+            "financialInterpretation": "VN-Index hồi phục và trụ vững quanh vùng 1.735 điểm sau nhịp điều chỉnh, chấm dứt chuỗi hai tuần giảm điểm nhờ lực cầu bắt đáy và động thái mua ròng hơn 310,8 tỷ đồng của khối ngoại trong phiên cuối tuần. Tuy nhiên thanh khoản còn thận trọng (15.138 tỷ đồng), thúc đẩy các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu dòng tiền hoạt động.",
+            "monitoringWatchpoint": "Theo dõi khả năng bứt phá của VN-Index qua vùng kháng cự 1.740 - 1.750 điểm và tính bền vững của dòng vốn ngoại trong tuần tới.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
-            "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html"
+            "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
+            "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html"
         },
         {
             "cardNumber": "04",
@@ -987,6 +996,14 @@ def main():
 
     # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
     raw_indicators = mp_raw.get("indicators", []) if isinstance(mp_raw, dict) else []
+    pub_display_map = {
+        "thoibaotaichinhvietnam.vn": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn)",
+        "danviet.vn": "Báo Dân Việt (danviet.vn)",
+        "cafef.vn": "CafeF / VCCorp (cafef.vn)",
+        "vneconomy.vn": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+        "tuoitre.vn": "Báo Tuổi Trẻ (tuoitre.vn)",
+        "thanhnien.vn": "Báo Thanh Niên (thanhnien.vn)"
+    }
 
     for item in CORE_4_DEFS:
         matched_raw = None
@@ -1050,38 +1067,60 @@ def main():
                 item["value"] = val_fmt
 
             # D-01: Synchronize true source observation date, ensuring market trading indicators never fall back to stale dates older than last_trading_day
-            if raw_obs_date:
-                if item["key"] in ["usdVndCenter", "vnIndex", "maxDeposit12M"]:
-                    if raw_obs_date < last_trading_day:
-                        item["asOf"] = last_trading_day
-                    else:
-                        item["asOf"] = raw_obs_date
-                else:
-                    item["asOf"] = raw_obs_date
+            if raw_obs_date and not is_stale_raw:
+                item["asOf"] = raw_obs_date
 
             if matched_raw.get("change") and not is_stale_raw:
                 item["change"] = matched_raw["change"]
-            if matched_raw.get("sourceUrl") and matched_raw["sourceUrl"].startswith("http"):
+            if matched_raw.get("sourceUrl") and matched_raw["sourceUrl"].startswith("http") and not is_stale_raw:
                 item["sourceUrl"] = matched_raw["sourceUrl"]
-            if matched_raw.get("sourceOrganization") or matched_raw.get("publisher"):
-                item["sourceName"] = matched_raw.get("sourceOrganization") or matched_raw.get("publisher")
+            if (matched_raw.get("sourceOrganization") or matched_raw.get("publisher")) and not is_stale_raw:
+                raw_pub = (matched_raw.get("sourceOrganization") or matched_raw.get("publisher") or "").strip()
+                item["sourceName"] = pub_display_map.get(raw_pub.lower(), raw_pub)
             if matched_raw.get("interpretation") and not is_stale_raw:
                 interp = matched_raw["interpretation"]
-                # Ensure numbers in statusReason follow vi-VN format
-                interp = interp.replace("1743.00", "1.743,00").replace("25611", "25.611")
+                # Format any unformatted numbers in statusReason according to vi-VN standard
+                interp = re.sub(r'\b(2\d)(\d{3})\b', r'\1.\2', interp)
+                interp = re.sub(r'\b(1)(\d{3})\.(\d{2})\b', r'\1.\2,\3', interp)
                 item["statusReason"] = interp
-            if matched_raw.get("evidenceSha256"):
+            if matched_raw.get("evidenceSha256") and not is_stale_raw:
                 item["sha256"] = matched_raw["evidenceSha256"]
-            if matched_raw.get("evidencePath"):
+            if matched_raw.get("evidencePath") and not is_stale_raw:
                 item["evidencePath"] = matched_raw["evidencePath"]
-                interp = matched_raw["interpretation"]
-                # Ensure numbers in statusReason follow vi-VN format
-                interp = interp.replace("1743.00", "1.743,00").replace("25611", "25.611")
-                item["statusReason"] = interp
-            if matched_raw.get("evidenceSha256"):
-                item["sha256"] = matched_raw["evidenceSha256"]
-            if matched_raw.get("evidencePath"):
-                item["evidencePath"] = matched_raw["evidencePath"]
+
+        # Dynamic secondary metric extraction from live evidence HTML (for daily operational continuity)
+        ev_rel = item.get("evidencePath", "")
+        for base_ev_dir in [intel_dir, RUNTIME_DIR]:
+            ev_abs = os.path.join(base_ev_dir, ev_rel) if ev_rel else ""
+            if ev_abs and os.path.exists(ev_abs):
+                try:
+                    with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef:
+                        ev_html = re.sub(r'<[^>]+>', ' ', ef.read())
+                        ev_html = ' '.join(ev_html.split())
+                    if item["key"] == "usdVndCenter":
+                        ref_parts = []
+                        m_sbv = re.search(r'Cục Quản lý ngoại hối[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                        if m_sbv:
+                            ref_parts.append(f"Cục QL Ngoại hối NHNN: Mua {m_sbv.group(1)} - Bán {m_sbv.group(2)} đồng")
+                        m_vcb = re.search(r'Vietcombank[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                        if m_vcb:
+                            ref_parts.append(f"VCB: {m_vcb.group(1)} - {m_vcb.group(2)} đồng")
+                        m_bidv = re.search(r'BIDV[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                        if m_bidv:
+                            ref_parts.append(f"BIDV: {m_bidv.group(1)} - {m_bidv.group(2)} đồng")
+                        if ref_parts:
+                            item["referenceValue"] = " | ".join(ref_parts)
+                        m_dxy = re.search(r'DXY[^.!?\n]{0,100}?(\d{3},\d{1,2})\s*điểm', ev_html, re.I)
+                        if m_dxy and "DXY" not in str(item.get("change", "")):
+                            item["change"] = f"{item['change']} (DXY: {m_dxy.group(1)} điểm)"
+                    elif item["key"] == "vnIndex":
+                        m_vni_chg = re.search(r'(?P<dir>tăng|giảm)(?:\s+nhẹ|\s+mạnh)?\s+(?P<pts>\d+(?:,\d+)?)\s*điểm,\s*tương\s*(?:ứng|đương)\s*(?P<pct>\d+(?:,\d+)?%)', ev_html, re.I)
+                        if m_vni_chg:
+                            sign = "-" if "giảm" in m_vni_chg.group("dir").lower() else "+"
+                            item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}"
+                except Exception:
+                    pass
+                break
 
     for item in CORE_4_DEFS:
         card = {
@@ -1707,7 +1746,6 @@ def main():
         day_of_week = "Thứ Năm"
 
     # Calculate dynamic edition number (auto-increments daily)
-    import re
     ed_no_match = re.search(r"NO(\d+)", str(edition_id), re.IGNORECASE)
     if ed_no_match:
         ed_number_val = int(ed_no_match.group(1))
