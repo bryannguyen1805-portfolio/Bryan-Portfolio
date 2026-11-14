@@ -26,7 +26,14 @@ cat << 'EOF' > "$PLIST_FILE"
     <array>
         <string>/usr/bin/python3</string>
         <string>/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/pilot-output/daily-run-package/run_daily_edition.py</string>
+        <string>--mode</string>
+        <string>local-staging</string>
     </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>BNEWS_OWNER_ACCEPTANCE</key>
+        <string>PENDING</string>
+    </dict>
     <key>WorkingDirectory</key>
     <string>/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/pilot-output/daily-run-package</string>
     <key>StartCalendarInterval</key>
@@ -51,9 +58,10 @@ launchctl unload "$PLIST_FILE" 2>/dev/null || true
 launchctl load "$PLIST_FILE"
 
 echo "✅ Đã tạo và kích hoạt dịch vụ LaunchAgent: $PLIST_FILE"
-echo "⏰ Thời gian chạy tự động: 09:00 AM mỗi ngày."
+echo "⏰ Thời gian chạy tự động: 09:00 AM mỗi ngày (chế độ --mode local-staging, KHÔNG tự git push)."
 echo "📝 Nhật ký hoạt động sẽ được ghi vào: $LOG_DIR/daily_run.log"
-echo "🌐 Ấn bản sau khi chạy sẽ tự động cập nhật tại: $PACKAGE_DIR/index.html"
+echo "🛡️ Lưu ý macOS TCC: Nếu /usr/bin/python3 gặp '[Errno 1] Operation not permitted' khi đọc ~/Documents, hãy cấp Full Disk Access hoặc dùng Terminal."
+echo "🌐 Ấn bản staging sau khi chạy sẽ cập nhật tại: $PACKAGE_DIR/index.html"
 echo "================================================================="
 echo "🎉 HOÀN TẤT CÀI ĐẶT! BẠN KHÔNG CẦN LÀM GÌ THÊM."
 echo "================================================================="

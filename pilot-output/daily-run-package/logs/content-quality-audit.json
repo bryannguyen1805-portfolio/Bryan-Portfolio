@@ -1,8 +1,10 @@
 {
   "editionId": "ED-20261114-D01",
-  "checkedAt": "2026-11-14T14:51:04.212340",
+  "checkedAt": "2026-11-14T19:40:55.939122",
   "articlesChecked": 25,
   "repeatedSentencesAcrossArticles": [],
+  "articleViolations": [],
+  "coverViolations": [],
   "blocklistHits": {},
   "joinArtifactsQuestionSemicolon": 0,
   "status": "PASS"

@@ -22,14 +22,16 @@ pilot-output/daily-run-package/
 
 ---
 
-## ⚡ HƯỚNG DẪN VẬN HÀNH 1 LỆNH DUY NHẤT (ONE-COMMAND EXECUTION)
+## ⚡ HƯỚNG DẪN VẬN HÀNH LOCAL-STAGING (MẶC ĐỊNH AN TOÀN)
 
-Mỗi ngày, sau khi kết thúc phiên giao dịch (khoảng **17:30 - 18:00**), mở Terminal và chạy lệnh sau:
+Mỗi ngày sau khi kết thúc phiên giao dịch (hoặc qua LaunchAgent 9:00 AM ở chế độ `--mode local-staging`), chạy lệnh:
 
 ```bash
 cd /Users/quangtri/Documents/Bryan-Portfolio-Antigravity/pilot-output/daily-run-package
-python3 run_daily_edition.py
+python3 run_daily_edition.py --mode local-staging
 ```
+
+> 🛡️ **Lưu ý An toàn Production (Section XI):** `run_daily_edition.py` mặc định chạy ở `--mode local-staging` (Research → Analyze → Generate → Validate → Save Local Artifacts) và **CẤM** tự động `git commit / git push` lên Production. Nếu gặp lỗi macOS TCC (`[Errno 1] Operation not permitted` trong `logs/daily_run_error.log`) khi LaunchAgent gọi `/usr/bin/python3` đọc `~/Documents`, cần cấp Full Disk Access cho binary Python hoặc chạy thủ công trong terminal có quyền truy cập thư mục. Phát hành thủ công chỉ thực hiện sau khi có Owner Acceptance (`--mode manual-release --manual-release --owner-accepted` cùng `BNEWS_OWNER_ACCEPTANCE=APPROVED`).
 
 ### Quy trình tự động diễn ra sau khi gõ lệnh:
 1. **Thu thập & Kiểm định tin tức**: Quét 25 bản tin xác minh từ các báo lớn (VnEconomy, Báo Đầu Tư, Tuổi Trẻ, Thanh Niên, CafeF, Vietstock), bắt buộc tối thiểu **80% tin tức (>= 20 bài)** thuộc khung thời gian 0–24h.
@@ -62,9 +64,9 @@ Nếu muốn máy Mac tự động chạy vào **18:00 từ Thứ Hai đến Th�
    ```
 2. Thêm dòng sau vào cuối file:
    ```cron
-   0 18 * * 1-5 cd /Users/quangtri/Documents/Bryan-Portfolio-Antigravity/pilot-output/daily-run-package && /usr/bin/python3 run_daily_edition.py >> daily_run.log 2>&1
+   0 18 * * 1-5 cd /Users/quangtri/Documents/Bryan-Portfolio-Antigravity/pilot-output/daily-run-package && /usr/bin/python3 run_daily_edition.py --mode local-staging >> logs/daily_run.log 2>&1
    ```
-3. Lưu lại (`:wq` trong vim). Hệ thống sẽ tự động xuất bản mỗi ngày mà không cần can thiệp thủ công.
+3. Lưu lại (`:wq` trong vim). Hệ thống chỉ sinh và kiểm định artifact local, không tự động push lên Production.
 
 ---
 

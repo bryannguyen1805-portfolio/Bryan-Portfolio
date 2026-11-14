@@ -35,6 +35,7 @@
   --ms-text-secondary: #44403C; /* Refined Stone Secondary (WCAG AAA 8.9:1) */
   --ms-text-muted: #57534E;     /* Accessible Metadata / Timestamps (WCAG AA 6.51:1) */
   --ms-text-on-primary: #FFFFFF;
+  --ms-text-on-secondary: #FFFFFF;
   
   --ms-success: #15803D;        /* Accessible Green (WCAG AA 4.54:1) */
   --ms-success-bg: #DCFCE7;
@@ -105,11 +106,16 @@ html[data-theme="dark"], :root[data-theme="dark"], body[data-theme="dark"] {
   --ms-primary-ghost: rgba(45, 212, 191, 0.06);
   --ms-secondary: #FB7185;      /* Softer Rose Accent */
   --ms-secondary-hover: #F43F5E;
+  --ms-text-on-primary: #061513;
+  --ms-text-on-secondary: #120609;
 
+  --ms-success: #4ADE80;
   --ms-success-bg: rgba(22, 163, 74, 0.2);
   --ms-success-text: #86EFAC;
+  --ms-warning: #FBBF24;
   --ms-warning-bg: rgba(217, 119, 6, 0.2);
   --ms-warning-text: #FDE68A;
+  --ms-error: #F87171;
   --ms-error-bg: rgba(220, 38, 38, 0.2);
   --ms-error-text: #FCA5A5;
   --ms-info-bg: rgba(37, 99, 235, 0.2);
@@ -141,7 +147,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
@@ -282,7 +288,7 @@ small, .ms-small {
 
 .ms-btn-rose {
   background-color: var(--ms-secondary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-secondary);
   border: none;
 }
 .ms-btn-rose:hover {
@@ -310,7 +316,7 @@ small, .ms-small {
   align-items: center;
   padding: 4px 10px;
   font-family: var(--font-mono);
-  font-size: 0.6875rem; /* 11px */
+  font-size: 0.75rem; /* 12px */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -325,7 +331,7 @@ small, .ms-small {
 
 .ms-badge-rose {
   background-color: var(--ms-secondary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-secondary);
 }
 
 .ms-badge-neutral {
@@ -414,7 +420,7 @@ small, .ms-small {
 .ms-contact-zalo-badge {
   background: #0068FF;
   color: #FFFFFF;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   padding: 1px 4px;
   border-radius: 3px !important;
@@ -473,7 +479,7 @@ small, .ms-small {
   height: 46px;
   border-radius: 50% !important;
   background: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
   border: 2px solid rgba(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
@@ -753,7 +759,7 @@ small, .ms-small {
 
 .ms-jump-kicker {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--ms-secondary);
   letter-spacing: 0.06em;
@@ -819,7 +825,7 @@ small, .ms-small {
 }
 .ms-quick-tab.active {
   background-color: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
   border-color: var(--ms-primary);
   font-weight: 700;
 }
@@ -925,7 +931,7 @@ small, .ms-small {
 
 .ms-quote-attribution {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--ms-secondary);
   font-weight: 700;
   text-transform: uppercase;
@@ -1107,7 +1113,7 @@ small, .ms-small {
 
 .ms-pulse-label {
   font-family: var(--font-body);
-  font-size: 0.6875rem; /* 11px */
+  font-size: 0.75rem; /* 12px */
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1130,7 +1136,7 @@ small, .ms-small {
 
 .ms-pulse-asof {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--ms-text-muted);
   margin-bottom: 6px;
 }
@@ -1148,7 +1154,7 @@ small, .ms-small {
 
 .ms-pulse-open-btn {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--ms-primary);
   text-transform: uppercase;
@@ -1432,7 +1438,7 @@ small, .ms-small {
 
 .ms-pill-tag {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 800;
   padding: 2px 6px;
   margin-right: 6px;
@@ -1720,7 +1726,7 @@ small, .ms-small {
 }
 .ms-drawer-close:hover {
   background-color: var(--ms-secondary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-secondary);
 }
 
 .ms-drawer-content {
@@ -1808,7 +1814,7 @@ small, .ms-small {
   }
   #btnOpenWelcomeIntro span,
   #themeToggleBtn span {
-    font-size: 11px;
+    font-size: 12px;
   }
   .ms-masthead-hero-title {
     padding: 10px 0 8px 0;
@@ -1819,7 +1825,7 @@ small, .ms-small {
     line-height: 1.2 !important;
   }
   .ms-newspaper-sub {
-    font-size: 9.5px !important;
+    font-size: 12px !important;
     letter-spacing: 0.04em !important;
     margin-bottom: 4px !important;
   }
@@ -1996,7 +2002,7 @@ small, .ms-small {
 }
 .ms-pill-confirmed {
   background-color: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
 }
 .ms-pill-potential {
   background-color: var(--ms-info);
@@ -2004,7 +2010,7 @@ small, .ms-small {
 }
 .ms-pill-idea {
   background-color: var(--ms-warning);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
 }
 .ms-decision-footer {
   border-top: 1px solid var(--ms-border);
@@ -2078,9 +2084,9 @@ small, .ms-small {
 @media (min-width: 1024px) {
   .ms-nav-wrap {
     overflow: visible !important;
-    white-space: normal !important;
-    flex-wrap: wrap !important;
-    gap: 8px 12px !important;
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
   }
@@ -2096,13 +2102,13 @@ small, .ms-small {
 
 /* Standard Root Scroll & Sticky Navigation Compatibility */
 html {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   overflow-y: auto !important;
 }
 
 body {
   overflow: visible !important;
-  overflow-x: visible !important;
+  overflow-x: clip !important;
   overflow-y: visible !important;
   min-height: 100vh;
   position: relative;
@@ -2175,7 +2181,7 @@ body {
 }
 
 .ms-nav-arrow {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--ms-text-muted);
   transition: transform 0.2s ease;
 }
@@ -2594,12 +2600,13 @@ body {
 
 .ms-chain-layers-flow {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
   align-items: stretch;
 }
 
 .ms-chain-layer-step {
+  min-width: 0;
   background-color: var(--ms-surface-alt);
   border: 1px solid var(--ms-border);
   border-radius: 4px;
@@ -2652,6 +2659,12 @@ body {
 
 .ms-chain-connector {
   display: none;
+}
+
+@media (max-width: 1180px) {
+  .ms-chain-layers-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1023px) {
@@ -2766,8 +2779,10 @@ body {
   }
 
   .float-btn {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
@@ -2777,7 +2792,7 @@ body {
   }
 
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .ms-container {
@@ -2811,18 +2826,18 @@ body {
   }
 
   #mastheadDate {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
     white-space: nowrap !important;
   }
 
   #btnOpenWelcomeIntro {
     padding: 3px 8px !important;
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
   }
 
   #themeToggleBtn {
     padding: 3px 8px !important;
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
   }
 
   .ms-masthead-hero-title {
@@ -2838,7 +2853,7 @@ body {
   }
 
   .ms-newspaper-sub {
-    font-size: 0.625rem !important; /* 10px */
+    font-size: 0.75rem !important; /* 12px */
     letter-spacing: 0.05em !important;
   }
 
@@ -2847,7 +2862,7 @@ body {
   }
 
   .ms-edition-badge-wrap .ms-badge {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
     padding: 3px 8px !important;
   }
 
@@ -2910,7 +2925,7 @@ body {
   .ms-badge {
     white-space: nowrap !important;
     word-break: normal !important;
-    font-size: 8px !important;
+    font-size: 12px !important;
     padding: 2px 5px !important;
   }
 
@@ -2931,7 +2946,7 @@ body {
   }
 
   .ms-quote-attribution {
-    font-size: 0.625rem !important;
+    font-size: 0.75rem !important;
     margin-top: 6px !important;
   }
 
@@ -2957,11 +2972,11 @@ body {
   }
 
   .ms-pulse-asof {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
   }
 
   .ms-pulse-context {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
     line-height: 1.35 !important;
   }
 
@@ -3095,7 +3110,7 @@ body {
 
 .ms-drawer-close:hover {
   background-color: var(--ms-secondary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-secondary) !important;
 }
 
 .ms-drawer-content {
@@ -3166,7 +3181,7 @@ body {
   height: 52px !important;
   border-radius: 50% !important;
   background: var(--ms-primary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-primary) !important;
   border: none !important;
   box-shadow: 0 4px 16px rgba(0, 122, 112, 0.4) !important;
   cursor: pointer !important;
@@ -3209,7 +3224,7 @@ body {
   align-items: center;
   gap: 6px;
   color: var(--ms-primary);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -3223,7 +3238,7 @@ body {
 
 .ms-home-link:hover {
   background-color: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
 }
 
 /* DIGITAL BUSINESS CARD (QR VCARD MODAL) */
@@ -3294,7 +3309,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -3364,7 +3379,7 @@ body {
 
 .vcard-qr-tab.active {
   background: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
   border-color: var(--ms-primary);
 }
 
@@ -3414,7 +3429,7 @@ body {
 }
 
 .vcard-info-pill strong {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--ms-text-muted);
   text-transform: uppercase;
 }
@@ -3441,12 +3456,13 @@ body {
 
 .btn-vcard-save {
   background: var(--ms-primary);
-  color: #FFFFFF;
+  color: var(--ms-text-on-primary);
   border: 1px solid var(--ms-primary);
 }
 
 .btn-vcard-save:hover {
   background: var(--ms-secondary);
+  color: var(--ms-text-on-secondary);
 }
 
 .btn-vcard-share {
@@ -3575,7 +3591,7 @@ body {
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
-  font-size: 0.68rem !important;
+  font-size: 0.75rem !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
@@ -3628,7 +3644,7 @@ body {
 }
 
 .vcard-org {
-  font-size: 0.72rem !important;
+  font-size: 0.75rem !important;
   color: #67E8F9 !important;
   font-weight: 700 !important;
   margin-top: 2px !important;
@@ -3717,7 +3733,7 @@ body {
 
 .vcard-info-pill strong {
   display: block !important;
-  font-size: 0.68rem !important;
+  font-size: 0.75rem !important;
   text-transform: uppercase !important;
   color: var(--text-muted) !important;
   margin-bottom: 2px !important;
@@ -3865,7 +3881,7 @@ body {
   height: 48px !important;
   border-radius: 50% !important;
   background: linear-gradient(135deg, #D4A373 0%, #B58252 100%) !important;
-  color: #FFFFFF !important;
+  color: #1C1917 !important;
   border: 2px solid rgba(255, 255, 255, 0.4) !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3887,7 +3903,7 @@ body {
 
 .btn-top {
   background: linear-gradient(135deg, #D4A373 0%, #B58252 100%) !important;
-  color: #FFFFFF !important;
+  color: #1C1917 !important;
   border: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
@@ -3936,7 +3952,7 @@ body {
     pointer-events: auto !important;
     transform: translateY(0) scale(1) !important;
   }
-  .float-btn { width: 40px !important; height: 40px !important; }
+  .float-btn { width: 44px !important; height: 44px !important; min-width: 44px !important; min-height: 44px !important; }
   .btn-top { display: none !important; }
 }
 
@@ -3960,7 +3976,7 @@ body {
   align-items: center !important;
   gap: 6px !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-primary) !important;
@@ -4085,7 +4101,7 @@ body {
 .ms-welcome-signature {
   text-align: center !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-text-muted) !important;
@@ -4109,7 +4125,7 @@ body {
   height: 52px !important;
   border-radius: 50% !important;
   background-color: var(--ms-primary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-primary) !important;
   border: none !important;
   box-shadow: 0 4px 16px rgba(0, 122, 112, 0.4) !important;
   cursor: pointer !important;
@@ -4123,6 +4139,7 @@ body {
 .ms-floating-contact-btn:hover {
   transform: scale(1.08) !important;
   background-color: var(--ms-secondary) !important;
+  color: var(--ms-text-on-secondary) !important;
   box-shadow: 0 6px 20px rgba(0, 122, 112, 0.5) !important;
 }
 
@@ -4205,7 +4222,7 @@ body {
 
 .ms-modal-close:hover {
   background-color: var(--ms-secondary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-secondary) !important;
   border-color: var(--ms-secondary) !important;
 }
 
@@ -4224,7 +4241,7 @@ body {
   align-items: center !important;
   gap: 6px !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-primary) !important;
@@ -4286,7 +4303,7 @@ body {
 
 .ms-welcome-item-num {
   font-family: var(--font-mono) !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   font-weight: 800 !important;
   color: var(--ms-primary) !important;
   padding: 2px 5px !important;
@@ -4309,7 +4326,7 @@ body {
 }
 
 .ms-welcome-item-desc {
-  font-size: 0.71875rem !important;
+  font-size: 0.75rem !important;
   line-height: 1.45 !important;
   color: var(--ms-text-secondary) !important;
   margin: 2px 0 0 0 !important;
@@ -4338,7 +4355,7 @@ body {
   cursor: pointer !important;
   text-align: center !important;
   background-color: var(--ms-primary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-primary) !important;
   border: none !important;
   border-radius: 4px !important;
 }
@@ -4358,12 +4375,12 @@ body {
 
 .ms-welcome-contact-btn:hover {
   background-color: var(--ms-primary) !important;
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-primary) !important;
 }
 
 .ms-welcome-signature {
   font-family: var(--font-mono) !important;
-  font-size: 0.625rem !important;
+  font-size: 0.75rem !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-text-muted) !important;
   text-align: center !important;
@@ -4478,19 +4495,10 @@ section[id], main [id] {
 /* ==========================================================================
    PHASE 08A: CRITICAL REMEDIATION (D-04 CLS & D-05 ZERO MOBILE OVERFLOW)
    ========================================================================== */
-#headerBryanLogo {
-  width: 119px !important;
-  height: 36px !important;
-  aspect-ratio: 1024 / 309 !important;
-  object-fit: contain !important;
-  contain-intrinsic-size: 119px 36px !important;
-  display: block !important;
-}
-
 #footerBryanLogo {
   width: 126px !important;
   height: 38px !important;
-  aspect-ratio: 1024 / 309 !important;
+  aspect-ratio: 280 / 85 !important;
   object-fit: contain !important;
   contain-intrinsic-size: 126px 38px !important;
   display: block !important;
@@ -4628,7 +4636,7 @@ section[id], main [id] {
   top: -120px;
   left: 16px;
   background: var(--ms-primary);
-  color: #FFFFFF !important;
+  color: var(--ms-text-on-primary) !important;
   padding: 12px 20px;
   font-weight: 700;
   font-size: 14px;
@@ -4801,7 +4809,7 @@ html[data-theme="dark"] :where(a, button, input, select, textarea, [tabindex]):f
   }
 
   .ms-section-kicker {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
     letter-spacing: 0.08em !important;
   }
 
@@ -4841,9 +4849,14 @@ html[data-theme="dark"] :where(a, button, input, select, textarea, [tabindex]):f
   .ms-cat-btn {
     flex-shrink: 0 !important;
     font-size: 0.75rem !important;
-    padding: 6px 12px !important;
+    padding: 10px 14px !important;
     white-space: nowrap !important;
-    height: 32px !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+    height: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .ms-search-input-wrap {
@@ -4966,3 +4979,500 @@ html[data-theme="dark"] :where(a, button, input, select, textarea, [tabindex]):f
     margin-left: 0 !important;
   }
 }
+
+/* ==========================================================================
+   PHASE 08B — R1.0.1: CONTRAST, FOCUS, SINGLE MOBILE NAV & >=44PX TARGETS
+   ========================================================================== */
+
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* D-07: Ensure primary/secondary filled controls use theme-aware text tokens in Dark Mode */
+.ms-btn-primary,
+.ms-badge-primary {
+  background-color: var(--ms-primary);
+  color: var(--ms-text-on-primary) !important;
+}
+
+.ms-badge-secondary {
+  background-color: var(--ms-secondary);
+  color: var(--ms-text-on-secondary) !important;
+}
+
+/* D-08: News Desk Search & Filter Result Counter Bar */
+.ms-news-result-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  margin: 0 0 18px 0;
+  background-color: var(--ms-surface-alt);
+  border: 1px solid var(--ms-border);
+  border-left: 3px solid var(--ms-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 700;
+  color: var(--ms-text-primary);
+}
+
+.ms-empty-state {
+  padding: 28px 20px;
+  border: 1px dashed var(--ms-border-strong);
+  background-color: var(--ms-surface-card);
+  text-align: center;
+  margin: 12px 0;
+}
+
+.ms-empty-state p {
+  font-size: 0.9375rem;
+  color: var(--ms-text-primary);
+  margin-bottom: 14px;
+}
+
+.ms-filter-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 120px;
+  padding: 10px 18px;
+  background-color: var(--ms-primary);
+  color: var(--ms-text-on-primary) !important;
+  border: 1px solid var(--ms-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* D-09: Semantic <button> Reset for Today Jump Cards & Pulse Triggers + Visible Focus */
+button.ms-today-jump-card {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--ms-surface-card);
+  color: var(--ms-text-primary);
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.ms-pulse-open-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--ms-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+:is(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--ms-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* D-11: Single Primary Navigation Channel on Mobile (only .ms-mobile-quick-tabs visible) */
+#btnOpenMobileNav,
+#mobileMenuToggle,
+.ms-quick-tab-drawer,
+#mobileNavDrawer {
+  display: none !important;
+}
+
+@media (max-width: 1023px) {
+  .ms-masthead-sep {
+    display: none !important;
+  }
+  .ms-mobile-quick-tabs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 950 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px 12px !important;
+    overflow: visible !important;
+    background-color: var(--ms-surface-base) !important;
+    border-top: 1px solid var(--ms-border) !important;
+    border-bottom: 2px solid var(--ms-primary) !important;
+  }
+  .ms-quick-tabs-scroll {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 2px 2px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  .ms-quick-tabs-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+  .ms-quick-tab {
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    width: auto !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.8125rem !important;
+    padding: 0 14px !important;
+  }
+}
+
+.ms-masthead-sep {
+  color: var(--ms-text-muted) !important;
+}
+
+/* D-16: Strict >= 44x44px Touch Targets on Mobile <= 768px & >= 12px Font Floor */
+@media (max-width: 768px) {
+  .ms-theme-toggle-btn,
+  #themeToggleBtn,
+  .ms-drawer-close,
+  .ms-modal-close,
+  .vcard-close-btn,
+  .float-btn,
+  .fab-toggle-btn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
+  .ms-cat-btn,
+  .ms-pulse-open-btn,
+  .ms-btn-action,
+  .ms-btn-primary,
+  .ms-btn-rose,
+  .ms-btn-sm,
+  .ms-btn.ms-btn-ghost.ms-btn-sm,
+  .ms-filter-reset-btn,
+  .ms-title-btn,
+  .ms-today-jump-card,
+  .ms-action-link,
+  .ms-back-link,
+  .ms-home-link,
+  .ms-source-link,
+  .ms-footer a,
+  .ms-footer button,
+  .ms-footer-col a,
+  .ms-footer-col button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .ms-btn-sm,
+  .ms-btn.ms-btn-ghost.ms-btn-sm,
+  .ms-filter-reset-btn,
+  .ms-back-link,
+  .ms-home-link,
+  .ms-source-link,
+  .ms-footer a,
+  .ms-footer button,
+  .ms-footer-col a,
+  .ms-footer-col button {
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .ms-source-link {
+    padding: 8px 6px !important;
+  }
+
+  .ms-news-result-counter {
+    font-size: 0.75rem !important;
+    padding: 10px 12px !important;
+  }
+}
+
+/* ==========================================================================
+   PHASE 08B — R1.0.2: VNECONOMY MASTHEAD, STICKY NAV, ALIGNMENT & PULL QUOTES
+   ========================================================================== */
+
+.ms-masthead {
+  background-color: var(--ms-surface-base);
+  border-bottom: 1px solid var(--ms-border);
+}
+
+.ms-masthead-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--ms-border);
+  gap: 8px;
+}
+
+.ms-masthead-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ms-masthead-brand-group .ms-back-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+
+.ms-masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ms-masthead-hero-title {
+  text-align: center;
+  padding: 16px 0 14px 0;
+}
+
+.ms-masthead-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.ms-edition-badge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Desktop & Mobile VnEconomy Sticky Nav + Bnews Logo Left + Centered Category Alignment */
+.ms-nav-strip {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 950 !important;
+  background-color: var(--ms-surface-base) !important;
+  border-top: 1px solid var(--ms-border) !important;
+  border-bottom: 2px solid var(--ms-primary) !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+.ms-nav-strip.is-sticky,
+.ms-mobile-quick-tabs.is-sticky {
+  border-bottom: 2px solid var(--ms-secondary) !important;
+}
+
+.ms-nav-strip .ms-nav-wrap {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  min-height: 52px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.ms-sticky-brand-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 44px !important;
+  height: 40px !important;
+  padding: 2px 12px 2px 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-right: 1px solid var(--ms-border-strong) !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.ms-sticky-brand-badge:hover {
+  opacity: 0.85;
+}
+
+.ms-nav-logo-img {
+  display: block !important;
+  height: 30px !important;
+  width: auto !important;
+  max-width: 108px !important;
+  aspect-ratio: 280 / 85 !important;
+  object-fit: contain !important;
+}
+
+@media (min-width: 1024px) {
+  .ms-nav-strip .ms-nav-menu {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+  }
+  .ms-nav-strip .ms-nav-tab-btn {
+    height: 38px !important;
+    padding: 0 9px !important;
+    white-space: nowrap !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.02em !important;
+  }
+  .ms-nav-strip .ms-nav-actions {
+    flex: 0 0 auto !important;
+  }
+  .ms-nav-strip .ms-nav-actions .ms-btn {
+    height: 36px !important;
+    padding: 0 12px !important;
+    font-size: 0.75rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ms-nav-strip .ms-nav-wrap {
+    gap: 16px !important;
+  }
+  .ms-sticky-brand-badge {
+    padding-right: 16px !important;
+  }
+  .ms-nav-logo-img {
+    height: 32px !important;
+    max-width: 118px !important;
+  }
+  .ms-nav-strip .ms-nav-menu {
+    gap: 12px !important;
+  }
+  .ms-nav-strip .ms-nav-tab-btn {
+    padding: 0 16px !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.03em !important;
+  }
+  .ms-nav-strip .ms-nav-actions .ms-btn {
+    height: 38px !important;
+    padding: 0 14px !important;
+  }
+}
+
+/* Consistent Single Verbatim Press Quote across Cover Story & all 25 News Cards */
+.ms-card-editorial-quote {
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ms-text-primary);
+  background-color: var(--ms-surface-alt);
+  border-left: 3px solid var(--ms-secondary);
+  padding: 8px 12px;
+  margin: 8px 0 12px 0;
+}
+
+.ms-news-lead-story .ms-card-editorial-quote {
+  font-size: 0.9375rem;
+  padding: 10px 14px;
+}
+
+.ms-card-editorial-quote-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ms-secondary);
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1023px) {
+  .ms-mobile-quick-tabs {
+    padding: 6px 12px !important;
+    gap: 10px !important;
+  }
+  .ms-mobile-brand-pin {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 10px 0 0 !important;
+    border: none !important;
+    border-right: 1px solid var(--ms-border-strong) !important;
+    background: transparent !important;
+  }
+  #mobileBryanLogo {
+    height: 26px !important;
+    width: auto !important;
+    max-width: 88px !important;
+    aspect-ratio: 280 / 85 !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #mobileBryanLogo {
+    height: 24px !important;
+    max-width: 78px !important;
+  }
+  .ms-mobile-brand-pin {
+    padding-right: 8px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-masthead-brand-group .ms-back-link span {
+    display: inline !important;
+    font-size: 0.75rem !important;
+  }
+  .ms-masthead-hero-title {
+    padding: 10px 0 12px 0 !important;
+  }
+  .ms-masthead-hero-title .ms-newspaper-name {
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+  }
+  .ms-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Prevent CLS jump when #coverStory hydrates on mobile */
+  .ms-cover-story {
+    min-height: 980px !important;
+  }
+  /* Guarantee equal left edge on Market Pulse & News Desk & Analysis headers */
+  main .ms-container > .ms-section-header {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
