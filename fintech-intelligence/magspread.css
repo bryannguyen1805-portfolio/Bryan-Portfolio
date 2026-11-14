@@ -4494,8 +4494,9 @@ section[id], main [id] {
 #footerBryanLogo {
   width: 126px !important;
   height: 38px !important;
-  aspect-ratio: 280 / 85 !important;
+  aspect-ratio: 1024 / 309 !important;
   object-fit: contain !important;
+  image-rendering: -webkit-optimize-contrast !important;
   contain-intrinsic-size: 126px 38px !important;
   display: block !important;
 }
@@ -5440,23 +5441,25 @@ button.ms-pulse-open-btn {
 
 .ms-masthead-logo-img {
   display: block !important;
-  height: 36px !important;
+  height: 54px !important;
   width: auto !important;
-  max-width: 120px !important;
-  aspect-ratio: 280 / 85 !important;
+  max-width: 220px !important;
+  aspect-ratio: 1024 / 309 !important;
   object-fit: contain !important;
+  image-rendering: -webkit-optimize-contrast !important;
   flex-shrink: 0 !important;
 }
 
 .ms-masthead-hero-title .ms-newspaper-name {
-  font-family: var(--font-headline) !important;
-  font-size: clamp(1.25rem, 1.85vw, 1.75rem) !important;
-  font-weight: 800 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.015em !important;
-  color: var(--ms-primary) !important;
-  margin: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .ms-masthead-actions {
@@ -5574,8 +5577,9 @@ button.ms-pulse-open-btn {
   height: 24px !important;
   width: auto !important;
   max-width: 82px !important;
-  aspect-ratio: 280 / 85 !important;
+  aspect-ratio: 1024 / 309 !important;
   object-fit: contain !important;
+  image-rendering: -webkit-optimize-contrast !important;
 }
 
 .ms-nav-center-strip {
@@ -5738,18 +5742,8 @@ button.ms-pulse-open-btn {
   }
 
   .ms-masthead-logo-img {
-    height: 26px !important;
-    max-width: 92px !important;
-  }
-
-  .ms-masthead-hero-title .ms-newspaper-name {
-    white-space: normal !important;
-    text-align: center !important;
-    font-size: clamp(0.6875rem, 2.8vw, 0.875rem) !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    line-height: 1.2 !important;
-    overflow-wrap: break-word !important;
+    height: 40px !important;
+    max-width: 160px !important;
   }
 
   .ms-masthead-hero-title .ms-newspaper-sub {
@@ -5844,8 +5838,9 @@ button.ms-pulse-open-btn {
     height: 23px !important;
     width: auto !important;
     max-width: 76px !important;
-    aspect-ratio: 280 / 85 !important;
+    aspect-ratio: 1024 / 309 !important;
     object-fit: contain !important;
+    image-rendering: -webkit-optimize-contrast !important;
   }
 
   .ms-quick-tabs-scroll {
