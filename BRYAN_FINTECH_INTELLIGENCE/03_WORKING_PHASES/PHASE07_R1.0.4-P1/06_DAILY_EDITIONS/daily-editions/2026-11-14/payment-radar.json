@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T12:46:37.525678+07:00",
+  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
   "signals": [
     {
       "radarId": "RADAR-01",
@@ -262,8 +262,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         }
       ]
     },
@@ -606,8 +606,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         }
       ]
     },

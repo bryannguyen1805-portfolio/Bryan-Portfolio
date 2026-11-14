@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T12:46:37.525678+07:00",
+  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
   "theses": [
     {
       "thesisId": "THESIS-01",
@@ -77,7 +77,7 @@
       "impactHorizon": "SHORT_TERM_0_3M",
       "confidenceLevel": "HIGH",
       "confidenceReason": "Được bảo chứng vững chắc bởi 25 sự kiện xác minh độc lập, 10 dữ kiện tài chính đã đối soát chủ thể và 3 chỉ số Market Pulse liên đới.",
-      "causalExplanation": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
+      "causalExplanation": "Cam kết cấp hạn mức tín dụng và bảo lãnh tài chính 1.000 tỷ đồng từ phía ngân hàng để xử lý nghĩa vụ tài chính tại dự án CT6 Kiến Hưng là giải pháp then chốt giúp khơi thông điểm nghẽn pháp lý và giải phóng khối tài sản bị đóng băng. Động thái này hỗ trợ giải tỏa áp lực trích lập dự phòng rủi ro cho các tổ chức tín dụng, bảo vệ quyền lợi sở hữu nhà ở của người dân, đồng thời kích hoạt sự luân chuyển vốn cho các chuỗi thầu xây dựng và dịch vụ phụ trợ trước mùa kinh doanh cao điểm.",
       "counterEvidence": [],
       "watchSignals": [
         "Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank",
@@ -153,8 +153,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -186,8 +186,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -219,8 +219,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -545,8 +545,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         },
         {
           "referenceId": "MP-05",
@@ -623,8 +623,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -656,8 +656,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -689,8 +689,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -1015,8 +1015,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         },
         {
           "referenceId": "MP-05",
@@ -1198,8 +1198,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -1220,8 +1220,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1275,8 +1275,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -1668,8 +1668,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -1690,8 +1690,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1745,8 +1745,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -2300,8 +2300,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -2322,8 +2322,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -2465,8 +2465,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -2748,8 +2748,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -2770,8 +2770,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -2913,8 +2913,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -3356,8 +3356,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3389,8 +3389,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -3422,8 +3422,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -3815,8 +3815,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3848,8 +3848,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -3881,8 +3881,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {

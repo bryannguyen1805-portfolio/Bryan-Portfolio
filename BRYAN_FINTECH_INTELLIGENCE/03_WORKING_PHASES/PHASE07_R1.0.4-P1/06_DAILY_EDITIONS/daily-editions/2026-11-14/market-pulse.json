@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T12:46:37.525678+07:00",
+  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
   "isIndependentOfNewsQuota": true,
   "summaryCounts": {
     "totalIndicators": 8,
@@ -45,8 +45,8 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "DAILY_BUSINESS_DAY",
       "maxAllowedAgeHours": 96.0,
-      "ageHoursAtRuntime": 91.78,
-      "freshnessStatus": "FRESH_WITHIN_CEILING (91.78h <= 96.0h)",
+      "ageHoursAtRuntime": 92.45,
+      "freshnessStatus": "FRESH_WITHIN_CEILING (92.45h <= 96.0h)",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_49fc23f9b4.html",
         "evidenceSha256": "49fc23f9b408d71cb27dc81e9247868f5ca597ab57c07d2e9911d17701219a56",
@@ -89,8 +89,8 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "DAILY_BUSINESS_DAY",
       "maxAllowedAgeHours": 72.0,
-      "ageHoursAtRuntime": 1027.78,
-      "freshnessStatus": "STALE_BEYOND_CEILING (1027.78h > 72.0h)",
+      "ageHoursAtRuntime": 1028.45,
+      "freshnessStatus": "STALE_BEYOND_CEILING (1028.45h > 72.0h)",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_3455539292.html",
         "evidenceSha256": "3455539292a77e5aad12d687b19bad4578fdd88e561ee2b57ffe4d2c4ef31af0",
@@ -110,12 +110,12 @@
       "publishedAt": "2026-11-12T01:11:00+07:00",
       "publisher": "cafef.vn",
       "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-      "retrievedAt": "2026-11-14T12:47:17.117242+07:00",
+      "retrievedAt": "2026-11-14T13:27:40.830680+07:00",
       "updateStatus": "NEW_OBSERVATION_VERIFIED",
       "verificationStatus": "VERIFIED",
       "verificationNote": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô.",
-      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-      "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+      "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74",
       "supportingQuote": "kỳ hạn 12 tháng ở mức 6,4%/năm",
       "change": null,
       "direction": "UNKNOWN",
@@ -133,14 +133,14 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "EVENT_DRIVEN_PERIODIC",
       "maxAllowedAgeHours": 720.0,
-      "ageHoursAtRuntime": 43.78,
-      "freshnessStatus": "NEW_OBSERVATION_FRESH (43.78h <= 720.0h)",
+      "ageHoursAtRuntime": 44.45,
+      "freshnessStatus": "NEW_OBSERVATION_FRESH (44.45h <= 720.0h)",
       "evidenceReference": {
-        "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-        "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9",
+        "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+        "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74",
         "supportingQuote": "kỳ hạn 12 tháng ở mức 6,4%/năm",
         "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-        "retrievedAt": "2026-11-14T12:47:17.117242+07:00"
+        "retrievedAt": "2026-11-14T13:27:40.830680+07:00"
       }
     },
     {
@@ -177,8 +177,8 @@
       "sourceOrganization": "Báo Tuổi Trẻ",
       "dataFrequency": "DAILY_TRADING_SESSION",
       "maxAllowedAgeHours": 96.0,
-      "ageHoursAtRuntime": 91.78,
-      "freshnessStatus": "FRESH_WITHIN_CEILING (91.78h <= 96.0h)",
+      "ageHoursAtRuntime": 92.45,
+      "freshnessStatus": "FRESH_WITHIN_CEILING (92.45h <= 96.0h)",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
         "evidenceSha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d",
@@ -221,7 +221,7 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "PERIODIC_OFFICIAL_RELEASE",
       "maxAllowedAgeHours": 2160.0,
-      "ageHoursAtRuntime": 479.96,
+      "ageHoursAtRuntime": 480.63,
       "freshnessStatus": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_2079708f4a.html",
@@ -265,7 +265,7 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "PERIODIC_EVENT_DRIVEN",
       "maxAllowedAgeHours": 2160.0,
-      "ageHoursAtRuntime": 1134.03,
+      "ageHoursAtRuntime": 1134.7,
       "freshnessStatus": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_f29deb4653.html",
@@ -309,8 +309,8 @@
       "sourceOrganization": "Báo Tuổi Trẻ",
       "dataFrequency": "MONTHLY_OFFICIAL_STATISTICS",
       "maxAllowedAgeHours": 1080.0,
-      "ageHoursAtRuntime": 331.78,
-      "freshnessStatus": "FRESH_WITHIN_CEILING (331.78h <= 1080.0h)",
+      "ageHoursAtRuntime": 332.45,
+      "freshnessStatus": "FRESH_WITHIN_CEILING (332.45h <= 1080.0h)",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
         "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee",
@@ -353,8 +353,8 @@
       "sourceOrganization": "CafeF / VCCorp",
       "dataFrequency": "EVENT_DRIVEN_BUSINESS_DAY",
       "maxAllowedAgeHours": 2160.0,
-      "ageHoursAtRuntime": 1291.78,
-      "freshnessStatus": "FRESH_WITHIN_CEILING (1291.78h <= 2160.0h)",
+      "ageHoursAtRuntime": 1292.45,
+      "freshnessStatus": "FRESH_WITHIN_CEILING (1292.45h <= 2160.0h)",
       "evidenceReference": {
         "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_1e80fdd9a8.html",
         "evidenceSha256": "1e80fdd9a8444d859e05ec090435c786326ff1d8a596f614cd8a192e50c1a332",

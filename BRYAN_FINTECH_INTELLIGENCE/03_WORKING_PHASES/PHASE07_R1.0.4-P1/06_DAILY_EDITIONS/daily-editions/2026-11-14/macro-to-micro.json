@@ -2,34 +2,34 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T12:46:37.525678+07:00",
+  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
   "chains": [
     {
       "chainId": "CHAIN-01",
       "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
       "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-      "transmissionMechanism": "Cơ chế truyền dẫn từ nền tảng thương hiệu và vốn vững chắc của hệ thống NHTM bán lẻ giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
-      "bankingImpact": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-      "enterpriseImpact": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-      "consumerImpact": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-      "paymentImpact": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+      "transmissionMechanism": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
+      "bankingImpact": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+      "enterpriseImpact": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+      "consumerImpact": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+      "paymentImpact": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
       "sevenStageTransmission": {
         "stage1_globalEconomy": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
         "stage2_vietnamMacroeconomics": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
         "stage3_monetaryPolicy": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-        "stage4_bankingAndCapitalMarkets": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-        "stage5_corporateFinancingAndOperations": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-        "stage6_merchantPaymentBehavior": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-        "stage7_endUserPaymentBehavior": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số."
+        "stage4_bankingAndCapitalMarkets": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+        "stage5_corporateFinancingAndOperations": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+        "stage6_merchantPaymentBehavior": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+        "stage7_endUserPaymentBehavior": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng."
       },
       "macroToMicroTransmission": {
         "stage1_globalEconomy": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
         "stage2_vietnamMacroeconomics": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
         "stage3_monetaryPolicy": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-        "stage4_bankingAndCapitalMarkets": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-        "stage5_corporateFinancingAndOperations": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-        "stage6_merchantPaymentBehavior": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-        "stage7_endUserPaymentBehavior": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số."
+        "stage4_bankingAndCapitalMarkets": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+        "stage5_corporateFinancingAndOperations": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+        "stage6_merchantPaymentBehavior": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+        "stage7_endUserPaymentBehavior": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng."
       },
       "fiveLinkInferenceClassification": {
         "macroToBanking": "DIRECTLY_OBSERVED_FACT",
@@ -166,8 +166,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -199,8 +199,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -232,8 +232,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -558,8 +558,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         },
         {
           "referenceId": "MP-05",
@@ -703,8 +703,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -725,8 +725,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -780,8 +780,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -1293,8 +1293,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -1315,8 +1315,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1458,8 +1458,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -1862,8 +1862,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1895,8 +1895,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -1928,8 +1928,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -2254,28 +2254,28 @@
       "chainId": "CHAIN-01",
       "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
       "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-      "transmissionMechanism": "Cơ chế truyền dẫn từ nền tảng thương hiệu và vốn vững chắc của hệ thống NHTM bán lẻ giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
-      "bankingImpact": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-      "enterpriseImpact": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-      "consumerImpact": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-      "paymentImpact": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+      "transmissionMechanism": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
+      "bankingImpact": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+      "enterpriseImpact": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+      "consumerImpact": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+      "paymentImpact": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
       "sevenStageTransmission": {
         "stage1_globalEconomy": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
         "stage2_vietnamMacroeconomics": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
         "stage3_monetaryPolicy": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-        "stage4_bankingAndCapitalMarkets": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-        "stage5_corporateFinancingAndOperations": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-        "stage6_merchantPaymentBehavior": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-        "stage7_endUserPaymentBehavior": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số."
+        "stage4_bankingAndCapitalMarkets": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+        "stage5_corporateFinancingAndOperations": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+        "stage6_merchantPaymentBehavior": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+        "stage7_endUserPaymentBehavior": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng."
       },
       "macroToMicroTransmission": {
         "stage1_globalEconomy": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
         "stage2_vietnamMacroeconomics": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng).",
         "stage3_monetaryPolicy": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-        "stage4_bankingAndCapitalMarkets": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-        "stage5_corporateFinancingAndOperations": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-        "stage6_merchantPaymentBehavior": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-        "stage7_endUserPaymentBehavior": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số."
+        "stage4_bankingAndCapitalMarkets": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+        "stage5_corporateFinancingAndOperations": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+        "stage6_merchantPaymentBehavior": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+        "stage7_endUserPaymentBehavior": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng."
       },
       "fiveLinkInferenceClassification": {
         "macroToBanking": "DIRECTLY_OBSERVED_FACT",
@@ -2412,8 +2412,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -2445,8 +2445,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -2478,8 +2478,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -2804,8 +2804,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-          "evidenceSha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+          "evidenceSha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74"
         },
         {
           "referenceId": "MP-05",
@@ -2949,8 +2949,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -2971,8 +2971,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3026,8 +3026,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -3539,8 +3539,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {
@@ -3561,8 +3561,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3704,8 +3704,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -4108,8 +4108,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_de77af08da.html",
-          "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
+          "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -4141,8 +4141,8 @@
           "canonicalUrl": "https://baodautu.vn/shb-dung-thu-10-trong-top-50-thuong-hieu-dan-dau-nam-2026-cua-forbes-viet-nam-d742917.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-13T16:38:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
-          "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
+          "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
           "supportingQuote": "Năm 2026 đánh dấu lần thứ 11 Forbes Việt Nam thực hiện danh sách 50 thương hiệu dẫn đầu."
         },
         {
@@ -4174,8 +4174,8 @@
           "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T10:50:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
-          "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
+          "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
           "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới."
         },
         {

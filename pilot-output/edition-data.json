@@ -2,7 +2,7 @@
   "editionId": "ED-20261114-D01",
   "editionDate": "14/11/2026",
   "dayOfWeek": "Thứ Bảy",
-  "editionCutoffAt": "2026-11-14T12:46:37.525678+07:00",
+  "editionCutoffAt": "2026-11-14T13:26:58.890684+07:00",
   "editionNumber": "ẤN BẢN SỐ 29",
   "publicationGateStatus": {
     "status": "PASS_25_EVENTS_24H_80PCT",
@@ -25,14 +25,14 @@
       "tierNumber": 1,
       "label": "01. TỶ GIÁ NGOẠI HỐI & CAN THIỆP USD/VND",
       "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
-      "value": "25.600 VND/USD",
+      "value": "25.618 VND/USD",
       "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 | Bán 26.854 đồng | VCB: 25.870 đồng",
-      "change": "-10 VND/USD",
+      "change": "+3 VND/USD",
       "unit": "VND/USD",
-      "observationAt": "2026-11-10T08:30:00+07:00",
-      "asOf": "2026-11-10",
-      "dataPeriod": "Phiên 2026-11-10",
-      "publishedAt": "2026-11-10T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp",
@@ -57,7 +57,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu quan sát: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Tỷ giá trung tâm USD/VND ghi nhận ở mức 25600 VND/USD cho ngày 2026-11-10."
         ]
@@ -71,14 +71,14 @@
       "tierNumber": 1,
       "label": "02. LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
       "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
-      "value": "6.4 %/năm",
-      "referenceValue": "VPBank: ~6,9%/năm (online 7,0-7,4%) | MB: ~5,7% | Big4: 5,4%/năm",
+      "value": "7 %/năm",
+      "referenceValue": "VPBank: ~6,9%/năm (online 7,0%) | MB: ~5,7% | Big4: 5,4%/năm | HDBank: từ 7,8%/năm",
       "change": "5 ngân hàng cùng niêm yết đỉnh 7%/năm; Big4 ổn định 5,4%/năm",
       "unit": "%/năm",
-      "observationAt": "2026-11-12T08:30:00+07:00",
-      "asOf": "2026-11-12",
-      "dataPeriod": "Phiên 2026-11-12",
-      "publishedAt": "2026-11-12T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "CafeF / VCCorp",
@@ -86,8 +86,8 @@
       "secondarySourceUrls": [
         "https://cafef.vn/tai-chinh-ngan-hang.chn"
       ],
-      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_f41193c1a8.html",
-      "sha256": "f41193c1a8d4c56c9a0e0b562c23383876d3e86d24e9652daf8bf439215ee0f9",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_8e0995aece.html",
+      "sha256": "8e0995aece3243522fec7d860a7153febc053c98d7b81b9c82d4bfd9c611ef74",
       "status": "positive",
       "verificationStatus": "VERIFIED",
       "statusReason": "Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 6.4 %/năm (NHTM).",
@@ -103,7 +103,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
           "Đơn vị phát hành & đối soát: CafeF / VCCorp.",
-          "Kỳ dữ liệu quan sát: 2026-11-12 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 6.4 %/năm (NHTM)."
         ]
@@ -117,14 +117,14 @@
       "tierNumber": 1,
       "label": "03. CHỈ SỐ VN-INDEX",
       "shortLabel": "CHỈ SỐ VN-INDEX",
-      "value": "1.743,00 Điểm",
-      "referenceValue": "Thanh khoản HoSE: 15.100 tỷ đồng | Khối ngoại bán ròng 450 tỷ FPT | Gần 200 mã giảm",
-      "change": "+28.75 điểm",
+      "value": "1.748,50 Điểm",
+      "referenceValue": "Thanh khoản HoSE: 16.850 tỷ đồng | Khối ngoại cân bằng | 240 mã tăng",
+      "change": "+5,50 Điểm (+0,32%) trong phiên ngày 2026-11-13",
       "unit": "Điểm",
-      "observationAt": "2026-11-10T08:30:00+07:00",
-      "asOf": "2026-11-10",
-      "dataPeriod": "Phiên 2026-11-10",
-      "publishedAt": "2026-11-10T08:30:00+07:00",
+      "observationAt": "2026-11-13T08:30:00+07:00",
+      "asOf": "2026-11-13",
+      "dataPeriod": "Phiên 2026-11-13",
+      "publishedAt": "2026-11-13T08:30:00+07:00",
       "fetchedAt": "2026-11-14T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Tuổi Trẻ",
@@ -137,8 +137,8 @@
       "status": "positive",
       "verificationStatus": "VERIFIED",
       "statusReason": "Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10.",
-      "financialInterpretation": "Thị trường điều chỉnh phản ánh tâm lý thận trọng của dòng vốn trước ngưỡng kháng cự 1.750 điểm và áp lực chốt lời ngắn hạn. Tuy nhiên, thanh khoản 15.100 tỷ đồng cho thấy dòng tiền nội vẫn duy trì hấp thụ tốt. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
-      "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng hỗ trợ 1.725 - 1.730 điểm và động thái bán ròng của khối ngoại.",
+      "financialInterpretation": "Thị trường duy trì sắc xanh tích cực phản ánh sự hấp thụ tốt của dòng tiền nội quanh vùng 1.745 - 1.750 điểm. Thanh khoản đạt gần 17.000 tỷ đồng cho thấy tâm lý nhà đầu tư dần ổn định. Các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt thông qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu chi phí tài chính trong giai đoạn thị trường vốn biến động.",
+      "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số tại vùng kháng cự 1.750 điểm và động thái giải ngân của khối ngoại.",
       "discoveryAudit": {
         "searchQuery": "CHỈ SỐ VN-INDEX",
         "searchRequestId": "SRCH-REQ-MP-03-20261112",
@@ -149,7 +149,7 @@
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
           "Đơn vị phát hành & đối soát: Báo Tuổi Trẻ.",
-          "Kỳ dữ liệu quan sát: 2026-11-10 (Nguồn xác minh 100% bài viết sống).",
+          "Kỳ dữ liệu quan sát: 2026-11-13 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
           "Ý nghĩa điều hành: Chỉ số VN-Index đóng cửa tại 1.743,00 Điểm trong phiên ngày 2026-11-10."
         ]
@@ -232,13 +232,14 @@
         "sourceUrl": "https://cafef.vn/ngan-hang-cam-ket-1000-ty-dong-giup-ong-le-thanh-than-khac-phuc-ct6-kien-hung-188261114110903513.chn",
         "summary": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng. Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm."
       },
-      "editorialPullQuote": "“Diễn biến điều hành từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo động lực thúc đẩy các chuỗi bán lẻ và doanh nghiệp đẩy mạnh số hóa điểm chạm thanh toán và tối ưu hóa chi phí vốn.”",
+      "editorialPullQuote": "“Cam kết bảo lãnh tín dụng 1.000 tỷ đồng là bước đi quyết định giúp tháo gỡ điểm nghẽn pháp lý dự án, giải phóng nguồn lực tài sản bị đóng băng và khôi phục niềm tin của người mua nhà cũng như thị trường bất động sản.”",
+      "pullQuote": "“Cam kết bảo lãnh tín dụng 1.000 tỷ đồng là bước đi quyết định giúp tháo gỡ điểm nghẽn pháp lý dự án, giải phóng nguồn lực tài sản bị đóng băng và khôi phục niềm tin của người mua nhà cũng như thị trường bất động sản.”",
       "editorialSynthesis": "Bức tranh kinh tế tài chính trong phiên hôm nay phản ánh sự giao thoa rõ nét giữa 4 xu hướng chủ đạo: (1) Ngân hàng, Tín dụng & Lãi suất: Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng; (2) Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú; (3) Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Gỡ vướng đóng mã số thuế: Chính phủ thông qua hồ sơ đề xuất Quốc hội xóa nợ thuế; (4) Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu.",
-      "marketImpact": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
-      "fintechLensAction": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng.",
-      "monitoringWatchpoint": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Lãi suất (7,8%/năm) gắn với HDBank trong các kỳ tới.",
-      "whyItMatters": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
-      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng."
+      "marketImpact": "Cam kết cung ứng hạn mức tín dụng 1.000 tỷ đồng từ phía ngân hàng để xử lý nghĩa vụ tài chính tại dự án CT6 Kiến Hưng là chỉ dấu quan trọng cho thấy cơ chế tái cấu trúc vốn và giải phóng tài sản đóng băng đang phát huy tác dụng. Động thái này giúp tháo gỡ điểm nghẽn pháp lý kéo dài, giải tỏa áp lực trích lập dự phòng rủi ro cho các tổ chức tín dụng liên quan và bảo vệ trực tiếp quyền lợi sở hữu nhà ở của người dân. Trên bình diện vĩ mô, việc khơi thông các dự án vướng mắc pháp lý đóng vai trò đòn bẩy kích hoạt lại dòng vốn lưu thông trong lĩnh vực xây dựng, bất động sản và các dịch vụ thương mại phụ trợ, đồng thời củng cố niềm tin của thị trường tín dụng bán lẻ trước thềm cao điểm cuối năm.",
+      "fintechLensAction": "Cơ hội Payoo & SmartPOS: Tận dụng cơ chế giải tỏa vướng mắc cho các dự án khu dân cư và điểm thương mại, Payoo đẩy mạnh cung cấp giải pháp Payoo SmartPOS All-in-One và cổng thanh toán cư dân, hỗ trợ ban quản lý và điểm kinh doanh thu phí dịch vụ, hóa đơn tiện ích và các giao dịch chuyển nhượng tài sản số một cách minh bạch, an toàn và tức thì.",
+      "monitoringWatchpoint": "Theo dõi sát tiến độ giải ngân gói bảo lãnh 1.000 tỷ đồng, quy trình cấp giấy chứng nhận quyền sở hữu nhà ở cho cư dân CT6 Kiến Hưng và động thái điều hành hạn mức tín dụng bất động sản của NHNN trong quý 4/2026.",
+      "whyItMatters": "Cam kết cung ứng hạn mức tín dụng 1.000 tỷ đồng từ phía ngân hàng để xử lý nghĩa vụ tài chính tại dự án CT6 Kiến Hưng là chỉ dấu quan trọng cho thấy cơ chế tái cấu trúc vốn và giải phóng tài sản đóng băng đang phát huy tác dụng. Động thái này giúp tháo gỡ điểm nghẽn pháp lý kéo dài, giải tỏa áp lực trích lập dự phòng rủi ro cho các tổ chức tín dụng liên quan và bảo vệ trực tiếp quyền lợi sở hữu nhà ở của người dân. Trên bình diện vĩ mô, việc khơi thông các dự án vướng mắc pháp lý đóng vai trò đòn bẩy kích hoạt lại dòng vốn lưu thông trong lĩnh vực xây dựng, bất động sản và các dịch vụ thương mại phụ trợ, đồng thời củng cố niềm tin của thị trường tín dụng bán lẻ trước thềm cao điểm cuối năm.",
+      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng cơ chế giải tỏa vướng mắc cho các dự án khu dân cư và điểm thương mại, Payoo đẩy mạnh cung cấp giải pháp Payoo SmartPOS All-in-One và cổng thanh toán cư dân, hỗ trợ ban quản lý và điểm kinh doanh thu phí dịch vụ, hóa đơn tiện ích và các giao dịch chuyển nhượng tài sản số một cách minh bạch, an toàn và tức thì."
     },
     "coreThesis": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
@@ -246,10 +247,10 @@
       "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (14/11/2026 11:59 | Nguồn gốc: CafeF / VCCorp (2026-11-14T11:59:00+07:00))",
       "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (14/11/2026 11:59 | Nguồn gốc: CafeF / VCCorp (2026-11-14T11:59:00+07:00))",
       "executiveSummary": "Trước ngày xét xử ông Thản, một ngân hàng có văn bản cam kết tín dụng 1.000 tỷ đồng cho Công ty Bemes thực hiện việc bồi thường, khắc phục tại dự án CT6C Kiến Hưng. Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm.",
-      "whyItMatters": "Vị thế vốn và uy tín thương hiệu của các NHTM bán lẻ đầu ngành tạo xung lực gia tăng niềm tin thị trường, hỗ trợ kéo giảm chi phí vốn trung dài hạn và tạo dư địa mở rộng hạn mức tín dụng cho nền kinh tế. Dòng tiền gửi không kỳ hạn (CASA) được củng cố giúp hệ thống ngân hàng giữ vững biên lãi ròng (NIM), đồng thời tạo điều kiện thuận lợi để các doanh nghiệp sản xuất và chuỗi bán lẻ tiếp cận nguồn vốn lưu động chi phí hợp lý phục vụ hoạt động kinh doanh cao điểm cuối năm.",
+      "whyItMatters": "Cam kết cung ứng hạn mức tín dụng 1.000 tỷ đồng từ phía ngân hàng để xử lý nghĩa vụ tài chính tại dự án CT6 Kiến Hưng là chỉ dấu quan trọng cho thấy cơ chế tái cấu trúc vốn và giải phóng tài sản đóng băng đang phát huy tác dụng. Động thái này giúp tháo gỡ điểm nghẽn pháp lý kéo dài, giải tỏa áp lực trích lập dự phòng rủi ro cho các tổ chức tín dụng liên quan và bảo vệ trực tiếp quyền lợi sở hữu nhà ở của người dân. Trên bình diện vĩ mô, việc khơi thông các dự án vướng mắc pháp lý đóng vai trò đòn bẩy kích hoạt lại dòng vốn lưu thông trong lĩnh vực xây dựng, bất động sản và các dịch vụ thương mại phụ trợ, đồng thời củng cố niềm tin của thị trường tín dụng bán lẻ trước thềm cao điểm cuối năm.",
       "supportingInsights": [],
-      "editorialPullQuote": "“Diễn biến điều hành từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo động lực thúc đẩy các chuỗi bán lẻ và doanh nghiệp đẩy mạnh số hóa điểm chạm thanh toán và tối ưu hóa chi phí vốn.”",
-      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng liên kết chặt chẽ với các ngân hàng đối tác, Payoo đẩy mạnh mạng lưới SmartPOS All-in-One chấp nhận thanh toán đa phương thức (Chạm thẻ contactless, Dynamic QR, Trả góp 0%) và tích hợp giải pháp quản lý doanh thu tự động, giúp điểm bán lẻ nâng cao doanh số và kích thích người dùng thanh toán qua tài khoản ngân hàng."
+      "editorialPullQuote": "“Cam kết bảo lãnh tín dụng 1.000 tỷ đồng là bước đi quyết định giúp tháo gỡ điểm nghẽn pháp lý dự án, giải phóng nguồn lực tài sản bị đóng băng và khôi phục niềm tin của người mua nhà cũng như thị trường bất động sản.”",
+      "keyMarketImplication": "Cơ hội Payoo & SmartPOS: Tận dụng cơ chế giải tỏa vướng mắc cho các dự án khu dân cư và điểm thương mại, Payoo đẩy mạnh cung cấp giải pháp Payoo SmartPOS All-in-One và cổng thanh toán cư dân, hỗ trợ ban quản lý và điểm kinh doanh thu phí dịch vụ, hóa đơn tiện ích và các giao dịch chuyển nhượng tài sản số một cách minh bạch, an toàn và tức thì."
     },
     "sec04b_decisionBrief": {
       "sectionTitle": "TÍN HIỆU HÀNH ĐỘNG ĐIỀU HÀNH · DECISION BRIEF",
@@ -261,31 +262,31 @@
           "categoryBadge": "DU LỊCH & THANH TOÁN QUỐC TẾ",
           "signalTitle": "Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế",
           "relatedEventIds": [
-            "EVT-20261114-044",
-            "EVT-20261114-001",
-            "EVT-20261114-024",
-            "EVT-20261114-052",
-            "EVT-20261114-048",
-            "EVT-20261114-063",
-            "EVT-20261114-053",
+            "EVT-20261114-011",
+            "EVT-20261114-076",
+            "EVT-20261114-025",
+            "EVT-20261114-058",
+            "EVT-20261114-008",
+            "EVT-20261114-034",
+            "EVT-20261114-039",
+            "EVT-20261114-054",
+            "EVT-20261114-068",
+            "EVT-20261114-040",
+            "EVT-20261114-007",
+            "EVT-20261114-019",
             "EVT-20261114-035",
-            "EVT-20261114-006",
-            "EVT-20261114-015",
             "EVT-20261114-002",
             "EVT-20261114-010",
-            "EVT-20261114-008",
+            "EVT-20261114-053",
+            "EVT-20261114-063",
+            "EVT-20261114-006",
+            "EVT-20261114-048",
+            "EVT-20261114-044",
             "EVT-20261114-043",
-            "EVT-20261114-007",
-            "EVT-20261114-040",
-            "EVT-20261114-054",
-            "EVT-20261114-076",
-            "EVT-20261114-068",
-            "EVT-20261114-039",
-            "EVT-20261114-058",
-            "EVT-20261114-025",
-            "EVT-20261114-034",
-            "EVT-20261114-019",
-            "EVT-20261114-011"
+            "EVT-20261114-015",
+            "EVT-20261114-024",
+            "EVT-20261114-001",
+            "EVT-20261114-052"
           ],
           "whatHappened": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
           "whyItMatters": "Tác động lan tỏa từ sự chuyển dịch của Du lịch, Khách sạn & Bán lẻ Quốc tế mở ra cơ hội gia tăng doanh số thanh toán số và tối ưu chi phí đối soát.",
@@ -321,9 +322,9 @@
             }
           ],
           "evidenceUrls": [
-            "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
-            "https://cafef.vn/gia-vang-mieng-vang-nhan-tron-hom-nay-ngay-14-11-tiep-tuc-giam-sau-188261113234405328.chn",
-            "https://tuoitre.vn/lam-sach-25-trieu-ma-so-thue-chi-xoa-no-thoi-la-chua-du-can-bot-ca-thu-tuc-100261113211306093.htm"
+            "https://thanhnien.vn/hang-viet-len-san-ngoai-de-hay-kho-185261113201431574.htm",
+            "https://vneconomy.vn/thu-tuong-nhan-manh-viec-tao-mot-the-che-cong-khai-minh-bach-va-de-thuc-hien.htm",
+            "https://thanhnien.vn/them-diem-mua-sam-giai-tri-ben-vinh-di-san-the-gioi-ha-long-185261114110854382.htm"
           ]
         },
         {
@@ -856,10 +857,10 @@
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-          "coreThesis": "Cơ chế truyền dẫn từ nền tảng thương hiệu và vốn vững chắc của hệ thống NHTM bán lẻ giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "macroDriver": "Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "coreThesis": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
           "layers": [
             {
               "levelNumber": 1,
@@ -908,8 +909,8 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-              "description": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "content": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "description": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-043",
@@ -922,8 +923,8 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+              "description": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-043",
@@ -936,8 +937,8 @@
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-              "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
+              "content": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+              "description": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-043",
@@ -950,8 +951,8 @@
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
-              "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+              "content": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
+              "description": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-043",
@@ -963,9 +964,9 @@
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
-          "macroDriver": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
+          "macroDriver": "Chính sách Tài khóa, Quản lý Thuế & Đầu tư Công",
           "coreThesis": "Cơ chế truyền dẫn từ chính sách điều hành lãi suất và thanh khoản của Ngân hàng Nhà nước giúp giải tỏa áp lực vốn liên ngân hàng, giảm chi phí tài chính cho nền kinh tế và kích thích dòng tiền trên thị trường vốn.",
           "layers": [
             {
@@ -1070,9 +1071,9 @@
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Quản trị Doanh nghiệp",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Quản trị Doanh nghiệp",
-          "macroDriver": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
+          "macroDriver": "Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
           "coreThesis": "Cơ chế truyền dẫn từ kỷ cương quản lý thuế và hóa đơn điện tử buộc các sàn TMĐT, doanh nghiệp và hộ kinh doanh phải nhanh chóng số hóa điểm bán, kết nối giải pháp máy tính tiền tự động để phòng ngừa rủi ro pháp lý.",
           "layers": [
             {
@@ -1177,9 +1178,9 @@
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
-          "macroDriver": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
+          "macroDriver": "Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
           "coreThesis": "Cơ chế truyền dẫn từ xu hướng bán lẻ đa kênh (O2O) và mùa kích cầu tiêu dùng thúc đẩy các chuỗi siêu thị nâng cấp hạ tầng chấp nhận thanh toán số tại quầy, mang lại trải nghiệm chi tiêu liền mạch cho người dùng.",
           "layers": [
             {
@@ -1290,10 +1291,10 @@
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-          "coreThesis": "Cơ chế truyền dẫn từ nền tảng thương hiệu và vốn vững chắc của hệ thống NHTM bán lẻ giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "macroDriver": "Tín dụng Ngân hàng, Pháp lý Bất động sản & Xử lý Nghĩa vụ Tài chính",
+          "coreThesis": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
           "layers": [
             {
               "levelNumber": 1,
@@ -1342,8 +1343,8 @@
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
-              "description": "Các NHTM như ACB, VPBank, Techcombank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "content": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
+              "description": "Các NHTM chủ lực (VietinBank, HDBank, SHB) chủ động cân đối nguồn vốn bảo lãnh, cơ cấu danh mục cho vay và triển khai các gói tín dụng xử lý vướng mắc pháp lý (HDBank: 7,8%/năm; HDBank: 8,3%/năm).",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-043",
@@ -1356,8 +1357,8 @@
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
+              "description": "Doanh nghiệp chủ đầu tư (Bemes) và các bên liên quan huy động vốn cam kết để hoàn thành nghĩa vụ tài chính nhà nước, tạo điều kiện cấp sổ đỏ và phục hồi hoạt động dự án.",
               "badge": "INFERENCE",
               "eventIds": [
                 "EVT-20261114-043",
@@ -1370,8 +1371,8 @@
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-              "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
+              "content": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
+              "description": "Điểm bán lẻ, ban quản trị và các đơn vị cung cấp dịch vụ cư dân kích hoạt cổng thanh toán số SmartPOS và tài khoản chuyên thu để quản lý dòng tiền minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-043",
@@ -1384,8 +1385,8 @@
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
-              "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+              "content": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
+              "description": "Cư dân và người tiêu dùng được giải tỏa rủi ro pháp lý nhà ở, phục hồi năng lực tín dụng và gia tăng chi tiêu thanh toán số qua ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
                 "EVT-20261114-043",
@@ -1397,9 +1398,9 @@
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
-          "macroDriver": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
+          "macroDriver": "Chính sách Tài khóa, Quản lý Thuế & Đầu tư Công",
           "coreThesis": "Cơ chế truyền dẫn từ chính sách điều hành lãi suất và thanh khoản của Ngân hàng Nhà nước giúp giải tỏa áp lực vốn liên ngân hàng, giảm chi phí tài chính cho nền kinh tế và kích thích dòng tiền trên thị trường vốn.",
           "layers": [
             {
@@ -1504,9 +1505,9 @@
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Quản trị Doanh nghiệp",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Chính sách Tài khóa, Thuế & Quản trị Doanh nghiệp",
-          "macroDriver": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
+          "macroDriver": "Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
           "coreThesis": "Cơ chế truyền dẫn từ kỷ cương quản lý thuế và hóa đơn điện tử buộc các sàn TMĐT, doanh nghiệp và hộ kinh doanh phải nhanh chóng số hóa điểm bán, kết nối giải pháp máy tính tiền tự động để phòng ngừa rủi ro pháp lý.",
           "layers": [
             {
@@ -1611,9 +1612,9 @@
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
-          "macroDriver": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
+          "macroDriver": "Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
           "coreThesis": "Cơ chế truyền dẫn từ xu hướng bán lẻ đa kênh (O2O) và mùa kích cầu tiêu dùng thúc đẩy các chuỗi siêu thị nâng cấp hạ tầng chấp nhận thanh toán số tại quầy, mang lại trải nghiệm chi tiêu liền mạch cho người dùng.",
           "layers": [
             {
@@ -2654,9 +2655,9 @@
       "eventId": "EVT-05",
       "originEventId": "EVT-20261114-044",
       "candidateId": "CAND-20261114-044",
-      "title": "Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
-      "pageTitle": "Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
-      "headline": "Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
+      "title": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
+      "pageTitle": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
+      "headline": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "summary": "Kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế quản lý thị trường kết hợp dự trữ quốc gia và chính sách thuế của Thanh tra Chính phủ nhận được sự đồng thuận lớn từ giới chuyên gia.",
       "category": "Bán lẻ, D2C và xu hướng tiêu dùng",
       "strictCombinedTimeWindow": "0–24h",
@@ -2671,13 +2672,13 @@
       "facts": [],
       "sectionA_whatHappened": "Kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế quản lý thị trường kết hợp dự trữ quốc gia và chính sách thuế của Thanh tra Chính phủ nhận được sự đồng thuận lớn từ giới chuyên gia.",
       "sectionB_context": "Bộ Tài chính và Tổng cục Thuế quyết liệt chuẩn hóa chế độ hóa đơn điện tử khởi tạo từ máy tính tiền, hướng tới quản lý doanh thu thực tế và chống thất thu ngân sách.",
-      "sectionC_whyItMatters": "Dữ kiện (Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) đặt ra yêu cầu tuân thủ pháp lý tức thì cho hộ kinh doanh, thúc đẩy ứng dụng máy tính tiền tích hợp hóa đơn điện tử để phòng ngừa rủi ro xử phạt thuế.",
+      "sectionC_whyItMatters": "Dữ kiện (Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) đặt ra yêu cầu tuân thủ pháp lý tức thì cho hộ kinh doanh, thúc đẩy ứng dụng máy tính tiền tích hợp hóa đơn điện tử để phòng ngừa rủi ro xử phạt thuế.",
       "sectionD_macroMicro": "Chính sách thuế & Kỷ cương hóa đơn (Báo Tuổi Trẻ) → Cơ quan Thuế phối hợp đơn vị giải pháp số hóa điểm bán → Hộ kinh doanh trang bị máy tính tiền kết nối dữ liệu tự động → Khách hàng nhận hóa đơn minh bạch.",
       "sectionE_fintechLens": "Cung ứng thiết bị All-in-One Payoo SmartPOS tích hợp phần mềm bán hàng và hóa đơn điện tử máy tính tiền khởi tạo từ POS, tự động truyền dữ liệu thuế chuẩn hóa.",
-      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
+      "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Kết nối giải pháp máy tính tiền có hóa đơn điện tử với cổng của cơ quan thuế để bảo đảm tuân thủ pháp lý và minh bạch sổ sách kế toán.",
-      "computedSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d",
-      "snapshotFile": "raw_evidence_store/snapshot_live_047_cdea5547b6.html",
+      "computedSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53",
+      "snapshotFile": "raw_evidence_store/snapshot_live_047_0e95f17dee.html",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2817,8 +2818,8 @@
       "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059",
-      "snapshotFile": "raw_evidence_store/snapshot_live_055_de77af08da.html",
+      "computedSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a",
+      "snapshotFile": "raw_evidence_store/snapshot_live_055_31613c9f44.html",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3420,8 +3421,8 @@
       "sectionE_fintechLens": "Trang bị giải pháp thanh toán đa kênh (Omnichannel Payment) kết hợp cổng thanh toán trực tuyến và SmartPOS tại quầy, kích hoạt chương trình trả góp 0% thẻ tín dụng.",
       "sectionF_scenariosWatchlist": "Theo dõi sát biến động tiếp theo của dữ kiện (Lợi nhuận: 14.309 tỷ đồng; Tăng trưởng lợi nhuận: 17%) và các bước điều hành của cơ quan quản lý trong các phiên tới.",
       "sectionG_practicalTakeaway": "Triển khai đồng bộ các điểm chấp nhận thanh toán đa phương thức (SmartPOS, Dynamic QR) để gia tăng tỷ lệ chuyển đổi đơn hàng mùa cao điểm.",
-      "computedSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253",
-      "snapshotFile": "raw_evidence_store/snapshot_live_010_6b490eafd5.html",
+      "computedSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac",
+      "snapshotFile": "raw_evidence_store/snapshot_live_010_f762ea136a.html",
       "verificationStatus": "VERIFIED"
     }
   ],

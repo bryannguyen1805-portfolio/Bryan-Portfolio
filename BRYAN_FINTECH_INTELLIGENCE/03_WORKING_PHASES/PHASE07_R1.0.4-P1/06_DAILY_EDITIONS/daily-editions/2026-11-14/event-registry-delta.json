@@ -1,7 +1,7 @@
 {
   "schemaVersion": "5.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T12:46:37.525678+07:00",
+  "generatedAt": "2026-11-14T13:26:58.890684+07:00",
   "newlyRegisteredEventsCount": 25,
   "events": [
     {
@@ -39,10 +39,10 @@
     {
       "eventId": "EVT-20261114-044",
       "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
-      "headline": "Nếu bỏ Quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
+      "headline": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "publisher": "Báo Tuổi Trẻ",
       "publishedAt": "2026-11-14T10:50:00+07:00",
-      "evidenceSha256": "cdea5547b6180e61c4fb925164a37646533b9561ba8b6f087610ecfcf40df56d"
+      "evidenceSha256": "0e95f17dee217165940ec8a98fa2bc843a5fc38acd8fee2cba85dd059b79ac53"
     },
     {
       "eventId": "EVT-20261114-053",
@@ -74,7 +74,7 @@
       "headline": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
       "publisher": "Báo Đầu tư",
       "publishedAt": "2026-11-14T08:30:00+07:00",
-      "evidenceSha256": "de77af08dafc8dffda88bb91186f7f1cabb61a25adfc14feb330fbfe20aef059"
+      "evidenceSha256": "31613c9f44ccd9a32694a896e127ae45c59903ce38988e5c8a6be01ce2c0425a"
     },
     {
       "eventId": "EVT-20261114-035",
@@ -202,7 +202,7 @@
       "headline": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
       "publisher": "Báo Đầu tư",
       "publishedAt": "2026-11-13T16:38:00+07:00",
-      "evidenceSha256": "6b490eafd526f86315a3aa2284ab4a193740a6419b828374879bfbcbb8960253"
+      "evidenceSha256": "f762ea136a581afee5c9b3bbf595276aa0e5e2332121b5f48f34db4e7b87f0ac"
     }
   ]
 }
