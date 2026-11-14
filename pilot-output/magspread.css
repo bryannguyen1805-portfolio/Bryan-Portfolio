@@ -2749,10 +2749,6 @@ body {
 
 /* ─── V2.2.3 REFINED TYPOGRAPHY & ZERO OVERFLOW MOBILE RULES ─── */
 @media (max-width: 860px) {
-  .ms-contact-topbar {
-    display: none; /* Collapsed to floating FAB on mobile */
-  }
-
   .fab-toggle-btn {
     display: flex;
   }
@@ -5081,11 +5077,10 @@ button.ms-pulse-open-btn {
   outline-offset: 2px !important;
 }
 
-/* D-11: Single Primary Navigation Channel on Mobile (only .ms-mobile-quick-tabs visible) */
+/* Legacy duplicate mobile triggers hidden; unified #mobileNavDrawer remains active */
 #btnOpenMobileNav,
 #mobileMenuToggle,
-.ms-quick-tab-drawer,
-#mobileNavDrawer {
+.ms-quick-tab-drawer {
   display: none !important;
 }
 
@@ -5209,68 +5204,279 @@ button.ms-pulse-open-btn {
 }
 
 /* ==========================================================================
-   PHASE 08B — R1.0.2: VNECONOMY MASTHEAD, STICKY NAV, ALIGNMENT & PULL QUOTES
+   VNECONOMY EDITORIAL UI OVERHAUL (DESKTOP + MOBILE) & LAYOUT REMEDIATION
    ========================================================================== */
 
-.ms-masthead {
-  background-color: var(--ms-surface-base);
-  border-bottom: 1px solid var(--ms-border);
+/* ── TIER 1: UNIFIED DARK NAVY UTILITY & CONTACT BAR ── */
+.ms-contact-topbar {
+  display: block !important;
+  background-color: #18243C !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #E2E8F0 !important;
+  padding: 0 !important;
+  font-size: 0.75rem !important;
+  font-family: var(--font-body) !important;
 }
 
-.ms-masthead-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--ms-border);
-  gap: 8px;
+[data-theme="dark"] .ms-contact-topbar {
+  background-color: #071311 !important;
+  border-bottom: 1px solid var(--ms-border) !important;
 }
 
-.ms-masthead-brand-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
+.ms-contact-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 14px !important;
+  min-height: 38px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-.ms-masthead-brand-group .ms-back-link {
+.ms-contact-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+
+.ms-top-utility-left,
+.ms-contact-brand,
+.ms-contact-links {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 4px !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
   white-space: nowrap !important;
-  text-decoration: none !important;
 }
 
-.ms-masthead-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
+.ms-top-date {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: #CBD5E1 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.ms-top-sep {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.ms-top-label {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #94A3B8 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.ms-top-link,
+.ms-contact-topbar .ms-contact-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  color: #F8FAFC !important;
+  text-decoration: none !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 4px 2px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: color 0.15s ease !important;
+}
+
+.ms-top-link:hover,
+.ms-contact-topbar .ms-contact-item:hover {
+  color: #5EEAD4 !important;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 860px) {
+  .ms-top-label,
+  .ms-hide-mobile-item {
+    display: none !important;
+  }
+  #contactTopBar #mastheadDate {
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+  #contactTopBar .ms-back-link span {
+    display: inline !important;
+  }
+  .ms-contact-wrap {
+    min-height: 44px !important;
+    gap: 10px !important;
+  }
+  .ms-top-link,
+  .ms-contact-topbar .ms-contact-item {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 0 6px !important;
+  }
+}
+
+/* ── TIER 2: VNECONOMY 3-COLUMN MASTHEAD BRAND ROW ── */
+.ms-masthead {
+  background-color: var(--ms-surface-base) !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+}
+
+.ms-masthead-main-row {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 12px 0 !important;
+}
+
+.ms-masthead-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  justify-self: start !important;
+  min-width: 0 !important;
+}
+
+.ms-hamburger-btn,
+.ms-mobile-search-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border-strong) !important;
+  color: var(--ms-primary) !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
+}
+
+.ms-hamburger-btn:hover,
+.ms-mobile-search-btn:hover {
+  background-color: var(--ms-primary) !important;
+  color: var(--ms-text-on-primary) !important;
+  border-color: var(--ms-primary) !important;
+}
+
+.ms-header-search-form {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  height: 40px !important;
+  width: 245px !important;
+  max-width: 100% !important;
+  padding: 0 10px !important;
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border-strong) !important;
+}
+
+@media (min-width: 1024px) {
+  .ms-mobile-search-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1259px) {
+  .ms-header-search-form {
+    width: 190px !important;
+  }
+}
+
+.ms-header-search-form:focus-within {
+  border-color: var(--ms-primary) !important;
+}
+
+.ms-header-search-icon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--ms-text-muted) !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.ms-header-search-input {
+  width: 100% !important;
+  min-width: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.8125rem !important;
+  color: var(--ms-text-primary) !important;
+  outline: none !important;
+}
+
+.ms-header-search-input::placeholder {
+  color: var(--ms-text-muted) !important;
 }
 
 .ms-masthead-hero-title {
-  text-align: center;
-  padding: 16px 0 14px 0;
+  text-align: center !important;
+  padding: 0 !important;
+  justify-self: center !important;
 }
 
-.ms-masthead-logo-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  text-decoration: none;
+.ms-masthead-hero-title .ms-newspaper-sub {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--ms-text-muted) !important;
+  margin-bottom: 6px !important;
 }
 
-.ms-edition-badge-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
+.ms-masthead-brand-anchor {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
 }
 
-/* Desktop & Mobile VnEconomy Sticky Nav + Bnews Logo Left + Centered Category Alignment */
+.ms-masthead-logo-img {
+  display: block !important;
+  height: 36px !important;
+  width: auto !important;
+  max-width: 120px !important;
+  aspect-ratio: 280 / 85 !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+
+.ms-masthead-hero-title .ms-newspaper-name {
+  font-family: var(--font-headline) !important;
+  font-size: clamp(1.25rem, 1.85vw, 1.75rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--ms-primary) !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.ms-masthead-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  justify-self: end !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+.ms-edition-pill {
+  padding: 5px 10px !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* ── TIER 3A: DESKTOP VNECONOMY STICKY NAVIGATION BAR ── */
 .ms-nav-strip {
   position: -webkit-sticky !important;
   position: sticky !important;
@@ -5278,7 +5484,7 @@ button.ms-pulse-open-btn {
   z-index: 950 !important;
   background-color: var(--ms-surface-base) !important;
   border-top: 1px solid var(--ms-border) !important;
-  border-bottom: 2px solid var(--ms-primary) !important;
+  border-bottom: 1px solid var(--ms-border-strong) !important;
   transition: border-color 0.2s ease, background-color 0.2s ease !important;
 }
 
@@ -5290,64 +5496,185 @@ button.ms-pulse-open-btn {
 .ms-nav-strip .ms-nav-wrap {
   display: flex !important;
   flex-wrap: nowrap !important;
-  align-items: center !important;
+  align-items: stretch !important;
   justify-content: space-between !important;
-  gap: 10px !important;
-  min-height: 52px !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
+  gap: 12px !important;
+  min-height: 46px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.ms-nav-left {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+}
+
+.ms-nav-home-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 46px !important;
+  border: none !important;
+  border-right: 1px solid var(--ms-border) !important;
+  padding-right: 8px !important;
+  margin-right: 2px !important;
+  background: transparent !important;
+  color: var(--ms-text-secondary) !important;
+  cursor: pointer !important;
+}
+
+.ms-nav-home-btn:hover {
+  color: var(--ms-secondary) !important;
+}
+
+.ms-nav-sticky-only {
+  display: none !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding-right: 10px !important;
+  flex-shrink: 0 !important;
+  border-right: 1px solid var(--ms-border-strong) !important;
+}
+
+.ms-nav-strip.is-sticky .ms-nav-home-btn {
+  display: none !important;
+}
+
+.ms-nav-strip.is-sticky .ms-nav-sticky-only {
+  display: inline-flex !important;
+}
+
+.ms-sticky-hamburger-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 36px !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--ms-primary) !important;
+  cursor: pointer !important;
 }
 
 .ms-sticky-brand-badge {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
-  min-width: 44px !important;
-  height: 40px !important;
-  padding: 2px 12px 2px 0 !important;
+  height: 36px !important;
+  padding: 0 !important;
   background: transparent !important;
   border: none !important;
-  border-right: 1px solid var(--ms-border-strong) !important;
   text-decoration: none !important;
-  transition: opacity 0.2s ease !important;
-}
-
-.ms-sticky-brand-badge:hover {
-  opacity: 0.85;
 }
 
 .ms-nav-logo-img {
   display: block !important;
-  height: 30px !important;
+  height: 24px !important;
   width: auto !important;
-  max-width: 108px !important;
+  max-width: 82px !important;
   aspect-ratio: 280 / 85 !important;
   object-fit: contain !important;
+}
+
+.ms-nav-center-strip {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-content: safe center !important;
+  gap: 4px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.ms-nav-center-strip::-webkit-scrollbar {
+  display: none !important;
 }
 
 @media (min-width: 1024px) {
   .ms-nav-strip .ms-nav-menu {
     display: flex !important;
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    align-items: center !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    min-width: auto !important;
+    align-items: stretch !important;
     justify-content: center !important;
+    gap: 2px !important;
+  }
+
+  .ms-nav-strip .ms-nav-tab-btn,
+  .ms-topic-link {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    align-items: center !important;
     gap: 4px !important;
-  }
-  .ms-nav-strip .ms-nav-tab-btn {
-    height: 38px !important;
+    height: 46px !important;
     padding: 0 9px !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     white-space: nowrap !important;
-    font-size: 0.75rem !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.78125rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
     letter-spacing: 0.02em !important;
+    color: var(--ms-text-primary) !important;
+    cursor: pointer !important;
+    transition: color 0.15s ease, border-color 0.15s ease !important;
   }
+
+  .ms-nav-strip .ms-nav-tab-btn:hover,
+  .ms-topic-link:hover {
+    color: var(--ms-secondary) !important;
+    border-bottom-color: var(--ms-border-strong) !important;
+    background: transparent !important;
+  }
+
+  .ms-nav-strip .ms-nav-tab-btn.active,
+  .ms-topic-link.active {
+    color: var(--ms-secondary) !important;
+    background: transparent !important;
+    border-bottom: 3px solid var(--ms-secondary) !important;
+    box-shadow: none !important;
+  }
+
+  [data-theme="dark"] .ms-nav-strip .ms-nav-tab-btn.active,
+  [data-theme="dark"] .ms-topic-link.active {
+    color: #FB7185 !important;
+    border-bottom-color: #FB7185 !important;
+    background: transparent !important;
+  }
+
+  .ms-nav-quick-topics {
+    display: none !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+
+  .ms-nav-divider {
+    color: var(--ms-border-strong) !important;
+    padding: 0 4px !important;
+    font-size: 0.875rem !important;
+  }
+
   .ms-nav-strip .ms-nav-actions {
+    display: flex !important;
+    align-items: center !important;
     flex: 0 0 auto !important;
   }
-  .ms-nav-strip .ms-nav-actions .ms-btn {
-    height: 36px !important;
+
+  .ms-nav-cta-24h {
+    height: 32px !important;
     padding: 0 12px !important;
     font-size: 0.75rem !important;
     display: inline-flex !important;
@@ -5356,32 +5683,644 @@ button.ms-pulse-open-btn {
   }
 }
 
-@media (min-width: 1200px) {
-  .ms-nav-strip .ms-nav-wrap {
-    gap: 16px !important;
-  }
-  .ms-sticky-brand-badge {
-    padding-right: 16px !important;
-  }
-  .ms-nav-logo-img {
-    height: 32px !important;
-    max-width: 118px !important;
-  }
-  .ms-nav-strip .ms-nav-menu {
-    gap: 12px !important;
+@media (min-width: 1320px) {
+  .ms-nav-quick-topics {
+    display: inline-flex !important;
   }
   .ms-nav-strip .ms-nav-tab-btn {
-    padding: 0 16px !important;
-    font-size: 0.8125rem !important;
-    letter-spacing: 0.03em !important;
+    padding: 0 8px !important;
+    font-size: 0.75rem !important;
   }
-  .ms-nav-strip .ms-nav-actions .ms-btn {
-    height: 38px !important;
-    padding: 0 14px !important;
+  .ms-topic-link {
+    padding: 0 6px !important;
+    font-size: 0.725rem !important;
   }
 }
 
-/* Consistent Single Verbatim Press Quote across Cover Story & all 25 News Cards */
+/* ── TIER 3B: MOBILE HORIZONTAL STICKY BAR (VNECONOMY VIDEO PARITY) ── */
+@media (max-width: 1023px) {
+  .ms-masthead-main-row {
+    grid-template-columns: auto 1fr auto !important;
+    gap: 6px !important;
+    padding: 8px 0 !important;
+  }
+
+  .ms-masthead-left {
+    gap: 6px !important;
+  }
+
+  .ms-header-search-form,
+  #headerQuickSearchForm {
+    display: none !important;
+  }
+
+  .ms-hamburger-btn,
+  .ms-mobile-search-btn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
+  .ms-masthead-hero-title {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .ms-masthead-brand-anchor {
+    flex-direction: column !important;
+    gap: 2px !important;
+    min-height: 44px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .ms-masthead-logo-img {
+    height: 26px !important;
+    max-width: 92px !important;
+  }
+
+  .ms-masthead-hero-title .ms-newspaper-name {
+    white-space: normal !important;
+    text-align: center !important;
+    font-size: clamp(0.6875rem, 2.8vw, 0.875rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .ms-masthead-hero-title .ms-newspaper-sub {
+    display: none !important;
+  }
+
+  #mastheadEditionBadge {
+    display: none !important;
+  }
+
+  .ms-mobile-quick-tabs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 950 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 46px !important;
+    padding: 0 8px !important;
+    overflow: visible !important;
+    background-color: var(--ms-surface-base) !important;
+    border-top: 1px solid var(--ms-border) !important;
+    border-bottom: 1px solid var(--ms-border-strong) !important;
+    box-shadow: none !important;
+  }
+
+  .ms-mobile-left-pin {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    border-right: 1px solid var(--ms-border) !important;
+    padding-right: 4px !important;
+    margin-right: 2px !important;
+  }
+
+  .ms-mobile-home-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--ms-text-secondary) !important;
+    cursor: pointer !important;
+  }
+
+  .ms-mobile-sticky-brand {
+    display: none !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+
+  .ms-mobile-quick-tabs.is-sticky .ms-mobile-home-btn {
+    display: none !important;
+  }
+
+  .ms-mobile-quick-tabs.is-sticky .ms-mobile-sticky-brand {
+    display: inline-flex !important;
+  }
+
+  .ms-mobile-sticky-menu-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--ms-primary) !important;
+    cursor: pointer !important;
+  }
+
+  .ms-mobile-brand-pin {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 4px 0 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  #mobileBryanLogo {
+    height: 23px !important;
+    width: auto !important;
+    max-width: 76px !important;
+    aspect-ratio: 280 / 85 !important;
+    object-fit: contain !important;
+  }
+
+  .ms-quick-tabs-scroll {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 2px !important;
+    padding: 0 !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .ms-quick-tabs-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .ms-quick-tablist,
+  .ms-quick-topics-inline {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    gap: 2px !important;
+  }
+
+  .ms-quick-topics-inline {
+    border-left: 1px solid var(--ms-border) !important;
+    padding-left: 4px !important;
+    margin-left: 2px !important;
+  }
+
+  .ms-quick-tab,
+  .ms-quick-topic {
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    width: auto !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    color: var(--ms-text-secondary) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.78125rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 0 10px !important;
+    cursor: pointer !important;
+  }
+
+  .ms-quick-tab.active,
+  .ms-quick-topic.active {
+    background: transparent !important;
+    color: var(--ms-secondary) !important;
+    border-bottom: 3px solid var(--ms-secondary) !important;
+    font-weight: 800 !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  #mastheadEditionBadge {
+    display: inline-flex !important;
+  }
+  .ms-masthead-hero-title .ms-newspaper-name {
+    font-size: 1.05rem !important;
+  }
+}
+
+/* ── VNECONOMY SLIDE-OUT MENU & SEARCH DRAWER (#mobileNavDrawer) ── */
+.ms-nav-drawer-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: rgba(15, 23, 42, 0.65) !important;
+  z-index: 10040 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease !important;
+}
+
+.ms-nav-drawer-backdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.ms-nav-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: min(400px, 92vw) !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background-color: var(--ms-surface-base) !important;
+  border-right: 2px solid var(--ms-border-dark) !important;
+  z-index: 10050 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transform: translateX(-105%) !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease !important;
+  overflow: hidden !important;
+}
+
+.ms-nav-drawer.open {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.ms-nav-drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  padding: 12px 16px !important;
+  background-color: var(--ms-surface-card) !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+  flex-shrink: 0 !important;
+}
+
+.ms-nav-drawer-close {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: transparent !important;
+  border: 1px solid var(--ms-border) !important;
+  color: var(--ms-text-primary) !important;
+  font-size: 1.125rem !important;
+  cursor: pointer !important;
+}
+
+.ms-nav-drawer-close:hover {
+  background-color: var(--ms-secondary) !important;
+  color: var(--ms-text-on-secondary) !important;
+  border-color: var(--ms-secondary) !important;
+}
+
+.ms-nav-drawer-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.ms-nav-drawer-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  padding: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+.ms-drawer-search-form {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 6px !important;
+}
+
+.ms-drawer-search-input {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  padding: 8px 12px !important;
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border-strong) !important;
+  color: var(--ms-text-primary) !important;
+  font-size: 0.875rem !important;
+}
+
+.ms-drawer-section-label {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--ms-secondary) !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase !important;
+}
+
+.ms-drawer-workspace-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+.ms-drawer-ws-btn {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  min-height: 58px !important;
+  padding: 10px 12px !important;
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border) !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  color: var(--ms-text-primary) !important;
+}
+
+.ms-drawer-ws-btn.active {
+  border-color: var(--ms-secondary) !important;
+  border-left: 3px solid var(--ms-secondary) !important;
+  background-color: var(--ms-surface-alt) !important;
+}
+
+.ms-drawer-ws-num {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  color: var(--ms-secondary) !important;
+}
+
+.ms-drawer-ws-name {
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+}
+
+.ms-drawer-cat-list {
+  display: flex !important;
+  flex-direction: column !important;
+  border: 1px solid var(--ms-border) !important;
+  background-color: var(--ms-surface-card) !important;
+}
+
+.ms-drawer-cat-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 10px 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+  text-align: left !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: var(--ms-text-primary) !important;
+  cursor: pointer !important;
+}
+
+.ms-drawer-cat-link:last-child {
+  border-bottom: none !important;
+}
+
+.ms-drawer-cat-link:hover {
+  background-color: var(--ms-surface-alt) !important;
+  color: var(--ms-primary) !important;
+}
+
+.ms-drawer-utility-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+/* ── TAB 01: COVER STORY BALANCE, QUOTE SEPARATION & QUICK JUMP CARDS ── */
+.ms-cover-sapo-text {
+  font-size: 0.9375rem !important;
+  line-height: 1.68 !important;
+  color: var(--ms-text-primary) !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.ms-cover-source-quote {
+  margin: 8px 0 0 0 !important;
+  padding: 14px 16px !important;
+  background-color: var(--ms-surface-alt) !important;
+  border: 1px solid var(--ms-border) !important;
+  border-left: 3px solid var(--ms-secondary) !important;
+}
+
+.ms-cover-source-quote .ms-quote-text {
+  font-size: 0.9375rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 8px !important;
+}
+
+.ms-cover-synthesis-box {
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border) !important;
+  border-top: 3px solid var(--ms-primary) !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  height: 100% !important;
+}
+
+.ms-synthesis-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+}
+
+.ms-synthesis-kicker {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  color: var(--ms-primary) !important;
+}
+
+.ms-synthesis-lead {
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  color: var(--ms-text-primary) !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.ms-synthesis-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.ms-synthesis-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.5 !important;
+  color: var(--ms-text-secondary) !important;
+}
+
+.ms-synthesis-num {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin-top: 2px !important;
+  background-color: var(--ms-primary-light) !important;
+  border: 1px solid var(--ms-primary) !important;
+  color: var(--ms-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+}
+
+.ms-synthesis-copy {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.ms-synthesis-footer {
+  padding-top: 10px !important;
+  border-top: 1px dashed var(--ms-border) !important;
+}
+
+.ms-synthesis-cta {
+  width: 100% !important;
+  justify-content: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Fix squished inline spans in .ms-today-jump-card */
+.ms-today-jump-card {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  padding: 18px 20px !important;
+  text-align: left !important;
+}
+
+.ms-jump-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+
+.ms-jump-kicker,
+.ms-jump-title,
+.ms-jump-desc {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* ── TAB 02: NEWS DESK LEAD STORY BALANCE & VERBATIM QUOTES ── */
+#newsLeadContainer {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.ms-news-lead-story {
+  flex: 1 1 auto !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.ms-lead-analysis-preview {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 14px !important;
+  padding-top: 14px !important;
+  border-top: 1px dashed var(--ms-border-strong) !important;
+}
+
+.ms-lead-analysis-col {
+  background-color: var(--ms-surface-alt) !important;
+  border: 1px solid var(--ms-border) !important;
+  border-left: 3px solid var(--ms-primary) !important;
+  padding: 10px 12px !important;
+}
+
+.ms-lead-analysis-col:nth-child(2) {
+  border-left-color: var(--ms-secondary) !important;
+}
+
+.ms-lead-analysis-label {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--ms-primary) !important;
+  margin-bottom: 4px !important;
+}
+
+.ms-lead-analysis-col:nth-child(2) .ms-lead-analysis-label {
+  color: var(--ms-secondary) !important;
+}
+
+.ms-lead-analysis-text {
+  font-size: 0.8125rem !important;
+  line-height: 1.55 !important;
+  color: var(--ms-text-secondary) !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .ms-lead-analysis-preview {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
 .ms-card-editorial-quote {
   font-family: var(--font-reading);
   font-style: italic;
@@ -5411,68 +6350,154 @@ button.ms-pulse-open-btn {
   text-transform: uppercase;
 }
 
-@media (max-width: 1023px) {
-  .ms-mobile-quick-tabs {
-    padding: 6px 12px !important;
+/* ── TAB 03: MACRO-TO-MICRO 7-STAGE BALANCED PIPELINE (ZERO ORPHANS) ── */
+.ms-chain-layers-flow {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+
+.ms-chain-layer-step {
+  grid-column: span 3 !important;
+  min-width: 0 !important;
+  background-color: var(--ms-surface-alt) !important;
+  border: 1px solid var(--ms-border) !important;
+  border-top: 3px solid var(--ms-primary) !important;
+  padding: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+/* 7-layer chain: Row 1 = 4 stages (span 3 each = 12 cols), Row 2 = 3 stages (span 4 each = 12 cols) */
+.ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(-n+4) {
+  grid-column: span 3 !important;
+}
+
+.ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(n+5) {
+  grid-column: span 4 !important;
+  border-top-color: var(--ms-secondary) !important;
+}
+
+/* 5-layer chain fallback: Row 1 = 3 stages (span 4), Row 2 = 2 stages (span 6) */
+.ms-chain-layers-flow[data-layer-count="5"] > .ms-chain-layer-step:nth-child(-n+3) {
+  grid-column: span 4 !important;
+}
+
+.ms-chain-layers-flow[data-layer-count="5"] > .ms-chain-layer-step:nth-child(n+4) {
+  grid-column: span 6 !important;
+}
+
+.ms-layer-step-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 6px !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 8px !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+}
+
+.ms-layer-step-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.ms-layer-num {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  color: var(--ms-primary) !important;
+  background-color: var(--ms-surface-card) !important;
+  border: 1px solid var(--ms-border-strong) !important;
+  padding: 2px 7px !important;
+  white-space: nowrap !important;
+}
+
+.ms-layer-badge {
+  font-size: 12px !important;
+  padding: 2px 6px !important;
+  flex-shrink: 0 !important;
+}
+
+.ms-layer-name {
+  font-family: var(--font-headline) !important;
+  font-size: 0.875rem !important;
+  font-weight: 800 !important;
+  color: var(--ms-primary) !important;
+  line-height: 1.3 !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.ms-layer-step-title {
+  font-size: 0.84375rem !important;
+  font-weight: 700 !important;
+  color: var(--ms-text-primary) !important;
+  line-height: 1.35 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.ms-layer-step-desc {
+  font-size: 0.8125rem !important;
+  line-height: 1.55 !important;
+  color: var(--ms-text-secondary) !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1099px) {
+  .ms-chain-layers-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+  .ms-chain-layer-step,
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(-n+4),
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(n+5),
+  .ms-chain-layers-flow[data-layer-count="5"] > .ms-chain-layer-step:nth-child(-n+3),
+  .ms-chain-layers-flow[data-layer-count="5"] > .ms-chain-layer-step:nth-child(n+4) {
+    grid-column: span 1 !important;
+  }
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:last-child,
+  .ms-chain-layers-flow[data-layer-count="5"] > .ms-chain-layer-step:last-child {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ms-chain-layers-flow {
+    grid-template-columns: 1fr !important;
     gap: 10px !important;
   }
-  .ms-mobile-brand-pin {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex: 0 0 auto !important;
-    width: auto !important;
-    min-width: 44px !important;
-    height: 44px !important;
-    min-height: 44px !important;
-    padding: 0 10px 0 0 !important;
-    border: none !important;
-    border-right: 1px solid var(--ms-border-strong) !important;
-    background: transparent !important;
+  .ms-chain-layer-step,
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(-n+4),
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(n+5),
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:last-child {
+    grid-column: auto !important;
+    border-top: 1px solid var(--ms-border) !important;
+    border-left: 3px solid var(--ms-primary) !important;
   }
-  #mobileBryanLogo {
-    height: 26px !important;
-    width: auto !important;
-    max-width: 88px !important;
-    aspect-ratio: 280 / 85 !important;
-    object-fit: contain !important;
+  .ms-chain-layers-flow[data-layer-count="7"] > .ms-chain-layer-step:nth-child(n+5) {
+    border-left-color: var(--ms-secondary) !important;
   }
 }
 
-@media (max-width: 380px) {
-  #mobileBryanLogo {
-    height: 24px !important;
-    max-width: 78px !important;
-  }
-  .ms-mobile-brand-pin {
-    padding-right: 8px !important;
-  }
-}
-
+/* ── MOBILE SECTION ALIGNMENT & CLS STABILIZATION ── */
 @media (max-width: 768px) {
-  .ms-masthead-brand-group .ms-back-link span {
-    display: inline !important;
-    font-size: 0.75rem !important;
-  }
-  .ms-masthead-hero-title {
-    padding: 10px 0 12px 0 !important;
-  }
-  .ms-masthead-hero-title .ms-newspaper-name {
-    font-size: 1.25rem !important;
-    line-height: 1.2 !important;
-  }
   .ms-container {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
-  /* Prevent CLS jump when #coverStory hydrates on mobile */
   .ms-cover-story {
     min-height: 980px !important;
   }
-  /* Guarantee equal left edge on Market Pulse & News Desk & Analysis headers */
   main .ms-container > .ms-section-header {
     padding-left: 0 !important;
     margin-left: 0 !important;
   }
 }
+
 

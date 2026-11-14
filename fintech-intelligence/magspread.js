@@ -64,10 +64,14 @@ function updateThemeIcon() {
   }
   const targetLogo = isDark ? './bnews-logo-dark-opt.webp' : './bnews-logo-light-opt.webp';
   const headerLogo = $('#headerBryanLogo');
+  const desktopStickyLogo = $('#desktopStickyLogo');
   const mobileLogo = $('#mobileBryanLogo');
+  const drawerLogo = $('#drawerBryanLogo');
   const footerLogo = $('#footerBryanLogo');
   if (headerLogo) headerLogo.src = targetLogo;
+  if (desktopStickyLogo) desktopStickyLogo.src = targetLogo;
   if (mobileLogo) mobileLogo.src = targetLogo;
+  if (drawerLogo) drawerLogo.src = targetLogo;
   if (footerLogo) footerLogo.src = targetLogo;
   $$('.ms-nav-logo-img').forEach(img => { img.src = targetLogo; });
 }
@@ -155,7 +159,7 @@ function activateFocusTrap(modalEl, onClose, triggerOverride) {
 
 function deactivateFocusTrap(modalEl, restoreFocus = true) {
   if (modalEl) modalEl.setAttribute('aria-hidden', 'true');
-  const stillOpen = document.querySelector('#sideDrawer.open, #welcome-modal-backdrop.open, #contact-modal-backdrop.open');
+  const stillOpen = document.querySelector('#sideDrawer.open, #mobileNavDrawer.open, #welcome-modal-backdrop.open, #contact-modal-backdrop.open');
   if (!stillOpen) {
     setBackgroundInert(false);
     document.body.style.overflow = '';
@@ -285,23 +289,56 @@ function renderAllSections() {
 function renderMasthead() {
   const dateEl = $('#mastheadDate');
   const editionBadge = $('#mastheadEditionBadge');
+  const drawerBadge = $('#drawerEditionBadge');
   const metaBar = $('#mastheadMetaBar');
 
   if (dateEl) dateEl.textContent = (EDITION_DATA.dayOfWeek ? (EDITION_DATA.dayOfWeek.toUpperCase() + ', ') : '') + (EDITION_DATA.editionDate || '11/11/2026');
-  if (editionBadge) {
+  if (editionBadge || drawerBadge) {
     const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').split('·')[0].trim();
     const isPreviewOnly = EDITION_DATA.publicationGateStatus?.status === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY' || EDITION_DATA.publicationGateStatus?.gateStatus === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY';
     const badgeLabel = EDITION_DATA.publicationGateStatus?.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN';
     const badgeSuffix = isPreviewOnly ? ` · ${badgeLabel}` : '';
-    editionBadge.textContent = baseEdition + badgeSuffix;
-    if (isPreviewOnly) {
-      editionBadge.className = 'ms-badge ms-badge-warning';
+    const finalText = baseEdition + badgeSuffix;
+    if (editionBadge) {
+      editionBadge.textContent = finalText;
+      if (isPreviewOnly) editionBadge.className = 'ms-badge ms-badge-warning ms-edition-pill';
+    }
+    if (drawerBadge) {
+      drawerBadge.textContent = finalText;
+      if (isPreviewOnly) drawerBadge.className = 'ms-badge ms-badge-warning';
     }
   }
 
   if (metaBar) {
     metaBar.style.display = 'none';
   }
+}
+
+function formatEditorialSynthesisHtml(rawSynthesis) {
+  const text = (rawSynthesis || '').trim();
+  if (!text) return '';
+  // Split enumerated items like "(1) ... (2) ... (3) ... (4) ..." for clean executive scanning
+  const firstMarkerIdx = text.search(/\(\d+\)\s+/);
+  if (firstMarkerIdx === -1) {
+    return `<p class="ms-synthesis-lead">${escapeHtml(text)}</p>`;
+  }
+  const intro = text.slice(0, firstMarkerIdx).trim().replace(/:\s*$/, '');
+  const rest = text.slice(firstMarkerIdx).trim();
+  const parts = rest.split(/(?=\(\d+\)\s+)/).map(s => s.trim()).filter(Boolean);
+  const listHtml = parts.map(part => {
+    const m = part.match(/^\((\d+)\)\s*([\s\S]+)$/);
+    if (!m) return `<li class="ms-synthesis-item">${escapeHtml(part)}</li>`;
+    return `
+      <li class="ms-synthesis-item">
+        <span class="ms-synthesis-num">${escapeHtml(m[1])}</span>
+        <span class="ms-synthesis-copy">${escapeHtml(m[2])}</span>
+      </li>
+    `;
+  }).join('');
+  return `
+    ${intro ? `<p class="ms-synthesis-lead">${escapeHtml(intro)}:</p>` : ''}
+    <ul class="ms-synthesis-list">${listHtml}</ul>
+  `;
 }
 
 // ─── SECTION 02: COVER STORY / CORE THESIS ───
@@ -312,7 +349,8 @@ function renderCoverStory() {
   const headlineEl = $('#coverHeadline');
   const subheadlineEl = $('#coverSubheadline');
   const summaryEl = $('#coverSummary');
-  const quoteEl = $('#coverPullQuote');
+  const verbatimQuoteEl = $('#coverVerbatimQuote');
+  const synthesisEl = $('#coverPullQuote');
   const implicationEl = $('#coverImplication');
   const coverDateEl = $('#coverDate');
 
@@ -324,6 +362,7 @@ function renderCoverStory() {
   const publishedAt = lead.publishedAt || '';
   const sourceUrl = lead.sourceUrl || '#';
   const summary = lead.summary || ct.executiveSummary || '';
+  const totalNews = (EDITION_DATA.eligibleNewsList || []).length || 25;
 
   if (headlineEl) headlineEl.textContent = headline;
 
@@ -342,18 +381,43 @@ function renderCoverStory() {
 
   if (summaryEl) {
     summaryEl.innerHTML = `
-      <div style="font-size:0.90625rem; line-height:1.65; color:var(--ms-text-primary); margin:0; text-align:justify;">
+      <div class="ms-cover-sapo-text">
         ${escapeHtml(summary)}
       </div>
     `;
   }
 
-  if (quoteEl) {
-    const rawQuote = (ct.supportingQuote || ct.editorialPullQuote || lead.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
-    quoteEl.innerHTML = `
-      ${rawQuote ? `<blockquote class="ms-quote-text" style="margin:0;">“${escapeHtml(rawQuote)}”</blockquote>` : ''}
-      ${ct.editorialSynthesis ? `<p style="font-size:0.8125rem; line-height:1.55; margin:8px 0 0 0; color:var(--ms-text-secondary); text-align:justify;">${escapeHtml(ct.editorialSynthesis)}</p>` : ''}
-      <div class="ms-quote-attribution" style="margin-top:8px; font-weight:700; font-size:0.75rem; letter-spacing:0.04em;">■ TRÍCH DẪN NGUYÊN VĂN TỪ BÀI BÁO GỐC · ${escapeHtml((sourceName || 'BÁO CHÍ').toUpperCase())}</div>
+  const rawQuote = (ct.supportingQuote || ct.editorialPullQuote || lead.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
+  if (verbatimQuoteEl) {
+    if (rawQuote) {
+      verbatimQuoteEl.innerHTML = `
+        <blockquote class="ms-cover-source-quote">
+          <div class="ms-quote-text">“${escapeHtml(rawQuote)}”</div>
+          <footer class="ms-quote-attribution">■ TRÍCH DẪN NGUYÊN VĂN TỪ BÀI BÁO GỐC · ${escapeHtml((sourceName || 'BÁO CHÍ').toUpperCase())}</footer>
+        </blockquote>
+      `;
+    } else {
+      verbatimQuoteEl.innerHTML = '';
+    }
+  }
+
+  if (synthesisEl) {
+    const synthHtml = ct.editorialSynthesis
+      ? formatEditorialSynthesisHtml(ct.editorialSynthesis)
+      : (rawQuote ? `<p class="ms-synthesis-lead">Tổng hợp bối cảnh và dòng sự kiện xác minh trong phiên.</p>` : '');
+    synthesisEl.innerHTML = `
+      <div>
+        <div class="ms-synthesis-header">
+          <span class="ms-synthesis-kicker">■ ĐÚC KẾT TOÀN CẢNH PHIÊN</span>
+          <span class="ms-badge ms-badge-primary">${totalNews} SỰ KIỆN XÁC MINH</span>
+        </div>
+        ${synthHtml}
+      </div>
+      <div class="ms-synthesis-footer">
+        <button type="button" class="ms-btn ms-btn-primary ms-btn-sm ms-synthesis-cta" onclick="switchFintechTab('market', 'newsDesk')">
+          Đọc toàn bộ ${totalNews} bản tin xác minh →
+        </button>
+      </div>
     `;
   }
 
@@ -546,12 +610,16 @@ function renderNewsDesk() {
   const newsList = EDITION_DATA.eligibleNewsList || [];
   
   // Filter
+  const needle = (currentSearchTerm || '').toLowerCase();
   let filtered = newsList.filter(item => {
     const matchCat = currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter;
-    const matchSearch = !currentSearchTerm || 
-      (item.title && item.title.toLowerCase().includes(currentSearchTerm.toLowerCase())) ||
-      (item.summary && item.summary.toLowerCase().includes(currentSearchTerm.toLowerCase())) ||
-      (item.author && item.author.toLowerCase().includes(currentSearchTerm.toLowerCase()));
+    const matchSearch = !needle || 
+      (item.title && item.title.toLowerCase().includes(needle)) ||
+      (item.summary && item.summary.toLowerCase().includes(needle)) ||
+      (item.supportingQuote && item.supportingQuote.toLowerCase().includes(needle)) ||
+      (item.category && item.category.toLowerCase().includes(needle)) ||
+      (item.publisher && item.publisher.toLowerCase().includes(needle)) ||
+      (item.author && item.author.toLowerCase().includes(needle));
     return matchCat && matchSearch;
   });
 
@@ -579,6 +647,8 @@ function renderNewsDesk() {
   // D-08: Rich Empty State with exact spec wording & reset control
   if (filtered.length === 0) {
     if (editorialGrid) editorialGrid.style.display = 'none';
+    if (leadContainer) leadContainer.innerHTML = '';
+    if (subContainer) subContainer.innerHTML = '';
     if (standardGrid) {
       standardGrid.style.display = 'block';
       standardGrid.innerHTML = `
@@ -602,8 +672,14 @@ function renderNewsDesk() {
       editorialGrid.style.display = 'grid';
       editorialGrid.style.gridTemplateColumns = '1fr';
     }
-    if (subContainer) subContainer.style.display = 'none';
-    if (standardGrid) standardGrid.style.display = 'none';
+    if (subContainer) {
+      subContainer.style.display = 'none';
+      subContainer.innerHTML = '';
+    }
+    if (standardGrid) {
+      standardGrid.style.display = 'none';
+      standardGrid.innerHTML = '';
+    }
     if (leadContainer) {
       leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
     }
@@ -611,6 +687,8 @@ function renderNewsDesk() {
     // When results count is even (e.g. 2, 4, 10):
     // Render balanced 2-column grid in standardGrid with 0 orphan cards!
     if (editorialGrid) editorialGrid.style.display = 'none';
+    if (leadContainer) leadContainer.innerHTML = '';
+    if (subContainer) subContainer.innerHTML = '';
     if (standardGrid) {
       standardGrid.style.display = 'grid';
       standardGrid.innerHTML = filtered.map(item => renderStandardNewsCardHtml(item)).join('');
@@ -638,6 +716,7 @@ function renderNewsDesk() {
         standardGrid.innerHTML = remaining.map(item => renderStandardNewsCardHtml(item)).join('');
       } else {
         standardGrid.style.display = 'none';
+        standardGrid.innerHTML = '';
       }
     }
   }
@@ -647,12 +726,17 @@ function clearNewsSearchAndFilter() {
   currentSearchTerm = '';
   currentCategoryFilter = 'ALL';
   const searchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
   if (searchInput) searchInput.value = '';
+  if (headerSearchInput) headerSearchInput.value = '';
+  if (drawerSearchInput) drawerSearchInput.value = '';
   $$('.ms-cat-btn').forEach(b => {
     const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
     b.classList.toggle('active', isAll);
     b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
   });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
   renderNewsDesk();
 }
 window.clearNewsSearchAndFilter = clearNewsSearchAndFilter;
@@ -670,9 +754,28 @@ function renderEditorialQuoteBlock(item) {
 
 function renderNewsCardHtml(lead, isLead) {
   const cleanTime = (lead.publisherPublishedAt || lead.publicationTimestamp || '').split(' | ')[0].trim();
+  const natureText = lead.analysisNature || lead.sectionB_context || '';
+  const impactText = lead.analysisMarketImpact || lead.sectionC_whyItMatters || '';
+  const leadBreakdownHtml = (isLead && (natureText || impactText)) ? `
+    <div class="ms-lead-analysis-preview">
+      ${natureText ? `
+        <div class="ms-lead-analysis-col">
+          <div class="ms-lead-analysis-label">01. Bản chất &amp; Cơ chế tác động</div>
+          <p class="ms-lead-analysis-text">${escapeHtml(natureText)}</p>
+        </div>
+      ` : ''}
+      ${impactText ? `
+        <div class="ms-lead-analysis-col">
+          <div class="ms-lead-analysis-label">02. Tác động thị trường &amp; Hàm ý</div>
+          <p class="ms-lead-analysis-text">${escapeHtml(impactText)}</p>
+        </div>
+      ` : ''}
+    </div>
+  ` : '';
+
   return `
     <article class="ms-news-lead-story">
-      <div>
+      <div class="ms-lead-body-wrap">
         <div class="ms-lead-meta">
           <span class="ms-badge ms-badge-rose">${escapeHtml(lead.category || 'Tin tức')}</span>
           <span class="ms-badge ${lead.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
@@ -687,6 +790,7 @@ function renderNewsCardHtml(lead, isLead) {
         </h2>
         <p class="ms-lead-summary">${escapeHtml(lead.summary || lead.supportingQuote || '')}</p>
         ${renderEditorialQuoteBlock(lead)}
+        ${leadBreakdownHtml}
       </div>
       <div class="ms-news-card-footer">
         <span>Nguồn: <strong>${escapeHtml(lead.author || lead.originalSourceName || 'Báo chí')}</strong></span>
@@ -924,7 +1028,8 @@ function renderMacroToMicro() {
   }
 
   flowContainer.innerHTML = chains.map(chain => {
-    const layersHtml = (chain.layers || []).map((layer, lIdx) => {
+    const layers = chain.layers || [];
+    const layersHtml = layers.map((layer, lIdx) => {
       let badgeClass = 'ms-badge-neutral';
       if (layer.badge === 'FACT') badgeClass = 'ms-badge-success';
       else if (layer.badge === 'INFERENCE') badgeClass = 'ms-badge-primary';
@@ -934,10 +1039,11 @@ function renderMacroToMicro() {
       let numVal = parseInt(rawNum, 10);
       if (isNaN(numVal) || numVal < 1) numVal = (lIdx != null ? lIdx + 1 : 1);
       const lvlNum = String(numVal).padStart(2, '0');
-      let lvlName = layer.levelName || layer.layerName || layer.stageName || `Tầng ${lvlNum}`;
+      let lvlName = layer.levelName || layer.layerName || layer.stageName || `Khâu ${lvlNum}`;
       if (typeof lvlName !== 'string' || lvlName.includes('undefined')) {
-        lvlName = `Tầng ${lvlNum}`;
+        lvlName = `Khâu ${lvlNum}`;
       }
+      lvlName = lvlName.replace(/^Tầng\s*\d+\s*[:·-]\s*/i, '').trim() || lvlName;
       let title = layer.title || layer.stageTitle || layer.layerName || `Tác động tầng ${lvlNum}`;
       if (typeof title !== 'string' || title.includes('undefined')) {
         title = `Tác động tầng ${lvlNum}`;
@@ -947,26 +1053,25 @@ function renderMacroToMicro() {
       return `
         <div class="ms-chain-layer-step">
           <div class="ms-layer-step-header">
-            <div style="display:flex; align-items:center; gap:4px;">
-              <span class="ms-layer-num">${escapeHtml(lvlNum)}</span>
-              <strong class="ms-layer-name">${escapeHtml(lvlName)}</strong>
+            <div class="ms-layer-step-top">
+              <span class="ms-layer-num">TẦNG ${escapeHtml(lvlNum)}</span>
+              <span class="ms-badge ${badgeClass} ms-layer-badge">[${escapeHtml(layer.badge || 'FACT')}]</span>
             </div>
-            <div>
-              <span class="ms-badge ${badgeClass}" style="font-size:12px; padding:1px 5px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
-            </div>
+            <div class="ms-layer-name">${escapeHtml(lvlName)}</div>
           </div>
-          <div class="ms-layer-step-title">${escapeHtml(title)}</div>
-          <div class="ms-layer-step-desc">${escapeHtml(desc)}</div>
+          <h4 class="ms-layer-step-title">${escapeHtml(title)}</h4>
+          <p class="ms-layer-step-desc">${escapeHtml(desc)}</p>
         </div>
       `;
-    }).join('<div class="ms-chain-connector">➔</div>');
+    }).join('');
 
     return `
       <article class="ms-analysis-chain-card">
         <div class="ms-chain-header">
           <div>
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
               <span class="ms-badge ms-badge-secondary" style="font-size:12px;">ECONOMIC ANALYSIS CHAIN</span>
+              <span class="ms-badge ms-badge-neutral" style="font-size:12px;">${layers.length} TẦNG TRUYỀN DẪN</span>
             </div>
             <h3 class="ms-chain-title">${escapeHtml(chain.chainTitle)}</h3>
             <p class="ms-chain-thesis">${escapeHtml(chain.coreThesis)}</p>
@@ -977,7 +1082,7 @@ function renderMacroToMicro() {
             </button>
           </div>
         </div>
-        <div class="ms-chain-layers-flow">
+        <div class="ms-chain-layers-flow" data-layer-count="${layers.length}">
           ${layersHtml}
         </div>
       </article>
@@ -1040,7 +1145,7 @@ function openMacroChainDrawer(chainId) {
 
       <div style="margin-bottom:20px;">
         <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-          5 TẦNG TRUYỀN DẪN TÁC ĐỘNG (TRANSMISSION LAYERS)
+          ${(chain.layers || []).length} TẦNG TRUYỀN DẪN TÁC ĐỘNG (TRANSMISSION LAYERS)
         </h4>
         ${layersList}
       </div>
@@ -1511,8 +1616,16 @@ function switchFintechTab(tabKey, targetSubId) {
     btn.setAttribute('tabindex', isActive ? '0' : '-1');
   });
 
+  // 3B. Highlight active workspace card inside slide-out menu drawer & clear topic pills when leaving market
+  document.querySelectorAll('.ms-drawer-ws-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-drawer-tab') === tabKey);
+  });
+  if (tabKey !== 'market') {
+    document.querySelectorAll('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
+  }
+
   // 4. Close mobile drawer if open
-  closeMobileDrawer();
+  closeMobileDrawer(false);
 
   // 5. Update browser URL hash cleanly
   if (window.history && window.history.replaceState) {
@@ -1586,25 +1699,112 @@ function initFintechTabs() {
     });
   }
   bindTablistKeyboard(document.querySelector('.ms-nav-menu[role="tablist"]'), '.ms-nav-tab-btn:not(#navTabArchive)');
-  bindTablistKeyboard(document.querySelector('.ms-quick-tabs-scroll[role="tablist"]'), '.ms-quick-tab:not(#quickTabArchive)');
+  bindTablistKeyboard(document.querySelector('.ms-quick-tablist[role="tablist"], .ms-quick-tabs-scroll[role="tablist"]'), '.ms-quick-tab:not(#quickTabArchive)');
 }
 
-function openMobileDrawer() {
+let navDrawerTrigger = null;
+
+function openMobileDrawer(focusSearch = false) {
   const mobileDrawer = document.getElementById('mobileNavDrawer');
-  if (mobileDrawer) {
-    mobileDrawer.classList.add('open');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+  const backdrop = document.getElementById('navDrawerBackdrop');
+  if (!mobileDrawer) return;
+  navDrawerTrigger = document.activeElement;
+  closeDrawer(false);
+  closeContactModal(false);
+  closeWelcomeModal(false);
+  mobileDrawer.classList.add('open');
+  if (backdrop) {
+    backdrop.classList.add('open');
+    backdrop.setAttribute('aria-hidden', 'false');
+  }
+  const opener = document.getElementById('btnOpenCategoryDrawer');
+  if (opener) opener.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+  activateFocusTrap(mobileDrawer, closeMobileDrawer, navDrawerTrigger);
+  if (focusSearch) {
+    setTimeout(() => {
+      const searchEl = document.getElementById('drawerSearchInput');
+      if (searchEl) searchEl.focus();
+    }, 80);
   }
 }
 
-function closeMobileDrawer() {
+function closeMobileDrawer(restoreFocus = true) {
   const mobileDrawer = document.getElementById('mobileNavDrawer');
-  if (mobileDrawer) {
+  const backdrop = document.getElementById('navDrawerBackdrop');
+  if (backdrop) {
+    backdrop.classList.remove('open');
+    backdrop.setAttribute('aria-hidden', 'true');
+  }
+  const opener = document.getElementById('btnOpenCategoryDrawer');
+  if (opener) opener.setAttribute('aria-expanded', 'false');
+  if (mobileDrawer && mobileDrawer.classList.contains('open')) {
     mobileDrawer.classList.remove('open');
+    deactivateFocusTrap(mobileDrawer, restoreFocus !== false);
+  } else if (mobileDrawer) {
     mobileDrawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
   }
+  navDrawerTrigger = null;
+}
+
+function navigateToNewsCategory(catKey) {
+  const targetCat = catKey || 'ALL';
+  currentCategoryFilter = targetCat;
+  currentSearchTerm = '';
+  const newsSearchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
+  if (newsSearchInput) newsSearchInput.value = '';
+  if (headerSearchInput) headerSearchInput.value = '';
+  if (drawerSearchInput) drawerSearchInput.value = '';
+
+  $$('.ms-cat-btn').forEach(b => {
+    const isMatch = (b.getAttribute('data-cat') || '') === targetCat;
+    b.classList.toggle('active', isMatch);
+    b.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+  });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => {
+    const oc = btn.getAttribute('onclick') || '';
+    btn.classList.toggle('active', oc.includes(`'${targetCat}'`));
+  });
+
+  renderNewsDesk();
+  switchFintechTab('market', 'newsDesk');
+}
+
+function executePortalSearch(rawQuery) {
+  const term = (rawQuery || '').trim();
+  currentCategoryFilter = 'ALL';
+  currentSearchTerm = term;
+  $$('.ms-cat-btn').forEach(b => {
+    const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
+    b.classList.toggle('active', isAll);
+    b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
+  });
+  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
+  const newsSearchInput = $('#newsSearchInput');
+  const headerSearchInput = $('#headerQuickSearchInput');
+  const drawerSearchInput = $('#drawerSearchInput');
+  if (newsSearchInput) newsSearchInput.value = term;
+  if (headerSearchInput) headerSearchInput.value = term;
+  if (drawerSearchInput) drawerSearchInput.value = term;
+
+  renderNewsDesk();
+  switchFintechTab('market', 'newsDesk');
+}
+
+function handleHeaderQuickSearch(event) {
+  if (event) event.preventDefault();
+  const input = $('#headerQuickSearchInput');
+  executePortalSearch(input ? input.value : '');
+  return false;
+}
+
+function handleDrawerSearch(event) {
+  if (event) event.preventDefault();
+  const input = $('#drawerSearchInput');
+  executePortalSearch(input ? input.value : '');
+  return false;
 }
 
 // ─── FILTER & SEARCH EVENTS ───
@@ -2149,6 +2349,8 @@ function updateStickyNavState() {
 }
 
 window.addEventListener('scroll', updateStickyNavState, { passive: true });
+window.addEventListener('resize', updateStickyNavState, { passive: true });
+document.addEventListener('DOMContentLoaded', updateStickyNavState);
 
 // Centralized Click & Event Delegation
 document.addEventListener('click', (e) => {
@@ -2215,6 +2417,10 @@ window.switchFintechTab = switchFintechTab;
 window.initFintechTabs = initFintechTabs;
 window.openMobileDrawer = openMobileDrawer;
 window.closeMobileDrawer = closeMobileDrawer;
+window.navigateToNewsCategory = navigateToNewsCategory;
+window.executePortalSearch = executePortalSearch;
+window.handleHeaderQuickSearch = handleHeaderQuickSearch;
+window.handleDrawerSearch = handleDrawerSearch;
 window.openVCardModal = openVCardModal;
 window.closeVCardModal = closeVCardModal;
 window.switchVCardTab = switchVCardTab;
