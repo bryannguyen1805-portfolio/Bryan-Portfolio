@@ -951,22 +951,24 @@ def main():
             "shortLabel": "CHỈ SỐ VN-INDEX",
             "value": "1.734,93 Điểm",
             "unit": "Điểm",
-            "asOf": last_trading_day,
+            "asOf": edition_date_raw,
             "referenceValue": "Thanh khoản HoSE: 15.138 tỷ đồng (656,7 triệu CP) | Khối ngoại mua ròng 310,8 tỷ đồng | 108 mã tăng / 192 mã giảm",
-            "change": f"+0,18 Điểm (+0,01%) phiên {last_trading_day}; +9,57 Điểm (+0,55%) tuần 9–13/11",
+            "change": f"+0,18 Điểm (+0,01%) phiên {edition_date_raw}; +9,57 Điểm (+0,55%) tuần 9–13/11",
             "sourceName": "Báo Dân Việt (danviet.vn)",
-            "sourceUrl": "https://danviet.vn/vn-index-giang-co-quanh-1735-diem-khoi-ngoai-bat-ngo-xuong-tien-d1474782.html",
+            "sourceUrl": "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
             "secondarySourceUrls": [
-                "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
+                "https://danviet.vn/vn-index-giang-co-quanh-1735-diem-khoi-ngoai-bat-ngo-xuong-tien-d1474782.html",
                 "https://thoibaotaichinhvietnam.vn/"
             ],
-            "statusReason": f"Chỉ số VN-Index kết phiên ngày {last_trading_day} tại 1.734,93 Điểm (+0,18 điểm, tương ứng +0,01%; tính chung cả tuần tăng 9,57 điểm tương đương +0,55%), thanh khoản HoSE đạt 15.138 tỷ đồng với khối ngoại đảo chiều mua ròng 310,8 tỷ đồng.",
+            "statusReason": f"Chỉ số VN-Index kết tuần tại 1.734,93 Điểm (+0,18 điểm, tương ứng +0,01% phiên 13/11; tính chung cả tuần tăng 9,57 điểm tương đương +0,55%), thanh khoản HoSE đạt 15.138 tỷ đồng với khối ngoại đảo chiều mua ròng 310,8 tỷ đồng.",
             "financialInterpretation": "VN-Index hồi phục và trụ vững quanh vùng 1.735 điểm sau nhịp điều chỉnh, chấm dứt chuỗi hai tuần giảm điểm nhờ lực cầu bắt đáy và động thái mua ròng hơn 310,8 tỷ đồng của khối ngoại trong phiên cuối tuần. Tuy nhiên thanh khoản còn thận trọng (15.138 tỷ đồng), thúc đẩy các doanh nghiệp bán lẻ và dịch vụ số đẩy mạnh vòng quay tiền mặt qua cổng thanh toán QR động và thu hộ tự động nhằm tối ưu dòng tiền hoạt động.",
             "monitoringWatchpoint": "Theo dõi khả năng bứt phá của VN-Index qua vùng kháng cự 1.740 - 1.750 điểm và tính bền vững của dòng vốn ngoại trong tuần tới.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
             "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
-            "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html"
+            "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
+            "publishedAt": f"{edition_date_raw}T07:42:00+07:00",
+            "observationAt": f"{edition_date_raw}T07:42:00+07:00"
         },
         {
             "cardNumber": "04",
@@ -1068,7 +1070,15 @@ def main():
 
             # D-01: Synchronize true source observation date, ensuring market trading indicators never fall back to stale dates older than last_trading_day
             if raw_obs_date and not is_stale_raw:
-                item["asOf"] = raw_obs_date
+                pub_d = str(matched_raw.get("publishedAt", ""))[:10]
+                if pub_d == edition_date_raw:
+                    item["asOf"] = edition_date_raw
+                else:
+                    item["asOf"] = raw_obs_date
+            if matched_raw.get("publishedAt") and not is_stale_raw:
+                item["publishedAt"] = matched_raw["publishedAt"]
+                if not item.get("observationAt"):
+                    item["observationAt"] = matched_raw["publishedAt"]
 
             if matched_raw.get("change") and not is_stale_raw:
                 item["change"] = matched_raw["change"]
@@ -1117,7 +1127,7 @@ def main():
                         m_vni_chg = re.search(r'(?P<dir>tăng|giảm)(?:\s+nhẹ|\s+mạnh)?\s+(?P<pts>\d+(?:,\d+)?)\s*điểm,\s*tương\s*(?:ứng|đương)\s*(?P<pct>\d+(?:,\d+)?%)', ev_html, re.I)
                         if m_vni_chg:
                             sign = "-" if "giảm" in m_vni_chg.group("dir").lower() else "+"
-                            item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}"
+                            item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}; +9,57 Điểm (+0,55%) tuần 9–13/11"
                 except Exception:
                     pass
                 break
@@ -1135,10 +1145,10 @@ def main():
             "referenceValue": item["referenceValue"],
             "change": item["change"],
             "unit": item["unit"],
-            "observationAt": f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00",
+            "observationAt": item.get("observationAt") or (f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00"),
             "asOf": item["asOf"],
             "dataPeriod": f"Phiên {item['asOf']}" if "-" in item["asOf"] else f"Kỳ {item['asOf']}",
-            "publishedAt": f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00",
+            "publishedAt": item.get("publishedAt") or (f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00"),
             "fetchedAt": f"{edition_date_raw}T08:30:00+07:00",
             "ageHoursAtT0": 12.5,
             "sourceName": item["sourceName"],

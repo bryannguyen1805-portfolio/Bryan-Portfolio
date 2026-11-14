@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+  "generatedAt": "2026-11-14T14:50:13.827207+07:00",
   "signals": [
     {
       "radarId": "RADAR-01",
@@ -181,14 +181,12 @@
       "triggerEventIds": [
         "EVT-20261114-001",
         "EVT-20261114-068",
-        "EVT-20261114-073",
-        "EVT-20261114-064"
+        "EVT-20261114-073"
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
         "EVT-20261114-068",
-        "EVT-20261114-073",
-        "EVT-20261114-064"
+        "EVT-20261114-073"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -244,17 +242,6 @@
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "MP-03",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
@@ -262,8 +249,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
-          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_07c0010272.html",
+          "evidenceSha256": "07c0010272f28253bbc24382cdf1c30449bd674c3ce8bb0c614f5a474b1ee230"
         }
       ]
     },
@@ -525,14 +512,12 @@
       "triggerEventIds": [
         "EVT-20261114-001",
         "EVT-20261114-068",
-        "EVT-20261114-073",
-        "EVT-20261114-064"
+        "EVT-20261114-073"
       ],
       "supportingEventIds": [
         "EVT-20261114-001",
         "EVT-20261114-068",
-        "EVT-20261114-073",
-        "EVT-20261114-064"
+        "EVT-20261114-073"
       ],
       "supportingFacts": [],
       "supportingFactIds": [],
@@ -588,17 +573,6 @@
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "MP-03",
           "referenceType": "MARKET_PULSE_INDICATOR",
           "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
@@ -606,8 +580,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
-          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_07c0010272.html",
+          "evidenceSha256": "07c0010272f28253bbc24382cdf1c30449bd674c3ce8bb0c614f5a474b1ee230"
         }
       ]
     },

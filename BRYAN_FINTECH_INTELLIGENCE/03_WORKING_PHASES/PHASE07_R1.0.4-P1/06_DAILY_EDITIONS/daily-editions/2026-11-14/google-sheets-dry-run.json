@@ -237,7 +237,7 @@
   "preview": {
     "schemaVersion": "5.0.0",
     "editionId": "ED-20261114-D01",
-    "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+    "generatedAt": "2026-11-14T14:50:13.827207+07:00",
     "writeApiCalled": false,
     "baselinePreservedRows": 155,
     "proposedNewRowsCount": 142,
@@ -249,7 +249,7 @@
           "editionNumber": "Ấn bản Pilot Phase 06 (ED-20261114-D01)",
           "editionDate": "2026-11-14",
           "displayDate": "14/11/2026",
-          "cutoffTime": "2026-11-14T14:29:45.188098+07:00",
+          "cutoffTime": "2026-11-14T14:50:57.945038+07:00",
           "publicationStatus": "LOCAL_CANDIDATE_READY",
           "gateStatus": "PASS_25_EVENTS_24H_80PCT",
           "freshnessRatio": "100.00%",
@@ -259,13 +259,13 @@
           "count48To72h": 0,
           "leadStoryTitle": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
           "macroTheme": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
-          "archivedAt": "2026-11-14T14:29:45.188098+07:00"
+          "archivedAt": "2026-11-14T14:50:57.945038+07:00"
         }
       ],
       "NEWS_EVENTS": [
         {
           "editionId": "ED-20261114-D01",
-          "eventId": "EVT-20261114-059",
+          "eventId": "EVT-20261114-064",
           "stt": 1,
           "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
           "category": "CORPORATE_ENTERPRISE",
@@ -367,7 +367,7 @@
           "dedupStatus": "UNIQUE_NEW_EVENT",
           "isFollowUp": false,
           "followUpTo": "",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "verifiedFactSummary": "Doanh thu: 120 triệu USD (Doanh nghiệp)",
           "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
           "fintechImpact": "NO_DIRECT_PAYOO_OPPORTUNITY",
@@ -587,7 +587,7 @@
           "dedupStatus": "UNIQUE_NEW_EVENT",
           "isFollowUp": false,
           "followUpTo": "",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "verifiedFactSummary": "Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng (Quốc hội)",
           "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
           "fintechImpact": "NO_DIRECT_PAYOO_OPPORTUNITY",
@@ -749,30 +749,8 @@
         },
         {
           "editionId": "ED-20261114-D01",
-          "eventId": "EVT-20261114-064",
-          "stt": 23,
-          "headline": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-          "category": "BANKING_CREDIT",
-          "tier": 1,
-          "sourceName": "Báo Tuổi Trẻ",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "originalSourcePublishedAt": "2026-11-13T20:34:00+07:00",
-          "timeDeltaFromCutoff": "0_TO_24H",
-          "timeWindowBucket": "0–24h",
-          "verificationStatus": "VERIFIED",
-          "dedupStatus": "UNIQUE_NEW_EVENT",
-          "isFollowUp": false,
-          "followUpTo": "",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "verifiedFactSummary": "Sự kiện định tính đã xác minh (không trích xuất số liệu định lượng).",
-          "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
-          "fintechImpact": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
-          "prediction": "[VALIDATE | Độ tin cậy: MEDIUM] Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế"
-        },
-        {
-          "editionId": "ED-20261114-D01",
           "eventId": "EVT-20261114-040",
-          "stt": 24,
+          "stt": 23,
           "headline": "VietinBank Premium công bố ba phân hạng Khách hàng Ưu tiên mới",
           "category": "BANKING_CREDIT",
           "tier": 1,
@@ -794,7 +772,7 @@
         {
           "editionId": "ED-20261114-D01",
           "eventId": "EVT-20261114-039",
-          "stt": 25,
+          "stt": 24,
           "headline": "Quảng Trị thu hơn 3.000 tỉ đồng ngân sách trong một tháng, tiền đến từ đâu?",
           "category": "CORPORATE_ENTERPRISE",
           "tier": 1,
@@ -812,6 +790,28 @@
           "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
           "fintechImpact": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
           "prediction": "[VALIDATE | Độ tin cậy: MEDIUM] Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế"
+        },
+        {
+          "editionId": "ED-20261114-D01",
+          "eventId": "EVT-20261114-034",
+          "stt": 25,
+          "headline": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+          "category": "CORPORATE_ENTERPRISE",
+          "tier": 1,
+          "sourceName": "Báo Tuổi Trẻ",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "originalSourcePublishedAt": "2026-11-13T18:15:00+07:00",
+          "timeDeltaFromCutoff": "0_TO_24H",
+          "timeWindowBucket": "0–24h",
+          "verificationStatus": "VERIFIED",
+          "dedupStatus": "UNIQUE_NEW_EVENT",
+          "isFollowUp": false,
+          "followUpTo": "",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "verifiedFactSummary": "Sự kiện định tính đã xác minh (không trích xuất số liệu định lượng).",
+          "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
+          "fintechImpact": "NO_DIRECT_PAYOO_OPPORTUNITY",
+          "prediction": "[VALIDATE | Độ tin cậy: MEDIUM] Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế"
         }
       ],
       "EDITORIAL_SECTIONS": [
@@ -826,7 +826,7 @@
           "riskFactors": "[]",
           "monitoringChecklist": "[\"Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank\", \"Biến động số liệu mới của Lãi suất (8,3%/năm) gắn với HDBank\", \"Biến động số liệu mới của Tăng trưởng tín dụng (10%) gắn với VietinBank\"]",
           "sectionWordCount": 178,
-          "lastEditedAt": "2026-11-14T14:29:45.188098+07:00"
+          "lastEditedAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "editionId": "ED-20261114-D01",
@@ -839,7 +839,7 @@
           "riskFactors": "[\"MP-02 (2,8%/năm ngày 02/10/2026) đã vượt ngưỡng 72h; MP-08 (47.915 tỷ VND) là số liệu lịch sử ngày 21/09/2026\"]",
           "monitoringChecklist": "[\"Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank\", \"Biến động số liệu mới của Lãi suất (8,3%/năm) gắn với HDBank\", \"Biến động số liệu mới của Doanh thu (120 triệu USD) gắn với Doanh nghiệp\"]",
           "sectionWordCount": 145,
-          "lastEditedAt": "2026-11-14T14:29:45.188098+07:00"
+          "lastEditedAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "editionId": "ED-20261114-D01",
@@ -852,7 +852,7 @@
           "riskFactors": "[\"Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán.\", \"Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm.\", \"Biến động lãi suất liên ngân hàng và thanh khoản hệ thống.\", \"Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu.\"]",
           "monitoringChecklist": "[\"Doanh số giao dịch và tốc độ phủ điểm chấp nhận thanh toán tại Du lịch, Khách sạn & Bán lẻ Quốc tế.\", \"Phản hồi từ các đối tác thương mại thuộc Logistics & Chuyển phát Hàng nặng và tỷ lệ số hóa thanh toán.\", \"Biểu lãi suất huy động tại các NHTM và số liệu can thiệp thị trường của NHNN.\", \"Văn bản hướng dẫn thi hành và tốc độ tiếp nhận giải pháp của thị trường.\"]",
           "sectionWordCount": 210,
-          "lastEditedAt": "2026-11-14T14:29:45.188098+07:00"
+          "lastEditedAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "editionId": "ED-20261114-D01",
@@ -865,7 +865,7 @@
           "riskFactors": "[\"Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.\", \"Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.\", \"Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.\", \"Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.\"]",
           "monitoringChecklist": "[\"VALIDATE khảo sát nhu cầu thanh toán thực tế của các hộ kinh doanh du lịch trước khi đầu tư hạ tầng.\", \"VALIDATE nhu cầu thu hộ COD không tiền mặt hoặc Payment Link cho hàng nặng với đối tác logistics trước khi mở rộng.\", \"VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.\", \"INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng.\"]",
           "sectionWordCount": 195,
-          "lastEditedAt": "2026-11-14T14:29:45.188098+07:00"
+          "lastEditedAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "editionId": "ED-20261114-D01",
@@ -878,7 +878,7 @@
           "riskFactors": "[\"Nếu số liệu thực tế của Ngân hàng, Tín dụng & Lãi suất đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách.\", \"Nếu số liệu thực tế của Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách.\", \"Nếu số liệu thực tế của Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách.\", \"Nếu số liệu thực tế của Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách.\"]",
           "monitoringChecklist": "[\"Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank\", \"Biến động số liệu mới của Lãi suất (8,3%/năm) gắn với HDBank\", \"Biến động số liệu mới của Tăng trưởng tín dụng (10%) gắn với VietinBank\", \"Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank\", \"Biến động số liệu mới của Lãi suất (8,3%/năm) gắn với HDBank\", \"Biến động số liệu mới của Doanh thu (120 triệu USD) gắn với Doanh nghiệp\", \"Biến động số liệu mới của Doanh thu (120 triệu USD) gắn với Doanh nghiệp\", \"Biến động số liệu mới của Lãi suất (7,8%/năm) gắn với HDBank\", \"Biến động số liệu mới của Lãi suất (8,3%/năm) gắn với HDBank\", \"Biến động số liệu mới của Giá vàng trong nước (137,5 triệu đồng/lượng) gắn với SJC\", \"Biến động số liệu mới của Tăng trưởng tín dụng (10%) gắn với VietinBank\", \"Biến động số liệu mới của Tăng trưởng tín dụng (1,8%) gắn với VietinBank\"]",
           "sectionWordCount": 160,
-          "lastEditedAt": "2026-11-14T14:29:45.188098+07:00"
+          "lastEditedAt": "2026-11-14T14:50:57.945038+07:00"
         }
       ],
       "MARKET_PULSE_HISTORY": [
@@ -943,7 +943,7 @@
           "unit": "Điểm",
           "trendSignal": "UNKNOWN",
           "sourceAgency": "danviet.vn",
-          "measurementDate": "2026-11-13",
+          "measurementDate": "2026-11-14",
           "verificationStatus": "VERIFIED"
         },
         {
@@ -1013,7 +1013,7 @@
       ],
       "EVENT_REGISTRY": [
         {
-          "eventId": "EVT-20261114-059",
+          "eventId": "EVT-20261114-064",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "normalizedHeadlineSignature": "siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
           "originalTitle": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
@@ -1025,7 +1025,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-014",
@@ -1040,7 +1040,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-044",
@@ -1055,7 +1055,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-048",
@@ -1070,7 +1070,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-008",
@@ -1085,7 +1085,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-053",
@@ -1100,7 +1100,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-019",
@@ -1115,7 +1115,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-025",
@@ -1130,7 +1130,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-001",
@@ -1145,7 +1145,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-058",
@@ -1160,7 +1160,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-006",
@@ -1175,7 +1175,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-063",
@@ -1190,7 +1190,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-076",
@@ -1205,7 +1205,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-068",
@@ -1220,7 +1220,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-052",
@@ -1235,7 +1235,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-035",
@@ -1250,7 +1250,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-054",
@@ -1265,7 +1265,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-073",
@@ -1280,7 +1280,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-007",
@@ -1295,7 +1295,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-011",
@@ -1310,7 +1310,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-015",
@@ -1325,7 +1325,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-024",
@@ -1340,22 +1340,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
-        },
-        {
-          "eventId": "EVT-20261114-064",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "normalizedHeadlineSignature": "các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-          "originalTitle": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-          "primaryEntity": "Khối doanh nghiệp",
-          "eventDate": "2026-11-13",
-          "publicationDate": "2026-11-13T20:34:00+07:00",
-          "firstDiscoveredInEdition": "ED-20261114-D01",
-          "duplicateCount": 0,
-          "isFollowUp": false,
-          "followUpToEventId": "",
-          "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-040",
@@ -1370,7 +1355,7 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         },
         {
           "eventId": "EVT-20261114-039",
@@ -1385,7 +1370,22 @@
           "isFollowUp": false,
           "followUpToEventId": "",
           "lifecycleStatus": "ACTIVE",
-          "registeredAt": "2026-11-14T14:29:45.188098+07:00"
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
+        },
+        {
+          "eventId": "EVT-20261114-034",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "normalizedHeadlineSignature": "bỏ bớt điều kiện kinh doanh bảo hành ô tô: chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+          "originalTitle": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+          "primaryEntity": "Kinh tế Việt Nam",
+          "eventDate": "2026-11-13",
+          "publicationDate": "2026-11-13T18:15:00+07:00",
+          "firstDiscoveredInEdition": "ED-20261114-D01",
+          "duplicateCount": 0,
+          "isFollowUp": false,
+          "followUpToEventId": "",
+          "lifecycleStatus": "ACTIVE",
+          "registeredAt": "2026-11-14T14:50:57.945038+07:00"
         }
       ],
       "SOURCE_LEDGER": [
@@ -1395,13 +1395,13 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
-          "retrievalTimestamp": "2026-11-14T14:29:25.513793+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:42.667152+07:00",
           "httpStatus": 200,
           "rawContentSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "verificationOutcome": "VERIFIED",
           "gateAuditSummary": "VERIFIED_UNIQUE: ",
-          "associatedEventId": "EVT-20261114-059"
+          "associatedEventId": "EVT-20261114-064"
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
@@ -1409,7 +1409,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Nvidia mất 1.850 tỉ USD vốn hóa kể từ lúc lập đỉnh",
-          "retrievalTimestamp": "2026-11-14T14:29:12.509908+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:26.891039+07:00",
           "httpStatus": 200,
           "rawContentSha256": "cc260bddbc89c8a00c2f710b672eeba5f497d1b9895e1099ae29d9c3244d55d4",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_017_cc260bddbc.html",
@@ -1423,7 +1423,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Cách dùng AI phân tích hiệu quả, dự báo xu hướng kinh doanh",
-          "retrievalTimestamp": "2026-11-14T14:29:20.780331+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:36.000814+07:00",
           "httpStatus": 200,
           "rawContentSha256": "04c6fec63fb7f8e65593034c41715e8ce93927f792f5252b269dbb3fae9dd186",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_047_04c6fec63f.html",
@@ -1437,7 +1437,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "SHB được Forbes Việt Nam vinh danh trong Top 10 thương hiệu dẫn đầu năm 2026",
-          "retrievalTimestamp": "2026-11-14T14:29:21.777676+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:37.473952+07:00",
           "httpStatus": 200,
           "rawContentSha256": "7e9d7bbd95598afc6d3df10c863954cd3f53517e4ddc58718bdfe1f8602531de",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_051_7e9d7bbd95.html",
@@ -1451,10 +1451,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
-          "retrievalTimestamp": "2026-11-14T14:29:10.340026+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:23.668779+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
+          "rawContentSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
           "verificationOutcome": "VERIFIED",
           "gateAuditSummary": "VERIFIED_UNIQUE: ",
           "associatedEventId": "EVT-20261114-008"
@@ -1465,7 +1465,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
-          "retrievalTimestamp": "2026-11-14T14:29:23.616501+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:39.830751+07:00",
           "httpStatus": 200,
           "rawContentSha256": "f273a4bc361d0833ae6fc603f5f9fa69468da973ab88dd11854684eaaff0669d",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_056_f273a4bc36.html",
@@ -1479,7 +1479,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Xăng dầu giảm giá liên tiếp, có mặt hàng giảm tới gần 5.000 đồng/lít, vì sao?",
-          "retrievalTimestamp": "2026-11-14T14:29:13.879548+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:28.606950+07:00",
           "httpStatus": 200,
           "rawContentSha256": "bc665bdb8e2040cc86f037d92fae7fd29d4d935d4667a859d3f93e5b775331e8",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_022_bc665bdb8e.html",
@@ -1493,7 +1493,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Thêm điểm mua sắm, giải trí bên vịnh di sản thế giới Hạ Long",
-          "retrievalTimestamp": "2026-11-14T14:29:15.111170+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:29.791069+07:00",
           "httpStatus": 200,
           "rawContentSha256": "d0b3a6b3bbec8c21a8c06d98ee7768d88e9921ed5df3f400a19b6d4d91b6e589",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_028_d0b3a6b3bb.html",
@@ -1507,7 +1507,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giá vàng miếng, vàng nhẫn trơn hôm nay ngày 14/11 tiếp tục giảm sâu",
-          "retrievalTimestamp": "2026-11-14T14:29:07.386948+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:19.678398+07:00",
           "httpStatus": 200,
           "rawContentSha256": "f29847713d05bc1a9774a848c57bc623e645bb84ee6b720359c012abb6754dee",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_001_f29847713d.html",
@@ -1521,7 +1521,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp do phụ nữ làm chủ, lãi suất chỉ từ 7,8%/năm đến hết quý I/2027",
-          "retrievalTimestamp": "2026-11-14T14:29:25.290176+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:41.116190+07:00",
           "httpStatus": 200,
           "rawContentSha256": "9e373dfc5d3b12d6b508beff555f1ad5b641fcf6dee6a8ff851b2e4a62ff3b63",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_061_9e373dfc5d.html",
@@ -1535,7 +1535,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
-          "retrievalTimestamp": "2026-11-14T14:29:09.993448+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:23.298843+07:00",
           "httpStatus": 200,
           "rawContentSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_007_5ae4972c1b.html",
@@ -1549,7 +1549,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Hà Nội: Thuyết phục đối tượng lừa đảo tiền đổi ngoại tệ ra đầu thú",
-          "retrievalTimestamp": "2026-11-14T14:29:26.531420+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:42.440812+07:00",
           "httpStatus": 200,
           "rawContentSha256": "aba64138d496953c72a750c3a8043447a0dc933a4cf12007a2673b5edb728027",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_066_aba64138d4.html",
@@ -1563,7 +1563,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Thủ tướng nhấn mạnh việc tạo một thể chế công khai, minh bạch và dễ thực hiện",
-          "retrievalTimestamp": "2026-11-14T14:29:33.275345+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:46.540105+07:00",
           "httpStatus": 200,
           "rawContentSha256": "50cfcd1b9e91bdd762a9e589c79b91603fccd709bbe9d7be534bce3f84cd2dba",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_079_50cfcd1b9e.html",
@@ -1577,7 +1577,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Gửi tiết kiệm đứng tên hai vợ chồng, một người có được tự rút tiền?",
-          "retrievalTimestamp": "2026-11-14T14:29:31.651622+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:43.584470+07:00",
           "httpStatus": 200,
           "rawContentSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_071_446126275f.html",
@@ -1591,10 +1591,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
-          "retrievalTimestamp": "2026-11-14T14:29:22.346054+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:38.125182+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
+          "rawContentSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
           "verificationOutcome": "VERIFIED",
           "gateAuditSummary": "VERIFIED_UNIQUE: ",
           "associatedEventId": "EVT-20261114-052"
@@ -1605,7 +1605,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Thương mại điện tử thuần Việt khẳng định sức cạnh tranh tại giải thưởng châu Á",
-          "retrievalTimestamp": "2026-11-14T14:29:17.666768+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:32.688718+07:00",
           "httpStatus": 200,
           "rawContentSha256": "46aa6b83f1721d4663c48d27dd39639838dee66b8e84b6a1a0fdea5f9a64e98c",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_038_46aa6b83f1.html",
@@ -1619,7 +1619,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Bason Logistics và hành trình 9 năm phát triển chuỗi cung ứng bền vững",
-          "retrievalTimestamp": "2026-11-14T14:29:23.879158+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:40.089994+07:00",
           "httpStatus": 200,
           "rawContentSha256": "9767e8cb4251363d2a5ee784077529bd1a36c892fa046168283fe24ab93034dc",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_057_9767e8cb42.html",
@@ -1633,7 +1633,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "VietinBank tăng tốc chặng về đích 2026: Vững vàng chất lượng tài sản, dẫn đầu hiệu quả vận hành",
-          "retrievalTimestamp": "2026-11-14T14:29:32.817561+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:46.068908+07:00",
           "httpStatus": 200,
           "rawContentSha256": "4d3d140a14c86ba65c6acf6a695e8cd06f4270cfc8dfd5c8c52a7fac3352f56a",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_076_4d3d140a14.html",
@@ -1647,7 +1647,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Mở 'luồng xanh' cho nông sản tươi vào Trung Quốc",
-          "retrievalTimestamp": "2026-11-14T14:29:10.125279+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:23.436474+07:00",
           "httpStatus": 200,
           "rawContentSha256": "5aad028751b7184778dbe70a40decd5fa957b2262e9ce945170d665e226fd875",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_008_5aad028751.html",
@@ -1661,7 +1661,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Hàng Việt lên sàn ngoại dễ hay khó?",
-          "retrievalTimestamp": "2026-11-14T14:29:11.388109+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:24.791730+07:00",
           "httpStatus": 200,
           "rawContentSha256": "fc6698077518670e08b2091d09fc2a0690bb5f2e863f41cddf4990aaa237df70",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_013_fc66980775.html",
@@ -1675,7 +1675,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Tăng giá điện mặt trời, khuyến khích đầu tư pin lưu trữ",
-          "retrievalTimestamp": "2026-11-14T14:29:12.684787+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:27.054152+07:00",
           "httpStatus": 200,
           "rawContentSha256": "cb7419778f82873b3191fc9935ace5120c6d72a6780a3dd9f26ced0f29c9f8d6",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_018_cb7419778f.html",
@@ -1689,7 +1689,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "'Làm sạch' 2,5 triệu mã số thuế: Chỉ xóa nợ thôi là chưa đủ, cần bớt cả thủ tục",
-          "retrievalTimestamp": "2026-11-14T14:29:14.993452+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:29.650293+07:00",
           "httpStatus": 200,
           "rawContentSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_027_9305aa3ba2.html",
@@ -1699,25 +1699,11 @@
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "sourceDomain": "Báo Tuổi Trẻ",
-          "sourceChannel": "LIVE_HTTP_DISCOVERY",
-          "originalTitle": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-          "retrievalTimestamp": "2026-11-14T14:29:26.768110+07:00",
-          "httpStatus": 200,
-          "rawContentSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "verificationOutcome": "VERIFIED",
-          "gateAuditSummary": "VERIFIED_UNIQUE: ",
-          "associatedEventId": "EVT-20261114-064"
-        },
-        {
-          "collectionRunId": "RUN-ED-20261114-D01",
           "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "VietinBank Premium công bố ba phân hạng Khách hàng Ưu tiên mới",
-          "retrievalTimestamp": "2026-11-14T14:29:19.611838+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:34.865236+07:00",
           "httpStatus": 200,
           "rawContentSha256": "ac75464e5bb7985e41f9a11dcbbfbacff2ec6a0fbfc5f68d61b09609991aeb1f",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_043_ac75464e5b.html",
@@ -1731,7 +1717,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Quảng Trị thu hơn 3.000 tỉ đồng ngân sách trong một tháng, tiền đến từ đâu?",
-          "retrievalTimestamp": "2026-11-14T14:29:19.482917+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:34.721248+07:00",
           "httpStatus": 200,
           "rawContentSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
@@ -1741,11 +1727,25 @@
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "sourceDomain": "Báo Tuổi Trẻ",
+          "sourceChannel": "LIVE_HTTP_DISCOVERY",
+          "originalTitle": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+          "retrievalTimestamp": "2026-11-14T14:50:32.545479+07:00",
+          "httpStatus": 200,
+          "rawContentSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "verificationOutcome": "VERIFIED",
+          "gateAuditSummary": "VERIFIED_UNIQUE: ",
+          "associatedEventId": "EVT-20261114-034"
+        },
+        {
+          "collectionRunId": "RUN-ED-20261114-D01",
           "sourceUrl": "https://tuoitre.vn/tour-van-hoa-tphcm-tang-truong-3-con-so-khach-tim-gi-100261114092414883.htm",
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Tour văn hóa TP.HCM tăng trưởng 3 con số, khách tìm gì?",
-          "retrievalTimestamp": "2026-11-14T14:29:07.660579+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:19.923981+07:00",
           "httpStatus": 200,
           "rawContentSha256": "a95d1df0916a397637833759d9df980251341591701b845eca86d443009d5848",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_002_a95d1df091.html",
@@ -1759,7 +1759,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Tổng lực kích cầu cuối năm",
-          "retrievalTimestamp": "2026-11-14T14:29:08.023504+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:20.052023+07:00",
           "httpStatus": 200,
           "rawContentSha256": "745a72512c931830ef4985cc92a717fcbc7dc287beba7cdd3c093f48fe142945",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_003_745a72512c.html",
@@ -1773,10 +1773,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Khai trương AEON MALL Hạ Long, bổ sung hơn 5.200 tỷ đồng vốn đầu tư thương mại",
-          "retrievalTimestamp": "2026-11-14T14:29:08.240755+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:21.151451+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "cdfe0435e472ecb490524bfd8e988d02af917e8f627c7045d89269323374a726",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_005_cdfe0435e4.html",
+          "rawContentSha256": "7912f2695c6ee279bfde82318bbcdab25f41a9fe6ae4ffbb6ffdad03ae583e27",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_005_7912f2695c.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_IRRELEVANT: ",
           "associatedEventId": "EVT-20261114-004"
@@ -1787,7 +1787,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giá cả đầu ngày: Trứng, thịt gia cầm bình ổn, thốt nốt tươi tăng giá mạnh",
-          "retrievalTimestamp": "2026-11-14T14:29:11.261925+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:24.644342+07:00",
           "httpStatus": 200,
           "rawContentSha256": "1814b619aa68abaa1c9424c75028061fa71189037c2bcb6dcce327b48933dc62",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_012_1814b619aa.html",
@@ -1801,10 +1801,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Hà Nội mở bán nhà ở xã hội tại 4 dự án, giá thấp nhất 16,6 triệu đồng/m2",
-          "retrievalTimestamp": "2026-11-14T14:29:11.616733+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:25.057727+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "e3e517896151c54094621761dd608d5731cf78390a0d1232da86ee57d2491dd3",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_015_e3e5178961.html",
+          "rawContentSha256": "c882a90db9d94301ecc55f4b4efa2afca81b132f7c20e97c9998777a353d8a67",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_015_c882a90db9.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_IRRELEVANT: ",
           "associatedEventId": "EVT-20261114-012"
@@ -1815,10 +1815,10 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Các đồng tiền châu Á đương đầu áp lực mất giá mạnh vì dự báo Fed tăng lãi suất",
-          "retrievalTimestamp": "2026-11-14T14:29:12.826059+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:27.212022+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "580aade639ae16d3f60c19d357cc4cb1c997bd6e53bda69c67c958d146a54b29",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_019_580aade639.html",
+          "rawContentSha256": "b4db70d518d24363de743f5290dc0e72205a03c924cdf85f152ff8c7de35fa15",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_019_b4db70d518.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_SOURCE_UNVERIFIED: ",
           "associatedEventId": "EVT-20261114-016"
@@ -1829,7 +1829,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Lối ra cho công trình xây dựng sai phép",
-          "retrievalTimestamp": "2026-11-14T14:29:14.063679+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:28.760638+07:00",
           "httpStatus": 200,
           "rawContentSha256": "6e9dc987ba10f3923f041679c23ccfc9d1e2454f74afa96b9339a57c082ca87f",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_023_6e9dc987ba.html",
@@ -1843,7 +1843,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Sân bay Côn Đảo muốn đón máy bay lớn nhưng vướng bài toán đường băng và đèn hàng không",
-          "retrievalTimestamp": "2026-11-14T14:29:16.032799+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:31.056326+07:00",
           "httpStatus": 200,
           "rawContentSha256": "eac6bed32353765135650a3defba2af3f579389a40f2abfc1a8ab8ea8bffb33f",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_032_eac6bed323.html",
@@ -1857,7 +1857,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Kiến tạo nền tảng nhân lực, nhân tài cho Kỷ nguyên Công nghệ Lượng tử",
-          "retrievalTimestamp": "2026-11-14T14:29:20.493288+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:35.757802+07:00",
           "httpStatus": 200,
           "rawContentSha256": "50471d2f5c6924976185d93a1f06948e6ae081d5c2f1f12ba50912b67019f3e0",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_046_50471d2f5c.html",
@@ -1871,7 +1871,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Khối ngoại bất ngờ mua ròng hơn 300 tỉ đồng cổ phiếu VIX",
-          "retrievalTimestamp": "2026-11-14T14:29:20.903924+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:36.128961+07:00",
           "httpStatus": 200,
           "rawContentSha256": "88e89ca6089131127260df5f54e45456d6a3dd19e07a91d2617c78e04105cdc5",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_048_88e89ca608.html",
@@ -1885,10 +1885,10 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Đón đọc Tạp chí Kinh tế Việt Nam số 45-2026",
-          "retrievalTimestamp": "2026-11-14T14:29:21.028006+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:36.247143+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "554d542b39e28ef229b8ba66e47d7f78230a5a3edb88768619ee48cf2f3148e6",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_049_554d542b39.html",
+          "rawContentSha256": "adbb81717470e86df9b81110890c8ebdb56304d696b0eb04b9a92ace538883d8",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_049_adbb817174.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_IRRELEVANT: ",
           "associatedEventId": "EVT-20261110-031"
@@ -1899,7 +1899,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ba startup công nghệ khí hậu thắng giải nhất 15 tỉ đồng tại Net Zero Challenge 2026, có đại diện Việt Nam",
-          "retrievalTimestamp": "2026-11-14T14:29:22.014013+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:37.762165+07:00",
           "httpStatus": 200,
           "rawContentSha256": "aa091d78e3e3c2c06f3eff01b335ad14d4b27614f4e45e78303c2b0a463ab769",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_052_aa091d78e3.html",
@@ -1909,14 +1909,28 @@
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
+          "sourceUrl": "https://tuoitre.vn/a-hau-cuu-tiep-vien-hang-khong-ke-chuyen-lam-noi-dung-so-giu-niem-tin-khan-gia-1002611141050444.htm",
+          "sourceDomain": "Báo Tuổi Trẻ",
+          "sourceChannel": "LIVE_HTTP_DISCOVERY",
+          "originalTitle": "Á hậu, cựu tiếp viên hàng không kể chuyện làm nội dung số, giữ niềm tin khán giả",
+          "retrievalTimestamp": "2026-11-14T14:50:41.355204+07:00",
+          "httpStatus": 200,
+          "rawContentSha256": "68f6aa0c929d2258a119c3546b5b2ca0a3e37056434d0d47296c09903ee0c603",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_062_68f6aa0c92.html",
+          "verificationOutcome": "REJECTED",
+          "gateAuditSummary": "REJECTED_IRRELEVANT: ",
+          "associatedEventId": "EVT-20261114-059"
+        },
+        {
+          "collectionRunId": "RUN-ED-20261114-D01",
           "sourceUrl": "https://baodautu.vn/khat-vat-lieu-vi-nuoc-den-chan-moi-nhay-d735831.html",
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "“Khát” vật liệu vì “nước đến chân mới nhảy”",
-          "retrievalTimestamp": "2026-11-14T14:29:25.840927+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:41.728992+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "f2a3edc7355a37f55fb122cb6e8c649a24efa0b5fb04b86392a8ff0ab30e591a",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_065_f2a3edc735.html",
+          "rawContentSha256": "66f98e33d3deb15544954dd66d33a5b118894c3df0784bc976a3b608ce9bfda0",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_065_66f98e33d3.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_IRRELEVANT: ",
           "associatedEventId": "EVT-20261114-062"
@@ -1927,7 +1941,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Tiếng Anh là điều kiện làm việc hay điều kiện để có bằng?",
-          "retrievalTimestamp": "2026-11-14T14:29:31.866259+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:43.852791+07:00",
           "httpStatus": 200,
           "rawContentSha256": "1bc77d7b17d0daab04fb310383e2f23fd9e2903a6fa4120157fa44c68150d871",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_072_1bc77d7b17.html",
@@ -1941,7 +1955,7 @@
           "sourceDomain": "Báo Tuổi Trẻ",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Vào trường chuyên mới chỉ là bước khởi đầu",
-          "retrievalTimestamp": "2026-11-14T14:29:33.062661+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:46.299715+07:00",
           "httpStatus": 200,
           "rawContentSha256": "127675088c1cb28a6daf5c18bbeb0877fafa3136f6ccdcd3e8242b658bf34142",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_077_127675088c.html",
@@ -1955,10 +1969,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Toyota Việt Nam có Chủ tịch và Tổng giám đốc mới",
-          "retrievalTimestamp": "2026-11-14T14:29:33.395606+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:46.649439+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "c9f50a6196b15eb0c886952e81bd051072a2e639ed9f64a414e2ad8c3eda3c57",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_080_c9f50a6196.html",
+          "rawContentSha256": "ca3894bb70f78b72adc47a09f146e66a6b5847980c96f2c38251d785fb6bc959",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_080_ca3894bb70.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_IRRELEVANT: ",
           "associatedEventId": "EVT-20261114-077"
@@ -1969,7 +1983,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Sau 3 ngày mở cửa, AEON Mall Thanh Hóa đón hơn 200 nghìn lượt khách",
-          "retrievalTimestamp": "2026-11-14T14:29:16.190143+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:31.187167+07:00",
           "httpStatus": 200,
           "rawContentSha256": "a4a3bde38a2d02d93aa199b50e17a459bffde3f6da8071ebccf1c27770a32d59",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_033_a4a3bde38a.html",
@@ -1983,7 +1997,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Phản ứng của thị trường sau khi hoán đổi và mở kênh mua ngoại tệ",
-          "retrievalTimestamp": "2026-11-14T14:29:16.309609+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:31.314061+07:00",
           "httpStatus": 200,
           "rawContentSha256": "3cc4974b6f8c145e24e7ea807c0bab76fad1cc9d0a2c4071de2b7ca8d9249482",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_034_3cc4974b6f.html",
@@ -1997,7 +2011,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Chi phí rủi ro cao cản trở ngân hàng giảm lãi suất tiền vay",
-          "retrievalTimestamp": "2026-11-14T14:29:17.774855+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:32.817302+07:00",
           "httpStatus": 200,
           "rawContentSha256": "4eb390ba58af1c886f1c3dea7a4934c1343deffba8c4b92433f56ffaa26c09a7",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_039_4eb390ba58.html",
@@ -2011,7 +2025,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Toạ đàm “Giảm lãi suất: Dư địa và giải pháp hỗ trợ tăng trưởng 2 con số”",
-          "retrievalTimestamp": "2026-11-14T14:29:19.745173+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:35.001588+07:00",
           "httpStatus": 200,
           "rawContentSha256": "b63d5b9a5d43afefb5e1141b8a23b681e5b6599c0e2c010b9461400ba20752b0",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_044_b63d5b9a5d.html",
@@ -2025,7 +2039,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giảm lãi suất: Dư địa, giải pháp hỗ trợ tăng trưởng 2 con số",
-          "retrievalTimestamp": "2026-11-14T14:29:22.257055+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:38.036354+07:00",
           "httpStatus": 200,
           "rawContentSha256": "168c2d6d86374e223b61fe3bb9bfa8856d283d5ac84c86ef4b9b35e976709406",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_054_168c2d6d86.html",
@@ -2039,7 +2053,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Thị trường trái phiếu phải trở thành “lốp dự phòng” cho hệ thống ngân hàng",
-          "retrievalTimestamp": "2026-11-14T14:29:25.752800+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:41.633648+07:00",
           "httpStatus": 200,
           "rawContentSha256": "b0a1b899427952e0e41ae2150c750b151e120e0a70ecc04569caa5df713113fb",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_064_b0a1b89942.html",
@@ -2049,11 +2063,25 @@
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
+          "sourceUrl": "https://thanhnien.vn/cac-ngan-hang-tiep-tuc-ha-lai-suat-hon-463000-ti-tiep-suc-doanh-nghiep-185261111141756029.htm",
+          "sourceDomain": "Báo Thanh Niên",
+          "sourceChannel": "LIVE_HTTP_DISCOVERY",
+          "originalTitle": "Các ngân hàng tiếp tục hạ lãi suất, hơn 463.000 tỉ 'tiếp sức' doanh nghiệp",
+          "retrievalTimestamp": "2026-11-14T14:50:42.795719+07:00",
+          "httpStatus": 200,
+          "rawContentSha256": "c3bb53b211bb6554fb802f6a4004d84302db3131e87f5e48b23f8d83f1df0c51",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_068_c3bb53b211.html",
+          "verificationOutcome": "REJECTED",
+          "gateAuditSummary": "REJECTED_STALE_OR_INVALID_TIMESTAMP: ",
+          "associatedEventId": "EVT-20261114-065"
+        },
+        {
+          "collectionRunId": "RUN-ED-20261114-D01",
           "sourceUrl": "https://vneconomy.vn/niem-tin-cua-nha-dau-tu-se-quyet-dinh-thanh-cong-cua-trai-phieu-doanh-nghiep.htm",
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Niềm tin của nhà đầu tư sẽ quyết định thành công của trái phiếu doanh nghiệp",
-          "retrievalTimestamp": "2026-11-14T14:29:27.041431+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:42.984761+07:00",
           "httpStatus": 200,
           "rawContentSha256": "03597728bea438b3aaa097d086b0f43e8a31685933fb0de6c78bbe0d38be8524",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_069_03597728be.html",
@@ -2067,10 +2095,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Quy định về xét tôn vinh, trao tặng giải thưởng cho doanh nhân, doanh nghiệp",
-          "retrievalTimestamp": "2026-11-14T14:29:27.129486+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:43.102698+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "d98124792fbc1b63c8ad1f901b7906a7397955fd452735e9e3fad69e6f8687ef",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_070_d98124792f.html",
+          "rawContentSha256": "17bd0febd62ca3b3fe0e2abc79a266aa9342f17461c24674f54b0046714806e3",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_070_17bd0febd6.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_STALE_OR_INVALID_TIMESTAMP: ",
           "associatedEventId": "EVT-20261114-067"
@@ -2081,7 +2109,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Doanh nghiệp muốn lãi suất hợp lý, ổn định và có thể dự báo",
-          "retrievalTimestamp": "2026-11-14T14:29:32.167682+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:44.178582+07:00",
           "httpStatus": 200,
           "rawContentSha256": "e634ab2ab35fb613d84ec7a0e070dfe823a60b44f865763fdc1724400dfafe3f",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_074_e634ab2ab3.html",
@@ -2095,10 +2123,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Doanh nghiệp và kỳ vọng 2026: Sẵn sàng cho chu kỳ tăng trưởng mới",
-          "retrievalTimestamp": "2026-11-14T14:29:32.272220+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:44.329081+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "9fec85ced18baf6589dda9868ac07e387c1e0f4e5815548305f9fab040128fd5",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_075_9fec85ced1.html",
+          "rawContentSha256": "a36d3bc107ed6889d1a5220d530771fd26497ef2135604f039a93e5fbe2f6a8b",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_075_a36d3bc107.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_STALE_OR_INVALID_TIMESTAMP: ",
           "associatedEventId": "EVT-20261114-072"
@@ -2109,10 +2137,10 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "FWD hợp tác Visa mang giải pháp trả góp phí bảo hiểm linh hoạt tại Việt Nam",
-          "retrievalTimestamp": "2026-11-14T14:29:33.172414+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:46.418258+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "1fb07642eef7fca2ee475404a0aed1cc35fd0df087ed9807a4fdfd78086a239f",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_078_1fb07642ee.html",
+          "rawContentSha256": "cd9c37aeeeaf1f1f5fff58556f6bcf15df5a9cc6e092a3ed78cca35b7d05c94c",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_078_cd9c37aeee.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_STALE_OR_INVALID_TIMESTAMP: ",
           "associatedEventId": "EVT-20261114-075"
@@ -2123,10 +2151,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "SHB đứng thứ 10 trong Top 50 thương hiệu dẫn đầu năm 2026 của Forbes Việt Nam",
-          "retrievalTimestamp": "2026-11-14T14:29:12.920365+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:27.319230+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "d9e277032a4a9e5e40bac271e085c7ca81b51368542592eeb315234f90c55fda",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_020_d9e277032a.html",
+          "rawContentSha256": "772c3e74d337f7104565a7bbfcd0811859273cb548ea65e791e2bc3840bc855e",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_020_772c3e74d3.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_INTRA_BATCH_DUPLICATE: ",
           "associatedEventId": "EVT-20261114-017"
@@ -2137,10 +2165,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giá vàng miếng, vàng nhẫn trơn chiều 13/11 tại SJC, DOJI, PNJ, Bảo Tín Minh Châu và Bảo Tín Mạnh Hải",
-          "retrievalTimestamp": "2026-11-14T14:29:14.747533+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:29.425499+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "daf1d05650a7f5b6ac31033b108e15088e9652fad18d4e024df53a0433ed54c4",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_026_daf1d05650.html",
+          "rawContentSha256": "88dc21b5f7b96357426a2a13c0912bd15cf2935af6694e3d7cc887e0d8663a1e",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_026_88dc21b5f7.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_INTRA_DAY_COMMODITY_DUPLICATE: ",
           "associatedEventId": "EVT-20261114-023"
@@ -2151,10 +2179,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giá vàng miếng, vàng nhẫn trơn 9999 chiều 12/11 tại SJC, PNJ, DOJI, Bảo Tín Minh Châu và Bảo Tín Mạnh Hải",
-          "retrievalTimestamp": "2026-11-14T14:29:15.785302+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:30.749408+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "56675343dfc85316389b784d29742549322bba0a890329ffd8edc2efa05380d1",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_031_56675343df.html",
+          "rawContentSha256": "e7dcbec818d57b6099d18c3206af63a626f68ef39ff964db1d2b5cfd6895008e",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_031_e7dcbec818.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_INTRA_DAY_COMMODITY_DUPLICATE: ",
           "associatedEventId": "EVT-20261114-028"
@@ -2165,10 +2193,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ngày 12/11, gửi dưới 1 tỷ đồng kỳ hạn 12 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-          "retrievalTimestamp": "2026-11-14T14:29:12.138927+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:26.559342+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "800c7fb4118ad94f87ec588cd41206ab4239926b6ddcedb69d4af5b87d6be7c8",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_016_800c7fb411.html",
+          "rawContentSha256": "3ab43c5f258439e99fc9c47d01b3e3b5082d972e9a88286187a2df1e16196ef6",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_016_3ab43c5f25.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_HISTORICAL_DUPLICATE: ",
           "associatedEventId": "EVT-20261114-013"
@@ -2179,10 +2207,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Giá vàng miếng, vàng nhẫn chiều 11/11 đồng loạt quay đầu tăng tại SJC, PNJ, DOJI, Bảo Tín Minh Châu và Bảo Tín Mạnh Hải",
-          "retrievalTimestamp": "2026-11-14T14:29:13.602133+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:28.320917+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "45ca79e7fcc7428e54b09b2e3817d84c06d0403751627fc3562927d764f620c4",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_021_45ca79e7fc.html",
+          "rawContentSha256": "7d16feed343a3b759ecd4d5563135d9d9903f3bce4871612a2d4e5490ee9c405",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_021_7d16feed34.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "REJECTED_INTRA_DAY_COMMODITY_DUPLICATE: ",
           "associatedEventId": "EVT-20261114-018"
@@ -2193,7 +2221,7 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Diễn biến lạ tại cổ phiếu LPBank",
-          "retrievalTimestamp": "2026-11-14T14:29:10.986401+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:24.382963+07:00",
           "httpStatus": 200,
           "rawContentSha256": "67bb9b6411bb0b423a5d8467620e13d4cdac66b848057195ff816e4bb9af3b21",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_011_67bb9b6411.html",
@@ -2203,25 +2231,11 @@
         },
         {
           "collectionRunId": "RUN-ED-20261114-D01",
-          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
-          "sourceDomain": "Báo Tuổi Trẻ",
-          "sourceChannel": "LIVE_HTTP_DISCOVERY",
-          "originalTitle": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
-          "retrievalTimestamp": "2026-11-14T14:29:17.534114+07:00",
-          "httpStatus": 200,
-          "rawContentSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
-          "verificationOutcome": "REJECTED",
-          "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
-          "associatedEventId": "EVT-20261114-034"
-        },
-        {
-          "collectionRunId": "RUN-ED-20261114-D01",
           "sourceUrl": "https://thanhnien.vn/sovico-va-mufg-hop-tac-chien-luoc-ket-noi-nguon-luc-cho-phat-trien-viet-nam-nhat-ban-185261113161006819.htm",
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Sovico và MUFG hợp tác chiến lược, kết nối nguồn lực cho phát triển Việt Nam - Nhật Bản",
-          "retrievalTimestamp": "2026-11-14T14:29:24.028709+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:40.211015+07:00",
           "httpStatus": 200,
           "rawContentSha256": "626b7c2b97de1f3a24cac1a4890ac1efd264dffe27488d3d60e501ef71990e7a",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_058_626b7c2b97.html",
@@ -2235,7 +2249,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ngân hàng Nhà nước thanh tra việc giảm lãi suất của các ngân hàng trong tháng 11",
-          "retrievalTimestamp": "2026-11-14T14:29:25.641160+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:41.491834+07:00",
           "httpStatus": 200,
           "rawContentSha256": "68cb51b6638a1189a0c6ba0e572b30a903e7220451a57529e3c86484c31e8a64",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_063_68cb51b663.html",
@@ -2249,7 +2263,7 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "FWD Việt Nam vào Top 30 Nơi làm việc xuất sắc hàng đầu Đông Nam Á 2026",
-          "retrievalTimestamp": "2026-11-14T14:29:31.997966+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:44.028292+07:00",
           "httpStatus": 200,
           "rawContentSha256": "f2ad94e38b4542f4e989d8e9f958ed8bdfec40f2f90bdb53c91b4d50b0c5e7e0",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_073_f2ad94e38b.html",
@@ -2263,10 +2277,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Phú Long ghi dấu ấn tại APEA 2026 với hai giải thưởng về thương hiệu và quản trị",
-          "retrievalTimestamp": "2026-11-14T14:29:14.303500+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:28.998875+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "2bf4f3d4b7302206b4adfdf71d0d7667259a89add7b0916e8edf38d78c443c02",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_025_2bf4f3d4b7.html",
+          "rawContentSha256": "3f3c9034581f201d27b15b1b43d63d4cb09c4933f29446d5f788f49a297974e5",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_025_3f3c903458.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-022"
@@ -2277,10 +2291,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Quốc hội phê chuẩn quyết toán ngân sách nhà nước năm 2025",
-          "retrievalTimestamp": "2026-11-14T14:29:15.353432+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:30.061948+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "66f348305f850bde1b657a756ac59546fea9cd9c4f5eaaaad6c5f2a2a25e1655",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_030_66f348305f.html",
+          "rawContentSha256": "b04c7ec21c757404b794538d1eb5b142f8b47d4e9bfc452c1dc038729231d3d5",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_030_b04c7ec21c.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-027"
@@ -2291,10 +2305,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Nghiên cứu dự án cao tốc Pleiku - Buôn Ma Thuột - Gia Nghĩa gần 85.000 tỷ đồng",
-          "retrievalTimestamp": "2026-11-14T14:29:16.412507+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:31.411900+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "303a4348adee6c76225af7bd59d07489a7018ff6361639319e7bd0ea85c60761",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_035_303a4348ad.html",
+          "rawContentSha256": "26470a7720f27ce224cedde08cfcce72d23f26fdba349a37b068abbd47fbf881",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_035_26470a7720.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-032"
@@ -2305,10 +2319,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Pebsteel sau 32 năm: Từ vị thế tiên phong đến khát vọng thiết lập chuẩn mực ngành nhà thép",
-          "retrievalTimestamp": "2026-11-14T14:29:24.276769+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:40.450862+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "09d3c5995ee8fdefd0632214d0e731977516a62c2dd576e183239960aafe5224",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_060_09d3c5995e.html",
+          "rawContentSha256": "5c0b1e0af928adc6957abb5dc39d26e348de0589a3253bd3a629455fd369a921",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_060_5c0b1e0af9.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-057"
@@ -2319,10 +2333,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ngày 13/11, gửi dưới 1 tỷ đồng kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-          "retrievalTimestamp": "2026-11-14T14:29:19.149171+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:34.473340+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "6786bc050438fbc5e85d4893440d9549e95191414bc78a3d44567c1caf3b6c18",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_041_6786bc0504.html",
+          "rawContentSha256": "532bc48209f5e9c44efd79795cada65288fe36ed6e7b43bfbef85531088d89b3",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_041_532bc48209.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-038"
@@ -2333,10 +2347,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Tỷ phú xuất thân từ quê lúa: Sau 16 năm ghép gan vẫn quyết tái thiết ngân hàng, làm chip bán dẫn, robot ở tuổi 67",
-          "retrievalTimestamp": "2026-11-14T14:29:09.690548+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:23.045675+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "734e379826ad92e7c5206df24e025822694319c2687fff6687936f4b3425904f",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_006_734e379826.html",
+          "rawContentSha256": "2e54047423feefbd94dcf983bd48f71d7a81d65155d5558ee56ce670205b8b6a",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_006_2e54047423.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-005"
@@ -2347,10 +2361,10 @@
           "sourceDomain": "Báo Thanh Niên",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Cổ phiếu FPT tiếp tục bị khối ngoại xả hàng, thủng mốc 50.000 đồng/cổ phiếu",
-          "retrievalTimestamp": "2026-11-14T14:29:22.137294+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:37.913251+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "a1d8b9aa169ca45286a07341ade8b940d8b7eaee4f76c732d63fdb446ea03c39",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_053_a1d8b9aa16.html",
+          "rawContentSha256": "3ff09d783ab07b98263a1601b4d58d97ead540861aaf5406312140a19688aba9",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_053_3ff09d783a.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-050"
@@ -2361,7 +2375,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế",
-          "retrievalTimestamp": "2026-11-14T14:29:15.248146+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:29.953712+07:00",
           "httpStatus": 200,
           "rawContentSha256": "c3de49938cebcdac08502bdd72837203691ef91734b84266f416d3714041491d",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_029_c3de49938c.html",
@@ -2375,7 +2389,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Nợ thuế tăng gấp đôi, hơn một nửa là tiền sử dụng đất",
-          "retrievalTimestamp": "2026-11-14T14:29:14.210589+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:28.909553+07:00",
           "httpStatus": 200,
           "rawContentSha256": "7359f0d1a10c311a1d56d918bf47eedba918d406e357228316b7b9a62dd1fab5",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_024_7359f0d1a1.html",
@@ -2389,10 +2403,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "VPBank “House of Diamond”: Khi sự đủ đầy bắt nguồn từ sự cân bằng bên trong",
-          "retrievalTimestamp": "2026-11-14T14:29:17.857731+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:32.914800+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "23de87bf2c256d675d5a017d920de940fd21bb488ed655790ed0f4e74173cf34",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_040_23de87bf2c.html",
+          "rawContentSha256": "27a35f1ef1e0eac6ff69f440ba41802957636825bc6c8f5bb84ffc97f9b67984",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_040_27a35f1ef1.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-037"
@@ -2403,7 +2417,7 @@
           "sourceDomain": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Ổn định lãi suất phải gắn với cơ cấu lại thị trường vốn",
-          "retrievalTimestamp": "2026-11-14T14:29:24.170368+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:40.324985+07:00",
           "httpStatus": 200,
           "rawContentSha256": "d31238349451f09e2356e56e463e416b7b0241aee15398942a81464ccd10c5af",
           "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_059_d312383494.html",
@@ -2417,10 +2431,10 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Bộ trưởng Ngô Văn Tuấn trả lời chất vấn về đầu tư công",
-          "retrievalTimestamp": "2026-11-14T14:29:19.816011+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:35.073539+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "bb167542a97112ac5abee708413f63f37446b352cf0235f8988ad758e5b17363",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_045_bb167542a9.html",
+          "rawContentSha256": "2609f648fa0d6d7e2d7e87849eb65e0549c904154382d023e65f943edcbaf778",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_045_2609f648fa.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-042"
@@ -2431,10 +2445,10 @@
           "sourceDomain": "CafeF / VCCorp",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "Vietcombank phát thông báo quan trọng tới khách hàng",
-          "retrievalTimestamp": "2026-11-14T14:29:17.249960+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:32.102691+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "f0a22530593118925704180d5e621c89477f5ad92c8b6965871e2edbfc6d56bc",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_036_f0a2253059.html",
+          "rawContentSha256": "7f74f1bd885f29a637cb3ce91340466cb23ec65a843660d30e8f4aa1893e391d",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_036_7f74f1bd88.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-033"
@@ -2445,27 +2459,13 @@
           "sourceDomain": "Báo Đầu tư",
           "sourceChannel": "LIVE_HTTP_DISCOVERY",
           "originalTitle": "TP.HCM ra hạn chót thu hồi đất cho siêu dự án cải tạo kênh rạch, vốn đầu tư khoảng 49.000 tỷ đồng",
-          "retrievalTimestamp": "2026-11-14T14:29:21.134729+07:00",
+          "retrievalTimestamp": "2026-11-14T14:50:36.326468+07:00",
           "httpStatus": 200,
-          "rawContentSha256": "bb3e08e95cb2169dfe92c95ba84534c28fb54b87c455b76888cad554dc01d2d4",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_050_bb3e08e95c.html",
+          "rawContentSha256": "0971918bf15e8a6e87bfc7af968d90d79d17ae67e10f84a30ecc3c8977bad148",
+          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_050_0971918bf1.html",
           "verificationOutcome": "REJECTED",
           "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
           "associatedEventId": "EVT-20261114-047"
-        },
-        {
-          "collectionRunId": "RUN-ED-20261114-D01",
-          "sourceUrl": "https://thanhnien.vn/cac-ngan-hang-tiep-tuc-ha-lai-suat-hon-463000-ti-tiep-suc-doanh-nghiep-185261111141756029.htm",
-          "sourceDomain": "Báo Thanh Niên",
-          "sourceChannel": "LIVE_HTTP_DISCOVERY",
-          "originalTitle": "Các ngân hàng tiếp tục hạ lãi suất, hơn 463.000 tỉ 'tiếp sức' doanh nghiệp",
-          "retrievalTimestamp": "2026-11-14T14:29:26.928793+07:00",
-          "httpStatus": 200,
-          "rawContentSha256": "c3bb53b211bb6554fb802f6a4004d84302db3131e87f5e48b23f8d83f1df0c51",
-          "evidenceSnapshotFile": "raw_evidence_store/snapshot_live_068_c3bb53b211.html",
-          "verificationOutcome": "REJECTED",
-          "gateAuditSummary": "EXCESS_BEYOND_25_QUOTA: ",
-          "associatedEventId": "EVT-20261114-065"
         }
       ],
       "PUBLISH_AUDIT": [
@@ -2477,11 +2477,11 @@
           "gateDecision": "PASS_25_EVENTS_24H_80PCT",
           "freshnessRatioRecorded": "100.00%",
           "verifiedCountRecorded": 25,
-          "localJsonChecksum": "f148d88359e56d2db8f30406d4fca63e55da6900f917fdbd96880737d2306495",
+          "localJsonChecksum": "cc4e78da592e63d1bc7e705663dbd71373502ac41b39202a565f778e95795a36",
           "sheetsSyncStatus": "STAGING_DRY_RUN_PASS",
           "rollbackReferenceCheckpoint": "PHASE05B_R1.0.1",
           "notes": "Dry-run only (Write API strictly disabled). Preserved 155 existing records; validated +25 news events, +4 core theses, +4 macro chains, +5 radar signals, +4 decision cards.",
-          "timestamp": "2026-11-14T14:29:45.188098+07:00"
+          "timestamp": "2026-11-14T14:50:57.945038+07:00"
         }
       ]
     }

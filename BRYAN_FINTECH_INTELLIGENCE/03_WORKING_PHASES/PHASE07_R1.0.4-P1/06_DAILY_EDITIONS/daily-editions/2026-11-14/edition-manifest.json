@@ -7,11 +7,11 @@
   "parentAcceptedPhase": "PHASE06_R1.0.0",
   "editionId": "ED-20261114-D01",
   "editionDate": "2026-11-14",
-  "executionId": "EXEC-20261114-142902-b731a8dd",
+  "executionId": "EXEC-20261114-145013-02061834",
   "executionMode": "LIVE",
   "displayDate": "14/11/2026",
   "editionTitle": "Bryan FinTech Intelligence — Ấn bản Dynamic Runtime ED-20261114-D01",
-  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+  "generatedAt": "2026-11-14T14:50:13.827207+07:00",
   "timezone": "Asia/Ho_Chi_Minh",
   "parentBaselineReleaseId": "PHASE06_R1.0.0_ACCEPTED_RELEASE",
   "readinessClassification": {
@@ -41,79 +41,79 @@
     },
     {
       "fileName": "claims-layer.json",
-      "sha256": "1b9b098190ca5e46e8df134a8b7ad97833174c71d7044e7adf22c6ceb92ba0c5"
+      "sha256": "9c07615f5e79354be7a8fcf61e7ff89819ada828086981f5dbf306731c88e79e"
     },
     {
       "fileName": "combined-edition.json",
-      "sha256": "f148d88359e56d2db8f30406d4fca63e55da6900f917fdbd96880737d2306495"
+      "sha256": "cc4e78da592e63d1bc7e705663dbd71373502ac41b39202a565f778e95795a36"
     },
     {
       "fileName": "connect-the-dots.json",
-      "sha256": "f916a87a1d8281562713aec9cdf4f5b389e4276056893ef510fdd1221924c750"
+      "sha256": "508e7fffdf915eab1f990c26c5d77820c61eae024ecb0297123f40d19eb7e9eb"
     },
     {
       "fileName": "core-thesis.json",
-      "sha256": "1b42fe869ebfa45172634a4e437292baae3c3125105e8052c8ebc91cbfa4e106"
+      "sha256": "298464e54aa4a560c8c004c0a4e343dc8b9290472036dd5f2279c588270832e0"
     },
     {
       "fileName": "event-registry-delta.json",
-      "sha256": "fdca95e21aaa1ce75ea7554d3674e93fcfba405f9e0887c6b82ccb88a6f7f07b"
+      "sha256": "1d10e40197ac65a4dc762826da01fefe2b6d9c611ec173751d47cdcd411390dd"
     },
     {
       "fileName": "evidence-crosswalk.json",
-      "sha256": "4e585769bf13f781bd6e85ac7522b501c5efdb3c10e92ff92ff77edc933f27f9"
+      "sha256": "d2c2daf75069e27b3d4dedd293e4201c3b5afe4efe6ec8ebb85b8b26aba2d5eb"
     },
     {
       "fileName": "financial-decision-intelligence.json",
-      "sha256": "14b16dd4671cd81da30a2df785015ccfc983cd55ba4ad6c0e37ee9787210d962"
+      "sha256": "19615004278a2012a14aa470236cbb86b7c2b1cdaee25d5ecc146b22fafe5078"
     },
     {
       "fileName": "google-sheets-dry-run.json",
-      "sha256": "807c97922bc7b1ef5dec2306615b2a61a0d185d464fddc6eead60f989869c05e"
+      "sha256": "3b9375da2b31ca97caaab7aaa9c65dbd5d168c1691669a2811ea2aa6a5a93ff1"
     },
     {
       "fileName": "latest-candidate.json",
-      "sha256": "b7c7528b314927ec0197b5db2fe04fe6632036dc8603a5c021c51135a00ba7a2"
+      "sha256": "848146a356dcfccd57d005bedd1e397853f70b0fe5368bff64826ebb54f407d7"
     },
     {
       "fileName": "macro-to-micro.json",
-      "sha256": "96307efd8bee18df3f4aab35c7ea38ac7017de77e290e8c5c953585cc6adbef5"
+      "sha256": "aaca61b07842ac507ad47a94078c197c5025811a4657a2a62a2e88cef742d6b8"
     },
     {
       "fileName": "magspread-edition-candidate.json",
-      "sha256": "9ab1ffec73a6136fd58e622892db7c8fc4095072f529a5f3de4c5abaf87130f9"
+      "sha256": "04cde7c7a3f76030cfd559174d578c6bee42573ecd3238a373abaa5224d4b241"
     },
     {
       "fileName": "market-pulse-discovery-audit.json",
-      "sha256": "9be8e6d48771088b0f1a4fda00d9f4ee3cde0810fc01c11c431b9d35eb0020aa"
+      "sha256": "fa073e4da39d5cbf424a9e0fbc61b553b83bf79bb425e68b94f3fc06383a4a49"
     },
     {
       "fileName": "market-pulse.json",
-      "sha256": "3c97d94e8c18274daa38fb14446de022a9754c94c3122d379dc40ecdd64f03a1"
+      "sha256": "693ada510e4fd679921231a9c7ed560f6f0ff086579a45fbd44f214d29c61cd7"
     },
     {
       "fileName": "payment-radar.json",
-      "sha256": "1652cd415325acaa690b02efd6850aa0391de1c6e08b6fe1a33236ab79bca2ad"
+      "sha256": "d926de8d744e4e1013b9fd6008fd2a4b45979251b3b3775f26a3f7abe561af5b"
     },
     {
       "fileName": "post-cutoff-evidence.json",
-      "sha256": "d84eed5499c5297f8ef06baeb79544f9e23fe73fe453dde98ea384352fbf6100"
+      "sha256": "b5e5bee9a3f6ec454818d8969b913e617f7319d09fb583ae6409a718302a4feb"
     },
     {
       "fileName": "rejected-candidates.json",
-      "sha256": "98f2d70aafefbd119d892cf77d641b7c5561dc80b35b1755a5ac0ac8b5fd00d3"
+      "sha256": "f8cdee86896e794ddd0434012ef5f8b3fce04498d3dfecf5e7bbcfadc18e3dba"
     },
     {
       "fileName": "source-ledger.json",
-      "sha256": "bbe39e531195083d5030ecfa612e9c39b537fa93e14b7ed7dd32e77d21cbe49d"
+      "sha256": "1f535747a1c17bede4efb1e12083b5b2a775a00ec431db97731f5991af312b36"
     },
     {
       "fileName": "validation-report.json",
-      "sha256": "98d27492e7235e878dd1957107f67f6f7dc72b9d66feeadafbb2a65b6b215f80"
+      "sha256": "8f34943b3c364e302315a66366524044f4106c7a4ec6ef988b5e48987ea8bd64"
     },
     {
       "fileName": "verified-news.json",
-      "sha256": "eee45fea9de16458c8d4e9625f4c093ed83d190d92a6ad551a3e9e4cb4bf5f24"
+      "sha256": "74714a460c842abe4ff5579869f6197040bfa886cdb807fa25351897b0270b03"
     }
   ]
 }

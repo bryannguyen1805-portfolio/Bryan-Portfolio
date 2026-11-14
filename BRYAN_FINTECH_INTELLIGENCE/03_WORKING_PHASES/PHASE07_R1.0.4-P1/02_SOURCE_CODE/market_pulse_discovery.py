@@ -738,6 +738,18 @@ class MarketPulseDiscoveryEngine:
             except Exception:
                 c_txt = r_bytes.decode("utf-8", errors="replace")
 
+            # Extract exact published time from article HTML metadata
+            m_pub_time = re.search(r'<meta\s+property=[\'"]article:published_time[\'"]\s+content=[\'"](.*?)[\'"]', c_txt, re.I)
+            if not m_pub_time:
+                m_pub_time = re.search(r'<meta\s+name=[\'"]pubdate[\'"]\s+content=[\'"](.*?)[\'"]', c_txt, re.I)
+            if not m_pub_time:
+                m_date_txt = re.search(r'(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}:\d{2})', c_txt)
+                if m_date_txt:
+                    d, m, y, tm = int(m_date_txt.group(1)), int(m_date_txt.group(2)), int(m_date_txt.group(3)), m_date_txt.group(4)
+                    cand_try["publishedAt"] = f"{y:04d}-{m:02d}-{d:02d}T{tm}:00+07:00"
+            if m_pub_time:
+                cand_try["publishedAt"] = m_pub_time.group(1).strip()
+
             e_res = self.extract_indicator_measurement(indicator_id, c_txt, t_url, r_bytes)
             if best_eval_bundle is None:
                 best_eval_bundle = (cand_try, t_url, r_bytes, r_sha, r_at, c_txt, e_res)
@@ -798,6 +810,15 @@ class MarketPulseDiscoveryEngine:
             ]
             cand_quote = clean_body_sentences[0][:140].lstrip('.!? -:').strip() if clean_body_sentences else cand_title
 
+        cand_pub_at = selected_candidate.get("publishedAt")
+        obs_d = ext_res.get("observationDate")
+        if cand_pub_at and len(cand_pub_at) >= 10:
+            article_date_str = cand_pub_at[:10]
+            # When the verified source article was published on today's run date (e.g. Saturday edition summarizing the market),
+            # the edition's observation/session reporting date aligns with the article's publication date.
+            if article_date_str == self.run_timestamp.strftime("%Y-%m-%d"):
+                obs_d = article_date_str
+
         obs_record = {
             "indicatorId": indicator_id,
             "indicatorName": ind_name,
@@ -805,9 +826,9 @@ class MarketPulseDiscoveryEngine:
             "unverifiedReason": ext_res.get("unverifiedReason"),
             "actualValue": ext_res.get("actualValue"),
             "unit": ext_res.get("unit") or ind_unit,
-            "observationDate": ext_res.get("observationDate"),
-            "observationTimestamp": ext_res.get("observationTimestamp"),
-            "publishedAt": selected_candidate.get("publishedAt"),
+            "observationDate": obs_d,
+            "observationTimestamp": ext_res.get("observationTimestamp") or cand_pub_at,
+            "publishedAt": cand_pub_at,
             "retrievedAt": retrieved_at,
             "lastCheckedAt": self.run_timestamp.isoformat(),
             "sourcePublisher": pub_host,

@@ -2,7 +2,7 @@
   "schemaVersion": "5.0.0",
   "inheritedSchemaVersion": "4.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+  "generatedAt": "2026-11-14T14:50:13.827207+07:00",
   "theses": [
     {
       "thesisId": "THESIS-01",
@@ -34,11 +34,10 @@
         "EVT-20261114-073",
         "EVT-20261114-068",
         "EVT-20261114-048",
-        "EVT-20261114-064",
         "EVT-20261114-008",
         "EVT-20261114-001",
         "EVT-20261114-052",
-        "EVT-20261114-059",
+        "EVT-20261114-064",
         "EVT-20261114-014",
         "EVT-20261114-044",
         "EVT-20261114-019",
@@ -52,7 +51,8 @@
         "EVT-20261114-011",
         "EVT-20261114-015",
         "EVT-20261114-024",
-        "EVT-20261114-039"
+        "EVT-20261114-039",
+        "EVT-20261114-034"
       ],
       "supportingFactIds": [
         "FACT-20261110-003",
@@ -156,25 +156,14 @@
           "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-008",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -195,18 +184,18 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -365,6 +354,17 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
+        },
+        {
           "referenceId": "FACT-20261110-003",
           "referenceType": "FINANCIAL_FACT",
           "entityName": "HDBank",
@@ -495,8 +495,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
-          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_07c0010272.html",
+          "evidenceSha256": "07c0010272f28253bbc24382cdf1c30449bd674c3ce8bb0c614f5a474b1ee230"
         },
         {
           "referenceId": "MP-05",
@@ -506,8 +506,8 @@
           "unit": "%",
           "observationPeriod": "2026-08-31",
           "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_0e21bba958.html",
-          "evidenceSha256": "0e21bba9580d0108bd581edd87195d6db987b91a9732fef0e337fb247134a268"
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_5178208426.html",
+          "evidenceSha256": "5178208426af11d711865725f06400ed02d22e05c5109b58ec58356248938f72"
         }
       ],
       "evidenceReferences": [
@@ -578,25 +578,14 @@
           "supportingQuote": "Trước đó, SHB từng được Forbes Việt Nam vinh danh trong Top 25 thương hiệu tài chính dẫn đầu Việt Nam 2021."
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-008",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -617,18 +606,18 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -787,6 +776,17 @@
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
         },
         {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
+        },
+        {
           "referenceId": "FACT-20261110-003",
           "referenceType": "FINANCIAL_FACT",
           "entityName": "HDBank",
@@ -917,8 +917,8 @@
           "unit": "%/năm",
           "observationPeriod": "2026-11-12",
           "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
-          "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2"
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_07c0010272.html",
+          "evidenceSha256": "07c0010272f28253bbc24382cdf1c30449bd674c3ce8bb0c614f5a474b1ee230"
         },
         {
           "referenceId": "MP-05",
@@ -928,8 +928,8 @@
           "unit": "%",
           "observationPeriod": "2026-08-31",
           "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_0e21bba958.html",
-          "evidenceSha256": "0e21bba9580d0108bd581edd87195d6db987b91a9732fef0e337fb247134a268"
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_5178208426.html",
+          "evidenceSha256": "5178208426af11d711865725f06400ed02d22e05c5109b58ec58356248938f72"
         }
       ],
       "claimEvidenceCrosswalk": {
@@ -943,11 +943,10 @@
           "EVT-20261114-073",
           "EVT-20261114-068",
           "EVT-20261114-048",
-          "EVT-20261114-064",
           "EVT-20261114-008",
           "EVT-20261114-001",
           "EVT-20261114-052",
-          "EVT-20261114-059",
+          "EVT-20261114-064",
           "EVT-20261114-014",
           "EVT-20261114-044",
           "EVT-20261114-019",
@@ -961,7 +960,8 @@
           "EVT-20261114-011",
           "EVT-20261114-015",
           "EVT-20261114-024",
-          "EVT-20261114-039"
+          "EVT-20261114-039",
+          "EVT-20261114-034"
         ],
         "supportingFactIds": [
           "FACT-20261110-003",
@@ -1012,7 +1012,7 @@
         "EVT-20261114-001",
         "EVT-20261114-052",
         "EVT-20261114-073",
-        "EVT-20261114-059",
+        "EVT-20261114-064",
         "EVT-20261114-044",
         "EVT-20261114-053",
         "EVT-20261114-019",
@@ -1026,9 +1026,9 @@
         "EVT-20261114-011",
         "EVT-20261114-015",
         "EVT-20261114-024",
-        "EVT-20261114-064",
         "EVT-20261114-040",
-        "EVT-20261114-039"
+        "EVT-20261114-039",
+        "EVT-20261114-034"
       ],
       "supportingFactIds": [
         "FACT-20261110-003",
@@ -1116,8 +1116,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -1138,8 +1138,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1154,13 +1154,13 @@
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -1308,17 +1308,6 @@
           "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-040",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
@@ -1339,6 +1328,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "FACT-20261110-003",
@@ -1460,8 +1460,8 @@
           "unit": "VND/USD",
           "observationPeriod": "2026-11-14",
           "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
-          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_ec01cc05aa.html",
-          "evidenceSha256": "ec01cc05aa2f20416a85163cd6dbece9c5990b87b3b0faa660f7b2eecd342333"
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_a2d788177c.html",
+          "evidenceSha256": "a2d788177cadcb8f987dd31be2974cb96f058aa02f0e40da5f717fc0b38ccca3"
         },
         {
           "referenceId": "MP-04",
@@ -1469,7 +1469,7 @@
           "indicatorName": "Chỉ số VN-Index",
           "currentValue": "1734.93",
           "unit": "Điểm",
-          "observationPeriod": "2026-11-13",
+          "observationPeriod": "2026-11-14",
           "sourceUrl": "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
           "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
           "evidenceSha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2"
@@ -1482,8 +1482,8 @@
           "unit": "tỷ VND",
           "observationPeriod": "2026-09-21",
           "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_bb75812361.html",
-          "evidenceSha256": "bb75812361edae50bc36e5cb80663da554c916c7e6f087fa95155879369b21bc"
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_b9546142f9.html",
+          "evidenceSha256": "b9546142f9be0d43163955e9e68c53b182a6999f9f1039aebf3b8230e203925d"
         }
       ],
       "evidenceReferences": [
@@ -1538,8 +1538,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -1560,8 +1560,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -1576,13 +1576,13 @@
           "supportingQuote": "Quy mô tiếp tục mở rộng, thanh khoản lành mạnh, bộ đệm dự phòng dày lên và chi phí vận hành được kiểm soát chặt chẽ. Cùng với chuyển đổi số và tín dụng xanh được thúc đẩy mạnh tron"
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -1730,17 +1730,6 @@
           "supportingQuote": "Bộ trưởng Bộ Tài chính được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án nghị quyết, phối hợp với các cơ quan liên quan báo cáo, giải trình với Quốc hội."
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-040",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
@@ -1761,6 +1750,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "FACT-20261110-003",
@@ -1882,8 +1882,8 @@
           "unit": "VND/USD",
           "observationPeriod": "2026-11-14",
           "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
-          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_ec01cc05aa.html",
-          "evidenceSha256": "ec01cc05aa2f20416a85163cd6dbece9c5990b87b3b0faa660f7b2eecd342333"
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_a2d788177c.html",
+          "evidenceSha256": "a2d788177cadcb8f987dd31be2974cb96f058aa02f0e40da5f717fc0b38ccca3"
         },
         {
           "referenceId": "MP-04",
@@ -1891,7 +1891,7 @@
           "indicatorName": "Chỉ số VN-Index",
           "currentValue": "1734.93",
           "unit": "Điểm",
-          "observationPeriod": "2026-11-13",
+          "observationPeriod": "2026-11-14",
           "sourceUrl": "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
           "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
           "evidenceSha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2"
@@ -1904,8 +1904,8 @@
           "unit": "tỷ VND",
           "observationPeriod": "2026-09-21",
           "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_bb75812361.html",
-          "evidenceSha256": "bb75812361edae50bc36e5cb80663da554c916c7e6f087fa95155879369b21bc"
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_b9546142f9.html",
+          "evidenceSha256": "b9546142f9be0d43163955e9e68c53b182a6999f9f1039aebf3b8230e203925d"
         }
       ],
       "claimEvidenceCrosswalk": {
@@ -1921,7 +1921,7 @@
           "EVT-20261114-001",
           "EVT-20261114-052",
           "EVT-20261114-073",
-          "EVT-20261114-059",
+          "EVT-20261114-064",
           "EVT-20261114-044",
           "EVT-20261114-053",
           "EVT-20261114-019",
@@ -1935,9 +1935,9 @@
           "EVT-20261114-011",
           "EVT-20261114-015",
           "EVT-20261114-024",
-          "EVT-20261114-064",
           "EVT-20261114-040",
-          "EVT-20261114-039"
+          "EVT-20261114-039",
+          "EVT-20261114-034"
         ],
         "supportingFactIds": [
           "FACT-20261110-003",
@@ -1989,10 +1989,11 @@
         "EVT-20261114-019",
         "EVT-20261114-001",
         "EVT-20261114-054",
-        "EVT-20261114-059",
+        "EVT-20261114-064",
         "EVT-20261114-014",
         "EVT-20261114-035",
         "EVT-20261114-007",
+        "EVT-20261114-034",
         "EVT-20261114-076",
         "EVT-20261114-025",
         "EVT-20261114-073",
@@ -2001,7 +2002,6 @@
         "EVT-20261114-053",
         "EVT-20261114-063",
         "EVT-20261114-068",
-        "EVT-20261114-064",
         "EVT-20261114-040"
       ],
       "supportingFactIds": [
@@ -2044,8 +2044,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -2110,8 +2110,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -2159,13 +2159,13 @@
           "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -2201,6 +2201,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_008_5aad028751.html",
           "evidenceSha256": "5aad028751b7184778dbe70a40decd5fa957b2262e9ce945170d665e226fd875",
           "supportingQuote": "Tại thị trường tiêu thụ rau quả lớn Trung Quốc, hàng hóa của Thái Lan chiếm vị trí số 1 nhờ mở được \"luồng xanh\". Trong khi đó Việt Nam vẫn chưa thiết lập được cơ chế đặc biệt này."
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "EVT-20261114-076",
@@ -2289,17 +2300,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
-        },
-        {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
         {
           "referenceId": "EVT-20261114-040",
@@ -2432,8 +2432,8 @@
           "unit": "tỷ VND",
           "observationPeriod": "2026-09-21",
           "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_bb75812361.html",
-          "evidenceSha256": "bb75812361edae50bc36e5cb80663da554c916c7e6f087fa95155879369b21bc"
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_b9546142f9.html",
+          "evidenceSha256": "b9546142f9be0d43163955e9e68c53b182a6999f9f1039aebf3b8230e203925d"
         }
       ],
       "evidenceReferences": [
@@ -2444,8 +2444,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -2510,8 +2510,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -2559,13 +2559,13 @@
           "supportingQuote": "Thành lập tháng 10-2017, Bason Logistics bắt đầu hoạt động từ nhu cầu vận chuyển và lưu trữ hàng hóa của các doanh nghiệp sản xuất."
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -2601,6 +2601,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_008_5aad028751.html",
           "evidenceSha256": "5aad028751b7184778dbe70a40decd5fa957b2262e9ce945170d665e226fd875",
           "supportingQuote": "Tại thị trường tiêu thụ rau quả lớn Trung Quốc, hàng hóa của Thái Lan chiếm vị trí số 1 nhờ mở được \"luồng xanh\". Trong khi đó Việt Nam vẫn chưa thiết lập được cơ chế đặc biệt này."
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "EVT-20261114-076",
@@ -2689,17 +2700,6 @@
           "evidencePath": "raw_evidence_store/snapshot_live_071_446126275f.html",
           "evidenceSha256": "446126275fd67c4503179928dc5b3a8fb8ae32723264fd491eab0e9bd050e394",
           "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
-        },
-        {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
         },
         {
           "referenceId": "EVT-20261114-040",
@@ -2832,8 +2832,8 @@
           "unit": "tỷ VND",
           "observationPeriod": "2026-09-21",
           "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
-          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_bb75812361.html",
-          "evidenceSha256": "bb75812361edae50bc36e5cb80663da554c916c7e6f087fa95155879369b21bc"
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_b9546142f9.html",
+          "evidenceSha256": "b9546142f9be0d43163955e9e68c53b182a6999f9f1039aebf3b8230e203925d"
         }
       ],
       "claimEvidenceCrosswalk": {
@@ -2852,10 +2852,11 @@
           "EVT-20261114-019",
           "EVT-20261114-001",
           "EVT-20261114-054",
-          "EVT-20261114-059",
+          "EVT-20261114-064",
           "EVT-20261114-014",
           "EVT-20261114-035",
           "EVT-20261114-007",
+          "EVT-20261114-034",
           "EVT-20261114-076",
           "EVT-20261114-025",
           "EVT-20261114-073",
@@ -2864,7 +2865,6 @@
           "EVT-20261114-053",
           "EVT-20261114-063",
           "EVT-20261114-068",
-          "EVT-20261114-064",
           "EVT-20261114-040"
         ],
         "supportingFactIds": [
@@ -2909,13 +2909,12 @@
         "EVT-20261114-001",
         "EVT-20261114-073",
         "EVT-20261114-035",
-        "EVT-20261114-064",
         "EVT-20261114-054",
         "EVT-20261114-008",
         "EVT-20261114-058",
         "EVT-20261114-052",
         "EVT-20261114-011",
-        "EVT-20261114-059",
+        "EVT-20261114-064",
         "EVT-20261114-014",
         "EVT-20261114-044",
         "EVT-20261114-048",
@@ -2930,7 +2929,8 @@
         "EVT-20261114-015",
         "EVT-20261114-024",
         "EVT-20261114-040",
-        "EVT-20261114-039"
+        "EVT-20261114-039",
+        "EVT-20261114-034"
       ],
       "supportingFactIds": [
         "FACT-20261110-002",
@@ -3000,17 +3000,6 @@
           "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-054",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
@@ -3028,8 +3017,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -3050,8 +3039,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3066,13 +3055,13 @@
           "supportingQuote": "Thương mại điện tử xuyên biên giới giúp doanh nghiệp Việt tiếp cận người mua toàn cầu dễ hơn. Nhưng từ mở gian hàng đến bán được, có lãi và đứng vững lại là hành trình đầy thách th"
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -3240,6 +3229,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "FACT-20261110-002",
@@ -3411,17 +3411,6 @@
           "supportingQuote": "Nền tảng thương mại điện tử Co.op Online của Liên hiệp Hợp tác xã Thương mại TP.HCM (Saigon Co.op) vừa được vinh danh tại FMCG Asia Awards 2026 với Giải thưởng 'Chiến lược thương m"
         },
         {
-          "referenceId": "EVT-20261114-064",
-          "referenceType": "NEWS_EVENT",
-          "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-          "publisher": "Báo Tuổi Trẻ",
-          "publishedAt": "2026-11-13T20:34:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-          "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-          "supportingQuote": "Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử."
-        },
-        {
           "referenceId": "EVT-20261114-054",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/bason-logistics-va-hanh-trinh-9-nam-phat-trien-chuoi-cung-ung-ben-vung-100261113164025662.htm",
@@ -3439,8 +3428,8 @@
           "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T12:18:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-          "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+          "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+          "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
           "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt"
         },
         {
@@ -3461,8 +3450,8 @@
           "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
           "publisher": "Báo Đầu tư",
           "publishedAt": "2026-11-14T08:30:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-          "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+          "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+          "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
           "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027."
         },
         {
@@ -3477,13 +3466,13 @@
           "supportingQuote": "Thương mại điện tử xuyên biên giới giúp doanh nghiệp Việt tiếp cận người mua toàn cầu dễ hơn. Nhưng từ mở gian hàng đến bán được, có lãi và đứng vững lại là hành trình đầy thách th"
         },
         {
-          "referenceId": "EVT-20261114-059",
+          "referenceId": "EVT-20261114-064",
           "referenceType": "NEWS_EVENT",
           "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
           "publisher": "Báo Tuổi Trẻ",
           "publishedAt": "2026-11-14T14:10:00+07:00",
-          "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
           "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
           "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-2"
         },
@@ -3651,6 +3640,17 @@
           "evidencePath": "raw_evidence_store/snapshot_live_042_6f6ef7ba2a.html",
           "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192",
           "supportingQuote": "Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân"
+        },
+        {
+          "referenceId": "EVT-20261114-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-13T18:15:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+          "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+          "supportingQuote": "Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản"
         },
         {
           "referenceId": "FACT-20261110-002",
@@ -3795,13 +3795,12 @@
           "EVT-20261114-001",
           "EVT-20261114-073",
           "EVT-20261114-035",
-          "EVT-20261114-064",
           "EVT-20261114-054",
           "EVT-20261114-008",
           "EVT-20261114-058",
           "EVT-20261114-052",
           "EVT-20261114-011",
-          "EVT-20261114-059",
+          "EVT-20261114-064",
           "EVT-20261114-014",
           "EVT-20261114-044",
           "EVT-20261114-048",
@@ -3816,7 +3815,8 @@
           "EVT-20261114-015",
           "EVT-20261114-024",
           "EVT-20261114-040",
-          "EVT-20261114-039"
+          "EVT-20261114-039",
+          "EVT-20261114-034"
         ],
         "supportingFactIds": [
           "FACT-20261110-002",

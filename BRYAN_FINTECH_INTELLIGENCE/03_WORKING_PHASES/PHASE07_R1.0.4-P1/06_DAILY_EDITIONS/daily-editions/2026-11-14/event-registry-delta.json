@@ -1,11 +1,11 @@
 {
   "schemaVersion": "5.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+  "generatedAt": "2026-11-14T14:50:13.827207+07:00",
   "newlyRegisteredEventsCount": 25,
   "events": [
     {
-      "eventId": "EVT-20261114-059",
+      "eventId": "EVT-20261114-064",
       "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
       "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
       "publisher": "Báo Tuổi Trẻ",
@@ -42,7 +42,7 @@
       "headline": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
       "publisher": "Báo Đầu tư",
       "publishedAt": "2026-11-14T12:18:00+07:00",
-      "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02"
+      "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d"
     },
     {
       "eventId": "EVT-20261114-053",
@@ -122,7 +122,7 @@
       "headline": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
       "publisher": "Báo Đầu tư",
       "publishedAt": "2026-11-14T08:30:00+07:00",
-      "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895"
+      "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a"
     },
     {
       "eventId": "EVT-20261114-035",
@@ -181,14 +181,6 @@
       "evidenceSha256": "9305aa3ba27769cdf281e190f500c2480fb8e710730d829bdf69fc45c837276e"
     },
     {
-      "eventId": "EVT-20261114-064",
-      "canonicalUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-      "headline": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-13T20:34:00+07:00",
-      "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8"
-    },
-    {
       "eventId": "EVT-20261114-040",
       "canonicalUrl": "https://thanhnien.vn/vietinbank-premium-cong-bo-ba-phan-hang-khach-hang-uu-tien-moi-185261112160754474.htm",
       "headline": "VietinBank Premium công bố ba phân hạng Khách hàng Ưu tiên mới",
@@ -203,6 +195,14 @@
       "publisher": "Báo Tuổi Trẻ",
       "publishedAt": "2026-11-13T19:21:00+07:00",
       "evidenceSha256": "6f6ef7ba2a5a9efd60aa4cabacb6cc6802e12b4233ae3b64a9c12d954aa53192"
+    },
+    {
+      "eventId": "EVT-20261114-034",
+      "canonicalUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+      "headline": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-13T18:15:00+07:00",
+      "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c"
     }
   ]
 }

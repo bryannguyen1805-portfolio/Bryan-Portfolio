@@ -5,7 +5,7 @@
   "status": "ready",
   "editionId": "ED-20261114-D01",
   "date": "14/11/2026",
-  "publishedAt": "2026-11-14T14:29:02.377323+07:00",
+  "publishedAt": "2026-11-14T14:50:13.827207+07:00",
   "researchWindow": "24H-FIRST (25/25 sự kiện 0–24h, đạt 100.0%)",
   "highlightQuote": "Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng",
   "thesis": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Ngân hàng cam kết 1.000 tỷ đồng giúp ông Lê Thanh Thản khắc phục CT6 Kiến Hưng' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
@@ -37,7 +37,7 @@
       "label": "MP-04 · Chỉ số VN-Index",
       "value": "1734.93 Điểm",
       "status": "ready",
-      "note": "Kỳ quan sát: 2026-11-13 | Trạng thái: NEW_OBSERVATION_VERIFIED"
+      "note": "Kỳ quan sát: 2026-11-14 | Trạng thái: NEW_OBSERVATION_VERIFIED"
     },
     {
       "indicatorId": "MP-05",
@@ -128,7 +128,7 @@
   ],
   "newsList": [
     {
-      "eventId": "EVT-20261114-059",
+      "eventId": "EVT-20261114-064",
       "rank": 1,
       "tier": "Tier 1",
       "category": "Consumer, Doanh nghiệp & Thương mại",
@@ -502,25 +502,8 @@
       "takeaway": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
     },
     {
-      "eventId": "EVT-20261114-064",
-      "rank": 23,
-      "tier": "Tier 1",
-      "category": "Banking & Tín dụng Ngân hàng",
-      "source": "Báo Tuổi Trẻ",
-      "url": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-      "publishedAt": "2026-11-13T20:34:00+07:00",
-      "title": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-      "summary": "Hưởng ứng chương trình kích cầu của TP.HCM, các siêu thị tăng nguồn hàng, giữ giá hàng thiết yếu và triển khai nhiều ưu đãi, mang đến cơ hội mua sắm tiết kiệm cho người dân dịp cuối năm.",
-      "explanation": "Dữ kiện xác minh (0_TO_24H): Từ ngày 11 đến 15-11, TP.HCM triển khai tuần lễ mua sắm, kích cầu cao điểm tại các siêu thị, trung tâm thương mại, điểm bán lẻ và sàn thương mại điện tử.",
-      "fintechImpact": "Lĩnh vực nghiên cứu: Deposit & lending interest rates | Đối chiếu Payment Radar & truyền dẫn vĩ mô.",
-      "importance": "Tác động lan tỏa của biến số Lãi suất (7,8%/năm) gắn với HDBank tới hoạt động của các chủ thể trong ngành Ngân hàng, Tín dụng & Lãi suất.",
-      "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
-      "prediction": "[Nhận định có điều kiện]: Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế",
-      "takeaway": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
-    },
-    {
       "eventId": "EVT-20261114-040",
-      "rank": 24,
+      "rank": 23,
       "tier": "Tier 1",
       "category": "Banking & Tín dụng Ngân hàng",
       "source": "Báo Thanh Niên",
@@ -537,7 +520,7 @@
     },
     {
       "eventId": "EVT-20261114-039",
-      "rank": 25,
+      "rank": 24,
       "tier": "Tier 1",
       "category": "Consumer, Doanh nghiệp & Thương mại",
       "source": "Báo Tuổi Trẻ",
@@ -546,6 +529,23 @@
       "title": "Quảng Trị thu hơn 3.000 tỉ đồng ngân sách trong một tháng, tiền đến từ đâu?",
       "summary": "Con số thu ngân sách của tỉnh Quảng Trị chỉ trong tháng 10 đạt hơn 3.000 tỉ đồng đang khiến nhiều người ngạc nhiên vì tổng 9 tháng trước đó chỉ đạt hơn 9.000 tỉ đồng. Vậy con số này đến từ đâu?",
       "explanation": "Dữ kiện xác minh (0_TO_24H): Ngày 13-11, thông tin từ UBND tỉnh Quảng Trị cho biết tỉnh này vừa có thống kê tổng thu ngân sách nhà nước toàn tỉnh trong tháng 10-2026 là hơn 3.000 tỉ đồng, vượt xa mức bình quân",
+      "fintechImpact": "Lĩnh vực nghiên cứu: Macroeconomic policy | Đối chiếu Payment Radar & truyền dẫn vĩ mô.",
+      "importance": "Tác động lan tỏa của biến số Lãi suất (7,8%/năm) gắn với HDBank tới hoạt động của các chủ thể trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",
+      "prediction": "[Nhận định có điều kiện]: Mở rộng Chấp nhận Thanh toán cho Du lịch, Khách sạn & Bán lẻ Quốc tế",
+      "takeaway": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
+    },
+    {
+      "eventId": "EVT-20261114-034",
+      "rank": 25,
+      "tier": "Tier 1",
+      "category": "Consumer, Doanh nghiệp & Thương mại",
+      "source": "Báo Tuổi Trẻ",
+      "url": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+      "publishedAt": "2026-11-13T18:15:00+07:00",
+      "title": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+      "summary": "Cục Đăng kiểm Việt Nam đang lấy ý kiến sửa đổi, bổ sung một số điều của các Nghị định trong lĩnh vực sản xuất, lắp ráp, nhập khẩu phương tiện giao thông đường bộ.",
+      "explanation": "Dữ kiện xác minh (0_TO_24H): Theo Cục Đăng kiểm, qua rà soát việc thực hiện Nghị định số 116/2017 quy định điều kiện sản xuất, lắp ráp, nhập khẩu và kinh doanh dịch vụ bảo hành, bảo dưỡng ô tô cùng các văn bản",
       "fintechImpact": "Lĩnh vực nghiên cứu: Macroeconomic policy | Đối chiếu Payment Radar & truyền dẫn vĩ mô.",
       "importance": "Tác động lan tỏa của biến số Lãi suất (7,8%/năm) gắn với HDBank tới hoạt động của các chủ thể trong ngành Ngân hàng, Tín dụng & Lãi suất.",
       "macroToMicro": "Cam kết bảo lãnh tín dụng 1.000 tỷ đồng từ hệ thống ngân hàng giúp tháo gỡ điểm nghẽn pháp lý dự án tồn đọng, khơi thông dòng tiền tái thiết, bảo vệ quyền lợi cư dân và củng cố niềm tin thị trường tài chính.",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "5.0.0",
   "editionId": "ED-20261114-D01",
-  "generatedAt": "2026-11-14T14:29:02.377323+07:00",
+  "generatedAt": "2026-11-14T14:50:13.827207+07:00",
   "summary": {
     "totalVerifiedNewsEvents": 25,
     "totalRawFinancialFacts": 7,
@@ -19,13 +19,13 @@
   },
   "newsEventCrosswalk": [
     {
-      "eventId": "EVT-20261114-059",
+      "eventId": "EVT-20261114-064",
       "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
       "publisher": "Báo Tuổi Trẻ",
       "publishedAt": "2026-11-14T14:10:00+07:00",
       "freshnessBucket": "0_TO_24H",
       "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
-      "evidencePath": "raw_evidence_store/snapshot_live_062_2474d03e4d.html",
+      "evidencePath": "raw_evidence_store/snapshot_live_067_2474d03e4d.html",
       "evidenceSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
       "referencedByTheses": [
         "THESIS-01",
@@ -159,8 +159,8 @@
       "publishedAt": "2026-11-14T12:18:00+07:00",
       "freshnessBucket": "0_TO_24H",
       "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
-      "evidencePath": "raw_evidence_store/snapshot_live_010_a3239c827c.html",
-      "evidenceSha256": "a3239c827c7a9beded448ac8ce60c1978eae095513994a606568071505a1db02",
+      "evidencePath": "raw_evidence_store/snapshot_live_010_c2e1379af2.html",
+      "evidenceSha256": "c2e1379af2d9e71bf54234dc5efddb7fa275bac1b2b354878aba6b46c6b9786d",
       "referencedByTheses": [
         "THESIS-01",
         "THESIS-02",
@@ -495,8 +495,8 @@
       "publishedAt": "2026-11-14T08:30:00+07:00",
       "freshnessBucket": "0_TO_24H",
       "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-      "evidencePath": "raw_evidence_store/snapshot_live_055_d18c0c567c.html",
-      "evidenceSha256": "d18c0c567cf70d628f6808db44cecc2b696bda79e41f18a7aca6f04c336aa895",
+      "evidencePath": "raw_evidence_store/snapshot_live_055_56ff29afb7.html",
+      "evidenceSha256": "56ff29afb78ea82ba4f5c333e05637f2b784563b6a3669d4b4e361cc56a0fd4a",
       "referencedByTheses": [
         "THESIS-01",
         "THESIS-02",
@@ -759,42 +759,6 @@
       ]
     },
     {
-      "eventId": "EVT-20261114-064",
-      "headline": "Các nhà bán lẻ chuẩn bị gì cho chiến dịch kích cầu cuối năm?",
-      "publisher": "Báo Tuổi Trẻ",
-      "publishedAt": "2026-11-13T20:34:00+07:00",
-      "freshnessBucket": "0_TO_24H",
-      "sourceUrl": "https://tuoitre.vn/cac-nha-ban-le-chuan-bi-gi-cho-chien-dich-kich-cau-cuoi-nam-100261113180231494.htm",
-      "evidencePath": "raw_evidence_store/snapshot_live_067_dae6f0cc17.html",
-      "evidenceSha256": "dae6f0cc17bf911bbefab34d8c32e7b385b7bf6ee9e9a1a9d2473ebd4e57e0c8",
-      "referencedByTheses": [
-        "THESIS-01",
-        "THESIS-02",
-        "THESIS-03",
-        "THESIS-04"
-      ],
-      "referencedByChains": [
-        "CHAIN-01",
-        "CHAIN-02",
-        "CHAIN-03",
-        "CHAIN-04"
-      ],
-      "referencedByRadars": [
-        "RADAR-03"
-      ],
-      "referencedByDecisions": [
-        "DECISION-01",
-        "DECISION-03",
-        "DECISION-04"
-      ],
-      "referencedByConnectTheDots": [
-        "DOT-01",
-        "DOT-02",
-        "DOT-03",
-        "DOT-04"
-      ]
-    },
-    {
       "eventId": "EVT-20261114-040",
       "headline": "VietinBank Premium công bố ba phân hạng Khách hàng Ưu tiên mới",
       "publisher": "Báo Thanh Niên",
@@ -853,6 +817,39 @@
       "referencedByRadars": [
         "RADAR-04"
       ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261114-034",
+      "headline": "Bỏ bớt điều kiện kinh doanh bảo hành ô tô: Chủ xe thêm lựa chọn nơi bảo hành giá rẻ hơn?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-13T18:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/bo-bot-dieu-kien-kinh-doanh-bao-hanh-o-to-chu-xe-them-lua-chon-noi-bao-hanh-gia-re-hon-100261113140814844.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_037_9fd2160788.html",
+      "evidenceSha256": "9fd216078857ad28723f423468e6efaf46f0b66451429bdedd6b48718920219c",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
       "referencedByDecisions": [
         "DECISION-01",
         "DECISION-03"
@@ -1102,8 +1099,8 @@
       "verificationStatus": "VERIFIED",
       "temporalClassification": "CURRENT_BUSINESS_DAY",
       "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
-      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_ec01cc05aa.html",
-      "evidenceSha256": "ec01cc05aa2f20416a85163cd6dbece9c5990b87b3b0faa660f7b2eecd342333",
+      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_a2d788177c.html",
+      "evidenceSha256": "a2d788177cadcb8f987dd31be2974cb96f058aa02f0e40da5f717fc0b38ccca3",
       "referencedByTheses": [
         "THESIS-02"
       ],
@@ -1152,8 +1149,8 @@
       "verificationStatus": "VERIFIED",
       "temporalClassification": "CURRENT_BUSINESS_DAY",
       "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
-      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_dd1fb73df8.html",
-      "evidenceSha256": "dd1fb73df86ea645d914a3aff8a2e785d61c89a8f9656c476e00516770374ef2",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_07c0010272.html",
+      "evidenceSha256": "07c0010272f28253bbc24382cdf1c30449bd674c3ce8bb0c614f5a474b1ee230",
       "referencedByTheses": [
         "THESIS-01"
       ],
@@ -1176,7 +1173,7 @@
       "indicatorName": "Chỉ số VN-Index",
       "actualValue": "1734.93",
       "unit": "Điểm",
-      "observationDate": "2026-11-13",
+      "observationDate": "2026-11-14",
       "updateStatus": "NEW_OBSERVATION_VERIFIED",
       "verificationStatus": "VERIFIED",
       "temporalClassification": "CURRENT_BUSINESS_DAY",
@@ -1205,8 +1202,8 @@
       "verificationStatus": "VERIFIED",
       "temporalClassification": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
       "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
-      "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_0e21bba958.html",
-      "evidenceSha256": "0e21bba9580d0108bd581edd87195d6db987b91a9732fef0e337fb247134a268",
+      "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_5178208426.html",
+      "evidenceSha256": "5178208426af11d711865725f06400ed02d22e05c5109b58ec58356248938f72",
       "referencedByTheses": [
         "THESIS-01"
       ],
@@ -1283,8 +1280,8 @@
       "verificationStatus": "VERIFIED",
       "temporalClassification": "HISTORICAL_EVENT_OPERATION_2026_09_21",
       "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
-      "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_bb75812361.html",
-      "evidenceSha256": "bb75812361edae50bc36e5cb80663da554c916c7e6f087fa95155879369b21bc",
+      "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_b9546142f9.html",
+      "evidenceSha256": "b9546142f9be0d43163955e9e68c53b182a6999f9f1039aebf3b8230e203925d",
       "referencedByTheses": [
         "THESIS-02",
         "THESIS-03"
