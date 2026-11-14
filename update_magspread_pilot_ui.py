@@ -23,6 +23,7 @@ import os
 import sys
 import json
 import argparse
+import re
 from datetime import datetime
 
 WORKSPACE_ROOT = "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity"
@@ -112,14 +113,19 @@ def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: di
         enrich = "Động thái can thiệp ngoại hối chủ động từ cơ quan quản lý giúp hạ nhiệt áp lực tỷ giá, khơi thông thanh khoản tiền đồng và củng cố niềm tin vào sự ổn định của kinh tế vĩ mô."
     elif any(k in hl_l for k in ["thuế", "nợ thuế", "hóa đơn", "xuất cảnh"]):
         enrich = "Kỷ cương siết chặt quản lý thuế và chế tài hóa đơn điện tử đặt ra yêu cầu tuân thủ cấp thiết, thúc đẩy các doanh nghiệp và hộ kinh doanh nhanh chóng số hóa sổ sách và minh bạch hóa dòng tiền."
+    elif any(k in hl_l for k in ["cam kết", "1.000 tỷ", "kiến hưng", "khắc phục", "bemes", "thản"]):
+        enrich = "Động thái bảo lãnh và cam kết tín dụng quy mô lớn phản ánh nỗ lực tháo gỡ điểm nghẽn pháp lý tài chính, củng cố thanh khoản và bảo toàn quyền lợi dòng tiền của khách hàng tại các dự án bất động sản trọng điểm."
     elif any(k in hl_l for k in ["chứng khoán", "cổ phiếu", "lên sàn", "gda"]):
         enrich = "Diễn biến niêm yết và tái cấu trúc danh mục phản ánh mức độ sàng lọc khắt khe của dòng vốn đầu tư đối với năng lực quản trị và tính minh bạch tài chính của doanh nghiệp."
     else:
         ctx = sections_dict.get("sectionB_context", "") or sections_dict.get("sectionC_whyItMatters", "")
-        if ctx and len(ctx) > 30 and len(ctx) < 160:
-            enrich = ctx.strip()
-            if not enrich.endswith("."):
-                enrich += "."
+        if ctx:
+            sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', ctx.strip()) if len(s.strip()) > 25]
+            if sentences:
+                cand = sentences[0]
+                if not cand.endswith("."):
+                    cand += "."
+                enrich = cand
 
     if enrich and enrich not in base:
         return f"{base} {enrich}".strip()

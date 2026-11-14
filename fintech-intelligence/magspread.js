@@ -499,6 +499,8 @@ function renderNewsDesk() {
     return;
   }
 
+  if (editorialGrid) editorialGrid.style.display = 'grid';
+
   // DYNAMIC REFLOW: ZERO ORPHAN POLICY FOR CATEGORY AND SEARCH FILTERS
   if (filtered.length === 1) {
     if (editorialGrid) {
@@ -543,6 +545,7 @@ function renderNewsDesk() {
         standardGrid.style.display = 'none';
       }
     }
+  }
   }
 }
 

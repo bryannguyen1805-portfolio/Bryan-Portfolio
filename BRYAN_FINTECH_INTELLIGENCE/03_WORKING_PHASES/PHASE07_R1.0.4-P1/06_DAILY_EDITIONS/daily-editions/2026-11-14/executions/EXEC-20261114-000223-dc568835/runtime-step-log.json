@@ -1,0 +1,350 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261114-D01",
+  "editionDate": "2026-11-14",
+  "executionId": "EXEC-20261114-000223-dc568835",
+  "executionMode": "LIVE",
+  "runTimestamp": "2026-11-14T00:02:23.574891+07:00",
+  "overallRuntimeStatus": "BLOCKED_OR_FAILED",
+  "publicationAllowed": false,
+  "productionStatus": "NOT_APPROVED",
+  "liveRetrievalReadiness": "LIVE_RETRIEVAL_FAILED",
+  "haltReason": "STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification.",
+  "totalSteps": 20,
+  "passedStepsCount": 4,
+  "failedStepsCount": 1,
+  "blockedStepsCount": 15,
+  "steps": [
+    {
+      "stepId": "STEP_01",
+      "stepNumber": 1,
+      "stepName": "Runtime Initialization & Config Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-14T00:02:23.575599+07:00",
+      "completedAt": "2026-11-14T00:02:23.576558+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_RUNTIME_CONFIG.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE06_DATA_CONTRACT_V4_0_0.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_DATA_CONTRACT_V5_0_0.json"
+      ],
+      "outputReferences": [
+        "state.runtime_config",
+        "state.contract_v4",
+        "state.contract_v5"
+      ],
+      "metrics": {
+        "configVersion": "7.0.4",
+        "contractVersion": "5.0.0",
+        "productionLocksVerifiedFalse": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_02",
+      "stepNumber": 2,
+      "stepName": "Timezone & Execution Window Calculation",
+      "status": "PASS",
+      "startedAt": "2026-11-14T00:02:23.576565+07:00",
+      "completedAt": "2026-11-14T00:02:23.576582+07:00",
+      "inputReferences": [
+        "run_timestamp"
+      ],
+      "outputReferences": [
+        "state.t0_iso",
+        "state.window_24h_start",
+        "state.window_72h_start"
+      ],
+      "metrics": {
+        "timezone": "Asia/Ho_Chi_Minh (UTC+07:00)",
+        "executionT0": "2026-11-14T00:02:23.574891+07:00",
+        "window0To24hStart": "2026-11-13T00:02:23.574891+07:00",
+        "windowMax72hStart": "2026-11-11T00:02:23.574891+07:00"
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_03",
+      "stepNumber": 3,
+      "stepName": "Historical Event Registry Loading",
+      "status": "PASS",
+      "startedAt": "2026-11-14T00:02:23.576583+07:00",
+      "completedAt": "2026-11-14T00:02:23.586316+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/06_TESTS/fixtures",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/VERIFIED_NEWS_DATABASE.json"
+      ],
+      "outputReferences": [
+        "state.news_engine.dedup_engine.historical_events"
+      ],
+      "metrics": {
+        "historicalFixturesLoaded": 5,
+        "historicalEventsCount": 92,
+        "priorEditionEventsMapped": 18
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_04",
+      "stepNumber": 4,
+      "stepName": "Live News Candidate Discovery",
+      "status": "PASS",
+      "startedAt": "2026-11-14T00:02:23.586326+07:00",
+      "completedAt": "2026-11-14T00:02:25.240375+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/05_LIVE_DATA/raw_evidence"
+      ],
+      "outputReferences": [
+        "state.news_res.discovery"
+      ],
+      "metrics": {
+        "totalSnapshotsScanned": 142,
+        "uniqueCanonicalCandidates": 78,
+        "accessBlockedOrNonArticleCount": 3
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_05",
+      "stepNumber": 5,
+      "stepName": "Source Provenance Verification",
+      "status": "FAIL",
+      "startedAt": "2026-11-14T00:02:25.240394+07:00",
+      "completedAt": "2026-11-14T00:02:25.240397+07:00",
+      "inputReferences": [
+        "state.news_res.discovery.rawCandidates"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_06",
+      "stepNumber": 6,
+      "stepName": "Timestamp & Freshness Window Validation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240406+07:00",
+      "completedAt": "2026-11-14T00:02:25.240407+07:00",
+      "inputReferences": [
+        "state.news_res.step05_sourceVerification"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_07",
+      "stepNumber": 7,
+      "stepName": "Cross-Day & Intra-Day Deduplication",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240409+07:00",
+      "completedAt": "2026-11-14T00:02:25.240410+07:00",
+      "inputReferences": [
+        "state.news_res.step06_windowValidation"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_08",
+      "stepNumber": 8,
+      "stepName": "Financial Fact & Entity Binding Verification",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240411+07:00",
+      "completedAt": "2026-11-14T00:02:25.240412+07:00",
+      "inputReferences": [
+        "state.news_res.step07_deduplication"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_09",
+      "stepNumber": 9,
+      "stepName": "25-Event / 24h Quota Gate",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240414+07:00",
+      "completedAt": "2026-11-14T00:02:25.240415+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_10",
+      "stepNumber": 10,
+      "stepName": "Market Pulse Evidence Acquisition & Extraction",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240420+07:00",
+      "completedAt": "2026-11-14T00:02:25.240421+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/MARKET_PULSE_8.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/03_INDICATOR_CONFIG/market_pulse_indicator_specs.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/05_LIVE_DATA/raw_evidence"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_11",
+      "stepNumber": 11,
+      "stepName": "Market Pulse Verification & Freshness Evaluation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240422+07:00",
+      "completedAt": "2026-11-14T00:02:25.240423+07:00",
+      "inputReferences": [
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_12",
+      "stepNumber": 12,
+      "stepName": "Core Thesis Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240425+07:00",
+      "completedAt": "2026-11-14T00:02:25.240426+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_13",
+      "stepNumber": 13,
+      "stepName": "Connect the Dots Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240431+07:00",
+      "completedAt": "2026-11-14T00:02:25.240432+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_14",
+      "stepNumber": 14,
+      "stepName": "Macro-to-Micro Transmission Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240434+07:00",
+      "completedAt": "2026-11-14T00:02:25.240435+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_15",
+      "stepNumber": 15,
+      "stepName": "Payment Opportunity Radar Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240436+07:00",
+      "completedAt": "2026-11-14T00:02:25.240437+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_16",
+      "stepNumber": 16,
+      "stepName": "Financial Decision Intelligence Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240439+07:00",
+      "completedAt": "2026-11-14T00:02:25.240440+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_17",
+      "stepNumber": 17,
+      "stepName": "Evidence Crosswalk & Schema Validation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240442+07:00",
+      "completedAt": "2026-11-14T00:02:25.240443+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_18",
+      "stepNumber": 18,
+      "stepName": "Daily JSON Package Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240444+07:00",
+      "completedAt": "2026-11-14T00:02:25.240445+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle",
+        "state.crosswalk"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_19",
+      "stepNumber": 19,
+      "stepName": "Google Sheets Staging Dry-Run Validation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240447+07:00",
+      "completedAt": "2026-11-14T00:02:25.240448+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/phase04b_staging_tables_readonly.json",
+        "state.payloads"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    },
+    {
+      "stepId": "STEP_20",
+      "stepNumber": 20,
+      "stepName": "Daily Execution Report & Release Audit",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-14T00:02:25.240450+07:00",
+      "completedAt": "2026-11-14T00:02:25.240451+07:00",
+      "inputReferences": [
+        "state.payloads",
+        "state.sheets_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_05 (Source Provenance Verification) -> RuntimeError: Zero candidates passed Source Provenance Verification."
+    }
+  ]
+}
