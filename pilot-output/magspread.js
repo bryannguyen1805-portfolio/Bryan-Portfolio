@@ -62,7 +62,7 @@ function updateThemeIcon() {
       ? '<span class="ms-theme-icon" aria-hidden="true">☀️</span>'
       : '<span class="ms-theme-icon" aria-hidden="true">🌙</span>';
   }
-  const targetLogo = isDark ? './bnews-logo-dark-opt.webp' : './bnews-logo-light-opt.webp';
+  const targetLogo = isDark ? './bnews-logo-dark-opt.webp?v=1794692000' : './bnews-logo-light-opt.webp?v=1794692000';
   const headerLogo = $('#headerBryanLogo');
   const desktopStickyLogo = $('#desktopStickyLogo');
   const mobileLogo = $('#mobileBryanLogo');
@@ -2039,13 +2039,12 @@ function openDecisionSignalDrawer(signalId) {
       pillLabel = 'Ý TƯỞNG PHÁT TRIỂN MỚI';
     }
     return `
-      <div style="background-color:var(--ms-surface-base); padding:10px 14px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-primary); border-radius:4px; margin-bottom:8px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+      <div class="ms-b2b-solution-item" style="background-color:var(--ms-surface-base); padding:12px 14px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-primary); border-radius:4px; margin-bottom:10px;">
+        <div style="margin-bottom:6px;">
           <span class="ms-solution-pill ${pillClass}">${pillLabel}</span>
-          <span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono);">${escapeHtml(sol.readinessType || '')}</span>
         </div>
-        <div style="font-weight:700; font-size:0.875rem; color:var(--ms-text-primary);">${escapeHtml(sol.solutionName)}</div>
-        <p style="font-size:0.8125rem; margin:4px 0 0 0; color:var(--ms-text-secondary); line-height:1.5;">${escapeHtml(sol.capabilityNote)}</p>
+        <div style="font-weight:700; font-size:0.9375rem; color:var(--ms-text-primary); line-height:1.4;">${escapeHtml(sol.solutionName)}</div>
+        <p style="font-size:0.84375rem; margin:4px 0 0 0; color:var(--ms-text-secondary); line-height:1.55;">${escapeHtml(sol.capabilityNote)}</p>
       </div>
     `;
   }).join('');
@@ -2067,13 +2066,19 @@ function openDecisionSignalDrawer(signalId) {
     </div>
   `).join('');
 
+  const confLabel = (!sig.confidenceLevel || String(sig.confidenceLevel).includes('HIGH'))
+    ? 'ĐỘ TIN CẬY CAO · ĐÃ XÁC MINH'
+    : 'TRỌNG TÂM ĐIỀU HÀNH';
+
   const html = `
     <article style="font-size:0.9375rem; line-height:1.7;">
       <!-- Header -->
-      <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
-        <span class="ms-badge ms-badge-neutral" style="margin-left:6px;">${escapeHtml(sig.confidenceLevel || 'HIGH_CONFIDENCE')}</span>
-        <h2 style="font-family:var(--font-headline); font-size:1.625rem; line-height:1.25; color:var(--ms-primary); margin:10px 0 6px 0;">
+      <div style="padding-bottom:14px; margin-bottom:16px; border-bottom:2px solid var(--ms-border);">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
+          <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
+          <span class="ms-badge ms-badge-neutral">${confLabel}</span>
+        </div>
+        <h2 style="font-family:var(--font-headline); font-size:clamp(1.25rem, 4.5vw, 1.55rem); line-height:1.3; color:var(--ms-primary); margin:0;">
           ${escapeHtml(sig.signalTitle)}
         </h2>
       </div>
