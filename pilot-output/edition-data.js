@@ -225,50 +225,50 @@ window.EDITION_DATA = {
       "editorialHeadline": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
       "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00))",
       "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00))",
-      "executiveSummary": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng. Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.",
+      "executiveSummary": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, tiền lãi tại 7 ngân hàng có sự chênh lệch đáng kể. Số tiền lãi dự kiến dao động từ 2 triệu đến 3,3 triệu đồng tùy chính sách mỗi nhà băng. Diễn biến này tác động trực tiếp tới chi phí vốn và lựa chọn kênh gửi tiền.",
       "leadArticle": {
         "headline": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
         "eventId": "EVT-09",
         "sourceName": "CafeF / VCCorp",
         "publishedAt": "15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00)",
         "sourceUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
-        "summary": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng. Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.",
-        "supportingQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng."
+        "summary": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, tiền lãi tại 7 ngân hàng có sự chênh lệch đáng kể. Số tiền lãi dự kiến dao động từ 2 triệu đến 3,3 triệu đồng tùy chính sách mỗi nhà băng. Diễn biến này tác động trực tiếp tới chi phí vốn và lựa chọn kênh gửi tiền.",
+        "supportingQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng."
       },
-      "supportingQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "editorialPullQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "pullQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "editorialSynthesis": "Toàn cảnh 25 sự kiện xác minh trong phiên nổi bật với tâm điểm 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' (CafeF / VCCorp), cùng chuyển động của tỷ giá điều hành, tín dụng ưu đãi doanh nghiệp và mở rộng thương mại điện tử đa kênh.",
-      "marketImpact": "(1) Tác động ngân hàng: Định hình chuẩn cạnh tranh mới về uy tín vốn và công nghệ quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?'. (2) Giữ chân CASA: Hệ sinh thái số thuận tiện giúp tăng tiền gửi không kỳ hạn giá rẻ. (3) COF → NIM → tín dụng: Chi phí vốn tối ưu bảo vệ biên lãi ròng và tạo dư địa hạ lãi suất cho vay. (4) Doanh nghiệp: Tiếp cận nguồn vốn lưu động ổn định hơn cho sản xuất và nhập hàng. (5) Người tiêu dùng & thanh toán: Chuyển dịch mạnh sang thẻ, Dynamic QR và kênh số minh bạch.",
-      "fintechLensAction": "Thị trường đòi hỏi doanh nghiệp bán lẻ chuẩn hóa dữ liệu doanh thu để chứng minh dòng tiền vay vốn, thay vì đối soát tiền mặt thủ công rời rạc. [Năng lực hiện hữu đã xác nhận] Hạ tầng Payoo (SmartPOS, Dynamic QR, SoftPOS, Trả góp 0%, Payment Link/Gateway) hợp nhất dữ liệu thu hộ và bán hàng đa kênh. [Giả thuyết mở rộng thương mại] Dữ liệu giao dịch chuẩn hóa tạo nền tảng kết nối ngân hàng đối tác để mở rộng tài trợ chuỗi cung ứng cho SME.",
-      "monitoringWatchpoint": "Tín hiệu cần theo dõi tiếp theo cho 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm.",
-      "whyItMatters": "(1) Tác động ngân hàng: Định hình chuẩn cạnh tranh mới về uy tín vốn và công nghệ quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?'. (2) Giữ chân CASA: Hệ sinh thái số thuận tiện giúp tăng tiền gửi không kỳ hạn giá rẻ. (3) COF → NIM → tín dụng: Chi phí vốn tối ưu bảo vệ biên lãi ròng và tạo dư địa hạ lãi suất cho vay. (4) Doanh nghiệp: Tiếp cận nguồn vốn lưu động ổn định hơn cho sản xuất và nhập hàng. (5) Người tiêu dùng & thanh toán: Chuyển dịch mạnh sang thẻ, Dynamic QR và kênh số minh bạch.",
-      "keyMarketImplication": "Thị trường đòi hỏi doanh nghiệp bán lẻ chuẩn hóa dữ liệu doanh thu để chứng minh dòng tiền vay vốn, thay vì đối soát tiền mặt thủ công rời rạc. [Năng lực hiện hữu đã xác nhận] Hạ tầng Payoo (SmartPOS, Dynamic QR, SoftPOS, Trả góp 0%, Payment Link/Gateway) hợp nhất dữ liệu thu hộ và bán hàng đa kênh. [Giả thuyết mở rộng thương mại] Dữ liệu giao dịch chuẩn hóa tạo nền tảng kết nối ngân hàng đối tác để mở rộng tài trợ chuỗi cung ứng cho SME."
+      "supportingQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "editorialPullQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "pullQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "editorialSynthesis": "Toàn cảnh phiên 15/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Khối NHTM tư nhân tăng tốc phân hóa quy mô vốn và chi phí vốn COF (VPBank và Techcombank vượt 1 tỷ USD lợi nhuận, hạ trần lãi suất tiết kiệm về 7,1%/năm, Vietcombank cơ cấu vốn tại MBB, TPBank ra mắt hệ sinh thái uniQ); (2) Cải cách quản lý thuế sàn TMĐT bước vào giai đoạn quyết định khi đề xuất sàn khấu trừ thuế thay người bán, gỡ bỏ hóa đơn lẻ cho tiểu thương và xóa nợ thuế diện 03, 06; (3) Kích cầu tiêu dùng cuối năm với chiến dịch vận động thưởng Tết sớm, Ngày TMĐT Quốc gia 12-12 trong khi giá vàng SJC lùi sâu khiến người mua lỗ 7 triệu/lượng; (4) Siết chặt kỷ cương minh bạch tài chính từ xử phạt công bố thông tin trái phiếu bất động sản đến điều tra tài khoản ngân hàng bất thường và chuyển hồ sơ công an vụ thanh toán thừa 14 tỷ đồng.",
+      "marketImpact": "(1) Tối ưu hóa chi phí vốn COF: Các ngân hàng dẫn đầu chủ động hạ lãi suất huy động kỳ hạn ngắn để bảo vệ biên lãi ròng NIM trong bối cảnh mặt bằng lãi suất cho vay tiếp tục chịu sức ép giảm. (2) Dịch chuyển dòng tiền gửi tiết kiệm: Người gửi tiền có xu hướng chuyển từ gửi tại quầy sang gửi tiết kiệm trực tuyến để nhận thêm từ 0,2% đến 0,5%/năm lãi suất ưu đãi. (3) Tháo gỡ nút thắt hóa đơn bán lẻ: Đề xuất sàn TMĐT khấu trừ thuế thay người bán giúp giải phóng nghĩa vụ xuất hóa đơn cho hàng triệu hộ kinh doanh online, thúc đẩy dòng tiền số hóa. (4) Bơm thanh khoản tiêu dùng: Động thái vận động thưởng Tết sớm trước 3 tháng hỗ trợ trực tiếp sức mua hàng hóa thiết yếu và giảm bớt áp lực giảm giá sâu tại các chuỗi siêu thị. (5) An toàn giao dịch thanh toán: Yêu cầu định danh sinh trắc học và thanh tra tài khoản cá nhân giao dịch bất thường thanh lọc triệt để các rủi ro gian lận, bảo vệ dòng tiền lành mạnh.",
+      "fintechLensAction": "Từ xu hướng tối ưu hóa chi phí vốn của các ngân hàng thương mại đến yêu cầu tự động khấu trừ thuế trên sàn TMĐT, doanh nghiệp và hộ bán lẻ cần chuẩn hóa ngay luồng dòng tiền doanh thu. Điểm nghẽn lớn nhất hiện nay của các điểm bán và hộ kinh doanh là sự rời rạc giữa ghi nhận doanh số bán lẻ, hóa đơn điện tử từng lần và đối soát tài khoản ngân hàng cuối ngày. [Năng lực hiện hữu đã xác nhận] Hệ sinh thái Payoo với SmartPOS All-in-One, giải pháp Dynamic QR định danh, cổng thanh toán đa kênh và giải pháp xuất hóa đơn điện tử tự động kết nối cơ quan thuế giúp các chuỗi cửa hàng gom toàn bộ giao dịch về một bảng kiểm soát tức thì. [Giả thuyết mở rộng thương mại] Trên cơ sở dữ liệu dòng tiền thanh toán số minh bạch, Payoo có thể hợp tác với các ngân hàng bán lẻ để hỗ trợ hộ kinh doanh tiếp cận các gói tín dụng thấu chi và tài trợ vốn lưu động linh hoạt cho dịp Tết.",
+      "monitoringWatchpoint": "Theo dõi phản ứng lãi suất liên ngân hàng qua đêm, tiến độ Quốc hội xem xét sửa đổi quy định khấu trừ thuế sàn TMĐT và tốc độ giải ngân vốn lưu động của doanh nghiệp bán lẻ trong tháng 11/2026.",
+      "whyItMatters": "(1) Tối ưu hóa chi phí vốn COF: Các ngân hàng dẫn đầu chủ động hạ lãi suất huy động kỳ hạn ngắn để bảo vệ biên lãi ròng NIM trong bối cảnh mặt bằng lãi suất cho vay tiếp tục chịu sức ép giảm. (2) Dịch chuyển dòng tiền gửi tiết kiệm: Người gửi tiền có xu hướng chuyển từ gửi tại quầy sang gửi tiết kiệm trực tuyến để nhận thêm từ 0,2% đến 0,5%/năm lãi suất ưu đãi. (3) Tháo gỡ nút thắt hóa đơn bán lẻ: Đề xuất sàn TMĐT khấu trừ thuế thay người bán giúp giải phóng nghĩa vụ xuất hóa đơn cho hàng triệu hộ kinh doanh online, thúc đẩy dòng tiền số hóa. (4) Bơm thanh khoản tiêu dùng: Động thái vận động thưởng Tết sớm trước 3 tháng hỗ trợ trực tiếp sức mua hàng hóa thiết yếu và giảm bớt áp lực giảm giá sâu tại các chuỗi siêu thị. (5) An toàn giao dịch thanh toán: Yêu cầu định danh sinh trắc học và thanh tra tài khoản cá nhân giao dịch bất thường thanh lọc triệt để các rủi ro gian lận, bảo vệ dòng tiền lành mạnh.",
+      "keyMarketImplication": "Từ xu hướng tối ưu hóa chi phí vốn của các ngân hàng thương mại đến yêu cầu tự động khấu trừ thuế trên sàn TMĐT, doanh nghiệp và hộ bán lẻ cần chuẩn hóa ngay luồng dòng tiền doanh thu. Điểm nghẽn lớn nhất hiện nay của các điểm bán và hộ kinh doanh là sự rời rạc giữa ghi nhận doanh số bán lẻ, hóa đơn điện tử từng lần và đối soát tài khoản ngân hàng cuối ngày. [Năng lực hiện hữu đã xác nhận] Hệ sinh thái Payoo với SmartPOS All-in-One, giải pháp Dynamic QR định danh, cổng thanh toán đa kênh và giải pháp xuất hóa đơn điện tử tự động kết nối cơ quan thuế giúp các chuỗi cửa hàng gom toàn bộ giao dịch về một bảng kiểm soát tức thì. [Giả thuyết mở rộng thương mại] Trên cơ sở dữ liệu dòng tiền thanh toán số minh bạch, Payoo có thể hợp tác với các ngân hàng bán lẻ để hỗ trợ hộ kinh doanh tiếp cận các gói tín dụng thấu chi và tài trợ vốn lưu động linh hoạt cho dịp Tết."
     },
     "coreThesis": {
       "sectionTitle": "BÀI ĐINH TRANG NHẤT · COVER STORY",
       "editorialHeadline": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
       "editorialSubheadline": "Căn cứ bài báo gốc trên CafeF / VCCorp (15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00))",
       "dek": "Căn cứ bài báo gốc trên CafeF / VCCorp (15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00))",
-      "executiveSummary": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng. Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.",
+      "executiveSummary": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, tiền lãi tại 7 ngân hàng có sự chênh lệch đáng kể. Số tiền lãi dự kiến dao động từ 2 triệu đến 3,3 triệu đồng tùy chính sách mỗi nhà băng. Diễn biến này tác động trực tiếp tới chi phí vốn và lựa chọn kênh gửi tiền.",
       "leadArticle": {
         "headline": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
         "eventId": "EVT-09",
         "sourceName": "CafeF / VCCorp",
         "publishedAt": "15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00)",
         "sourceUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
-        "summary": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng. Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.",
-        "supportingQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng."
+        "summary": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, tiền lãi tại 7 ngân hàng có sự chênh lệch đáng kể. Số tiền lãi dự kiến dao động từ 2 triệu đến 3,3 triệu đồng tùy chính sách mỗi nhà băng. Diễn biến này tác động trực tiếp tới chi phí vốn và lựa chọn kênh gửi tiền.",
+        "supportingQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng."
       },
-      "supportingQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "editorialPullQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "pullQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "editorialSynthesis": "Toàn cảnh 25 sự kiện xác minh trong phiên nổi bật với tâm điểm 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' (CafeF / VCCorp), cùng chuyển động của tỷ giá điều hành, tín dụng ưu đãi doanh nghiệp và mở rộng thương mại điện tử đa kênh.",
-      "marketImpact": "(1) Tác động ngân hàng: Định hình chuẩn cạnh tranh mới về uy tín vốn và công nghệ quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?'. (2) Giữ chân CASA: Hệ sinh thái số thuận tiện giúp tăng tiền gửi không kỳ hạn giá rẻ. (3) COF → NIM → tín dụng: Chi phí vốn tối ưu bảo vệ biên lãi ròng và tạo dư địa hạ lãi suất cho vay. (4) Doanh nghiệp: Tiếp cận nguồn vốn lưu động ổn định hơn cho sản xuất và nhập hàng. (5) Người tiêu dùng & thanh toán: Chuyển dịch mạnh sang thẻ, Dynamic QR và kênh số minh bạch.",
-      "fintechLensAction": "Thị trường đòi hỏi doanh nghiệp bán lẻ chuẩn hóa dữ liệu doanh thu để chứng minh dòng tiền vay vốn, thay vì đối soát tiền mặt thủ công rời rạc. [Năng lực hiện hữu đã xác nhận] Hạ tầng Payoo (SmartPOS, Dynamic QR, SoftPOS, Trả góp 0%, Payment Link/Gateway) hợp nhất dữ liệu thu hộ và bán hàng đa kênh. [Giả thuyết mở rộng thương mại] Dữ liệu giao dịch chuẩn hóa tạo nền tảng kết nối ngân hàng đối tác để mở rộng tài trợ chuỗi cung ứng cho SME.",
-      "monitoringWatchpoint": "Tín hiệu cần theo dõi tiếp theo cho 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm.",
-      "whyItMatters": "(1) Tác động ngân hàng: Định hình chuẩn cạnh tranh mới về uy tín vốn và công nghệ quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?'. (2) Giữ chân CASA: Hệ sinh thái số thuận tiện giúp tăng tiền gửi không kỳ hạn giá rẻ. (3) COF → NIM → tín dụng: Chi phí vốn tối ưu bảo vệ biên lãi ròng và tạo dư địa hạ lãi suất cho vay. (4) Doanh nghiệp: Tiếp cận nguồn vốn lưu động ổn định hơn cho sản xuất và nhập hàng. (5) Người tiêu dùng & thanh toán: Chuyển dịch mạnh sang thẻ, Dynamic QR và kênh số minh bạch.",
-      "keyMarketImplication": "Thị trường đòi hỏi doanh nghiệp bán lẻ chuẩn hóa dữ liệu doanh thu để chứng minh dòng tiền vay vốn, thay vì đối soát tiền mặt thủ công rời rạc. [Năng lực hiện hữu đã xác nhận] Hạ tầng Payoo (SmartPOS, Dynamic QR, SoftPOS, Trả góp 0%, Payment Link/Gateway) hợp nhất dữ liệu thu hộ và bán hàng đa kênh. [Giả thuyết mở rộng thương mại] Dữ liệu giao dịch chuẩn hóa tạo nền tảng kết nối ngân hàng đối tác để mở rộng tài trợ chuỗi cung ứng cho SME."
+      "supportingQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "editorialPullQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "pullQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
+      "editorialSynthesis": "Toàn cảnh phiên 15/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Khối NHTM tư nhân tăng tốc phân hóa quy mô vốn và chi phí vốn COF (VPBank và Techcombank vượt 1 tỷ USD lợi nhuận, hạ trần lãi suất tiết kiệm về 7,1%/năm, Vietcombank cơ cấu vốn tại MBB, TPBank ra mắt hệ sinh thái uniQ); (2) Cải cách quản lý thuế sàn TMĐT bước vào giai đoạn quyết định khi đề xuất sàn khấu trừ thuế thay người bán, gỡ bỏ hóa đơn lẻ cho tiểu thương và xóa nợ thuế diện 03, 06; (3) Kích cầu tiêu dùng cuối năm với chiến dịch vận động thưởng Tết sớm, Ngày TMĐT Quốc gia 12-12 trong khi giá vàng SJC lùi sâu khiến người mua lỗ 7 triệu/lượng; (4) Siết chặt kỷ cương minh bạch tài chính từ xử phạt công bố thông tin trái phiếu bất động sản đến điều tra tài khoản ngân hàng bất thường và chuyển hồ sơ công an vụ thanh toán thừa 14 tỷ đồng.",
+      "marketImpact": "(1) Tối ưu hóa chi phí vốn COF: Các ngân hàng dẫn đầu chủ động hạ lãi suất huy động kỳ hạn ngắn để bảo vệ biên lãi ròng NIM trong bối cảnh mặt bằng lãi suất cho vay tiếp tục chịu sức ép giảm. (2) Dịch chuyển dòng tiền gửi tiết kiệm: Người gửi tiền có xu hướng chuyển từ gửi tại quầy sang gửi tiết kiệm trực tuyến để nhận thêm từ 0,2% đến 0,5%/năm lãi suất ưu đãi. (3) Tháo gỡ nút thắt hóa đơn bán lẻ: Đề xuất sàn TMĐT khấu trừ thuế thay người bán giúp giải phóng nghĩa vụ xuất hóa đơn cho hàng triệu hộ kinh doanh online, thúc đẩy dòng tiền số hóa. (4) Bơm thanh khoản tiêu dùng: Động thái vận động thưởng Tết sớm trước 3 tháng hỗ trợ trực tiếp sức mua hàng hóa thiết yếu và giảm bớt áp lực giảm giá sâu tại các chuỗi siêu thị. (5) An toàn giao dịch thanh toán: Yêu cầu định danh sinh trắc học và thanh tra tài khoản cá nhân giao dịch bất thường thanh lọc triệt để các rủi ro gian lận, bảo vệ dòng tiền lành mạnh.",
+      "fintechLensAction": "Từ xu hướng tối ưu hóa chi phí vốn của các ngân hàng thương mại đến yêu cầu tự động khấu trừ thuế trên sàn TMĐT, doanh nghiệp và hộ bán lẻ cần chuẩn hóa ngay luồng dòng tiền doanh thu. Điểm nghẽn lớn nhất hiện nay của các điểm bán và hộ kinh doanh là sự rời rạc giữa ghi nhận doanh số bán lẻ, hóa đơn điện tử từng lần và đối soát tài khoản ngân hàng cuối ngày. [Năng lực hiện hữu đã xác nhận] Hệ sinh thái Payoo với SmartPOS All-in-One, giải pháp Dynamic QR định danh, cổng thanh toán đa kênh và giải pháp xuất hóa đơn điện tử tự động kết nối cơ quan thuế giúp các chuỗi cửa hàng gom toàn bộ giao dịch về một bảng kiểm soát tức thì. [Giả thuyết mở rộng thương mại] Trên cơ sở dữ liệu dòng tiền thanh toán số minh bạch, Payoo có thể hợp tác với các ngân hàng bán lẻ để hỗ trợ hộ kinh doanh tiếp cận các gói tín dụng thấu chi và tài trợ vốn lưu động linh hoạt cho dịp Tết.",
+      "monitoringWatchpoint": "Theo dõi phản ứng lãi suất liên ngân hàng qua đêm, tiến độ Quốc hội xem xét sửa đổi quy định khấu trừ thuế sàn TMĐT và tốc độ giải ngân vốn lưu động của doanh nghiệp bán lẻ trong tháng 11/2026.",
+      "whyItMatters": "(1) Tối ưu hóa chi phí vốn COF: Các ngân hàng dẫn đầu chủ động hạ lãi suất huy động kỳ hạn ngắn để bảo vệ biên lãi ròng NIM trong bối cảnh mặt bằng lãi suất cho vay tiếp tục chịu sức ép giảm. (2) Dịch chuyển dòng tiền gửi tiết kiệm: Người gửi tiền có xu hướng chuyển từ gửi tại quầy sang gửi tiết kiệm trực tuyến để nhận thêm từ 0,2% đến 0,5%/năm lãi suất ưu đãi. (3) Tháo gỡ nút thắt hóa đơn bán lẻ: Đề xuất sàn TMĐT khấu trừ thuế thay người bán giúp giải phóng nghĩa vụ xuất hóa đơn cho hàng triệu hộ kinh doanh online, thúc đẩy dòng tiền số hóa. (4) Bơm thanh khoản tiêu dùng: Động thái vận động thưởng Tết sớm trước 3 tháng hỗ trợ trực tiếp sức mua hàng hóa thiết yếu và giảm bớt áp lực giảm giá sâu tại các chuỗi siêu thị. (5) An toàn giao dịch thanh toán: Yêu cầu định danh sinh trắc học và thanh tra tài khoản cá nhân giao dịch bất thường thanh lọc triệt để các rủi ro gian lận, bảo vệ dòng tiền lành mạnh.",
+      "keyMarketImplication": "Từ xu hướng tối ưu hóa chi phí vốn của các ngân hàng thương mại đến yêu cầu tự động khấu trừ thuế trên sàn TMĐT, doanh nghiệp và hộ bán lẻ cần chuẩn hóa ngay luồng dòng tiền doanh thu. Điểm nghẽn lớn nhất hiện nay của các điểm bán và hộ kinh doanh là sự rời rạc giữa ghi nhận doanh số bán lẻ, hóa đơn điện tử từng lần và đối soát tài khoản ngân hàng cuối ngày. [Năng lực hiện hữu đã xác nhận] Hệ sinh thái Payoo với SmartPOS All-in-One, giải pháp Dynamic QR định danh, cổng thanh toán đa kênh và giải pháp xuất hóa đơn điện tử tự động kết nối cơ quan thuế giúp các chuỗi cửa hàng gom toàn bộ giao dịch về một bảng kiểm soát tức thì. [Giả thuyết mở rộng thương mại] Trên cơ sở dữ liệu dòng tiền thanh toán số minh bạch, Payoo có thể hợp tác với các ngân hàng bán lẻ để hỗ trợ hộ kinh doanh tiếp cận các gói tín dụng thấu chi và tài trợ vốn lưu động linh hoạt cho dịp Tết."
     },
     "sec04b_decisionBrief": {
       "sectionTitle": "TÍN HIỆU HÀNH ĐỘNG ĐIỀU HÀNH · DECISION BRIEF",
@@ -775,23 +775,23 @@ window.EDITION_DATA = {
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-          "coreThesis": "Cơ chế truyền dẫn từ nguồn vốn vững chắc của HDBank, SHB, VPBank giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Phân hóa Lãi suất Tiết kiệm, Tối ưu Chi phí Vốn (COF) và Cạnh tranh Vốn Tư nhân",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Phân hóa Lãi suất Tiết kiệm, Tối ưu Chi phí Vốn (COF) và Cạnh tranh Vốn Tư nhân",
+          "macroDriver": "Chính sách Tiền tệ, Cân đối Chi phí Vốn (COF) & Cạnh tranh Vốn tại các Ngân hàng Tư nhân",
+          "coreThesis": "Sự phân hóa lãi suất huy động 6 tháng giữa các NHTM cùng việc VPBank hạ trần lãi suất về 7,1%/năm phản ánh chiến lược tối ưu hóa chi phí vốn (COF), củng cố CASA và duy trì thanh khoản cho vay cuối năm.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
-              "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
+              "content": "Xu hướng nới lỏng lãi suất của Cục Dự trữ Liên bang Mỹ giảm bớt áp lực tỷ giá USD/VND, mở rộng dư địa điều hành tiền tệ linh hoạt cho hệ thống ngân hàng trung ương châu Á.",
+              "description": "Xu hướng nới lỏng lãi suất của Cục Dự trữ Liên bang Mỹ giảm bớt áp lực tỷ giá USD/VND, mở rộng dư địa điều hành tiền tệ linh hoạt cho hệ thống ngân hàng trung ương châu Á.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -799,13 +799,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
-              "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
+              "content": "Mục tiêu tăng trưởng kinh tế cuối năm đòi hỏi toàn hệ thống tài chính huy động tối đa nguồn lực tín dụng, kiểm soát chặt chẽ mặt bằng lãi suất cho vay hỗ trợ sản xuất kinh doanh.",
+              "description": "Mục tiêu tăng trưởng kinh tế cuối năm đòi hỏi toàn hệ thống tài chính huy động tối đa nguồn lực tín dụng, kiểm soát chặt chẽ mặt bằng lãi suất cho vay hỗ trợ sản xuất kinh doanh.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -813,13 +813,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-              "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
+              "content": "Ngân hàng Nhà nước giữ vững định hướng thanh khoản dồi dào qua thị trường mở OMO, khuyến khích các tổ chức tín dụng tiết giảm chi phí vận hành để hạ lãi suất vay thực tế.",
+              "description": "Ngân hàng Nhà nước giữ vững định hướng thanh khoản dồi dào qua thị trường mở OMO, khuyến khích các tổ chức tín dụng tiết giảm chi phí vận hành để hạ lãi suất vay thực tế.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -827,13 +827,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như HDBank, SHB, VPBank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; VPBank: 6,9%/năm).",
-              "description": "Các NHTM như HDBank, SHB, VPBank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; VPBank: 6,9%/năm).",
+              "content": "Khối NHTM tư nhân dẫn đầu (VPBank, Techcombank) chủ động hạ trần lãi suất tiết kiệm trực tuyến về 7,1%/năm, trong khi các ngân hàng khác phân hóa lãi suất 6 tháng từ 4,5% đến trên 6%/năm để cân đối thanh khoản.",
+              "description": "Khối NHTM tư nhân dẫn đầu (VPBank, Techcombank) chủ động hạ trần lãi suất tiết kiệm trực tuyến về 7,1%/năm, trong khi các ngân hàng khác phân hóa lãi suất 6 tháng từ 4,5% đến trên 6%/năm để cân đối thanh khoản.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -841,13 +841,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Doanh nghiệp sản xuất và thương mại tận dụng mặt bằng chi phí vốn vay ổn định để đẩy mạnh giải ngân các hạn mức tài trợ vốn lưu động, chuẩn bị nguồn hàng phục vụ cao điểm tiêu dùng.",
+              "description": "Doanh nghiệp sản xuất và thương mại tận dụng mặt bằng chi phí vốn vay ổn định để đẩy mạnh giải ngân các hạn mức tài trợ vốn lưu động, chuẩn bị nguồn hàng phục vụ cao điểm tiêu dùng.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -855,13 +855,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-              "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
+              "content": "Đơn vị bán lẻ và chuỗi kinh doanh liên kết với các ngân hàng lớn mở tài khoản thanh toán thông minh, ứng dụng Payoo SmartPOS thu hộ để hưởng lãi suất trên số dư tiền gửi thanh toán tự động.",
+              "description": "Đơn vị bán lẻ và chuỗi kinh doanh liên kết với các ngân hàng lớn mở tài khoản thanh toán thông minh, ứng dụng Payoo SmartPOS thu hộ để hưởng lãi suất trên số dư tiền gửi thanh toán tự động.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -869,36 +869,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
-              "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+              "content": "Khách hàng cá nhân chuyển dịch dòng tiền nhàn rỗi từ gửi tiết kiệm tại quầy sang kênh tiết kiệm online và tận dụng các gói tài khoản số phong cách sống (như TPBank uniQ) để hưởng lãi suất kết hợp điểm thưởng.",
+              "description": "Khách hàng cá nhân chuyển dịch dòng tiền nhàn rỗi từ gửi tiết kiệm tại quầy sang kênh tiết kiệm online và tận dụng các gói tài khoản số phong cách sống (như TPBank uniQ) để hưởng lãi suất kết hợp điểm thưởng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
-          "macroDriver": "Chính sách Tài khóa, Quản lý Thuế & Đầu tư Công",
-          "coreThesis": "Cơ chế truyền dẫn từ chính sách điều hành lãi suất và thanh khoản của Ngân hàng Nhà nước giúp giải tỏa áp lực vốn liên ngân hàng, giảm chi phí tài chính cho nền kinh tế và kích thích dòng tiền trên thị trường vốn.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Cải cách Thuế Sàn TMĐT, Xóa Nợ Thuế Hộ Kinh Doanh & Số Hóa Dòng Tiền",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Cải cách Thuế Sàn TMĐT, Xóa Nợ Thuế Hộ Kinh Doanh & Số Hóa Dòng Tiền",
+          "macroDriver": "Kỷ luật Tài khóa, Cải cách Thuế Kinh tế Số & Chuẩn hóa Dòng tiền Hộ Kinh doanh",
+          "coreThesis": "Đề xuất sàn thương mại điện tử khấu trừ thuế thay người bán kết hợp phương án xóa nợ thuế khó thu hồi diện 03, 06 giúp tháo gỡ điểm nghẽn hóa đơn cho tiểu thương, mở đường số hóa dòng tiền bán lẻ trực tuyến.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
-              "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
+              "content": "Kinh nghiệm quản lý thuế kinh tế số quốc tế chứng minh cơ chế thu thuế tại nguồn từ các nền tảng công nghệ số là giải pháp tối ưu để quản lý dòng tiền xuyên biên giới.",
+              "description": "Kinh nghiệm quản lý thuế kinh tế số quốc tế chứng minh cơ chế thu thuế tại nguồn từ các nền tảng công nghệ số là giải pháp tối ưu để quản lý dòng tiền xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -906,13 +906,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu).",
+              "content": "Chiến lược chuyển đổi số quốc gia yêu cầu hiện đại hóa công tác thu ngân sách, vừa bảo đảm thu đúng thu đủ vừa cắt giảm chi phí tuân thủ thủ tục hành chính cho người dân.",
+              "description": "Chiến lược chuyển đổi số quốc gia yêu cầu hiện đại hóa công tác thu ngân sách, vừa bảo đảm thu đúng thu đủ vừa cắt giảm chi phí tuân thủ thủ tục hành chính cho người dân.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -920,13 +920,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
-              "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
+              "content": "Bộ Tài chính và Tổng cục Thuế hoàn thiện khung pháp lý trình Quốc hội cho phép các sàn thương mại điện tử tự động khấu trừ thuế VAT và thuế thu nhập cá nhân trước khi giải ngân dòng tiền bán hàng.",
+              "description": "Bộ Tài chính và Tổng cục Thuế hoàn thiện khung pháp lý trình Quốc hội cho phép các sàn thương mại điện tử tự động khấu trừ thuế VAT và thuế thu nhập cá nhân trước khi giải ngân dòng tiền bán hàng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -934,13 +934,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (VPBank: 6,9%/năm; VPBank: 6,5%/năm).",
-              "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (VPBank: 6,9%/năm; VPBank: 6,5%/năm).",
+              "content": "Hệ thống ngân hàng thương mại và tổ chức trung gian thanh toán nâng cấp giao diện kết nối API với cơ quan thuế để xử lý giao dịch khấu trừ thuế tự động theo thời gian thực.",
+              "description": "Hệ thống ngân hàng thương mại và tổ chức trung gian thanh toán nâng cấp giao diện kết nối API với cơ quan thuế để xử lý giao dịch khấu trừ thuế tự động theo thời gian thực.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -948,13 +948,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
-              "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
+              "content": "Các sàn thương mại điện tử lớn (Shopee, TikTok Shop, Lazada) tích hợp giải pháp kế toán thuế tự động, giải tỏa nỗi lo bị xử phạt chậm xuất hóa đơn điện tử cho hàng triệu chủ shop online.",
+              "description": "Các sàn thương mại điện tử lớn (Shopee, TikTok Shop, Lazada) tích hợp giải pháp kế toán thuế tự động, giải tỏa nỗi lo bị xử phạt chậm xuất hóa đơn điện tử cho hàng triệu chủ shop online.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -962,13 +962,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
-              "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
+              "content": "Hộ kinh doanh cá thể được miễn trừ nghĩa vụ lập hóa đơn thủ công từng đơn hàng, tự tin đầu tư mở rộng gian hàng và ứng dụng cổng thanh toán trực tuyến minh bạch.",
+              "description": "Hộ kinh doanh cá thể được miễn trừ nghĩa vụ lập hóa đơn thủ công từng đơn hàng, tự tin đầu tư mở rộng gian hàng và ứng dụng cổng thanh toán trực tuyến minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -976,36 +976,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
-              "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
+              "content": "Người tiêu dùng trực tuyến nhận hóa đơn điện tử tự động do sàn xuất thay, nâng cao niềm tin vào nguồn gốc hàng hóa và thanh toán an toàn qua thẻ hoặc mã QR không tiền mặt.",
+              "description": "Người tiêu dùng trực tuyến nhận hóa đơn điện tử tự động do sàn xuất thay, nâng cao niềm tin vào nguồn gốc hàng hóa và thanh toán an toàn qua thẻ hoặc mã QR không tiền mặt.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "macroDriver": "Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "coreThesis": "Cơ chế truyền dẫn từ kỷ cương quản lý thuế và hóa đơn điện tử buộc các sàn TMĐT, doanh nghiệp và hộ kinh doanh phải nhanh chóng số hóa điểm bán, kết nối giải pháp máy tính tiền tự động để phòng ngừa rủi ro pháp lý.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kích Cầu Tiêu Dùng Cuối Năm, Thưởng Tết Sớm & Thách Thức Biên Lợi Nhuận Bán Lẻ",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kích Cầu Tiêu Dùng Cuối Năm, Thưởng Tết Sớm & Thách Thức Biên Lợi Nhuận Bán Lẻ",
+          "macroDriver": "Sức mua Tiêu dùng Nội địa, Kích cầu Lương thưởng Tết & Quản trị Biên lợi nhuận Chuỗi cung ứng",
+          "coreThesis": "Chính sách vận động chi trả thưởng Tết sớm kết hợp áp lực giảm giá thực phẩm thiết yếu tại siêu thị kích hoạt tổng cầu mua sắm, đồng thời buộc doanh nghiệp tối ưu chi phí phân phối bằng thanh toán số.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
-              "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
+              "content": "Sự hạ nhiệt của giá vàng thế giới và biến động giá năng lượng xăng dầu tạo dư địa ổn định chỉ số lạm phát đầu vào tại các quốc gia đang phát triển.",
+              "description": "Sự hạ nhiệt của giá vàng thế giới và biến động giá năng lượng xăng dầu tạo dư địa ổn định chỉ số lạm phát đầu vào tại các quốc gia đang phát triển.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1013,13 +1013,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường).",
+              "content": "Tổng mức bán lẻ hàng hóa và doanh thu dịch vụ tiêu dùng bước vào quý cao điểm, đóng vai trò trụ cột bù đắp cho tăng trưởng GDP cả nước.",
+              "description": "Tổng mức bán lẻ hàng hóa và doanh thu dịch vụ tiêu dùng bước vào quý cao điểm, đóng vai trò trụ cột bù đắp cho tăng trưởng GDP cả nước.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1027,13 +1027,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
-              "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
+              "content": "Cơ quan chức năng khuyến khích doanh nghiệp công bố lương thưởng Tết sớm và xem xét bỏ Quỹ bình ổn giá xăng dầu nhằm vận hành giá cả linh hoạt theo tín hiệu thị trường.",
+              "description": "Cơ quan chức năng khuyến khích doanh nghiệp công bố lương thưởng Tết sớm và xem xét bỏ Quỹ bình ổn giá xăng dầu nhằm vận hành giá cả linh hoạt theo tín hiệu thị trường.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1041,13 +1041,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 783,9 nghìn tỷ đồng; Doanh nghiệp: 19,8%).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 783,9 nghìn tỷ đồng; Doanh nghiệp: 19,8%).",
+              "content": "Các công ty tài chính tiêu dùng và ngân hàng bán lẻ triển khai các gói tín dụng mua sắm trả góp lãi suất 0% liên kết các hệ thống siêu thị điện máy và thời trang.",
+              "description": "Các công ty tài chính tiêu dùng và ngân hàng bán lẻ triển khai các gói tín dụng mua sắm trả góp lãi suất 0% liên kết các hệ thống siêu thị điện máy và thời trang.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1055,13 +1055,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
-              "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
+              "content": "Chuỗi siêu thị bán lẻ đẩy mạnh các đợt khuyến mãi sâu (như trứng gà 2.000 đồng/quả), buộc nhà sản xuất và người chăn nuôi phải tái cấu trúc chuỗi cung ứng khép kín để giữ biên lợi nhuận.",
+              "description": "Chuỗi siêu thị bán lẻ đẩy mạnh các đợt khuyến mãi sâu (như trứng gà 2.000 đồng/quả), buộc nhà sản xuất và người chăn nuôi phải tái cấu trúc chuỗi cung ứng khép kín để giữ biên lợi nhuận.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1069,13 +1069,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
-              "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
+              "content": "Điểm bán lẻ, tạp hóa và siêu thị mini trang bị thiết bị Payoo SmartPOS All-in-One tại quầy để xử lý thanh toán đa phương thức nhanh chóng, xóa tan tình trạng xếp hàng chờ đợi giờ cao điểm.",
+              "description": "Điểm bán lẻ, tạp hóa và siêu thị mini trang bị thiết bị Payoo SmartPOS All-in-One tại quầy để xử lý thanh toán đa phương thức nhanh chóng, xóa tan tình trạng xếp hàng chờ đợi giờ cao điểm.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1083,36 +1083,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
-              "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
+              "content": "Người lao động nhận tiền thưởng Tết sớm chủ động cân đối ngân sách gia đình, ưu tiên chi tiêu cho hàng tiêu dùng thiết yếu và tận dụng các ưu đãi giảm giá thanh toán qua QR code.",
+              "description": "Người lao động nhận tiền thưởng Tết sớm chủ động cân đối ngân sách gia đình, ưu tiên chi tiêu cho hàng tiêu dùng thiết yếu và tận dụng các ưu đãi giảm giá thanh toán qua QR code.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "macroDriver": "Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "coreThesis": "Cơ chế truyền dẫn từ xu hướng bán lẻ đa kênh (O2O) và mùa kích cầu tiêu dùng thúc đẩy các chuỗi siêu thị nâng cấp hạ tầng chấp nhận thanh toán số tại quầy, mang lại trải nghiệm chi tiêu liền mạch cho người dùng.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Kỷ Cương Minh Bạch Dòng Tiền, Trái Phiếu Doanh Nghiệp & An Toàn Thanh Toán",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Kỷ Cương Minh Bạch Dòng Tiền, Trái Phiếu Doanh Nghiệp & An Toàn Thanh Toán",
+          "macroDriver": "Giám sát Dòng tiền An toàn, Kỷ luật Công bố Thông tin Trái phiếu & Phòng chống Gian lận Tài chính",
+          "coreThesis": "Các biện pháp quyết liệt từ Bộ Công an và cơ quan quản lý trong việc điều tra tài khoản ngân hàng bất thường và xử phạt vi phạm trái phiếu củng cố tính minh bạch dòng tiền, bảo vệ an toàn hệ sinh thái thanh toán số.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
-              "description": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
+              "content": "Các định chế phòng chống rửa tiền quốc tế yêu cầu các nền kinh tế tăng cường kiểm soát luồng giao dịch điện tử và định danh tài sản số nhằm ngăn chặn tội phạm tài chính xuyên biên giới.",
+              "description": "Các định chế phòng chống rửa tiền quốc tế yêu cầu các nền kinh tế tăng cường kiểm soát luồng giao dịch điện tử và định danh tài sản số nhằm ngăn chặn tội phạm tài chính xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1120,13 +1120,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12).",
-              "description": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12).",
+              "content": "Nhà nước kiên quyết xây dựng môi trường đầu tư kinh doanh minh bạch, bảo vệ tài sản hợp pháp của người dân và uy tín của thị trường tài chính quốc gia.",
+              "description": "Nhà nước kiên quyết xây dựng môi trường đầu tư kinh doanh minh bạch, bảo vệ tài sản hợp pháp của người dân và uy tín của thị trường tài chính quốc gia.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1134,13 +1134,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
-              "description": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
+              "content": "Ngân hàng Nhà nước phối hợp Bộ Công an siết chặt quy định định danh sinh trắc học bắt buộc, thanh tra đột xuất các giao dịch chuyển tiền bất thường và ngăn chặn triệt để hành vi mua bán tài khoản ngân hàng.",
+              "description": "Ngân hàng Nhà nước phối hợp Bộ Công an siết chặt quy định định danh sinh trắc học bắt buộc, thanh tra đột xuất các giao dịch chuyển tiền bất thường và ngăn chặn triệt để hành vi mua bán tài khoản ngân hàng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1148,13 +1148,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 134,5 triệu đồng/lượng; SJC: 3 triệu đồng/lượng).",
-              "description": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 134,5 triệu đồng/lượng; SJC: 3 triệu đồng/lượng).",
+              "content": "Ủy ban Chứng khoán Nhà nước xử phạt nghiêm khắc các doanh nghiệp bất động sản chậm công bố thông tin trái phiếu, buộc thị trường nợ tái lập kỷ cương minh bạch số liệu kiểm toán.",
+              "description": "Ủy ban Chứng khoán Nhà nước xử phạt nghiêm khắc các doanh nghiệp bất động sản chậm công bố thông tin trái phiếu, buộc thị trường nợ tái lập kỷ cương minh bạch số liệu kiểm toán.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1162,13 +1162,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
-              "description": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
+              "content": "Doanh nghiệp rà soát lại toàn bộ quy trình phê duyệt thanh toán chi phí, phân quyền kế toán độc lập để phòng ngừa rủi ro chuyển tiền sai lệch hoặc thanh toán thừa như vụ việc tại Cần Thơ.",
+              "description": "Doanh nghiệp rà soát lại toàn bộ quy trình phê duyệt thanh toán chi phí, phân quyền kế toán độc lập để phòng ngừa rủi ro chuyển tiền sai lệch hoặc thanh toán thừa như vụ việc tại Cần Thơ.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1176,13 +1176,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Quầy thu ngân trang bị toàn diện giải pháp SmartPOS đa phương thức (chạm thẻ chip contactless, quét mã Dynamic QR, thanh toán Apple Pay/Google Pay) giúp giải tỏa ùn ứ thanh toán.",
-              "description": "Quầy thu ngân trang bị toàn diện giải pháp SmartPOS đa phương thức (chạm thẻ chip contactless, quét mã Dynamic QR, thanh toán Apple Pay/Google Pay) giúp giải tỏa ùn ứ thanh toán.",
+              "content": "Các đơn vị chấp nhận thanh toán số nâng cấp hệ thống phần mềm POS và tài khoản định danh chính chủ, loại bỏ hoàn toàn các tài khoản trung gian mập mờ trong đối soát bán hàng.",
+              "description": "Các đơn vị chấp nhận thanh toán số nâng cấp hệ thống phần mềm POS và tài khoản định danh chính chủ, loại bỏ hoàn toàn các tài khoản trung gian mập mờ trong đối soát bán hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1190,13 +1190,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Khách hàng tận hưởng trải nghiệm thanh toán 1 chạm liền mạch, an toàn và tích lũy điểm thưởng thành viên số ngay trong hành trình mua sắm.",
-              "description": "Khách hàng tận hưởng trải nghiệm thanh toán 1 chạm liền mạch, an toàn và tích lũy điểm thưởng thành viên số ngay trong hành trình mua sắm.",
+              "content": "Người tiêu dùng nâng cao tinh thần cảnh giác, tuân thủ xác thực sinh trắc học khuôn mặt khi chuyển tiền và kiên quyết không tiếp tay cho các thủ đoạn lừa đảo cho thuê mượn tài khoản ngân hàng.",
+              "description": "Người tiêu dùng nâng cao tinh thần cảnh giác, tuân thủ xác thực sinh trắc học khuôn mặt khi chuyển tiền và kiên quyết không tiếp tay cho các thủ đoạn lừa đảo cho thuê mượn tài khoản ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             }
           ]
@@ -1209,23 +1209,23 @@ window.EDITION_DATA = {
       "chains": [
         {
           "chainId": "CHAIN-01",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Ngân hàng, Tín dụng & Lãi suất",
-          "macroDriver": "Ngân hàng, Tín dụng & Lãi suất",
-          "coreThesis": "Cơ chế truyền dẫn từ nguồn vốn vững chắc của HDBank, SHB, VPBank giúp tối ưu hóa chi phí vốn, thúc đẩy cung ứng tín dụng cho doanh nghiệp và mở rộng thanh toán số tại quầy.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Phân hóa Lãi suất Tiết kiệm, Tối ưu Chi phí Vốn (COF) và Cạnh tranh Vốn Tư nhân",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Phân hóa Lãi suất Tiết kiệm, Tối ưu Chi phí Vốn (COF) và Cạnh tranh Vốn Tư nhân",
+          "macroDriver": "Chính sách Tiền tệ, Cân đối Chi phí Vốn (COF) & Cạnh tranh Vốn tại các Ngân hàng Tư nhân",
+          "coreThesis": "Sự phân hóa lãi suất huy động 6 tháng giữa các NHTM cùng việc VPBank hạ trần lãi suất về 7,1%/năm phản ánh chiến lược tối ưu hóa chi phí vốn (COF), củng cố CASA và duy trì thanh khoản cho vay cuối năm.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
-              "description": "Xu hướng chính sách tiền tệ quốc tế và chênh lệch lãi suất USD/VND định hình môi trường lãi suất và dòng vốn ngoại.",
+              "content": "Xu hướng nới lỏng lãi suất của Cục Dự trữ Liên bang Mỹ giảm bớt áp lực tỷ giá USD/VND, mở rộng dư địa điều hành tiền tệ linh hoạt cho hệ thống ngân hàng trung ương châu Á.",
+              "description": "Xu hướng nới lỏng lãi suất của Cục Dự trữ Liên bang Mỹ giảm bớt áp lực tỷ giá USD/VND, mở rộng dư địa điều hành tiền tệ linh hoạt cho hệ thống ngân hàng trung ương châu Á.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1233,13 +1233,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
-              "description": "Tăng trưởng tín dụng toàn ngành và an toàn thanh khoản hệ thống tác động trực tiếp đến động thái định giá tài sản và năng lực cung ứng vốn của các NHTM (Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?).",
+              "content": "Mục tiêu tăng trưởng kinh tế cuối năm đòi hỏi toàn hệ thống tài chính huy động tối đa nguồn lực tín dụng, kiểm soát chặt chẽ mặt bằng lãi suất cho vay hỗ trợ sản xuất kinh doanh.",
+              "description": "Mục tiêu tăng trưởng kinh tế cuối năm đòi hỏi toàn hệ thống tài chính huy động tối đa nguồn lực tín dụng, kiểm soát chặt chẽ mặt bằng lãi suất cho vay hỗ trợ sản xuất kinh doanh.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1247,13 +1247,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
-              "description": "NHNN duy trì lãi suất điều hành linh hoạt, tăng cường tái cấp vốn và kiểm soát chất lượng tín dụng theo các chuẩn mực an toàn vốn.",
+              "content": "Ngân hàng Nhà nước giữ vững định hướng thanh khoản dồi dào qua thị trường mở OMO, khuyến khích các tổ chức tín dụng tiết giảm chi phí vận hành để hạ lãi suất vay thực tế.",
+              "description": "Ngân hàng Nhà nước giữ vững định hướng thanh khoản dồi dào qua thị trường mở OMO, khuyến khích các tổ chức tín dụng tiết giảm chi phí vận hành để hạ lãi suất vay thực tế.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1261,13 +1261,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Các NHTM như HDBank, SHB, VPBank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; VPBank: 6,9%/năm).",
-              "description": "Các NHTM như HDBank, SHB, VPBank cơ cấu lại nguồn vốn huy động, hạ lãi suất cho vay đầu ra và thúc đẩy các gói tài trợ hạn mức linh hoạt (VPBank: 6,3%/năm; VPBank: 6,9%/năm).",
+              "content": "Khối NHTM tư nhân dẫn đầu (VPBank, Techcombank) chủ động hạ trần lãi suất tiết kiệm trực tuyến về 7,1%/năm, trong khi các ngân hàng khác phân hóa lãi suất 6 tháng từ 4,5% đến trên 6%/năm để cân đối thanh khoản.",
+              "description": "Khối NHTM tư nhân dẫn đầu (VPBank, Techcombank) chủ động hạ trần lãi suất tiết kiệm trực tuyến về 7,1%/năm, trong khi các ngân hàng khác phân hóa lãi suất 6 tháng từ 4,5% đến trên 6%/năm để cân đối thanh khoản.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1275,13 +1275,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
-              "description": "Doanh nghiệp sản xuất và thương mại tận dụng chi phí vốn vay hạ nhiệt để mở rộng đầu tư tài sản cố định và giải ngân vốn lưu động phục vụ đơn hàng cuối năm.",
+              "content": "Doanh nghiệp sản xuất và thương mại tận dụng mặt bằng chi phí vốn vay ổn định để đẩy mạnh giải ngân các hạn mức tài trợ vốn lưu động, chuẩn bị nguồn hàng phục vụ cao điểm tiêu dùng.",
+              "description": "Doanh nghiệp sản xuất và thương mại tận dụng mặt bằng chi phí vốn vay ổn định để đẩy mạnh giải ngân các hạn mức tài trợ vốn lưu động, chuẩn bị nguồn hàng phục vụ cao điểm tiêu dùng.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1289,13 +1289,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
-              "description": "Điểm bán lẻ và nhà phân phối ứng dụng cổng thanh toán thông minh, mở tài khoản định danh Virtual Account để rút ngắn vòng quay thanh toán và đối soát dòng tiền tự động.",
+              "content": "Đơn vị bán lẻ và chuỗi kinh doanh liên kết với các ngân hàng lớn mở tài khoản thanh toán thông minh, ứng dụng Payoo SmartPOS thu hộ để hưởng lãi suất trên số dư tiền gửi thanh toán tự động.",
+              "description": "Đơn vị bán lẻ và chuỗi kinh doanh liên kết với các ngân hàng lớn mở tài khoản thanh toán thông minh, ứng dụng Payoo SmartPOS thu hộ để hưởng lãi suất trên số dư tiền gửi thanh toán tự động.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             },
             {
@@ -1303,36 +1303,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
-              "description": "Người tiêu dùng tiếp cận các gói tín dụng tiêu dùng, thẻ tín dụng trả góp và thanh toán không tiền mặt thuận tiện qua ứng dụng số.",
+              "content": "Khách hàng cá nhân chuyển dịch dòng tiền nhàn rỗi từ gửi tiết kiệm tại quầy sang kênh tiết kiệm online và tận dụng các gói tài khoản số phong cách sống (như TPBank uniQ) để hưởng lãi suất kết hợp điểm thưởng.",
+              "description": "Khách hàng cá nhân chuyển dịch dòng tiền nhàn rỗi từ gửi tiết kiệm tại quầy sang kênh tiết kiệm online và tận dụng các gói tài khoản số phong cách sống (như TPBank uniQ) để hưởng lãi suất kết hợp điểm thưởng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-058",
-                "EVT-20261115-009",
-                "EVT-20261115-001"
+                "EVT-09",
+                "EVT-07",
+                "EVT-04"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-02",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kỷ cương Thuế, Đơn giản hóa Thủ tục & Số hóa Dòng tiền",
-          "macroDriver": "Chính sách Tài khóa, Quản lý Thuế & Đầu tư Công",
-          "coreThesis": "Cơ chế truyền dẫn từ chính sách điều hành lãi suất và thanh khoản của Ngân hàng Nhà nước giúp giải tỏa áp lực vốn liên ngân hàng, giảm chi phí tài chính cho nền kinh tế và kích thích dòng tiền trên thị trường vốn.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Cải cách Thuế Sàn TMĐT, Xóa Nợ Thuế Hộ Kinh Doanh & Số Hóa Dòng Tiền",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Cải cách Thuế Sàn TMĐT, Xóa Nợ Thuế Hộ Kinh Doanh & Số Hóa Dòng Tiền",
+          "macroDriver": "Kỷ luật Tài khóa, Cải cách Thuế Kinh tế Số & Chuẩn hóa Dòng tiền Hộ Kinh doanh",
+          "coreThesis": "Đề xuất sàn thương mại điện tử khấu trừ thuế thay người bán kết hợp phương án xóa nợ thuế khó thu hồi diện 03, 06 giúp tháo gỡ điểm nghẽn hóa đơn cho tiểu thương, mở đường số hóa dòng tiền bán lẻ trực tuyến.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
-              "description": "Chỉ số DXY và áp lực lãi suất từ Cục Dự trữ Liên bang Mỹ (Fed) tác động trực tiếp lên kỳ vọng tỷ giá và dòng vốn FII trên thị trường vốn khu vực.",
+              "content": "Kinh nghiệm quản lý thuế kinh tế số quốc tế chứng minh cơ chế thu thuế tại nguồn từ các nền tảng công nghệ số là giải pháp tối ưu để quản lý dòng tiền xuyên biên giới.",
+              "description": "Kinh nghiệm quản lý thuế kinh tế số quốc tế chứng minh cơ chế thu thuế tại nguồn từ các nền tảng công nghệ số là giải pháp tối ưu để quản lý dòng tiền xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1340,13 +1340,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu).",
-              "description": "Cân đối cung cầu ngoại tệ, thặng dư thương mại và định hướng điều hành tỷ giá trung tâm từ NHNN tạo bệ đỡ ổn định kinh tế vĩ mô (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu).",
+              "content": "Chiến lược chuyển đổi số quốc gia yêu cầu hiện đại hóa công tác thu ngân sách, vừa bảo đảm thu đúng thu đủ vừa cắt giảm chi phí tuân thủ thủ tục hành chính cho người dân.",
+              "description": "Chiến lược chuyển đổi số quốc gia yêu cầu hiện đại hóa công tác thu ngân sách, vừa bảo đảm thu đúng thu đủ vừa cắt giảm chi phí tuân thủ thủ tục hành chính cho người dân.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1354,13 +1354,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
-              "description": "NHNN chủ động sử dụng các công cụ thị trường mở (OMO), phát hành tín phiếu hoặc mua ngoại tệ giao ngay nhằm bổ sung dự trữ quốc gia và điều hòa thanh khoản tiền đồng.",
+              "content": "Bộ Tài chính và Tổng cục Thuế hoàn thiện khung pháp lý trình Quốc hội cho phép các sàn thương mại điện tử tự động khấu trừ thuế VAT và thuế thu nhập cá nhân trước khi giải ngân dòng tiền bán hàng.",
+              "description": "Bộ Tài chính và Tổng cục Thuế hoàn thiện khung pháp lý trình Quốc hội cho phép các sàn thương mại điện tử tự động khấu trừ thuế VAT và thuế thu nhập cá nhân trước khi giải ngân dòng tiền bán hàng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1368,13 +1368,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (VPBank: 6,9%/năm; VPBank: 6,5%/năm).",
-              "description": "Thanh khoản tiền đồng dồi dào giải tỏa áp lực vốn liên ngân hàng, hỗ trợ các định chế tài chính và công ty chứng khoán mở rộng thanh khoản cho thị trường (VPBank: 6,9%/năm; VPBank: 6,5%/năm).",
+              "content": "Hệ thống ngân hàng thương mại và tổ chức trung gian thanh toán nâng cấp giao diện kết nối API với cơ quan thuế để xử lý giao dịch khấu trừ thuế tự động theo thời gian thực.",
+              "description": "Hệ thống ngân hàng thương mại và tổ chức trung gian thanh toán nâng cấp giao diện kết nối API với cơ quan thuế để xử lý giao dịch khấu trừ thuế tự động theo thời gian thực.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1382,13 +1382,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
-              "description": "Doanh nghiệp niêm yết và các tập đoàn công nghiệp đẩy mạnh hoạt động huy động vốn qua kênh phát hành cổ phiếu, trái phiếu và tối ưu hóa cấu trúc nợ vay.",
+              "content": "Các sàn thương mại điện tử lớn (Shopee, TikTok Shop, Lazada) tích hợp giải pháp kế toán thuế tự động, giải tỏa nỗi lo bị xử phạt chậm xuất hóa đơn điện tử cho hàng triệu chủ shop online.",
+              "description": "Các sàn thương mại điện tử lớn (Shopee, TikTok Shop, Lazada) tích hợp giải pháp kế toán thuế tự động, giải tỏa nỗi lo bị xử phạt chậm xuất hóa đơn điện tử cho hàng triệu chủ shop online.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1396,13 +1396,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
-              "description": "Các đơn vị kinh doanh và dịch vụ tài chính liên kết tài khoản đầu tư với tài khoản thanh toán tiêu dùng, tối ưu hóa dòng tiền nhàn rỗi trong phiên giao dịch.",
+              "content": "Hộ kinh doanh cá thể được miễn trừ nghĩa vụ lập hóa đơn thủ công từng đơn hàng, tự tin đầu tư mở rộng gian hàng và ứng dụng cổng thanh toán trực tuyến minh bạch.",
+              "description": "Hộ kinh doanh cá thể được miễn trừ nghĩa vụ lập hóa đơn thủ công từng đơn hàng, tự tin đầu tư mở rộng gian hàng và ứng dụng cổng thanh toán trực tuyến minh bạch.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             },
             {
@@ -1410,36 +1410,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
-              "description": "Nhà đầu tư cá nhân và người tiêu dùng tận dụng nguồn vốn sinh lời trên thị trường vốn để gia tăng sức mua và chi tiêu các dịch vụ cao cấp.",
+              "content": "Người tiêu dùng trực tuyến nhận hóa đơn điện tử tự động do sàn xuất thay, nâng cao niềm tin vào nguồn gốc hàng hóa và thanh toán an toàn qua thẻ hoặc mã QR không tiền mặt.",
+              "description": "Người tiêu dùng trực tuyến nhận hóa đơn điện tử tự động do sàn xuất thay, nâng cao niềm tin vào nguồn gốc hàng hóa và thanh toán an toàn qua thẻ hoặc mã QR không tiền mặt.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-010",
-                "EVT-20261115-014",
-                "EVT-20261115-009"
+                "EVT-12",
+                "EVT-17",
+                "EVT-13"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-03",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "macroDriver": "Mua sắm Bán lẻ, M&A Tài chính Tiêu dùng & Kích cầu Cuối năm",
-          "coreThesis": "Cơ chế truyền dẫn từ kỷ cương quản lý thuế và hóa đơn điện tử buộc các sàn TMĐT, doanh nghiệp và hộ kinh doanh phải nhanh chóng số hóa điểm bán, kết nối giải pháp máy tính tiền tự động để phòng ngừa rủi ro pháp lý.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Kích Cầu Tiêu Dùng Cuối Năm, Thưởng Tết Sớm & Thách Thức Biên Lợi Nhuận Bán Lẻ",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Kích Cầu Tiêu Dùng Cuối Năm, Thưởng Tết Sớm & Thách Thức Biên Lợi Nhuận Bán Lẻ",
+          "macroDriver": "Sức mua Tiêu dùng Nội địa, Kích cầu Lương thưởng Tết & Quản trị Biên lợi nhuận Chuỗi cung ứng",
+          "coreThesis": "Chính sách vận động chi trả thưởng Tết sớm kết hợp áp lực giảm giá thực phẩm thiết yếu tại siêu thị kích hoạt tổng cầu mua sắm, đồng thời buộc doanh nghiệp tối ưu chi phí phân phối bằng thanh toán số.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
-              "description": "Xu hướng chuẩn hóa kỷ cương quản lý thuế quốc tế (OECD, Pillar Two) và minh bạch hóa dòng tiền giao dịch thương mại xuyên biên giới.",
+              "content": "Sự hạ nhiệt của giá vàng thế giới và biến động giá năng lượng xăng dầu tạo dư địa ổn định chỉ số lạm phát đầu vào tại các quốc gia đang phát triển.",
+              "description": "Sự hạ nhiệt của giá vàng thế giới và biến động giá năng lượng xăng dầu tạo dư địa ổn định chỉ số lạm phát đầu vào tại các quốc gia đang phát triển.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1447,13 +1447,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường).",
-              "description": "Chính sách tài khóa mở rộng, giải ngân vốn đầu tư công và kỷ cương thu ngân sách nhà nước tạo khuôn khổ pháp lý chặt chẽ đối với cộng đồng doanh nghiệp (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường).",
+              "content": "Tổng mức bán lẻ hàng hóa và doanh thu dịch vụ tiêu dùng bước vào quý cao điểm, đóng vai trò trụ cột bù đắp cho tăng trưởng GDP cả nước.",
+              "description": "Tổng mức bán lẻ hàng hóa và doanh thu dịch vụ tiêu dùng bước vào quý cao điểm, đóng vai trò trụ cột bù đắp cho tăng trưởng GDP cả nước.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1461,13 +1461,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
-              "description": "Ngành Thuế và Bộ Tài chính phối hợp chặt chẽ với NHNN và hệ thống ngân hàng để triển khai thu thuế tự động, siết chặt biện pháp tạm hoãn xuất cảnh với các trường hợp nợ thuế kéo dài.",
+              "content": "Cơ quan chức năng khuyến khích doanh nghiệp công bố lương thưởng Tết sớm và xem xét bỏ Quỹ bình ổn giá xăng dầu nhằm vận hành giá cả linh hoạt theo tín hiệu thị trường.",
+              "description": "Cơ quan chức năng khuyến khích doanh nghiệp công bố lương thưởng Tết sớm và xem xét bỏ Quỹ bình ổn giá xăng dầu nhằm vận hành giá cả linh hoạt theo tín hiệu thị trường.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1475,13 +1475,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 783,9 nghìn tỷ đồng; Doanh nghiệp: 19,8%).",
-              "description": "Ngân hàng thương mại đóng vai trò kênh ủy nhiệm thu ngân sách nhà nước, kết nối hạ tầng truyền nhận dữ liệu thuế và hóa đơn điện tử tự động 24/7 (Doanh nghiệp: 783,9 nghìn tỷ đồng; Doanh nghiệp: 19,8%).",
+              "content": "Các công ty tài chính tiêu dùng và ngân hàng bán lẻ triển khai các gói tín dụng mua sắm trả góp lãi suất 0% liên kết các hệ thống siêu thị điện máy và thời trang.",
+              "description": "Các công ty tài chính tiêu dùng và ngân hàng bán lẻ triển khai các gói tín dụng mua sắm trả góp lãi suất 0% liên kết các hệ thống siêu thị điện máy và thời trang.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1489,13 +1489,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
-              "description": "Doanh nghiệp, sàn TMĐT và chuỗi bán lẻ khẩn trương chuyển đổi số quy trình kế toán, thực hiện khấu trừ và xuất hóa đơn điện tử minh bạch theo chuẩn cơ quan quản lý.",
+              "content": "Chuỗi siêu thị bán lẻ đẩy mạnh các đợt khuyến mãi sâu (như trứng gà 2.000 đồng/quả), buộc nhà sản xuất và người chăn nuôi phải tái cấu trúc chuỗi cung ứng khép kín để giữ biên lợi nhuận.",
+              "description": "Chuỗi siêu thị bán lẻ đẩy mạnh các đợt khuyến mãi sâu (như trứng gà 2.000 đồng/quả), buộc nhà sản xuất và người chăn nuôi phải tái cấu trúc chuỗi cung ứng khép kín để giữ biên lợi nhuận.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1503,13 +1503,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
-              "description": "Các hộ kinh doanh, cửa hàng bán lẻ và nhà hàng đồng loạt trang bị SmartPOS khởi tạo hóa đơn điện tử từ máy tính tiền, phòng ngừa hoàn toàn rủi ro bị thanh tra xử phạt thuế.",
+              "content": "Điểm bán lẻ, tạp hóa và siêu thị mini trang bị thiết bị Payoo SmartPOS All-in-One tại quầy để xử lý thanh toán đa phương thức nhanh chóng, xóa tan tình trạng xếp hàng chờ đợi giờ cao điểm.",
+              "description": "Điểm bán lẻ, tạp hóa và siêu thị mini trang bị thiết bị Payoo SmartPOS All-in-One tại quầy để xử lý thanh toán đa phương thức nhanh chóng, xóa tan tình trạng xếp hàng chờ đợi giờ cao điểm.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             },
             {
@@ -1517,36 +1517,36 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
-              "description": "Người tiêu dùng thanh toán không tiền mặt và nhận hóa đơn điện tử hợp lệ ngay trên điện thoại, đảm bảo quyền lợi bảo hành và tham gia chương trình hóa đơn may mắn.",
+              "content": "Người lao động nhận tiền thưởng Tết sớm chủ động cân đối ngân sách gia đình, ưu tiên chi tiêu cho hàng tiêu dùng thiết yếu và tận dụng các ưu đãi giảm giá thanh toán qua QR code.",
+              "description": "Người lao động nhận tiền thưởng Tết sớm chủ động cân đối ngân sách gia đình, ưu tiên chi tiêu cho hàng tiêu dùng thiết yếu và tận dụng các ưu đãi giảm giá thanh toán qua QR code.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-007",
-                "EVT-20261115-008",
-                "EVT-20261115-027"
+                "EVT-06",
+                "EVT-20",
+                "EVT-05"
               ]
             }
           ]
         },
         {
           "chainId": "CHAIN-04",
-          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "macroDriver": "Biến động Giá Vàng, Điều hành Xăng dầu & Ứng xử Dòng tiền Cá nhân",
-          "coreThesis": "Cơ chế truyền dẫn từ xu hướng bán lẻ đa kênh (O2O) và mùa kích cầu tiêu dùng thúc đẩy các chuỗi siêu thị nâng cấp hạ tầng chấp nhận thanh toán số tại quầy, mang lại trải nghiệm chi tiêu liền mạch cho người dùng.",
+          "title": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Kỷ Cương Minh Bạch Dòng Tiền, Trái Phiếu Doanh Nghiệp & An Toàn Thanh Toán",
+          "chainTitle": "Chuỗi truyền dẫn vĩ mô — vi mô: Siết Kỷ Cương Minh Bạch Dòng Tiền, Trái Phiếu Doanh Nghiệp & An Toàn Thanh Toán",
+          "macroDriver": "Giám sát Dòng tiền An toàn, Kỷ luật Công bố Thông tin Trái phiếu & Phòng chống Gian lận Tài chính",
+          "coreThesis": "Các biện pháp quyết liệt từ Bộ Công an và cơ quan quản lý trong việc điều tra tài khoản ngân hàng bất thường và xử phạt vi phạm trái phiếu củng cố tính minh bạch dòng tiền, bảo vệ an toàn hệ sinh thái thanh toán số.",
           "layers": [
             {
               "levelNumber": 1,
               "levelName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "layerName": "Tầng 01: Kinh tế Toàn cầu & Tỷ giá",
               "title": "Biến động quốc tế & Ngoại hối",
-              "content": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
-              "description": "Động lực phục hồi thương mại tiêu dùng châu Á và xu hướng mua sắm đa kênh (Omnichannel) dẫn dắt cuộc cách mạng bán lẻ trực tuyến kết hợp tại quầy.",
+              "content": "Các định chế phòng chống rửa tiền quốc tế yêu cầu các nền kinh tế tăng cường kiểm soát luồng giao dịch điện tử và định danh tài sản số nhằm ngăn chặn tội phạm tài chính xuyên biên giới.",
+              "description": "Các định chế phòng chống rửa tiền quốc tế yêu cầu các nền kinh tế tăng cường kiểm soát luồng giao dịch điện tử và định danh tài sản số nhằm ngăn chặn tội phạm tài chính xuyên biên giới.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1554,13 +1554,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "layerName": "Tầng 02: Kinh tế Vĩ mô Việt Nam",
               "title": "Cân đối vĩ mô & Mục tiêu tăng trưởng",
-              "content": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12).",
-              "description": "Làn sóng tiêu dùng đón đầu các dịp lễ hội cuối năm và mùa mua sắm kích cầu tạo động lực tăng trưởng doanh số vượt bậc cho ngành bán lẻ (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12).",
+              "content": "Nhà nước kiên quyết xây dựng môi trường đầu tư kinh doanh minh bạch, bảo vệ tài sản hợp pháp của người dân và uy tín của thị trường tài chính quốc gia.",
+              "description": "Nhà nước kiên quyết xây dựng môi trường đầu tư kinh doanh minh bạch, bảo vệ tài sản hợp pháp của người dân và uy tín của thị trường tài chính quốc gia.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1568,13 +1568,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "layerName": "Tầng 03: Chính sách Tiền tệ & NHNN",
               "title": "Điều hành cung tiền & Thanh khoản OMO",
-              "content": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
-              "description": "Chiến lược thanh toán không dùng tiền mặt quốc gia thúc đẩy việc phổ cập mã chuẩn VietQR và kết nối liên thông thanh toán bán lẻ xuyên biên giới.",
+              "content": "Ngân hàng Nhà nước phối hợp Bộ Công an siết chặt quy định định danh sinh trắc học bắt buộc, thanh tra đột xuất các giao dịch chuyển tiền bất thường và ngăn chặn triệt để hành vi mua bán tài khoản ngân hàng.",
+              "description": "Ngân hàng Nhà nước phối hợp Bộ Công an siết chặt quy định định danh sinh trắc học bắt buộc, thanh tra đột xuất các giao dịch chuyển tiền bất thường và ngăn chặn triệt để hành vi mua bán tài khoản ngân hàng.",
               "badge": "FACT",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1582,13 +1582,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "layerName": "Tầng 04: Hệ thống NHTM & Lãi suất",
               "title": "Thanh khoản & Chi phí vốn ngân hàng",
-              "content": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 134,5 triệu đồng/lượng; SJC: 3 triệu đồng/lượng).",
-              "description": "Ngân hàng và các tổ chức trung gian thanh toán liên minh cung cấp hạ tầng thanh toán số hiện đại, tối thiểu hóa phí giao dịch và nâng cao tốc độ xử lý đơn hàng (SJC: 134,5 triệu đồng/lượng; SJC: 3 triệu đồng/lượng).",
+              "content": "Ủy ban Chứng khoán Nhà nước xử phạt nghiêm khắc các doanh nghiệp bất động sản chậm công bố thông tin trái phiếu, buộc thị trường nợ tái lập kỷ cương minh bạch số liệu kiểm toán.",
+              "description": "Ủy ban Chứng khoán Nhà nước xử phạt nghiêm khắc các doanh nghiệp bất động sản chậm công bố thông tin trái phiếu, buộc thị trường nợ tái lập kỷ cương minh bạch số liệu kiểm toán.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1596,13 +1596,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "layerName": "Tầng 05: Doanh nghiệp & Chuỗi bán lẻ",
               "title": "Vốn lưu động & Hoạt động phân phối",
-              "content": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
-              "description": "Các chuỗi siêu thị lớn (như Saigon Co.op, WinCommerce) tối ưu hóa mạng lưới cửa hàng vật lý thành trung tâm hoàn tất đơn hàng (fulfillment) cho kênh thương mại trực tuyến.",
+              "content": "Doanh nghiệp rà soát lại toàn bộ quy trình phê duyệt thanh toán chi phí, phân quyền kế toán độc lập để phòng ngừa rủi ro chuyển tiền sai lệch hoặc thanh toán thừa như vụ việc tại Cần Thơ.",
+              "description": "Doanh nghiệp rà soát lại toàn bộ quy trình phê duyệt thanh toán chi phí, phân quyền kế toán độc lập để phòng ngừa rủi ro chuyển tiền sai lệch hoặc thanh toán thừa như vụ việc tại Cần Thơ.",
               "badge": "INFERENCE",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1610,13 +1610,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "layerName": "Tầng 06: Điểm bán & Hành vi thanh toán",
               "title": "Chấp nhận thanh toán & Dòng tiền tại quầy",
-              "content": "Quầy thu ngân trang bị toàn diện giải pháp SmartPOS đa phương thức (chạm thẻ chip contactless, quét mã Dynamic QR, thanh toán Apple Pay/Google Pay) giúp giải tỏa ùn ứ thanh toán.",
-              "description": "Quầy thu ngân trang bị toàn diện giải pháp SmartPOS đa phương thức (chạm thẻ chip contactless, quét mã Dynamic QR, thanh toán Apple Pay/Google Pay) giúp giải tỏa ùn ứ thanh toán.",
+              "content": "Các đơn vị chấp nhận thanh toán số nâng cấp hệ thống phần mềm POS và tài khoản định danh chính chủ, loại bỏ hoàn toàn các tài khoản trung gian mập mờ trong đối soát bán hàng.",
+              "description": "Các đơn vị chấp nhận thanh toán số nâng cấp hệ thống phần mềm POS và tài khoản định danh chính chủ, loại bỏ hoàn toàn các tài khoản trung gian mập mờ trong đối soát bán hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             },
             {
@@ -1624,13 +1624,13 @@ window.EDITION_DATA = {
               "levelName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "layerName": "Tầng 07: Người tiêu dùng & Điểm chạm",
               "title": "Hành vi chi tiêu & Đòn bẩy SmartPOS / QR",
-              "content": "Khách hàng tận hưởng trải nghiệm thanh toán 1 chạm liền mạch, an toàn và tích lũy điểm thưởng thành viên số ngay trong hành trình mua sắm.",
-              "description": "Khách hàng tận hưởng trải nghiệm thanh toán 1 chạm liền mạch, an toàn và tích lũy điểm thưởng thành viên số ngay trong hành trình mua sắm.",
+              "content": "Người tiêu dùng nâng cao tinh thần cảnh giác, tuân thủ xác thực sinh trắc học khuôn mặt khi chuyển tiền và kiên quyết không tiếp tay cho các thủ đoạn lừa đảo cho thuê mượn tài khoản ngân hàng.",
+              "description": "Người tiêu dùng nâng cao tinh thần cảnh giác, tuân thủ xác thực sinh trắc học khuôn mặt khi chuyển tiền và kiên quyết không tiếp tay cho các thủ đoạn lừa đảo cho thuê mượn tài khoản ngân hàng.",
               "badge": "HYPOTHESIS",
               "eventIds": [
-                "EVT-20261115-059",
-                "EVT-20261115-015",
-                "EVT-20261115-045"
+                "EVT-25",
+                "EVT-22",
+                "EVT-11"
               ]
             }
           ]
@@ -2306,7 +2306,7 @@ window.EDITION_DATA = {
       "title": "Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết",
       "pageTitle": "Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết",
       "headline": "Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết",
-      "summary": "Ngay trên sân khấu Tinh Hà “Say Hi” Concert Đêm 3 tại Hà Nội, TPBank chính thức ra mắt TPBank uniQ, chương trình khách hàng thân thiết thế hệ mới. Như một tấm vé nhập hội sống đỉnh cho giới trẻ, TPBank uniQ mang đến kho quà độc quyền và.",
+      "summary": "Ngay tại sự kiện âm nhạc Tinh Hà Say Hi Concert Đêm 3, TPBank chính thức ra mắt chương trình khách hàng thân thiết TPBank uniQ. Bước đi này giúp nhà băng cá nhân hóa đặc quyền và gia tăng gắn kết với tập khách hàng trẻ thế hệ số.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 10:24 | Nguồn gốc: CafeF / VCCorp (2026-11-15T10:24:00+07:00)",
@@ -2316,19 +2316,19 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/tu-san-khau-tinh-ha-say-hi-tpbank-chinh-thuc-ra-mat-chuong-trinh-khach-hang-than-thiet-188261115102424437.chn",
       "sourceUrl": "https://cafef.vn/tu-san-khau-tinh-ha-say-hi-tpbank-chinh-thuc-ra-mat-chuong-trinh-khach-hang-than-thiet-188261115102424437.chn",
-      "supportingQuote": "Tối 14/11 tại VEC Hà Nội, giữa không khí cuồng nhiệt của Tinh Hà \"Say Hi\" Concert Đêm 3, TPBank giới thiệu chương trình khách hàng thân thiết TPBank uniQ theo cách đậm chất \"Kim chủ\": để khán giả trực tiếp cảm nhận tinh thần \"Sống Đỉnh\" ngay tại sự kiện.",
+      "supportingQuote": "Đây là bước đi tiếp theo của TPBank trong chiến lược tiên phong cá nhân hóa trải nghiệm và cảm xúc để đồng hành cùng thế hệ trẻ một cách toàn diện.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' tập trung vào dữ kiện định lượng (Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết) liên quan đến CafeF. Tối 14/11 tại VEC Hà Nội, giữa không khí cuồng nhiệt của Tinh Hà \"Say Hi\" Concert Đêm 3, TPBank giới thiệu chương trình khách hàng thân thiết TPBank uniQ theo cách đậm chất \"Kim chủ\": để khán giả trực tiếp cảm nhận tinh thần \"Sống Đỉnh\" ngay tại sự kiện.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Từ quà hời khi giao dịch đến những khoảnh khắc thăng hoa cùng âm nhạc, tất cả hội tụ trong một đêm trải nghiệm, giống như cách mà TPBank uniQ mở ra vũ trụ đặc quyền sống thời thượng đậm chất cá nhân hóa cho khách hàng.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng t.",
-      "sectionA_whatHappened": "Ngay trên sân khấu Tinh Hà “Say Hi” Concert Đêm 3 tại Hà Nội, TPBank chính thức ra mắt TPBank uniQ, chương trình khách hàng thân thiết thế hệ mới. Như một tấm vé nhập hội sống đỉnh cho giới trẻ, TPBank uniQ mang đến kho quà độc quyền và.",
-      "sectionB_context": "Sự kiện 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' tập trung vào dữ kiện định lượng (Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết) liên quan đến CafeF. Tối 14/11 tại VEC Hà Nội, giữa không khí cuồng nhiệt của Tinh Hà \"Say Hi\" Concert Đêm 3, TPBank giới thiệu chương trình khách hàng thân thiết TPBank uniQ theo cách đậm chất \"Kim chủ\": để khán giả trực tiếp cảm nhận tinh thần \"Sống Đỉnh\" ngay tại sự kiện.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Từ quà hời khi giao dịch đến những khoảnh khắc thăng hoa cùng âm nhạc, tất cả hội tụ trong một đêm trải nghiệm, giống như cách mà TPBank uniQ mở ra vũ trụ đặc quyền sống thời thượng đậm chất cá nhân hóa cho khách hàng.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái CafeF cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng t.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến CafeF nên bám sát tín hiệu 'Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách h' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "TPBank giới thiệu chương trình khách hàng thân thiết TPBank uniQ tại đêm diễn Tinh Hà Say Hi, tích hợp kho quyền lợi giải trí độc quyền vào ứng dụng ngân hàng số.",
+      "analysisMechanism": "Việc gắn kết tài chính với phong cách sống giải trí giúp ngân hàng gia tăng tần suất mở ứng dụng, kích hoạt số dư tài khoản thanh toán và duy trì tỷ lệ tiền gửi không kỳ hạn CASA bền vững.",
+      "analysisMarketImpact": "Chiến lược tiếp cận Gen Z của TPBank tạo áp lực cạnh tranh lên các ngân hàng bán lẻ khác trong việc trẻ hóa thương hiệu và phát triển hệ sinh thái số phong cách sống.",
+      "analysisWatchSignal": "Theo dõi tỷ lệ tăng trưởng số lượng người dùng kích hoạt tài khoản TPBank uniQ và biến động số dư tiền gửi thanh toán cá nhân trong quý 4/2026.",
+      "sectionA_whatHappened": "Ngay tại sự kiện âm nhạc Tinh Hà Say Hi Concert Đêm 3, TPBank chính thức ra mắt chương trình khách hàng thân thiết TPBank uniQ. Bước đi này giúp nhà băng cá nhân hóa đặc quyền và gia tăng gắn kết với tập khách hàng trẻ thế hệ số.",
+      "sectionB_context": "TPBank giới thiệu chương trình khách hàng thân thiết TPBank uniQ tại đêm diễn Tinh Hà Say Hi, tích hợp kho quyền lợi giải trí độc quyền vào ứng dụng ngân hàng số.",
+      "sectionC_whyItMatters": "Chiến lược tiếp cận Gen Z của TPBank tạo áp lực cạnh tranh lên các ngân hàng bán lẻ khác trong việc trẻ hóa thương hiệu và phát triển hệ sinh thái số phong cách sống.",
+      "sectionD_macroMicro": "Việc gắn kết tài chính với phong cách sống giải trí giúp ngân hàng gia tăng tần suất mở ứng dụng, kích hoạt số dư tài khoản thanh toán và duy trì tỷ lệ tiền gửi không kỳ hạn CASA bền vững.",
+      "sectionE_fintechLens": "Các đơn vị bán lẻ, giải trí và ẩm thực liên kết với TPBank cần tích hợp SmartPOS chấp nhận chạm thẻ không tiếp xúc và quét mã QR để đồng bộ điểm thưởng tự động cho khách hàng.",
+      "sectionF_scenariosWatchlist": "Theo dõi tỷ lệ tăng trưởng số lượng người dùng kích hoạt tài khoản TPBank uniQ và biến động số dư tiền gửi thanh toán cá nhân trong quý 4/2026.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp dịch vụ giải trí nên chủ động liên kết chương trình khách hàng thân thiết với các ngân hàng số nhằm khai thác tệp người dùng trẻ có thói quen thanh toán không tiền mặt.",
       "computedSha256": "226c9b65f0e83b9f20ebe5f56970a34a1e5ec1d76bc04ad1b9ffefaef1e560d7",
       "snapshotFile": "raw_evidence_store/snapshot_live_051_226c9b65f0.html",
       "verificationStatus": "VERIFIED"
@@ -2340,7 +2340,7 @@ window.EDITION_DATA = {
       "title": "Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG",
       "pageTitle": "Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG",
       "headline": "Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG",
-      "summary": "Con gái chủ tịch Thép Nam Kim đăng ký mua 5 triệu cổ phiếu NKG. Công ty CP Thép Nam Kim (NKG) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ Hồ Uyển.",
+      "summary": "Bà Hồ Ngọc Nhi, con gái Chủ tịch HĐQT Thép Nam Kim, vừa đăng ký mua 5 triệu cổ phiếu NKG theo phương thức khớp lệnh và thỏa thuận. Nếu giao dịch thành công, tỷ lệ sở hữu của bà Nhi tại doanh nghiệp tôn mạ sẽ tăng lên trên 1% vốn.",
       "category": "Thị trường vốn",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 09:56 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-15T09:56:00+07:00)",
@@ -2350,19 +2350,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/con-gai-chu-tich-thep-nam-kim-muon-mua-5-trieu-co-phieu-nkg-100261115083539375.htm",
       "sourceUrl": "https://tuoitre.vn/con-gai-chu-tich-thep-nam-kim-muon-mua-5-trieu-co-phieu-nkg-100261115083539375.htm",
-      "supportingQuote": "Công ty CP Thép Nam Kim ( NKG ) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ Hồ Uyển Nhi.",
+      "supportingQuote": "Công ty CP Thép Nam Kim (NKG) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ là Chủ tịch HĐQT Hồ Minh Quang.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' tập trung vào dữ kiện định lượng (Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG) liên quan đến Báo Tuổi Trẻ. Công ty CP Thép Nam Kim (NKG) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ Hồ Uyển Nhi.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Theo đó, bà Hồ Uyển Nhi đăng ký mua 5 triệu cổ phiếu NKG với mục đích đầu tư tài chính cá nhân.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG.",
-      "sectionA_whatHappened": "Con gái chủ tịch Thép Nam Kim đăng ký mua 5 triệu cổ phiếu NKG. Công ty CP Thép Nam Kim (NKG) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ Hồ Uyển.",
-      "sectionB_context": "Sự kiện 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' tập trung vào dữ kiện định lượng (Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG) liên quan đến Báo Tuổi Trẻ. Công ty CP Thép Nam Kim (NKG) vừa thông báo giao dịch cổ phiếu người có liên quan của người nội bộ Hồ Uyển Nhi.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Theo đó, bà Hồ Uyển Nhi đăng ký mua 5 triệu cổ phiếu NKG với mục đích đầu tư tài chính cá nhân.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Thị trường vốn.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Thị trường vốn liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Con gái chủ tịch Thép Nam Kim muốn mua 5 triệu cổ phiếu NKG' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Bà Hồ Ngọc Nhi đăng ký gom 5 triệu cổ phiếu NKG từ ngày 19/11 đến 18/12/2026, nâng lượng cổ phiếu nắm giữ lên mức sở hữu có ý nghĩa tại Thép Nam Kim.",
+      "analysisMechanism": "Lực cầu mua vào từ người thân lãnh đạo phát tín hiệu củng cố niềm tin vào triển vọng phục hồi kết quả kinh doanh và thị trường xuất khẩu thép của doanh nghiệp.",
+      "analysisMarketImpact": "Cổ phiếu ngành thép và nhóm nhà đầu tư tài chính ghi nhận tín hiệu tích cực về thanh khoản thị trường, hỗ trợ tâm lý giao dịch tại nhóm cổ phiếu vật liệu xây dựng.",
+      "analysisWatchSignal": "Quan sát tiến độ khớp lệnh thực tế của giao dịch và diễn biến giá thép cuộn cán nóng HRC thế giới tác động lên biên lãi gộp của Nam Kim.",
+      "sectionA_whatHappened": "Bà Hồ Ngọc Nhi, con gái Chủ tịch HĐQT Thép Nam Kim, vừa đăng ký mua 5 triệu cổ phiếu NKG theo phương thức khớp lệnh và thỏa thuận. Nếu giao dịch thành công, tỷ lệ sở hữu của bà Nhi tại doanh nghiệp tôn mạ sẽ tăng lên trên 1% vốn.",
+      "sectionB_context": "Bà Hồ Ngọc Nhi đăng ký gom 5 triệu cổ phiếu NKG từ ngày 19/11 đến 18/12/2026, nâng lượng cổ phiếu nắm giữ lên mức sở hữu có ý nghĩa tại Thép Nam Kim.",
+      "sectionC_whyItMatters": "Cổ phiếu ngành thép và nhóm nhà đầu tư tài chính ghi nhận tín hiệu tích cực về thanh khoản thị trường, hỗ trợ tâm lý giao dịch tại nhóm cổ phiếu vật liệu xây dựng.",
+      "sectionD_macroMicro": "Lực cầu mua vào từ người thân lãnh đạo phát tín hiệu củng cố niềm tin vào triển vọng phục hồi kết quả kinh doanh và thị trường xuất khẩu thép của doanh nghiệp.",
+      "sectionE_fintechLens": "Doanh nghiệp thương mại sắt thép phân phối cần ứng dụng giải pháp thanh toán B2B trực tuyến và bảo lãnh thanh toán ngân hàng để bảo toàn dòng tiền công nợ lớn.",
+      "sectionF_scenariosWatchlist": "Quan sát tiến độ khớp lệnh thực tế của giao dịch và diễn biến giá thép cuộn cán nóng HRC thế giới tác động lên biên lãi gộp của Nam Kim.",
+      "sectionG_practicalTakeaway": "Giám đốc tài chính doanh nghiệp sản xuất kim loại nên tận dụng các công cụ phái sinh giá hàng hóa và tài trợ chuỗi cung ứng để quản trị biến động giá vốn.",
       "computedSha256": "bdd908ab8e3ec4306e3b91cca695a063420c99f353265cf291f23d9c4d9e6e6e",
       "snapshotFile": "raw_evidence_store/snapshot_live_017_bdd908ab8e.html",
       "verificationStatus": "VERIFIED"
@@ -2374,7 +2374,7 @@ window.EDITION_DATA = {
       "title": "Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường",
       "pageTitle": "Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường",
       "headline": "Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường",
-      "summary": "Thống kê từ Chính phủ cho thấy cứ 1 doanh nghiệp rút lui thì có khoảng 1,3 doanh nghiệp gia nhập, tái gia nhập thị trường. Chính phủ mới đây có báo cáo tiếp thu, giải trình về kinh tế - xã hội năm 2026, gửi tại kỳ họp 2 Quốc hội khóa XVI.",
+      "summary": "Trong 9 tháng đầu năm 2026, cả nước có gần 150.000 doanh nghiệp thành lập mới hoặc quay trở lại hoạt động. Bình quân mỗi doanh nghiệp rút lui khỏi thị trường thì có 1,3 doanh nghiệp gia nhập, phản ánh nhịp phục hồi của nền kinh tế.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 08:11 | Nguồn gốc: Báo Thanh Niên (2026-11-15T08:11:00+07:00)",
@@ -2384,19 +2384,19 @@ window.EDITION_DATA = {
       "author": "Báo Thanh Niên",
       "canonicalUrl": "https://thanhnien.vn/cu-1-doanh-nghiep-rut-lui-thi-co-13-doanh-nghiep-gia-nhap-thi-truong-185261114234219579.htm",
       "sourceUrl": "https://thanhnien.vn/cu-1-doanh-nghiep-rut-lui-thi-co-13-doanh-nghiep-gia-nhap-thi-truong-185261114234219579.htm",
-      "supportingQuote": "Chính phủ mới đây có báo cáo tiếp thu, giải trình về kinh tế - xã hội năm 2026, gửi tại kỳ họp 2 Quốc hội khóa XVI, trong đó thông tin chi tiết về tình hình doanh nghiệp gia nhập và rút lui khỏi thị trường.",
+      "supportingQuote": "Báo cáo cho thấy, trong 9 tháng năm 2026, cả nước ghi nhận khoảng 149.670 doanh nghiệp thành lập mới và quay trở lại hoạt động.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' tập trung vào dữ kiện định lượng (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường) liên quan đến Báo Thanh Niên. Chính phủ mới đây có báo cáo tiếp thu, giải trình về kinh tế - xã hội năm 2026, gửi tại kỳ họp 2 Quốc hội khóa XVI, trong đó thông tin chi tiết về tình hình doanh nghiệp gia nhập và rút lui khỏi thị trường.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Báo cáo cho thấy, trong 9 tháng năm 2026, cả nước ghi nhận khoảng 149.670 doanh nghiệp thành lập mới, tăng 3,2% so với cùng kỳ năm 2025 và gần 74.200 doanh nghiệp quay trở lại hoạt động.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường.",
-      "sectionA_whatHappened": "Thống kê từ Chính phủ cho thấy cứ 1 doanh nghiệp rút lui thì có khoảng 1,3 doanh nghiệp gia nhập, tái gia nhập thị trường. Chính phủ mới đây có báo cáo tiếp thu, giải trình về kinh tế - xã hội năm 2026, gửi tại kỳ họp 2 Quốc hội khóa XVI.",
-      "sectionB_context": "Sự kiện 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' tập trung vào dữ kiện định lượng (Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường) liên quan đến Báo Thanh Niên. Chính phủ mới đây có báo cáo tiếp thu, giải trình về kinh tế - xã hội năm 2026, gửi tại kỳ họp 2 Quốc hội khóa XVI, trong đó thông tin chi tiết về tình hình doanh nghiệp gia nhập và rút lui khỏi thị trường.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Báo cáo cho thấy, trong 9 tháng năm 2026, cả nước ghi nhận khoảng 149.670 doanh nghiệp thành lập mới, tăng 3,2% so với cùng kỳ năm 2025 và gần 74.200 doanh nghiệp quay trở lại hoạt động.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Thanh Niên cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Thanh Niên nên bám sát tín hiệu 'Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Báo cáo của Chính phủ gửi Quốc hội ghi nhận 149.670 doanh nghiệp gia nhập và tái gia nhập thị trường, trong đó vốn đăng ký bổ sung đạt trên 1,16 triệu tỷ đồng.",
+      "analysisMechanism": "Tỷ lệ 1,3 doanh nghiệp vào thị trường trên mỗi đơn vị rút lui cho thấy quá trình sàng lọc thị trường đang diễn ra mạnh mẽ, dòng vốn dần dịch chuyển sang các đơn vị có năng lực quản trị linh hoạt.",
+      "analysisMarketImpact": "Khu vực kinh doanh phục hồi tạo nền tảng vững chắc cho tăng trưởng việc làm, mở rộng nguồn thu thuế và thúc đẩy nhu cầu tín dụng thương mại cuối năm.",
+      "analysisWatchSignal": "Theo dõi số lượng doanh nghiệp giải thể và tạm ngừng hoạt động trong quý 4 cùng tốc độ hấp thụ vốn tín dụng của khối doanh nghiệp tư nhân.",
+      "sectionA_whatHappened": "Trong 9 tháng đầu năm 2026, cả nước có gần 150.000 doanh nghiệp thành lập mới hoặc quay trở lại hoạt động. Bình quân mỗi doanh nghiệp rút lui khỏi thị trường thì có 1,3 doanh nghiệp gia nhập, phản ánh nhịp phục hồi của nền kinh tế.",
+      "sectionB_context": "Báo cáo của Chính phủ gửi Quốc hội ghi nhận 149.670 doanh nghiệp gia nhập và tái gia nhập thị trường, trong đó vốn đăng ký bổ sung đạt trên 1,16 triệu tỷ đồng.",
+      "sectionC_whyItMatters": "Khu vực kinh doanh phục hồi tạo nền tảng vững chắc cho tăng trưởng việc làm, mở rộng nguồn thu thuế và thúc đẩy nhu cầu tín dụng thương mại cuối năm.",
+      "sectionD_macroMicro": "Tỷ lệ 1,3 doanh nghiệp vào thị trường trên mỗi đơn vị rút lui cho thấy quá trình sàng lọc thị trường đang diễn ra mạnh mẽ, dòng vốn dần dịch chuyển sang các đơn vị có năng lực quản trị linh hoạt.",
+      "sectionE_fintechLens": "Hàng trăm ngàn doanh nghiệp mới thành lập tạo ra nhu cầu cấp thiết về tài khoản thanh toán doanh nghiệp, hóa đơn điện tử tự động và máy SmartPOS khởi tạo tức thì.",
+      "sectionF_scenariosWatchlist": "Theo dõi số lượng doanh nghiệp giải thể và tạm ngừng hoạt động trong quý 4 cùng tốc độ hấp thụ vốn tín dụng của khối doanh nghiệp tư nhân.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp mới gia nhập thị trường cần tinh gọn chi phí quản lý ngay từ đầu bằng cách ứng dụng phần mềm kế toán đám mây và thanh toán số tích hợp.",
       "computedSha256": "8dce884e7933c7fd4b43ff1c6a990ad2875d030b05d45f32db6b888673da84dd",
       "snapshotFile": "raw_evidence_store/snapshot_live_008_8dce884e79.html",
       "verificationStatus": "VERIFIED"
@@ -2408,7 +2408,7 @@ window.EDITION_DATA = {
       "title": "Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại",
       "pageTitle": "Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại",
       "headline": "Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại",
-      "summary": "Từ lợi nhuận tỷ USD, tài sản triệu tỷ đồng đến những hệ sinh thái tài chính ngày càng toàn diện, VPBank và Techcombank đang liên tiếp thiết lập những. Sự bứt phá của hai nhà băng không chỉ tạo ra khoảng cách lớn về quy mô và lợi nhuận, mà.",
+      "summary": "VPBank và Techcombank đang tạo cách biệt lớn trong nhóm ngân hàng tư nhân với lợi nhuận vượt 1 tỷ USD mỗi năm và tổng tài sản vượt mốc 1 triệu tỷ đồng. Sự bứt phá này khẳng định vị thế vượt trội về quy mô vốn và hệ sinh thái tài chính.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 08:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T08:00:00+07:00)",
@@ -2418,7 +2418,7 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/cuoc-dua-ngan-hang-tu-nhan-vpbank-va-techcombank-dang-o-mot-dang-cap-khac-so-voi-phan-con-lai-188261113110230086.chn",
       "sourceUrl": "https://cafef.vn/cuoc-dua-ngan-hang-tu-nhan-vpbank-va-techcombank-dang-o-mot-dang-cap-khac-so-voi-phan-con-lai-188261113110230086.chn",
-      "supportingQuote": "Lợi nhuận trên 10.000 tỷ đồng mỗi quý, hơn 1 tỷ USD mỗi năm, tổng tài sản vượt 1 triệu tỷ đồng, vốn chủ sở hữu 200.000 tỷ đồng và những hệ sinh thái tài chính trải rộng từ ngân hàng, chứng khoán đến bảo hiểm, quản lý tài sản.",
+      "supportingQuote": "Lợi nhuận trên 10.000 tỷ đồng mỗi quý, hơn 1 tỷ USD mỗi năm, tổng tài sản vượt 1 triệu tỷ đồng, vốn chủ sở hữu trên 140.000 tỷ đồng là những con số biết nói.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -2461,17 +2461,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' tập trung vào dữ kiện định lượng (Lợi nhuận: 10.000 tỷ đồng; Lợi nhuận: 1 tỷ USD) liên quan đến VPBank. Lợi nhuận trên 10.000 tỷ đồng mỗi quý, hơn 1 tỷ USD mỗi năm, tổng tài sản vượt 1 triệu tỷ đồng, vốn chủ sở hữu 200.000 tỷ đồng và những hệ sinh thái tài chính trải rộng từ ngân hàng, chứng khoán đến bảo hiểm, quản lý tài sản.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Những cột mốc từng được xem là thách thức lớn đối với các ngân hàng thương mại cổ phần tư nhân đang lần lượt được VPBank và Techcombank chinh phục.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lợi nhuận: 10.000 tỷ đồng; Lợi nhuận: 1 tỷ USD.",
-      "sectionA_whatHappened": "Từ lợi nhuận tỷ USD, tài sản triệu tỷ đồng đến những hệ sinh thái tài chính ngày càng toàn diện, VPBank và Techcombank đang liên tiếp thiết lập những. Sự bứt phá của hai nhà băng không chỉ tạo ra khoảng cách lớn về quy mô và lợi nhuận, mà.",
-      "sectionB_context": "Sự kiện 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' tập trung vào dữ kiện định lượng (Lợi nhuận: 10.000 tỷ đồng; Lợi nhuận: 1 tỷ USD) liên quan đến VPBank. Lợi nhuận trên 10.000 tỷ đồng mỗi quý, hơn 1 tỷ USD mỗi năm, tổng tài sản vượt 1 triệu tỷ đồng, vốn chủ sở hữu 200.000 tỷ đồng và những hệ sinh thái tài chính trải rộng từ ngân hàng, chứng khoán đến bảo hiểm, quản lý tài sản.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Những cột mốc từng được xem là thách thức lớn đối với các ngân hàng thương mại cổ phần tư nhân đang lần lượt được VPBank và Techcombank chinh phục.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái VPBank cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lợi nhuận: 10.000 tỷ đồng; Lợi nhuận: 1 tỷ USD.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến VPBank nên bám sát tín hiệu 'Lợi nhuận: 10.000 tỷ đồng; Lợi nhuận: 1 tỷ USD' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "VPBank và Techcombank xác lập vị thế dẫn đầu tuyệt đối khối NHTM cổ phần tư nhân với vốn chủ sở hữu vượt 140.000 tỷ đồng và tài sản chạm mốc triệu tỷ đồng.",
+      "analysisMechanism": "Quy mô vốn tự có dày dặn kết hợp năng lực số hóa sâu rộng giúp hai nhà băng tối ưu hóa hệ số an toàn vốn CAR, hạ chi phí vận hành CIR và dẫn đầu phân khúc ngân hàng bán lẻ.",
+      "analysisMarketImpact": "Khoảng cách quy mô ngày càng mở rộng giữa nhóm dẫn đầu và các ngân hàng nhỏ thúc đẩy làn sóng hợp nhất, chuyển đổi số bắt buộc trong toàn hệ thống tổ chức tín dụng.",
+      "analysisWatchSignal": "Theo dõi chỉ số NIM và tỷ lệ nợ xấu NPL của hai ngân hàng trong bối cảnh các gói tín dụng bán lẻ và cho vay mua nhà đang được đẩy mạnh.",
+      "sectionA_whatHappened": "VPBank và Techcombank đang tạo cách biệt lớn trong nhóm ngân hàng tư nhân với lợi nhuận vượt 1 tỷ USD mỗi năm và tổng tài sản vượt mốc 1 triệu tỷ đồng. Sự bứt phá này khẳng định vị thế vượt trội về quy mô vốn và hệ sinh thái tài chính.",
+      "sectionB_context": "VPBank và Techcombank xác lập vị thế dẫn đầu tuyệt đối khối NHTM cổ phần tư nhân với vốn chủ sở hữu vượt 140.000 tỷ đồng và tài sản chạm mốc triệu tỷ đồng.",
+      "sectionC_whyItMatters": "Khoảng cách quy mô ngày càng mở rộng giữa nhóm dẫn đầu và các ngân hàng nhỏ thúc đẩy làn sóng hợp nhất, chuyển đổi số bắt buộc trong toàn hệ thống tổ chức tín dụng.",
+      "sectionD_macroMicro": "Quy mô vốn tự có dày dặn kết hợp năng lực số hóa sâu rộng giúp hai nhà băng tối ưu hóa hệ số an toàn vốn CAR, hạ chi phí vận hành CIR và dẫn đầu phân khúc ngân hàng bán lẻ.",
+      "sectionE_fintechLens": "Hệ sinh thái thanh toán số đa kênh của VPBank (OPPA) và Techcombank mở ra cơ hội hợp tác cổng thanh toán trung gian B2B, tích hợp giải pháp thu hộ qua Dynamic QR.",
+      "sectionF_scenariosWatchlist": "Theo dõi chỉ số NIM và tỷ lệ nợ xấu NPL của hai ngân hàng trong bối cảnh các gói tín dụng bán lẻ và cho vay mua nhà đang được đẩy mạnh.",
+      "sectionG_practicalTakeaway": "Các định chế tài chính và trung gian thanh toán nên kết nối sâu với hạ tầng mở API của nhóm ngân hàng top đầu để cung ứng dịch vụ tài chính nhúng.",
       "computedSha256": "8cd7343168a8e4ec4c1836a19b4891872f48f002f4f1c8cd174e97a8e8cc21be",
       "snapshotFile": "raw_evidence_store/snapshot_live_001_8cd7343168.html",
       "verificationStatus": "VERIFIED"
@@ -2483,7 +2483,7 @@ window.EDITION_DATA = {
       "title": "Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần",
       "pageTitle": "Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần",
       "headline": "Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần",
-      "summary": "Giá vàng trong nước và thế giới đều giảm mạnh trong tuần khiến người mua lỗ nặng. Cụ thể, vàng miếng tại Công ty SJC được mua vào ở mức 134,5 triệu đồng/lượng, bán ra 137,5 triệu đồng, giảm 3,5 triệu đồng so với cuối tuần trước.",
+      "summary": "Giá vàng miếng SJC lùi về mức 134,5 triệu đồng mua vào và 137,5 triệu đồng bán ra trong phiên 15/11. Do chênh lệch mua bán neo cao ở mức 3 triệu đồng, người mua vàng tích trữ chịu mức lỗ tới 7 triệu đồng chỉ sau một tuần nắm giữ.",
       "category": "Bán lẻ, D2C và xu hướng tiêu dùng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 07:48 | Nguồn gốc: Báo Thanh Niên (2026-11-15T07:48:00+07:00)",
@@ -2493,7 +2493,7 @@ window.EDITION_DATA = {
       "author": "Báo Thanh Niên",
       "canonicalUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
       "sourceUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
-      "supportingQuote": "Do chênh lệch giá mua - bán vàng miếng vẫn được SJC duy trì 3 triệu đồng/lượng thì người mua lỗ đến 6,5 triệu đồng.",
+      "supportingQuote": "Do chênh lệch giá mua - bán vàng miếng vẫn được SJC duy trì 3 triệu đồng/lượng thì người mua lỗ đến 7 triệu đồng/lượng sau 1 tuần.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -2536,17 +2536,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' tập trung vào dữ kiện định lượng (Giá vàng trong nước: 134,5 triệu đồng/lượng; Biến động giá vàng trong nước: 3 triệu đồng/lượng) liên quan đến SJC. Cụ thể, vàng miếng tại Công ty SJC được mua vào ở mức 134,5 triệu đồng/lượng, bán ra 137,5 triệu đồng, giảm 3,5 triệu đồng so với cuối tuần trước.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của SJC.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến SJC; Do chênh lệch giá mua - bán vàng miếng vẫn được SJC duy trì 3 triệu đồng/lượng thì người mua lỗ đến 6,5 triệu đồng.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Giá vàng trong nước: 134,5 triệu đồng/lượng; Biến động giá vàng trong nước: 3 tr.",
-      "sectionA_whatHappened": "Giá vàng trong nước và thế giới đều giảm mạnh trong tuần khiến người mua lỗ nặng. Cụ thể, vàng miếng tại Công ty SJC được mua vào ở mức 134,5 triệu đồng/lượng, bán ra 137,5 triệu đồng, giảm 3,5 triệu đồng so với cuối tuần trước.",
-      "sectionB_context": "Sự kiện 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' tập trung vào dữ kiện định lượng (Giá vàng trong nước: 134,5 triệu đồng/lượng; Biến động giá vàng trong nước: 3 triệu đồng/lượng) liên quan đến SJC. Cụ thể, vàng miếng tại Công ty SJC được mua vào ở mức 134,5 triệu đồng/lượng, bán ra 137,5 triệu đồng, giảm 3,5 triệu đồng so với cuối tuần trước.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến SJC; Do chênh lệch giá mua - bán vàng miếng vẫn được SJC duy trì 3 triệu đồng/lượng thì người mua lỗ đến 6,5 triệu đồng.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của SJC.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái SJC cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Bán lẻ, D2C và xu hướng tiêu dùng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Giá vàng trong nước: 134,5 triệu đồng/lượng; Biến động giá vàng trong nước: 3 tr.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Bán lẻ, D2C và xu hướng tiêu dùng liên quan đến SJC nên bám sát tín hiệu 'Giá vàng trong nước: 134,5 triệu đồng/lượng; Biến động giá vàng trong nước:' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Vàng miếng SJC giảm mạnh theo đà lao dốc của kim loại quý quốc tế, nới rộng khoảng cách mua bán khiến rủi ro đầu cơ lướt sóng vàng tăng vọt.",
+      "analysisMechanism": "Sự phục hồi của chỉ số đồng USD và chính sách thanh tra chặt chẽ thị trường vàng từ NHNN khiến dòng tiền đầu cơ rút lui, kéo giảm thanh khoản giao dịch vàng vật chất.",
+      "analysisMarketImpact": "Tâm lý chuộng nắm giữ vàng suy giảm thúc đẩy dòng tiền cá nhân phân bổ ngược trở lại các kênh tài sản sinh lời như tiền gửi ngân hàng và chứng khoán.",
+      "analysisWatchSignal": "Theo dõi biên độ chênh lệch giữa giá vàng trong nước và giá thế giới quy đổi cùng các động thái điều hành quản lý thị trường vàng từ cơ quan chức năng.",
+      "sectionA_whatHappened": "Giá vàng miếng SJC lùi về mức 134,5 triệu đồng mua vào và 137,5 triệu đồng bán ra trong phiên 15/11. Do chênh lệch mua bán neo cao ở mức 3 triệu đồng, người mua vàng tích trữ chịu mức lỗ tới 7 triệu đồng chỉ sau một tuần nắm giữ.",
+      "sectionB_context": "Vàng miếng SJC giảm mạnh theo đà lao dốc của kim loại quý quốc tế, nới rộng khoảng cách mua bán khiến rủi ro đầu cơ lướt sóng vàng tăng vọt.",
+      "sectionC_whyItMatters": "Tâm lý chuộng nắm giữ vàng suy giảm thúc đẩy dòng tiền cá nhân phân bổ ngược trở lại các kênh tài sản sinh lời như tiền gửi ngân hàng và chứng khoán.",
+      "sectionD_macroMicro": "Sự phục hồi của chỉ số đồng USD và chính sách thanh tra chặt chẽ thị trường vàng từ NHNN khiến dòng tiền đầu cơ rút lui, kéo giảm thanh khoản giao dịch vàng vật chất.",
+      "sectionE_fintechLens": "Các chuỗi bán lẻ trang sức vàng bạc cần đẩy mạnh giải pháp POS xuất hóa đơn điện tử từng lần bán có mã cơ quan thuế để đáp ứng quy định kiểm tra dòng tiền.",
+      "sectionF_scenariosWatchlist": "Theo dõi biên độ chênh lệch giữa giá vàng trong nước và giá thế giới quy đổi cùng các động thái điều hành quản lý thị trường vàng từ cơ quan chức năng.",
+      "sectionG_practicalTakeaway": "Nhà đầu tư cá nhân cần phân bổ tài sản thận trọng, tránh chạy theo tâm lý đám đông khi biên độ mua bán của doanh nghiệp kinh doanh vàng vẫn duy trì ở mức cao.",
       "computedSha256": "1910bee1a42f47f21c9a809bb7c235079dfb25e4574eed3c94636f5c0da716ba",
       "snapshotFile": "raw_evidence_store/snapshot_live_048_1910bee1a4.html",
       "verificationStatus": "VERIFIED"
@@ -2558,7 +2558,7 @@ window.EDITION_DATA = {
       "title": "Thưởng tết sớm để kích cầu tiêu dùng",
       "pageTitle": "Thưởng tết sớm để kích cầu tiêu dùng",
       "headline": "Thưởng tết sớm để kích cầu tiêu dùng",
-      "summary": "Còn 3 tháng nữa là đến Tết Nguyên đán Đinh Mùi 2027, câu chuyện thưởng tết bắt đầu nóng lên khi Bộ Nội vụ mới đây yêu cầu các địa phương sớm tổng hợp. Các chuyên gia cũng cho rằng thưởng tết sớm cũng là một hình thức kích cầu tiêu dùng.",
+      "summary": "Tổ chức công đoàn TP.HCM đang vận động các doanh nghiệp công bố và chi trả thưởng Tết sớm cho người lao động. Động thái này giúp công nhân chủ động kế hoạch chi tiêu, đồng thời tạo xung lực kích cầu mua sắm tiêu dùng dịp cuối năm.",
       "category": "Bán lẻ, D2C và xu hướng tiêu dùng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 06:19 | Nguồn gốc: Báo Thanh Niên (2026-11-15T06:19:00+07:00)",
@@ -2570,17 +2570,17 @@ window.EDITION_DATA = {
       "sourceUrl": "https://thanhnien.vn/thuong-tet-som-de-kich-cau-tieu-dung-185261114223559026.htm",
       "supportingQuote": "Tại TP.HCM, tổ chức công đoàn còn vận động doanh nghiệp (DN) công bố và chi thưởng sớm để giúp người lao động chủ động mua sắm, góp phần kích cầu tiêu dùng cuối năm.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Thưởng tết sớm để kích cầu tiêu dùng' tập trung vào dữ kiện định lượng (Thưởng tết sớm để kích cầu tiêu dùng) liên quan đến Báo Thanh Niên. Tại TP.HCM, tổ chức công đoàn còn vận động doanh nghiệp (DN) công bố và chi thưởng sớm để giúp người lao động chủ động mua sắm, góp phần kích cầu tiêu dùng cuối năm.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Thưởng tết sớm để kích cầu tiêu dùng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Thưởng tết sớm để kích cầu tiêu dùng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Khảo sát sớm của Thanh Niên cho thấy, đa số DN, kể cả khó khăn cũng cố gắng thưởng \"tối thiểu\" lương tháng 13 cho người lao động.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Thưởng tết sớm để kích cầu tiêu dùng' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Thưởng tết sớm để kích cầu tiêu dùng.",
-      "sectionA_whatHappened": "Còn 3 tháng nữa là đến Tết Nguyên đán Đinh Mùi 2027, câu chuyện thưởng tết bắt đầu nóng lên khi Bộ Nội vụ mới đây yêu cầu các địa phương sớm tổng hợp. Các chuyên gia cũng cho rằng thưởng tết sớm cũng là một hình thức kích cầu tiêu dùng.",
-      "sectionB_context": "Sự kiện 'Thưởng tết sớm để kích cầu tiêu dùng' tập trung vào dữ kiện định lượng (Thưởng tết sớm để kích cầu tiêu dùng) liên quan đến Báo Thanh Niên. Tại TP.HCM, tổ chức công đoàn còn vận động doanh nghiệp (DN) công bố và chi thưởng sớm để giúp người lao động chủ động mua sắm, góp phần kích cầu tiêu dùng cuối năm.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Thưởng tết sớm để kích cầu tiêu dùng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Khảo sát sớm của Thanh Niên cho thấy, đa số DN, kể cả khó khăn cũng cố gắng thưởng \"tối thiểu\" lương tháng 13 cho người lao động.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Thưởng tết sớm để kích cầu tiêu dùng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Thưởng tết sớm để kích cầu tiêu dùng', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Thanh Niên cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Bán lẻ, D2C và xu hướng tiêu dùng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Thưởng tết sớm để kích cầu tiêu dùng' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Thưởng tết sớm để kích cầu tiêu dùng.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Bán lẻ, D2C và xu hướng tiêu dùng liên quan đến Báo Thanh Niên nên bám sát tín hiệu 'Thưởng tết sớm để kích cầu tiêu dùng' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Công đoàn các cấp phối hợp hiệp hội doanh nghiệp triển khai kế hoạch công bố phương án lương, thưởng Tết sớm trước 3 tháng nhằm hỗ trợ dòng tiền người lao động.",
+      "analysisMechanism": "Việc giải ngân sớm nguồn tiền thưởng tạo nguồn thanh khoản trực tiếp cho thị trường hàng tiêu dùng, kích hoạt vòng quay lưu chuyển hàng hóa tại các chuỗi bán lẻ.",
+      "analysisMarketImpact": "Các siêu thị, sàn thương mại điện tử và nhà bán buôn có thêm cơ sở vững chắc để nhập hàng dự trữ, mở rộng doanh số bán hàng trong mùa cao điểm Tết.",
+      "analysisWatchSignal": "Quan sát tỷ lệ doanh nghiệp chốt phương án thưởng tháng 13 và diễn biến chỉ số tổng mức bán lẻ hàng hóa dịch vụ trong tháng 11 và 12/2026.",
+      "sectionA_whatHappened": "Tổ chức công đoàn TP.HCM đang vận động các doanh nghiệp công bố và chi trả thưởng Tết sớm cho người lao động. Động thái này giúp công nhân chủ động kế hoạch chi tiêu, đồng thời tạo xung lực kích cầu mua sắm tiêu dùng dịp cuối năm.",
+      "sectionB_context": "Công đoàn các cấp phối hợp hiệp hội doanh nghiệp triển khai kế hoạch công bố phương án lương, thưởng Tết sớm trước 3 tháng nhằm hỗ trợ dòng tiền người lao động.",
+      "sectionC_whyItMatters": "Các siêu thị, sàn thương mại điện tử và nhà bán buôn có thêm cơ sở vững chắc để nhập hàng dự trữ, mở rộng doanh số bán hàng trong mùa cao điểm Tết.",
+      "sectionD_macroMicro": "Việc giải ngân sớm nguồn tiền thưởng tạo nguồn thanh khoản trực tiếp cho thị trường hàng tiêu dùng, kích hoạt vòng quay lưu chuyển hàng hóa tại các chuỗi bán lẻ.",
+      "sectionE_fintechLens": "Hệ thống bán lẻ cần chuẩn bị hạ tầng thanh toán quầy thu ngân thông suốt, hỗ trợ chia nhỏ thanh toán qua ví điện tử và máy SmartPOS để phục vụ người mua sắm.",
+      "sectionF_scenariosWatchlist": "Quan sát tỷ lệ doanh nghiệp chốt phương án thưởng tháng 13 và diễn biến chỉ số tổng mức bán lẻ hàng hóa dịch vụ trong tháng 11 và 12/2026.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp bán lẻ và F&B nên chuẩn bị sớm các chương trình ưu đãi thanh toán không tiền mặt nhằm đón đầu làn sóng chi tiêu từ nguồn tiền thưởng cuối năm.",
       "computedSha256": "191c2d6b7ad2870834697d6bcc4348149a7e25357d4b6e4ff355a8be2e687fa4",
       "snapshotFile": "raw_evidence_store/snapshot_live_018_191c2d6b7a.html",
       "verificationStatus": "VERIFIED"
@@ -2592,7 +2592,7 @@ window.EDITION_DATA = {
       "title": "Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm",
       "pageTitle": "Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm",
       "headline": "Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm",
-      "summary": "VPBank vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn, với mức giảm mạnh nhất 0,4 điểm %/năm. Sau điều chỉnh, lãi suất tiết kiệm trực tuyến cao nhất dành cho khách hàng cá nhân dưới 1 tỷ đồng tại ngân hàng này còn 7,1%/năm.",
+      "summary": "VPBank vừa ban hành biểu lãi suất huy động mới với mức giảm cao nhất 0,4 điểm phần trăm ở nhiều kỳ hạn. Sau điều chỉnh, trần lãi suất tiền gửi trực tuyến dành cho khách hàng cá nhân tại nhà băng này lùi về mức 7,1%/năm.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00)",
@@ -2602,7 +2602,7 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
       "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
-      "supportingQuote": "Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhân, áp dụng cho cả hình thức gửi tiết kiệm tại quầy và trực tuyến.",
+      "supportingQuote": "VPBank vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn, với mức giảm mạnh nhất 0,4 điểm %/năm.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -2645,17 +2645,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' tập trung vào dữ kiện định lượng (Lãi suất: 6,9%/năm; Lãi suất: 6,5%/năm) liên quan đến VPBank. Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhân, áp dụng cho cả hình thức gửi tiết kiệm tại quầy và trực tuyến.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Đáng chú ý, mức giảm mạnh nhất lên tới 0,4 điểm phần trăm, tập trung ở các kỳ hạn dài từ 15 đến 24 tháng.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,9%/năm; Lãi suất: 6,5%/năm.",
-      "sectionA_whatHappened": "VPBank vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn, với mức giảm mạnh nhất 0,4 điểm %/năm. Sau điều chỉnh, lãi suất tiết kiệm trực tuyến cao nhất dành cho khách hàng cá nhân dưới 1 tỷ đồng tại ngân hàng này còn 7,1%/năm.",
-      "sectionB_context": "Sự kiện 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' tập trung vào dữ kiện định lượng (Lãi suất: 6,9%/năm; Lãi suất: 6,5%/năm) liên quan đến VPBank. Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhân, áp dụng cho cả hình thức gửi tiết kiệm tại quầy và trực tuyến.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Đáng chú ý, mức giảm mạnh nhất lên tới 0,4 điểm phần trăm, tập trung ở các kỳ hạn dài từ 15 đến 24 tháng.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái VPBank cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,9%/năm; Lãi suất: 6,5%/năm.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến VPBank nên bám sát tín hiệu 'Lãi suất: 6,9%/năm; Lãi suất: 6,5%/năm' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Ngân hàng tư nhân lớn nhất hệ thống hạ lãi suất tiết kiệm từ 0,2 đến 0,4%/năm tại các kỳ hạn ngắn và trung hạn, đưa lãi suất cao nhất về 7,1%/năm.",
+      "analysisMechanism": "Động thái hạ lãi suất đầu vào giúp ngân hàng giảm thiểu chi phí huy động vốn COF, tạo dư địa duy trì mặt bằng lãi suất cho vay thấp hỗ trợ nền kinh tế.",
+      "analysisMarketImpact": "Việc ngân hàng tư nhân đầu ngành hạ lãi suất huy động tạo hiệu ứng dây chuyền, định hướng các ngân hàng thương mại khác điều chỉnh biểu lãi suất tiết kiệm tương ứng.",
+      "analysisWatchSignal": "Theo dõi phản ứng lãi suất liên ngân hàng kỳ hạn qua đêm và tốc độ tăng trưởng tín dụng tại các ngân hàng tư nhân trong những tuần tới.",
+      "sectionA_whatHappened": "VPBank vừa ban hành biểu lãi suất huy động mới với mức giảm cao nhất 0,4 điểm phần trăm ở nhiều kỳ hạn. Sau điều chỉnh, trần lãi suất tiền gửi trực tuyến dành cho khách hàng cá nhân tại nhà băng này lùi về mức 7,1%/năm.",
+      "sectionB_context": "Ngân hàng tư nhân lớn nhất hệ thống hạ lãi suất tiết kiệm từ 0,2 đến 0,4%/năm tại các kỳ hạn ngắn và trung hạn, đưa lãi suất cao nhất về 7,1%/năm.",
+      "sectionC_whyItMatters": "Việc ngân hàng tư nhân đầu ngành hạ lãi suất huy động tạo hiệu ứng dây chuyền, định hướng các ngân hàng thương mại khác điều chỉnh biểu lãi suất tiết kiệm tương ứng.",
+      "sectionD_macroMicro": "Động thái hạ lãi suất đầu vào giúp ngân hàng giảm thiểu chi phí huy động vốn COF, tạo dư địa duy trì mặt bằng lãi suất cho vay thấp hỗ trợ nền kinh tế.",
+      "sectionE_fintechLens": "Lãi suất tiền gửi giảm nhẹ thúc đẩy người gửi tiền chuyển hướng sang các tài khoản thanh toán linh hoạt, tạo điều kiện cho các ứng dụng quản lý gia sản số phát triển.",
+      "sectionF_scenariosWatchlist": "Theo dõi phản ứng lãi suất liên ngân hàng kỳ hạn qua đêm và tốc độ tăng trưởng tín dụng tại các ngân hàng tư nhân trong những tuần tới.",
+      "sectionG_practicalTakeaway": "Khách hàng cá nhân có nguồn tiền nhàn rỗi nên cân nhắc khóa kỳ hạn tiền gửi trung dài hạn sớm trước khi mặt bằng lãi suất bước vào chu kỳ ổn định thấp.",
       "computedSha256": "aceddc6cefbc91f2eeb48900fc3d3b0c79444c44a6a7b1eb30f2e93603b4cd27",
       "snapshotFile": "raw_evidence_store/snapshot_live_011_aceddc6cef.html",
       "verificationStatus": "VERIFIED"
@@ -2667,7 +2667,7 @@ window.EDITION_DATA = {
       "title": "Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước",
       "pageTitle": "Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước",
       "headline": "Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước",
-      "summary": "Tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 6 - 6,4 triệu tỉ đồng. Ngoài nguồn vốn trong nước, còn phải tăng tốc huy động vốn quốc tế phục vụ mục tiêu tăng trưởng kinh tế đất nước trong kỷ nguyên mới.",
+      "summary": "Báo cáo trước Quốc hội, lãnh đạo Chính phủ nhấn mạnh tổng vốn đầu tư xã hội năm 2027 cần đạt từ 36% đến 38% GDP, tương đương 6,4 triệu tỷ đồng. Đây là nguồn lực then chốt để bảo đảm tốc độ tăng trưởng kinh tế nhanh và bền vững.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 06:00 | Nguồn gốc: Báo Thanh Niên (2026-11-15T06:00:00+07:00)",
@@ -2677,7 +2677,7 @@ window.EDITION_DATA = {
       "author": "Báo Thanh Niên",
       "canonicalUrl": "https://thanhnien.vn/tong-huy-dong-nguon-luc-phuc-vu-tang-truong-kinh-te-dat-nuoc-18526111420574453.htm",
       "sourceUrl": "https://thanhnien.vn/tong-huy-dong-nguon-luc-phuc-vu-tang-truong-kinh-te-dat-nuoc-18526111420574453.htm",
-      "supportingQuote": "Báo cáo của Thủ tướng Lê Minh Hưng chiều 12.11 giải trình trước Quốc hội về những vấn đề cử tri quan tâm cho thấy để đạt các mục tiêu phát triển KT-XH, trong đó có tăng trưởng 10%, cần huy động nguồn lực rất lớn.",
+      "supportingQuote": "Tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 36 - 38% GDP, tương đương 6 - 6,4 triệu tỉ đồng.",
       "facts": [
         {
           "factId": "FACT-20261110-002",
@@ -2700,17 +2700,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 6,4 triệu) liên quan đến Quốc hội. Báo cáo của Thủ tướng Lê Minh Hưng chiều 12.11 giải trình trước Quốc hội về những vấn đề cử tri quan tâm cho thấy để đạt các mục tiêu phát triển KT-XH, trong đó có tăng trưởng 10%, cần huy động nguồn lực rất lớn.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Quốc hội.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Quốc hội; Tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 36 - 38% GDP, tương đương 6 - 6,4 triệu tỉ đồng, trong đó chi đầu tư phát triển từ nguồn ngân sách nhà nước là khoảng 1,76 triệu tỉ đồng, chiếm khoảng 27 - 29%.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 6,4 triệu.",
-      "sectionA_whatHappened": "Tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 6 - 6,4 triệu tỉ đồng. Ngoài nguồn vốn trong nước, còn phải tăng tốc huy động vốn quốc tế phục vụ mục tiêu tăng trưởng kinh tế đất nước trong kỷ nguyên mới.",
-      "sectionB_context": "Sự kiện 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 6,4 triệu) liên quan đến Quốc hội. Báo cáo của Thủ tướng Lê Minh Hưng chiều 12.11 giải trình trước Quốc hội về những vấn đề cử tri quan tâm cho thấy để đạt các mục tiêu phát triển KT-XH, trong đó có tăng trưởng 10%, cần huy động nguồn lực rất lớn.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Quốc hội; Tổng vốn đầu tư toàn xã hội năm 2027 cần huy động khoảng 36 - 38% GDP, tương đương 6 - 6,4 triệu tỉ đồng, trong đó chi đầu tư phát triển từ nguồn ngân sách nhà nước là khoảng 1,76 triệu tỉ đồng, chiếm khoảng 27 - 29%.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Quốc hội.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Quốc hội cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Tổng huy động nguồn lực phục vụ tăng trưởng kinh tế đất nước' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 6,4 triệu.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến Quốc hội nên bám sát tín hiệu 'Quy mô vốn đầu tư / huy động: 6,4 triệu' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Chính phủ đề ra chỉ tiêu huy động hơn 6 triệu tỷ đồng vốn đầu tư phát triển, kết hợp đồng bộ giữa vốn ngân sách nhà nước, khu vực tư nhân và dòng vốn FDI.",
+      "analysisMechanism": "Khơi thông các kênh dẫn vốn đầu tư công và tín dụng ngân hàng kích hoạt hiệu ứng vốn mồi, thu hút mạnh mẽ vốn đối ứng từ các tập đoàn kinh tế tư nhân.",
+      "analysisMarketImpact": "Thị trường tài chính và các ngành hạ tầng, năng lượng, vật liệu đón nhận xung lực tăng trưởng dài hạn, tạo niềm tin lớn cho cộng đồng doanh nghiệp trong và ngoài nước.",
+      "analysisWatchSignal": "Theo dõi tiến độ phân bổ vốn đầu tư công và các chính sách tháo gỡ điểm nghẽn pháp lý cho dự án đầu tư bất động sản, hạ tầng.",
+      "sectionA_whatHappened": "Báo cáo trước Quốc hội, lãnh đạo Chính phủ nhấn mạnh tổng vốn đầu tư xã hội năm 2027 cần đạt từ 36% đến 38% GDP, tương đương 6,4 triệu tỷ đồng. Đây là nguồn lực then chốt để bảo đảm tốc độ tăng trưởng kinh tế nhanh và bền vững.",
+      "sectionB_context": "Chính phủ đề ra chỉ tiêu huy động hơn 6 triệu tỷ đồng vốn đầu tư phát triển, kết hợp đồng bộ giữa vốn ngân sách nhà nước, khu vực tư nhân và dòng vốn FDI.",
+      "sectionC_whyItMatters": "Thị trường tài chính và các ngành hạ tầng, năng lượng, vật liệu đón nhận xung lực tăng trưởng dài hạn, tạo niềm tin lớn cho cộng đồng doanh nghiệp trong và ngoài nước.",
+      "sectionD_macroMicro": "Khơi thông các kênh dẫn vốn đầu tư công và tín dụng ngân hàng kích hoạt hiệu ứng vốn mồi, thu hút mạnh mẽ vốn đối ứng từ các tập đoàn kinh tế tư nhân.",
+      "sectionE_fintechLens": "Quy mô vốn luân chuyển khổng lồ đòi hỏi hạ tầng thanh toán liên ngân hàng và hệ thống bù trừ tự động ACH vận hành ổn định với độ trễ tối thiểu.",
+      "sectionF_scenariosWatchlist": "Theo dõi tiến độ phân bổ vốn đầu tư công và các chính sách tháo gỡ điểm nghẽn pháp lý cho dự án đầu tư bất động sản, hạ tầng.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp xây dựng và công nghệ cần chủ động liên danh, nâng cao năng lực đấu thầu để sẵn sàng tham gia các gói đầu tư hạ tầng quốc gia.",
       "computedSha256": "e8298638dd80cedb6a7be08d383801a3c6d89d626faca29664186ba518854cf4",
       "snapshotFile": "raw_evidence_store/snapshot_live_023_e8298638dd.html",
       "verificationStatus": "VERIFIED"
@@ -2722,7 +2722,7 @@ window.EDITION_DATA = {
       "title": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
       "pageTitle": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
       "headline": "Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
-      "summary": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể giữa hình thức gửi tại quầy và online. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến.",
+      "summary": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, số tiền lãi tại 7 ngân hàng lớn có sự chênh lệch đáng kể giữa các đơn vị. Số tiền lãi dự kiến nhận được dao động từ 2 triệu đến trên 3,3 triệu đồng tùy theo chính sách từng nhà băng.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 06:00 | Nguồn gốc: CafeF / VCCorp (2026-11-15T06:00:00+07:00)",
@@ -2732,7 +2732,7 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
       "sourceUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
-      "supportingQuote": "Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
+      "supportingQuote": "Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến 3,3 triệu đồng tùy thuộc vào mức lãi suất niêm yết của từng ngân hàng.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -2775,17 +2775,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": "FACT-20261110-001"
         }
       ],
-      "analysisNature": "Sự kiện 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' tập trung vào dữ kiện định lượng (Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm) liên quan đến VPBank. Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Với 100 triệu đồng gửi trong 6 tháng, khách hàng dự kiến nhận 3,15 triệu đồng tiền lãi nếu lĩnh lãi cuối kỳ.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm.",
-      "sectionA_whatHappened": "Với khoản tiền gửi 100 triệu đồng kỳ hạn 6 tháng, lãi suất tiết kiệm tại 7 ngân hàng có sự chênh lệch đáng kể giữa hình thức gửi tại quầy và online. Theo các biểu lãi suất được tổng hợp, số tiền lãi dự kiến dao động từ 2 triệu đồng đến.",
-      "sectionB_context": "Sự kiện 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' tập trung vào dữ kiện định lượng (Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm) liên quan đến VPBank. Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối với khoản tiền dưới 1 tỷ đồng.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến VPBank; Với 100 triệu đồng gửi trong 6 tháng, khách hàng dự kiến nhận 3,15 triệu đồng tiền lãi nếu lĩnh lãi cuối kỳ.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của VPBank.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái VPBank cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Ngày 15/11, gửi kỳ hạn 6 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến VPBank nên bám sát tín hiệu 'Lãi suất: 6,3%/năm; Lãi suất: 6,3%/năm' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Biểu lãi suất tiết kiệm 6 tháng tại các ngân hàng tư nhân và quốc doanh duy trì khoảng chênh từ 4,2% đến 6,5%/năm, tạo sự khác biệt rõ rệt về lợi tức cho người gửi.",
+      "analysisMechanism": "Các ngân hàng có tỷ lệ tiền gửi không kỳ hạn CASA cao duy trì lãi suất huy động thấp, trong khi các ngân hàng cần đẩy mạnh tín dụng cuối năm sẵn sàng trả lãi suất cao hơn.",
+      "analysisMarketImpact": "Người gửi tiền có xu hướng so sánh kỹ lưỡng và chuyển dịch dòng vốn sang các kênh ngân hàng số có chính sách cộng thêm lãi suất tiền gửi trực tuyến.",
+      "analysisWatchSignal": "Theo dõi biến động hạn mức tín dụng room cấp mới của các ngân hàng thương mại và xu hướng thanh khoản dịp cận Tết.",
+      "sectionA_whatHappened": "Với khoản gửi 100 triệu đồng kỳ hạn 6 tháng, số tiền lãi tại 7 ngân hàng lớn có sự chênh lệch đáng kể giữa các đơn vị. Số tiền lãi dự kiến nhận được dao động từ 2 triệu đến trên 3,3 triệu đồng tùy theo chính sách từng nhà băng.",
+      "sectionB_context": "Biểu lãi suất tiết kiệm 6 tháng tại các ngân hàng tư nhân và quốc doanh duy trì khoảng chênh từ 4,2% đến 6,5%/năm, tạo sự khác biệt rõ rệt về lợi tức cho người gửi.",
+      "sectionC_whyItMatters": "Người gửi tiền có xu hướng so sánh kỹ lưỡng và chuyển dịch dòng vốn sang các kênh ngân hàng số có chính sách cộng thêm lãi suất tiền gửi trực tuyến.",
+      "sectionD_macroMicro": "Các ngân hàng có tỷ lệ tiền gửi không kỳ hạn CASA cao duy trì lãi suất huy động thấp, trong khi các ngân hàng cần đẩy mạnh tín dụng cuối năm sẵn sàng trả lãi suất cao hơn.",
+      "sectionE_fintechLens": "Giải pháp chuyển tiền nhanh 24/7 và xác thực sinh trắc học qua app ngân hàng giúp người dân cơ cấu lại sổ tiết kiệm online an toàn chỉ trong vài phút.",
+      "sectionF_scenariosWatchlist": "Theo dõi biến động hạn mức tín dụng room cấp mới của các ngân hàng thương mại và xu hướng thanh khoản dịp cận Tết.",
+      "sectionG_practicalTakeaway": "Người tiêu dùng nên ưu tiên gửi tiết kiệm qua kênh trực tuyến để nhận thêm từ 0,2% đến 0,5%/năm lãi suất ưu đãi so với gửi tại quầy giao dịch truyền thống.",
       "computedSha256": "7e8e57a8aff197bc7b176a19dd591d0cc7b6c04c6038d4756c882df323d9a13e",
       "snapshotFile": "raw_evidence_store/snapshot_live_061_7e8e57a8af.html",
       "verificationStatus": "VERIFIED"
@@ -2797,7 +2797,7 @@ window.EDITION_DATA = {
       "title": "Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land",
       "pageTitle": "Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land",
       "headline": "Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land",
-      "summary": "Một số tin tức đáng chú ý: Hải quan siết kiểm tra hàng nhập khẩu khai giá thấp dịp cuối năm; Ái nữ Chủ tịch Thép Nam Kim muốn chi hàng chục tỉ đồng. Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư và cập.",
+      "summary": "Dự thảo mới đề xuất các tổ chức kêu gọi từ thiện phải công khai sao kê tài khoản ngân hàng định kỳ ít nhất 7 ngày một lần. Cùng ngày, Thanh tra Chứng khoán ban hành quyết định xử phạt vi phạm hành chính đối với Công ty Hưng Thịnh Land.",
       "category": "Thị trường vốn",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "15/11/2026 03:00 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-15T03:00:00+07:00)",
@@ -2807,19 +2807,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/tin-tuc-sang-15-11-de-xuat-cong-khai-sao-ke-tien-tu-thien-it-nhat-7-ngay-lan-xu-phat-hung-thinh-land-10026111421495743.htm",
       "sourceUrl": "https://tuoitre.vn/tin-tuc-sang-15-11-de-xuat-cong-khai-sao-ke-tien-tu-thien-it-nhat-7-ngay-lan-xu-phat-hung-thinh-land-10026111421495743.htm",
-      "supportingQuote": "Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư và cập nhật số liệu ít nhất 7 ngày một lần trong thời gian tiếp nhận, phân phối tiền đóng góp.",
+      "supportingQuote": "Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư ít nhất 7 ngày/lần, theo đề xuất của Bộ Tài chính.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' tập trung vào dữ kiện định lượng (Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh La) liên quan đến Báo Tuổi Trẻ. Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư và cập nhật số liệu ít nhất 7 ngày một lần trong thời gian tiếp nhận, phân phối tiền đóng góp.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Đây là một trong những đề xuất đáng chú ý của Bộ Tài chính tại dự thảo nghị định về hoạt động xã hội, từ thiện đang được lấy ý kiến, thay thế nghị định 93/2021.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; X.",
-      "sectionA_whatHappened": "Một số tin tức đáng chú ý: Hải quan siết kiểm tra hàng nhập khẩu khai giá thấp dịp cuối năm; Ái nữ Chủ tịch Thép Nam Kim muốn chi hàng chục tỉ đồng. Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư và cập.",
-      "sectionB_context": "Sự kiện 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' tập trung vào dữ kiện định lượng (Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh La) liên quan đến Báo Tuổi Trẻ. Các tổ chức, cá nhân kêu gọi từ thiện sẽ phải công khai sao kê tài khoản, số dư và cập nhật số liệu ít nhất 7 ngày một lần trong thời gian tiếp nhận, phân phối tiền đóng góp.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Đây là một trong những đề xuất đáng chú ý của Bộ Tài chính tại dự thảo nghị định về hoạt động xã hội, từ thiện đang được lấy ý kiến, thay thế nghị định 93/2021.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Thị trường vốn.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; Xử phạt Hưng Thịnh Land' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/lần; X.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Thị trường vốn liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Tin tức sáng 15-11: Đề xuất công khai sao kê tiền từ thiện ít nhất 7 ngày/l' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Cơ quan quản lý siết chặt nghĩa vụ công khai minh bạch tài chính cả ở hoạt động thiện nguyện xã hội lẫn nghĩa vụ báo cáo thị trường trái phiếu doanh nghiệp bất động sản.",
+      "analysisMechanism": "Việc rút ngắn chu kỳ bắt buộc công khai số liệu tài chính giúp ngăn chặn nguy cơ chiếm dụng vốn và gian lận dòng tiền, bảo vệ quyền lợi người đóng góp và nhà đầu tư.",
+      "analysisMarketImpact": "Thị trường tài chính và xã hội đón nhận tích cực các quy định minh bạch, loại bỏ dần các hoạt động huy động vốn mập mờ thiếu kiểm soát.",
+      "analysisWatchSignal": "Theo dõi thời điểm ban hành chính thức của Nghị định về vận động từ thiện và tiến độ khắc phục sai phạm công bố thông tin của Hưng Thịnh Land.",
+      "sectionA_whatHappened": "Dự thảo mới đề xuất các tổ chức kêu gọi từ thiện phải công khai sao kê tài khoản ngân hàng định kỳ ít nhất 7 ngày một lần. Cùng ngày, Thanh tra Chứng khoán ban hành quyết định xử phạt vi phạm hành chính đối với Công ty Hưng Thịnh Land.",
+      "sectionB_context": "Cơ quan quản lý siết chặt nghĩa vụ công khai minh bạch tài chính cả ở hoạt động thiện nguyện xã hội lẫn nghĩa vụ báo cáo thị trường trái phiếu doanh nghiệp bất động sản.",
+      "sectionC_whyItMatters": "Thị trường tài chính và xã hội đón nhận tích cực các quy định minh bạch, loại bỏ dần các hoạt động huy động vốn mập mờ thiếu kiểm soát.",
+      "sectionD_macroMicro": "Việc rút ngắn chu kỳ bắt buộc công khai số liệu tài chính giúp ngăn chặn nguy cơ chiếm dụng vốn và gian lận dòng tiền, bảo vệ quyền lợi người đóng góp và nhà đầu tư.",
+      "sectionE_fintechLens": "Các nền tảng số và ngân hàng có cơ hội triển khai tài khoản thiện nguyện minh bạch tích hợp API tự động công khai biến động số dư theo thời gian thực.",
+      "sectionF_scenariosWatchlist": "Theo dõi thời điểm ban hành chính thức của Nghị định về vận động từ thiện và tiến độ khắc phục sai phạm công bố thông tin của Hưng Thịnh Land.",
+      "sectionG_practicalTakeaway": "Các tổ chức xã hội và doanh nghiệp phát hành nợ cần thiết lập hệ thống tự động hóa báo cáo tài chính để đáp ứng các tiêu chuẩn thanh tra ngày càng nghiêm ngặt.",
       "computedSha256": "c81a1e9ab3b1b7ecf7051e3dcc6a843b1f8da68835fb3a010b278bfa9b3d1b4f",
       "snapshotFile": "raw_evidence_store/snapshot_live_022_c81a1e9ab3.html",
       "verificationStatus": "VERIFIED"
@@ -2831,7 +2831,7 @@ window.EDITION_DATA = {
       "title": "Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu",
       "pageTitle": "Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu",
       "headline": "Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu",
-      "summary": "Ủy ban Chứng khoán Nhà nước vừa xử phạt 6 doanh nghiệp, mỗi đơn vị 92,5 triệu đồng, do vi phạm nghĩa vụ công bố thông tin liên quan đến trái phiếu. Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa.",
+      "summary": "Thanh tra Chứng khoán Nhà nước vừa ban hành hàng loạt quyết định xử phạt các doanh nghiệp bất động sản do chậm công bố thông tin trái phiếu. Động thái này khẳng định quyết tâm chấn chỉnh trật tự và kỷ cương trên thị trường nợ doanh nghiệp.",
       "category": "Thị trường vốn",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 22:51 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T22:51:00+07:00)",
@@ -2841,19 +2841,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
       "sourceUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
-      "supportingQuote": "Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa công bố, nhiều doanh nghiệp đã bị xử phạt trong lĩnh vực trái phiếu.",
+      "supportingQuote": "Theo các quyết định của Thanh tra Chứng khoán Nhà nước, hàng loạt doanh nghiệp bất động sản đã bị xử phạt do chậm công bố thông tin định kỳ về tình hình tài chính và thanh toán trái phiếu.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' tập trung vào dữ kiện định lượng (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu) liên quan đến Báo Tuổi Trẻ. Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa công bố, nhiều doanh nghiệp đã bị xử phạt trong lĩnh vực trái phiếu.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Danh sách doanh nghiệp bị xử phạt gồm KN Cam Ranh, Bất động sản Gia Đức, Điện mặt trời KN Vạn Ninh, Gotec Land, Hưng Thịnh Land và Khách sạn Quốc tế Thiên Phúc.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu.",
-      "sectionA_whatHappened": "Ủy ban Chứng khoán Nhà nước vừa xử phạt 6 doanh nghiệp, mỗi đơn vị 92,5 triệu đồng, do vi phạm nghĩa vụ công bố thông tin liên quan đến trái phiếu. Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa.",
-      "sectionB_context": "Sự kiện 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' tập trung vào dữ kiện định lượng (Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu) liên quan đến Báo Tuổi Trẻ. Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa công bố, nhiều doanh nghiệp đã bị xử phạt trong lĩnh vực trái phiếu.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Danh sách doanh nghiệp bị xử phạt gồm KN Cam Ranh, Bất động sản Gia Đức, Điện mặt trời KN Vạn Ninh, Gotec Land, Hưng Thịnh Land và Khách sạn Quốc tế Thiên Phúc.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Thị trường vốn, biến động quanh 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Thị trường vốn.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Thị trường vốn liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Loạt doanh nghiệp địa ốc bị phạt vì vi phạm công bố thông tin trái phiếu' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Nhiều doanh nghiệp địa ốc bị phạt tiền từ 65 triệu đến hàng trăm triệu đồng do không nộp báo cáo kiểm toán tài chính và tiến độ sử dụng tiền bán trái phiếu đúng hạn.",
+      "analysisMechanism": "Chế tài xử phạt hành chính quyết liệt buộc các tổ chức phát hành phải tôn trọng cam kết minh bạch thông tin, giảm bớt rủi ro che giấu nợ xấu tiềm ẩn.",
+      "analysisMarketImpact": "Nhà đầu tư trái phiếu cá nhân và tổ chức thận trọng hơn trong việc giải ngân, ưu tiên rót vốn vào các doanh nghiệp có cấu trúc tài chính lành mạnh và công bố minh bạch.",
+      "analysisWatchSignal": "Quan sát lịch đáo hạn trái phiếu doanh nghiệp ngành bất động sản trong quý 4/2026 và khả năng đàm phán gia hạn kỳ hạn nợ của các chủ đầu tư.",
+      "sectionA_whatHappened": "Thanh tra Chứng khoán Nhà nước vừa ban hành hàng loạt quyết định xử phạt các doanh nghiệp bất động sản do chậm công bố thông tin trái phiếu. Động thái này khẳng định quyết tâm chấn chỉnh trật tự và kỷ cương trên thị trường nợ doanh nghiệp.",
+      "sectionB_context": "Nhiều doanh nghiệp địa ốc bị phạt tiền từ 65 triệu đến hàng trăm triệu đồng do không nộp báo cáo kiểm toán tài chính và tiến độ sử dụng tiền bán trái phiếu đúng hạn.",
+      "sectionC_whyItMatters": "Nhà đầu tư trái phiếu cá nhân và tổ chức thận trọng hơn trong việc giải ngân, ưu tiên rót vốn vào các doanh nghiệp có cấu trúc tài chính lành mạnh và công bố minh bạch.",
+      "sectionD_macroMicro": "Chế tài xử phạt hành chính quyết liệt buộc các tổ chức phát hành phải tôn trọng cam kết minh bạch thông tin, giảm bớt rủi ro che giấu nợ xấu tiềm ẩn.",
+      "sectionE_fintechLens": "Thị trường nợ đòi hỏi các công cụ công nghệ giám sát dòng tiền thanh toán gốc lãi tự động qua tài khoản phong tỏa mở tại ngân hàng giám sát.",
+      "sectionF_scenariosWatchlist": "Quan sát lịch đáo hạn trái phiếu doanh nghiệp ngành bất động sản trong quý 4/2026 và khả năng đàm phán gia hạn kỳ hạn nợ của các chủ đầu tư.",
+      "sectionG_practicalTakeaway": "Các doanh nghiệp phát hành trái phiếu cần kiện toàn bộ phận quan hệ nhà đầu tư IR và ban kiểm soát nội bộ để chấm dứt tình trạng chậm trễ nghĩa vụ báo cáo.",
       "computedSha256": "76c9e055ca8efe7716aded31dc79369808be72674cbcb487de6569e32a0a31fe",
       "snapshotFile": "raw_evidence_store/snapshot_live_012_76c9e055ca.html",
       "verificationStatus": "VERIFIED"
@@ -2865,7 +2865,7 @@ window.EDITION_DATA = {
       "title": "Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?",
       "pageTitle": "Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?",
       "headline": "Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?",
-      "summary": "Ủng hộ đề xuất sàn thương mại điện tử đã khấu trừ thuế theo từng giao dịch thì người bán không bắt buộc phải lập hóa đơn, song chuyên gia cho rằng. Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phân tích.",
+      "summary": "Chính phủ chỉ đạo Bộ Tài chính xây dựng phương án cho phép sàn thương mại điện tử khấu trừ và nộp thuế thay cho người bán. Khi chính sách được áp dụng, tiểu thương bán lẻ trực tuyến sẽ không phải tự lập hóa đơn điện tử cho từng đơn hàng.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 21:40 | Nguồn gốc: Báo Thanh Niên (2026-11-14T21:40:00+07:00)",
@@ -2875,19 +2875,19 @@ window.EDITION_DATA = {
       "author": "Báo Thanh Niên",
       "canonicalUrl": "https://thanhnien.vn/san-da-khau-tru-thue-nguoi-ban-khong-can-lap-hoa-don-co-hop-ly-kha-thi-185261114211750073.htm",
       "sourceUrl": "https://thanhnien.vn/san-da-khau-tru-thue-nguoi-ban-khong-can-lap-hoa-don-co-hop-ly-kha-thi-185261114211750073.htm",
-      "supportingQuote": "Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phân tích, đơn giản hóa chính sách để giảm chi phí phát hành hóa đơn cho doanh nghiệp, hộ kinh doanh sử dụng hóa đơn điện tử như không bắt buộc lưu trữ hóa đơn đã truyền dữ liệu cho cơ quan thuế.",
+      "supportingQuote": "Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phối hợp với các cơ quan liên quan nghiên cứu phương án sàn thương mại điện tử khấu trừ, nộp thuế thay cho người bán.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' tập trung vào dữ kiện định lượng (Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?) liên quan đến Báo Thanh Niên. Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phân tích, đơn giản hóa chính sách để giảm chi phí phát hành hóa đơn cho doanh nghiệp, hộ kinh doanh sử dụng hóa đơn điện tử như không bắt buộc lưu trữ hóa đơn đã truyền dữ liệu cho cơ quan thuế.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Trường hợp bán hàng trên sàn thương mại điện tử có chức năng thanh toán, nếu sàn đã khấu trừ thuế theo từng giao dịch thì không bắt buộc phải lập hóa đơn.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?.",
-      "sectionA_whatHappened": "Ủng hộ đề xuất sàn thương mại điện tử đã khấu trừ thuế theo từng giao dịch thì người bán không bắt buộc phải lập hóa đơn, song chuyên gia cho rằng. Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phân tích.",
-      "sectionB_context": "Sự kiện 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' tập trung vào dữ kiện định lượng (Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?) liên quan đến Báo Thanh Niên. Trong báo cáo gửi Quốc hội mới đây, Chính phủ cho biết đã chỉ đạo Bộ Tài chính phân tích, đơn giản hóa chính sách để giảm chi phí phát hành hóa đơn cho doanh nghiệp, hộ kinh doanh sử dụng hóa đơn điện tử như không bắt buộc lưu trữ hóa đơn đã truyền dữ liệu cho cơ quan thuế.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Trường hợp bán hàng trên sàn thương mại điện tử có chức năng thanh toán, nếu sàn đã khấu trừ thuế theo từng giao dịch thì không bắt buộc phải lập hóa đơn.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Thanh Niên cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Thanh Niên nên bám sát tín hiệu 'Sàn đã khấu trừ thuế, người bán không cần lập hóa đơn: Có hợp lý, khả thi?' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Đề xuất cải cách thuế TMĐT chuyển giao trách nhiệm khấu trừ thuế VAT và thu nhập cá nhân sang đơn vị quản lý sàn, tháo gỡ hoàn toàn vướng mắc xuất hóa đơn lẻ cho hộ kinh doanh.",
+      "analysisMechanism": "Thu thuế trực tiếp tại cổng thanh toán của sàn TMĐT giúp cơ quan thuế chống thất thu ngân sách hiệu quả, đồng thời triệt tiêu chi phí kế toán tuân thủ cho hàng triệu tiểu thương.",
+      "analysisMarketImpact": "Cộng đồng kinh doanh online giải tỏa áp lực pháp lý, kích thích tinh thần khởi nghiệp kinh doanh trực tuyến và mở rộng quy mô gian hàng số.",
+      "analysisWatchSignal": "Theo dõi dự thảo sửa đổi Luật Quản lý thuế trình Quốc hội và lộ trình triển khai cổng kết nối API dữ liệu giữa Tổng cục Thuế với các sàn Shopee, TikTok Shop.",
+      "sectionA_whatHappened": "Chính phủ chỉ đạo Bộ Tài chính xây dựng phương án cho phép sàn thương mại điện tử khấu trừ và nộp thuế thay cho người bán. Khi chính sách được áp dụng, tiểu thương bán lẻ trực tuyến sẽ không phải tự lập hóa đơn điện tử cho từng đơn hàng.",
+      "sectionB_context": "Đề xuất cải cách thuế TMĐT chuyển giao trách nhiệm khấu trừ thuế VAT và thu nhập cá nhân sang đơn vị quản lý sàn, tháo gỡ hoàn toàn vướng mắc xuất hóa đơn lẻ cho hộ kinh doanh.",
+      "sectionC_whyItMatters": "Cộng đồng kinh doanh online giải tỏa áp lực pháp lý, kích thích tinh thần khởi nghiệp kinh doanh trực tuyến và mở rộng quy mô gian hàng số.",
+      "sectionD_macroMicro": "Thu thuế trực tiếp tại cổng thanh toán của sàn TMĐT giúp cơ quan thuế chống thất thu ngân sách hiệu quả, đồng thời triệt tiêu chi phí kế toán tuân thủ cho hàng triệu tiểu thương.",
+      "sectionE_fintechLens": "Các đơn vị cung cấp giải pháp thanh toán trung gian và phần mềm quản lý đơn hàng cần nâng cấp module tự động trích xuất báo cáo đối soát doanh thu đã khấu trừ thuế.",
+      "sectionF_scenariosWatchlist": "Theo dõi dự thảo sửa đổi Luật Quản lý thuế trình Quốc hội và lộ trình triển khai cổng kết nối API dữ liệu giữa Tổng cục Thuế với các sàn Shopee, TikTok Shop.",
+      "sectionG_practicalTakeaway": "Chủ cửa hàng trực tuyến nên chuẩn hóa dữ liệu định danh mã số thuế cá nhân trên các sàn TMĐT để quy trình khấu trừ thuế tự động diễn ra thông suốt.",
       "computedSha256": "f5bd10b7146c7db0fedcd71c0c7ea64dc6d27d3dfa285d5306423c26ae4216c0",
       "snapshotFile": "raw_evidence_store/snapshot_live_068_f5bd10b714.html",
       "verificationStatus": "VERIFIED"
@@ -2899,7 +2899,7 @@ window.EDITION_DATA = {
       "title": "Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11",
       "pageTitle": "Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11",
       "headline": "Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11",
-      "summary": "Dự kiến từ 21.11, chính sách đặc thù về xử lý tiền thuế nợ cho người nộp thuế ở trạng thái 03 (ngừng hoạt động nhưng chưa đóng mã số thuế) và 06. Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ.",
+      "summary": "Ủy ban Thường vụ Quốc hội xem xét xóa nợ tiền thuế cho hàng triệu cá nhân, hộ kinh doanh không còn hoạt động từ ngày 21/11. Chính sách nhân văn này giúp làm sạch cơ sở dữ liệu thuế quốc gia và hỗ trợ người dân phục hồi sản xuất.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 19:52 | Nguồn gốc: Báo Thanh Niên (2026-11-14T19:52:00+07:00)",
@@ -2909,19 +2909,19 @@ window.EDITION_DATA = {
       "author": "Báo Thanh Niên",
       "canonicalUrl": "https://thanhnien.vn/hang-trieu-nguoi-nop-thue-dien-03-06-du-kien-duoc-xem-xet-xoa-no-tu-2111-185261114191859251.htm",
       "sourceUrl": "https://thanhnien.vn/hang-trieu-nguoi-nop-thue-dien-03-06-du-kien-duoc-xem-xet-xoa-no-tu-2111-185261114191859251.htm",
-      "supportingQuote": "Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án Nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ để tháo gỡ khó khăn cho người nộp thuế.",
+      "supportingQuote": "Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự thảo nghị quyết xử lý nợ thuế.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' tập trung vào dữ kiện định lượng (Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11) liên quan đến Báo Thanh Niên. Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án Nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ để tháo gỡ khó khăn cho người nộp thuế.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Theo hồ sơ thẩm định được Bộ Tư pháp công bố, nghị quyết có hiệu lực từ ngày 21.11.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11.",
-      "sectionA_whatHappened": "Dự kiến từ 21.11, chính sách đặc thù về xử lý tiền thuế nợ cho người nộp thuế ở trạng thái 03 (ngừng hoạt động nhưng chưa đóng mã số thuế) và 06. Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ.",
-      "sectionB_context": "Sự kiện 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' tập trung vào dữ kiện định lượng (Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11) liên quan đến Báo Thanh Niên. Bộ trưởng Bộ Tài chính Ngô Văn Tuấn vừa được Thủ tướng ủy quyền ký tờ trình Ủy ban Thường vụ Quốc hội về dự án Nghị quyết của Quốc hội ban hành chính sách đặc thù về xử lý xóa tiền thuế nợ để tháo gỡ khó khăn cho người nộp thuế.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Thanh Niên; Theo hồ sơ thẩm định được Bộ Tư pháp công bố, nghị quyết có hiệu lực từ ngày 21.11.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Thanh Niên.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Thanh Niên cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' là diễn biến cập nhật từ Báo Thanh Niên cùng ngưỡng thực tế của chỉ báo Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Thanh Niên nên bám sát tín hiệu 'Hàng triệu người nộp thuế diện 03, 06 dự kiến được xem xét xóa nợ từ 21.11' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Chính sách xóa nợ tiền phạt chậm nộp và nợ thuế khó thu hồi tồn đọng kéo dài đối với người nộp thuế đã chấm dứt kinh doanh trước thời điểm quy định.",
+      "analysisMechanism": "Việc loại bỏ các khoản nợ ảo không còn khả năng thu hồi giúp giảm tải chi phí quản lý hành chính cho ngành thuế và giải phóng nghĩa vụ pháp lý cho người nộp thuế cũ.",
+      "analysisMarketImpact": "Cá nhân kinh doanh được khôi phục mã số thuế và tư cách pháp nhân sạch, sẵn sàng quay lại thị trường mở cơ sở sản xuất kinh doanh mới.",
+      "analysisWatchSignal": "Theo dõi nghị quyết chính thức của Ủy ban Thường vụ Quốc hội ngày 21/11 và danh sách phân loại người nộp thuế diện 03, 06 được thụ hưởng thực tế.",
+      "sectionA_whatHappened": "Ủy ban Thường vụ Quốc hội xem xét xóa nợ tiền thuế cho hàng triệu cá nhân, hộ kinh doanh không còn hoạt động từ ngày 21/11. Chính sách nhân văn này giúp làm sạch cơ sở dữ liệu thuế quốc gia và hỗ trợ người dân phục hồi sản xuất.",
+      "sectionB_context": "Chính sách xóa nợ tiền phạt chậm nộp và nợ thuế khó thu hồi tồn đọng kéo dài đối với người nộp thuế đã chấm dứt kinh doanh trước thời điểm quy định.",
+      "sectionC_whyItMatters": "Cá nhân kinh doanh được khôi phục mã số thuế và tư cách pháp nhân sạch, sẵn sàng quay lại thị trường mở cơ sở sản xuất kinh doanh mới.",
+      "sectionD_macroMicro": "Việc loại bỏ các khoản nợ ảo không còn khả năng thu hồi giúp giảm tải chi phí quản lý hành chính cho ngành thuế và giải phóng nghĩa vụ pháp lý cho người nộp thuế cũ.",
+      "sectionE_fintechLens": "Việc khôi phục mã số thuế sạch cho hàng triệu hộ kinh doanh mở ra cơ hội lớn cho các ngân hàng và tổ chức tài chính mở tài khoản thanh toán và cấp hạn mức POS mới.",
+      "sectionF_scenariosWatchlist": "Theo dõi nghị quyết chính thức của Ủy ban Thường vụ Quốc hội ngày 21/11 và danh sách phân loại người nộp thuế diện 03, 06 được thụ hưởng thực tế.",
+      "sectionG_practicalTakeaway": "Người kinh doanh từng phát sinh nợ thuế tồn đọng nên chủ động tra cứu trạng thái mã số thuế cá nhân để kịp thời hoàn thiện thủ tục xóa nợ theo quy định.",
       "computedSha256": "5dc5730e36219f9f627cb74691a4c408f2fb47a411d41089de3fc4cb57b1cd0f",
       "snapshotFile": "raw_evidence_store/snapshot_live_078_5dc5730e36.html",
       "verificationStatus": "VERIFIED"
@@ -2933,7 +2933,7 @@ window.EDITION_DATA = {
       "title": "Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường",
       "pageTitle": "Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường",
       "headline": "Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường",
-      "summary": "Thay vì phụ thuộc vào các tình huống nghiên cứu của doanh nghiệp nước ngoài, Thư viện Lãnh đạo Việt Nam hướng đến xây dựng kho học liệu từ những. Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt.",
+      "summary": "Dự án Thư viện Lãnh đạo Việt Nam chính thức ra mắt nhằm hệ thống hóa bài học quản trị thực chiến từ các doanh nhân hàng đầu đưa vào giảng đường. Sáng kiến này rút ngắn khoảng cách giữa lý thuyết học thuật và thực tiễn vận hành doanh nghiệp.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 19:15 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T19:15:00+07:00)",
@@ -2943,19 +2943,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/ra-mat-thu-vien-lanh-dao-viet-nam-dua-kinh-nghiem-doanh-nghiep-vao-giang-duong-100261114190816024.htm",
       "sourceUrl": "https://tuoitre.vn/ra-mat-thu-vien-lanh-dao-viet-nam-dua-kinh-nghiem-doanh-nghiep-vao-giang-duong-100261114190816024.htm",
-      "supportingQuote": "Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt Nam (Vietnam Case Center - VCC), hướng đến xây dựng hệ thống tình huống nghiên cứu (case study) về quản trị, kinh doanh và lãnh đạo từ thực tiễn các doanh nghiệp, tổ chức Việt Nam.",
+      "supportingQuote": "Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm thực tế của doanh nhân vào chương trình đào tạo.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' tập trung vào dữ kiện định lượng (Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường) liên quan đến Báo Tuổi Trẻ. Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt Nam (Vietnam Case Center - VCC), hướng đến xây dựng hệ thống tình huống nghiên cứu (case study) về quản trị, kinh doanh và lãnh đạo từ thực tiễn các doanh nghiệp, tổ chức Việt Nam.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Chia sẻ tại sự kiện, ông Lê Đình Hiếu, Giám đốc chương trình tại Viện Lãnh đạo Việt Nam (VNLI), cho biết ý tưởng xây dựng thư viện xuất phát từ thực tế trong quá trình giảng dạy đại học và đào tạo quản trị.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường.",
-      "sectionA_whatHappened": "Thay vì phụ thuộc vào các tình huống nghiên cứu của doanh nghiệp nước ngoài, Thư viện Lãnh đạo Việt Nam hướng đến xây dựng kho học liệu từ những. Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt.",
-      "sectionB_context": "Sự kiện 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' tập trung vào dữ kiện định lượng (Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường) liên quan đến Báo Tuổi Trẻ. Một trong những sáng kiến trọng tâm được giới thiệu tại sự kiện là Thư viện Lãnh đạo Việt Nam (Vietnam Case Center - VCC), hướng đến xây dựng hệ thống tình huống nghiên cứu (case study) về quản trị, kinh doanh và lãnh đạo từ thực tiễn các doanh nghiệp, tổ chức Việt Nam.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Chia sẻ tại sự kiện, ông Lê Đình Hiếu, Giám đốc chương trình tại Viện Lãnh đạo Việt Nam (VNLI), cho biết ý tưởng xây dựng thư viện xuất phát từ thực tế trong quá trình giảng dạy đại học và đào tạo quản trị.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đường.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Ra mắt Thư viện Lãnh đạo Việt Nam, đưa kinh nghiệm doanh nghiệp vào giảng đ' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Dự án hợp tác đào tạo giữa cộng đồng doanh nghiệp và khối trường đại học kinh tế tài chính, xây dựng kho học liệu tình huống quản trị kinh doanh bản địa.",
+      "analysisMechanism": "Chuyển giao tri thức quản trị dòng tiền, xử trị khủng hoảng và thích ứng số hóa từ lãnh đạo doanh nghiệp kỳ cựu giúp nâng cao chất lượng nguồn nhân lực tài chính tương lai.",
+      "analysisMarketImpact": "Thị trường lao động chất lượng cao trong ngành tài chính, ngân hàng và bán lẻ đón nhận lứa nhân sự có tư duy thực chiến và hiểu biết sâu sắc về bối cảnh kinh doanh Việt Nam.",
+      "analysisWatchSignal": "Quan sát số lượng bài học tình huống doanh nghiệp được số hóa và mức độ tích hợp vào chương trình giảng dạy chính khóa tại các đại học trọng điểm.",
+      "sectionA_whatHappened": "Dự án Thư viện Lãnh đạo Việt Nam chính thức ra mắt nhằm hệ thống hóa bài học quản trị thực chiến từ các doanh nhân hàng đầu đưa vào giảng đường. Sáng kiến này rút ngắn khoảng cách giữa lý thuyết học thuật và thực tiễn vận hành doanh nghiệp.",
+      "sectionB_context": "Dự án hợp tác đào tạo giữa cộng đồng doanh nghiệp và khối trường đại học kinh tế tài chính, xây dựng kho học liệu tình huống quản trị kinh doanh bản địa.",
+      "sectionC_whyItMatters": "Thị trường lao động chất lượng cao trong ngành tài chính, ngân hàng và bán lẻ đón nhận lứa nhân sự có tư duy thực chiến và hiểu biết sâu sắc về bối cảnh kinh doanh Việt Nam.",
+      "sectionD_macroMicro": "Chuyển giao tri thức quản trị dòng tiền, xử trị khủng hoảng và thích ứng số hóa từ lãnh đạo doanh nghiệp kỳ cựu giúp nâng cao chất lượng nguồn nhân lực tài chính tương lai.",
+      "sectionE_fintechLens": "Nhu cầu đào tạo kỹ năng số và ứng dụng các nền tảng phân tích tài chính hiện đại mở ra dư địa hợp tác chuyển giao công nghệ FinTech vào khối viện trường.",
+      "sectionF_scenariosWatchlist": "Quan sát số lượng bài học tình huống doanh nghiệp được số hóa và mức độ tích hợp vào chương trình giảng dạy chính khóa tại các đại học trọng điểm.",
+      "sectionG_practicalTakeaway": "Các công ty khởi nghiệp và doanh nghiệp vừa và nhỏ nên chủ động đóng góp bài học quản trị vào thư viện số để xây dựng thương hiệu tuyển dụng chuyên nghiệp.",
       "computedSha256": "d9b04b5d71ca831f574d9aa02bb867c97b7fc07b05e767313f24c26deca7c577",
       "snapshotFile": "raw_evidence_store/snapshot_live_057_d9b04b5d71.html",
       "verificationStatus": "VERIFIED"
@@ -2967,7 +2967,7 @@ window.EDITION_DATA = {
       "title": "Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng",
       "pageTitle": "Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng",
       "headline": "Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng",
-      "summary": "Trong bối cảnh môi trường kinh doanh không ngừng thay đổi, năng lực kiến tạo giá trị ngày càng trở thành một thước đo quan trọng đối với sự phát. Những doanh nghiệp dẫn đầu không chỉ được ghi nhận bởi quy mô và kết quả kinh doanh mà còn.",
+      "summary": "Bảng xếp hạng Top 10 Doanh nghiệp tạo giá trị hàng đầu năm 2026 ngành Xây dựng vừa được công bố chính thức. Đây là sự tôn vinh xứng đáng cho các nhà thầu tiên phong ứng dụng công nghệ xanh, bảo đảm tiến độ và duy trì tài chính vững mạnh.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 18:07 | Nguồn gốc: Báo Đầu tư (2026-11-14T18:07:00+07:00)",
@@ -2977,7 +2977,7 @@ window.EDITION_DATA = {
       "author": "Báo Đầu tư",
       "canonicalUrl": "https://baodautu.vn/cong-bo-top-10-doanh-nghiep-tao-gia-tri-hang-dau-viet-nam-2026-nganh-xay-dung-d743447.html",
       "sourceUrl": "https://baodautu.vn/cong-bo-top-10-doanh-nghiep-tao-gia-tri-hang-dau-viet-nam-2026-nganh-xay-dung-d743447.html",
-      "supportingQuote": "Trên cơ sở đó, Viet Research và Báo Tài chính - Đầu tư công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng, ghi nhận những doanh nghiệp nổi bật về tầm vóc, chất lượng tăng trưởng và năng lực kiến tạo giá trị.",
+      "supportingQuote": "Trên cơ sở đó, Viet Research và Báo Tài chính - Đầu tư công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -3020,17 +3020,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 783,9 nghìn tỷ đồng; Tỷ lệ phân bổ / tăng trưởng vốn: 19,8%) liên quan đến Doanh nghiệp. Trên cơ sở đó, Viet Research và Báo Tài chính - Đầu tư công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng, ghi nhận những doanh nghiệp nổi bật về tầm vóc, chất lượng tăng trưởng và năng lực kiến tạo giá trị.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Doanh nghiệp.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Doanh nghiệp; VALUE500 và VALUE10 được phát triển theo định hướng nhận diện những doanh nghiệp “Lớn và Tốt” – Big & Best.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 783,9 nghìn tỷ đồng; Tỷ lệ phân bổ / tăng trưởng v.",
-      "sectionA_whatHappened": "Trong bối cảnh môi trường kinh doanh không ngừng thay đổi, năng lực kiến tạo giá trị ngày càng trở thành một thước đo quan trọng đối với sự phát. Những doanh nghiệp dẫn đầu không chỉ được ghi nhận bởi quy mô và kết quả kinh doanh mà còn.",
-      "sectionB_context": "Sự kiện 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 783,9 nghìn tỷ đồng; Tỷ lệ phân bổ / tăng trưởng vốn: 19,8%) liên quan đến Doanh nghiệp. Trên cơ sở đó, Viet Research và Báo Tài chính - Đầu tư công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng, ghi nhận những doanh nghiệp nổi bật về tầm vóc, chất lượng tăng trưởng và năng lực kiến tạo giá trị.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Doanh nghiệp; VALUE500 và VALUE10 được phát triển theo định hướng nhận diện những doanh nghiệp “Lớn và Tốt” – Big & Best.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Doanh nghiệp.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Doanh nghiệp cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 783,9 nghìn tỷ đồng; Tỷ lệ phân bổ / tăng trưởng v.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Doanh nghiệp nên bám sát tín hiệu 'Quy mô vốn đầu tư / huy động: 783,9 nghìn tỷ đồng; Tỷ lệ phân bổ / tăng trư' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Viet Research và Báo Đầu tư vinh danh các doanh nghiệp xây dựng tiêu biểu dựa trên hiệu quả sử dụng vốn, quản trị rủi ro công nợ và đóng góp vào hạ tầng quốc gia.",
+      "analysisMechanism": "Vị thế uy tín trong bảng xếp hạng giúp nhà thầu nâng cao năng lực cạnh tranh trong các gói thầu lớn, đồng thời dễ dàng đàm phán hạn mức bảo lãnh và vay vốn ngân hàng.",
+      "analysisMarketImpact": "Thị trường xây lắp phân hóa rõ nét, dòng tiền của các chủ đầu tư và ngân hàng tài trợ dự án tập trung ưu tiên vào nhóm doanh nghiệp top đầu có năng lực tài chính minh bạch.",
+      "analysisWatchSignal": "Theo dõi kết quả trúng thầu các đại dự án hạ tầng giao thông trọng điểm và tiến độ thu hồi công nợ tồn đọng của các nhà thầu lớn.",
+      "sectionA_whatHappened": "Bảng xếp hạng Top 10 Doanh nghiệp tạo giá trị hàng đầu năm 2026 ngành Xây dựng vừa được công bố chính thức. Đây là sự tôn vinh xứng đáng cho các nhà thầu tiên phong ứng dụng công nghệ xanh, bảo đảm tiến độ và duy trì tài chính vững mạnh.",
+      "sectionB_context": "Viet Research và Báo Đầu tư vinh danh các doanh nghiệp xây dựng tiêu biểu dựa trên hiệu quả sử dụng vốn, quản trị rủi ro công nợ và đóng góp vào hạ tầng quốc gia.",
+      "sectionC_whyItMatters": "Thị trường xây lắp phân hóa rõ nét, dòng tiền của các chủ đầu tư và ngân hàng tài trợ dự án tập trung ưu tiên vào nhóm doanh nghiệp top đầu có năng lực tài chính minh bạch.",
+      "sectionD_macroMicro": "Vị thế uy tín trong bảng xếp hạng giúp nhà thầu nâng cao năng lực cạnh tranh trong các gói thầu lớn, đồng thời dễ dàng đàm phán hạn mức bảo lãnh và vay vốn ngân hàng.",
+      "sectionE_fintechLens": "Ứng dụng giải pháp bảo lãnh điện tử e-Guarantee và quản lý thanh toán chuỗi cung ứng vật tư xây dựng giúp doanh nghiệp kiểm soát chặt chẽ tiến độ giải ngân dòng tiền.",
+      "sectionF_scenariosWatchlist": "Theo dõi kết quả trúng thầu các đại dự án hạ tầng giao thông trọng điểm và tiến độ thu hồi công nợ tồn đọng của các nhà thầu lớn.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp xây dựng cần chuẩn hóa hồ sơ năng lực tài chính và minh bạch lịch sử trả nợ để tiếp cận các gói tín dụng xanh lãi suất ưu đãi.",
       "computedSha256": "4201b7cac08f80a42a53731cb32c96bdd29d3d65a261592f39fcb300090471aa",
       "snapshotFile": "raw_evidence_store/snapshot_live_010_4201b7cac0.html",
       "verificationStatus": "VERIFIED"
@@ -3042,7 +3042,7 @@ window.EDITION_DATA = {
       "title": "Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12",
       "pageTitle": "Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12",
       "headline": "Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12",
-      "summary": "Việt Nam chính thức chọn ngày 12-12 hằng năm là Ngày Thương mại điện tử quốc gia, trong bối cảnh thị trường bán lẻ trực tuyến dự báo đạt gần 38 tỉ. Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố.",
+      "summary": "Bộ Công Thương quyết định lấy ngày 12 tháng 12 hàng năm là Ngày Mua sắm trực tuyến Quốc gia. Sự kiện bước ngoặt này hướng đến mục tiêu kích cầu tiêu dùng số, bảo vệ người tiêu dùng và hỗ trợ doanh nghiệp Việt tiêu thụ sản phẩm trên sàn.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 17:04 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T17:04:00+07:00)",
@@ -3052,19 +3052,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
       "sourceUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
-      "supportingQuote": "Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện hưởng ứng Ngày Thương mại điện tử quốc gia (12-12) và Tuần lễ Thương mại điện tử quốc gia (Online Friday 2026).",
+      "supportingQuote": "Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện Ngày Mua sắm trực tuyến Quốc gia.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' tập trung vào dữ kiện định lượng (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12) liên quan đến Báo Tuổi Trẻ. Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện hưởng ứng Ngày Thương mại điện tử quốc gia (12-12) và Tuần lễ Thương mại điện tử quốc gia (Online Friday 2026).",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Thương mại điện tử (TMĐT) Việt Nam tiếp tục duy trì vị thế thuộc nhóm thị trường tăng trưởng hàng đầu khu vực.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12.",
-      "sectionA_whatHappened": "Việt Nam chính thức chọn ngày 12-12 hằng năm là Ngày Thương mại điện tử quốc gia, trong bối cảnh thị trường bán lẻ trực tuyến dự báo đạt gần 38 tỉ. Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố.",
-      "sectionB_context": "Sự kiện 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' tập trung vào dữ kiện định lượng (Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12) liên quan đến Báo Tuổi Trẻ. Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện hưởng ứng Ngày Thương mại điện tử quốc gia (12-12) và Tuần lễ Thương mại điện tử quốc gia (Online Friday 2026).",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Thương mại điện tử (TMĐT) Việt Nam tiếp tục duy trì vị thế thuộc nhóm thị trường tăng trưởng hàng đầu khu vực.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Thương mại điện tử Việt Nam lần đầu có Ngày quốc gia 12-12' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Chương trình thường niên quy mô quốc gia quy tụ các sàn TMĐT lớn, đơn vị chuyển phát logistics và tổ chức trung gian thanh toán nhằm kiến tạo lễ hội mua sắm số tin cậy.",
+      "analysisMechanism": "Việc định danh một ngày mua sắm tập trung cấp quốc gia kích thích nhu cầu chi tiêu trực tuyến đột biến, tối ưu hóa công suất vận tải và dòng tiền cho toàn bộ hệ sinh thái số.",
+      "analysisMarketImpact": "Các doanh nghiệp sản xuất trong nước và hộ nông nghiệp tiếp cận hàng triệu khách hàng mới, giảm bớt khâu trung gian phân phối truyền thống.",
+      "analysisWatchSignal": "Quan sát doanh số bán hàng và số lượng giao dịch thanh toán không tiền mặt được xử lý thành công trong chuỗi sự kiện 12-12 sắp tới.",
+      "sectionA_whatHappened": "Bộ Công Thương quyết định lấy ngày 12 tháng 12 hàng năm là Ngày Mua sắm trực tuyến Quốc gia. Sự kiện bước ngoặt này hướng đến mục tiêu kích cầu tiêu dùng số, bảo vệ người tiêu dùng và hỗ trợ doanh nghiệp Việt tiêu thụ sản phẩm trên sàn.",
+      "sectionB_context": "Chương trình thường niên quy mô quốc gia quy tụ các sàn TMĐT lớn, đơn vị chuyển phát logistics và tổ chức trung gian thanh toán nhằm kiến tạo lễ hội mua sắm số tin cậy.",
+      "sectionC_whyItMatters": "Các doanh nghiệp sản xuất trong nước và hộ nông nghiệp tiếp cận hàng triệu khách hàng mới, giảm bớt khâu trung gian phân phối truyền thống.",
+      "sectionD_macroMicro": "Việc định danh một ngày mua sắm tập trung cấp quốc gia kích thích nhu cầu chi tiêu trực tuyến đột biến, tối ưu hóa công suất vận tải và dòng tiền cho toàn bộ hệ sinh thái số.",
+      "sectionE_fintechLens": "Hạ tầng cổng thanh toán trực tuyến, ví điện tử và giải pháp thanh toán qua liên kết VietQR cần chuẩn bị năng lực chịu tải gấp 5-10 lần ngày thường để tránh nghẽn mạng.",
+      "sectionF_scenariosWatchlist": "Quan sát doanh số bán hàng và số lượng giao dịch thanh toán không tiền mặt được xử lý thành công trong chuỗi sự kiện 12-12 sắp tới.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp bán lẻ và thương hiệu D2C cần liên kết sớm với các cổng thanh toán số để triển khai mã giảm giá đồng tài trợ cho sự kiện 12-12.",
       "computedSha256": "3af1ed527cb0a9684493a940df2f7fe0203f0cabc62dea4cb54d2b7a27508110",
       "snapshotFile": "raw_evidence_store/snapshot_live_062_3af1ed527c.html",
       "verificationStatus": "VERIFIED"
@@ -3076,7 +3076,7 @@ window.EDITION_DATA = {
       "title": "Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn",
       "pageTitle": "Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn",
       "headline": "Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn",
-      "summary": "Đó là chia sẻ của bạn đọc sau bài: ‘Chính phủ chỉ đạo: Sàn đã khấu trừ thuế, người bán không phải lập hóa đơn’ đăng trên Tuổi Trẻ ngày 12-11. Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với.",
+      "summary": "Cộng đồng kinh doanh trực tuyến bày tỏ sự phấn khởi trước định hướng cho phép sàn TMĐT khấu trừ thuế thay người bán lẻ. Đề xuất này giải tỏa nỗi ám ảnh về thủ tục xuất hóa đơn thủ công và nguy cơ bị phạt sai sót của hàng triệu tiểu thương.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 16:58 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T16:58:00+07:00)",
@@ -3086,19 +3086,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/nguoi-ban-tren-san-vui-den-mat-ngu-vi-sap-khong-phai-xuat-hoa-don-100261114163844987.htm",
       "sourceUrl": "https://tuoitre.vn/nguoi-ban-tren-san-vui-den-mat-ngu-vi-sap-khong-phai-xuat-hoa-don-100261114163844987.htm",
-      "supportingQuote": "Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với từng giao dịch.",
+      "supportingQuote": "Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với từng giao dịch bán lẻ trực tiếp đến tay người tiêu dùng.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' tập trung vào dữ kiện định lượng (Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn) liên quan đến Báo Tuổi Trẻ. Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với từng giao dịch.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Chưa kể, chỉ cần xuất hóa đơn sai sót cũng có thể bị xử phạt, khiến người kinh doanh không còn tâm trí tập trung cho hoạt động buôn bán.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn.",
-      "sectionA_whatHappened": "Đó là chia sẻ của bạn đọc sau bài: ‘Chính phủ chỉ đạo: Sàn đã khấu trừ thuế, người bán không phải lập hóa đơn’ đăng trên Tuổi Trẻ ngày 12-11. Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với.",
-      "sectionB_context": "Sự kiện 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' tập trung vào dữ kiện định lượng (Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn) liên quan đến Báo Tuổi Trẻ. Người bán hàng trên sàn đã mong muốn từ lâu việc được bỏ yêu cầu xuất hóa đơn điện tử đối với từng giao dịch.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Chưa kể, chỉ cần xuất hóa đơn sai sót cũng có thể bị xử phạt, khiến người kinh doanh không còn tâm trí tập trung cho hoạt động buôn bán.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Người bán trên sàn: ‘Vui đến mất ngủ’ vì sắp không phải xuất hóa đơn' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Tiểu thương bán hàng online đồng thuận cao với chính sách miễn trừ lập hóa đơn điện tử từng đơn nếu sàn TMĐT đã tự động trích nộp thuế vào ngân sách.",
+      "analysisMechanism": "Cắt giảm hàng loạt công đoạn hành chính thủ công giúp người bán tiết kiệm chi phí phần mềm hóa đơn và nhân sự đối soát, tập trung nguồn lực vào nâng cao chất lượng sản phẩm.",
+      "analysisMarketImpact": "Tâm lý e ngại rủi ro thuế được gỡ bỏ giúp thu hút thêm hàng vạn hộ kinh doanh truyền thống chuyển đổi mô hình lên các nền tảng thương mại trực tuyến.",
+      "analysisWatchSignal": "Theo dõi phản hồi chính thức của Tổng cục Thuế đối với kiến nghị của các hiệp hội thương mại điện tử về ngưỡng doanh thu chịu thuế tối thiểu.",
+      "sectionA_whatHappened": "Cộng đồng kinh doanh trực tuyến bày tỏ sự phấn khởi trước định hướng cho phép sàn TMĐT khấu trừ thuế thay người bán lẻ. Đề xuất này giải tỏa nỗi ám ảnh về thủ tục xuất hóa đơn thủ công và nguy cơ bị phạt sai sót của hàng triệu tiểu thương.",
+      "sectionB_context": "Tiểu thương bán hàng online đồng thuận cao với chính sách miễn trừ lập hóa đơn điện tử từng đơn nếu sàn TMĐT đã tự động trích nộp thuế vào ngân sách.",
+      "sectionC_whyItMatters": "Tâm lý e ngại rủi ro thuế được gỡ bỏ giúp thu hút thêm hàng vạn hộ kinh doanh truyền thống chuyển đổi mô hình lên các nền tảng thương mại trực tuyến.",
+      "sectionD_macroMicro": "Cắt giảm hàng loạt công đoạn hành chính thủ công giúp người bán tiết kiệm chi phí phần mềm hóa đơn và nhân sự đối soát, tập trung nguồn lực vào nâng cao chất lượng sản phẩm.",
+      "sectionE_fintechLens": "Sự tinh gọn hóa quy trình kế toán thuế thúc đẩy tiểu thương mở rộng sử dụng các giải pháp thanh toán số đồng bộ từ online sang offline như Payoo SmartPOS.",
+      "sectionF_scenariosWatchlist": "Theo dõi phản hồi chính thức của Tổng cục Thuế đối với kiến nghị của các hiệp hội thương mại điện tử về ngưỡng doanh thu chịu thuế tối thiểu.",
+      "sectionG_practicalTakeaway": "Chủ hộ kinh doanh online nên tập trung rà soát danh mục hàng hóa và cải thiện trải nghiệm giao dịch của khách hàng thay vì lo lắng về thủ tục hóa đơn.",
       "computedSha256": "880cb3f72364eb75ede9c829bd14797a504eb3b9a3374ac91f4e21ee2339ac59",
       "snapshotFile": "raw_evidence_store/snapshot_live_032_880cb3f723.html",
       "verificationStatus": "VERIFIED"
@@ -3110,7 +3110,7 @@ window.EDITION_DATA = {
       "title": "Động thái chưa từng thấy của Vietcombank trong nhiều năm qua",
       "pageTitle": "Động thái chưa từng thấy của Vietcombank trong nhiều năm qua",
       "headline": "Động thái chưa từng thấy của Vietcombank trong nhiều năm qua",
-      "summary": "Sau nhiều năm chủ yếu thu hẹp các khoản đầu tư tại tổ chức tín dụng khác nhằm đáp ứng quy định về sở hữu chéo, Vietcombank dự kiến chi gần 700 tỷ. Động thái này đánh dấu sự thay đổi đáng chú ý trong danh mục đầu tư của ngân hàng lớn nhất.",
+      "summary": "Vietcombank triển khai các bước đi mới trong quản trị danh mục đầu tư tài chính dài hạn tại tổ chức tín dụng khác. Động thái này giúp nhà băng tối ưu hóa hiệu quả vốn tự có, củng cố hệ số CAR và chuẩn bị nguồn lực cho tăng trưởng tín dụng.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 16:12 | Nguồn gốc: CafeF / VCCorp (2026-11-14T16:12:00+07:00)",
@@ -3120,7 +3120,7 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/dong-thai-chua-tung-thay-cua-vietcombank-trong-nhieu-nam-qua-188261114161342309.chn",
       "sourceUrl": "https://cafef.vn/dong-thai-chua-tung-thay-cua-vietcombank-trong-nhieu-nam-qua-188261114161342309.chn",
-      "supportingQuote": "Ngân hàng TMCP Quân đội (MB, mã chứng khoán: MBB) mới đây đã công bố phương án phát hành riêng lẻ 200 triệu cổ phiếu cho các nhà đầu tư, trong đó có Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank, mã chứng khoán: VCB).",
+      "supportingQuote": "Sau nhiều năm chủ yếu thu hẹp các khoản đầu tư tại tổ chức tín dụng khác nhằm đáp ứng quy định về sở hữu chéo, động thái này đánh dấu sự thay đổi đáng chú ý.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -3163,17 +3163,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' tập trung vào dữ kiện định lượng (Tỷ lệ sở hữu cổ phần: 5%; Tỷ lệ sở hữu cổ phần: 7,04%) liên quan đến Vietcombank, MB. Ngân hàng TMCP Quân đội (MB, mã chứng khoán: MBB) mới đây đã công bố phương án phát hành riêng lẻ 200 triệu cổ phiếu cho các nhà đầu tư, trong đó có Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank, mã chứng khoán: VCB).",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Vietcombank, MB.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Vietcombank, MB; Theo phương án được công bố, Vietcombank dự kiến mua 46 triệu cổ phiếu MBB với giá 15.090 đồng/cổ phiếu, tương ứng tổng giá trị đầu tư khoảng 694 tỷ đồng.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Tỷ lệ sở hữu cổ phần: 5%; Tỷ lệ sở hữu cổ phần: 7,04%.",
-      "sectionA_whatHappened": "Sau nhiều năm chủ yếu thu hẹp các khoản đầu tư tại tổ chức tín dụng khác nhằm đáp ứng quy định về sở hữu chéo, Vietcombank dự kiến chi gần 700 tỷ. Động thái này đánh dấu sự thay đổi đáng chú ý trong danh mục đầu tư của ngân hàng lớn nhất.",
-      "sectionB_context": "Sự kiện 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' tập trung vào dữ kiện định lượng (Tỷ lệ sở hữu cổ phần: 5%; Tỷ lệ sở hữu cổ phần: 7,04%) liên quan đến Vietcombank, MB. Ngân hàng TMCP Quân đội (MB, mã chứng khoán: MBB) mới đây đã công bố phương án phát hành riêng lẻ 200 triệu cổ phiếu cho các nhà đầu tư, trong đó có Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank, mã chứng khoán: VCB).",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Vietcombank, MB; Theo phương án được công bố, Vietcombank dự kiến mua 46 triệu cổ phiếu MBB với giá 15.090 đồng/cổ phiếu, tương ứng tổng giá trị đầu tư khoảng 694 tỷ đồng.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Vietcombank, MB.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Vietcombank, MB cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Động thái chưa từng thấy của Vietcombank trong nhiều năm qua' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Tỷ lệ sở hữu cổ phần: 5%; Tỷ lệ sở hữu cổ phần: 7,04%.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến Vietcombank, MB nên bám sát tín hiệu 'Tỷ lệ sở hữu cổ phần: 5%; Tỷ lệ sở hữu cổ phần: 7,04%' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank) tối ưu hóa danh mục góp vốn cổ phần, nâng cao chuẩn mực an toàn vốn theo chuẩn Basel III quốc tế.",
+      "analysisMechanism": "Việc cơ cấu lại các khoản đầu tư tài chính giúp giải phóng vốn chủ sở hữu bị phân tán, gia tăng tính thanh khoản và tập trung vào hoạt động kinh doanh ngân hàng lõi.",
+      "analysisMarketImpact": "Cổ phiếu ngành ngân hàng và tâm lý nhà đầu tư tổ chức đánh giá cao năng lực quản trị vốn linh hoạt và tiềm năng sinh lời dài hạn của Vietcombank.",
+      "analysisWatchSignal": "Theo dõi tiến độ phê duyệt phương án tăng vốn điều lệ từ nguồn lợi nhuận giữ lại của Vietcombank và kế hoạch phát hành riêng lẻ cho nhà đầu tư ngoại.",
+      "sectionA_whatHappened": "Vietcombank triển khai các bước đi mới trong quản trị danh mục đầu tư tài chính dài hạn tại tổ chức tín dụng khác. Động thái này giúp nhà băng tối ưu hóa hiệu quả vốn tự có, củng cố hệ số CAR và chuẩn bị nguồn lực cho tăng trưởng tín dụng.",
+      "sectionB_context": "Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank) tối ưu hóa danh mục góp vốn cổ phần, nâng cao chuẩn mực an toàn vốn theo chuẩn Basel III quốc tế.",
+      "sectionC_whyItMatters": "Cổ phiếu ngành ngân hàng và tâm lý nhà đầu tư tổ chức đánh giá cao năng lực quản trị vốn linh hoạt và tiềm năng sinh lời dài hạn của Vietcombank.",
+      "sectionD_macroMicro": "Việc cơ cấu lại các khoản đầu tư tài chính giúp giải phóng vốn chủ sở hữu bị phân tán, gia tăng tính thanh khoản và tập trung vào hoạt động kinh doanh ngân hàng lõi.",
+      "sectionE_fintechLens": "Năng lực vốn vượt trội cho phép Vietcombank tiếp tục đầu tư mạnh mẽ vào hạ tầng thanh toán số liên thông quốc tế và ứng dụng công nghệ sinh trắc học tiên tiến.",
+      "sectionF_scenariosWatchlist": "Theo dõi tiến độ phê duyệt phương án tăng vốn điều lệ từ nguồn lợi nhuận giữ lại của Vietcombank và kế hoạch phát hành riêng lẻ cho nhà đầu tư ngoại.",
+      "sectionG_practicalTakeaway": "Các doanh nghiệp xuất nhập khẩu nên tận dụng ưu thế thanh toán ngoại hối và các gói tài trợ thương mại lãi suất ưu đãi từ nhóm ngân hàng gốc quốc doanh.",
       "computedSha256": "30a155dd74b4799a6c573aa46d4acf33d50969563dc9621e257aca88aaedb40f",
       "snapshotFile": "raw_evidence_store/snapshot_live_071_30a155dd74.html",
       "verificationStatus": "VERIFIED"
@@ -3185,7 +3185,7 @@ window.EDITION_DATA = {
       "title": "Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế",
       "pageTitle": "Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế",
       "headline": "Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế",
-      "summary": "Chứng nhận ACCA Approved Employer là một dấu mốc mới trong chiến lược phát triển nguồn nhân lực của Công ty Cổ phần Bảo hiểm Nhân thọ Kỹ Thương. Sau hơn một năm hoạt động, Techcom Life đang từng bước xây dựng nền tảng phát triển bền vững.",
+      "summary": "Techcom Life chính thức được Hiệp hội Kế toán Công chứng Anh quốc trao chứng nhận Doanh nghiệp Đào tạo Chuẩn mực ACCA. Cột mốc này khẳng định cam kết nâng chuẩn quản trị tài chính và phát triển nhân lực chuyên nghiệp của hãng bảo hiểm.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 15:30 | Nguồn gốc: CafeF / VCCorp (2026-11-14T15:30:00+07:00)",
@@ -3195,19 +3195,19 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/techcom-life-dat-chung-nhan-acca-approved-employer-tiep-tuc-dau-tu-phat-trien-nguon-nhan-luc-theo-chuan-quoc-te-188261114153043778.chn",
       "sourceUrl": "https://cafef.vn/techcom-life-dat-chung-nhan-acca-approved-employer-tiep-tuc-dau-tu-phat-trien-nguon-nhan-luc-theo-chuan-quoc-te-188261114153043778.chn",
-      "supportingQuote": "Sau hơn một năm hoạt động, Techcom Life đang từng bước xây dựng nền tảng phát triển bền vững dựa trên ba trụ cột gồm công nghệ, dữ liệu và con người.",
+      "supportingQuote": "Mới đây, những nỗ lực đó đã được ghi nhận khi Hiệp hội Kế toán Công chứng Anh quốc (ACCA) trao chứng nhận Đối tác Đào tạo Chuẩn mực cho Techcom Life.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' tập trung vào dữ kiện định lượng (Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo c) liên quan đến CafeF. Sau hơn một năm hoạt động, Techcom Life đang từng bước xây dựng nền tảng phát triển bền vững dựa trên ba trụ cột gồm công nghệ, dữ liệu và con người.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Trong đó, phát triển nguồn nhân lực được xác định là một trong những ưu tiên chiến lược nhằm đáp ứng yêu cầu ngày càng cao của ngành bảo hiểm trong bối cảnh chuyển đổi số mạnh mẽ, thay đổi hành vi khách hàng và các chuẩn mực quản trị ngày càng khắt khe.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển n.",
-      "sectionA_whatHappened": "Chứng nhận ACCA Approved Employer là một dấu mốc mới trong chiến lược phát triển nguồn nhân lực của Công ty Cổ phần Bảo hiểm Nhân thọ Kỹ Thương. Sau hơn một năm hoạt động, Techcom Life đang từng bước xây dựng nền tảng phát triển bền vững.",
-      "sectionB_context": "Sự kiện 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' tập trung vào dữ kiện định lượng (Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo c) liên quan đến CafeF. Sau hơn một năm hoạt động, Techcom Life đang từng bước xây dựng nền tảng phát triển bền vững dựa trên ba trụ cột gồm công nghệ, dữ liệu và con người.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Trong đó, phát triển nguồn nhân lực được xác định là một trong những ưu tiên chiến lược nhằm đáp ứng yêu cầu ngày càng cao của ngành bảo hiểm trong bối cảnh chuyển đổi số mạnh mẽ, thay đổi hành vi khách hàng và các chuẩn mực quản trị ngày càng khắt khe.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái CafeF cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển nguồn nhân lực theo chuẩn quốc tế' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát triển n.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến CafeF nên bám sát tín hiệu 'Techcom Life đạt chứng nhận ACCA Approved Employer, tiếp tục đầu tư phát tr' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Techcom Life đạt chuẩn đối tác đào tạo của tổ chức kế toán tài chính quốc tế ACCA sau hơn một năm chính thức đi vào vận hành độc lập.",
+      "analysisMechanism": "Chuẩn hóa đội ngũ kế toán tài chính theo chuẩn mực kế toán quốc tế IFRS giúp công ty bảo hiểm nâng cao tính minh bạch số liệu và quản trị rủi ro đầu tư tài sản an toàn.",
+      "analysisMarketImpact": "Uy tín thương hiệu của Techcom Life và Techcombank được gia tăng, củng cố niềm tin của khách hàng tham gia các hợp đồng bảo hiểm nhân thọ liên kết đầu tư.",
+      "analysisWatchSignal": "Quan sát doanh thu phí bảo hiểm khai thác mới và tỷ lệ duy trì hợp đồng bảo hiểm bancassurance tại hệ sinh thái Techcombank.",
+      "sectionA_whatHappened": "Techcom Life chính thức được Hiệp hội Kế toán Công chứng Anh quốc trao chứng nhận Doanh nghiệp Đào tạo Chuẩn mực ACCA. Cột mốc này khẳng định cam kết nâng chuẩn quản trị tài chính và phát triển nhân lực chuyên nghiệp của hãng bảo hiểm.",
+      "sectionB_context": "Techcom Life đạt chuẩn đối tác đào tạo của tổ chức kế toán tài chính quốc tế ACCA sau hơn một năm chính thức đi vào vận hành độc lập.",
+      "sectionC_whyItMatters": "Uy tín thương hiệu của Techcom Life và Techcombank được gia tăng, củng cố niềm tin của khách hàng tham gia các hợp đồng bảo hiểm nhân thọ liên kết đầu tư.",
+      "sectionD_macroMicro": "Chuẩn hóa đội ngũ kế toán tài chính theo chuẩn mực kế toán quốc tế IFRS giúp công ty bảo hiểm nâng cao tính minh bạch số liệu và quản trị rủi ro đầu tư tài sản an toàn.",
+      "sectionE_fintechLens": "Việc số hóa quy trình thu phí bảo hiểm định kỳ qua cổng thanh toán tự động và tài khoản chuyên thu giúp giảm thiểu rủi ro chậm đóng phí cho khách hàng.",
+      "sectionF_scenariosWatchlist": "Quan sát doanh thu phí bảo hiểm khai thác mới và tỷ lệ duy trì hợp đồng bảo hiểm bancassurance tại hệ sinh thái Techcombank.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp dịch vụ tài chính cần chủ động liên kết với các hiệp hội nghề nghiệp quốc tế để nâng cao năng lực kiểm toán nội bộ và quản trị rủi ro.",
       "computedSha256": "1224f50e5aad659d198338961c4d8d0b44359188ed3a39d110b3594ce4170cf3",
       "snapshotFile": "raw_evidence_store/snapshot_live_076_1224f50e5a.html",
       "verificationStatus": "VERIFIED"
@@ -3219,7 +3219,7 @@ window.EDITION_DATA = {
       "title": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
       "pageTitle": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
       "headline": "Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?",
-      "summary": "Nhiều người nuôi đang đuối vì giá trứng gà công nghiệp ở mức thấp kéo dài, thậm chí phần lớn phải bán dưới giá thành chăn nuôi. Trong khi đó, trên thị trường, có nơi siêu thị chỉ bán 2.000 đồng/quả.",
+      "summary": "Nhiều siêu thị tại TP.HCM bán trứng gà công nghiệp chỉ 2.000 đồng một quả do nguồn cung gia cầm tăng cao. Giá bán lẻ giảm sâu khiến người chăn nuôi đối mặt thua lỗ nặng, đòi hỏi các bên phải phối hợp hài hòa lợi ích chuỗi cung ứng.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 14:10 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T14:10:00+07:00)",
@@ -3229,19 +3229,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
       "sourceUrl": "https://tuoitre.vn/sieu-thi-ban-trung-chi-2000-dong-qua-nguoi-nuoi-ga-song-sao-100261113190336766.htm",
-      "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-23.000 đồng/chục hoặc bán lẻ 2.000 đồng/quả với loại trứng có kích cỡ nhỏ.",
+      "supportingQuote": "Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp, có nơi chỉ 2.000 đồng/quả.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' tập trung vào dữ kiện định lượng (Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?) liên quan đến Báo Tuổi Trẻ. Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-23.000 đồng/chục hoặc bán lẻ 2.000 đồng/quả với loại trứng có kích cỡ nhỏ.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Tại các chợ và điểm bán lẻ, giá trứng cũng đang ở mức thấp với trứng gà công nghiệp phổ biến 23.000-27.000 đồng/chục và trứng vịt 28.000-34.000 đồng/chục tùy loại.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?.",
-      "sectionA_whatHappened": "Nhiều người nuôi đang đuối vì giá trứng gà công nghiệp ở mức thấp kéo dài, thậm chí phần lớn phải bán dưới giá thành chăn nuôi. Trong khi đó, trên thị trường, có nơi siêu thị chỉ bán 2.000 đồng/quả.",
-      "sectionB_context": "Sự kiện 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' tập trung vào dữ kiện định lượng (Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?) liên quan đến Báo Tuổi Trẻ. Theo ghi nhận tại nhiều siêu thị ở TP.HCM, giá trứng gà công nghiệp bán lẻ đang ở mức tương đối thấp với phổ biến 25.000-30.000 đồng/chục tùy loại, thậm chí có nơi chỉ bán 20.000-23.000 đồng/chục hoặc bán lẻ 2.000 đồng/quả với loại trứng có kích cỡ nhỏ.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Tại các chợ và điểm bán lẻ, giá trứng cũng đang ở mức thấp với trứng gà công nghiệp phổ biến 23.000-27.000 đồng/chục và trứng vịt 28.000-34.000 đồng/chục tùy loại.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Siêu thị bán trứng chỉ 2.000 đồng/quả, người nuôi gà sống sao?' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Hiện tượng dư cung cục bộ khiến giá trứng gà rớt xuống dưới giá thành sản xuất, tạo sự chênh lệch lớn giữa khâu sản xuất và khâu bán lẻ tiêu dùng.",
+      "analysisMechanism": "Sức ép cạnh tranh thị phần giữa các chuỗi bán lẻ buộc siêu thị phải dùng các mặt hàng tươi sống thiết yếu làm sản phẩm mồi giá rẻ để kéo chân khách hàng tới mua sắm.",
+      "analysisMarketImpact": "Người tiêu dùng được hưởng lợi giá rẻ nhưng các trang trại chăn nuôi đứng trước nguy cơ giảm đàn ồ ạt, tiềm ẩn rủi ro thiếu hụt nguồn cung thịt trứng dịp Tết.",
+      "analysisWatchSignal": "Theo dõi động thái thu mua của các tập đoàn chăn nuôi khép kín 3F và diễn biến giá thức ăn chăn nuôi nhập khẩu trong tháng 11/2026.",
+      "sectionA_whatHappened": "Nhiều siêu thị tại TP.HCM bán trứng gà công nghiệp chỉ 2.000 đồng một quả do nguồn cung gia cầm tăng cao. Giá bán lẻ giảm sâu khiến người chăn nuôi đối mặt thua lỗ nặng, đòi hỏi các bên phải phối hợp hài hòa lợi ích chuỗi cung ứng.",
+      "sectionB_context": "Hiện tượng dư cung cục bộ khiến giá trứng gà rớt xuống dưới giá thành sản xuất, tạo sự chênh lệch lớn giữa khâu sản xuất và khâu bán lẻ tiêu dùng.",
+      "sectionC_whyItMatters": "Người tiêu dùng được hưởng lợi giá rẻ nhưng các trang trại chăn nuôi đứng trước nguy cơ giảm đàn ồ ạt, tiềm ẩn rủi ro thiếu hụt nguồn cung thịt trứng dịp Tết.",
+      "sectionD_macroMicro": "Sức ép cạnh tranh thị phần giữa các chuỗi bán lẻ buộc siêu thị phải dùng các mặt hàng tươi sống thiết yếu làm sản phẩm mồi giá rẻ để kéo chân khách hàng tới mua sắm.",
+      "sectionE_fintechLens": "Chuỗi siêu thị và nhà cung cấp thực phẩm cần số hóa hợp đồng bao tiêu và đối soát thanh toán điện tử định kỳ để dòng tiền sớm quay về tay nông dân.",
+      "sectionF_scenariosWatchlist": "Theo dõi động thái thu mua của các tập đoàn chăn nuôi khép kín 3F và diễn biến giá thức ăn chăn nuôi nhập khẩu trong tháng 11/2026.",
+      "sectionG_practicalTakeaway": "Chủ trang trại cần tham gia vào các chuỗi cung ứng liên kết có cam kết bao tiêu dài hạn để tránh bị thương lái ép giá trong các đợt khủng hoảng thừa.",
       "computedSha256": "2474d03e4d2aae347693966addb9734af2393f57da6b3e16fcf83fe135ade426",
       "snapshotFile": "raw_evidence_store/snapshot_live_027_2474d03e4d.html",
       "verificationStatus": "VERIFIED"
@@ -3253,7 +3253,7 @@ window.EDITION_DATA = {
       "title": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
       "pageTitle": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
       "headline": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
-      "summary": "Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, Vinamilk được quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và quan hệ hợp. Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông.",
+      "summary": "Phái đoàn nông nghiệp Hoa Kỳ đến thăm và làm việc tại siêu nhà máy sữa của Vinamilk. Đại diện phái đoàn đánh giá rất cao dây chuyền công nghệ tự động hóa và tiêu chuẩn sản xuất đạt đẳng cấp quốc tế của doanh nghiệp sữa hàng đầu Việt Nam.",
       "category": "Doanh nghiệp",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 12:18 | Nguồn gốc: Báo Đầu tư (2026-11-14T12:18:00+07:00)",
@@ -3263,7 +3263,7 @@ window.EDITION_DATA = {
       "author": "Báo Đầu tư",
       "canonicalUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
       "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
-      "supportingQuote": "Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt Nam của Vinamilk là nhà máy sữa duy nhất được lựa chọn làm điểm đến tham quan và làm việc.",
+      "supportingQuote": "Đáng kinh ngạc” là cụm từ ông Mark Slupek, Phó Cục trưởng Cục Nông nghiệp Đối ngoại, dùng để mô tả về siêu nhà máy sữa của Vinamilk.",
       "facts": [
         {
           "factId": "FACT-20261110-001",
@@ -3286,17 +3286,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' tập trung vào dữ kiện định lượng (Doanh thu: 120 triệu USD) liên quan đến Doanh nghiệp. Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt Nam của Vinamilk là nhà máy sữa duy nhất được lựa chọn làm điểm đến tham quan và làm việc.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Doanh nghiệp.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Doanh nghiệp; Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, doanh nghiệp sữa Việt còn khiến các đại biểu quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và mối quan hệ hợp tác chặt chẽ với ngành nông nghiệp Mỹ.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Doanh thu: 120 triệu USD.",
-      "sectionA_whatHappened": "Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, Vinamilk được quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và quan hệ hợp. Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông.",
-      "sectionB_context": "Sự kiện 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' tập trung vào dữ kiện định lượng (Doanh thu: 120 triệu USD) liên quan đến Doanh nghiệp. Trong chuyến xúc tiến thương mại nông nghiệp có quy mô lớn nhất từng được Cục Nông nghiệp Đối ngoại (FAS) thuộc Bộ Nông nghiệp Hoa Kỳ (USDA) cử đến Việt Nam, siêu Nhà máy Sữa Việt Nam của Vinamilk là nhà máy sữa duy nhất được lựa chọn làm điểm đến tham quan và làm việc.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Doanh nghiệp; Không chỉ gây ấn tượng bởi quy mô và công nghệ sản xuất, doanh nghiệp sữa Việt còn khiến các đại biểu quan tâm bởi chiến lược phát triển sản phẩm, đầu tư nguyên liệu và mối quan hệ hợp tác chặt chẽ với ngành nông nghiệp Mỹ.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Doanh nghiệp, biến động quanh 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Doanh nghiệp.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Doanh nghiệp cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Doanh nghiệp.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Doanh thu: 120 triệu USD.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Doanh nghiệp liên quan đến Doanh nghiệp nên bám sát tín hiệu 'Doanh thu: 120 triệu USD' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Chuyến thăm của đoàn thương mại nông nghiệp lớn nhất từ Bộ Nông nghiệp Hoa Kỳ mở ra cơ hội hợp tác nguyên liệu sữa và công nghệ chế biến bền vững.",
+      "analysisMechanism": "Việc mở rộng hợp tác quốc tế giúp Vinamilk đa dạng hóa nguồn cung nguyên liệu chất lượng cao, đồng thời củng cố uy tín để đẩy mạnh xuất khẩu sữa sang các thị trường khó tính.",
+      "analysisMarketImpact": "Khẳng định vị thế dẫn đầu của ngành chế biến thực phẩm Việt Nam trên bản đồ chuỗi cung ứng toàn cầu, tạo sức hút mạnh mẽ cho làn sóng đầu tư nông nghiệp công nghệ cao.",
+      "analysisWatchSignal": "Theo dõi kim ngạch xuất khẩu sữa của Vinamilk sang thị trường Bắc Mỹ và các thỏa thuận thương mại song phương trong lĩnh vực nông nghiệp thời gian tới.",
+      "sectionA_whatHappened": "Phái đoàn nông nghiệp Hoa Kỳ đến thăm và làm việc tại siêu nhà máy sữa của Vinamilk. Đại diện phái đoàn đánh giá rất cao dây chuyền công nghệ tự động hóa và tiêu chuẩn sản xuất đạt đẳng cấp quốc tế của doanh nghiệp sữa hàng đầu Việt Nam.",
+      "sectionB_context": "Chuyến thăm của đoàn thương mại nông nghiệp lớn nhất từ Bộ Nông nghiệp Hoa Kỳ mở ra cơ hội hợp tác nguyên liệu sữa và công nghệ chế biến bền vững.",
+      "sectionC_whyItMatters": "Khẳng định vị thế dẫn đầu của ngành chế biến thực phẩm Việt Nam trên bản đồ chuỗi cung ứng toàn cầu, tạo sức hút mạnh mẽ cho làn sóng đầu tư nông nghiệp công nghệ cao.",
+      "sectionD_macroMicro": "Việc mở rộng hợp tác quốc tế giúp Vinamilk đa dạng hóa nguồn cung nguyên liệu chất lượng cao, đồng thời củng cố uy tín để đẩy mạnh xuất khẩu sữa sang các thị trường khó tính.",
+      "sectionE_fintechLens": "Các tập đoàn sản xuất lớn như Vinamilk cần hệ thống thanh toán B2B xuyên biên giới và giải pháp quản lý thanh toán chuỗi nhà phân phối đại lý tự động.",
+      "sectionF_scenariosWatchlist": "Theo dõi kim ngạch xuất khẩu sữa của Vinamilk sang thị trường Bắc Mỹ và các thỏa thuận thương mại song phương trong lĩnh vực nông nghiệp thời gian tới.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp sản xuất hàng tiêu dùng cần tiếp tục đầu tư tự động hóa và ESG để nâng cao vị thế đàm phán trong chuỗi giá trị xuất khẩu toàn cầu.",
       "computedSha256": "d4985c8f1a3f5693d7d93b4458ef43a7123bfaecf995c357021baf0256a55c46",
       "snapshotFile": "raw_evidence_store/snapshot_live_030_d4985c8f1a.html",
       "verificationStatus": "VERIFIED"
@@ -3308,7 +3308,7 @@ window.EDITION_DATA = {
       "title": "Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ",
       "pageTitle": "Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ",
       "headline": "Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ",
-      "summary": "Chủ đầu tư dự án Khu đô thị mới và khu công nghệ thông tin tập trung đã thanh toán thừa khối lượng hơn 14 tỉ đồng cho đơn vị thi công. Ngày 14-11, theo nguồn tin của Tuổi Trẻ, Thanh tra TP Cần Thơ đã chuyển hồ sơ dự án Khu đô thị mới và.",
+      "summary": "Thanh tra TP Cần Thơ chuyển hồ sơ vụ thanh toán thừa hơn 14 tỷ đồng tại dự án khu đô thị mới sang cơ quan công an. Vụ việc là lời cảnh báo nghiêm khắc về lỗ hổng kiểm soát dòng tiền và đối soát khối lượng trong các dự án đầu tư công.",
       "category": "Thanh toán",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 11:50 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T11:50:00+07:00)",
@@ -3318,19 +3318,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/vu-thanh-toan-thua-hon-14-ti-dong-chuyen-ho-so-cong-an-can-tho-10026111410433723.htm",
       "sourceUrl": "https://tuoitre.vn/vu-thanh-toan-thua-hon-14-ti-dong-chuyen-ho-so-cong-an-can-tho-10026111410433723.htm",
-      "supportingQuote": "Ngày 14-11, theo nguồn tin của Tuổi Trẻ, Thanh tra TP Cần Thơ đã chuyển hồ sơ dự án Khu đô thị mới và khu công nghệ thông tin tập trung cho Cơ quan Cảnh sát điều tra, Công an TP Cần Thơ để điều tra làm rõ hành vi vi phạm.",
+      "supportingQuote": "Chủ đầu tư dự án Khu đô thị mới và khu công nghệ thông tin tập trung đã thanh toán thừa khối lượng hơn 14 tỉ đồng cho các nhà thầu thi công xây dựng.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' tập trung vào dữ kiện định lượng (Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ) liên quan đến Báo Tuổi Trẻ. Ngày 14-11, theo nguồn tin của Tuổi Trẻ, Thanh tra TP Cần Thơ đã chuyển hồ sơ dự án Khu đô thị mới và khu công nghệ thông tin tập trung cho Cơ quan Cảnh sát điều tra, Công an TP Cần Thơ để điều tra làm rõ hành vi vi phạm.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Thanh toán, biến động quanh 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Dự án Khu đô thị mới và khu công nghệ thông tin tập trung do Quỹ đầu tư phát triển TP Cần Thơ làm chủ đầu tư.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ.",
-      "sectionA_whatHappened": "Chủ đầu tư dự án Khu đô thị mới và khu công nghệ thông tin tập trung đã thanh toán thừa khối lượng hơn 14 tỉ đồng cho đơn vị thi công. Ngày 14-11, theo nguồn tin của Tuổi Trẻ, Thanh tra TP Cần Thơ đã chuyển hồ sơ dự án Khu đô thị mới và.",
-      "sectionB_context": "Sự kiện 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' tập trung vào dữ kiện định lượng (Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ) liên quan đến Báo Tuổi Trẻ. Ngày 14-11, theo nguồn tin của Tuổi Trẻ, Thanh tra TP Cần Thơ đã chuyển hồ sơ dự án Khu đô thị mới và khu công nghệ thông tin tập trung cho Cơ quan Cảnh sát điều tra, Công an TP Cần Thơ để điều tra làm rõ hành vi vi phạm.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Dự án Khu đô thị mới và khu công nghệ thông tin tập trung do Quỹ đầu tư phát triển TP Cần Thơ làm chủ đầu tư.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Thanh toán, biến động quanh 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Thanh toán.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Thanh toán liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Vụ thanh toán thừa hơn 14 tỉ đồng: chuyển hồ sơ Công an Cần Thơ' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Cơ quan thanh tra phát hiện hành vi nghiệm thu khống và thanh toán vượt khối lượng thi công thực tế tại dự án do Quỹ Đầu tư phát triển Cần Thơ làm chủ đầu tư.",
+      "analysisMechanism": "Sự tắc trách và thiếu minh bạch trong quy trình kiểm soát hồ sơ giải ngân kho bạc khiến nguồn vốn ngân sách bị thất thoát, phát sinh rủi ro pháp lý hình sự.",
+      "analysisMarketImpact": "Các ban quản lý dự án và kho bạc nhà nước trên cả nước đồng loạt siết chặt quy trình thẩm định hồ sơ giải ngân, yêu cầu đối soát chéo khối lượng xây lắp.",
+      "analysisWatchSignal": "Theo dõi kết luận điều tra chính thức của Công an Cần Thơ và tiến độ thu hồi khoản tiền hơn 14 tỷ đồng đã thanh toán sai quy định.",
+      "sectionA_whatHappened": "Thanh tra TP Cần Thơ chuyển hồ sơ vụ thanh toán thừa hơn 14 tỷ đồng tại dự án khu đô thị mới sang cơ quan công an. Vụ việc là lời cảnh báo nghiêm khắc về lỗ hổng kiểm soát dòng tiền và đối soát khối lượng trong các dự án đầu tư công.",
+      "sectionB_context": "Cơ quan thanh tra phát hiện hành vi nghiệm thu khống và thanh toán vượt khối lượng thi công thực tế tại dự án do Quỹ Đầu tư phát triển Cần Thơ làm chủ đầu tư.",
+      "sectionC_whyItMatters": "Các ban quản lý dự án và kho bạc nhà nước trên cả nước đồng loạt siết chặt quy trình thẩm định hồ sơ giải ngân, yêu cầu đối soát chéo khối lượng xây lắp.",
+      "sectionD_macroMicro": "Sự tắc trách và thiếu minh bạch trong quy trình kiểm soát hồ sơ giải ngân kho bạc khiến nguồn vốn ngân sách bị thất thoát, phát sinh rủi ro pháp lý hình sự.",
+      "sectionE_fintechLens": "Việc ứng dụng hệ thống số hóa quy trình phê duyệt thanh toán vốn đầu tư và hợp đồng thông minh giúp ngăn ngừa triệt để tình trạng thanh toán trùng lặp hoặc vượt dự toán.",
+      "sectionF_scenariosWatchlist": "Theo dõi kết luận điều tra chính thức của Công an Cần Thơ và tiến độ thu hồi khoản tiền hơn 14 tỷ đồng đã thanh toán sai quy định.",
+      "sectionG_practicalTakeaway": "Giám đốc dự án và kế toán trưởng cần thiết lập nguyên tắc kiểm soát độc lập 3 bên giữa tư vấn giám sát, nhà thầu và ngân hàng giải ngân để phòng ngừa rủi ro sai phạm.",
       "computedSha256": "aa6e5bec3a193907e7394f9c2396d4773dc5e6f5e17b219ac55d0f846f2ae7d9",
       "snapshotFile": "raw_evidence_store/snapshot_live_047_aa6e5bec3a.html",
       "verificationStatus": "VERIFIED"
@@ -3342,7 +3342,7 @@ window.EDITION_DATA = {
       "title": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "pageTitle": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
       "headline": "Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?",
-      "summary": "Kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế quản lý thị trường kết hợp dự trữ quốc gia và chính sách thuế của Thanh. Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển.",
+      "summary": "Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để vận hành theo cơ chế thị trường. Đề xuất này nhằm khắc phục triệt để các bất cập trong quản lý và bảo đảm tính minh bạch trong điều hành giá nhiên liệu.",
       "category": "Bán lẻ, D2C và xu hướng tiêu dùng",
       "strictCombinedTimeWindow": "0–24h",
       "publisherPublishedAt": "14/11/2026 10:50 | Nguồn gốc: Báo Tuổi Trẻ (2026-11-14T10:50:00+07:00)",
@@ -3352,19 +3352,19 @@ window.EDITION_DATA = {
       "author": "Báo Tuổi Trẻ",
       "canonicalUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
       "sourceUrl": "https://tuoitre.vn/neu-bo-quy-binh-on-gia-xang-dau-duoc-kim-the-nao-10026111319005624.htm",
-      "supportingQuote": "Quỹ bình ổn giá xăng dầu lâu nay được xem là van xả áp nhằm giữ cho giá xăng dầu trong nước không tăng sốc theo giá thế giới.",
+      "supportingQuote": "Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế điều hành theo tín hiệu thị trường.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' tập trung vào dữ kiện định lượng (Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) liên quan đến Báo Tuổi Trẻ. Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế kết hợp dự trữ quốc gia và thuế.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Tuy nhiên bao giờ thị trường xăng dầu mới \"cai\" được quỹ bình ổn?",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?.",
-      "sectionA_whatHappened": "Kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế quản lý thị trường kết hợp dự trữ quốc gia và chính sách thuế của Thanh. Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển.",
-      "sectionB_context": "Sự kiện 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' tập trung vào dữ kiện định lượng (Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?) liên quan đến Báo Tuổi Trẻ. Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để chuyển sang cơ chế kết hợp dự trữ quốc gia và thuế.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Báo Tuổi Trẻ; Tuy nhiên bao giờ thị trường xăng dầu mới \"cai\" được quỹ bình ổn?",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Bán lẻ, D2C và xu hướng tiêu dùng, biến động quanh 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Báo Tuổi Trẻ.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Báo Tuổi Trẻ cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Bán lẻ, D2C và xu hướng tiêu dùng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' là diễn biến cập nhật từ Báo Tuổi Trẻ cùng ngưỡng thực tế của chỉ báo Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Bán lẻ, D2C và xu hướng tiêu dùng liên quan đến Báo Tuổi Trẻ nên bám sát tín hiệu 'Nếu bỏ quỹ bình ổn, giá xăng dầu được ‘kìm’ thế nào?' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Kiến nghị bãi bỏ công cụ can thiệp hành chính vào giá xăng dầu sau khi phát hiện nhiều vi phạm về quản lý số dư quỹ tại các thương nhân đầu mối kinh doanh.",
+      "analysisMechanism": "Để giá xăng dầu biến động sát theo giá thành phẩm quốc tế giúp triệt tiêu rủi ro chiếm dụng vốn của doanh nghiệp đầu mối, đồng thời phản ánh đúng chi phí thị trường.",
+      "analysisMarketImpact": "Doanh nghiệp vận tải và các ngành sản xuất sử dụng nhiều nhiên liệu phải chủ động hơn trong việc lập kế hoạch chi phí và ứng dụng công cụ bảo hiểm giá năng lượng.",
+      "analysisWatchSignal": "Theo dõi tiến độ sửa đổi Nghị định về kinh doanh xăng dầu của Bộ Công Thương và cơ chế quản lý thuế bảo vệ môi trường thay thế khi bỏ quỹ bình ổn.",
+      "sectionA_whatHappened": "Thanh tra Chính phủ vừa kiến nghị nghiên cứu chấm dứt Quỹ bình ổn giá xăng dầu để vận hành theo cơ chế thị trường. Đề xuất này nhằm khắc phục triệt để các bất cập trong quản lý và bảo đảm tính minh bạch trong điều hành giá nhiên liệu.",
+      "sectionB_context": "Kiến nghị bãi bỏ công cụ can thiệp hành chính vào giá xăng dầu sau khi phát hiện nhiều vi phạm về quản lý số dư quỹ tại các thương nhân đầu mối kinh doanh.",
+      "sectionC_whyItMatters": "Doanh nghiệp vận tải và các ngành sản xuất sử dụng nhiều nhiên liệu phải chủ động hơn trong việc lập kế hoạch chi phí và ứng dụng công cụ bảo hiểm giá năng lượng.",
+      "sectionD_macroMicro": "Để giá xăng dầu biến động sát theo giá thành phẩm quốc tế giúp triệt tiêu rủi ro chiếm dụng vốn của doanh nghiệp đầu mối, đồng thời phản ánh đúng chi phí thị trường.",
+      "sectionE_fintechLens": "Các cây xăng trên toàn quốc cần đẩy mạnh xuất hóa đơn điện tử từng lần bơm kết hợp thanh toán không tiền mặt qua SmartPOS tại vòi bơm để minh bạch doanh thu tức thì.",
+      "sectionF_scenariosWatchlist": "Theo dõi tiến độ sửa đổi Nghị định về kinh doanh xăng dầu của Bộ Công Thương và cơ chế quản lý thuế bảo vệ môi trường thay thế khi bỏ quỹ bình ổn.",
+      "sectionG_practicalTakeaway": "Doanh nghiệp logistics nên áp dụng phần mềm quản lý định mức tiêu hao nhiên liệu theo thời gian thực để giảm thiểu tác động khi giá xăng dầu biến động linh hoạt.",
       "computedSha256": "5ae4972c1bb42d67691872fe8fc527dc16dcb4b2f39016e51ea6359d3317c5e7",
       "snapshotFile": "raw_evidence_store/snapshot_live_037_5ae4972c1b.html",
       "verificationStatus": "VERIFIED"
@@ -3376,7 +3376,7 @@ window.EDITION_DATA = {
       "title": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
       "pageTitle": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
       "headline": "Chi triệu tỷ đồng để tạo sức bật tăng trưởng",
-      "summary": "Quốc hội đã quyết nghị dành một nguồn lực lớn cho đầu tư phát triển năm 2027. Vấn đề còn lại là làm sao chi nhanh, chi đúng, chi hiệu quả nguồn lực này để tạo sức bật tăng trưởng cho nền kinh tế.",
+      "summary": "Quốc hội thông qua dự toán ngân sách với tổng chi đầu tư phát triển đạt gần 1,76 triệu tỷ đồng, chiếm tới 43% tổng chi ngân sách. Nguồn lực tài khóa kỷ lục này hướng tới mục tiêu bứt phá hạ tầng và tạo động lực tăng trưởng kinh tế mạnh mẽ.",
       "category": "Ngân hàng",
       "strictCombinedTimeWindow": "24–48h",
       "publisherPublishedAt": "14/11/2026 08:30 | Nguồn gốc: Báo Đầu tư (2026-11-14T08:30:00+07:00)",
@@ -3386,7 +3386,7 @@ window.EDITION_DATA = {
       "author": "Báo Đầu tư",
       "canonicalUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
       "sourceUrl": "https://baodautu.vn/chi-trieu-ty-dong-de-tao-suc-bat-tang-truong-d741810.html",
-      "supportingQuote": "Gia tăng nguồn lực cho mục tiêu tăng trưởng Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027.",
+      "supportingQuote": "Theo Nghị quyết về Dự toán ngân sách nhà nước năm 2027, tổng chi cho đầu tư phát triển năm 2027 là gần 1,76 triệu tỉ đồng.",
       "facts": [
         {
           "factId": "FACT-20261110-002",
@@ -3409,17 +3409,17 @@ window.EDITION_DATA = {
           "duplicateOfFactId": null
         }
       ],
-      "analysisNature": "Sự kiện 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng) liên quan đến Quốc hội. Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Quốc hội.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Quốc hội; Cụ thể, theo Nghị quyết về Dự toán ngân sách nhà nước năm 2027, tổng chi cho đầu tư phát triển năm 2027 sẽ vào khoảng 1,755 triệu tỷ đồng.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng.",
-      "sectionA_whatHappened": "Quốc hội đã quyết nghị dành một nguồn lực lớn cho đầu tư phát triển năm 2027. Vấn đề còn lại là làm sao chi nhanh, chi đúng, chi hiệu quả nguồn lực này để tạo sức bật tăng trưởng cho nền kinh tế.",
-      "sectionB_context": "Sự kiện 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' tập trung vào dữ kiện định lượng (Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng) liên quan đến Quốc hội. Một nguồn lực lớn đã được Quốc hội duyệt cho đầu tư phát triển năm 2027.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến Quốc hội; Cụ thể, theo Nghị quyết về Dự toán ngân sách nhà nước năm 2027, tổng chi cho đầu tư phát triển năm 2027 sẽ vào khoảng 1,755 triệu tỷ đồng.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Ngân hàng, biến động quanh 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của Quốc hội.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái Quốc hội cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Ngân hàng.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Chi triệu tỷ đồng để tạo sức bật tăng trưởng' là diễn biến cập nhật từ Báo Đầu tư cùng ngưỡng thực tế của chỉ báo Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Ngân hàng liên quan đến Quốc hội nên bám sát tín hiệu 'Quy mô vốn đầu tư / huy động: 1,76 triệu tỷ đồng' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Quốc hội quyết định phân bổ ngân sách đầu tư công năm 2027 cao hơn đáng kể so với mức 35,5% của năm trước, tập trung tối đa cho các công trình hạ tầng huyết mạch.",
+      "analysisMechanism": "Chính sách tài khóa mở rộng có trọng tâm kích hoạt giải ngân đầu tư công, tạo dòng tiền lan tỏa trực tiếp đến các ngành xây dựng, vật liệu, logistics và tạo thêm việc làm.",
+      "analysisMarketImpact": "Thị trường tài chính ghi nhận kỳ vọng tích cực vào sự bứt phá của GDP, thu hút dòng vốn đầu tư gián tiếp và dòng tiền tư nhân tham gia các dự án đối tác công tư PPP.",
+      "analysisWatchSignal": "Quan sát tiến độ giải ngân vốn đầu tư công từng quý và khả năng hấp thụ vốn thực tế của các dự án đường cao tốc và cảng biển quốc gia.",
+      "sectionA_whatHappened": "Quốc hội thông qua dự toán ngân sách với tổng chi đầu tư phát triển đạt gần 1,76 triệu tỷ đồng, chiếm tới 43% tổng chi ngân sách. Nguồn lực tài khóa kỷ lục này hướng tới mục tiêu bứt phá hạ tầng và tạo động lực tăng trưởng kinh tế mạnh mẽ.",
+      "sectionB_context": "Quốc hội quyết định phân bổ ngân sách đầu tư công năm 2027 cao hơn đáng kể so với mức 35,5% của năm trước, tập trung tối đa cho các công trình hạ tầng huyết mạch.",
+      "sectionC_whyItMatters": "Thị trường tài chính ghi nhận kỳ vọng tích cực vào sự bứt phá của GDP, thu hút dòng vốn đầu tư gián tiếp và dòng tiền tư nhân tham gia các dự án đối tác công tư PPP.",
+      "sectionD_macroMicro": "Chính sách tài khóa mở rộng có trọng tâm kích hoạt giải ngân đầu tư công, tạo dòng tiền lan tỏa trực tiếp đến các ngành xây dựng, vật liệu, logistics và tạo thêm việc làm.",
+      "sectionE_fintechLens": "Quy mô giải ngân kho bạc khổng lồ thúc đẩy nhu cầu chuyển đổi số toàn diện các cổng thanh toán dịch vụ công và giải ngân thanh toán điện tử cho nhà thầu.",
+      "sectionF_scenariosWatchlist": "Quan sát tiến độ giải ngân vốn đầu tư công từng quý và khả năng hấp thụ vốn thực tế của các dự án đường cao tốc và cảng biển quốc gia.",
+      "sectionG_practicalTakeaway": "Các tập đoàn sản xuất vật liệu xây dựng và cơ sở hạ tầng cần chuẩn bị sẵn sàng công suất để đón đầu chu kỳ giải ngân vốn đầu tư công quy mô lớn sắp tới.",
       "computedSha256": "c3965b7244292edc5daafe962e43ebc0a73e834f1edfb3fdbdc9d99c85f709bc",
       "snapshotFile": "raw_evidence_store/snapshot_live_060_c3965b7244.html",
       "verificationStatus": "VERIFIED"
@@ -3431,7 +3431,7 @@ window.EDITION_DATA = {
       "title": "Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau",
       "pageTitle": "Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau",
       "headline": "Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau",
-      "summary": "Hiện nay, trên mạng xã hội xuất hiện những lời kêu gọi đầu tư có lợi nhuận hấp dẫn, thu hồi vốn nhanh khiến nhiều người tin tưởng chuyển tiền. Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, ngày 7/11, Thanh.",
+      "summary": "Cơ quan công an cảnh báo điều tra và xử lý nghiêm các tài khoản ngân hàng giao dịch bất thường hoặc cho thuê mượn tài khoản. Động thái quyết liệt này nhằm triệt phá các thủ đoạn lừa đảo trực tuyến và bảo vệ an toàn dòng tiền xã hội.",
       "category": "Thanh toán",
       "strictCombinedTimeWindow": "24–48h",
       "publisherPublishedAt": "13/11/2026 15:42 | Nguồn gốc: CafeF / VCCorp (2026-11-13T15:42:00+07:00)",
@@ -3441,19 +3441,19 @@ window.EDITION_DATA = {
       "author": "CafeF / VCCorp",
       "canonicalUrl": "https://cafef.vn/cong-an-se-dieu-tra-khi-phat-hien-tai-khoan-ngan-hang-co-cac-giao-dich-chuyen-nhan-tien-nhu-sau-188261113153359644.chn",
       "sourceUrl": "https://cafef.vn/cong-an-se-dieu-tra-khi-phat-hien-tai-khoan-ngan-hang-co-cac-giao-dich-chuyen-nhan-tien-nhu-sau-188261113153359644.chn",
-      "supportingQuote": "Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, ngày 7/11, Thanh tra Công an tỉnh Phú Thọ cho biết đã tiếp nhận khoảng 20 đơn phản ánh, tố giác liên quan đến hoạt động đầu tư, kinh doanh trên không gian mạng.",
+      "supportingQuote": "Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, cơ quan công an đã phát hiện nhiều dấu hiệu vi phạm liên quan đến việc sử dụng tài khoản ngân hàng nhận tiền đầu tư bất thường.",
       "facts": [],
-      "analysisNature": "Sự kiện 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' tập trung vào dữ kiện định lượng (Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau) liên quan đến CafeF. Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, ngày 7/11, Thanh tra Công an tỉnh Phú Thọ cho biết đã tiếp nhận khoảng 20 đơn phản ánh, tố giác liên quan đến hoạt động đầu tư, kinh doanh trên không gian mạng.",
-      "analysisMechanism": "Thông qua cơ chế vận hành của nhóm Thanh toán, biến động quanh 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "analysisMarketImpact": "Tác động thị trường từ 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Thực tế này cho thấy các hình thức kêu gọi đầu tư ngày càng đa dạng, tiềm ẩn nguy cơ lừa đảo, chiếm đoạt tài sản và phát sinh tranh chấp.",
-      "analysisWatchSignal": "Tín hiệu cần theo dõi tiếp theo cho 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, n.",
-      "sectionA_whatHappened": "Hiện nay, trên mạng xã hội xuất hiện những lời kêu gọi đầu tư có lợi nhuận hấp dẫn, thu hồi vốn nhanh khiến nhiều người tin tưởng chuyển tiền. Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, ngày 7/11, Thanh.",
-      "sectionB_context": "Sự kiện 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' tập trung vào dữ kiện định lượng (Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau) liên quan đến CafeF. Qua công tác tiếp nhận, phân loại và xử lý đơn thư từ đầu năm 2026 đến nay, ngày 7/11, Thanh tra Công an tỉnh Phú Thọ cho biết đã tiếp nhận khoảng 20 đơn phản ánh, tố giác liên quan đến hoạt động đầu tư, kinh doanh trên không gian mạng.",
-      "sectionC_whyItMatters": "Tác động thị trường từ 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' thể hiện qua sự điều chỉnh kỳ vọng tại các đơn vị liên quan đến CafeF; Thực tế này cho thấy các hình thức kêu gọi đầu tư ngày càng đa dạng, tiềm ẩn nguy cơ lừa đảo, chiếm đoạt tài sản và phát sinh tranh chấp.",
-      "sectionD_macroMicro": "Thông qua cơ chế vận hành của nhóm Thanh toán, biến động quanh 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' tác động trực tiếp tới luồng chi phí, thanh khoản và kế hoạch phân bổ nguồn lực của CafeF.",
-      "sectionE_fintechLens": "Từ bối cảnh 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau', các điểm kinh doanh và doanh nghiệp thuộc hệ sinh thái CafeF cần chuẩn hóa đối soát không tiền mặt qua SmartPOS và QR động nhằm minh bạch hóa dòng tiền gắn với Thanh toán.",
-      "sectionF_scenariosWatchlist": "Tín hiệu cần theo dõi tiếp theo cho 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, nhận tiền như sau' là diễn biến cập nhật từ CafeF / VCCorp cùng ngưỡng thực tế của chỉ báo Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuyển, n.",
-      "sectionG_practicalTakeaway": "Đơn vị vận hành trong nhóm Thanh toán liên quan đến CafeF nên bám sát tín hiệu 'Công an sẽ điều tra khi phát hiện tài khoản ngân hàng có các giao dịch chuy' để chủ động kịch bản dòng tiền.",
+      "analysisNature": "Lực lượng công an tăng cường rà soát các luồng tiền giao dịch lớn, tần suất giao dịch đột biến và các tài khoản cá nhân có hành vi tiếp tay cho tội phạm công nghệ cao.",
+      "analysisMechanism": "Việc siết chặt giám sát dòng tiền và chặn đứng các tài khoản rác giúp triệt tiêu đường rút lui của tội phạm tài chính, ngăn chặn dòng tiền bất hợp pháp tẩu tán.",
+      "analysisMarketImpact": "Khách hàng cá nhân nâng cao ý thức bảo vệ thông tin thẻ, tài khoản ngân hàng; thị trường tài chính giảm bớt các rủi ro lừa đảo đầu tư mạo danh.",
+      "analysisWatchSignal": "Theo dõi tiến độ triển khai quy định bắt buộc xác thực khuôn mặt sinh trắc học cho mọi giao dịch thanh toán giá trị lớn trên 10 triệu đồng.",
+      "sectionA_whatHappened": "Cơ quan công an cảnh báo điều tra và xử lý nghiêm các tài khoản ngân hàng giao dịch bất thường hoặc cho thuê mượn tài khoản. Động thái quyết liệt này nhằm triệt phá các thủ đoạn lừa đảo trực tuyến và bảo vệ an toàn dòng tiền xã hội.",
+      "sectionB_context": "Lực lượng công an tăng cường rà soát các luồng tiền giao dịch lớn, tần suất giao dịch đột biến và các tài khoản cá nhân có hành vi tiếp tay cho tội phạm công nghệ cao.",
+      "sectionC_whyItMatters": "Khách hàng cá nhân nâng cao ý thức bảo vệ thông tin thẻ, tài khoản ngân hàng; thị trường tài chính giảm bớt các rủi ro lừa đảo đầu tư mạo danh.",
+      "sectionD_macroMicro": "Việc siết chặt giám sát dòng tiền và chặn đứng các tài khoản rác giúp triệt tiêu đường rút lui của tội phạm tài chính, ngăn chặn dòng tiền bất hợp pháp tẩu tán.",
+      "sectionE_fintechLens": "Các đơn vị trung gian thanh toán và ví điện tử cần tích hợp AI phát hiện gian lận giao dịch và đối soát danh tính chủ tài khoản eKYC tự động.",
+      "sectionF_scenariosWatchlist": "Theo dõi tiến độ triển khai quy định bắt buộc xác thực khuôn mặt sinh trắc học cho mọi giao dịch thanh toán giá trị lớn trên 10 triệu đồng.",
+      "sectionG_practicalTakeaway": "Người dân tuyệt đối không cho mượn, cho thuê tài khoản ngân hàng hoặc nhận tiền chuyển khoản không rõ nguồn gốc để tránh bị xử lý trách nhiệm hình sự liên đới.",
       "computedSha256": "4ea4ed377cb038b318d6dcdd2b222ff9bd6ddece8d5b0a5754d3e9319ae27e94",
       "snapshotFile": "raw_evidence_store/snapshot_live_026_4ea4ed377c.html",
       "verificationStatus": "VERIFIED"

@@ -150,7 +150,7 @@ def main():
         with open(p, "rb") as fh:
             return hashlib.sha256(fh.read()).hexdigest()
 
-    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
+    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py", "ed30_editorial_content.py"]:
         root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
         pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
         if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):
@@ -273,6 +273,7 @@ def main():
                 "pilot-output/",
                 "update_magspread_pilot_ui.py",
                 "ed29_editorial_content.py",
+                "ed30_editorial_content.py",
                 "run_daily_edition.py",
                 "setup_daily_scheduler_9am.sh",
                 "README_DAILY_RUN.md",
