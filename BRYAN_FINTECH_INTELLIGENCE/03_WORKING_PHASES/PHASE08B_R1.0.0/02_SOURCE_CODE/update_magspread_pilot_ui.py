@@ -85,6 +85,13 @@ except ImportError:
     ED29_COVER_OVERRIDE = {}
     ED29_ARTICLE_INTEL = {}
 
+try:
+    from ed30_editorial_content import ED30_COVER_OVERRIDE, ED30_ARTICLE_INTEL, ED30_MACRO_CHAINS
+except ImportError:
+    ED30_COVER_OVERRIDE = {}
+    ED30_ARTICLE_INTEL = {}
+    ED30_MACRO_CHAINS = []
+
 from html.parser import HTMLParser
 
 
@@ -276,8 +283,9 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (e.g. ED-20261114-D01 -> EVT-20261114-048 / SHB)
-    target_orig = ED29_COVER_OVERRIDE.get("targetOriginEventId")
+    # Check explicit curated lead override first (ED30 or ED29)
+    cover_override = ED30_COVER_OVERRIDE if ("15/11/2026" in str(edition_date) or "2026-11-15" in str(edition_date)) else ED29_COVER_OVERRIDE
+    target_orig = cover_override.get("targetOriginEventId")
     lead_event = None
     if target_orig:
         lead_event = next((ev for ev in eligible_news if ev.get("originEventId") == target_orig or ev.get("eventId") == target_orig), None)
@@ -321,19 +329,19 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
     lead_time = lead_event.get("publisherPublishedAt") or lead_event.get("publicationTimestamp") or f"{edition_date} 08:30"
     lead_url = lead_event.get("canonicalUrl") or lead_event.get("sourceUrl") or "#"
 
-    # Use curated ED29 cover editorial content when matching target edition event
-    if target_orig and lead_orig == target_orig and ED29_COVER_OVERRIDE.get("editorialSummary3Sentences"):
-        lead_summary = ED29_COVER_OVERRIDE["editorialSummary3Sentences"]
+    # Use curated cover editorial content when matching target edition event
+    if target_orig and lead_orig == target_orig and cover_override.get("editorialSummary3Sentences"):
+        lead_summary = cover_override["editorialSummary3Sentences"]
         supporting_quote = (
-            ED29_COVER_OVERRIDE.get("supportingQuote")
-            or ED29_COVER_OVERRIDE.get("editorialPullQuote")
+            cover_override.get("supportingQuote")
+            or cover_override.get("editorialPullQuote")
             or lead_event.get("supportingQuote")
             or ""
         )
-        editorial_synthesis = ED29_COVER_OVERRIDE["editorialSynthesis"]
-        market_impact = ED29_COVER_OVERRIDE["marketImpact"]
-        fintech_lens_action = ED29_COVER_OVERRIDE["fintechLensAction"]
-        monitoring_watchpoint = ED29_COVER_OVERRIDE["monitoringWatchpoint"]
+        editorial_synthesis = cover_override["editorialSynthesis"]
+        market_impact = cover_override["marketImpact"]
+        fintech_lens_action = cover_override["fintechLensAction"]
+        monitoring_watchpoint = cover_override["monitoringWatchpoint"]
     else:
         base_sm = (lead_event.get("editorialStandfirst") or lead_event.get("summary") or lead_event.get("rawSnippet") or lead_title).strip()
         cov_snaps = _extract_snapshot_sentences(lead_event.get("evidencePath", ""), lead_title, base_sm)
@@ -641,7 +649,7 @@ def main():
         else:
             time_window = "0–24h"
 
-        curated = ED29_ARTICLE_INTEL.get(origin_evt_id)
+        curated = ED30_ARTICLE_INTEL.get(origin_evt_id) or ED29_ARTICLE_INTEL.get(origin_evt_id)
         if curated:
             final_sapo = curated["summary"].strip()
             final_quote = curated.get("supportingQuote", "").strip().strip("“”\"'").strip()
@@ -652,9 +660,15 @@ def main():
             sec_b = an_nature
             sec_c = an_impact
             sec_d = an_mech
-            sec_e = f"Từ tín hiệu {ent_str} ({headline}), giải pháp trung gian thanh toán có thể bám sát nhu cầu chuẩn hóa thu hộ, đối soát đa kênh và mở rộng điểm chạm tại nhóm {mapped_cat}."
+            sec_e = curated.get(
+                "fintechLens",
+                f"Từ tín hiệu {headline}, các đơn vị bán lẻ và doanh nghiệp cần ứng dụng giải pháp thanh toán số SmartPOS và Dynamic QR nhằm tối ưu hóa quy trình quản trị doanh thu."
+            ).strip()
             sec_f = an_watch
-            sec_g = f"Ưu tiên theo dõi đối với {headline}: đánh giá tốc độ truyền dẫn dòng tiền và mức độ sẵn sàng vận hành của các chủ thể liên quan."
+            sec_g = curated.get(
+                "practicalTakeaway",
+                f"Đơn vị vận hành bám sát diễn biến thực tế để chủ động xây dựng kịch bản điều hành dòng tiền an toàn."
+            ).strip()
         else:
             # Rich journalistic standfirst (Sapo) — strictly authentic to source article
             base_sapo = summary.strip() if summary else headline
@@ -1275,51 +1289,82 @@ def main():
             seen_themes.add(key)
             deduped_raw_chains.append(ch)
 
-    # Build 4 complete chains using template guarantees
-    for idx in range(4):
-        tmpl = SECTOR_TEMPLATES[idx]
-        ch = deduped_raw_chains[idx] if idx < len(deduped_raw_chains) else {}
-        ch_id = f"CHAIN-{idx+1:02d}"
-        ch_title = tmpl["title"]
-        macro_driver = tmpl["driver"]
-        core_thesis = _clean_macro_ref(ch.get("transmissionMechanism") or tmpl["thesis"])
-        if ("Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô" in core_thesis or "ACB" in core_thesis
-                or "nền tảng thương hiệu và vốn vững chắc" in core_thesis or "CT6" in core_thesis or "Lê Thanh Thản" in core_thesis):
-            core_thesis = tmpl["thesis"]
-
-        s7 = ch.get("sevenStageTransmission") or ch.get("macroToMicroTransmission") or {}
-        supp_eids = ch.get("supportingEventIds", [])
-        layers = []
-
-        for l_idx, (st_key, l_name, l_title, l_badge) in enumerate(stage_meta, 1):
-            c_text = s7.get(st_key)
-            # If text is empty, contains unverified boilerplate, or mixes mismatched edition artifacts, use grounded sector template
-            if (not c_text or "(Giả định phân tích)" in c_text or "duy trì môi trường quan sát trung tính" in c_text
-                    or "ACB" in c_text or "CT6" in c_text or "Lê Thanh Thản" in c_text
-                    or "HDBank: 7,8" in c_text or "HDBank: 8,3" in c_text or "7,8%/năm; HDBank" in c_text):
-                c_text = tmpl["stages"].get(st_key, f"Tác động lan tỏa tầng {l_idx} từ diễn biến {macro_driver}.")
-            else:
-                c_text = _clean_macro_ref(c_text)
-
-            layers.append({
-                "levelNumber": l_idx,
-                "levelName": l_name,
-                "layerName": l_name,
-                "title": l_title,
-                "content": c_text,
-                "description": c_text,
-                "badge": l_badge,
-                "eventIds": supp_eids[:3]
+    if ("15/11/2026" in str(edition_date_display) or "2026-11-15" in str(edition_date_raw)) and ED30_MACRO_CHAINS:
+        macro_chains = []
+        for idx, ch in enumerate(ED30_MACRO_CHAINS):
+            ch_id = ch.get("chainId", f"CHAIN-{idx+1:02d}")
+            ch_title = ch.get("title", "")
+            macro_driver = ch.get("macroDriver", "")
+            core_thesis = ch.get("coreThesis", "")
+            supp_eids = ch.get("supportingEventIds", [])
+            stages = ch.get("stages", {})
+            layers = []
+            for l_idx, (st_key, l_name, l_title, l_badge) in enumerate(stage_meta, 1):
+                c_text = stages.get(st_key, f"Tác động lan tỏa tầng {l_idx} từ diễn biến {macro_driver}.")
+                layers.append({
+                    "levelNumber": l_idx,
+                    "levelName": l_name,
+                    "layerName": l_name,
+                    "title": l_title,
+                    "content": c_text,
+                    "description": c_text,
+                    "badge": l_badge,
+                    "eventIds": supp_eids[:3]
+                })
+            macro_chains.append({
+                "chainId": ch_id,
+                "title": ch_title,
+                "chainTitle": ch_title,
+                "macroDriver": macro_driver,
+                "coreThesis": core_thesis,
+                "layers": layers
             })
+    else:
+        # Build 4 complete chains using template guarantees
+        for idx in range(4):
+            tmpl = SECTOR_TEMPLATES[idx]
+            ch = deduped_raw_chains[idx] if idx < len(deduped_raw_chains) else {}
+            ch_id = f"CHAIN-{idx+1:02d}"
+            ch_title = tmpl["title"]
+            macro_driver = tmpl["driver"]
+            core_thesis = _clean_macro_ref(ch.get("transmissionMechanism") or tmpl["thesis"])
+            if ("Cơ chế truyền dẫn 7 tầng từ tín hiệu vĩ mô" in core_thesis or "ACB" in core_thesis
+                    or "nền tảng thương hiệu và vốn vững chắc" in core_thesis or "CT6" in core_thesis or "Lê Thanh Thản" in core_thesis):
+                core_thesis = tmpl["thesis"]
 
-        macro_chains.append({
-            "chainId": ch_id,
-            "title": ch_title,
-            "chainTitle": ch_title,
-            "macroDriver": macro_driver,
-            "coreThesis": core_thesis,
-            "layers": layers
-        })
+            s7 = ch.get("sevenStageTransmission") or ch.get("macroToMicroTransmission") or {}
+            supp_eids = ch.get("supportingEventIds", [])
+            layers = []
+
+            for l_idx, (st_key, l_name, l_title, l_badge) in enumerate(stage_meta, 1):
+                c_text = s7.get(st_key)
+                # If text is empty, contains unverified boilerplate, or mixes mismatched edition artifacts, use grounded sector template
+                if (not c_text or "(Giả định phân tích)" in c_text or "duy trì môi trường quan sát trung tính" in c_text
+                        or "ACB" in c_text or "CT6" in c_text or "Lê Thanh Thản" in c_text
+                        or "HDBank: 7,8" in c_text or "HDBank: 8,3" in c_text or "7,8%/năm; HDBank" in c_text):
+                    c_text = tmpl["stages"].get(st_key, f"Tác động lan tỏa tầng {l_idx} từ diễn biến {macro_driver}.")
+                else:
+                    c_text = _clean_macro_ref(c_text)
+
+                layers.append({
+                    "levelNumber": l_idx,
+                    "levelName": l_name,
+                    "layerName": l_name,
+                    "title": l_title,
+                    "content": c_text,
+                    "description": c_text,
+                    "badge": l_badge,
+                    "eventIds": supp_eids[:3]
+                })
+
+            macro_chains.append({
+                "chainId": ch_id,
+                "title": ch_title,
+                "chainTitle": ch_title,
+                "macroDriver": macro_driver,
+                "coreThesis": core_thesis,
+                "layers": layers
+            })
 
     # 9. Build Dynamic Payment Radar from PAYMENT_RADAR.json
     radar_opps = []
