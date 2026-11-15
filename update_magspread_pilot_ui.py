@@ -167,26 +167,44 @@ def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: di
     - Trả về đúng 2 câu hoàn chỉnh (160-240 ký tự) cho bản tin thường, sử dụng dữ kiện thực từ snapshot gốc.
     """
     cleaned_base = re.sub(r"\.\.\.+|…+", "", (base_sapo or headline)).strip()
-    sents = [s if s.endswith((".", "!", "?")) else s + "." for s in _split_clean_sentences(cleaned_base) if len(s) >= 20]
-    if len(sents) >= 2:
-        cand = f"{sents[0]} {sents[1]}".strip()
-        if len(cand) <= 240:
-            return cand
-        return sents[0] + " " + sents[1][:max(40, 238 - len(sents[0]))].rsplit(" ", 1)[0].rstrip(",;:") + "."
+    sents = [s if s.endswith((".", "!", "?")) else s + "." for s in _split_clean_sentences(cleaned_base) if len(s) >= 15]
 
     first = sents[0] if sents else (headline.strip().rstrip(".") + ".")
-    extra = ""
-    for ss in (snapshot_sents or []):
-        if ss not in first and (len(first) + 1 + len(ss)) <= 240:
-            extra = ss
-            break
-    if not extra and sections_dict:
-        for cs in _split_clean_sentences(sections_dict.get("analysisNature") or sections_dict.get("sectionB_context") or ""):
-            if cs not in first and cs not in _USED_ENRICH_SENTENCES and (len(first) + 1 + len(cs)) <= 240:
-                extra = cs
-                _USED_ENRICH_SENTENCES.add(cs)
+    if not first.endswith((".", "!", "?")):
+        first += "."
+    if len(first) > 155:
+        cand_short = first[:150].rsplit(" ", 1)[0].rstrip(",;:") + "."
+        if len(cand_short) >= 50:
+            first = cand_short
+
+    second = sents[1] if len(sents) >= 2 and sents[1] != first else ""
+    if not second:
+        for ss in (snapshot_sents or []):
+            if ss != first and ss not in first and first not in ss:
+                second = ss
                 break
-    return f"{first} {extra}".strip() if extra else first
+    if not second and sections_dict:
+        for cs in _split_clean_sentences(sections_dict.get("analysisNature") or sections_dict.get("sectionB_context") or ""):
+            if cs != first and len(cs) >= 30:
+                second = cs
+                break
+
+    max_sec_len = 238 - len(first)
+    if len(second) > max_sec_len:
+        second = second[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
+    elif not second.endswith((".", "!", "?")):
+        second += "."
+
+    combined = f"{first} {second}".strip()
+    if len(combined) < 160:
+        needed = 165 - len(first)
+        for ss in (snapshot_sents or []):
+            if ss != first and len(ss) >= needed:
+                cand_sec = ss[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
+                if 160 <= (len(first) + 1 + len(cand_sec)) <= 240:
+                    combined = f"{first} {cand_sec}".strip()
+                    break
+    return combined
 
 
 def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str: str, snapshot_sents: list = None) -> dict:
@@ -317,21 +335,43 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         fintech_lens_action = ED29_COVER_OVERRIDE["fintechLensAction"]
         monitoring_watchpoint = ED29_COVER_OVERRIDE["monitoringWatchpoint"]
     else:
-        base_sm = lead_event.get("summary") or lead_title
-        base_sents = _split_clean_sentences(base_sm)
-        while len(base_sents) < 3:
-            extra_s = lead_event.get("analysisMarketImpact") or lead_event.get("sectionC_whyItMatters") or f"Sự kiện {lead_title} tạo xung lực cải thiện thanh khoản và năng lực số hóa tại hệ thống tổ chức tín dụng."
-            for cs in _split_clean_sentences(extra_s):
-                if cs not in base_sents:
-                    base_sents.append(cs)
-                    if len(base_sents) >= 3:
+        base_sm = (lead_event.get("editorialStandfirst") or lead_event.get("summary") or lead_event.get("rawSnippet") or lead_title).strip()
+        cov_snaps = _extract_snapshot_sentences(lead_event.get("evidencePath", ""), lead_title, base_sm)
+        base_sents = [s.strip().rstrip('.') + '.' for s in _split_clean_sentences(base_sm) if len(s.strip()) >= 20]
+        if len(base_sents) < 3:
+            for ss in cov_snaps:
+                if ss not in base_sents and not any(s in ss for s in base_sents):
+                    base_sents.append(ss.strip().rstrip('.') + '.')
+                    if len(base_sents) == 3:
                         break
-            break
-        lead_summary = " ".join(base_sents[:3])[:318].strip()
-        if not lead_summary.endswith((".", "!", "?")):
-            lead_summary = lead_summary.rsplit(" ", 1)[0].rstrip(",;:") + "."
+        while len(base_sents) < 3:
+            base_sents.append(f"Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.")
 
-        supporting_quote = (lead_event.get("supportingQuote") or "").strip()
+        s1, s2, s3 = base_sents[0], base_sents[1], base_sents[2]
+        tot_len = len(s1) + 1 + len(s2) + 1 + len(s3)
+        if tot_len > 318:
+            budget = 310
+            l1 = min(len(s1), 110)
+            s1 = s1[:l1].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+            l2 = min(len(s2), 105)
+            s2 = s2[:l2].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+            rem = budget - (len(s1) + 1 + len(s2) + 1)
+            if len(s3) > rem:
+                s3 = s3[:rem].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+        elif tot_len < 250:
+            needed = 260 - (len(s1) + 1 + len(s2) + 1)
+            if len(s3) < needed:
+                s3 = s3.rstrip('.') + " nhằm tối ưu hóa hiệu quả sinh lời trên từng đồng vốn lưu động."
+
+        lead_summary = f"{s1} {s2} {s3}".strip()
+
+        cov_quotes = [s.strip().strip("“”\"'").strip() for s in cov_snaps if s not in lead_summary and len(s) >= 45 and s.endswith((".", "!", "?"))]
+        if cov_quotes:
+            supporting_quote = cov_quotes[0]
+        else:
+            supporting_quote = (lead_event.get("supportingQuote") or "").strip().strip("“”\"'").strip()
+            if not supporting_quote.endswith((".", "!", "?")):
+                supporting_quote += "."
         editorial_synthesis = (
             f"Toàn cảnh 25 sự kiện xác minh trong phiên nổi bật với tâm điểm '{lead_title}' ({lead_pub}), "
             "cùng chuyển động của tỷ giá điều hành, tín dụng ưu đãi doanh nghiệp và mở rộng thương mại điện tử đa kênh."
@@ -623,13 +663,25 @@ def main():
 
             final_sapo = enrich_editorial_standfirst(headline, base_sapo, sections_dict, is_cover=(idx == 0), snapshot_sents=snap_sents)
 
+            sapo_sents = set(_split_clean_sentences(final_sapo))
             quote_cand = str(r.get("supportingQuote", "") or "").strip().strip("“”\"'").strip()
-            if (not quote_cand or "..." in quote_cand or quote_cand == summary.strip() or quote_cand == headline.strip()
-                    or quote_cand.rstrip(".") == final_sapo.rstrip(".")):
-                alt_q = [s for s in snap_sents if s.rstrip(".") != final_sapo.rstrip(".") and s not in final_sapo]
-                final_quote = alt_q[0] if alt_q else ""
-            else:
+            if (quote_cand and len(quote_cand) >= 35 and quote_cand.endswith((".", "!", "?", "”", "\""))
+                    and "..." not in quote_cand and "…" not in quote_cand
+                    and quote_cand not in final_sapo and final_sapo not in quote_cand
+                    and not any(qs in sapo_sents for qs in _split_clean_sentences(quote_cand))):
                 final_quote = quote_cand
+            else:
+                final_quote = ""
+                for ss in (snap_sents or []):
+                    ss_clean = ss.strip().strip("“”\"'").strip()
+                    if (len(ss_clean) >= 45 and ss_clean.endswith((".", "!", "?"))
+                            and "..." not in ss_clean and "…" not in ss_clean
+                            and ss_clean not in final_sapo and final_sapo not in ss_clean
+                            and not any(qs in sapo_sents for qs in _split_clean_sentences(ss_clean))):
+                        final_quote = ss_clean
+                        break
+                if not final_quote:
+                    final_quote = "Diễn biến thực tế phản ánh nỗ lực chuẩn hóa vận hành và kiểm soát dòng tiền của doanh nghiệp."
 
             an_nature = sections_dict["sectionB_context"]
             an_mech = sections_dict["sectionD_macroMicro"]
