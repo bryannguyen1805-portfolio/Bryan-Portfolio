@@ -150,7 +150,7 @@ def main():
         with open(p, "rb") as fh:
             return hashlib.sha256(fh.read()).hexdigest()
 
-    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
+    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py", "ed30_editorial_content.py"]:
         root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
         pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
         if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):
@@ -273,6 +273,7 @@ def main():
                 "pilot-output/",
                 "update_magspread_pilot_ui.py",
                 "ed29_editorial_content.py",
+                "ed30_editorial_content.py",
                 "run_daily_edition.py",
                 "setup_daily_scheduler_9am.sh",
                 "README_DAILY_RUN.md",
@@ -311,7 +312,10 @@ def main():
             sys.exit(1)
 
     elapsed = (datetime.now() - start_time).total_seconds()
-    print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
+    if git_push_allowed:
+        print_header("XUẤT BẢN THÀNH CÔNG — PRODUCTION RELEASE ĐÃ NGHIỆM THU")
+    else:
+        print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
     print(f"⏱️  Thời gian thực thi: {elapsed:.2f} giây")
     print(f"📁 Artifact local tại : {os.path.join(web_portal_dir, 'index.html')}")
     print("=" * 80 + "\n")

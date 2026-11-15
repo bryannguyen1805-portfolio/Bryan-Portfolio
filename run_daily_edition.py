@@ -312,7 +312,10 @@ def main():
             sys.exit(1)
 
     elapsed = (datetime.now() - start_time).total_seconds()
-    print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
+    if git_push_allowed:
+        print_header("XUẤT BẢN THÀNH CÔNG — PRODUCTION RELEASE ĐÃ NGHIỆM THU")
+    else:
+        print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
     print(f"⏱️  Thời gian thực thi: {elapsed:.2f} giây")
     print(f"📁 Artifact local tại : {os.path.join(web_portal_dir, 'index.html')}")
     print("=" * 80 + "\n")
