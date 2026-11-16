@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261115-D01",
+  "editionDate": "2026-11-15",
+  "executionId": "EXEC-20261115-103927-bfe2bf13",
+  "executionMode": "LIVE",
+  "generatedAt": "2026-11-15T10:39:27.548385+07:00",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "dataIntegrityChecks": {
+    "schemaValidationV400": "PASS",
+    "schemaValidationV500": "PASS",
+    "eventReferenceIntegrity": "PASS",
+    "financialFactEntityBindingAudit": "PASS",
+    "duplicateFactPreventionAudit": "PASS",
+    "marketPulseFreshnessAndTemporalHonesty": "PASS",
+    "newsVsMarketPulseSeparation": "PASS",
+    "googleSheetsDryRunIntegrity": "PASS",
+    "frontendCandidateContractCompatibility": "PASS"
+  },
+  "quotaAndFreshnessAccounting": {
+    "gatePassed": true,
+    "gateStatusCode": "PASS_25_EVENTS_24H_80PCT",
+    "targetEventCount": 25,
+    "selectedEventCount": 25,
+    "count0To24h": 23,
+    "count24To48h": 2,
+    "count48To72h": 0,
+    "countOver72h": 0,
+    "ratio0To24h": 0.92,
+    "requiredRatio0To24h": 0.8,
+    "shortfallReasons": [],
+    "coveredResearchDomains": [
+      "Banking & credit growth",
+      "Capital markets & VN-Index",
+      "Deposit & lending interest rates",
+      "Global macro events affecting Vietnam",
+      "Macroeconomic policy",
+      "POS / SmartPOS / Payment Gateway / Payment Link / Installment",
+      "Retail, E-commerce, F&B, Hospitality, Tourism",
+      "Tax, compliance, fraud, cybersecurity"
+    ],
+    "publisherDistribution": {
+      "CafeF / VCCorp": 7,
+      "Báo Tuổi Trẻ": 9,
+      "Báo Thanh Niên": 6,
+      "Báo Đầu tư": 3
+    }
+  },
+  "marketPulseStatusBreakdown": {
+    "totalIndicators": 8,
+    "verifiedNumericCount": 6,
+    "staleObservationCount": 1,
+    "qualitativeUpdateOnlyCount": 1
+  },
+  "factAuditSummary": {
+    "totalRawFacts": 15,
+    "uniqueVerifiedFacts": 14,
+    "duplicateFactsIntercepted": 1,
+    "entitiesReboundFromQuote": 15,
+    "ambiguousOrUnverifiedEntities": 0
+  }
+}

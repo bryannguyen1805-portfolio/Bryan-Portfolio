@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261111-D01",
+  "editionDate": "2026-11-11",
+  "executionId": "EXEC-20261111-135417-0c43b670",
+  "executionMode": "OFFLINE",
+  "displayDate": "11/11/2026",
+  "editionTitle": "Bryan FinTech Intelligence — Ấn bản Dynamic Runtime ED-20261111-D01",
+  "generatedAt": "2026-11-11T02:20:00+07:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "parentBaselineReleaseId": "PHASE06_R1.0.0_ACCEPTED_RELEASE",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "STRICTLY_DISABLED"
+  },
+  "counts": {
+    "verifiedNewsEvents": 25,
+    "verifiedNews0to24h": 23,
+    "uniqueVerifiedFinancialFacts": 20,
+    "marketPulseIndicators": 8,
+    "coreTheses": 4,
+    "connectTheDotsNarratives": 4,
+    "macroToMicroChains": 4,
+    "paymentRadarSignals": 5,
+    "financialDecisionCards": 4
+  },
+  "files": [
+    {
+      "fileName": "GOOGLE_SHEETS_DRY_RUN_REPORT.md",
+      "sha256": "da751f49ca493d6bd8d96cbd9ba3fae45df6bf0accb97f04adb158f73ba6ea65"
+    },
+    {
+      "fileName": "combined-edition.json",
+      "sha256": "45cb1cf75d6e2367df73cccc3b404729e0b25e451bcdc6a11a97dbb3a6c3aac4"
+    },
+    {
+      "fileName": "connect-the-dots.json",
+      "sha256": "1b01a164499244f1d5280a5d6620969e4366940692af3f0549cf8c4e228f78f1"
+    },
+    {
+      "fileName": "core-thesis.json",
+      "sha256": "697ac7defd78d3e167715a71a9edaf63ec83517c10eb193f668205b57b9edb8b"
+    },
+    {
+      "fileName": "event-registry-delta.json",
+      "sha256": "f9d2cae03373ef7e0afc408c155770f7327f07981a386d07845c05ab0a5db439"
+    },
+    {
+      "fileName": "evidence-crosswalk.json",
+      "sha256": "7b6db6323a3fcdf20dd9c6a635f48687748e14da23c5ebf6fc9538248dda520e"
+    },
+    {
+      "fileName": "financial-decision-intelligence.json",
+      "sha256": "ea8570a3bb5e33415202fad88b5981aed0fe55c1f89e93d5bcc5d3792c753365"
+    },
+    {
+      "fileName": "google-sheets-dry-run.json",
+      "sha256": "41817e1ea1f4fef08540f84a790cc1b63f0398f9df4b9fed80991531392ca23c"
+    },
+    {
+      "fileName": "latest-candidate.json",
+      "sha256": "86fbfbae364b4bef7dfefb2f0ef6f370168f99c44bd1cb6e4e8db7614217cedd"
+    },
+    {
+      "fileName": "macro-to-micro.json",
+      "sha256": "c1ce0bfbb48523b580d220716cbabc6d8e32ac78ffcaf88d44173683eaaa2e04"
+    },
+    {
+      "fileName": "magspread-edition-candidate.json",
+      "sha256": "7f54b6fcfcfe1634869f54d01740529435b537a2940d853cc2af63ade1bb733f"
+    },
+    {
+      "fileName": "market-pulse.json",
+      "sha256": "4816e555de580bc93f6820dcf3d9e77ed720406260601cb987b5cf36593ca199"
+    },
+    {
+      "fileName": "payment-radar.json",
+      "sha256": "0d0e42ce86017e88249ed50d2d8ca242fb163bb740e49bbb4c52bc99939033ef"
+    },
+    {
+      "fileName": "rejected-candidates.json",
+      "sha256": "a3cda64383b9b331c41dee4a17cd76e169753be9dd583b395b7d89ee4073fc62"
+    },
+    {
+      "fileName": "source-ledger.json",
+      "sha256": "3d444f5fd72cfca20c585487d5303ee399e0d8c24bbff9c15045d0cd49e2034e"
+    },
+    {
+      "fileName": "validation-report.json",
+      "sha256": "daa5e0eb9e059972e98658c419d0c2d9c5408cf75d49f9fea2e7ce7432d1c2d0"
+    },
+    {
+      "fileName": "verified-news.json",
+      "sha256": "1789ba3deefd9913be8e08b3889d18f26e08c305aa09b27adffd6f642f5619d7"
+    }
+  ]
+}

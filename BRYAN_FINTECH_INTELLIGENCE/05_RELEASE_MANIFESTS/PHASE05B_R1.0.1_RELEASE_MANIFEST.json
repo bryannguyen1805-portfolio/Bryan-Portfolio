@@ -1,0 +1,36 @@
+{
+  "phaseId": "PHASE05B",
+  "releaseId": "PHASE05B_R1.0.1",
+  "releaseVersion": "1.0.1-FINAL-DATA-INTEGRITY-PATCH",
+  "executionId": "PHASE05B_ALIGNMENT_R101_FINAL_PATCH",
+  "editionId": "ED-20261110-D01",
+  "generatedTimestamp": "2026-11-10T23:32:07+07:00",
+  "archivedTimestamp": "2026-11-11T00:12:06.018419+07:00",
+  "parentBaselineReleaseId": "PHASE05B_R1.3A.3",
+  "packageFileName": "PHASE05B_ALIGNMENT_R101_TARGETED_REMEDIATION_PACKAGE.zip",
+  "packageSha256": "9d78d2950b1b68f12605a7e2b95804f3b3f5e0409ee227327ce77c18396d3222",
+  "packageSizeBytes": 50271946,
+  "sourceCodeVersion": "3.0.4-r101",
+  "dataContractVersion": "3.0.4",
+  "testResults": {
+    "totalTests": 187,
+    "passedTests": 187,
+    "failedTests": 0,
+    "passRatePercent": 100.0,
+    "reproducibleFromExtractedPackage": true
+  },
+  "releaseStatus": "ACCEPTED_BY_PROJECT_OWNER",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
+    "dailyEditionReadiness": "DATA_SHORTFALL_OR_UNVERIFIED",
+    "productionApprovalStatus": "NOT_PRODUCTION_APPROVED"
+  },
+  "knownLimitations": [
+    "Verified unique news events count is 18 (16 in 0-24h window, 88.9% freshness ratio), below the 25-event daily publication quota.",
+    "MP-02 (Overnight interbank interest rate) latest verified observation is 2.8 %/năm on 2026-10-02 (exceeding the canonical 72.0h ceiling; marked STALE_OBSERVATION / UNVERIFIED).",
+    "MP-05 (System-wide credit growth) and MP-06 (VietQR transaction volume) have qualitative policy/industry updates only (QUALITATIVE_UPDATE_ONLY / UNVERIFIED, actualValue: null, observationDate: null).",
+    "MP-08 (OMO net liquidity injection) reflects the latest verified operation on 2026-09-21 (47,915 tỷ VND) and must not be represented as a current-day operation.",
+    "Production deployment, cron scheduling, and Google Sheets live write API remain strictly disabled."
+  ]
+}

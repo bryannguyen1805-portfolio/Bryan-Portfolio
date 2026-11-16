@@ -1,0 +1,2639 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "theses": [
+    {
+      "thesisId": "THESIS-01",
+      "themeGroup": "Banking & Credit",
+      "title": "Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp",
+      "centralArgument": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp với các dữ kiện trọng yếu (Vietcombank: 4,8%/năm; Sacombank: 32,5%) tác động trực tiếp lên biến số Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank.",
+      "thematicPillar": "Ngân hàng, Tín dụng & Lãi suất",
+      "analyticalStance": "BALANCED_MARKET_MONITORING",
+      "riskPosture": "POSTURE_NEUTRAL_MONITORING",
+      "riskLevel": "MODERATE_RISK",
+      "whatHappened": "Ghi nhận 8 sự kiện xác minh trong nhóm Ngân hàng, Tín dụng & Lãi suất. Sự kiện trọng tâm: Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp. Các diễn biến bổ sung: Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC; Lãi suất liên ngân hàng qua đêm giảm về 4,4%/năm, thanh khoản dồi dào.",
+      "whatChanged": "Ghi nhận 8 sự kiện xác minh trong nhóm Ngân hàng, Tín dụng & Lãi suất. Sự kiện trọng tâm: Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp. Các diễn biến bổ sung: Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC; Lãi suất liên ngân hàng qua đêm giảm về 4,4%/năm, thanh khoản dồi dào.",
+      "whyItMatters": "Tác động lan tỏa của biến số Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank tới hoạt động của các chủ thể trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "affectedVariables": [
+        "Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank",
+        "Tỷ lệ sở hữu cổ phần Sacombank tại VAMC (32,5%) gắn với Sacombank",
+        "Lãi suất liên ngân hàng kỳ hạn qua đêm (4,4%/năm) gắn với hệ thống ngân hàng",
+        "Số lượng hoạt động thương mại du lịch (57 hoạt động) gắn với Vibrant HCMC",
+        "Lãi suất liên ngân hàng qua đêm (MP-02: 4.4 %/năm)",
+        "Lãi suất tiền gửi 12T cao nhất (MP-03: 4.65 %/năm)",
+        "Tăng trưởng tín dụng toàn hệ thống (MP-05: 10.08 %)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank trong các kỳ báo cáo tới.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp.",
+      "supportingEventIds": [
+        "EVT-20261112-022",
+        "EVT-20261112-020",
+        "EVT-20261112-012",
+        "EVT-20261112-004",
+        "EVT-20261112-011",
+        "EVT-20261112-003",
+        "EVT-20261112-002",
+        "EVT-20261112-001"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-002",
+        "FACT-20261110-007",
+        "FACT-20261110-009",
+        "FACT-20261110-012",
+        "FACT-20261110-013",
+        "FACT-20261110-014",
+        "FACT-20261110-016",
+        "FACT-20261110-019"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-02",
+        "MP-03",
+        "MP-05"
+      ],
+      "counterEvidenceEventIds": [],
+      "affectedSectors": [
+        "Ngân hàng & Thị trường Tiền tệ"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "HIGH",
+      "confidenceReason": "Được bảo chứng vững chắc bởi 8 sự kiện xác minh độc lập, 8 dữ kiện tài chính đã đối soát chủ thể và 3 chỉ số Market Pulse liên đới.",
+      "causalExplanation": "Cơ chế truyền dẫn: Diễn biến từ Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp qua các dữ kiện 4,8%/năm, 32,5%, 4,4%/năm tác động trực tiếp lên biến số Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "counterEvidence": [],
+      "watchSignals": [
+        "Biến động số liệu mới của Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank",
+        "Biến động số liệu mới của Tỷ lệ sở hữu cổ phần Sacombank tại VAMC (32,5%) gắn với Sacombank",
+        "Biến động số liệu mới của Lãi suất liên ngân hàng kỳ hạn qua đêm (4,4%/năm) gắn với hệ thống ngân hàng"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Ngân hàng, Tín dụng & Lãi suất đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Ngân hàng, Tín dụng & Lãi suất."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_022_17102a5ec7.html",
+          "evidenceSha256": "fa67f6dc6d3595164ce0cdc0114cd65b9c1914d95b09682c523fc35cd82181b3",
+          "supportingQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sacombank-tien-gan-xu-ly-dut-diem-325-co-phan-vamc.chn",
+          "evidencePath": "snapshot_live_20261112_020_9dc868b093.html",
+          "evidenceSha256": "b427a4b9f8a4cc48282336822f52c124bc7463f016f359a6a80e2fd0552848ca",
+          "supportingQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "EVT-20261112-012",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "snapshot_live_20261112_012_0bd241cd69.html",
+          "evidenceSha256": "7e3d25577483ddc8ddd29bda32ed6bb6ab7d1efe14aefd4c834a5e8cc4ac851a",
+          "supportingQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+          "evidencePath": "snapshot_live_20261112_003_a4101a979c.html",
+          "evidenceSha256": "04468087ca48b90937a0d3aa9ae1caafc3135f066dadbae9bf43ae409aab7a10",
+          "supportingQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "EVT-20261112-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_002_63bea9396b.html",
+          "evidenceSha256": "0e6b7063c7db256a89c538630bfba6024912a3d82cddf312c5661250f074fac6",
+          "supportingQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi 12 tháng nhóm Big 4",
+          "extractedExpression": "4,8%/năm",
+          "verifiedEntity": "Vietcombank",
+          "boundEntity": "Vietcombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ sở hữu cổ phần Sacombank tại VAMC",
+          "extractedExpression": "32,5%",
+          "verifiedEntity": "Sacombank",
+          "boundEntity": "Sacombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất liên ngân hàng kỳ hạn qua đêm",
+          "extractedExpression": "4,4%/năm",
+          "verifiedEntity": "hệ thống ngân hàng",
+          "boundEntity": "hệ thống ngân hàng",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-014",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi tiết kiệm tại quầy",
+          "extractedExpression": "4,1%/năm",
+          "verifiedEntity": "TPBank",
+          "boundEntity": "TPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "FACT-20261110-016",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi kỳ hạn ngắn",
+          "extractedExpression": "4,65%/năm",
+          "verifiedEntity": "VPBank",
+          "boundEntity": "VPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "MP-02",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+          "currentValue": "4.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://vneconomy.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_77c88a05fb.html",
+          "evidenceSha256": "77c88a05fb00f5597a364e96f10ca4d3dc5f0238696a73b3d3d5112b26dfb0bc"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "4.65",
+          "unit": "%/năm",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_7651094f1f.html",
+          "evidenceSha256": "7651094f1f8b3d3595028304b8d25d3acc9ae5a3f13f67f68d741b1d2fbacaf5"
+        },
+        {
+          "referenceId": "MP-05",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+          "currentValue": "10.08",
+          "unit": "%",
+          "sourceUrl": "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_fad63c359e.html",
+          "evidenceSha256": "fad63c359e129633ab1b7e7b9dc8dd04a035fba91c87830d6258e48d3decb52e"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_022_17102a5ec7.html",
+          "evidenceSha256": "fa67f6dc6d3595164ce0cdc0114cd65b9c1914d95b09682c523fc35cd82181b3",
+          "supportingQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sacombank-tien-gan-xu-ly-dut-diem-325-co-phan-vamc.chn",
+          "evidencePath": "snapshot_live_20261112_020_9dc868b093.html",
+          "evidenceSha256": "b427a4b9f8a4cc48282336822f52c124bc7463f016f359a6a80e2fd0552848ca",
+          "supportingQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "EVT-20261112-012",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "snapshot_live_20261112_012_0bd241cd69.html",
+          "evidenceSha256": "7e3d25577483ddc8ddd29bda32ed6bb6ab7d1efe14aefd4c834a5e8cc4ac851a",
+          "supportingQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+          "evidencePath": "snapshot_live_20261112_003_a4101a979c.html",
+          "evidenceSha256": "04468087ca48b90937a0d3aa9ae1caafc3135f066dadbae9bf43ae409aab7a10",
+          "supportingQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "EVT-20261112-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_002_63bea9396b.html",
+          "evidenceSha256": "0e6b7063c7db256a89c538630bfba6024912a3d82cddf312c5661250f074fac6",
+          "supportingQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi 12 tháng nhóm Big 4",
+          "extractedExpression": "4,8%/năm",
+          "verifiedEntity": "Vietcombank",
+          "boundEntity": "Vietcombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ sở hữu cổ phần Sacombank tại VAMC",
+          "extractedExpression": "32,5%",
+          "verifiedEntity": "Sacombank",
+          "boundEntity": "Sacombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất liên ngân hàng kỳ hạn qua đêm",
+          "extractedExpression": "4,4%/năm",
+          "verifiedEntity": "hệ thống ngân hàng",
+          "boundEntity": "hệ thống ngân hàng",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-014",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi tiết kiệm tại quầy",
+          "extractedExpression": "4,1%/năm",
+          "verifiedEntity": "TPBank",
+          "boundEntity": "TPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "FACT-20261110-016",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi kỳ hạn ngắn",
+          "extractedExpression": "4,65%/năm",
+          "verifiedEntity": "VPBank",
+          "boundEntity": "VPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "MP-02",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+          "currentValue": "4.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://vneconomy.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_77c88a05fb.html",
+          "evidenceSha256": "77c88a05fb00f5597a364e96f10ca4d3dc5f0238696a73b3d3d5112b26dfb0bc"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "4.65",
+          "unit": "%/năm",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_7651094f1f.html",
+          "evidenceSha256": "7651094f1f8b3d3595028304b8d25d3acc9ae5a3f13f67f68d741b1d2fbacaf5"
+        },
+        {
+          "referenceId": "MP-05",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+          "currentValue": "10.08",
+          "unit": "%",
+          "sourceUrl": "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_fad63c359e.html",
+          "evidenceSha256": "fad63c359e129633ab1b7e7b9dc8dd04a035fba91c87830d6258e48d3decb52e"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-01",
+        "claimText": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp với các dữ kiện trọng yếu (Vietcombank: 4,8%/năm; Sacombank: 32,5%) tác động trực tiếp lên biến số Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank.",
+        "thematicPosture": "POSTURE_NEUTRAL_MONITORING",
+        "supportingEventIds": [
+          "EVT-20261112-022",
+          "EVT-20261112-020",
+          "EVT-20261112-012",
+          "EVT-20261112-004",
+          "EVT-20261112-011",
+          "EVT-20261112-003",
+          "EVT-20261112-002",
+          "EVT-20261112-001"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-002",
+          "FACT-20261110-007",
+          "FACT-20261110-009",
+          "FACT-20261110-012",
+          "FACT-20261110-013",
+          "FACT-20261110-014",
+          "FACT-20261110-016",
+          "FACT-20261110-019"
+        ],
+        "counterEvidenceEventIds": [],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": false,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-02",
+      "themeGroup": "Monetary Policy & Interest Rates",
+      "title": "NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11",
+      "centralArgument": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Động thái can thiệp và điều tiết từ NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11 với các dữ kiện trọng yếu (NHNN: 1.261 tỷ đồng; HOSE: 75 tỷ đồng) nhằm hạ nhiệt áp lực thị trường và duy trì ổn định đối với biến số Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN.",
+      "thematicPillar": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+      "analyticalStance": "ACTIVE_MONETARY_STABILIZATION",
+      "riskPosture": "POSTURE_MONETARY_STABILIZATION",
+      "riskLevel": "MODERATE_RISK",
+      "whatHappened": "Ghi nhận 6 sự kiện xác minh trong nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn. Sự kiện trọng tâm: NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11. Các diễn biến bổ sung: Khối ngoại mua ròng hơn 75 tỷ đồng trên HOSE ngày 11/11; VN-Index tăng phiên thứ hai liên tiếp lên 1.746,90 điểm, Vingroup giữ vững sắc xanh.",
+      "whatChanged": "Ghi nhận 6 sự kiện xác minh trong nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn. Sự kiện trọng tâm: NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11. Các diễn biến bổ sung: Khối ngoại mua ròng hơn 75 tỷ đồng trên HOSE ngày 11/11; VN-Index tăng phiên thứ hai liên tiếp lên 1.746,90 điểm, Vingroup giữ vững sắc xanh.",
+      "whyItMatters": "Diễn biến can thiệp ngoại hối và cung tiền tác động trực tiếp lên mặt bằng lãi suất VND liên ngân hàng và chi phí nhập khẩu của nền kinh tế.",
+      "affectedVariables": [
+        "Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN",
+        "Giá trị mua ròng khối ngoại trên sàn HOSE (75 tỷ đồng) gắn với HOSE",
+        "Chỉ số đóng cửa VN-Index (1.746,90 điểm) gắn với HOSE",
+        "Tỷ giá mua can thiệp USD/VND (25.500 VND/USD) gắn với Ngân hàng Nhà nước",
+        "Tỷ giá trung tâm USD/VND (MP-01: 24283 VND/USD)",
+        "Chỉ số VN-Index (MP-04: 1746.90 Điểm)",
+        "Thanh khoản thị trường mở (OMO) (MP-08: -2892 tỷ VND)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng cơ quan quản lý sẽ duy trì các nghiệp vụ thị trường mở để điều hòa thanh khoản theo biến số Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN.",
+      "fintechWatchpoint": "Theo dõi các chỉ số vận hành và chu kỳ công bố số liệu tiếp theo của Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN.",
+      "supportingEventIds": [
+        "EVT-20261112-011",
+        "EVT-20261112-009",
+        "EVT-20261112-008",
+        "EVT-20261112-001",
+        "EVT-20261112-014",
+        "EVT-20261112-013"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-013",
+        "FACT-20261110-015",
+        "FACT-20261110-017",
+        "FACT-20261110-019",
+        "FACT-20261110-021",
+        "FACT-20261110-024"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-04",
+        "MP-08"
+      ],
+      "counterEvidenceEventIds": [
+        "EVT-20261112-022",
+        "EVT-20261112-002"
+      ],
+      "affectedSectors": [
+        "Thị trường Ngoại hối & Chứng khoán"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được hỗ trợ bởi 6 sự kiện xác minh nhưng ghi nhận 2 dữ kiện đối lập (EVT-20261112-022, EVT-20261112-002) phản ánh sự phân hóa nội tại và rủi ro ngược chiều.",
+      "causalExplanation": "Cơ chế truyền dẫn phức hợp: Diễn biến NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11 đan xen với các tín hiệu đối trọng từ Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp, buộc các chủ thể kinh tế phải đồng thời vừa khai thác cơ hội vừa thiết lập bộ đệm an toàn phòng ngừa rủi ro nợ xấu và thanh khoản.",
+      "counterEvidence": [
+        "Dữ kiện đối trọng từ EVT-20261112-022 (Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp): Xung lực mở rộng thanh toán/tín dụng tạo thách thức cân bằng đối với mục tiêu kiểm soát ổn định vĩ mô.",
+        "Dữ kiện đối trọng từ EVT-20261112-002 (VPBank tiếp tục giảm lãi suất huy động kỳ hạn ngắn xuống 4,65%/năm trong ngày 11/11): Xung lực mở rộng thanh toán/tín dụng tạo thách thức cân bằng đối với mục tiêu kiểm soát ổn định vĩ mô."
+      ],
+      "watchSignals": [
+        "Biến động số liệu mới của Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN",
+        "Biến động số liệu mới của Giá trị mua ròng khối ngoại trên sàn HOSE (75 tỷ đồng) gắn với HOSE",
+        "Biến động số liệu mới của Chỉ số đóng cửa VN-Index (1.746,90 điểm) gắn với HOSE"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+          "evidencePath": "snapshot_live_20261112_008_877f6ff905.html",
+          "evidenceSha256": "a619ec0cbde4eba52c8ca0dbb772d8741a8890862169d787e70766ab1fb79c4c",
+          "supportingQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/xuat-nhap-khau-10-thang-nam-2026-vuot-1000-ty-usd.html",
+          "evidencePath": "snapshot_live_20261112_013_f58e81d0df.html",
+          "evidenceSha256": "42ccd69844b257ab4eefe6e365f89dbb8ca46d084a429578c650b4c1d79ba4c9",
+          "supportingQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-017",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Chỉ số đóng cửa VN-Index",
+          "extractedExpression": "1.746,90 điểm",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-024",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tổng kim ngạch xuất nhập khẩu 10 tháng",
+          "extractedExpression": "1.000 tỷ USD",
+          "verifiedEntity": "Việt Nam",
+          "boundEntity": "Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "24283",
+          "unit": "VND/USD",
+          "sourceUrl": "https://sbv.gov.vn/ty-gia-trung-tam-ngay-11-11-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_de348bdb95.html",
+          "evidenceSha256": "de348bdb9559ddb53dfc2b3a2b4a7d7d6a3e79cb9874ce91f4f95e8077377481"
+        },
+        {
+          "referenceId": "MP-04",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Chỉ số VN-Index",
+          "currentValue": "1746.90",
+          "unit": "Điểm",
+          "sourceUrl": "https://vietstock.vn/2026/11/vn-index-tang-nhe-len-1746-diem-khoi-ngoai-mua-rong-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_d91da3ec82.html",
+          "evidenceSha256": "d91da3ec823aa484bccdda0d32044db81a2e05b566a8f01a32dcd03853574722"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "-2892",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a829dd9d8a.html",
+          "evidenceSha256": "a829dd9d8a0b7ed3ebcdbcf8dfa0ee6a97afb3266480b327cafaccb16b2c3e6f"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+          "evidencePath": "snapshot_live_20261112_008_877f6ff905.html",
+          "evidenceSha256": "a619ec0cbde4eba52c8ca0dbb772d8741a8890862169d787e70766ab1fb79c4c",
+          "supportingQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/xuat-nhap-khau-10-thang-nam-2026-vuot-1000-ty-usd.html",
+          "evidencePath": "snapshot_live_20261112_013_f58e81d0df.html",
+          "evidenceSha256": "42ccd69844b257ab4eefe6e365f89dbb8ca46d084a429578c650b4c1d79ba4c9",
+          "supportingQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-017",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Chỉ số đóng cửa VN-Index",
+          "extractedExpression": "1.746,90 điểm",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-024",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tổng kim ngạch xuất nhập khẩu 10 tháng",
+          "extractedExpression": "1.000 tỷ USD",
+          "verifiedEntity": "Việt Nam",
+          "boundEntity": "Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "24283",
+          "unit": "VND/USD",
+          "sourceUrl": "https://sbv.gov.vn/ty-gia-trung-tam-ngay-11-11-2026.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_de348bdb95.html",
+          "evidenceSha256": "de348bdb9559ddb53dfc2b3a2b4a7d7d6a3e79cb9874ce91f4f95e8077377481"
+        },
+        {
+          "referenceId": "MP-04",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Chỉ số VN-Index",
+          "currentValue": "1746.90",
+          "unit": "Điểm",
+          "sourceUrl": "https://vietstock.vn/2026/11/vn-index-tang-nhe-len-1746-diem-khoi-ngoai-mua-rong-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_d91da3ec82.html",
+          "evidenceSha256": "d91da3ec823aa484bccdda0d32044db81a2e05b566a8f01a32dcd03853574722"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "-2892",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a829dd9d8a.html",
+          "evidenceSha256": "a829dd9d8a0b7ed3ebcdbcf8dfa0ee6a97afb3266480b327cafaccb16b2c3e6f"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-02",
+        "claimText": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Động thái can thiệp và điều tiết từ NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11 với các dữ kiện trọng yếu (NHNN: 1.261 tỷ đồng; HOSE: 75 tỷ đồng) nhằm hạ nhiệt áp lực thị trường và duy trì ổn định đối với biến số Khối lượng chào thầu OMO cầm cố (1.261 tỷ đồng) gắn với NHNN.",
+        "thematicPosture": "POSTURE_MONETARY_STABILIZATION",
+        "supportingEventIds": [
+          "EVT-20261112-011",
+          "EVT-20261112-009",
+          "EVT-20261112-008",
+          "EVT-20261112-001",
+          "EVT-20261112-014",
+          "EVT-20261112-013"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-013",
+          "FACT-20261110-015",
+          "FACT-20261110-017",
+          "FACT-20261110-019",
+          "FACT-20261110-021",
+          "FACT-20261110-024"
+        ],
+        "counterEvidenceEventIds": [
+          "EVT-20261112-022",
+          "EVT-20261112-002"
+        ],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": true,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-03",
+      "themeGroup": "Corporate & Business Expansion",
+      "title": "Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11",
+      "centralArgument": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Xung lực tăng trưởng mở rộng từ Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 với các dữ kiện trọng yếu (Malaysia: 40 đối tác; Vietcombank: 4,8%/năm) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+      "thematicPillar": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+      "analyticalStance": "EXPANSIVE_GROWTH_MOMENTUM",
+      "riskPosture": "POSTURE_EXPANSION_GROWTH",
+      "riskLevel": "LOW_RISK",
+      "whatHappened": "Ghi nhận 25 sự kiện xác minh trong nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp. Sự kiện trọng tâm: Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11. Các diễn biến bổ sung: Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp; Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11.",
+      "whatChanged": "Ghi nhận 25 sự kiện xác minh trong nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp. Sự kiện trọng tâm: Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11. Các diễn biến bổ sung: Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp; Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11.",
+      "whyItMatters": "Tăng trưởng mở rộng thúc đẩy chu chuyển vốn nhanh trong nền kinh tế, gia tăng doanh số thanh toán và mở rộng cơ hội thương mại cho doanh nghiệp.",
+      "affectedVariables": [
+        "Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia",
+        "Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank",
+        "Tăng trưởng thanh toán thẻ và mã QR F&B (35%) gắn với nhà hàng, khách sạn",
+        "Số lượng doanh nghiệp tham gia kết nối thương mại số (60 doanh nghiệp) gắn với Hiệp hội Thương mại số Hải Nam",
+        "Thanh khoản thị trường mở (OMO) (MP-08: -2892 tỷ VND)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng các tổ chức tín dụng và doanh nghiệp sẽ tiếp tục giải ngân mở rộng thị phần bám sát biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11.",
+      "supportingEventIds": [
+        "EVT-20261112-021",
+        "EVT-20261112-022",
+        "EVT-20261112-023",
+        "EVT-20261112-007",
+        "EVT-20261112-019",
+        "EVT-20261112-017",
+        "EVT-20261112-020",
+        "EVT-20261112-018",
+        "EVT-20261112-012",
+        "EVT-20261112-010",
+        "EVT-20261112-005",
+        "EVT-20261112-004",
+        "EVT-20261112-011",
+        "EVT-20261112-003",
+        "EVT-20261112-009",
+        "EVT-20261112-002",
+        "EVT-20261112-008",
+        "EVT-20261112-016",
+        "EVT-20261112-001",
+        "EVT-20261112-024",
+        "EVT-20261112-014",
+        "EVT-20261112-015",
+        "EVT-20261112-006",
+        "EVT-20261112-013",
+        "EVT-20261112-025"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-001",
+        "FACT-20261110-002",
+        "FACT-20261110-003",
+        "FACT-20261110-004",
+        "FACT-20261110-005",
+        "FACT-20261110-006",
+        "FACT-20261110-007",
+        "FACT-20261110-008",
+        "FACT-20261110-009",
+        "FACT-20261110-010",
+        "FACT-20261110-011",
+        "FACT-20261110-012",
+        "FACT-20261110-013",
+        "FACT-20261110-014",
+        "FACT-20261110-015",
+        "FACT-20261110-016",
+        "FACT-20261110-017",
+        "FACT-20261110-018",
+        "FACT-20261110-019",
+        "FACT-20261110-020",
+        "FACT-20261110-021",
+        "FACT-20261110-022",
+        "FACT-20261110-023",
+        "FACT-20261110-024",
+        "FACT-20261110-025"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-08"
+      ],
+      "counterEvidenceEventIds": [
+        "EVT-20261112-020"
+      ],
+      "affectedSectors": [
+        "Chính sách Vĩ mô & Tài chính Doanh nghiệp"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được hỗ trợ bởi 25 sự kiện xác minh nhưng ghi nhận 1 dữ kiện đối lập (EVT-20261112-020) phản ánh sự phân hóa nội tại và rủi ro ngược chiều.",
+      "causalExplanation": "Cơ chế truyền dẫn phức hợp: Diễn biến Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 đan xen với các tín hiệu đối trọng từ Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC, buộc các chủ thể kinh tế phải đồng thời vừa khai thác cơ hội vừa thiết lập bộ đệm an toàn phòng ngừa rủi ro nợ xấu và thanh khoản.",
+      "counterEvidence": [
+        "Dữ kiện đối trọng từ EVT-20261112-020 (Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC): Tồn tại rủi ro gia tăng nợ xấu hoặc chi phí trích lập dự phòng, tạo lực cản ngược chiều với đà mở rộng."
+      ],
+      "watchSignals": [
+        "Biến động số liệu mới của Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia",
+        "Biến động số liệu mới của Lãi suất tiền gửi 12 tháng nhóm Big 4 (4,8%/năm) gắn với Vietcombank",
+        "Biến động số liệu mới của Tăng trưởng thanh toán thẻ và mã QR F&B (35%) gắn với nhà hàng, khách sạn"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+          "evidencePath": "snapshot_live_20261112_021_852a765592.html",
+          "evidenceSha256": "ddaea73b8bb6f73a004fd753672cfecb8137cb412133202450e15cef62796db5",
+          "supportingQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_022_17102a5ec7.html",
+          "evidenceSha256": "fa67f6dc6d3595164ce0cdc0114cd65b9c1914d95b09682c523fc35cd82181b3",
+          "supportingQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "EVT-20261112-023",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+          "evidencePath": "snapshot_live_20261112_023_41e74634e5.html",
+          "evidenceSha256": "8dcde00f0fffb675e26d42ae3374336cc5aaec084bbd14ef871842f63439631d",
+          "supportingQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-007",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-doanh-nghiep-viet-nam-hai-nam-thuong-mai-so.htm",
+          "evidencePath": "snapshot_live_20261112_007_d20c0bd031.html",
+          "evidenceSha256": "5b9abbfd0d8cdbafa035db299d54dd2eb3015111f7664150eea81ff58f266981",
+          "supportingQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/canh-bao-an-ninh-mang-cap-nhat-ban-va-bao-mat-ung-dung-tai-chinh.htm",
+          "evidencePath": "snapshot_live_20261112_019_b39cbd459e.html",
+          "evidenceSha256": "4c23921188f71ebf615f143cca08df4381de3c659a8dcfcdd6084be169300256",
+          "supportingQuote": "Cục An toàn thông tin phát cảnh báo yêu cầu các tổ chức tài chính và người dùng nâng cấp phần mềm, cam kết xử lý 100% lỗ hổng bảo mật nghiêm trọng trước mùa mua sắm cao điểm."
+        },
+        {
+          "referenceId": "EVT-20261112-017",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+          "evidencePath": "snapshot_live_20261112_017_953797fc66.html",
+          "evidenceSha256": "4c6f1cb0456b9aeb0e4cb177763631aa07d647bc0985d06bdc708b6ca46fac35",
+          "supportingQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sacombank-tien-gan-xu-ly-dut-diem-325-co-phan-vamc.chn",
+          "evidencePath": "snapshot_live_20261112_020_9dc868b093.html",
+          "evidenceSha256": "b427a4b9f8a4cc48282336822f52c124bc7463f016f359a6a80e2fd0552848ca",
+          "supportingQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "EVT-20261112-018",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+          "evidencePath": "snapshot_live_20261112_018_67071216f5.html",
+          "evidenceSha256": "509b62592eb2440dcb6c3ca5a1ae149a0bef1057d50e8ba6de5c7e7541bb9c02",
+          "supportingQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "EVT-20261112-012",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "snapshot_live_20261112_012_0bd241cd69.html",
+          "evidenceSha256": "7e3d25577483ddc8ddd29bda32ed6bb6ab7d1efe14aefd4c834a5e8cc4ac851a",
+          "supportingQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+          "evidencePath": "snapshot_live_20261112_010_abb44ef9ec.html",
+          "evidenceSha256": "477933938e579595bb533e5d0a4ece95269b0d14a348b2f6bf881e887c629e1b",
+          "supportingQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "snapshot_live_20261112_005_da0797ffb0.html",
+          "evidenceSha256": "af4e4371f061106de2915c9b71a8d19bb7b1061aa1cc167cdc1f42fab828510f",
+          "supportingQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+          "evidencePath": "snapshot_live_20261112_003_a4101a979c.html",
+          "evidenceSha256": "04468087ca48b90937a0d3aa9ae1caafc3135f066dadbae9bf43ae409aab7a10",
+          "supportingQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_002_63bea9396b.html",
+          "evidenceSha256": "0e6b7063c7db256a89c538630bfba6024912a3d82cddf312c5661250f074fac6",
+          "supportingQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "EVT-20261112-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+          "evidencePath": "snapshot_live_20261112_008_877f6ff905.html",
+          "evidenceSha256": "a619ec0cbde4eba52c8ca0dbb772d8741a8890862169d787e70766ab1fb79c4c",
+          "supportingQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/vifc-hcmc-hoan-thien-co-che-sandbox-cho-fintech.html",
+          "evidencePath": "snapshot_live_20261112_016_fbf708f992.html",
+          "evidenceSha256": "a0bc2a47b9d4c6009532c640b84c6a847ed6c343f69a8ed16a2ffbf450fd16bf",
+          "supportingQuote": "Ban chỉ đạo Trung tâm Tài chính Quốc tế TP.HCM đang khẩn trương hoàn thiện khung thử nghiệm pháp lý sandbox với hơn 20 doanh nghiệp fintech đăng ký tham gia thử nghiệm."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "EVT-20261112-024",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/chinh-phu-chi-dao-tang-toc-giai-ngan-dau-tu-cong-cuoi-nam-2026.html",
+          "evidencePath": "snapshot_live_20261112_024_72d8d14260.html",
+          "evidenceSha256": "730d37e4e04801a406f69bf4304e1ab510df9ef346f71a3f23b05773b7ab679f",
+          "supportingQuote": "Thủ tướng Chính phủ yêu cầu các bộ ngành và địa phương phấn đấu đạt tỷ lệ giải ngân vốn đầu tư công tối thiểu 95% kế hoạch năm 2026, tập trung vào các tuyến cao tốc Bắc Nam và sân bay Long Thành."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/dien-dan-logistics-viet-nam-2026-tang-truong-va-so-hoa.html",
+          "evidencePath": "snapshot_live_20261112_015_4d7b5b6690.html",
+          "evidenceSha256": "8da2b5a14e3b738bbb79b2af2dac45908e1f0ad8bd3a7e5a54f0e705adec860c",
+          "supportingQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "EVT-20261112-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/khai-mac-trien-lam-quoc-te-vietnam-foodexpo-2026-secc.htm",
+          "evidencePath": "snapshot_live_20261112_006_1d1f939ed8.html",
+          "evidenceSha256": "a333375616988857d71536c9ba903116b718bf462d50e3f7a8043f8c849088a2",
+          "supportingQuote": "Triển lãm Quốc tế Công nghiệp Thực phẩm Vietnam Foodexpo 2026 chính thức khai mạc tại SECC TP.HCM, quy tụ hơn 500 gian hàng của các doanh nghiệp trong nước và quốc tế."
+        },
+        {
+          "referenceId": "EVT-20261112-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/xuat-nhap-khau-10-thang-nam-2026-vuot-1000-ty-usd.html",
+          "evidencePath": "snapshot_live_20261112_013_f58e81d0df.html",
+          "evidenceSha256": "42ccd69844b257ab4eefe6e365f89dbb8ca46d084a429578c650b4c1d79ba4c9",
+          "supportingQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "snapshot_live_20261112_025_4d9ac33e19.html",
+          "evidenceSha256": "4b26db0e49085f4babce1451eacb068bd828efae637f3cbf69b374d4a1985655",
+          "supportingQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng đối tác thương mại bán lẻ kết nối",
+          "extractedExpression": "40 đối tác",
+          "verifiedEntity": "Malaysia",
+          "boundEntity": "Malaysia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi 12 tháng nhóm Big 4",
+          "extractedExpression": "4,8%/năm",
+          "verifiedEntity": "Vietcombank",
+          "boundEntity": "Vietcombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng thanh toán thẻ và mã QR F&B",
+          "extractedExpression": "35%",
+          "verifiedEntity": "nhà hàng, khách sạn",
+          "boundEntity": "nhà hàng, khách sạn",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp tham gia kết nối thương mại số",
+          "extractedExpression": "60 doanh nghiệp",
+          "verifiedEntity": "Hiệp hội Thương mại số Hải Nam",
+          "boundEntity": "Hiệp hội Thương mại số Hải Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "FACT-20261110-005",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ lỗ hổng bảo mật zero-day được vá",
+          "extractedExpression": "100%",
+          "verifiedEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+          "boundEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Cục An toàn thông tin phát cảnh báo yêu cầu các tổ chức tài chính và người dùng nâng cấp phần mềm, cam kết xử lý 100% lỗ hổng bảo mật nghiêm trọng trước mùa mua sắm cao điểm."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng doanh số thương mại điện tử 9 tháng",
+          "extractedExpression": "44,47%",
+          "verifiedEntity": "thương mại điện tử",
+          "boundEntity": "thương mại điện tử",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ sở hữu cổ phần Sacombank tại VAMC",
+          "extractedExpression": "32,5%",
+          "verifiedEntity": "Sacombank",
+          "boundEntity": "Sacombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "FACT-20261110-008",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Thời gian gạch nợ thuế trực tuyến tức thì",
+          "extractedExpression": "1 phút",
+          "verifiedEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "boundEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất liên ngân hàng kỳ hạn qua đêm",
+          "extractedExpression": "4,4%/năm",
+          "verifiedEntity": "hệ thống ngân hàng",
+          "boundEntity": "hệ thống ngân hàng",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "FACT-20261110-010",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá bán vàng miếng SJC niêm yết",
+          "extractedExpression": "140,00 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-011",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng sản lượng giao dịch QR xuyên biên giới",
+          "extractedExpression": "120%",
+          "verifiedEntity": "VietQR Global",
+          "boundEntity": "VietQR Global",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-014",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi tiết kiệm tại quầy",
+          "extractedExpression": "4,1%/năm",
+          "verifiedEntity": "TPBank",
+          "boundEntity": "TPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-016",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi kỳ hạn ngắn",
+          "extractedExpression": "4,65%/năm",
+          "verifiedEntity": "VPBank",
+          "boundEntity": "VPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "FACT-20261110-017",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Chỉ số đóng cửa VN-Index",
+          "extractedExpression": "1.746,90 điểm",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "FACT-20261110-018",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp hoạt động trong Fintech Hub",
+          "extractedExpression": "20 doanh nghiệp",
+          "verifiedEntity": "Trung tâm Tài chính Quốc tế TP.HCM",
+          "boundEntity": "Trung tâm Tài chính Quốc tế TP.HCM",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ban chỉ đạo Trung tâm Tài chính Quốc tế TP.HCM đang khẩn trương hoàn thiện khung thử nghiệm pháp lý sandbox với hơn 20 doanh nghiệp fintech đăng ký tham gia thử nghiệm."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-020",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Mục tiêu tỷ lệ giải ngân vốn đầu tư công",
+          "extractedExpression": "95% kế hoạch",
+          "verifiedEntity": "Thủ tướng Chính phủ",
+          "boundEntity": "Thủ tướng Chính phủ",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Thủ tướng Chính phủ yêu cầu các bộ ngành và địa phương phấn đấu đạt tỷ lệ giải ngân vốn đầu tư công tối thiểu 95% kế hoạch năm 2026, tập trung vào các tuyến cao tốc Bắc Nam và sân bay Long Thành."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-022",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tốc độ tăng trưởng doanh thu logistics",
+          "extractedExpression": "15%",
+          "verifiedEntity": "logistics Việt Nam",
+          "boundEntity": "logistics Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "FACT-20261110-023",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Quy mô gian hàng triển lãm",
+          "extractedExpression": "500 gian hàng",
+          "verifiedEntity": "Vietnam Foodexpo 2026",
+          "boundEntity": "Vietnam Foodexpo 2026",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Triển lãm Quốc tế Công nghiệp Thực phẩm Vietnam Foodexpo 2026 chính thức khai mạc tại SECC TP.HCM, quy tụ hơn 500 gian hàng của các doanh nghiệp trong nước và quốc tế."
+        },
+        {
+          "referenceId": "FACT-20261110-024",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tổng kim ngạch xuất nhập khẩu 10 tháng",
+          "extractedExpression": "1.000 tỷ USD",
+          "verifiedEntity": "Việt Nam",
+          "boundEntity": "Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "FACT-20261110-025",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lượng khách quốc tế 10 tháng",
+          "extractedExpression": "19,5 triệu lượt",
+          "verifiedEntity": "Cục Du lịch Quốc gia",
+          "boundEntity": "Cục Du lịch Quốc gia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "-2892",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a829dd9d8a.html",
+          "evidenceSha256": "a829dd9d8a0b7ed3ebcdbcf8dfa0ee6a97afb3266480b327cafaccb16b2c3e6f"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+          "evidencePath": "snapshot_live_20261112_021_852a765592.html",
+          "evidenceSha256": "ddaea73b8bb6f73a004fd753672cfecb8137cb412133202450e15cef62796db5",
+          "supportingQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_022_17102a5ec7.html",
+          "evidenceSha256": "fa67f6dc6d3595164ce0cdc0114cd65b9c1914d95b09682c523fc35cd82181b3",
+          "supportingQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "EVT-20261112-023",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+          "evidencePath": "snapshot_live_20261112_023_41e74634e5.html",
+          "evidenceSha256": "8dcde00f0fffb675e26d42ae3374336cc5aaec084bbd14ef871842f63439631d",
+          "supportingQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-007",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-doanh-nghiep-viet-nam-hai-nam-thuong-mai-so.htm",
+          "evidencePath": "snapshot_live_20261112_007_d20c0bd031.html",
+          "evidenceSha256": "5b9abbfd0d8cdbafa035db299d54dd2eb3015111f7664150eea81ff58f266981",
+          "supportingQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/canh-bao-an-ninh-mang-cap-nhat-ban-va-bao-mat-ung-dung-tai-chinh.htm",
+          "evidencePath": "snapshot_live_20261112_019_b39cbd459e.html",
+          "evidenceSha256": "4c23921188f71ebf615f143cca08df4381de3c659a8dcfcdd6084be169300256",
+          "supportingQuote": "Cục An toàn thông tin phát cảnh báo yêu cầu các tổ chức tài chính và người dùng nâng cấp phần mềm, cam kết xử lý 100% lỗ hổng bảo mật nghiêm trọng trước mùa mua sắm cao điểm."
+        },
+        {
+          "referenceId": "EVT-20261112-017",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+          "evidencePath": "snapshot_live_20261112_017_953797fc66.html",
+          "evidenceSha256": "4c6f1cb0456b9aeb0e4cb177763631aa07d647bc0985d06bdc708b6ca46fac35",
+          "supportingQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sacombank-tien-gan-xu-ly-dut-diem-325-co-phan-vamc.chn",
+          "evidencePath": "snapshot_live_20261112_020_9dc868b093.html",
+          "evidenceSha256": "b427a4b9f8a4cc48282336822f52c124bc7463f016f359a6a80e2fd0552848ca",
+          "supportingQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "EVT-20261112-018",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+          "evidencePath": "snapshot_live_20261112_018_67071216f5.html",
+          "evidenceSha256": "509b62592eb2440dcb6c3ca5a1ae149a0bef1057d50e8ba6de5c7e7541bb9c02",
+          "supportingQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "EVT-20261112-012",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+          "evidencePath": "snapshot_live_20261112_012_0bd241cd69.html",
+          "evidenceSha256": "7e3d25577483ddc8ddd29bda32ed6bb6ab7d1efe14aefd4c834a5e8cc4ac851a",
+          "supportingQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+          "evidencePath": "snapshot_live_20261112_010_abb44ef9ec.html",
+          "evidenceSha256": "477933938e579595bb533e5d0a4ece95269b0d14a348b2f6bf881e887c629e1b",
+          "supportingQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "snapshot_live_20261112_005_da0797ffb0.html",
+          "evidenceSha256": "af4e4371f061106de2915c9b71a8d19bb7b1061aa1cc167cdc1f42fab828510f",
+          "supportingQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "snapshot_live_20261112_011_33f9b905b1.html",
+          "evidenceSha256": "a169b7cd052926ee6ade4c921fdbab3e6314db5573b365a4c2689d58077a9cec",
+          "supportingQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+          "evidencePath": "snapshot_live_20261112_003_a4101a979c.html",
+          "evidenceSha256": "04468087ca48b90937a0d3aa9ae1caafc3135f066dadbae9bf43ae409aab7a10",
+          "supportingQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+          "evidencePath": "snapshot_live_20261112_002_63bea9396b.html",
+          "evidenceSha256": "0e6b7063c7db256a89c538630bfba6024912a3d82cddf312c5661250f074fac6",
+          "supportingQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "EVT-20261112-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+          "evidencePath": "snapshot_live_20261112_008_877f6ff905.html",
+          "evidenceSha256": "a619ec0cbde4eba52c8ca0dbb772d8741a8890862169d787e70766ab1fb79c4c",
+          "supportingQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/vifc-hcmc-hoan-thien-co-che-sandbox-cho-fintech.html",
+          "evidencePath": "snapshot_live_20261112_016_fbf708f992.html",
+          "evidenceSha256": "a0bc2a47b9d4c6009532c640b84c6a847ed6c343f69a8ed16a2ffbf450fd16bf",
+          "supportingQuote": "Ban chỉ đạo Trung tâm Tài chính Quốc tế TP.HCM đang khẩn trương hoàn thiện khung thử nghiệm pháp lý sandbox với hơn 20 doanh nghiệp fintech đăng ký tham gia thử nghiệm."
+        },
+        {
+          "referenceId": "EVT-20261112-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+          "evidencePath": "snapshot_live_20261112_001_66c26f12a9.html",
+          "evidenceSha256": "e889f3e3ba70e87a7b180d6d48991ed4fe7aeda3c9f7977b92e26803855b30ec",
+          "supportingQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "EVT-20261112-024",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/chinh-phu-chi-dao-tang-toc-giai-ngan-dau-tu-cong-cuoi-nam-2026.html",
+          "evidencePath": "snapshot_live_20261112_024_72d8d14260.html",
+          "evidenceSha256": "730d37e4e04801a406f69bf4304e1ab510df9ef346f71a3f23b05773b7ab679f",
+          "supportingQuote": "Thủ tướng Chính phủ yêu cầu các bộ ngành và địa phương phấn đấu đạt tỷ lệ giải ngân vốn đầu tư công tối thiểu 95% kế hoạch năm 2026, tập trung vào các tuyến cao tốc Bắc Nam và sân bay Long Thành."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/dien-dan-logistics-viet-nam-2026-tang-truong-va-so-hoa.html",
+          "evidencePath": "snapshot_live_20261112_015_4d7b5b6690.html",
+          "evidenceSha256": "8da2b5a14e3b738bbb79b2af2dac45908e1f0ad8bd3a7e5a54f0e705adec860c",
+          "supportingQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "EVT-20261112-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/khai-mac-trien-lam-quoc-te-vietnam-foodexpo-2026-secc.htm",
+          "evidencePath": "snapshot_live_20261112_006_1d1f939ed8.html",
+          "evidenceSha256": "a333375616988857d71536c9ba903116b718bf462d50e3f7a8043f8c849088a2",
+          "supportingQuote": "Triển lãm Quốc tế Công nghiệp Thực phẩm Vietnam Foodexpo 2026 chính thức khai mạc tại SECC TP.HCM, quy tụ hơn 500 gian hàng của các doanh nghiệp trong nước và quốc tế."
+        },
+        {
+          "referenceId": "EVT-20261112-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/xuat-nhap-khau-10-thang-nam-2026-vuot-1000-ty-usd.html",
+          "evidencePath": "snapshot_live_20261112_013_f58e81d0df.html",
+          "evidenceSha256": "42ccd69844b257ab4eefe6e365f89dbb8ca46d084a429578c650b4c1d79ba4c9",
+          "supportingQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "snapshot_live_20261112_025_4d9ac33e19.html",
+          "evidenceSha256": "4b26db0e49085f4babce1451eacb068bd828efae637f3cbf69b374d4a1985655",
+          "supportingQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng đối tác thương mại bán lẻ kết nối",
+          "extractedExpression": "40 đối tác",
+          "verifiedEntity": "Malaysia",
+          "boundEntity": "Malaysia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi 12 tháng nhóm Big 4",
+          "extractedExpression": "4,8%/năm",
+          "verifiedEntity": "Vietcombank",
+          "boundEntity": "Vietcombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các ngân hàng quốc doanh gồm Agribank, Vietcombank, BIDV và VietinBank duy trì biểu lãi suất tiền gửi 12 tháng quanh 4,7% đến 4,8%/năm, tạo điểm tựa ổn định chi phí vốn vay cho doanh nghiệp."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng thanh toán thẻ và mã QR F&B",
+          "extractedExpression": "35%",
+          "verifiedEntity": "nhà hàng, khách sạn",
+          "boundEntity": "nhà hàng, khách sạn",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp tham gia kết nối thương mại số",
+          "extractedExpression": "60 doanh nghiệp",
+          "verifiedEntity": "Hiệp hội Thương mại số Hải Nam",
+          "boundEntity": "Hiệp hội Thương mại số Hải Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "FACT-20261110-005",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ lỗ hổng bảo mật zero-day được vá",
+          "extractedExpression": "100%",
+          "verifiedEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+          "boundEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Cục An toàn thông tin phát cảnh báo yêu cầu các tổ chức tài chính và người dùng nâng cấp phần mềm, cam kết xử lý 100% lỗ hổng bảo mật nghiêm trọng trước mùa mua sắm cao điểm."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng doanh số thương mại điện tử 9 tháng",
+          "extractedExpression": "44,47%",
+          "verifiedEntity": "thương mại điện tử",
+          "boundEntity": "thương mại điện tử",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ lệ sở hữu cổ phần Sacombank tại VAMC",
+          "extractedExpression": "32,5%",
+          "verifiedEntity": "Sacombank",
+          "boundEntity": "Sacombank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đề án tái cơ cấu của Sacombank đang được xem xét những khâu cuối cùng để tiến hành đấu giá 32,5% cổ phần liên quan ông Trầm Bê ủy quyền cho VAMC quản lý."
+        },
+        {
+          "referenceId": "FACT-20261110-008",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Thời gian gạch nợ thuế trực tuyến tức thì",
+          "extractedExpression": "1 phút",
+          "verifiedEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "boundEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất liên ngân hàng kỳ hạn qua đêm",
+          "extractedExpression": "4,4%/năm",
+          "verifiedEntity": "hệ thống ngân hàng",
+          "boundEntity": "hệ thống ngân hàng",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Lãi suất bình quân VND liên ngân hàng kỳ hạn qua đêm hạ nhiệt về mức 4,4%/năm, kỳ hạn 1 tuần ở mức 4,8%/năm, phản ánh thanh khoản tiền đồng trong hệ thống ngân hàng duy trì trạng thái tốt."
+        },
+        {
+          "referenceId": "FACT-20261110-010",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá bán vàng miếng SJC niêm yết",
+          "extractedExpression": "140,00 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-011",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng sản lượng giao dịch QR xuyên biên giới",
+          "extractedExpression": "120%",
+          "verifiedEntity": "VietQR Global",
+          "boundEntity": "VietQR Global",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-013",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Khối lượng chào thầu OMO cầm cố",
+          "extractedExpression": "1.261 tỷ đồng",
+          "verifiedEntity": "NHNN",
+          "boundEntity": "NHNN",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trên kênh OMO ngày 11/11, NHNN chào thầu 1.261 tỷ đồng kỳ hạn 35 ngày lãi suất 4,5%/năm, do có 4.173 tỷ đồng đáo hạn nên cơ quan quản lý hút ròng 2.892 tỷ đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-014",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi tiết kiệm tại quầy",
+          "extractedExpression": "4,1%/năm",
+          "verifiedEntity": "TPBank",
+          "boundEntity": "TPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "TPBank giảm 0,1 điểm phần trăm lãi suất tiền gửi tại quầy kỳ hạn 1–5 tháng xuống 4,1%/năm, trong khi sản phẩm gửi trực tuyến LiveBank kỳ hạn tương ứng còn 4,65%/năm."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-016",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lãi suất tiền gửi kỳ hạn ngắn",
+          "extractedExpression": "4,65%/năm",
+          "verifiedEntity": "VPBank",
+          "boundEntity": "VPBank",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "VPBank tiếp tục điều chỉnh giảm 0,1 điểm phần trăm đối với lãi suất huy động kỳ hạn từ 1 đến 5 tháng xuống còn 4,65%/năm, đồng thời hạ lãi suất chứng chỉ tiền gửi."
+        },
+        {
+          "referenceId": "FACT-20261110-017",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Chỉ số đóng cửa VN-Index",
+          "extractedExpression": "1.746,90 điểm",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Kết thúc phiên giao dịch ngày 11/11, chỉ số VN-Index tăng 3,83 điểm lên 1.746,90 điểm với khối lượng giao dịch đạt 509 triệu đơn vị trên sàn HOSE."
+        },
+        {
+          "referenceId": "FACT-20261110-018",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp hoạt động trong Fintech Hub",
+          "extractedExpression": "20 doanh nghiệp",
+          "verifiedEntity": "Trung tâm Tài chính Quốc tế TP.HCM",
+          "boundEntity": "Trung tâm Tài chính Quốc tế TP.HCM",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ban chỉ đạo Trung tâm Tài chính Quốc tế TP.HCM đang khẩn trương hoàn thiện khung thử nghiệm pháp lý sandbox với hơn 20 doanh nghiệp fintech đăng ký tham gia thử nghiệm."
+        },
+        {
+          "referenceId": "FACT-20261110-019",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá mua can thiệp USD/VND",
+          "extractedExpression": "25.500 VND/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước",
+          "boundEntity": "Ngân hàng Nhà nước",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngân hàng Nhà nước áp dụng phương án mua ngoại tệ giao ngay định kỳ vào thứ Hai và thứ Tư hằng tuần với tỷ giá mua can thiệp 25.500 VND/USD, tiếp thêm thanh khoản tiền đồng không giới hạn thời gian thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-020",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Mục tiêu tỷ lệ giải ngân vốn đầu tư công",
+          "extractedExpression": "95% kế hoạch",
+          "verifiedEntity": "Thủ tướng Chính phủ",
+          "boundEntity": "Thủ tướng Chính phủ",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Thủ tướng Chính phủ yêu cầu các bộ ngành và địa phương phấn đấu đạt tỷ lệ giải ngân vốn đầu tư công tối thiểu 95% kế hoạch năm 2026, tập trung vào các tuyến cao tốc Bắc Nam và sân bay Long Thành."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-022",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tốc độ tăng trưởng doanh thu logistics",
+          "extractedExpression": "15%",
+          "verifiedEntity": "logistics Việt Nam",
+          "boundEntity": "logistics Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "FACT-20261110-023",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Quy mô gian hàng triển lãm",
+          "extractedExpression": "500 gian hàng",
+          "verifiedEntity": "Vietnam Foodexpo 2026",
+          "boundEntity": "Vietnam Foodexpo 2026",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Triển lãm Quốc tế Công nghiệp Thực phẩm Vietnam Foodexpo 2026 chính thức khai mạc tại SECC TP.HCM, quy tụ hơn 500 gian hàng của các doanh nghiệp trong nước và quốc tế."
+        },
+        {
+          "referenceId": "FACT-20261110-024",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tổng kim ngạch xuất nhập khẩu 10 tháng",
+          "extractedExpression": "1.000 tỷ USD",
+          "verifiedEntity": "Việt Nam",
+          "boundEntity": "Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tổng kim ngạch xuất nhập khẩu của Việt Nam sau 10 tháng năm 2026 lần đầu tiên cán mốc lịch sử 1.000 tỷ USD, trong đó Bắc Ninh đứng đầu với hơn 205 tỷ USD kim ngạch thương mại."
+        },
+        {
+          "referenceId": "FACT-20261110-025",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lượng khách quốc tế 10 tháng",
+          "extractedExpression": "19,5 triệu lượt",
+          "verifiedEntity": "Cục Du lịch Quốc gia",
+          "boundEntity": "Cục Du lịch Quốc gia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "-2892",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a829dd9d8a.html",
+          "evidenceSha256": "a829dd9d8a0b7ed3ebcdbcf8dfa0ee6a97afb3266480b327cafaccb16b2c3e6f"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-03",
+        "claimText": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Xung lực tăng trưởng mở rộng từ Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 với các dữ kiện trọng yếu (Malaysia: 40 đối tác; Vietcombank: 4,8%/năm) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+        "thematicPosture": "POSTURE_EXPANSION_GROWTH",
+        "supportingEventIds": [
+          "EVT-20261112-021",
+          "EVT-20261112-022",
+          "EVT-20261112-023",
+          "EVT-20261112-007",
+          "EVT-20261112-019",
+          "EVT-20261112-017",
+          "EVT-20261112-020",
+          "EVT-20261112-018",
+          "EVT-20261112-012",
+          "EVT-20261112-010",
+          "EVT-20261112-005",
+          "EVT-20261112-004",
+          "EVT-20261112-011",
+          "EVT-20261112-003",
+          "EVT-20261112-009",
+          "EVT-20261112-002",
+          "EVT-20261112-008",
+          "EVT-20261112-016",
+          "EVT-20261112-001",
+          "EVT-20261112-024",
+          "EVT-20261112-014",
+          "EVT-20261112-015",
+          "EVT-20261112-006",
+          "EVT-20261112-013",
+          "EVT-20261112-025"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-001",
+          "FACT-20261110-002",
+          "FACT-20261110-003",
+          "FACT-20261110-004",
+          "FACT-20261110-005",
+          "FACT-20261110-006",
+          "FACT-20261110-007",
+          "FACT-20261110-008",
+          "FACT-20261110-009",
+          "FACT-20261110-010",
+          "FACT-20261110-011",
+          "FACT-20261110-012",
+          "FACT-20261110-013",
+          "FACT-20261110-014",
+          "FACT-20261110-015",
+          "FACT-20261110-016",
+          "FACT-20261110-017",
+          "FACT-20261110-018",
+          "FACT-20261110-019",
+          "FACT-20261110-020",
+          "FACT-20261110-021",
+          "FACT-20261110-022",
+          "FACT-20261110-023",
+          "FACT-20261110-024",
+          "FACT-20261110-025"
+        ],
+        "counterEvidenceEventIds": [
+          "EVT-20261112-020"
+        ],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": true,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-04",
+      "themeGroup": "Cashless Payment & Payment Infrastructure",
+      "title": "Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11",
+      "centralArgument": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Xung lực tăng trưởng mở rộng từ Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 với các dữ kiện trọng yếu (Malaysia: 40 đối tác; nhà hàng, khách sạn: 35%) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+      "thematicPillar": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+      "analyticalStance": "EXPANSIVE_GROWTH_MOMENTUM",
+      "riskPosture": "POSTURE_EXPANSION_GROWTH",
+      "riskLevel": "LOW_RISK",
+      "whatHappened": "Ghi nhận 12 sự kiện xác minh trong nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số. Sự kiện trọng tâm: Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11. Các diễn biến bổ sung: Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11; Hội nghị giao thương doanh nghiệp Việt Nam - Hải Nam sáng 12/11 thúc đẩy thương mại số.",
+      "whatChanged": "Ghi nhận 12 sự kiện xác minh trong nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số. Sự kiện trọng tâm: Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11. Các diễn biến bổ sung: Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11; Hội nghị giao thương doanh nghiệp Việt Nam - Hải Nam sáng 12/11 thúc đẩy thương mại số.",
+      "whyItMatters": "Tăng trưởng mở rộng thúc đẩy chu chuyển vốn nhanh trong nền kinh tế, gia tăng doanh số thanh toán và mở rộng cơ hội thương mại cho doanh nghiệp.",
+      "affectedVariables": [
+        "Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia",
+        "Tăng trưởng thanh toán thẻ và mã QR F&B (35%) gắn với nhà hàng, khách sạn",
+        "Số lượng doanh nghiệp tham gia kết nối thương mại số (60 doanh nghiệp) gắn với Hiệp hội Thương mại số Hải Nam",
+        "Tăng trưởng doanh số thương mại điện tử 9 tháng (44,47%) gắn với thương mại điện tử",
+        "Sản lượng giao dịch VietQR NAPAS (MP-06: 0.85 tỷ giao dịch)",
+        "Khách du lịch quốc tế đến Việt Nam (MP-07: 19.5 triệu lượt)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng các tổ chức tín dụng và doanh nghiệp sẽ tiếp tục giải ngân mở rộng thị phần bám sát biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11.",
+      "supportingEventIds": [
+        "EVT-20261112-021",
+        "EVT-20261112-023",
+        "EVT-20261112-007",
+        "EVT-20261112-017",
+        "EVT-20261112-018",
+        "EVT-20261112-010",
+        "EVT-20261112-005",
+        "EVT-20261112-004",
+        "EVT-20261112-009",
+        "EVT-20261112-014",
+        "EVT-20261112-015",
+        "EVT-20261112-025"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-001",
+        "FACT-20261110-003",
+        "FACT-20261110-004",
+        "FACT-20261110-006",
+        "FACT-20261110-008",
+        "FACT-20261110-010",
+        "FACT-20261110-011",
+        "FACT-20261110-012",
+        "FACT-20261110-015",
+        "FACT-20261110-021",
+        "FACT-20261110-022",
+        "FACT-20261110-025"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-06",
+        "MP-07"
+      ],
+      "counterEvidenceEventIds": [
+        "EVT-20261112-020"
+      ],
+      "affectedSectors": [
+        "Bán lẻ, Tiêu dùng & Thanh toán Không Tiền mặt"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được hỗ trợ bởi 12 sự kiện xác minh nhưng ghi nhận 1 dữ kiện đối lập (EVT-20261112-020) phản ánh sự phân hóa nội tại và rủi ro ngược chiều.",
+      "causalExplanation": "Cơ chế truyền dẫn phức hợp: Diễn biến Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 đan xen với các tín hiệu đối trọng từ Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC, buộc các chủ thể kinh tế phải đồng thời vừa khai thác cơ hội vừa thiết lập bộ đệm an toàn phòng ngừa rủi ro nợ xấu và thanh khoản.",
+      "counterEvidence": [
+        "Dữ kiện đối trọng từ EVT-20261112-020 (Sacombank tiến gần đến bước xử lý dứt điểm 32,5% cổ phần VAMC): Tồn tại rủi ro gia tăng nợ xấu hoặc chi phí trích lập dự phòng, tạo lực cản ngược chiều với đà mở rộng."
+      ],
+      "watchSignals": [
+        "Biến động số liệu mới của Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia",
+        "Biến động số liệu mới của Tăng trưởng thanh toán thẻ và mã QR F&B (35%) gắn với nhà hàng, khách sạn",
+        "Biến động số liệu mới của Số lượng doanh nghiệp tham gia kết nối thương mại số (60 doanh nghiệp) gắn với Hiệp hội Thương mại số Hải Nam"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+          "evidencePath": "snapshot_live_20261112_021_852a765592.html",
+          "evidenceSha256": "ddaea73b8bb6f73a004fd753672cfecb8137cb412133202450e15cef62796db5",
+          "supportingQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "EVT-20261112-023",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+          "evidencePath": "snapshot_live_20261112_023_41e74634e5.html",
+          "evidenceSha256": "8dcde00f0fffb675e26d42ae3374336cc5aaec084bbd14ef871842f63439631d",
+          "supportingQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-007",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-doanh-nghiep-viet-nam-hai-nam-thuong-mai-so.htm",
+          "evidencePath": "snapshot_live_20261112_007_d20c0bd031.html",
+          "evidenceSha256": "5b9abbfd0d8cdbafa035db299d54dd2eb3015111f7664150eea81ff58f266981",
+          "supportingQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261112-017",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+          "evidencePath": "snapshot_live_20261112_017_953797fc66.html",
+          "evidenceSha256": "4c6f1cb0456b9aeb0e4cb177763631aa07d647bc0985d06bdc708b6ca46fac35",
+          "supportingQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "EVT-20261112-018",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+          "evidencePath": "snapshot_live_20261112_018_67071216f5.html",
+          "evidenceSha256": "509b62592eb2440dcb6c3ca5a1ae149a0bef1057d50e8ba6de5c7e7541bb9c02",
+          "supportingQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+          "evidencePath": "snapshot_live_20261112_010_abb44ef9ec.html",
+          "evidenceSha256": "477933938e579595bb533e5d0a4ece95269b0d14a348b2f6bf881e887c629e1b",
+          "supportingQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "snapshot_live_20261112_005_da0797ffb0.html",
+          "evidenceSha256": "af4e4371f061106de2915c9b71a8d19bb7b1061aa1cc167cdc1f42fab828510f",
+          "supportingQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/dien-dan-logistics-viet-nam-2026-tang-truong-va-so-hoa.html",
+          "evidencePath": "snapshot_live_20261112_015_4d7b5b6690.html",
+          "evidenceSha256": "8da2b5a14e3b738bbb79b2af2dac45908e1f0ad8bd3a7e5a54f0e705adec860c",
+          "supportingQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "snapshot_live_20261112_025_4d9ac33e19.html",
+          "evidenceSha256": "4b26db0e49085f4babce1451eacb068bd828efae637f3cbf69b374d4a1985655",
+          "supportingQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng đối tác thương mại bán lẻ kết nối",
+          "extractedExpression": "40 đối tác",
+          "verifiedEntity": "Malaysia",
+          "boundEntity": "Malaysia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng thanh toán thẻ và mã QR F&B",
+          "extractedExpression": "35%",
+          "verifiedEntity": "nhà hàng, khách sạn",
+          "boundEntity": "nhà hàng, khách sạn",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp tham gia kết nối thương mại số",
+          "extractedExpression": "60 doanh nghiệp",
+          "verifiedEntity": "Hiệp hội Thương mại số Hải Nam",
+          "boundEntity": "Hiệp hội Thương mại số Hải Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng doanh số thương mại điện tử 9 tháng",
+          "extractedExpression": "44,47%",
+          "verifiedEntity": "thương mại điện tử",
+          "boundEntity": "thương mại điện tử",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "FACT-20261110-008",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Thời gian gạch nợ thuế trực tuyến tức thì",
+          "extractedExpression": "1 phút",
+          "verifiedEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "boundEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "FACT-20261110-010",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá bán vàng miếng SJC niêm yết",
+          "extractedExpression": "140,00 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-011",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng sản lượng giao dịch QR xuyên biên giới",
+          "extractedExpression": "120%",
+          "verifiedEntity": "VietQR Global",
+          "boundEntity": "VietQR Global",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-022",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tốc độ tăng trưởng doanh thu logistics",
+          "extractedExpression": "15%",
+          "verifiedEntity": "logistics Việt Nam",
+          "boundEntity": "logistics Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "FACT-20261110-025",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lượng khách quốc tế 10 tháng",
+          "extractedExpression": "19,5 triệu lượt",
+          "verifiedEntity": "Cục Du lịch Quốc gia",
+          "boundEntity": "Cục Du lịch Quốc gia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "MP-06",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+          "currentValue": "0.85",
+          "unit": "tỷ giao dịch",
+          "sourceUrl": "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_4be643c650.html",
+          "evidenceSha256": "4be643c650565bb7b2de14c07d5852c27a4ab7fd0498aad3cc3b884636b0b9f2"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_92aeeb6cbb.html",
+          "evidenceSha256": "92aeeb6cbb7b787e75240be0d132c6ccedda41048208be23ea156d45584f3be7"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+          "evidencePath": "snapshot_live_20261112_021_852a765592.html",
+          "evidenceSha256": "ddaea73b8bb6f73a004fd753672cfecb8137cb412133202450e15cef62796db5",
+          "supportingQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "EVT-20261112-023",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+          "evidencePath": "snapshot_live_20261112_023_41e74634e5.html",
+          "evidenceSha256": "8dcde00f0fffb675e26d42ae3374336cc5aaec084bbd14ef871842f63439631d",
+          "supportingQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-007",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ket-noi-giao-thuong-doanh-nghiep-viet-nam-hai-nam-thuong-mai-so.htm",
+          "evidencePath": "snapshot_live_20261112_007_d20c0bd031.html",
+          "evidenceSha256": "5b9abbfd0d8cdbafa035db299d54dd2eb3015111f7664150eea81ff58f266981",
+          "supportingQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "EVT-20261112-017",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+          "evidencePath": "snapshot_live_20261112_017_953797fc66.html",
+          "evidenceSha256": "4c6f1cb0456b9aeb0e4cb177763631aa07d647bc0985d06bdc708b6ca46fac35",
+          "supportingQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "EVT-20261112-018",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+          "evidencePath": "snapshot_live_20261112_018_67071216f5.html",
+          "evidenceSha256": "509b62592eb2440dcb6c3ca5a1ae149a0bef1057d50e8ba6de5c7e7541bb9c02",
+          "supportingQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+          "evidencePath": "snapshot_live_20261112_010_abb44ef9ec.html",
+          "evidenceSha256": "477933938e579595bb533e5d0a4ece95269b0d14a348b2f6bf881e887c629e1b",
+          "supportingQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "EVT-20261112-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "snapshot_live_20261112_005_da0797ffb0.html",
+          "evidenceSha256": "af4e4371f061106de2915c9b71a8d19bb7b1061aa1cc167cdc1f42fab828510f",
+          "supportingQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+          "evidencePath": "snapshot_live_20261112_004_a44722af02.html",
+          "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699",
+          "supportingQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "EVT-20261112-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+          "evidencePath": "snapshot_live_20261112_009_be78f37179.html",
+          "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae",
+          "supportingQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "EVT-20261112-014",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+          "evidencePath": "snapshot_live_20261112_014_5e8412e17f.html",
+          "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb",
+          "supportingQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "EVT-20261112-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nhandan.vn/dien-dan-logistics-viet-nam-2026-tang-truong-va-so-hoa.html",
+          "evidencePath": "snapshot_live_20261112_015_4d7b5b6690.html",
+          "evidenceSha256": "8da2b5a14e3b738bbb79b2af2dac45908e1f0ad8bd3a7e5a54f0e705adec860c",
+          "supportingQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "snapshot_live_20261112_025_4d9ac33e19.html",
+          "evidenceSha256": "4b26db0e49085f4babce1451eacb068bd828efae637f3cbf69b374d4a1985655",
+          "supportingQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng đối tác thương mại bán lẻ kết nối",
+          "extractedExpression": "40 đối tác",
+          "verifiedEntity": "Malaysia",
+          "boundEntity": "Malaysia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đoàn doanh nghiệp Malaysia và các tập đoàn phân phối siêu thị đã kết nối với 40 đối tác Việt Nam nhằm mở rộng chuỗi cung ứng bán lẻ và giải pháp thanh toán hai chiều."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng thanh toán thẻ và mã QR F&B",
+          "extractedExpression": "35%",
+          "verifiedEntity": "nhà hàng, khách sạn",
+          "boundEntity": "nhà hàng, khách sạn",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối lượng thanh toán không dùng tiền mặt tại các nhà hàng, khách sạn ở Hà Nội và TP.HCM ghi nhận mức tăng 35% so với cùng kỳ nhờ luồng khách du lịch quốc tế và các sự kiện hội chợ cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng doanh nghiệp tham gia kết nối thương mại số",
+          "extractedExpression": "60 doanh nghiệp",
+          "verifiedEntity": "Hiệp hội Thương mại số Hải Nam",
+          "boundEntity": "Hiệp hội Thương mại số Hải Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hội nghị kết nối giao thương giữa hơn 60 doanh nghiệp Việt Nam và Hiệp hội Thương mại số Hải Nam mở ra cơ hội hợp tác xuất nhập khẩu nông sản và dịch vụ logistics thương mại điện tử."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng doanh số thương mại điện tử 9 tháng",
+          "extractedExpression": "44,47%",
+          "verifiedEntity": "thương mại điện tử",
+          "boundEntity": "thương mại điện tử",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Các đơn vị vận chuyển ghi nhận số lượng đơn hàng tăng vọt trong ngày 11.11, trong bối cảnh thương mại điện tử 9 tháng tăng trưởng 44,47% đòi hỏi giải pháp đối soát thanh toán QR tức thì."
+        },
+        {
+          "referenceId": "FACT-20261110-008",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Thời gian gạch nợ thuế trực tuyến tức thì",
+          "extractedExpression": "1 phút",
+          "verifiedEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "boundEntity": "Liên đoàn Thương mại và Công nghiệp Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Liên đoàn Thương mại và Công nghiệp Việt Nam đề xuất cơ chế kết nối cổng thanh toán eTax Mobile tại cửa khẩu sân bay để người nộp thuế xử lý nghĩa vụ tài chính và giải tỏa xuất cảnh trong 1 phút."
+        },
+        {
+          "referenceId": "FACT-20261110-010",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá bán vàng miếng SJC niêm yết",
+          "extractedExpression": "140,00 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Giá vàng miếng SJC chốt phiên giao dịch niêm yết tại 137,00 triệu đồng/lượng mua vào và 140,00 triệu đồng/lượng bán ra, chênh lệch mua bán giữ ở mức 3 triệu đồng."
+        },
+        {
+          "referenceId": "FACT-20261110-011",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tăng trưởng sản lượng giao dịch QR xuyên biên giới",
+          "extractedExpression": "120%",
+          "verifiedEntity": "VietQR Global",
+          "boundEntity": "VietQR Global",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Hệ thống VietQR Global tích hợp giải pháp thanh toán mã QR bán lẻ xuyên biên giới, ghi nhận mức tăng trưởng sản lượng giao dịch 120% sau 10 tháng đầu năm 2026."
+        },
+        {
+          "referenceId": "FACT-20261110-012",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Số lượng hoạt động thương mại du lịch",
+          "extractedExpression": "57 hoạt động",
+          "verifiedEntity": "Vibrant HCMC",
+          "boundEntity": "Vibrant HCMC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Chương trình Vibrant HCMC kết nối chuỗi 57 hoạt động thương mại, du lịch và giải trí, phối hợp cùng các nền tảng thương mại điện tử và giải pháp thanh toán số mã QR nhằm kích thích sức mua cuối năm."
+        },
+        {
+          "referenceId": "FACT-20261110-015",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị mua ròng khối ngoại trên sàn HOSE",
+          "extractedExpression": "75 tỷ đồng",
+          "verifiedEntity": "HOSE",
+          "boundEntity": "HOSE",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Khối ngoại tiếp tục mua ròng hơn 75 tỷ đồng trên sàn HOSE, tập trung vào nhóm cổ phiếu công nghệ viễn thông và bán lẻ tiêu dùng."
+        },
+        {
+          "referenceId": "FACT-20261110-021",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá trị thương vụ mua lại logistics SLP",
+          "extractedExpression": "500 triệu USD",
+          "verifiedEntity": "CTP",
+          "boundEntity": "CTP",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tập đoàn bất động sản công nghiệp CTP của Hà Lan đạt thỏa thuận mua lại toàn bộ danh mục kho bãi và tài sản logistics của SLP tại Việt Nam với giá trị 500 triệu USD."
+        },
+        {
+          "referenceId": "FACT-20261110-022",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tốc độ tăng trưởng doanh thu logistics",
+          "extractedExpression": "15%",
+          "verifiedEntity": "logistics Việt Nam",
+          "boundEntity": "logistics Việt Nam",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Ngành dịch vụ logistics Việt Nam tiếp tục duy trì tốc độ tăng trưởng doanh thu 15% mỗi năm, đóng góp tích cực vào chuỗi cung ứng xuất nhập khẩu toàn quốc."
+        },
+        {
+          "referenceId": "FACT-20261110-025",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Lượng khách quốc tế 10 tháng",
+          "extractedExpression": "19,5 triệu lượt",
+          "verifiedEntity": "Cục Du lịch Quốc gia",
+          "boundEntity": "Cục Du lịch Quốc gia",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Số liệu từ Cục Du lịch Quốc gia cho thấy tổng lượng khách quốc tế đến Việt Nam trong 10 tháng đầu năm đạt 19,5 triệu lượt, tăng 38,5% so với cùng kỳ năm 2025."
+        },
+        {
+          "referenceId": "MP-06",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+          "currentValue": "0.85",
+          "unit": "tỷ giao dịch",
+          "sourceUrl": "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_4be643c650.html",
+          "evidenceSha256": "4be643c650565bb7b2de14c07d5852c27a4ab7fd0498aad3cc3b884636b0b9f2"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_92aeeb6cbb.html",
+          "evidenceSha256": "92aeeb6cbb7b787e75240be0d132c6ccedda41048208be23ea156d45584f3be7"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-04",
+        "claimText": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Xung lực tăng trưởng mở rộng từ Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11 với các dữ kiện trọng yếu (Malaysia: 40 đối tác; nhà hàng, khách sạn: 35%) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Số lượng đối tác thương mại bán lẻ kết nối (40 đối tác) gắn với Malaysia.",
+        "thematicPosture": "POSTURE_EXPANSION_GROWTH",
+        "supportingEventIds": [
+          "EVT-20261112-021",
+          "EVT-20261112-023",
+          "EVT-20261112-007",
+          "EVT-20261112-017",
+          "EVT-20261112-018",
+          "EVT-20261112-010",
+          "EVT-20261112-005",
+          "EVT-20261112-004",
+          "EVT-20261112-009",
+          "EVT-20261112-014",
+          "EVT-20261112-015",
+          "EVT-20261112-025"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-001",
+          "FACT-20261110-003",
+          "FACT-20261110-004",
+          "FACT-20261110-006",
+          "FACT-20261110-008",
+          "FACT-20261110-010",
+          "FACT-20261110-011",
+          "FACT-20261110-012",
+          "FACT-20261110-015",
+          "FACT-20261110-021",
+          "FACT-20261110-022",
+          "FACT-20261110-025"
+        ],
+        "counterEvidenceEventIds": [
+          "EVT-20261112-020"
+        ],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": true,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    }
+  ],
+  "totalTheses": 4,
+  "canonicalThemeCoverage": [
+    "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+    "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+    "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+    "Ngân hàng, Tín dụng & Lãi suất"
+  ],
+  "totalSupportingEventsUsed": 25,
+  "totalUniqueFactsUsed": 25,
+  "synthesisMethodology": "Dynamic Thematic Event-Clustering & Fact-Grounded Synthesis"
+}

@@ -1,0 +1,62 @@
+{
+  "index.html": {
+    "sha256": "21dcd0d7c51e202a95dac50028a57b17f3e5b842aab5d75ed7017a930b4a0eb1",
+    "size": 240353,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "fintech-intelligence/index.html": {
+    "sha256": "4166970b85c5831021ef39e35a9535841d945349f18afb72b2955eb263cb4202",
+    "size": 36212,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "fintech-intelligence/app.js": {
+    "sha256": "7cc3e13bff28a92f7a539f2950bc9ad25e62d864ac7dccfdb9c013088416e25a",
+    "size": 15515,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "fintech-intelligence/data/latest.json": {
+    "sha256": "f23b63eea10d704d89311eb8a838294c00a7611ee55f1ad932fc2e215edf1e27",
+    "size": 204,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/PHASE05_DATA_CONTRACT_V3_0_4.json": {
+    "sha256": "42a460ee4ec8a0ebcc9b750ee7c47a2b6bcb055fd2e297ec2b2f1ba0d0679588",
+    "size": 24657,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/fixtures/pilot23.json": {
+    "sha256": "e2b9fda96f79734ec9dd372eda8daf415f33fcce88a3655e82928dd04057492e",
+    "size": 4277,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/fixtures/pilot24.json": {
+    "sha256": "cf764f5104c04b34e5a91b76d1cd32b22d238d20c5477fbe0bfed1b29d458dbf",
+    "size": 5083,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/fixtures/pilot25.json": {
+    "sha256": "564eed338b2d45abb7d9e74886016283fe51e9bb02ac74b05b09ed027273db1f",
+    "size": 115447,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/fixtures/pilot26.json": {
+    "sha256": "0a689a24605a9dd138c80c4c2e9423d46fb3d571045a71d597276d527e3c56ef",
+    "size": 102694,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/phase05b-intelligence-engine/fixtures/event_registry.json": {
+    "sha256": "f32b072a5c0216836f9126956e6070b7a1ac374c0043b8946f1ba698ca950b6d",
+    "size": 51601,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/edition-data-pilot26-draft.js": {
+    "sha256": "2da4e1ee6d20362477d5d06d3314738cb538c4de0f689b2577120114652cdb89",
+    "size": 102846,
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "pilot-output/phase05-operational-readiness/edition-data-pilot26-draft.json": {
+    "sha256": "0a689a24605a9dd138c80c4c2e9423d46fb3d571045a71d597276d527e3c56ef",
+    "size": 102694,
+    "status": "FROZEN_IMMUTABLE"
+  }
+}

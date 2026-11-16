@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261116-D01",
+  "editionDate": "2026-11-16",
+  "executionId": "EXEC-20261116-081601-8b177544",
+  "executionMode": "LIVE",
+  "generatedAt": "2026-11-16T08:16:01.724474+07:00",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "dataIntegrityChecks": {
+    "schemaValidationV400": "PASS",
+    "schemaValidationV500": "PASS",
+    "eventReferenceIntegrity": "PASS",
+    "financialFactEntityBindingAudit": "PASS",
+    "duplicateFactPreventionAudit": "PASS",
+    "marketPulseFreshnessAndTemporalHonesty": "PASS",
+    "newsVsMarketPulseSeparation": "PASS",
+    "googleSheetsDryRunIntegrity": "PASS",
+    "frontendCandidateContractCompatibility": "PASS"
+  },
+  "quotaAndFreshnessAccounting": {
+    "gatePassed": true,
+    "gateStatusCode": "PASS_25_EVENTS_24H_80PCT",
+    "targetEventCount": 25,
+    "selectedEventCount": 25,
+    "count0To24h": 20,
+    "count24To48h": 5,
+    "count48To72h": 0,
+    "countOver72h": 0,
+    "ratio0To24h": 0.8,
+    "requiredRatio0To24h": 0.8,
+    "shortfallReasons": [],
+    "coveredResearchDomains": [
+      "Banking & credit growth",
+      "Deposit & lending interest rates",
+      "Exchange rate & FX",
+      "Global macro events affecting Vietnam",
+      "Macroeconomic policy",
+      "Tax, compliance, fraud, cybersecurity"
+    ],
+    "publisherDistribution": {
+      "Báo Tuổi Trẻ": 11,
+      "CafeF / VCCorp": 9,
+      "Báo Thanh Niên": 3,
+      "Báo Đầu tư": 2
+    }
+  },
+  "marketPulseStatusBreakdown": {
+    "totalIndicators": 8,
+    "verifiedNumericCount": 6,
+    "staleObservationCount": 1,
+    "qualitativeUpdateOnlyCount": 1
+  },
+  "factAuditSummary": {
+    "totalRawFacts": 19,
+    "uniqueVerifiedFacts": 18,
+    "duplicateFactsIntercepted": 1,
+    "entitiesReboundFromQuote": 19,
+    "ambiguousOrUnverifiedEntities": 0
+  }
+}

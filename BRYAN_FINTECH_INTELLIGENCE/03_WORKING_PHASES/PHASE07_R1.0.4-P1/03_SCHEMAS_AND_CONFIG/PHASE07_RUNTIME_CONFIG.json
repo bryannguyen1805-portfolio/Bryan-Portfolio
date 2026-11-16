@@ -1,0 +1,185 @@
+{
+  "configVersion": "7.0.4",
+  "releaseId": "PHASE07_R1.0.4",
+  "releaseVersion": "1.0.4",
+  "phase": "PHASE07_R1.0.4",
+  "parentReleaseId": "PHASE07_R1.0.3_REMEDIATION_BASELINE",
+  "parentRelease": "PHASE07_R1.0.3_REMEDIATION_BASELINE",
+  "parentAcceptedPhase": "PHASE06_R1.0.0",
+  "releaseStatus": "RELEASE_CANDIDATE",
+  "projectOwnerAcceptance": "PENDING",
+  "productionStatus": "NOT_APPROVED",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "executionMode": "CONTROLLED_DEVELOPMENT_LOCAL_VALIDATION",
+  "productionSafetyLocks": {
+    "productionDeployAllowed": false,
+    "gitPushAllowed": false,
+    "cronScheduleAllowed": false,
+    "emailDistributionAllowed": false,
+    "googleSheetsLiveWriteAllowed": false
+  },
+  "newsQuotaAndFreshnessPolicy": {
+    "targetEventCount": 25,
+    "minRatio0To24h": 0.80,
+    "maxRatio24To72h": 0.20,
+    "maxAllowedAgeHours": 72.0,
+    "rankingOrder": "NEWEST_ORIGINAL_PUBLICATION_FIRST",
+    "failClosedOnShortfall": true,
+    "shortfallStatusCode": "SHORTFALL",
+    "passStatusCode": "PASS_25_EVENTS_24H_80PCT"
+  },
+  "researchCoverageDomains": [
+    "Macroeconomic policy",
+    "State Bank of Vietnam policy",
+    "Exchange rate & FX",
+    "Interbank & liquidity",
+    "Deposit & lending interest rates",
+    "Banking & credit growth",
+    "Capital markets & VN-Index",
+    "Corporate bonds & capital raising",
+    "Digital banking & FinTech",
+    "Cashless payments & VietQR",
+    "POS / SmartPOS / Payment Gateway / Payment Link / Installment",
+    "Retail, E-commerce, F&B, Hospitality, Tourism",
+    "Private Education, Wellness, Healthcare, Public Services",
+    "Tax, compliance, fraud, cybersecurity",
+    "Global macro events affecting Vietnam"
+  ],
+  "payooPrioritySectors": [
+    "F&B chains",
+    "Retail chains",
+    "Supermarkets & convenience stores",
+    "E-commerce & D2C",
+    "Hospitality & tourism",
+    "Private education",
+    "Spa, beauty, wellness, clinics",
+    "Motorcycles, EVs, consumer durables",
+    "Insurance & financial services",
+    "Utilities & recurring billing",
+    "Cross-border & tourist merchants",
+    "Public services & hospitals"
+  ],
+  "canonicalThemeGroups": [
+    "Monetary Policy & Interest Rates",
+    "Banking & Credit",
+    "Capital Markets",
+    "Corporate & Business Expansion",
+    "Consumer Behavior",
+    "Digital Economy",
+    "Cashless Payment & Payment Infrastructure",
+    "International Finance & Global Economy"
+  ],
+  "marketPulseCanonicalIndicators": [
+    {
+      "indicatorId": "MP-01",
+      "name": "Tỷ giá trung tâm USD/VND",
+      "englishName": "USD/VND Central Exchange Rate",
+      "frequency": "DAILY_BUSINESS_DAY",
+      "maxDataAgeHours": 96.0
+    },
+    {
+      "indicatorId": "MP-02",
+      "name": "Lãi suất liên ngân hàng qua đêm",
+      "englishName": "Overnight Interbank Interest Rate",
+      "frequency": "DAILY_BUSINESS_DAY",
+      "maxDataAgeHours": 72.0
+    },
+    {
+      "indicatorId": "MP-03",
+      "name": "Lãi suất huy động kỳ hạn 12 tháng",
+      "englishName": "12-Month Deposit Interest Rate",
+      "frequency": "EVENT_DRIVEN_PERIODIC",
+      "maxDataAgeHours": 720.0
+    },
+    {
+      "indicatorId": "MP-04",
+      "name": "Chỉ số VN-Index",
+      "englishName": "VN-Index Closing Session",
+      "frequency": "DAILY_TRADING_SESSION",
+      "maxDataAgeHours": 96.0
+    },
+    {
+      "indicatorId": "MP-05",
+      "name": "Tăng trưởng tín dụng toàn hệ thống",
+      "englishName": "System-wide Credit Growth",
+      "frequency": "PERIODIC_OFFICIAL_RELEASE",
+      "maxDataAgeHours": 2160.0
+    },
+    {
+      "indicatorId": "MP-06",
+      "name": "Hoạt động thanh toán không tiền mặt / VietQR",
+      "englishName": "Cashless Payment & VietQR Activity",
+      "frequency": "PERIODIC_EVENT_DRIVEN",
+      "maxDataAgeHours": 2160.0
+    },
+    {
+      "indicatorId": "MP-07",
+      "name": "Khách quốc tế đến Việt Nam",
+      "englishName": "International Tourist Arrivals to Vietnam",
+      "frequency": "MONTHLY_OFFICIAL_STATISTICS",
+      "maxDataAgeHours": 1080.0
+    },
+    {
+      "indicatorId": "MP-08",
+      "name": "Nghiệp vụ thị trường mở (OMO)",
+      "englishName": "Open Market Operations (OMO)",
+      "frequency": "EVENT_DRIVEN_BUSINESS_DAY",
+      "maxDataAgeHours": 2160.0
+    }
+  ],
+  "irrelevantHeadlineExclusionPatterns": [
+    "đón đọc tạp chí kinh tế việt nam",
+    "đồ hộp hạ long",
+    "thịt heo bệnh",
+    "nữ thủ tướng đầu tiên của nhật bản làm việc lúc 3h sáng",
+    "hai công viên tại khu vực cầu đi bộ vượt sông sài gòn"
+  ],
+  "editorialRuleSets": {
+    "connectTheDotsRules": [
+      {
+        "dotId": "DOT-01",
+        "narrativeTheme": "MONETARY_LIQUIDITY_TO_CAPITAL_MARKETS",
+        "titleTemplate": "NHNN kích hoạt kênh mua USD giao ngay ({fxSpotRate}) kết hợp giữ tỷ giá trung tâm ({mp01Value}) giúp giải tỏa tâm lý và đưa VN-Index tăng lên {mp04Value}",
+        "domainKeywords": ["mua ngoại tệ", "mua usd", "vn-index", "lãi suất cho vay ngoại tệ", "tỷ giá", "yên nhật"],
+        "linkedMpIds": ["MP-01", "MP-04", "MP-02", "MP-08"],
+        "monetaryPolicyLink": "NHNN niêm yết giá mua USD giao ngay ở mức {fxSpotRate} từ ngày 11/11 trong khi giữ tỷ giá trung tâm ngày 10/11 ở mức {mp01Value} và rà soát bãi bỏ các thông tư cũ về cho vay ngoại tệ.",
+        "bankingLink": "Các ngân hàng thương mại có trạng thái ngoại tệ dương có kênh chuyển đổi trực tiếp sang VND, bổ sung thanh khoản tiền đồng cho mùa quyết toán cuối năm mà không gây áp lực tỷ giá.",
+        "corporateLink": "Doanh nghiệp xuất nhập khẩu và doanh nghiệp niêm yết hưởng lợi từ biên độ tỷ giá ổn định và chi phí thanh khoản ngắn hạn hạ nhiệt.",
+        "consumerAndMarketLink": "Tâm lý nhà đầu tư cá nhân và tổ chức khởi sắc mạnh mẽ, đẩy chỉ số VN-Index đóng cửa tăng lên {mp04Value} (+28,75 điểm, +1,68%)."
+      },
+      {
+        "dotId": "DOT-02",
+        "narrativeTheme": "CREDIT_MATURITY_MISMATCH_TO_DEPOSIT_RATES_AND_INSTALLMENTS",
+        "titleTemplate": "Nút thắt cấu trúc 80% vốn qua ngân hàng (tín dụng/GDP 135–140%) neo lãi suất huy động 12T ở mức {mp03Value}, thúc đẩy dịch chuyển sang thanh toán trả góp mùa siêu sale 11.11",
+        "domainKeywords": ["80% nhu cầu vốn", "trái phiếu doanh nghiệp", "lãi suất cao nhất", "7%/năm", "830.000 tỉ", "j&t cargo", "giá vàng"],
+        "linkedMpIds": ["MP-03", "MP-05"],
+        "monetaryPolicyLink": "Dư nợ tín dụng/GDP đã lên tới 135–140% GDP và khoảng 80% nhu cầu vốn trung – dài hạn của nền kinh tế vẫn dựa vào hệ thống ngân hàng.",
+        "bankingLink": "Để cân đối kỳ hạn nguồn vốn (huy động ngắn hạn ~1 năm nhưng cho vay hạ tầng 5–10 năm như nhu cầu 830.000 tỷ đồng của EVN), 5 ngân hàng thương mại (MBV, PGBank, Sacombank, VCBNeo, VIB) niêm yết lãi suất tiền gửi 12 tháng ở mức {mp03Value}.",
+        "corporateLink": "Doanh nghiệp bán lẻ, thương mại điện tử và logistics hàng nặng (như J&T Cargo trong đợt 11.11) cần tối ưu vòng quay vốn lưu động và công cụ chốt đơn giá trị cao.",
+        "consumerAndMarketLink": "Người tiêu dùng có xu hướng giữ nguyên sổ tiết kiệm hưởng lãi suất {mp03Value} (hoặc nắm giữ vàng SJC ở vùng 138,5–141,5 triệu đồng/lượng) và sử dụng thẻ tín dụng/trả góp 0% cho các đơn hàng điện máy, nội thất, giáo dục."
+      },
+      {
+        "dotId": "DOT-03",
+        "narrativeTheme": "FISCAL_DISCIPLINE_AND_TAX_COMPLIANCE_TO_MERCHANT_DIGITIZATION",
+        "titleTemplate": "Dự toán thu ngân sách 2027 ({budgetRev2027}) và đề xuất ngưỡng nợ thuế tạm hoãn xuất cảnh ({taxThresholdInd} / {taxThresholdCorp}) thúc đẩy chuẩn hóa thanh toán số tại SME & hộ kinh doanh",
+        "domainKeywords": ["ngân sách", "3.334.338", "tạm hoãn xuất cảnh", "nợ thuế", "nghị quyết 358", "bắc - nam"],
+        "linkedMpIds": ["MP-04", "MP-06"],
+        "monetaryPolicyLink": "Quốc hội thông qua dự toán thu ngân sách năm 2027 ở mức {budgetRev2027} và Chính phủ ban hành Nghị quyết 358/NQ-CP ưu tiên đầu tư các hành lang kinh tế chiến lược.",
+        "bankingLink": "Hệ thống ngân hàng và trung gian thanh toán mở rộng dịch vụ tài khoản định danh hộ kinh doanh, thu hộ ngân sách và đối soát tự động.",
+        "corporateLink": "Trước kiến nghị của VCCI về ngưỡng nợ thuế tạm hoãn xuất cảnh ({taxThresholdInd} với cá nhân/hộ kinh doanh và {taxThresholdCorp} với doanh nghiệp), khu vực SME và hộ kinh doanh gia tăng nhu cầu minh bạch hóa doanh thu và hóa đơn điện tử.",
+        "consumerAndMarketLink": "Giao dịch tại các chuỗi F&B, bán lẻ và dịch vụ chuyển dịch nhanh từ tiền mặt/QR cá nhân sang QR động định danh cửa hàng gắn với hóa đơn điện tử."
+      },
+      {
+        "dotId": "DOT-04",
+        "narrativeTheme": "INTERNATIONAL_TOURISM_AND_FDI_TO_CROSS_BORDER_PAYMENTS",
+        "titleTemplate": "Cột mốc {mp07Value} khách quốc tế kết hợp làn sóng hợp tác doanh nghiệp Việt – Nhật thúc đẩy hạ tầng chấp nhận VietQR Global và SmartPOS tại điểm bán",
+        "domainKeywords": ["khách quốc tế", "19,5 triệu", "việt nam - nhật bản", "vietqr global", "du lịch", " xuất khẩu"],
+        "linkedMpIds": ["MP-07", "MP-06"],
+        "monetaryPolicyLink": "Định hướng mở rộng kết nối thanh toán bán lẻ xuyên biên giới qua mã QR (VietQR Global) giữa Việt Nam và các quốc gia châu Á.",
+        "bankingLink": "Các ngân hàng và tổ chức chuyển mạch (NAPAS) chuyển trọng tâm từ kết nối kỹ thuật liên ngân hàng sang mở rộng mạng lưới điểm chấp nhận thanh toán vật lý (Merchant Acquiring).",
+        "corporateLink": "Các doanh nghiệp du lịch, khách sạn, F&B, bán lẻ và hơn 20 doanh nghiệp Việt – Nhật tại hội thảo xúc tiến đầu tư cần giải pháp thanh toán đa phương thức và đối soát ngoại tệ – VND minh bạch.",
+        "consumerAndMarketLink": "Du khách quốc tế ({mp07Value} trong 10 tháng năm 2026) ưu tiên quét mã QR trực tiếp từ ứng dụng ngân hàng bản địa hoặc chạm thẻ quốc tế trên một thiết bị SmartPOS duy nhất."
+      }
+    ]
+  }
+}

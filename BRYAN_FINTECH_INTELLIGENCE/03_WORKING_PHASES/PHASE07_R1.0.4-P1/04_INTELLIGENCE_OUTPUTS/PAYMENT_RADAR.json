@@ -1,0 +1,461 @@
+{
+  "schemaVersion": "4.0.0",
+  "editionId": "ED-20261110-D01",
+  "generatedAt": "2026-11-11T02:35:40.478725+07:00",
+  "totalSignals": 5,
+  "opportunityBreakdown": {
+    "VERIFIED_OPPORTUNITY": 1,
+    "EMERGING_OPPORTUNITY": 1,
+    "POTENTIAL_OPPORTUNITY": 2,
+    "NO_DIRECT_OPPORTUNITY": 1
+  },
+  "signals": [
+    {
+      "radarId": "RADAR-01",
+      "signalTitle": "Mở rộng hạ tầng chấp nhận thanh toán xuyên biên giới (VietQR Global) và SmartPOS tại điểm bán đón 19,5 triệu lượt khách quốc tế",
+      "paymentDomain": "VietQRGlobal & Cross-border Payment / POS & SmartPOS / Merchant Acquiring",
+      "marketSignal": "Lượng khách quốc tế đến Việt Nam đạt 19,5 triệu lượt (tính đến 31/10/2026 - MP-07, VERIFIED), rút ngắn khoảng cách với Thái Lan (25,4 triệu lượt) xuống còn 5,9 triệu lượt, đồng thời bài toán trọng tâm của thị trường thanh toán hiện nay là đưa khả năng chấp nhận VietQR Global từ cấp độ kết nối liên ngân hàng xuống tận từng điểm bán vật lý (MP-06, QUALITATIVE_UPDATE_ONLY).",
+      "triggerEventIds": [
+        "EVT-20261110-022"
+      ],
+      "supportingFacts": [],
+      "supportingMarketPulseIds": [
+        "MP-07",
+        "MP-06"
+      ],
+      "marketDrivers": [
+        "Sự phục hồi mạnh mẽ của dòng khách du lịch quốc tế (19,5 triệu lượt trong 10 tháng năm 2026).",
+        "Nhu cầu thanh toán liền mạch bằng ứng dụng ngân hàng/ví điện tử bản địa của du khách châu Á (Nhật Bản, Hàn Quốc, Thái Lan, Trung Quốc, ASEAN) khi chi tiêu tại Việt Nam.",
+        "Khoảng trống vận hành giữa kết nối kỹ thuật cấp chuyển mạch (NAPAS) và độ phủ thực tế tại quầy thu ngân của merchant."
+      ],
+      "merchantImpact": "Các cơ sở lưu trú, nhà hàng, chuỗi bán lẻ tại các thành phố du lịch cần một thiết bị/luồng đối soát thống nhất vừa nhận được thẻ quốc tế (Visa/Mastercard/JCB), vừa hiển thị mã QR động chấp nhận thanh toán xuyên biên giới mà thu ngân không phải thao tác phức tạp.",
+      "consumerImpact": "Du khách quốc tế có thể quét mã QR trực tiếp từ ứng dụng ngân hàng quê nhà với tỷ giá minh bạch thay vì phải đổi tiền mặt mệnh giá nhỏ.",
+      "affectedSegments": [
+        "Du lịch, khách sạn và khu nghỉ dưỡng",
+        "Nhà hàng và chuỗi F&B tại các đô thị du lịch (Hà Nội, TP.HCM, Đà Nẵng, Nha Trang, Phú Quốc)",
+        "Retail và chuỗi bán lẻ đặc sản, miễn thuế, trung tâm thương mại",
+        "Spa, thẩm mỹ và wellness phục vụ khách quốc tế",
+        "Doanh nghiệp có giao dịch xuyên biên giới (Việt Nam – Nhật Bản và nội khối châu Á)"
+      ],
+      "paymentImplication": "Hình thành nhu cầu tích hợp VietQR Global và thẻ quốc tế trên cùng một thiết bị SmartPOS / hệ thống Omnichannel POS kèm báo cáo đối soát đa ngoại tệ – quyết toán VND tự động.",
+      "opportunity": "Triển khai gói giải pháp chấp nhận thanh toán toàn diện (All-in-One SmartPOS: Thẻ quốc tế + VietQR nội địa + VietQR Global) cho nhóm chuỗi F&B, khách sạn, bán lẻ và wellness tại các trọng điểm du lịch trước thềm cao điểm cuối năm.",
+      "commercialRelevance": "HIGH",
+      "payooRelevance": "Phù hợp trực tiếp với thế mạnh mạng lưới Merchant Acquiring, SmartPOS và giải pháp thanh toán hợp kênh (Omnichannel) của Payoo: giúp merchant chỉ cần một đầu mối tích hợp để nhận cả thẻ quốc tế lẫn QR xuyên biên giới và đối soát tự động trên một cổng duy nhất.",
+      "opportunityType": "EMERGING_OPPORTUNITY",
+      "riskFactors": [
+        "Chỉ số MP-06 hiện mới là cập nhật định tính (QUALITATIVE_UPDATE_ONLY), chưa có số liệu định lượng công bố về sản lượng giao dịch thực tế của VietQR Global tại điểm bán.",
+        "Cần đào tạo nhân viên thu ngân tại điểm bán (cashier) nhận diện và hướng dẫn khách quốc tế quét đúng chuẩn mã QR liên thông."
+      ],
+      "recommendedMonitoring": [
+        "Theo dõi lộ trình mở rộng ngân hàng thành viên và quốc gia kết nối VietQR Global của NAPAS.",
+        "Theo dõi tỷ trọng giao dịch thẻ quốc tế và QR tại các merchant ngành Khách sạn, F&B và Bán lẻ du lịch trong tháng 11–12/2026."
+      ],
+      "confidenceLevel": "HIGH",
+      "evidenceReferences": [
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-022",
+          "headline": "FPT đề xuất 5 trụ cột đồng kiến tạo AI và lượng tử trong hợp tác Việt Nam - Nhật Bản",
+          "publishedAt": "2026-11-09T23:40:00+07:00",
+          "sourceUrl": "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html",
+          "evidenceSha256": "4f85c794d4c963de73d87fa4683925b988a64e64f1d8ba19db0d6d9d092e4b51"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-07",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "actualValue": "19.5",
+          "unit": "triệu lượt",
+          "observationDate": "2026-10-31",
+          "updateStatus": "NUMERIC_VALUE_VERIFIED",
+          "verificationStatus": "VERIFIED",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-06",
+          "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+          "actualValue": null,
+          "unit": null,
+          "observationDate": null,
+          "updateStatus": "QUALITATIVE_UPDATE_ONLY",
+          "verificationStatus": "UNVERIFIED",
+          "sourceUrl": "https://cafef.vn/vietqr-global-giai-bai-toan-dua-thanh-toan-den-tung-diem-ban-188260928064510139.chn"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "signalTitle": "Nhu cầu thanh toán không tiền mặt khi giao hàng (Non-cash COD / Payment Link / QR động) cho đơn hàng nặng và giá trị cao dịp siêu sale 11.11",
+      "paymentDomain": "E-commerce Payment / Payment Link / QR Payment & VietQR / Omnichannel Payment",
+      "marketSignal": "Mùa mua sắm 11.11 ghi nhận áp lực gia tăng đơn hàng thương mại điện tử, đặc biệt ở phân khúc hàng nặng và hàng cồng kềnh (EVT-20261110-004: J&T Cargo chủ động nguồn lực vận chuyển hàng nặng).",
+      "triggerEventIds": [
+        "EVT-20261110-004",
+        "EVT-20261110-005"
+      ],
+      "supportingFacts": [
+        "FACT-20261110-001"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Chiến dịch khuyến mãi 11.11 thúc đẩy người tiêu dùng đặt mua các mặt hàng gia dụng, nội thất, thiết bị điện máy và hàng cồng kềnh qua kênh online/D2C.",
+        "Giá trị mỗi đơn hàng nặng thường cao hơn đơn hàng tiêu dùng nhanh, khiến việc thu tiền mặt (COD truyền thống) tiềm ẩn rủi ro bảo quản tiền mặt và chậm vòng quay vốn cho cả nhà bán hàng lẫn đơn vị vận chuyển."
+      ],
+      "merchantImpact": "Các doanh nghiệp D2C, chuỗi điện máy – nội thất và đơn vị giao nhận cần công cụ tạo mã QR động theo từng mã vận đơn hoặc gửi Payment Link/chấp nhận trả góp ngay tại thời điểm giao hàng và lắp đặt.",
+      "consumerImpact": "Người mua hàng nặng/điện máy muốn kiểm tra hàng khi nhận rồi mới thanh toán bằng quét mã QR hoặc quẹt thẻ trả góp tại nhà thay vì chuẩn bị sẵn lượng tiền mặt lớn.",
+      "affectedSegments": [
+        "Thương mại điện tử và các đơn vị Logistics / Giao nhận hàng nặng",
+        "Doanh nghiệp D2C (điện máy, gia dụng, nội thất, thiết bị tập luyện)",
+        "Retail và chuỗi bán lẻ đa kênh (Omnichannel)",
+        "Xe máy, xe điện và đại lý phân phối"
+      ],
+      "paymentImplication": "Gia tăng nhu cầu đối với giải pháp QR động gắn mã đơn hàng trên ứng dụng của shipper (Non-cash COD), Payment Link gửi qua Zalo/SMS và thiết bị mPOS/SmartPOS di động hỗ trợ trả góp tại điểm giao hàng.",
+      "opportunity": "Cung cấp giải pháp thu hộ COD không tiền mặt (QR động định danh theo đơn hàng + đối soát thời gian thực qua API) và Payment Link tích hợp trả góp cho các đơn vị logistics hàng nặng và thương hiệu D2C điện máy/nội thất.",
+      "commercialRelevance": "HIGH",
+      "payooRelevance": "Phù hợp trực tiếp với bộ sản phẩm Payment Link, QR Payment định danh đơn hàng, SmartPOS di động và cổng thanh toán Omnichannel của Payoo dành cho ngành bán lẻ điện máy, nội thất và giao nhận.",
+      "opportunityType": "VERIFIED_OPPORTUNITY",
+      "riskFactors": [
+        "Đòi hỏi tích hợp API đồng bộ trạng thái đơn hàng tức thời giữa hệ thống quản lý vận đơn (TMS/OMS) của đối tác logistics và cổng thanh toán.",
+        "Tỷ lệ hủy đơn hoặc đổi trả đối với hàng cồng kềnh cần quy trình hoàn tiền (refund reconciliation) tự động rõ ràng."
+      ],
+      "recommendedMonitoring": [
+        "Theo dõi sản lượng giao dịch qua Payment Link và QR động tại nhóm merchant điện máy, gia dụng và logistics trong tuần lễ 11.11 và Black Friday.",
+        "Theo dõi tỷ lệ chuyển đổi từ COD tiền mặt sang quét mã QR khi nhận hàng."
+      ],
+      "confidenceLevel": "HIGH",
+      "evidenceReferences": [
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-004",
+          "headline": "Siêu sale 11.11: J&T Cargo chủ động nguồn lực vận chuyển hàng nặng",
+          "publishedAt": "2026-11-10T17:49:00+07:00",
+          "sourceUrl": "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html",
+          "evidenceSha256": "164811dbaca8548ca34419e71b577d3fe26bb38525e37d79fd2d970bedfcb00e"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-005",
+          "headline": "Lãi suất ngân hàng ngày 10/11 tại Agribank, Vietcombank, BIDV, VietinBank, MB, VPBank, Techcombank, Sacombank, HDBank,...",
+          "publishedAt": "2026-11-10T21:28:00+07:00",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+          "evidenceSha256": "308b565f01b525ba5f06bb4e405dc2ff4188758ba2033e9eab79285430d8bb55"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-001",
+          "eventId": "EVT-20261110-005",
+          "extractedExpression": "7%/năm",
+          "verifiedEntity": "Nhóm 5 NHTM (MBV, PGBank, Sacombank, VCBNeo, VIB)"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-03",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "actualValue": "7",
+          "unit": "%/năm",
+          "observationDate": "2026-11-10",
+          "updateStatus": "NUMERIC_VALUE_VERIFIED",
+          "verificationStatus": "VERIFIED",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-03",
+      "signalTitle": "Thúc đẩy thanh toán trả góp (Installment / BNPL) tại các ngành dịch vụ – bán lẻ giá trị cao khi lãi suất tiền gửi 12T đạt 7%/năm",
+      "paymentDomain": "Installment Payment / BNPL / Payment Gateway / POS & SmartPOS",
+      "marketSignal": "Lãi suất tiền gửi trực tuyến kỳ hạn 12 tháng tại 5 ngân hàng thương mại đã đạt mức 7%/năm (kỳ hạn 18 tháng đạt 7,4%/năm - EVT-20261110-005, FACT-20261110-001, MP-03), trong khi giá vàng SJC duy trì vùng cao 138,5–141,5 triệu đồng/lượng (EVT-20261110-021, FACT-20261110-012).",
+      "triggerEventIds": [
+        "EVT-20261110-005",
+        "EVT-20261110-001",
+        "EVT-20261110-021"
+      ],
+      "supportingFacts": [
+        "FACT-20261110-001",
+        "FACT-20261110-012",
+        "FACT-20261110-015"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Khi lãi suất tiết kiệm 12 tháng ở mức 7%/năm, chi phí cơ hội của việc rút tiền gửi trước hạn để thanh toán một lần (lump-sum) cho các khoản chi tiêu lớn tăng lên.",
+        "Chênh lệch kỳ hạn vốn ngân hàng (EVT-20261110-001) khiến các khoản vay tiêu dùng thông thường có lãi suất cao hơn, làm tăng sức hấp dẫn của các chương trình trả góp 0% lãi suất qua thẻ tín dụng do merchant và ngân hàng đồng tài trợ."
+      ],
+      "merchantImpact": "Các trường tư thục/trung tâm đào tạo, viện thẩm mỹ/wellness, đại lý xe máy – xe điện và chuỗi bán lẻ công nghệ cần công cụ chuyển đổi trả góp kỳ hạn 3–12 tháng ngay tại quầy hoặc qua link thanh toán từ xa để chốt đơn dễ dàng hơn.",
+      "consumerImpact": "Khách hàng cá nhân ưu tiên giữ nguyên khoản tiền gửi tiết kiệm hưởng lãi suất 7%/năm và sử dụng hạn mức thẻ tín dụng để chia nhỏ khoản chi học phí, làm đẹp, mua xe hoặc thiết bị công nghệ thành 6–12 kỳ thanh toán.",
+      "affectedSegments": [
+        "Giáo dục tư nhân (trường quốc tế, trung tâm ngoại ngữ, khóa học kỹ năng/công nghệ)",
+        "Spa, thẩm mỹ viện, nha khoa và wellness",
+        "Xe máy, xe điện và hệ thống đại lý phân phối",
+        "Retail và chuỗi bán lẻ thiết bị công nghệ, điện máy"
+      ],
+      "paymentImplication": "Tăng nhu cầu kết nối cổng trả góp 0% đa ngân hàng (Multi-bank Credit Card Installment) trên cả SmartPOS tại điểm bán và Payment Link / Payment Gateway trực tuyến.",
+      "opportunity": "Mở rộng gói giải pháp Trả góp 0% đa ngân hàng qua SmartPOS và Payment Link cho nhóm ngành Giáo dục tư nhân (kỳ thu học phí học kỳ II), Spa/Wellness (mùa làm đẹp cuối năm) và Đại lý xe máy/xe điện.",
+      "commercialRelevance": "MEDIUM",
+      "payooRelevance": "Phù hợp với mạng lưới liên kết trả góp thẻ tín dụng rộng khắp các ngân hàng của Payoo trên cả kênh SmartPOS tại quầy lẫn Payment Link từ xa (không yêu cầu khách hàng phải có mặt tại quầy để quẹt thẻ vật lý).",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "riskFactors": [
+        "Chi phí phí chuyển đổi trả góp (merchant discount rate / installment fee) tăng theo mặt bằng lãi suất có thể khiến một số merchant nhỏ ngần ngại tài trợ 100% phí chuyển đổi cho khách mua.",
+        "Hạn mức tín dụng thẻ của một bộ phận khách hàng có thể đã được sử dụng cao vào cuối năm."
+      ],
+      "recommendedMonitoring": [
+        "Theo dõi biểu phí chuyển đổi trả góp của các ngân hàng phát hành thẻ trong quý IV/2026.",
+        "Theo dõi tỷ lệ giao dịch trả góp kỳ hạn 6 tháng và 12 tháng tại nhóm merchant Giáo dục, Chăm sóc sức khỏe – Thẩm mỹ và Xe điện."
+      ],
+      "confidenceLevel": "MEDIUM",
+      "evidenceReferences": [
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-005",
+          "headline": "Lãi suất ngân hàng ngày 10/11 tại Agribank, Vietcombank, BIDV, VietinBank, MB, VPBank, Techcombank, Sacombank, HDBank,...",
+          "publishedAt": "2026-11-10T21:28:00+07:00",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+          "evidenceSha256": "308b565f01b525ba5f06bb4e405dc2ff4188758ba2033e9eab79285430d8bb55"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-001",
+          "headline": "TS Đào Minh Tú: \"Người dân mình ít ai gửi tiền kỳ hạn vài năm mà chỉ độ một năm thôi, nhưng ngân hàng cho vay dài hạn tới 5 năm, 10 năm và hơn nữa\"",
+          "publishedAt": "2026-11-10T00:15:00+07:00",
+          "sourceUrl": "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn",
+          "evidenceSha256": "76c32fac7968e504403ca5781cb16abefc391046d260f0d5c5a6ca56492d1281"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-021",
+          "headline": "Đà giảm của giá vàng trong nước chỉ bằng 30% so với vàng thế giới",
+          "publishedAt": "2026-11-10T12:38:45+07:00",
+          "sourceUrl": "https://vneconomy.vn/da-giam-cua-gia-vang-trong-nuoc-chi-bang-30-so-voi-vang-the-gioi-1307504.htm",
+          "evidenceSha256": "7ebbe7facc452979cf60eca542e22e63405b4b3b62fccce9e55bfa4b1d190512"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-001",
+          "eventId": "EVT-20261110-005",
+          "extractedExpression": "7%/năm",
+          "verifiedEntity": "Nhóm 5 NHTM (MBV, PGBank, Sacombank, VCBNeo, VIB)"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-012",
+          "eventId": "EVT-20261110-021",
+          "extractedExpression": "138,5 triệu đồng/lượng",
+          "verifiedEntity": "SJC"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-015",
+          "eventId": "EVT-20261110-001",
+          "extractedExpression": "140% GDP",
+          "verifiedEntity": "Hệ thống tín dụng / Nền kinh tế Việt Nam"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-03",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "actualValue": "7",
+          "unit": "%/năm",
+          "observationDate": "2026-11-10",
+          "updateStatus": "NUMERIC_VALUE_VERIFIED",
+          "verificationStatus": "VERIFIED",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-04",
+      "signalTitle": "Nhu cầu chuẩn hóa thu hộ, đối soát doanh thu và thanh toán số tại hộ kinh doanh & SME trước đề xuất ngưỡng nợ thuế 200 triệu / 1 tỷ đồng",
+      "paymentDomain": "Payment Infrastructure & Banking API / QR Payment & VietQR / POS & SmartPOS",
+      "marketSignal": "VCCI kiến nghị quy định rõ ngưỡng nợ thuế áp dụng biện pháp tạm hoãn xuất cảnh ở mức trên 200 triệu đồng đối với cá nhân, hộ kinh doanh và trên 1 tỷ đồng đối với doanh nghiệp (EVT-20261110-020, FACT-20261110-006, FACT-20261110-007), trong bối cảnh Quốc hội chốt chỉ tiêu thu ngân sách năm 2027 đạt 3.334.338 tỷ đồng (EVT-20261110-032, FACT-20261110-014).",
+      "triggerEventIds": [
+        "EVT-20261110-020",
+        "EVT-20261110-032"
+      ],
+      "supportingFacts": [
+        "FACT-20261110-006",
+        "FACT-20261110-007",
+        "FACT-20261110-014"
+      ],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Áp lực tuân thủ thuế và minh bạch hóa dòng tiền kinh doanh của nhóm hộ kinh doanh cá thể có doanh thu lớn và doanh nghiệp SME.",
+        "Yêu cầu kết nối đồng bộ giữa dữ liệu thanh toán tại điểm bán với hóa đơn điện tử và nghĩa vụ nộp thuế định kỳ."
+      ],
+      "merchantImpact": "Hộ kinh doanh và doanh nghiệp SME cần tách bạch tài khoản nhận tiền bán hàng với tài khoản cá nhân, đồng thời sử dụng giải pháp thanh toán có báo cáo đối soát rõ ràng để kê khai và nộp thuế đúng hạn, tránh phát sinh nợ thuế quá hạn.",
+      "consumerImpact": "Khách hàng mua sắm tại các hộ kinh doanh F&B, bán lẻ được cung cấp hóa đơn điện tử và phương thức quét mã QR động chuyên nghiệp hơn.",
+      "affectedSegments": [
+        "Nhà hàng và F&B (hộ kinh doanh chuỗi quán ăn, cà phê)",
+        "Retail và cửa hàng bán lẻ chuyên doanh",
+        "Doanh nghiệp vừa và nhỏ (SME) dịch vụ – thương mại"
+      ],
+      "paymentImplication": "Nhu cầu tích hợp thiết bị chấp nhận thanh toán (QR/SmartPOS/loa thông báo tiền về) với phần mềm kế toán – hóa đơn điện tử và tiện ích nộp thuế/phí trực tuyến.",
+      "opportunity": "Tích hợp sâu giải pháp thanh toán QR/SmartPOS với các nền tảng phần mềm quản lý bán hàng – hóa đơn điện tử và cổng thu hộ ngân sách/hóa đơn cho phân khúc SME và hộ kinh doanh.",
+      "commercialRelevance": "MEDIUM",
+      "payooRelevance": "Mở ra cơ hội hợp tác tích hợp (embedded payment & bill collection) giữa hạ tầng thu hộ/chấp nhận thanh toán của Payoo với các đơn vị cung cấp phần mềm quản lý bán hàng và hóa đơn điện tử phục vụ SME.",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "riskFactors": [
+        "Ngưỡng 200 triệu đồng và 1 tỷ đồng hiện mới là đề xuất chính sách của VCCI (POLICY_THRESHOLD), cần chờ quy định pháp luật chính thức ban hành.",
+        "Một bộ phận hộ kinh doanh nhỏ lẻ vẫn có tâm lý e ngại chi phí đầu tư thiết bị ban đầu."
+      ],
+      "recommendedMonitoring": [
+        "Theo dõi tiến trình lấy ý kiến và ban hành văn bản hướng dẫn chính thức về ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh.",
+        "Theo dõi tốc độ áp dụng hóa đơn điện tử khởi tạo từ máy tính tiền tại nhóm ngành F&B và bán lẻ."
+      ],
+      "confidenceLevel": "MEDIUM",
+      "evidenceReferences": [
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-020",
+          "headline": "Đề xuất chỉ tạm hoãn xuất cảnh khi thông báo hợp lệ nhưng người nộp thuế chây ì",
+          "publishedAt": "2026-11-10T15:17:00+07:00",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+          "evidenceSha256": "255e01361aa0bae24f71c0a35984062121ac180cdcf0661e24780c1b1a99c3dc"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-032",
+          "headline": "“Chốt” chỉ tiêu và chi tiêu để năm 2027 tăng tốc, bứt phá",
+          "publishedAt": "2026-11-10T08:29:00+07:00",
+          "sourceUrl": "https://baodautu.vn/chot-chi-tieu-va-chi-tieu-de-nam-2027-tang-toc-but-pha-d740211.html",
+          "evidenceSha256": "f6a35cb752fc4753c1844bb90da295bdbb80d2c62bae2a6965c2e39b02c66c35"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-006",
+          "eventId": "EVT-20261110-020",
+          "extractedExpression": "200 triệu đồng",
+          "verifiedEntity": "Cá nhân, hộ kinh doanh nộp thuế (Đề xuất VCCI)"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-007",
+          "eventId": "EVT-20261110-020",
+          "extractedExpression": "1 tỉ đồng",
+          "verifiedEntity": "Doanh nghiệp nộp thuế (Đề xuất VCCI)"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-014",
+          "eventId": "EVT-20261110-032",
+          "extractedExpression": "3.334.338 tỷ đồng",
+          "verifiedEntity": "Quốc hội"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-05",
+      "signalTitle": "Nghiệp vụ mua USD giao ngay của NHNN, vốn đầu tư hạ tầng điện lực EVN và hoạt động đấu thầu/CSR doanh nghiệp (Không phát sinh cơ hội thương mại trực tiếp cho Payoo)",
+      "paymentDomain": "Payment Infrastructure & Banking API",
+      "marketSignal": "NHNN triển khai mua USD giao ngay ở mức 25.500 đồng/USD từ ngày 11/11 để bơm tiền đồng cho hệ thống ngân hàng (EVT-20261110-006), EVN xác định nhu cầu vốn đầu tư khoảng 830.000 tỷ đồng cho các dự án điện (EVT-20261110-010), SeABank thông báo mời thầu nội bộ (EVT-20261110-008) và Nutifood đề xuất đầu tư công viên ven sông Sài Gòn (EVT-20261110-007).",
+      "triggerEventIds": [
+        "EVT-20261110-006",
+        "EVT-20261110-010",
+        "EVT-20261110-008",
+        "EVT-20261110-007"
+      ],
+      "supportingFacts": [
+        "FACT-20261110-005",
+        "FACT-20261110-004"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-08"
+      ],
+      "marketDrivers": [
+        "Điều tiết thanh khoản tiền đồng và tỷ giá trên thị trường liên ngân hàng của NHNN.",
+        "Huy động vốn tín dụng hợp vốn và vốn đầu tư quốc tế quy mô hàng chục tỷ USD cho hạ tầng năng lượng quốc gia."
+      ],
+      "merchantImpact": "Tác động gián tiếp ở tầm vĩ mô giúp ổn định thanh khoản hệ thống ngân hàng và nguồn cung điện dài hạn, không làm thay đổi trực tiếp quy trình thu ngân tại điểm bán lẻ.",
+      "consumerImpact": "Không làm thay đổi trực tiếp hành vi thanh toán hàng ngày của người tiêu dùng cá nhân.",
+      "affectedSegments": [
+        "Khối Kinh doanh Vốn & Ngoại hối (Treasury) của các Ngân hàng Thương mại",
+        "Tập đoàn năng lượng nhà nước (EVN) và các định chế tài chính quốc tế"
+      ],
+      "paymentImplication": "Các giao dịch này diễn ra trên hệ thống thanh toán điện tử liên ngân hàng giá trị cao (IBPS) và kênh tín dụng dự án vĩ mô, không thuộc phạm vi trung gian thanh toán bán lẻ.",
+      "opportunity": "NO_DIRECT_PAYOO_OPPORTUNITY",
+      "commercialRelevance": "NONE",
+      "payooRelevance": "NO_DIRECT_PAYOO_OPPORTUNITY: Đây là các nghiệp vụ điều hành tiền tệ liên ngân hàng của NHNN, huy động vốn dự án hạ tầng điện lực cấp quốc gia và hoạt động đấu thầu/CSR riêng lẻ; không phát sinh cơ hội thương mại trực tiếp cho Payment Gateway, SmartPOS hay QR của Payoo.",
+      "opportunityType": "NO_DIRECT_OPPORTUNITY",
+      "riskFactors": [
+        "Rủi ro phân tích sai lệch nếu gượng ép gắn kết các sự kiện vĩ mô/đấu thầu nội bộ thành cơ hội bán hàng trung gian thanh toán."
+      ],
+      "recommendedMonitoring": [
+        "Chỉ theo dõi ở góc độ bối cảnh thanh khoản vĩ mô (Macro Context) để đánh giá sức khỏe dòng tiền chung của nền kinh tế."
+      ],
+      "confidenceLevel": "HIGH",
+      "evidenceReferences": [
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-006",
+          "headline": "Ngân hàng Nhà nước mua USD, thêm tiền đồng cho nền kinh tế",
+          "publishedAt": "2026-11-10T17:05:00+07:00",
+          "sourceUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-mua-usd-them-tien-dong-cho-nen-kinh-te-100261110162658257.htm",
+          "evidenceSha256": "fbb073ed5fd81ccf9da59dc81c1bc1df80e9a7b47233f1cc3b4973d420cbe9e5"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-010",
+          "headline": "Làm sao để huy động hàng trăm tỉ USD cho các dự án điện, năng lượng?",
+          "publishedAt": "2026-11-10T19:12:00+07:00",
+          "sourceUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+          "evidenceSha256": "1ceb7cd8fad5ce4b6e75fbd6b57c90a07106fe65a1d5293c29c0267db3cd60ab"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-008",
+          "headline": "SeABank thông báo mời thầu",
+          "publishedAt": "2026-11-10T15:34:00+07:00",
+          "sourceUrl": "https://baodautu.vn/seabank-thong-bao-moi-thau-d740937.html",
+          "evidenceSha256": "7d6ac77721d1b525de66b1e9ea0e7426270af62f97522c256ebb163df51d9615"
+        },
+        {
+          "refType": "NEWS_EVENT",
+          "id": "EVT-20261110-007",
+          "headline": "Đề xuất đầu tư hai công viên tại khu vực cầu đi bộ vượt sông Sài Gòn, Nutifood cam kết gì?",
+          "publishedAt": "2026-11-10T13:13:00+07:00",
+          "sourceUrl": "https://thanhnien.vn/de-xuat-dau-tu-hai-cong-vien-tai-khu-vuc-cau-di-bo-vuot-song-sai-gon-nutifood-cam-ket-gi-185261110150751966.htm",
+          "evidenceSha256": "72d39de87a6d632a21b9bd160a3bde142b9c46794e3fbf8f7de2c490b24a8bcd"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-005",
+          "eventId": "EVT-20261110-006",
+          "extractedExpression": "25.500 đồng/USD",
+          "verifiedEntity": "Ngân hàng Nhà nước"
+        },
+        {
+          "refType": "FINANCIAL_FACT",
+          "id": "FACT-20261110-004",
+          "eventId": "EVT-20261110-010",
+          "extractedExpression": "830.000 tỉ đồng",
+          "verifiedEntity": "Tập đoàn Điện lực Việt Nam (EVN)"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-01",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "actualValue": "25600",
+          "unit": "VND/USD",
+          "observationDate": "2026-11-10",
+          "updateStatus": "NUMERIC_VALUE_VERIFIED",
+          "verificationStatus": "VERIFIED",
+          "sourceUrl": "https://cafef.vn/linh-hoat-cac-giai-phap-on-dinh-ty-gia-18826111013535336.chn"
+        },
+        {
+          "refType": "MARKET_PULSE",
+          "id": "MP-08",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "actualValue": "47915",
+          "unit": "tỷ VND",
+          "observationDate": "2026-09-21",
+          "updateStatus": "NUMERIC_VALUE_VERIFIED",
+          "verificationStatus": "VERIFIED",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn"
+        }
+      ]
+    }
+  ]
+}

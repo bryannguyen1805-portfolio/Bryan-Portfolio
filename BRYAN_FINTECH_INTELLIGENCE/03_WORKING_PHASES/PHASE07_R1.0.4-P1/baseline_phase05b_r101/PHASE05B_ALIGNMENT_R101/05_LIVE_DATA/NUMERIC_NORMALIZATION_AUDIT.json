@@ -1,0 +1,66 @@
+[
+  {
+    "indicatorId": "MP-01",
+    "indicatorName": "Tỷ giá trung tâm USD/VND",
+    "verificationStatus": "VERIFIED",
+    "actualValue": "25600",
+    "unit": "VND/USD",
+    "note": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô."
+  },
+  {
+    "indicatorId": "MP-02",
+    "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+    "verificationStatus": "UNVERIFIED",
+    "actualValue": "2.8",
+    "unit": "%/năm",
+    "note": "STALE_OBSERVATION: Lãi suất liên ngân hàng qua đêm đã vượt trần 72.0h (942.5h > 72.0h)."
+  },
+  {
+    "indicatorId": "MP-03",
+    "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+    "verificationStatus": "VERIFIED",
+    "actualValue": "7",
+    "unit": "%/năm",
+    "note": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô."
+  },
+  {
+    "indicatorId": "MP-04",
+    "indicatorName": "Chỉ số VN-Index",
+    "verificationStatus": "VERIFIED",
+    "actualValue": "1743.00",
+    "unit": "Điểm",
+    "note": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô."
+  },
+  {
+    "indicatorId": "MP-05",
+    "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+    "verificationStatus": "UNVERIFIED",
+    "actualValue": null,
+    "unit": null,
+    "note": "Thông tin định tính / tin tức chính sách liên quan từ nguồn cafef.vn (không phải số liệu đo lường định lượng chính thức, không gán ngày chốt quan sát: Không tìm thấy số liệu tăng trưởng tín dụng toàn hệ thống.)."
+  },
+  {
+    "indicatorId": "MP-06",
+    "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+    "verificationStatus": "UNVERIFIED",
+    "actualValue": null,
+    "unit": null,
+    "note": "Thông tin định tính / tin tức chính sách liên quan từ nguồn cafef.vn (không phải số liệu đo lường định lượng chính thức, không gán ngày chốt quan sát: UNVERIFIED_METRIC_ABSENT: Không tìm thấy số liệu sản lượng giao dịch VietQR cụ thể hoặc thiếu đơn vị đo lường hợp lệ trong cùng ngữ cảnh câu.)."
+  },
+  {
+    "indicatorId": "MP-07",
+    "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+    "verificationStatus": "VERIFIED",
+    "actualValue": "19.5",
+    "unit": "triệu lượt",
+    "note": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô."
+  },
+  {
+    "indicatorId": "MP-08",
+    "indicatorName": "Thanh khoản thị trường mở (OMO)",
+    "verificationStatus": "VERIFIED",
+    "actualValue": "47915",
+    "unit": "tỷ VND",
+    "note": "Nguồn tin chính thống, số liệu và ngày quan sát được xác minh trùng khớp với bằng chứng thô."
+  }
+]

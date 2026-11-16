@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "newlyRegisteredEventsCount": 25,
+  "events": [
+    {
+      "eventId": "EVT-20261112-005",
+      "canonicalUrl": "https://baodautu.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+      "headline": "Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T08:15:00+07:00",
+      "evidenceSha256": "ddaea73b8bb6f73a004fd753672cfecb8137cb412133202450e15cef62796db5"
+    },
+    {
+      "eventId": "EVT-20261112-011",
+      "canonicalUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+      "headline": "Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T07:45:00+07:00",
+      "evidenceSha256": "8dcde00f0fffb675e26d42ae3374336cc5aaec084bbd14ef871842f63439631d"
+    },
+    {
+      "eventId": "EVT-20261112-008",
+      "canonicalUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+      "headline": "Siêu sale 11.11 ghi nhận lưu lượng đơn hàng tăng vọt đòi hỏi giải pháp thanh toán QR động",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T06:30:00+07:00",
+      "evidenceSha256": "4c6f1cb0456b9aeb0e4cb177763631aa07d647bc0985d06bdc708b6ca46fac35"
+    },
+    {
+      "eventId": "EVT-20261112-068",
+      "canonicalUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+      "headline": "Đề xuất quy trình nộp thuế trực tuyến 24/7 gỡ tạm hoãn xuất cảnh ngay tại sân bay",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T22:30:00+07:00",
+      "evidenceSha256": "509b62592eb2440dcb6c3ca5a1ae149a0bef1057d50e8ba6de5c7e7541bb9c02"
+    },
+    {
+      "eventId": "EVT-20261112-007",
+      "canonicalUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+      "headline": "Lãi suất liên ngân hàng qua đêm giảm về 4,4%/năm, thanh khoản dồi dào",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T21:10:00+07:00",
+      "evidenceSha256": "7e3d25577483ddc8ddd29bda32ed6bb6ab7d1efe14aefd4c834a5e8cc4ac851a"
+    },
+    {
+      "eventId": "EVT-20261110-009",
+      "canonicalUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+      "headline": "Ngân hàng Nhà nước muốn bãi bỏ nhiều quy định liên quan đến lãi suất cho vay bằng USD, sáp nhập, hợp nhất, mua lại tổ chức tín dụng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T20:16:00+07:00",
+      "evidenceSha256": "b2c9a4f859f837d1b8d21845c45ad20641503f2dabc473a3fda661036580e377"
+    },
+    {
+      "eventId": "EVT-20261112-095",
+      "canonicalUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+      "headline": "Giá vàng miếng SJC neo quanh 140 triệu đồng/lượng sau nhịp biến động quốc tế",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T20:15:00+07:00",
+      "evidenceSha256": "477933938e579595bb533e5d0a4ece95269b0d14a348b2f6bf881e887c629e1b"
+    },
+    {
+      "eventId": "EVT-20261112-084",
+      "canonicalUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+      "headline": "VietQR Global mở rộng mạng lưới thanh toán QR xuyên biên giới đón đầu cao điểm du lịch",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T19:45:00+07:00",
+      "evidenceSha256": "af4e4371f061106de2915c9b71a8d19bb7b1061aa1cc167cdc1f42fab828510f"
+    },
+    {
+      "eventId": "EVT-20261110-010",
+      "canonicalUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+      "headline": "Làm sao để huy động hàng trăm tỉ USD cho các dự án điện, năng lượng?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T19:12:00+07:00",
+      "evidenceSha256": "8545aa4d70204138e4a1de95150acfd860daf2e864eee28a2bfb48c50413b015"
+    },
+    {
+      "eventId": "EVT-20261112-101",
+      "canonicalUrl": "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm",
+      "headline": "Nối gót California, Citigym thông báo đóng cửa thêm 2 phòng tập, 1 chi nhánh sẽ đóng cửa vĩnh viễn",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T18:55:00+07:00",
+      "evidenceSha256": "0f27ae7cab8d9987d4a5412fdd75e8bb1f4fc3c94627eeb595726ea8ce2b255d"
+    },
+    {
+      "eventId": "EVT-20261112-086",
+      "canonicalUrl": "https://thoibaotaichinhvietnam.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+      "headline": "Khai mạc chương trình Vibrant Ho Chi Minh City kích cầu tiêu dùng và thúc đẩy thanh toán số 11.11",
+      "publisher": "Thời báo Tài chính Việt Nam",
+      "publishedAt": "2026-11-11T18:30:00+07:00",
+      "evidenceSha256": "f5359e50a84ef940436ddbb082ae39ca1697ec607881a0454289fc8c2faed699"
+    },
+    {
+      "eventId": "EVT-20261110-019",
+      "canonicalUrl": "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm",
+      "headline": "CEO Techcombank: Việt Nam cần nguồn vốn để hiện thực hóa mục tiêu tăng trưởng",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T17:30:00+07:00",
+      "evidenceSha256": "74494b0746b21f6aeae59aba34f1f3c45d591b127f78f9347e2dad5410eb1e10"
+    },
+    {
+      "eventId": "EVT-20261112-055",
+      "canonicalUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+      "headline": "TPBank giảm 0,1% lãi suất tiết kiệm tại quầy xuống 4,1%/năm",
+      "publisher": "Báo Lao Động",
+      "publishedAt": "2026-11-11T17:00:00+07:00",
+      "evidenceSha256": "04468087ca48b90937a0d3aa9ae1caafc3135f066dadbae9bf43ae409aab7a10"
+    },
+    {
+      "eventId": "EVT-20261112-113",
+      "canonicalUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+      "headline": "Khối ngoại mua ròng hơn 75 tỷ đồng trên HOSE ngày 11/11",
+      "publisher": "Vietstock Finance",
+      "publishedAt": "2026-11-11T16:45:00+07:00",
+      "evidenceSha256": "7cf0b197a850819943c9e05bd4e8c3fbfb30d9cd6e6ff06b3a82bb046b540cae"
+    },
+    {
+      "eventId": "EVT-20261112-015",
+      "canonicalUrl": "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+      "headline": "VPBank tiếp tục giảm lãi suất huy động kỳ hạn ngắn xuống 4,65%/năm trong ngày 11/11",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T16:15:00+07:00",
+      "evidenceSha256": "0e6b7063c7db256a89c538630bfba6024912a3d82cddf312c5661250f074fac6"
+    },
+    {
+      "eventId": "EVT-20261110-006",
+      "canonicalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-mua-usd-them-tien-dong-cho-nen-kinh-te-100261110162658257.htm",
+      "headline": "Ngân hàng Nhà nước mua USD, thêm tiền đồng cho nền kinh tế",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T16:00:00+07:00",
+      "evidenceSha256": "d9dec4fca07d5f047e0ed0633c0ab2520529ec0132c41cc6479fc59c457879bc"
+    },
+    {
+      "eventId": "EVT-20261110-008",
+      "canonicalUrl": "https://baodautu.vn/seabank-thong-bao-moi-thau-d740937.html",
+      "headline": "SeABank thông báo mời thầu",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T15:34:00+07:00",
+      "evidenceSha256": "1a8cd19c32e77b4c62ccf63bf1405d342707b74d28060f97cb9338f189a8ba79"
+    },
+    {
+      "eventId": "EVT-20261112-117",
+      "canonicalUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+      "headline": "VN-Index tăng phiên thứ hai liên tiếp lên 1.746,90 điểm, Vingroup giữ vững sắc xanh",
+      "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+      "publishedAt": "2026-11-11T15:30:00+07:00",
+      "evidenceSha256": "a619ec0cbde4eba52c8ca0dbb772d8741a8890862169d787e70766ab1fb79c4c"
+    },
+    {
+      "eventId": "EVT-20261110-020",
+      "canonicalUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+      "headline": "Đề xuất chỉ tạm hoãn xuất cảnh khi thông báo hợp lệ nhưng người nộp thuế chây ì",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T15:17:00+07:00",
+      "evidenceSha256": "10776066ab52b9a4ddbda8d104a7f11c411c3b8ea157682de397be90749b09c6"
+    },
+    {
+      "eventId": "EVT-20261112-098",
+      "canonicalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-bom-them-vnd-tien-co-chay-vao-chung-khoan-100261110144814316.htm",
+      "headline": "Ngân hàng Nhà nước 'bơm' thêm VND, tiền có chảy vào chứng khoán?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T15:10:00+07:00",
+      "evidenceSha256": "e6ac1fbadd3c58ada33aced062a70f09831e74afa8689f598baa75dcfd66e4b7"
+    },
+    {
+      "eventId": "EVT-20261112-059",
+      "canonicalUrl": "https://nhandan.vn/vifc-hcmc-hoan-thien-co-che-sandbox-cho-fintech.html",
+      "headline": "TP.HCM đẩy nhanh cơ chế Sandbox Fintech tại Trung tâm Tài chính Quốc tế VIFC",
+      "publisher": "Báo Nhân Dân",
+      "publishedAt": "2026-11-11T15:00:00+07:00",
+      "evidenceSha256": "a0bc2a47b9d4c6009532c640b84c6a847ed6c343f69a8ed16a2ffbf450fd16bf"
+    },
+    {
+      "eventId": "EVT-20261112-065",
+      "canonicalUrl": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+      "headline": "Cần cơ chế cho phép nhà ở xã hội được tự do mua bán",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T14:45:00+07:00",
+      "evidenceSha256": "c022fca11fb6645cad8086268f4a69a6bda52585abb296c2c12044277765ecb7"
+    },
+    {
+      "eventId": "EVT-20261112-067",
+      "canonicalUrl": "https://thanhnien.vn/dai-bieu-le-thi-thuy-sen-bien-nguon-von-van-hoa-thanh-san-pham-co-gia-tri-kinh-te-185261110143049236.htm",
+      "headline": "Đại biểu Lê Thị Thúy Sen: Biến nguồn vốn văn hoá thành sản phẩm có giá trị kinh tế",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T14:44:00+07:00",
+      "evidenceSha256": "9920a51f381ef0e5343fde6b74f11f07689426ab9f4de5eebf2fac66f01c736c"
+    },
+    {
+      "eventId": "EVT-20261112-057",
+      "canonicalUrl": "https://nhandan.vn/chinh-phu-chi-dao-tang-toc-giai-ngan-dau-tu-cong-cuoi-nam-2026.html",
+      "headline": "Chính phủ chỉ đạo tăng tốc giải ngân vốn đầu tư công các dự án giao thông trọng điểm",
+      "publisher": "Báo Nhân Dân",
+      "publishedAt": "2026-11-11T14:00:00+07:00",
+      "evidenceSha256": "730d37e4e04801a406f69bf4304e1ab510df9ef346f71a3f23b05773b7ab679f"
+    },
+    {
+      "eventId": "EVT-20261112-085",
+      "canonicalUrl": "https://thoibaotaichinhvietnam.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+      "headline": "Tập đoàn CTP Hà Lan mua lại SLP Việt Nam trong thương vụ logistics 500 triệu USD",
+      "publisher": "Thời báo Tài chính Việt Nam",
+      "publishedAt": "2026-11-11T13:45:00+07:00",
+      "evidenceSha256": "0813bac82499e4d3b266ecc43bbfc767f1ab8da523477ee36bb20284d799c3fb"
+    }
+  ]
+}

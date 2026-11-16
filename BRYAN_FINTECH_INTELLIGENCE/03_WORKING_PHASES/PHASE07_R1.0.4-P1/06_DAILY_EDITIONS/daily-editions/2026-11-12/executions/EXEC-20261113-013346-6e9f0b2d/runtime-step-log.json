@@ -1,0 +1,383 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-D01",
+  "editionDate": "2026-11-12",
+  "executionId": "EXEC-20261113-013346-6e9f0b2d",
+  "executionMode": "OFFLINE",
+  "runTimestamp": "2026-11-13T01:33:46.518678+07:00",
+  "overallRuntimeStatus": "BLOCKED_OR_FAILED",
+  "publicationAllowed": false,
+  "productionStatus": "NOT_APPROVED",
+  "liveRetrievalReadiness": "NOT_APPLICABLE",
+  "haltReason": "STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%).",
+  "totalSteps": 20,
+  "passedStepsCount": 8,
+  "failedStepsCount": 1,
+  "blockedStepsCount": 11,
+  "steps": [
+    {
+      "stepId": "STEP_01",
+      "stepNumber": 1,
+      "stepName": "Runtime Initialization & Config Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:46.519430+07:00",
+      "completedAt": "2026-11-13T01:33:46.520301+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_RUNTIME_CONFIG.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE06_DATA_CONTRACT_V4_0_0.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_DATA_CONTRACT_V5_0_0.json"
+      ],
+      "outputReferences": [
+        "state.runtime_config",
+        "state.contract_v4",
+        "state.contract_v5"
+      ],
+      "metrics": {
+        "configVersion": "7.0.4",
+        "contractVersion": "5.0.0",
+        "productionLocksVerifiedFalse": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_02",
+      "stepNumber": 2,
+      "stepName": "Timezone & Execution Window Calculation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:46.520308+07:00",
+      "completedAt": "2026-11-13T01:33:46.520324+07:00",
+      "inputReferences": [
+        "run_timestamp"
+      ],
+      "outputReferences": [
+        "state.t0_iso",
+        "state.window_24h_start",
+        "state.window_72h_start"
+      ],
+      "metrics": {
+        "timezone": "Asia/Ho_Chi_Minh (UTC+07:00)",
+        "executionT0": "2026-11-13T01:33:46.518678+07:00",
+        "window0To24hStart": "2026-11-12T01:33:46.518678+07:00",
+        "windowMax72hStart": "2026-11-10T01:33:46.518678+07:00"
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_03",
+      "stepNumber": 3,
+      "stepName": "Historical Event Registry Loading",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:46.520330+07:00",
+      "completedAt": "2026-11-13T01:33:46.530050+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/06_TESTS/fixtures",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/VERIFIED_NEWS_DATABASE.json"
+      ],
+      "outputReferences": [
+        "state.news_engine.dedup_engine.historical_events"
+      ],
+      "metrics": {
+        "historicalFixturesLoaded": 5,
+        "historicalEventsCount": 92,
+        "priorEditionEventsMapped": 18
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_04",
+      "stepNumber": 4,
+      "stepName": "Live News Candidate Discovery",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:46.530057+07:00",
+      "completedAt": "2026-11-13T01:33:50.071032+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/04_RAW_EVIDENCE"
+      ],
+      "outputReferences": [
+        "state.news_res.discovery"
+      ],
+      "metrics": {
+        "totalSnapshotsScanned": 456,
+        "uniqueCanonicalCandidates": 100,
+        "accessBlockedOrNonArticleCount": 9
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_05",
+      "stepNumber": 5,
+      "stepName": "Source Provenance Verification",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:50.071060+07:00",
+      "completedAt": "2026-11-13T01:33:50.071062+07:00",
+      "inputReferences": [
+        "state.news_res.discovery.rawCandidates"
+      ],
+      "outputReferences": [
+        "state.news_res.step05_sourceVerification"
+      ],
+      "metrics": {
+        "inputCount": 100,
+        "sourceVerifiedCount": 72,
+        "rejectedIrrelevantOrUnverifiedCount": 28,
+        "discoveredCandidatesCount": 109,
+        "actuallyRetrievedCount": 100,
+        "successfullyVerifiedCount": 72,
+        "rejectedSourcesCount": 77,
+        "accessBlockedCount": 9,
+        "selectedEligibleCount": 72
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_06",
+      "stepNumber": 6,
+      "stepName": "Timestamp & Freshness Window Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:50.071064+07:00",
+      "completedAt": "2026-11-13T01:33:50.071065+07:00",
+      "inputReferences": [
+        "state.news_res.step05_sourceVerification"
+      ],
+      "outputReferences": [
+        "state.news_res.step06_windowValidation"
+      ],
+      "metrics": {
+        "inputCount": 72,
+        "windowEligibleCount": 32,
+        "rejectedStaleOrInvalidCount": 40
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_07",
+      "stepNumber": 7,
+      "stepName": "Cross-Day & Intra-Day Deduplication",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:50.071066+07:00",
+      "completedAt": "2026-11-13T01:33:50.071068+07:00",
+      "inputReferences": [
+        "state.news_res.step06_windowValidation"
+      ],
+      "outputReferences": [
+        "state.news_res.step07_deduplication"
+      ],
+      "metrics": {
+        "inputCount": 32,
+        "dedupVerifiedCount": 26,
+        "duplicatesRemovedCount": 6
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_08",
+      "stepNumber": 8,
+      "stepName": "Financial Fact & Entity Binding Verification",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:33:50.071069+07:00",
+      "completedAt": "2026-11-13T01:33:50.071071+07:00",
+      "inputReferences": [
+        "state.news_res.step07_deduplication"
+      ],
+      "outputReferences": [
+        "state.news_res.step08_factVerification"
+      ],
+      "metrics": {
+        "factVerifiedCandidateCount": 23,
+        "totalRawFacts": 20,
+        "uniqueVerifiedFactsCount": 19,
+        "duplicateFactsInterceptedCount": 1,
+        "reboundEntitiesCount": 12,
+        "ambiguousOrUnverifiedEntitiesCount": 0
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_09",
+      "stepNumber": 9,
+      "stepName": "25-Event / 24h Quota Gate",
+      "status": "FAIL",
+      "startedAt": "2026-11-13T01:33:50.071072+07:00",
+      "completedAt": "2026-11-13T01:33:50.071075+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_10",
+      "stepNumber": 10,
+      "stepName": "Market Pulse Evidence Acquisition & Extraction",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071086+07:00",
+      "completedAt": "2026-11-13T01:33:50.071087+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/MARKET_PULSE_8.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/03_INDICATOR_CONFIG/market_pulse_indicator_specs.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/04_RAW_EVIDENCE"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_11",
+      "stepNumber": 11,
+      "stepName": "Market Pulse Verification & Freshness Evaluation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071088+07:00",
+      "completedAt": "2026-11-13T01:33:50.071089+07:00",
+      "inputReferences": [
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_12",
+      "stepNumber": 12,
+      "stepName": "Core Thesis Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071091+07:00",
+      "completedAt": "2026-11-13T01:33:50.071092+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_13",
+      "stepNumber": 13,
+      "stepName": "Connect the Dots Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071094+07:00",
+      "completedAt": "2026-11-13T01:33:50.071095+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_14",
+      "stepNumber": 14,
+      "stepName": "Macro-to-Micro Transmission Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071096+07:00",
+      "completedAt": "2026-11-13T01:33:50.071097+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_15",
+      "stepNumber": 15,
+      "stepName": "Payment Opportunity Radar Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071098+07:00",
+      "completedAt": "2026-11-13T01:33:50.071099+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_16",
+      "stepNumber": 16,
+      "stepName": "Financial Decision Intelligence Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071101+07:00",
+      "completedAt": "2026-11-13T01:33:50.071102+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_17",
+      "stepNumber": 17,
+      "stepName": "Evidence Crosswalk & Schema Validation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071104+07:00",
+      "completedAt": "2026-11-13T01:33:50.071105+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_18",
+      "stepNumber": 18,
+      "stepName": "Daily JSON Package Generation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071107+07:00",
+      "completedAt": "2026-11-13T01:33:50.071108+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle",
+        "state.crosswalk"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_19",
+      "stepNumber": 19,
+      "stepName": "Google Sheets Staging Dry-Run Validation",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071109+07:00",
+      "completedAt": "2026-11-13T01:33:50.071110+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/phase04b_staging_tables_readonly.json",
+        "state.payloads"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    },
+    {
+      "stepId": "STEP_20",
+      "stepNumber": 20,
+      "stepName": "Daily Execution Report & Release Audit",
+      "status": "BLOCKED",
+      "startedAt": "2026-11-13T01:33:50.071112+07:00",
+      "completedAt": "2026-11-13T01:33:50.071113+07:00",
+      "inputReferences": [
+        "state.payloads",
+        "state.sheets_bundle"
+      ],
+      "outputReferences": [],
+      "metrics": {},
+      "errorDetails": "BLOCKED_BY_UPSTREAM_FAILURE: STEP_09 (25-Event / 24h Quota Gate) -> RuntimeError: SHORTFALL_GATE_BLOCKED (SHORTFALL): Selected 23/25 unique verified events (shortfall of 2; zero fabrication enforced).; 0-24h freshness ratio is 0.00% (requires >= 80.00%)."
+    }
+  ]
+}

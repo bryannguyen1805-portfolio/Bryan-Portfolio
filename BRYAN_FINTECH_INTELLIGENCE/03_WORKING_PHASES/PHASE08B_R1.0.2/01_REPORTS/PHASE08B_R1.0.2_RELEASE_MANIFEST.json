@@ -1,0 +1,84 @@
+{
+  "phaseId": "PHASE08B",
+  "releaseId": "PHASE08B_R1.0.2",
+  "releaseVersion": "1.0.2-superseded-restored-r101-content",
+  "remediationTitle": "Phase 08B R1.0.2 Synced Package (Restored R1.0.1 Content Engine + Single Verbatim Press Quote + VnEconomy Nav Logo, Sticky Nav & Local Staging Guard)",
+  "releaseStatus": "CANDIDATE_READY_FOR_REVIEW",
+  "projectOwnerAcceptance": "PENDING_OWNER_ACCEPTANCE",
+  "productionStatus": "PROHIBITED_UNTIL_OWNER_ACCEPTANCE",
+  "generatedTimestamp": "2026-11-14T19:33:15+07:00",
+  "parentCandidatePhase": "PHASE08B_R1.0.1",
+  "parentCandidateSha256": "8317c3af2ff8d25b2606c5701e3769be293d7a07916b73ef669d97e8128a896f",
+  "parentBackupSha256": "b26789a4c8875a02775eb70dc4206ec3b3eca91fda065cbc5d135bce9ad57bc8",
+  "backupFileName": "PHASE08B_R1.0.2_BACKUP.zip",
+  "backupSha256": "b26789a4c8875a02775eb70dc4206ec3b3eca91fda065cbc5d135bce9ad57bc8",
+  "backupSizeBytes": 1529005,
+  "packageFileName": "PHASE08B_R1.0.2_CANDIDATE.zip",
+  "packageSha256": "9909ba0f0c3a27cdc05826d0ba174fc1463119677b85146e61a0a51c6e1caf75",
+  "packageSizeBytes": 1581993,
+  "packageFileCount": 44,
+  "canonicalEditionId": "ED-20261114-D01",
+  "canonicalEditionDate": "14/11/2026",
+  "canonicalEditionNumber": "ẤN BẢN SỐ 29",
+  "sourceChecksums": {
+    "index.html": "3ce9157fdb9dbf46e69b7a23ca53990fb1700957cd38276e8e841c08908cd293",
+    "magspread.css": "ffde219c942c5e0a124d6c79ba5a328236ccf50fdf4cb7f20ca3a14a0377cca4",
+    "magspread.js": "dd09cdca27cbfea98df0dbb67466fcbd25cb20595ed5c401ac61b4064724387f",
+    "edition-data.json": "949386de36e12ecb13bd356b60e7d8784407def4fca6f7d5b562203051518df6",
+    "edition-data.js": "18933f94766273d7ced0b0281af556e71df8e530396eb187a46eed6b39cec8ac",
+    "EVIDENCE_INDEX.json": "701e66fdecfe567adc1ef0934a1a2256b6ecefd3bf3d0479ccb9fd06a3b7863c",
+    "robots.txt": "6c13944aa03e1b6035bdb6a4991fdfaff4289c0a0d1b52e3129ffb5a72feba9e",
+    "sitemap.xml": "9dc9d8cc1843c90aeff22a0c2c2d6cfb5d2f22259944a04844fe931dd86c719d",
+    "bnews-logo-light-opt.webp": "bcc2a325a839960b3d1ef97254850390caae446038eefa6f331da7396f11",
+    "bnews-logo-dark-opt.webp": "d4cf70497795cc395598d8944a298d13abcddce8a44f72ba4f46147dec78dc9e",
+    "fintech-favicon-opt.webp": "2e558f17b1e5b234de25bd9ca9332aaa3911af130ce1a7a949c2d76e1941a24"
+  },
+  "defectsRemediated": {
+    "D-06_RestoredR101_SingleVerbatimQuote": "PASS: Restored R1.0.1 update_magspread_pilot_ui.py + ed29_editorial_content.py and standardized strictly to single verbatim source press quote (supportingQuote) across Cover Story, 25/25 news cards, and Article Reader drawer.",
+    "D-11_VnEconomyUiStickyLogoNav": "PASS: Relocated Bnews logo down into category strip replacing [B] badge; aligned desktop category bar on 1 row across 1024px & 1440px; preserved mobile overflow=0, overlaps=[], sticky top=0, 16px section alignment.",
+    "D-12_D13_SeoAndWebp": "PASS: Preserved robots.txt, sitemap.xml, WebP logos & favicon < 11 KB and PNG fallbacks < 28 KB.",
+    "ProdGuard_LocalStaging": "PASS: run_daily_edition.py & setup_daily_scheduler_9am.sh default to --mode local-staging (dry-run exit 0 BLOCKED; unapproved manual-release rejected exit 2); zero git push executed."
+  },
+  "testResults": {
+    "lighthouseDesktopScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100,
+      "passed": 59,
+      "failed": 0
+    },
+    "lighthouseMobileScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100,
+      "passed": 58,
+      "failed": 0
+    },
+    "performanceTraceMobile390": {
+      "lcpMs": 187,
+      "ttfbMs": 3,
+      "renderDelayMs": 183,
+      "cls": 0.0
+    },
+    "consoleErrors": 0,
+    "mobileOverflowDetected": false,
+    "desktop1024SingleRowNav": true,
+    "singlePressQuoteCardsCount": 25,
+    "drawerBlockquotesCount": 1
+  },
+  "deliverablesManifest": [
+    "PHASE08B_R1.0.2_BACKUP.zip",
+    "PHASE08B_R1.0.2_CANDIDATE.zip",
+    "PHASE08B_R1.0.2_RELEASE_MANIFEST.json",
+    "PHASE08B_R1.0.2_REMEDIATION_REPORT.md",
+    "PHASE08B_R1.0.2_UAT_REPORT.md",
+    "PHASE08B_R1.0.2_CONTENT_AUDIT.md",
+    "PHASE08B_R1.0.2_ACCESSIBILITY_REPORT.md",
+    "PHASE08B_R1.0.2_SEO_REPORT.md",
+    "PHASE08B_R1.0.2_RESPONSIVE_REPORT.md",
+    "PHASE08B_R1.0.2_PERFORMANCE_REPORT.md",
+    "PHASE08B_R1.0.2_REGRESSION_REPORT.md"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "editionDate": "2026-11-12",
+  "executionId": "EXEC-20261112-140739-5b03fbe4",
+  "executionMode": "OFFLINE",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "NOT_APPLICABLE",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "dataIntegrityChecks": {
+    "schemaValidationV400": "PASS",
+    "schemaValidationV500": "PASS",
+    "eventReferenceIntegrity": "PASS",
+    "financialFactEntityBindingAudit": "PASS",
+    "duplicateFactPreventionAudit": "PASS",
+    "marketPulseFreshnessAndTemporalHonesty": "PASS",
+    "newsVsMarketPulseSeparation": "PASS",
+    "googleSheetsDryRunIntegrity": "PASS",
+    "frontendCandidateContractCompatibility": "PASS"
+  },
+  "quotaAndFreshnessAccounting": {
+    "gatePassed": true,
+    "gateStatusCode": "PASS_25_EVENTS_24H_80PCT",
+    "targetEventCount": 25,
+    "selectedEventCount": 25,
+    "count0To24h": 20,
+    "count24To48h": 5,
+    "count48To72h": 0,
+    "countOver72h": 0,
+    "ratio0To24h": 0.8,
+    "requiredRatio0To24h": 0.8,
+    "shortfallReasons": [],
+    "coveredResearchDomains": [
+      "Banking & credit growth",
+      "Capital markets & VN-Index",
+      "Corporate bonds & capital raising",
+      "Deposit & lending interest rates",
+      "Exchange rate & FX",
+      "Global macro events affecting Vietnam",
+      "Interbank & liquidity",
+      "Macroeconomic policy",
+      "Retail, E-commerce, F&B, Hospitality, Tourism",
+      "Tax, compliance, fraud, cybersecurity"
+    ],
+    "publisherDistribution": {
+      "Tuổi Trẻ / tuoitre.vn": 6,
+      "Báo Đầu tư / baodautu.vn": 6,
+      "Thanh Niên / thanhnien.vn": 6,
+      "VnEconomy / vneconomy.vn": 2,
+      "CafeF / VCCorp": 5
+    }
+  },
+  "marketPulseStatusBreakdown": {
+    "totalIndicators": 8,
+    "verifiedNumericCount": 8,
+    "staleObservationCount": 0,
+    "qualitativeUpdateOnlyCount": 0
+  },
+  "factAuditSummary": {
+    "totalRawFacts": 28,
+    "uniqueVerifiedFacts": 28,
+    "duplicateFactsIntercepted": 0,
+    "entitiesReboundFromQuote": 0,
+    "ambiguousOrUnverifiedEntities": 0
+  }
+}

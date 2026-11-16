@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T16:15:00+07:00",
+  "newlyRegisteredEventsCount": 25,
+  "events": [
+    {
+      "eventId": "EVT-20261112-003",
+      "canonicalUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+      "headline": "Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T16:58:00+07:00",
+      "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed"
+    },
+    {
+      "eventId": "EVT-20261112-007",
+      "canonicalUrl": "https://thanhnien.vn/chu-dau-tu-sieu-cang-can-gio-duoc-phep-chia-co-tuc-bang-co-phieu-185261112161148748.htm",
+      "headline": "Chủ đầu tư siêu cảng Cần Giờ được phép chia cổ tức bằng cổ phiếu",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T16:59:00+07:00",
+      "evidenceSha256": "78a0feb0312e3e08abba0a1699f55e8124fde96817229d0eb3b86c0c983150bd"
+    },
+    {
+      "eventId": "EVT-20261112-011",
+      "canonicalUrl": "https://thanhnien.vn/co-phieu-fpt-tiep-tuc-bi-khoi-ngoai-xa-hang-thung-moc-50000-dong-co-phieu-185261112164411553.htm",
+      "headline": "Cổ phiếu FPT tiếp tục bị khối ngoại xả hàng, thủng mốc 50.000 đồng/cổ phiếu",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T17:00:00+07:00",
+      "evidenceSha256": "3ff09d783ab07b98263a1601b4d58d97ead540861aaf5406312140a19688aba9"
+    },
+    {
+      "eventId": "EVT-20261112-020",
+      "canonicalUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+      "headline": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T16:57:00+07:00",
+      "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648"
+    },
+    {
+      "eventId": "EVT-20261112-021",
+      "canonicalUrl": "https://vneconomy.vn/hon-90-doanh-nghiep-nho-va-vua-co-the-duoc-lua-chon-cach-tinh-thue.htm",
+      "headline": "Hơn 90% doanh nghiệp nhỏ và vừa có thể được lựa chọn cách tính thuế",
+      "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+      "publishedAt": "2026-11-12T16:15:07+07:00",
+      "evidenceSha256": "7084ea94858ce2595becc486c84d39863867c4afb0af0d2d81febe8c452f1705"
+    },
+    {
+      "eventId": "EVT-20261112-048",
+      "canonicalUrl": "https://cafef.vn/khong-chi-san-gia-hoi-nguoi-tieu-dung-dang-co-them-cach-de-loi-hon-moi-lan-mua-sam-188261112162341652.chn",
+      "headline": "Không chỉ săn giá hời, người tiêu dùng đang có thêm cách để \"lời\" hơn mỗi lần mua sắm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-12T16:23:00+07:00",
+      "evidenceSha256": "5fcf8899232576f4e78d39d97296385ac79fc86cdeea1870c41e8d0e1e9c1cf7"
+    },
+    {
+      "eventId": "EVT-20261112-016",
+      "canonicalUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+      "headline": "Nợ thuế tăng gấp đôi, hơn một nửa là tiền sử dụng đất",
+      "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+      "publishedAt": "2026-11-12T16:13:52+07:00",
+      "evidenceSha256": "60c92935daf67a583ccde628f721dd0bd2d47847379eb4557ab2756935d7e6ae"
+    },
+    {
+      "eventId": "EVT-20261112-019",
+      "canonicalUrl": "https://tuoitre.vn/nvidia-boc-hoi-hon-450-ti-usd-von-hoa-anh-huong-hang-trieu-tai-khoan-huu-tri-my-10026111215384323.htm",
+      "headline": "Nvidia bốc hơi hơn 450 tỉ USD vốn hóa, ảnh hưởng hàng triệu tài khoản hưu trí Mỹ",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T16:08:00+07:00",
+      "evidenceSha256": "df9e4dc142956e948af4efab1ccda935464f1f528a41901cb69ba0bd87234565"
+    },
+    {
+      "eventId": "EVT-20261112-053",
+      "canonicalUrl": "https://cafef.vn/canh-bao-khan-toi-nguoi-dan-bay-tai-khoan-ngan-hang-tuyet-doi-khong-cho-muon-cho-thue-188261112134940751.chn",
+      "headline": "Cảnh báo khẩn tới người dân \"bẫy\" tài khoản ngân hàng: Tuyệt đối không cho mượn, cho thuê!",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-12T16:06:00+07:00",
+      "evidenceSha256": "9d81d1842f34f870cc862228008af3e16b7dc05ce0a564e5eb830dff6f98878b"
+    },
+    {
+      "eventId": "EVT-20261112-025",
+      "canonicalUrl": "https://thanhnien.vn/vpbank-house-of-diamond-khi-su-du-day-bat-nguon-tu-su-can-bang-ben-trong-185261112160907597.htm",
+      "headline": "VPBank 'House of Diamond': Khi sự đủ đầy bắt nguồn từ sự cân bằng bên trong",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T16:01:00+07:00",
+      "evidenceSha256": "27fb420004d8dc9b3231e06a97cbcceb0d4cad6c102b5840318f4ebbeb84eb9d"
+    },
+    {
+      "eventId": "EVT-20261112-030",
+      "canonicalUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+      "headline": "NCB cảnh báo 3 thủ đoạn đánh cắp thông tin thẻ, tài khoản",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T15:51:00+07:00",
+      "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794"
+    },
+    {
+      "eventId": "EVT-20261112-029",
+      "canonicalUrl": "https://tuoitre.vn/doanh-nghiep-nhat-tim-co-hoi-mo-rong-dau-tu-ket-noi-nhan-luc-tai-tphcm-100261112142429565.htm",
+      "headline": "Doanh nghiệp Nhật tìm cơ hội mở rộng đầu tư, kết nối nhân lực tại TP.HCM",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T15:38:00+07:00",
+      "evidenceSha256": "93714b141071539c84472f6892e7b0316ddc2f197a91e1d21c9f82054b985e60"
+    },
+    {
+      "eventId": "EVT-20261112-040",
+      "canonicalUrl": "https://thanhnien.vn/gia-xang-dau-moi-nhat-ap-dung-tu-15-gio-hom-nay-1211-185261112145042422.htm",
+      "headline": "Giá xăng dầu mới nhất, áp dụng từ 15 giờ hôm nay 12.11",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T15:08:00+07:00",
+      "evidenceSha256": "8979aec08ccd67e32add7785d947c20348d53d53fcf68a609da3fae33fb3aff6"
+    },
+    {
+      "eventId": "EVT-20261112-010",
+      "canonicalUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+      "headline": "TP.HCM vào mùa 'sale', nhưng săn thế nào cho đáng tiền?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T15:00:00+07:00",
+      "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738"
+    },
+    {
+      "eventId": "EVT-20261112-017",
+      "canonicalUrl": "https://baodautu.vn/fpt-voi-ong-lon-nhat-ban-cung-dau-tu-nha-may-dong-goi-kiem-thu-chip-nho-tai-viet-nam-d742341.html",
+      "headline": "FPT “vời” ông lớn Nhật Bản cùng đầu tư nhà máy đóng gói, kiểm thử chip nhớ tại Việt Nam",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T14:58:00+07:00",
+      "evidenceSha256": "7f16ca4767ad291e33d2502de6496820ec3f3ccb4cf37879a33e15ee5341dd26"
+    },
+    {
+      "eventId": "EVT-20261112-006",
+      "canonicalUrl": "https://tuoitre.vn/tu-15h-gia-xang-dau-tiep-tuc-giam-co-mat-hang-giam-gan-2300-dong-100261112090659368.htm",
+      "headline": "Từ 15h, giá xăng dầu tiếp tục giảm, có mặt hàng giảm gần 2.300 đồng",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T14:42:00+07:00",
+      "evidenceSha256": "31ddb21e9f7217b855ab6b135f94fb167a83ec3408d564d7883ca47a625f78d7"
+    },
+    {
+      "eventId": "EVT-20261112-026",
+      "canonicalUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+      "headline": "Giá vàng trong nước giảm mạnh liên tiếp ba phiên",
+      "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+      "publishedAt": "2026-11-12T14:04:27+07:00",
+      "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8"
+    },
+    {
+      "eventId": "EVT-20261112-050",
+      "canonicalUrl": "https://thanhnien.vn/momo-thang-lon-tai-ai-awards-2026-nho-trai-nghiem-tai-chinh-so-an-tam-an-toan-185261112140802389.htm",
+      "headline": "MoMo thắng lớn tại AI Awards 2026 nhờ trải nghiệm tài chính số an tâm, an toàn",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T13:57:00+07:00",
+      "evidenceSha256": "612d56c553b7d74bafb733750a00bed70421e570ef4989fc57a220511512b657"
+    },
+    {
+      "eventId": "EVT-20261112-058",
+      "canonicalUrl": "https://cafef.vn/mot-ngan-hang-nho-bat-ngo-vuot-bidv-de-lot-top-5-nha-bang-co-ty-trong-tien-gui-gia-re-dan-dau-cung-mb-vietcombank-techcombank-vietinbank-188261112125252795.chn",
+      "headline": "Một ngân hàng nhỏ bất ngờ vượt BIDV để lọt Top 5 nhà băng có tỷ trọng tiền gửi giá rẻ dẫn đầu cùng MB, Vietcombank, Techcombank, VietinBank",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-12T13:56:00+07:00",
+      "evidenceSha256": "1b5e63e1f7a470f8931358eeb0d5e12716ea37d7ce5f4355cb896eb5ecc1b2a9"
+    },
+    {
+      "eventId": "EVT-20261112-055",
+      "canonicalUrl": "https://thanhnien.vn/go-vuong-cap-so-hong-cho-can-ho-condotel-185261112095659623.htm",
+      "headline": "Gỡ vướng cấp sổ hồng cho căn hộ condotel",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-12T13:50:00+07:00",
+      "evidenceSha256": "c642dc57be351895296b62cb63334a1e5ba464381611eb82ff04d4fb6444feb8"
+    },
+    {
+      "eventId": "EVT-20261112-044",
+      "canonicalUrl": "https://tuoitre.vn/pnj-va-nlg-bat-ngo-duoc-vao-ro-chi-so-cua-msci-100261112120556298.htm",
+      "headline": "PNJ và NLG bất ngờ được vào rổ chỉ số của MSCI",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T12:34:00+07:00",
+      "evidenceSha256": "838d1046040e796bb53042d48e832f91cb6cac26e79cb27d88add5f6b0caea94"
+    },
+    {
+      "eventId": "EVT-20261112-049",
+      "canonicalUrl": "https://tuoitre.vn/hdbank-vietjet-va-vikki-dong-hanh-mua-mua-sam-cuoi-nam-tphcm-100261112111940072.htm",
+      "headline": "HDBank, Vietjet và Vikki đồng hành mùa mua sắm cuối năm TP.HCM",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T11:59:00+07:00",
+      "evidenceSha256": "b049fc5038bceb26022d21d133245114df0e80b386d14912520b9b85fdcc04f6"
+    },
+    {
+      "eventId": "EVT-20261112-022",
+      "canonicalUrl": "https://baodautu.vn/bo-truong-ngo-van-tuan-tra-loi-chat-van-ve-dau-tu-cong-d742249.html",
+      "headline": "Bộ trưởng Ngô Văn Tuấn trả lời chất vấn về đầu tư công",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T11:53:00+07:00",
+      "evidenceSha256": "dd854ac4554400c3f14ebe1a03e20f9c282fe50920d341d4d09923a52ca2e41b"
+    },
+    {
+      "eventId": "EVT-20261112-059",
+      "canonicalUrl": "https://tuoitre.vn/vietinbank-premium-ra-mat-ba-hang-uu-tien-mo-rong-quyen-loi-cho-ca-gia-dinh-100261112115014242.htm",
+      "headline": "VietinBank Premium ra mắt ba hạng ưu tiên, mở rộng quyền lợi cho cả gia đình",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T11:30:00+07:00",
+      "evidenceSha256": "fb22cff52071cbdf3326f681f95fc2c4d748c92d7dc76dc7439190af8e4b2b45"
+    },
+    {
+      "eventId": "EVT-20261112-012",
+      "canonicalUrl": "https://baodautu.vn/droppii-va-hanh-trinh-8-nam-voi-vai-tro-hau-phuong-kinh-doanh-d742343.html",
+      "headline": "Droppii và hành trình 8 năm với vai trò “hậu phương kinh doanh”",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T11:00:00+07:00",
+      "evidenceSha256": "9103e427853775cc117fa363dff940be74f63ab2cfa810680dc2be4c82d56884"
+    }
+  ]
+}

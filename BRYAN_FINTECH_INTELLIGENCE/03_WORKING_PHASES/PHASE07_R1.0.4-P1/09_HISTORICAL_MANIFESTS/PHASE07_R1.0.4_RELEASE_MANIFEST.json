@@ -1,0 +1,63 @@
+{
+  "phaseId": "PHASE07",
+  "releaseId": "PHASE07_R1.0.4",
+  "releaseVersion": "1.0.4",
+  "remediationTitle": "Phase 07 Final Functional Remediation & Evidence-Driven Financial Intelligence",
+  "releaseStatus": "RELEASE_CANDIDATE",
+  "projectOwnerAcceptance": "PENDING",
+  "productionStatus": "NOT_APPROVED",
+  "generatedTimestamp": "2026-11-11T22:21:42.144639+07:00",
+  "parentAcceptedPhase": "PHASE06_R1.0.0",
+  "parentAcceptedSha256": "d2f8672ff07bad36c9811906f69977a6d716de73d6685d874bd6a5ca53510bc9",
+  "parentBaselineReleaseId": "PHASE06_R1.0.0",
+  "parentBaselineSha256": "d2f8672ff07bad36c9811906f69977a6d716de73d6685d874bd6a5ca53510bc9",
+  "remediationBaselineReleaseId": "PHASE07_R1.0.3_REMEDIATION_BASELINE",
+  "remediationBaselineSha256": "5812b35c56cb7565aff73eca8a300b71ea078763baddb5d8763f25c99fac0db3",
+  "sourceCodeVersion": "5.0.0-r104",
+  "dataContractVersion": "5.0.0",
+  "canonicalPilotEditionId": "ED-20261110-D01",
+  "testResults": {
+    "phase06BaselineTests": 22,
+    "phase07RuntimeTests": 22,
+    "phase07R101RemediationTests": 19,
+    "phase07R102RemediationTests": 18,
+    "phase07R103RemediationTests": 17,
+    "phase07R104RemediationTests": 15,
+    "totalTests": 113,
+    "passedTests": 113,
+    "failedTests": 0,
+    "passRatePercent": 100.0,
+    "reproducibleFromExtractedPackage": true
+  },
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "LIVE_RETRIEVAL_PASS",
+    "sourceProvenanceIntegrity": "HASH_PARITY_100PCT_PASS",
+    "dynamicFinancialIntelligence": "DYNAMIC_SYNTHESIS_PASS",
+    "marketPulseDynamicDiscovery": "STEP10_ORCHESTRATOR_PASS",
+    "googleSheetsDryRunReadiness": "STAGING_DRY_RUN_PASS",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "remediationSummary": {
+    "WS_01_liveNewsAcquisitionAndProvenance": "PASS: Bidirectional Collector ledger normalization (rawRecord preserved), live candidate propagation into candidate pool, current execution ID provenance check, post-cutoff evidence segregation",
+    "WS_02_genuineDynamicFinancialIntelligence": "PASS: Structured claims layer (CLAIMS_LAYER.json), verifiedEntity propagation across all fact audits, dynamic contradiction detection (counterEvidenceEventIds), strict semantic relevance on payment radar",
+    "WS_03_genuineMarketPulseLiveDiscovery": "PASS: Step 10 executes actual HTTP discovery searches across all 8 indicators, honest ACCESS_BLOCKED logging without fabrication, periodic truth retention (LATEST_OBSERVATION_RETAINED)",
+    "WS_04_publicationQualityGateAndGovernance": "PASS: Orchestrator integration of claim layer and discovery audit, combined-edition.json strictly deterministic across repeated runs, offline mode sets publicationAllowed=false and liveRetrievalReadiness=NOT_APPLICABLE",
+    "WS_05_releaseGovernanceAndBackupIntegrity": "PASS: Clean archive segregation, 09_HISTORICAL_MANIFESTS isolation, independent RC and backup archives, clean-room 113/113 test validation"
+  },
+  "productionSafetyLocks": {
+    "cronScheduleAllowed": false,
+    "emailDistributionAllowed": false,
+    "googleSheetsLiveWriteAllowed": false,
+    "productionDeployAllowed": false,
+    "gitPushAllowed": false
+  },
+  "packageFileName": "PHASE07_R1.0.4_RELEASE_CANDIDATE.zip",
+  "packageSha256": "51d871e0d031f975cda3429ff15313be9818b332094d384aaf15b427e5775b74",
+  "packageSizeBytes": 120794188,
+  "backupFileName": "PHASE07_R1.0.4_BACKUP.zip",
+  "backupSha256": "51d871e0d031f975cda3429ff15313be9818b332094d384aaf15b427e5775b74",
+  "backupSizeBytes": 120794188,
+  "totalManifestEntries": 3925
+}

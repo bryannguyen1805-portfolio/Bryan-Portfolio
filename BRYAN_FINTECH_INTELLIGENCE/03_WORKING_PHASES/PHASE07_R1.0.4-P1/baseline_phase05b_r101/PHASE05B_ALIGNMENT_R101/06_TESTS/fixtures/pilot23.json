@@ -1,0 +1,82 @@
+{
+  "editionId": "EDITION-2026-11-06-PILOT23",
+  "editionNumber": "Ấn bản số 22",
+  "editionDate": "2026-11-06",
+  "theme": "Thanh khoản khớp lệnh HOSE và dòng vốn khối ngoại mua ròng trở lại",
+  "status": "ARCHIVED",
+  "eligibleCount": 25,
+  "newsList": [
+    {
+      "eventId": "EVT-01",
+      "canonicalUrl": "https://cafef.vn/khoi-ngoai-bat-ngo-mua-rong-chung-khoan-van-chim-trong-sac-do-188261106172625659.chn",
+      "normalizedTitle": "khoi ngoai bat ngo mua rong chung khoan van chim trong sac o",
+      "publicationDate": "2026-11-06T17:49:00+07:00",
+      "status": "pilot_draft",
+      "timeWindow": "24–48h",
+      "timeDeltaFromT0": "42h35m",
+      "contentSha256": "09ec07ac60efd4198218b2ec71e3fcf14c769a1c1e51b8ebe7171aa11d8498dd",
+      "category": "Thị trường vốn",
+      "lifecycleNote": "Sự kiện EVT-01 đã được kiểm định và khắc phục theo QA Remediation V2.2.1"
+    },
+    {
+      "eventId": "EVT-03",
+      "canonicalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-6-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-18826110620433468.chn",
+      "normalizedTitle": "lai suat ngan hang big 4 va vpbank giu vung phong o",
+      "publicationDate": "2026-11-06T21:52:00+07:00",
+      "status": "corrected_pilot_draft",
+      "timeWindow": "24–48h",
+      "timeDeltaFromT0": "38h32m",
+      "contentSha256": "b88a2e68c360c663209542a0c7162dd087544b71f03a0397ea402ec9303764ff",
+      "category": "Ngân hàng",
+      "lifecycleNote": "Sự kiện EVT-03 đã được kiểm định và khắc phục theo QA Remediation V2.2.1"
+    },
+    {
+      "eventId": "EVT-04",
+      "canonicalUrl": "https://cafef.vn/mo-rong-la-chan-bao-ve-giao-dich-tai-chinh-so-188261106215625179.chn",
+      "normalizedTitle": "mo rong la chan bao ve giao dich tai chinh so",
+      "publicationDate": "2026-11-06T23:09:00+07:00",
+      "status": "pilot_draft",
+      "timeWindow": "24–48h",
+      "timeDeltaFromT0": "37h15m",
+      "contentSha256": "c4aa81596204ae1af840f76491ab50a5dcade816bfdae05a4332a4df4f1611cb",
+      "category": "Công nghệ & An ninh mạng",
+      "lifecycleNote": "Sự kiện EVT-04 đã được kiểm định và khắc phục theo QA Remediation V2.2.1"
+    },
+    {
+      "eventId": "EVT-05",
+      "canonicalUrl": "https://cafef.vn/ngan-hang-khuyen-cao-khach-hang-khong-chup-anh-man-hinh-co-thong-tin-sau-18826110614032535.chn",
+      "normalizedTitle": "ngan hang khuyen cao khach hang canh giac ma oc darksword tan cong ios",
+      "publicationDate": "2026-11-06T15:21:00+07:00",
+      "status": "pilot_draft",
+      "timeWindow": "24–48h",
+      "timeDeltaFromT0": "45h03m",
+      "contentSha256": "218fbca6d9e401844fb8c5838d34eb58a6fdfe7e702e01bccbfe88bec1be18b1",
+      "category": "An ninh mạng",
+      "lifecycleNote": "Sự kiện EVT-05 đã được kiểm định và khắc phục theo QA Remediation V2.2.1"
+    },
+    {
+      "eventId": "EVT-P04A-011",
+      "canonicalUrl": "https://cafef.vn/du-no-cho-vay-ngoai-te-tai-tphcm-tang-42-188261106224042313.chn",
+      "sourceUrl": "https://cafef.vn/du-no-cho-vay-ngoai-te-tai-tphcm-tang-42-188261106224042313.chn",
+      "headline": "Dư nợ cho vay ngoại tệ tại TPHCM tăng 42%",
+      "normalizedTitle": "Dư nợ cho vay ngoại tệ tại TPHCM tăng 42%",
+      "eventDate": "2026-11-06",
+      "publicationDate": "2026-11-06T22:40:00+07:00",
+      "sha256": "9fbe94a9370d550581e01102051126f0c4e9daf3752e09fee0616d13e5bbced4",
+      "status": "verified_phase04a",
+      "registeredAt": "2026-11-09T00:25:33.696001+07:00"
+    },
+    {
+      "eventId": "EVT-P04A-012",
+      "canonicalUrl": "https://cafef.vn/du-dia-giam-lai-suat-con-den-dau-188261106215141875.chn",
+      "sourceUrl": "https://cafef.vn/du-dia-giam-lai-suat-con-den-dau-188261106215141875.chn",
+      "headline": "Dư địa giảm lãi suất còn đến đâu?",
+      "normalizedTitle": "Dư địa giảm lãi suất còn đến đâu?",
+      "eventDate": "2026-11-06",
+      "publicationDate": "2026-11-06T21:51:00+07:00",
+      "sha256": "2bbe20e9c5a9aadb995cb24a2f527ae81dd5d88f64b0a18ae2c90417e260252e",
+      "status": "verified_phase04a",
+      "registeredAt": "2026-11-09T00:25:34.486032+07:00"
+    }
+  ]
+}

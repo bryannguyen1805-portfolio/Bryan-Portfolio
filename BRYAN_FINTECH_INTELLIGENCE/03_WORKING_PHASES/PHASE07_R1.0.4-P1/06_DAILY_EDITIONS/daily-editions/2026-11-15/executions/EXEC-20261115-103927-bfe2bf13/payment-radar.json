@@ -1,0 +1,460 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261115-D01",
+  "generatedAt": "2026-11-15T10:39:27.548385+07:00",
+  "signals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261115-045",
+        "EVT-20261115-015",
+        "EVT-20261115-009",
+        "EVT-20261115-058",
+        "EVT-20261115-059"
+      ],
+      "supportingEventIds": [
+        "EVT-20261115-045",
+        "EVT-20261115-015",
+        "EVT-20261115-009",
+        "EVT-20261115-058",
+        "EVT-20261115-059"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261115-045",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
+          "canonicalUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-15T07:48:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_048_1910bee1a4.html",
+          "evidenceSha256": "1910bee1a42f47f21c9a809bb7c235079dfb25e4574eed3c94636f5c0da716ba",
+          "supportingQuote": "Giá vàng trong nước và thế giới đều giảm mạnh trong tuần khiến người mua lỗ nặng."
+        },
+        {
+          "referenceId": "EVT-20261115-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/thuong-tet-som-de-kich-cau-tieu-dung-185261114223559026.htm",
+          "canonicalUrl": "https://thanhnien.vn/thuong-tet-som-de-kich-cau-tieu-dung-185261114223559026.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-15T06:19:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_018_191c2d6b7a.html",
+          "evidenceSha256": "191c2d6b7ad2870834697d6bcc4348149a7e25357d4b6e4ff355a8be2e687fa4",
+          "supportingQuote": "Còn 3 tháng nữa là đến Tết Nguyên đán Đinh Mùi 2027, câu chuyện thưởng tết bắt đầu nóng lên khi Bộ Nội vụ mới đây yêu cầu các địa phương sớm tổng hợp kế hoạch thưởng của doanh nghi"
+        },
+        {
+          "referenceId": "EVT-20261115-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_011_aceddc6cef.html",
+          "evidenceSha256": "aceddc6cefbc91f2eeb48900fc3d3b0c79444c44a6a7b1eb30f2e93603b4cd27",
+          "supportingQuote": "Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhâ"
+        },
+        {
+          "referenceId": "EVT-20261115-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_7e8e57a8af.html",
+          "evidenceSha256": "7e8e57a8aff197bc7b176a19dd591d0cc7b6c04c6038d4756c882df323d9a13e",
+          "supportingQuote": "Gửi tại quầy: VPBank niêm yết lãi suất 6,3%/năm Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối vớ"
+        },
+        {
+          "referenceId": "EVT-20261115-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
+          "canonicalUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T17:04:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_3af1ed527c.html",
+          "evidenceSha256": "3af1ed527cb0a9684493a940df2f7fe0203f0cabc62dea4cb54d2b7a27508110",
+          "supportingQuote": "Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện hưởng ứng Ngày Thương mại điện tử quốc gia (12-12) và Tuần lễ Thương mại điện"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-12",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_4a06cc549a.html",
+          "evidenceSha256": "4a06cc549a7437504b54705443a14c3809971faf6b32e3e0d4d11f34740136d1"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Theo dõi Thanh khoản Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "sector": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "paymentDomain": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "targetSegment": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "actualMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "marketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "verifiedMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "merchantProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "businessProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "paymentImplication": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantPaymentSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "opportunity": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "targetPartnerType": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "commercialRationale": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooSolutionRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "commercialRelevance": "NONE",
+      "priority": "P3_MONITOR_ONLY",
+      "opportunityType": "NO_DIRECT_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung.",
+      "recommendedMonitoring": [
+        "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung."
+      ],
+      "triggerEventIds": [
+        "EVT-20261115-010"
+      ],
+      "supportingEventIds": [
+        "EVT-20261115-010"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-08"
+      ],
+      "marketDrivers": [
+        "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+        "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại."
+      ],
+      "merchantImpact": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261115-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
+          "canonicalUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T22:51:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_76c9e055ca.html",
+          "evidenceSha256": "76c9e055ca8efe7716aded31dc79369808be72674cbcb487de6569e32a0a31fe",
+          "supportingQuote": "Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa công bố, nhiều doanh nghiệp đã bị xử phạt trong lĩnh vực trái phiếu."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25637",
+          "unit": "VND/USD",
+          "observationPeriod": "2026-11-14",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_6f4a2df89c.html",
+          "evidenceSha256": "6f4a2df89cc3bce9fc482c3bad8b610dfeea46c2c62f714d77520abf5ab2a7c0"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "observationPeriod": "2026-09-21",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a4a641f69f.html",
+          "evidenceSha256": "a4a641f69f7db81ea1f9091283d59b219d4721bcf93b67cd6781106b1b468fc2"
+        }
+      ]
+    }
+  ],
+  "radarSignals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261115-045",
+        "EVT-20261115-015",
+        "EVT-20261115-009",
+        "EVT-20261115-058",
+        "EVT-20261115-059"
+      ],
+      "supportingEventIds": [
+        "EVT-20261115-045",
+        "EVT-20261115-015",
+        "EVT-20261115-009",
+        "EVT-20261115-058",
+        "EVT-20261115-059"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261115-045",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
+          "canonicalUrl": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-15T07:48:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_048_1910bee1a4.html",
+          "evidenceSha256": "1910bee1a42f47f21c9a809bb7c235079dfb25e4574eed3c94636f5c0da716ba",
+          "supportingQuote": "Giá vàng trong nước và thế giới đều giảm mạnh trong tuần khiến người mua lỗ nặng."
+        },
+        {
+          "referenceId": "EVT-20261115-015",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/thuong-tet-som-de-kich-cau-tieu-dung-185261114223559026.htm",
+          "canonicalUrl": "https://thanhnien.vn/thuong-tet-som-de-kich-cau-tieu-dung-185261114223559026.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-15T06:19:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_018_191c2d6b7a.html",
+          "evidenceSha256": "191c2d6b7ad2870834697d6bcc4348149a7e25357d4b6e4ff355a8be2e687fa4",
+          "supportingQuote": "Còn 3 tháng nữa là đến Tết Nguyên đán Đinh Mùi 2027, câu chuyện thưởng tết bắt đầu nóng lên khi Bộ Nội vụ mới đây yêu cầu các địa phương sớm tổng hợp kế hoạch thưởng của doanh nghi"
+        },
+        {
+          "referenceId": "EVT-20261115-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_011_aceddc6cef.html",
+          "evidenceSha256": "aceddc6cefbc91f2eeb48900fc3d3b0c79444c44a6a7b1eb30f2e93603b4cd27",
+          "supportingQuote": "Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhâ"
+        },
+        {
+          "referenceId": "EVT-20261115-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-15-11-gui-ky-han-6-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261114225800103.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_7e8e57a8af.html",
+          "evidenceSha256": "7e8e57a8aff197bc7b176a19dd591d0cc7b6c04c6038d4756c882df323d9a13e",
+          "supportingQuote": "Gửi tại quầy: VPBank niêm yết lãi suất 6,3%/năm Theo các biểu lãi suất được tổng hợp cho ngày 15/11, VPBank niêm yết lãi suất tiền gửi tại quầy kỳ hạn 6 tháng ở mức 6,3%/năm đối vớ"
+        },
+        {
+          "referenceId": "EVT-20261115-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
+          "canonicalUrl": "https://tuoitre.vn/thuong-mai-dien-tu-viet-nam-lan-dau-co-ngay-quoc-gia-12-12-100261114163307772.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T17:04:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_3af1ed527c.html",
+          "evidenceSha256": "3af1ed527cb0a9684493a940df2f7fe0203f0cabc62dea4cb54d2b7a27508110",
+          "supportingQuote": "Ngày 14-11, tại TP.HCM, Cục Thương mại điện tử (Bộ Công Thương) tổ chức họp báo công bố chuỗi sự kiện hưởng ứng Ngày Thương mại điện tử quốc gia (12-12) và Tuần lễ Thương mại điện"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-12",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_4a06cc549a.html",
+          "evidenceSha256": "4a06cc549a7437504b54705443a14c3809971faf6b32e3e0d4d11f34740136d1"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Theo dõi Thanh khoản Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "sector": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "paymentDomain": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "targetSegment": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "actualMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "marketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "verifiedMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "merchantProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "businessProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "paymentImplication": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantPaymentSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "opportunity": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "targetPartnerType": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "commercialRationale": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooSolutionRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "commercialRelevance": "NONE",
+      "priority": "P3_MONITOR_ONLY",
+      "opportunityType": "NO_DIRECT_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung.",
+      "recommendedMonitoring": [
+        "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung."
+      ],
+      "triggerEventIds": [
+        "EVT-20261115-010"
+      ],
+      "supportingEventIds": [
+        "EVT-20261115-010"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-08"
+      ],
+      "marketDrivers": [
+        "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+        "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại."
+      ],
+      "merchantImpact": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261115-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
+          "canonicalUrl": "https://tuoitre.vn/loat-doanh-nghiep-dia-oc-bi-phat-vi-vi-pham-cong-bo-thong-tin-trai-phieu-100261114222820525.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-14T22:51:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_76c9e055ca.html",
+          "evidenceSha256": "76c9e055ca8efe7716aded31dc79369808be72674cbcb487de6569e32a0a31fe",
+          "supportingQuote": "Theo các quyết định của Thanh tra Chứng khoán Nhà nước (Ủy ban Chứng khoán Nhà nước) vừa công bố, nhiều doanh nghiệp đã bị xử phạt trong lĩnh vực trái phiếu."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25637",
+          "unit": "VND/USD",
+          "observationPeriod": "2026-11-14",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_6f4a2df89c.html",
+          "evidenceSha256": "6f4a2df89cc3bce9fc482c3bad8b610dfeea46c2c62f714d77520abf5ab2a7c0"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "observationPeriod": "2026-09-21",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a4a641f69f.html",
+          "evidenceSha256": "a4a641f69f7db81ea1f9091283d59b219d4721bcf93b67cd6781106b1b468fc2"
+        }
+      ]
+    }
+  ],
+  "totalSignals": 2,
+  "verifiedOrEmergingOpportunitiesCount": 0,
+  "potentialOpportunitiesCount": 1,
+  "noDirectOpportunityCount": 1,
+  "commercialCoverage": "PRIORITY_PAYMENT_SECTORS_EVALUATED",
+  "modelProviderStatus": "MODEL_PROVIDER_UNAVAILABLE"
+}

@@ -1,0 +1,91 @@
+{
+  "executionTime": "2026-11-09T00:38:08.948174+07:00",
+  "authStatus": "NO_CREDENTIALS_PROVIDED",
+  "totalTabs": 7,
+  "totalStagedRows": 155,
+  "validationResults": {
+    "EDITIONS": {
+      "rowCount": 3,
+      "expectedColumns": 15,
+      "actualColumns": 15,
+      "primaryKeys": [
+        "editionId"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "NEWS_EVENTS": {
+      "rowCount": 21,
+      "expectedColumns": 20,
+      "actualColumns": 20,
+      "primaryKeys": [
+        "editionId",
+        "eventId"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "EDITORIAL_SECTIONS": {
+      "rowCount": 5,
+      "expectedColumns": 11,
+      "actualColumns": 11,
+      "primaryKeys": [
+        "editionId",
+        "sectionKey"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "MARKET_PULSE_HISTORY": {
+      "rowCount": 8,
+      "expectedColumns": 14,
+      "actualColumns": 14,
+      "primaryKeys": [
+        "editionId",
+        "indicatorId"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "EVENT_REGISTRY": {
+      "rowCount": 67,
+      "expectedColumns": 13,
+      "actualColumns": 13,
+      "primaryKeys": [
+        "eventId"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "SOURCE_LEDGER": {
+      "rowCount": 50,
+      "expectedColumns": 12,
+      "actualColumns": 12,
+      "primaryKeys": [
+        "collectionRunId",
+        "sourceUrl"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    },
+    "PUBLISH_AUDIT": {
+      "rowCount": 1,
+      "expectedColumns": 12,
+      "actualColumns": 12,
+      "primaryKeys": [
+        "auditLogId"
+      ],
+      "duplicatePks": 0,
+      "missingHeaders": [],
+      "status": "PASS"
+    }
+  },
+  "allTabsPassed": true,
+  "stagingOutputFile": "pilot-output/phase04b-sheets-staging/staging_tables.json"
+}

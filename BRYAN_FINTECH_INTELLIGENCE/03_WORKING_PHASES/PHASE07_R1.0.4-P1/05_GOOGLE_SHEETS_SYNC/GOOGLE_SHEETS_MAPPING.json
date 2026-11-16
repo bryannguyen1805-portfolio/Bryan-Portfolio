@@ -1,0 +1,125 @@
+{
+  "mappingVersion": "6.0.0",
+  "editionId": "ED-20261110-D01",
+  "writeApiEnabled": false,
+  "stagingMutationAllowed": false,
+  "tabs": {
+    "EDITIONS": {
+      "primaryKey": [
+        "editionId"
+      ],
+      "sourceArtifact": "daily-editions/2026-11-10/edition-manifest.json",
+      "fieldMappings": {
+        "editionId": "editionManifest.editionId",
+        "editionNumber": "editionManifest.editionTitle",
+        "editionDate": "editionManifest.editionDate",
+        "displayDate": "editionManifest.displayDate",
+        "cutoffTime": "editionManifest.generatedAt",
+        "publicationStatus": "'PREVIEW_ONLY' (since 16/25 in 0-24h)",
+        "gateStatus": "'FAIL_SHORTFALL_24H_PREVIEW_ONLY'",
+        "freshnessRatio": "verifiedNews.freshnessSummary.ratio0to24h formatted %",
+        "eligibleCount": "verifiedNews.totalVerifiedEvents (18)",
+        "count0To24h": "verifiedNews.freshnessSummary.count0to24h (16)",
+        "count24To48h": "verifiedNews.freshnessSummary.count24to48h (1)",
+        "count48To72h": "verifiedNews.freshnessSummary.count48to72h (1)",
+        "leadStoryTitle": "coreThesis.theses[0].title",
+        "macroTheme": "coreThesis.theses[1].title",
+        "archivedAt": "dryRunExecutionTimestamp"
+      }
+    },
+    "NEWS_EVENTS": {
+      "primaryKey": [
+        "editionId",
+        "eventId"
+      ],
+      "foreignKeys": [
+        {
+          "column": "editionId",
+          "references": "EDITIONS.editionId"
+        }
+      ],
+      "sourceArtifact": "daily-editions/2026-11-10/verified-news.json + phase06 engines",
+      "fieldMappings": {
+        "editionId": "editionManifest.editionId",
+        "eventId": "newsRecord.eventId",
+        "stt": "1..18",
+        "headline": "newsRecord.headline",
+        "category": "newsRecord.category",
+        "tier": "1 if in CoreThesis supportingEventIds else 2",
+        "sourceName": "newsRecord.publisher",
+        "canonicalUrl": "newsRecord.sourceUrl",
+        "originalSourcePublishedAt": "newsRecord.publishedAt",
+        "timeDeltaFromCutoff": "calculated age hours from cutoff",
+        "timeWindowBucket": "0–24h | 24–48h | 48–72h",
+        "verificationStatus": "'VERIFIED'",
+        "dedupStatus": "'UNIQUE_NEW_EVENT'",
+        "isFollowUp": "False",
+        "followUpTo": "''",
+        "evidenceSha256": "newsRecord.evidenceSha256",
+        "verifiedFactSummary": "auditedFacts summary for eventId",
+        "macroToMicro": "linked MacroToMicroChain transmission summary",
+        "fintechImpact": "linked PaymentRadarSignal payooRelevance",
+        "prediction": "linked FinancialDecisionCard recommendedAction & confidenceLevel"
+      }
+    },
+    "EDITORIAL_SECTIONS": {
+      "primaryKey": [
+        "editionId",
+        "sectionKey"
+      ],
+      "foreignKeys": [
+        {
+          "column": "editionId",
+          "references": "EDITIONS.editionId"
+        }
+      ],
+      "sourceArtifact": "core-thesis.json, macro-to-micro.json, payment-radar.json, financial-decision-intelligence.json",
+      "sectionsMapped": [
+        "coverStory (Core Thesis Engine synthesis)",
+        "marketPulse (8-Indicator Market Pulse contextual synthesis)",
+        "decisionBrief (Financial Decision Intelligence 4 cards)",
+        "paymentRadar (Payment Radar 5 signals & Payoo lens)",
+        "watchlist (Macro-to-Micro watch signals & invalidation triggers)"
+      ]
+    },
+    "MARKET_PULSE_HISTORY": {
+      "primaryKey": [
+        "editionId",
+        "indicatorId"
+      ],
+      "foreignKeys": [
+        {
+          "column": "editionId",
+          "references": "EDITIONS.editionId"
+        }
+      ],
+      "sourceArtifact": "daily-editions/2026-11-10/market-pulse.json",
+      "notes": "Preserves exact observationDate in measurementDate and exact verificationStatus (VERIFIED vs UNVERIFIED)."
+    },
+    "EVENT_REGISTRY": {
+      "primaryKey": [
+        "eventId"
+      ],
+      "sourceArtifact": "daily-editions/2026-11-10/verified-news.json"
+    },
+    "SOURCE_LEDGER": {
+      "primaryKey": [
+        "collectionRunId",
+        "sourceUrl"
+      ],
+      "sourceArtifact": "PHASE05B_CANDIDATE_DISPOSITION_LEDGER.json"
+    },
+    "PUBLISH_AUDIT": {
+      "primaryKey": [
+        "auditLogId"
+      ],
+      "foreignKeys": [
+        {
+          "column": "editionId",
+          "references": "EDITIONS.editionId"
+        }
+      ],
+      "sourceArtifact": "daily-editions/2026-11-10/validation-report.json"
+    }
+  }
+}

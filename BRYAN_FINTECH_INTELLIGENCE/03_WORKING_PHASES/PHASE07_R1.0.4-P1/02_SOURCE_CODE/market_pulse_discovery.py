@@ -29,7 +29,7 @@ import gzip
 import hashlib
 from datetime import datetime, timezone, timedelta
 from typing import Dict, Any, List, Optional, Tuple
-from urllib.parse import urlparse, urljoin
+from urllib.parse import urlparse
 
 from secure_http_client import SecureHttpClient, TIMEZONE_HCM
 from financial_numeric_normalizer import FinancialNumericNormalizer
@@ -45,18 +45,15 @@ _BASE_SEARCH_PROFILES = {
         "canonicalUnit": "VND/USD",
         "searchFocus": "Latest central USD/VND exchange-rate update",
         "searchQueries": [
-            "Tỷ giá USD",
             "tỷ giá trung tâm",
             "tỷ giá trung tâm ngày Ngân hàng Nhà nước",
             "tỷ giá USD VND tỷ giá trung tâm"
         ],
         "searchEndpoints": [
-            ("https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=T%E1%BB%B7%20gi%C3%A1%20USD", "thoibaotaichinhvietnam.vn", "Thời báo Tài chính Việt Nam Live Search / HTTP Endpoint"),
-            ("https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia", "thoibaotaichinhvietnam.vn", "Thời báo Tài chính Việt Nam Topic Index / HTTP Endpoint"),
             ("https://cafef.vn/tim-kiem.chn?keywords=t%E1%BB%B7+gi%C3%A1+trung+t%C3%A2m", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint"),
             ("https://cafef.vn/ty-gia.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint")
         ],
-        "keywords": ["tỷ giá usd hôm nay", "tỷ giá trung tâm", "tỷ giá usd/vnd", "ngân hàng nhà nước", "usd/vnd", "tỷ giá", "ổn định tỷ giá"],
+        "keywords": ["tỷ giá trung tâm", "tỷ giá usd/vnd", "ngân hàng nhà nước", "usd/vnd", "tỷ giá", "ổn định tỷ giá"],
         "disambiguationPenalties": [("vàng", -60), ("ounce", -60), ("sjc", -60), ("thế giới", -30), ("ngân hàng thương mại", -20)]
     },
     "MP-02": {
@@ -80,17 +77,20 @@ _BASE_SEARCH_PROFILES = {
         "name": "Lãi suất tiền gửi 12T cao nhất",
         "key": "maxDeposit12M",
         "canonicalUnit": "%/năm",
-        "searchFocus": "Latest 12-month deposit-rate announcement",
+        "searchFocus": "Latest 12-month deposit-rate announcement from Báo Lao Động",
         "searchQueries": [
-            "lãi suất ngân hàng",
-            "lãi suất tiết kiệm 12 tháng cao nhất",
+            "Lãi suất ngân hàng hôm nay",
+            "Lãi suất ngân hàng hôm nay Báo Lao Động",
+            "lãi suất ngân hàng hôm nay laodong.vn",
+            "lãi suất tiết kiệm 12 tháng cao nhất lao động",
             "biểu lãi suất huy động kỳ hạn 12 tháng"
         ],
         "searchEndpoints": [
-            ("https://cafef.vn/lai-suat-ngan-hang.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint"),
-            ("https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint")
+            ("https://laodong.vn/tien-te-dau-tu", "laodong.vn", "Báo Lao Động - Chuyên mục Tiền tệ - Đầu tư / Live Scan Index"),
+            ("https://laodong.vn/tim-kiem?q=L%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng+h%C3%B4m+nay", "laodong.vn", "Báo Lao Động Live Search Endpoint"),
+            ("https://cafef.vn/lai-suat-ngan-hang.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint")
         ],
-        "keywords": ["lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
+        "keywords": ["lãi suất ngân hàng hôm nay", "lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
         "disambiguationPenalties": [("lãi suất cho vay", -40), ("tiền vay", -30), ("cho vay", -30)]
     },
     "MP-04": {
@@ -104,11 +104,10 @@ _BASE_SEARCH_PROFILES = {
             "thị trường chứng khoán kết phiên VN-Index"
         ],
         "searchEndpoints": [
-            ("https://danviet.vn/VN-Index-search/", "danviet.vn", "Báo Dân Việt Live Search Engine / HTTP Endpoint"),
             ("https://tuoitre.vn/tim-kiem.htm?keywords=VN-Index", "tuoitre.vn", "Tuổi Trẻ Live Search Engine / HTTP Endpoint"),
             ("https://cafef.vn/tim-kiem.chn?keywords=VN-Index", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint")
         ],
-        "keywords": ["vn-index", "chỉ số vn-index", "kết phiên", "đóng cửa", "kết thúc phiên", "kết tuần", "hồi phục", "giằng co", "thị trường chứng khoán", "khởi sắc"],
+        "keywords": ["vn-index", "chỉ số vn-index", "kết phiên", "đóng cửa", "kết thúc phiên", "thị trường chứng khoán", "khởi sắc"],
         "disambiguationPenalties": [("phái sinh", -20)]
     },
     "MP-05": {
@@ -239,7 +238,7 @@ def extract_main_article_body(html_text: str) -> str:
     article_html = ""
     class_pats = [
         r'<div[^>]+class=[\"\'][^\"\']*(?:bcpt_detail_1_news|bcpt_all_left|item-first-content)[^\"\']*[\"\'][^>]*>',
-        r'<div[^>]+class=[\"\'][^\"\']*(?:detail-content|content-detail|singular-content|article-body)[^\"\']*[\"\'][^>]*>',
+        r'<div[^>]+class=[\"\'][^\"\']*(?:detail-content|content-detail|singular-content|article-body|art-body|body-content)[^\"\']*[\"\'][^>]*>',
         r'<div[^>]+class=[\"\'][^\"\']*(?:detail__cmain|detail-cmain|content-news)[^\"\']*[\"\'][^>]*>',
         r'<div[^>]+id=[\"\'][^\"\']*(?:main-content|article-content|content-detail|main-detail)[^\"\']*[\"\'][^>]*>'
     ]
@@ -338,13 +337,11 @@ def extract_grounded_summary(
         return headline
 
     # Strip navigation / category noise prefixes
-    noise_prefixes = ["tiêu điểm", "bất động sản", "thời sự", "kinh doanh", "tài chính - ngân hàng", "thị trường chứng khoán", "tóm tắt ai", "podcast", "video", "× chuyên mục", "vui lòng đăng nhập"]
+    noise_prefixes = ["tiêu điểm", "bất động sản", "thời sự", "kinh doanh", "tài chính - ngân hàng", "thị trường chứng khoán", "tóm tắt ai", "podcast", "video"]
     clean_sentences = []
     for s in raw_sentences:
         s_low = s.lower()
-        if any(s_low.startswith(np) for np in noise_prefixes):
-            continue
-        if "vui lòng đăng nhập" in s_low or "× chuyên mục" in s_low:
+        if any(s_low.startswith(np) for np in noise_prefixes) and len(s) < 80:
             continue
         if indicator_id == "MP-02" and ("dxy" in s_low or "giá dầu" in s_low):
             continue
@@ -661,8 +658,7 @@ class MarketPulseDiscoveryEngine:
         if not ranked_candidates:
             return result
 
-        # Select top eligible candidates (evaluate up to 4 eligible candidates in rank order until a VERIFIED numeric observation is found)
-        eligible_candidates = []
+        # Select top eligible candidate
         selected_candidate = None
         for cand in ranked_candidates:
             cand_log = {
@@ -698,12 +694,9 @@ class MarketPulseDiscoveryEngine:
                 cand_log["disposition"] = "SELECTED_CANDIDATE"
                 cand_log["dispositionReason"] = "Latest available approved-domain candidate matching search focus"
                 selected_candidate = cand
-                eligible_candidates.append(cand)
             else:
                 cand_log["disposition"] = "REJECTED_LOWER_RANK"
                 cand_log["dispositionReason"] = "Valid candidate but superseded by higher-ranked candidate"
-                if len(eligible_candidates) < 4:
-                    eligible_candidates.append(cand)
 
             cand_log["relevanceRationale"] = cand_log["dispositionReason"]
             self.discovery_log["indicators"][indicator_id]["candidatesEvaluated"].append(cand_log)
@@ -715,56 +708,26 @@ class MarketPulseDiscoveryEngine:
         if not selected_candidate:
             return result
 
-        # Evaluate top eligible candidates until a VERIFIED numeric observation is found (or fall back to the first valid candidate)
-        best_eval_bundle = None
-        for cand_try in eligible_candidates:
-            t_url = cand_try.get("candidateUrl") or cand_try.get("sourceUrl")
-            f_res = self.http_client.get(t_url)
-            if f_res.get("statusCode") != 200 or not f_res.get("originalBytes"):
-                if cand_try.get("evidenceFile") and os.path.exists(cand_try["evidenceFile"]):
-                    with open(cand_try["evidenceFile"], "rb") as ef:
-                        r_bytes = ef.read()
-                    r_sha = hashlib.sha256(r_bytes).hexdigest()
-                    r_at = cand_try.get("publishedAt") or self.run_timestamp.isoformat()
-                else:
-                    continue
+        # Fetch actual candidate content
+        target_url = selected_candidate.get("candidateUrl") or selected_candidate.get("sourceUrl")
+        fetch_res = self.http_client.get(target_url)
+
+        if fetch_res.get("statusCode") != 200 or not fetch_res.get("originalBytes"):
+            if selected_candidate.get("evidenceFile") and os.path.exists(selected_candidate["evidenceFile"]):
+                with open(selected_candidate["evidenceFile"], "rb") as ef:
+                    raw_bytes = ef.read()
+                sha256 = hashlib.sha256(raw_bytes).hexdigest()
+                retrieved_at = selected_candidate.get("publishedAt") or self.run_timestamp.isoformat()
             else:
-                r_bytes = f_res["originalBytes"]
-                r_sha = f_res["responseSha256"]
-                r_at = f_res["retrievedAt"]
-
-            try:
-                c_txt = gzip.decompress(r_bytes).decode("utf-8", errors="replace") if r_bytes[:2] == b'\x1f\x8b' else r_bytes.decode("utf-8", errors="replace")
-            except Exception:
-                c_txt = r_bytes.decode("utf-8", errors="replace")
-
-            # Extract exact published time from article HTML metadata
-            m_pub_time = re.search(r'<meta\s+property=[\'"]article:published_time[\'"]\s+content=[\'"](.*?)[\'"]', c_txt, re.I)
-            if not m_pub_time:
-                m_pub_time = re.search(r'<meta\s+name=[\'"]pubdate[\'"]\s+content=[\'"](.*?)[\'"]', c_txt, re.I)
-            if not m_pub_time:
-                m_date_txt = re.search(r'(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}:\d{2})', c_txt)
-                if m_date_txt:
-                    d, m, y, tm = int(m_date_txt.group(1)), int(m_date_txt.group(2)), int(m_date_txt.group(3)), m_date_txt.group(4)
-                    cand_try["publishedAt"] = f"{y:04d}-{m:02d}-{d:02d}T{tm}:00+07:00"
-            if m_pub_time:
-                cand_try["publishedAt"] = m_pub_time.group(1).strip()
-
-            e_res = self.extract_indicator_measurement(indicator_id, c_txt, t_url, r_bytes)
-            if best_eval_bundle is None:
-                best_eval_bundle = (cand_try, t_url, r_bytes, r_sha, r_at, c_txt, e_res)
-            if e_res.get("success") and e_res.get("actualValue") is not None and e_res.get("observationDate"):
-                best_eval_bundle = (cand_try, t_url, r_bytes, r_sha, r_at, c_txt, e_res)
-                break
-
-        if best_eval_bundle is None:
-            result["updateStatus"] = "SOURCE_UNAVAILABLE"
-            result["publisher"] = selected_candidate.get("publisher")
-            result["sourceUrl"] = selected_candidate.get("candidateUrl") or selected_candidate.get("sourceUrl")
-            result["verificationNote"] = "Không thể tải nội dung từ nguồn"
-            return result
-
-        selected_candidate, target_url, raw_bytes, sha256, retrieved_at, content_text, ext_res = best_eval_bundle
+                result["updateStatus"] = "SOURCE_UNAVAILABLE"
+                result["publisher"] = selected_candidate.get("publisher")
+                result["sourceUrl"] = target_url
+                result["verificationNote"] = f"Không thể tải nội dung từ nguồn: HTTP status {fetch_res.get('statusCode')}"
+                return result
+        else:
+            raw_bytes = fetch_res["originalBytes"]
+            sha256 = fetch_res["responseSha256"]
+            retrieved_at = fetch_res["retrievedAt"]
 
         # Save evidence snapshot (Strict casing: MP01..MP08)
         mp_folder_name = indicator_id.replace("-", "").upper()
@@ -810,15 +773,6 @@ class MarketPulseDiscoveryEngine:
             ]
             cand_quote = clean_body_sentences[0][:140].lstrip('.!? -:').strip() if clean_body_sentences else cand_title
 
-        cand_pub_at = selected_candidate.get("publishedAt")
-        obs_d = ext_res.get("observationDate")
-        if cand_pub_at and len(cand_pub_at) >= 10:
-            article_date_str = cand_pub_at[:10]
-            # When the verified source article was published on today's run date (e.g. Saturday edition summarizing the market),
-            # the edition's observation/session reporting date aligns with the article's publication date.
-            if article_date_str == self.run_timestamp.strftime("%Y-%m-%d"):
-                obs_d = article_date_str
-
         obs_record = {
             "indicatorId": indicator_id,
             "indicatorName": ind_name,
@@ -826,9 +780,9 @@ class MarketPulseDiscoveryEngine:
             "unverifiedReason": ext_res.get("unverifiedReason"),
             "actualValue": ext_res.get("actualValue"),
             "unit": ext_res.get("unit") or ind_unit,
-            "observationDate": obs_d,
-            "observationTimestamp": ext_res.get("observationTimestamp") or cand_pub_at,
-            "publishedAt": cand_pub_at,
+            "observationDate": ext_res.get("observationDate"),
+            "observationTimestamp": ext_res.get("observationTimestamp"),
+            "publishedAt": selected_candidate.get("publishedAt"),
             "retrievedAt": retrieved_at,
             "lastCheckedAt": self.run_timestamp.isoformat(),
             "sourcePublisher": pub_host,
@@ -892,8 +846,8 @@ class MarketPulseDiscoveryEngine:
             
             # Authenticated movement calculation
             interp = MarketPulseInterpreter.generate_indicator_interpretation(val_res, previous_value)
-            result["change"] = val_res.get("change") or interp.get("change")
-            result["direction"] = val_res.get("direction") if val_res.get("direction") not in (None, "UNKNOWN") else interp.get("direction", "UNKNOWN")
+            result["change"] = interp.get("change")
+            result["direction"] = interp.get("direction", "UNKNOWN")
             result["interpretation"] = interp.get("summary")
         elif is_stale_numeric:
             # Case 2: Genuine extracted observation that exceeds the canonical freshness ceiling (e.g., MP-02 > 72h)
@@ -1000,23 +954,10 @@ class MarketPulseDiscoveryEngine:
         searched_at = self.run_timestamp.isoformat()
         trace_id = f"SRCH-REQ-{indicator_id}-{execution_id or self.run_timestamp.strftime('%Y%m%d%H%M%S')}"
 
-        # Execute actual HTTP request through SecureHTTPClient (try configured endpoints in order)
+        # Execute actual HTTP request through SecureHTTPClient
         http_resp = self.http_client.get(endpoint_url)
         status_code = http_resp.get("statusCode", 0)
         req_error = http_resp.get("error")
-        has_search_html = (status_code == 200 or ("search_enginer.html" in endpoint_url and len(http_resp.get("originalBytes") or b"") > 5000)) and bool(http_resp.get("originalBytes"))
-
-        if not has_search_html and len(endpoints) > 1:
-            for alt_url, alt_dom, alt_label in endpoints[1:]:
-                alt_resp = self.http_client.get(alt_url)
-                if alt_resp.get("statusCode") == 200 and alt_resp.get("originalBytes"):
-                    http_resp = alt_resp
-                    status_code = 200
-                    req_error = None
-                    endpoint_url = alt_url
-                    provider_label = alt_label
-                    has_search_html = True
-                    break
 
         search_record = {
             "indicatorId": indicator_id,
@@ -1026,73 +967,29 @@ class MarketPulseDiscoveryEngine:
             "searchRequestId": trace_id,
             "executionId": execution_id or f"EXEC-{self.run_timestamp.strftime('%Y%m%d')}",
             "searchedAt": searched_at,
-            "actualRequestStatus": "SUCCESS" if has_search_html else "ACCESS_BLOCKED",
+            "actualRequestStatus": "SUCCESS" if status_code == 200 else "ACCESS_BLOCKED",
             "candidateCount": 0,
             "candidateUrls": [],
-            "errorDetail": None if has_search_html else req_error
+            "errorDetail": req_error if status_code != 200 else None
         }
 
         # If HTTP response is successful, extract candidate links
         candidate_pool: List[Dict[str, Any]] = []
-        if has_search_html and http_resp.get("originalBytes"):
-            try:
-                raw_bytes_s = http_resp["originalBytes"]
-                raw_html = gzip.decompress(raw_bytes_s).decode("utf-8", errors="replace") if raw_bytes_s[:2] == b'\x1f\x8b' else raw_bytes_s.decode("utf-8", errors="replace")
-            except Exception:
-                raw_html = http_resp["originalBytes"].decode("utf-8", errors="replace")
+        if status_code == 200 and http_resp.get("originalBytes"):
+            raw_html = http_resp["originalBytes"].decode("utf-8", errors="replace")
+            link_matches = [m for m in re.findall(r'https?://[^\s"\'<>]+', raw_html, re.I)]
+            cand_urls = list(dict.fromkeys(link_matches))[:10]
+            search_record["candidateCount"] = len(cand_urls)
+            search_record["candidateUrls"] = cand_urls
 
-            seen_urls = set()
-            for m_a in re.finditer(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', raw_html, re.I | re.S):
-                href = m_a.group(1).strip()
-                if not href or href.startswith(("javascript:", "#", "mailto:", "tel:")):
-                    continue
-                full_url = urljoin(endpoint_url, href)
-                parsed_cu = urlparse(full_url)
-                cu_host = (parsed_cu.hostname or "").lower()
-                cu_path = parsed_cu.path.lower()
-                if not any(cu_path.endswith(ext) for ext in [".html", ".htm", ".chn"]):
-                    continue
-                if any(skip in cu_path for skip in ["search_enginer.html", "tim-kiem", "index.html", "trang-chu"]):
-                    continue
-                if full_url in seen_urls:
-                    continue
-                # Extract anchor title attribute or inner text
-                m_tattr = re.search(r'title=["\']([^"\']+)["\']', m_a.group(0), re.I)
-                a_text = re.sub(r'<[^>]+>', ' ', m_a.group(2)).strip()
-                a_text = ' '.join(a_text.split())
-                c_title = (m_tattr.group(1).strip() if m_tattr and len(m_tattr.group(1).strip()) > len(a_text) else a_text) or f"Cập nhật {ind_name}"
-                if len(c_title) < 15:
-                    continue
-                seen_urls.add(full_url)
-                candidate_pool.append({
-                    "candidateUrl": full_url,
-                    "sourceUrl": full_url,
-                    "title": c_title,
-                    "headline": c_title,
-                    "publisher": cu_host,
+            for cu in cand_urls:
+                cand_pool_entry = {
+                    "candidateUrl": cu,
+                    "title": f"Cập nhật {ind_name}",
                     "publishedAt": searched_at,
                     "candidateSource": "GENUINE_SEARCH_RESULT"
-                })
-                if len(candidate_pool) >= 15:
-                    break
-
-            if not candidate_pool:
-                link_matches = [m for m in re.findall(r'https?://[^\s"\'<>]+', raw_html, re.I)]
-                cand_urls = list(dict.fromkeys(link_matches))[:10]
-                for cu in cand_urls:
-                    cu_host = (urlparse(cu).hostname or "").lower()
-                    candidate_pool.append({
-                        "candidateUrl": cu,
-                        "sourceUrl": cu,
-                        "title": f"Cập nhật {ind_name}",
-                        "headline": f"Cập nhật {ind_name}",
-                        "publisher": cu_host,
-                        "publishedAt": searched_at,
-                        "candidateSource": "GENUINE_SEARCH_RESULT"
-                    })
-
-            search_record["candidateCount"] = len(candidate_pool)
-            search_record["candidateUrls"] = [c["candidateUrl"] for c in candidate_pool[:10]]
+                }
+                candidate_pool.append(cand_pool_entry)
         elif self.raw_evidence_dir:
             # Fallback for sandboxed / offline execution: scan local indicator raw evidence store
             mp_folder_name = indicator_id.replace("-", "").upper()

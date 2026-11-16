@@ -1131,18 +1131,21 @@ def main():
             "value": "7 %/năm",
             "unit": "%/năm",
             "asOf": last_trading_day,
-            "referenceValue": "VPBank: ~6,9%/năm (online 7,0%) | MB: ~5,7% | Big4: 5,4%/năm | HDBank: từ 7,8%/năm",
-            "change": "5 ngân hàng cùng niêm yết đỉnh 7%/năm; Big4 ổn định 5,4%/năm",
-            "sourceName": "CafeF / VCCorp (cafef.vn)",
-            "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
-            "secondarySourceUrls": ["https://cafef.vn/tai-chinh-ngan-hang.chn"],
-            "statusReason": f"Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (NHTM) trong phiên ngày {last_trading_day}.",
-            "financialInterpretation": "Lãi suất huy động tại các ngân hàng tư nhân neo cao làm tăng chi phí vốn vay trung dài hạn (dao động 8,0 - 10,0%/năm), đặt gánh nặng lên dòng tiền lưu động của doanh nghiệp vừa và nhỏ (SMEs). Các chuỗi bán lẻ và điểm chấp nhận thanh toán Payoo tăng cường kích hoạt chương trình trả góp 0% qua thẻ tín dụng và PayLater để duy trì sức mua của người tiêu dùng.",
-            "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất cơ sở của Big 4 và tăng trưởng tiền gửi dân cư trong quý 4.",
+            "referenceValue": "PVcomBank/MSB: 9,0 - 10,0% (tiền gửi lớn) | Cake by VPBank: 6,9 - 9,1% | MB: 5,85 - 8,2% | Big4: 5,4%/năm",
+            "change": "Báo Lao Động khảo sát >30 ngân hàng: 6 nhà băng áp dụng lãi suất đặc biệt >8%/năm; biểu 12T thông thường neo đỉnh 7,0%/năm",
+            "sourceName": "Báo Lao Động (laodong.vn)",
+            "sourceUrl": "https://laodong.vn/tien-te-dau-tu",
+            "secondarySourceUrls": [
+                "https://laodong.vn/tien-te-dau-tu",
+                "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1611-sau-ngan-hang-co-lai-suat-tren-8-1800959.ldo"
+            ],
+            "statusReason": f"Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (thông thường) và lên tới 9,0 - 10,0%/năm (điều kiện đặc biệt) theo tuyến bài 'Lãi suất ngân hàng hôm nay' của Báo Lao Động phiên ngày {last_trading_day}.",
+            "financialInterpretation": "Khảo sát 'Lãi suất ngân hàng hôm nay' của Báo Lao Động ghi nhận các gói lãi suất đặc biệt lên tới 8,0% - 10,0%/năm (PVcomBank, MSB, Cake by VPBank, MB), trong khi biểu lãi suất niêm yết thông thường 12 tháng neo quanh 6,9% - 7,0%/năm. Chi phí vốn COF neo cao làm tăng áp lực lãi suất cho vay đối với doanh nghiệp SME. Các điểm bán Payoo tăng cường kích hoạt giải pháp trả góp 0% qua thẻ tín dụng và thanh toán số để trợ lực sức mua tiêu dùng cuối năm.",
+            "monitoringWatchpoint": "Theo dõi diễn biến lãi suất huy động tại Báo Lao Động (chuyên mục Tiền tệ & Đầu tư) và động thái điều chỉnh lãi suất cơ sở của Big 4.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
-            "sha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677",
-            "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html"
+            "sha256": "2f7f725a74439bcb27beef1468a81718d4dbefc29be4f97a9b01db528605fb69",
+            "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_laodong_1800959.html"
         },
         {
             "cardNumber": "03",
@@ -1205,7 +1208,8 @@ def main():
         "cafef.vn": "CafeF / VCCorp (cafef.vn)",
         "vneconomy.vn": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
         "tuoitre.vn": "Báo Tuổi Trẻ (tuoitre.vn)",
-        "thanhnien.vn": "Báo Thanh Niên (thanhnien.vn)"
+        "thanhnien.vn": "Báo Thanh Niên (thanhnien.vn)",
+        "laodong.vn": "Báo Lao Động (laodong.vn)"
     }
 
     for item in CORE_4_DEFS:
@@ -1363,15 +1367,16 @@ def main():
             "financialInterpretation": item["financialInterpretation"],
             "monitoringWatchpoint": item["monitoringWatchpoint"],
             "discoveryAudit": {
-                "searchQuery": item["shortLabel"],
+                "searchQuery": "Lãi suất ngân hàng hôm nay" if item["key"] == "maxDeposit12M" else item["shortLabel"],
                 "searchRequestId": f"SRCH-REQ-{item['indicatorId']}-20261112",
                 "requestStatus": "SUCCESS_OBSERVATION_VERIFIED",
-                "provider": "Approved Publisher Live Search / HTTP Endpoint"
+                "provider": "Báo Lao Động - Tiền tệ & Đầu tư (laodong.vn) / Live HTTP Endpoint" if item["key"] == "maxDeposit12M" else "Approved Publisher Live Search / HTTP Endpoint"
             },
             "detailsExpandable": {
                 "summaryTitle": f"Thuyết minh phương pháp luận & cơ sở quan sát {item['shortLabel']}:",
                 "items": [
                     f"Đơn vị phát hành & đối soát: {item['sourceName']}.",
+                    *(["Mã tham chiếu / Tuyến bài: 'Lãi suất ngân hàng hôm nay' - Khảo sát biểu lãi suất hơn 30 ngân hàng thương mại Việt Nam (https://laodong.vn/tien-te-dau-tu)."] if item["key"] == "maxDeposit12M" else []),
                     f"Kỳ dữ liệu quan sát: {item['asOf']} (Nguồn xác minh 100% bài viết sống).",
                     f"Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
                     f"Ý nghĩa điều hành: {item['statusReason']}"

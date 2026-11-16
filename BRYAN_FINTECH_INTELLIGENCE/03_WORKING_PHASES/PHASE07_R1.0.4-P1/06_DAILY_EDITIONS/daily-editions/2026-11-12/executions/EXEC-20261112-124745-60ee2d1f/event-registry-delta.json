@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "newlyRegisteredEventsCount": 25,
+  "events": [
+    {
+      "eventId": "EVT-20261112-025",
+      "canonicalUrl": "https://cafef.vn/quoc-hoi-quyet-nghi-muc-tieu-tang-truong-gdp-nam-2027-tu-10-tro-len-188261107085900744.chn",
+      "headline": "Quốc hội quyết nghị mục tiêu tăng trưởng GDP năm 2027 từ 10% trở lên",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T21:00:00+07:00",
+      "evidenceSha256": "36308b1a441bfd75b05355bfb517f09762ad33b1b14fecc7dc6ab172be6e83d4"
+    },
+    {
+      "eventId": "EVT-20261112-024",
+      "canonicalUrl": "https://thanhnien.vn/nguon-dien-lon-nhat-he-thong-nguy-co-hut-hoi-vi-than-nhap-khau-1852611101554161.htm",
+      "headline": "Nguồn điện lớn nhất hệ thống nguy cơ 'hụt hơi' vì than nhập khẩu",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T20:45:00+07:00",
+      "evidenceSha256": "7a4ec47070d2f554cc673f805751c3524405a6dbef4f7ea2495d5c64b52ec280"
+    },
+    {
+      "eventId": "EVT-20261112-023",
+      "canonicalUrl": "https://tuoitre.vn/tap-doan-nhat-sap-mua-5-von-msr-kinh-doanh-khoang-san-ra-sao-100261109220407989.htm",
+      "headline": "Tập đoàn Nhật sắp mua 5% vốn MSR kinh doanh khoáng sản ra sao?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T20:30:00+07:00",
+      "evidenceSha256": "2e005fb520649eaca429547a55079cda33b98c77cc93c9d8819b397e1e379532"
+    },
+    {
+      "eventId": "EVT-20261112-022",
+      "canonicalUrl": "https://cafef.vn/mot-cong-ty-chung-khoan-bi-hose-ngat-ket-noi-giao-dich-do-su-co-ha-tang-188261108173426867.chn",
+      "headline": "Một công ty chứng khoán bị HoSE ngắt kết nối giao dịch do sự cố hạ tầng kết nối",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T20:15:00+07:00",
+      "evidenceSha256": "3810c3cd3a3a6089a128663848b01aefecd5c8d10feca79c7743d4248d2c8d28"
+    },
+    {
+      "eventId": "EVT-20261112-021",
+      "canonicalUrl": "https://thanhnien.vn/ngan-hang-nha-nuoc-mua-usd-giao-ngay-tang-thanh-khoan-cho-ngan-hang-thuong-mai-185261110082613938.htm",
+      "headline": "Ngân hàng Nhà nước mua USD giao ngay, tăng thanh khoản cho ngân hàng thương mại",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T20:00:00+07:00",
+      "evidenceSha256": "8a47d9ee74996a2a581fd32983081ed7bf9f499718d08cd9483c7f4ea063c26b"
+    },
+    {
+      "eventId": "EVT-20261112-020",
+      "canonicalUrl": "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html",
+      "headline": "Siêu sale 11.11: J&T Cargo chủ động nguồn lực vận chuyển hàng nặng",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T19:45:00+07:00",
+      "evidenceSha256": "8e5f84fa2bcc5792a677cd83134502a4a1371af040a4e3a413078550fd7a4070"
+    },
+    {
+      "eventId": "EVT-20261112-019",
+      "canonicalUrl": "https://cafef.vn/nhnn-co-dong-thai-moi-voi-325-co-phan-sacombank-lien-quan-ong-tram-be-188261110105749137.chn",
+      "headline": "NHNN có động thái mới với 32,5% cổ phần Sacombank liên quan ông Trầm Bê",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T19:30:00+07:00",
+      "evidenceSha256": "e63b13dcdb30f0dc2a5b345e4d623b3805a9093b11943c560f0cca8eeccfc8c5"
+    },
+    {
+      "eventId": "EVT-20261112-018",
+      "canonicalUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+      "headline": "VN-Index khởi sắc sau động thái mới của Ngân hàng Nhà nước",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T19:15:00+07:00",
+      "evidenceSha256": "2ccda3faeeb9ce6eab88a0253d27d14c904b9e38f5cfb303bfdd4a96feec9cf4"
+    },
+    {
+      "eventId": "EVT-20261112-017",
+      "canonicalUrl": "https://cafef.vn/dien-thoai-van-dung-tot-vi-sao-ngan-hang-khuyen-nghi-cap-nhat-ios-188261110160834554.chn",
+      "headline": "Điện thoại vẫn dùng tốt, vì sao ngân hàng khuyến nghị cập nhật iOS?",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T19:00:00+07:00",
+      "evidenceSha256": "df96860b6d6a0bb60673e81ae57b2e7ddc7a2327f8355ed385aa16ea205e5df1"
+    },
+    {
+      "eventId": "EVT-20261112-016",
+      "canonicalUrl": "https://thanhnien.vn/el-nino-khien-thuy-dien-boc-hoi-16-ti-usd-185261107205931559.htm",
+      "headline": "El Nino khiến thủy điện 'bốc hơi' 1,6 tỉ USD",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T18:45:00+07:00",
+      "evidenceSha256": "207f759ef3bfe99d3c41e1549a46bb392c1b30f83c8b03ec25054d04206fed27"
+    },
+    {
+      "eventId": "EVT-20261112-015",
+      "canonicalUrl": "https://tuoitre.vn/nhat-ban-cam-ket-cung-cap-von-hon-431-ti-yen-cho-hai-du-an-tai-viet-nam-100261109222428991.htm",
+      "headline": "Nhật Bản cam kết cung cấp vốn hơn 43,1 tỉ yen cho hai dự án tại Việt Nam",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T18:30:00+07:00",
+      "evidenceSha256": "96f6d1ff3f637b68b7615b7525d99f5ebda9f604da8741c9d82fd2a1c5a14580"
+    },
+    {
+      "eventId": "EVT-20261112-014",
+      "canonicalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-7-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261107203419664.chn",
+      "headline": "Lãi suất ngân hàng ngày 7/11 tại Agribank, Vietcombank, BIDV, VietinBank, MB, VPBank, Techcombank, Sacombank, HDBank",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T18:15:00+07:00",
+      "evidenceSha256": "c99cbc9f84d8b2f9d8cec270dbe87e9dedfb5954c859bf95e7bc71536a8454b6"
+    },
+    {
+      "eventId": "EVT-20261112-013",
+      "canonicalUrl": "https://baodautu.vn/uu-tien-dau-tu-truc-xuong-song-bac---nam-va-hanh-lang-dong---tay-the-he-moi-d740470.html",
+      "headline": "Ưu tiên đầu tư trục xương sống Bắc - Nam và hành lang Đông - Tây thế hệ mới",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T18:00:00+07:00",
+      "evidenceSha256": "1f2b0a05750bf36e99bd0e728fd2a30664664fa7ddd51960a17b62dc540cec16"
+    },
+    {
+      "eventId": "EVT-20261112-012",
+      "canonicalUrl": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+      "headline": "Cần cơ chế cho phép nhà ở xã hội được tự do mua bán",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T17:45:00+07:00",
+      "evidenceSha256": "05fa1272cc00ad117773ad1090e3b35aa09ba462e2562027c0ba06af4db6ac7d"
+    },
+    {
+      "eventId": "EVT-20261112-011",
+      "canonicalUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+      "headline": "Làm sao để huy động hàng trăm tỉ USD cho các dự án điện, năng lượng?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T17:30:00+07:00",
+      "evidenceSha256": "28ab8b16ddaff2a1a39815ff33fe063efd222d3febb9ae4835dfae39351cbe57"
+    },
+    {
+      "eventId": "EVT-20261112-010",
+      "canonicalUrl": "https://tuoitre.vn/chi-hoa-hong-dai-ly-xo-so-bo-tai-chinh-noi-gi-ve-tran-15-100261110094830814.htm",
+      "headline": "Chi hoa hồng đại lý xổ số: Bộ Tài chính nói gì về trần 15%?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T17:15:00+07:00",
+      "evidenceSha256": "bc17491225d4cb6dab81e2c856b16e41aa31416c891909227167bdd8b9a4f7da"
+    },
+    {
+      "eventId": "EVT-20261112-009",
+      "canonicalUrl": "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html",
+      "headline": "FPT đề xuất 5 trụ cột đồng kiến tạo AI và lượng tử trong hợp tác Việt Nam - Nhật Bản",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T17:00:00+07:00",
+      "evidenceSha256": "5ae8604fa143c40f49472c9c3e8dda89c0f9ea23798753012443cfac4a46433d"
+    },
+    {
+      "eventId": "EVT-20261112-008",
+      "canonicalUrl": "https://thanhnien.vn/masan-bat-tay-sojitz-mo-rong-co-hoi-dua-vonfram-viet-nam-vao-thi-truong-nhat-ban-185261109144746486.htm",
+      "headline": "Masan bắt tay Sojitz, mở rộng cơ hội đưa vonfram Việt Nam vào thị trường Nhật Bản",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T16:45:00+07:00",
+      "evidenceSha256": "f5a2ec0acd77d87065b3b102eb30dc0c0a2fd5def5f6d07c6b97f4eaa5ddf589"
+    },
+    {
+      "eventId": "EVT-20261112-007",
+      "canonicalUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-chieu-9-11-tiep-tuc-giam-188261108214620632.chn",
+      "headline": "Giá vàng miếng, vàng nhẫn 9999 chiều 9/11 tiếp tục giảm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T16:30:00+07:00",
+      "evidenceSha256": "a1163f1c39eff9ded626e9c8978b06107b58434e18e87d98dc01c91639ff039d"
+    },
+    {
+      "eventId": "EVT-20261112-006",
+      "canonicalUrl": "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm",
+      "headline": "'Nối gót' California, Citigym thông báo đóng cửa thêm 2 phòng tập, 1 chi nhánh sẽ đóng cửa vĩnh viễn",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T16:15:00+07:00",
+      "evidenceSha256": "d7912b16dbf5c1c0678083e6a34eaa37aab0e436927f73b94380ec95f7a9c007"
+    },
+    {
+      "eventId": "EVT-20261112-005",
+      "canonicalUrl": "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm",
+      "headline": "CEO Techcombank: Việt Nam cần nguồn vốn để hiện thực hóa mục tiêu tăng trưởng",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T16:00:00+07:00",
+      "evidenceSha256": "a19e54796a22312c90034b9f822b784830e886a89d4ab2228b26ac3da9a803ea"
+    },
+    {
+      "eventId": "EVT-20261112-004",
+      "canonicalUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+      "headline": "Ngân hàng Nhà nước muốn bãi bỏ nhiều quy định liên quan đến lãi suất cho vay bằng USD, sáp nhập, hợp nhất, mua lại tổ chức tín dụng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T15:40:00+07:00",
+      "evidenceSha256": "7e73b97ff27a13dc64202489491b9d5fb23fed298df7ac7f101a2e985051c5ea"
+    },
+    {
+      "eventId": "EVT-20261112-003",
+      "canonicalUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+      "headline": "Đề xuất chỉ tạm hoãn xuất cảnh khi thông báo hợp lệ nhưng người nộp thuế chây ì",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T15:20:00+07:00",
+      "evidenceSha256": "877b6e9c793380674c855ec741416222e9c62a8031592f6844b903f54698cd90"
+    },
+    {
+      "eventId": "EVT-20261112-002",
+      "canonicalUrl": "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn",
+      "headline": "TS Đào Minh Tú: Người dân mình ít ai gửi tiền kỳ hạn vài năm mà chỉ độ một năm thôi, nhưng ngân hàng cho vay dài hạn tới 5-10 năm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T15:00:00+07:00",
+      "evidenceSha256": "df0cf14b5f77230b0eb198202d36232160b081515a7a86b7b6893e942beb2d09"
+    },
+    {
+      "eventId": "EVT-20261112-001",
+      "canonicalUrl": "https://cafef.vn/nong-ngan-hang-nha-nuoc-se-mua-ngoai-te-giao-ngay-bom-vnd-cho-he-thong-ngan-hang-vao-thu-hai-va-thu-tu-hang-tuan-tu-ngay-11-11-188261109200423359.chn",
+      "headline": "Nóng: Ngân hàng Nhà nước sẽ mua ngoại tệ giao ngay, bơm VND cho hệ thống ngân hàng vào thứ Hai và thứ Tư hằng tuần từ ngày 11/11",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T14:30:00+07:00",
+      "evidenceSha256": "72add9cfb4ade2641dc05e24047315af827d1df92c4132063d2ffba286cb8ece"
+    }
+  ]
+}

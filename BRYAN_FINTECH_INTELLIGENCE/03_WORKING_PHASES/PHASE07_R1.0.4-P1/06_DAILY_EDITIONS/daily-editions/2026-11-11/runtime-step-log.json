@@ -1,0 +1,490 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261111-D01",
+  "editionDate": "2026-11-11",
+  "executionId": "EXEC-20261113-013405-77dbeef0",
+  "executionMode": "OFFLINE",
+  "runTimestamp": "2026-11-11T02:20:00+07:00",
+  "overallRuntimeStatus": "PASS",
+  "publicationAllowed": false,
+  "productionStatus": "NOT_APPROVED",
+  "liveRetrievalReadiness": "NOT_APPLICABLE",
+  "haltReason": null,
+  "totalSteps": 20,
+  "passedStepsCount": 20,
+  "failedStepsCount": 0,
+  "blockedStepsCount": 0,
+  "steps": [
+    {
+      "stepId": "STEP_01",
+      "stepNumber": 1,
+      "stepName": "Runtime Initialization & Config Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:05.180609+07:00",
+      "completedAt": "2026-11-13T01:34:05.181348+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_RUNTIME_CONFIG.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE06_DATA_CONTRACT_V4_0_0.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/PHASE07_DATA_CONTRACT_V5_0_0.json"
+      ],
+      "outputReferences": [
+        "state.runtime_config",
+        "state.contract_v4",
+        "state.contract_v5"
+      ],
+      "metrics": {
+        "configVersion": "7.0.4",
+        "contractVersion": "5.0.0",
+        "productionLocksVerifiedFalse": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_02",
+      "stepNumber": 2,
+      "stepName": "Timezone & Execution Window Calculation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:05.181353+07:00",
+      "completedAt": "2026-11-13T01:34:05.181370+07:00",
+      "inputReferences": [
+        "run_timestamp"
+      ],
+      "outputReferences": [
+        "state.t0_iso",
+        "state.window_24h_start",
+        "state.window_72h_start"
+      ],
+      "metrics": {
+        "timezone": "Asia/Ho_Chi_Minh (UTC+07:00)",
+        "executionT0": "2026-11-11T02:20:00+07:00",
+        "window0To24hStart": "2026-11-10T02:20:00+07:00",
+        "windowMax72hStart": "2026-11-08T02:20:00+07:00"
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_03",
+      "stepNumber": 3,
+      "stepName": "Historical Event Registry Loading",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:05.181373+07:00",
+      "completedAt": "2026-11-13T01:34:05.190769+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/06_TESTS/fixtures",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/VERIFIED_NEWS_DATABASE.json"
+      ],
+      "outputReferences": [
+        "state.news_engine.dedup_engine.historical_events"
+      ],
+      "metrics": {
+        "historicalFixturesLoaded": 5,
+        "historicalEventsCount": 92,
+        "priorEditionEventsMapped": 18
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_04",
+      "stepNumber": 4,
+      "stepName": "Live News Candidate Discovery",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:05.190778+07:00",
+      "completedAt": "2026-11-13T01:34:08.943656+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/04_RAW_EVIDENCE"
+      ],
+      "outputReferences": [
+        "state.news_res.discovery"
+      ],
+      "metrics": {
+        "totalSnapshotsScanned": 456,
+        "uniqueCanonicalCandidates": 100,
+        "accessBlockedOrNonArticleCount": 9
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_05",
+      "stepNumber": 5,
+      "stepName": "Source Provenance Verification",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943670+07:00",
+      "completedAt": "2026-11-13T01:34:08.943672+07:00",
+      "inputReferences": [
+        "state.news_res.discovery.rawCandidates"
+      ],
+      "outputReferences": [
+        "state.news_res.step05_sourceVerification"
+      ],
+      "metrics": {
+        "inputCount": 100,
+        "sourceVerifiedCount": 72,
+        "rejectedIrrelevantOrUnverifiedCount": 28,
+        "discoveredCandidatesCount": 109,
+        "actuallyRetrievedCount": 100,
+        "successfullyVerifiedCount": 72,
+        "rejectedSourcesCount": 75,
+        "accessBlockedCount": 9,
+        "selectedEligibleCount": 72
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_06",
+      "stepNumber": 6,
+      "stepName": "Timestamp & Freshness Window Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943674+07:00",
+      "completedAt": "2026-11-13T01:34:08.943675+07:00",
+      "inputReferences": [
+        "state.news_res.step05_sourceVerification"
+      ],
+      "outputReferences": [
+        "state.news_res.step06_windowValidation"
+      ],
+      "metrics": {
+        "inputCount": 72,
+        "windowEligibleCount": 57,
+        "rejectedStaleOrInvalidCount": 15
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_07",
+      "stepNumber": 7,
+      "stepName": "Cross-Day & Intra-Day Deduplication",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943677+07:00",
+      "completedAt": "2026-11-13T01:34:08.943678+07:00",
+      "inputReferences": [
+        "state.news_res.step06_windowValidation"
+      ],
+      "outputReferences": [
+        "state.news_res.step07_deduplication"
+      ],
+      "metrics": {
+        "inputCount": 57,
+        "dedupVerifiedCount": 39,
+        "duplicatesRemovedCount": 18
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_08",
+      "stepNumber": 8,
+      "stepName": "Financial Fact & Entity Binding Verification",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943679+07:00",
+      "completedAt": "2026-11-13T01:34:08.943681+07:00",
+      "inputReferences": [
+        "state.news_res.step07_deduplication"
+      ],
+      "outputReferences": [
+        "state.news_res.step08_factVerification"
+      ],
+      "metrics": {
+        "factVerifiedCandidateCount": 33,
+        "totalRawFacts": 22,
+        "uniqueVerifiedFactsCount": 20,
+        "duplicateFactsInterceptedCount": 2,
+        "reboundEntitiesCount": 14,
+        "ambiguousOrUnverifiedEntitiesCount": 0
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_09",
+      "stepNumber": 9,
+      "stepName": "25-Event / 24h Quota Gate",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943682+07:00",
+      "completedAt": "2026-11-13T01:34:08.943684+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents"
+      ],
+      "outputReferences": [
+        "state.news_res.step09_quotaAndFreshnessGate"
+      ],
+      "metrics": {
+        "gatePassed": true,
+        "gateStatusCode": "PASS_25_EVENTS_24H_80PCT",
+        "targetEventCount": 25,
+        "selectedEventCount": 25,
+        "count0To24h": 23,
+        "count24To48h": 2,
+        "count48To72h": 0,
+        "countOver72h": 0,
+        "ratio0To24h": 0.92,
+        "requiredRatio0To24h": 0.8,
+        "shortfallReasons": [],
+        "coveredResearchDomains": [
+          "Banking & credit growth",
+          "Capital markets & VN-Index",
+          "Deposit & lending interest rates",
+          "Exchange rate & FX",
+          "Global macro events affecting Vietnam",
+          "Macroeconomic policy",
+          "Retail, E-commerce, F&B, Hospitality, Tourism",
+          "State Bank of Vietnam policy",
+          "Tax, compliance, fraud, cybersecurity"
+        ],
+        "publisherDistribution": {
+          "CafeF / VCCorp": 6,
+          "Báo Tuổi Trẻ": 9,
+          "Báo Đầu tư": 5,
+          "Báo Thanh Niên": 2,
+          "Tạp chí Kinh tế Việt Nam (VnEconomy)": 3
+        }
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_10",
+      "stepNumber": 10,
+      "stepName": "Market Pulse Evidence Acquisition & Extraction",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:08.943685+07:00",
+      "completedAt": "2026-11-13T01:34:09.476673+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/05_LIVE_DATA/MARKET_PULSE_8.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/03_INDICATOR_CONFIG/market_pulse_indicator_specs.json",
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/baseline_phase05b_r101/PHASE05B_ALIGNMENT_R101/04_RAW_EVIDENCE"
+      ],
+      "outputReferences": [
+        "state.mp_res.extractionAuditLog"
+      ],
+      "metrics": {
+        "totalIndicatorsExtracted": 8,
+        "evidenceFilesVerified": 8,
+        "discoveryEngineInvoked": true,
+        "discoveredObservationsCount": 0,
+        "eightSearchesExecuted": 8
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_11",
+      "stepNumber": 11,
+      "stepName": "Market Pulse Verification & Freshness Evaluation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.476682+07:00",
+      "completedAt": "2026-11-13T01:34:09.476684+07:00",
+      "inputReferences": [
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [
+        "state.mp_res.indicators"
+      ],
+      "metrics": {
+        "totalIndicators": 8,
+        "verifiedQuantitativeCount": 5,
+        "staleObservationCount": 1,
+        "qualitativeUpdateCount": 2
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_12",
+      "stepNumber": 12,
+      "stepName": "Core Thesis Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.476686+07:00",
+      "completedAt": "2026-11-13T01:34:09.479662+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [
+        "state.theses_bundle"
+      ],
+      "metrics": {
+        "totalThesesGenerated": 4,
+        "themeGroupsCovered": 4,
+        "claimsGenerated": 30
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_13",
+      "stepNumber": 13,
+      "stepName": "Connect the Dots Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.479673+07:00",
+      "completedAt": "2026-11-13T01:34:09.484039+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [
+        "state.dots_bundle"
+      ],
+      "metrics": {
+        "totalNarrativesGenerated": 4
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_14",
+      "stepNumber": 14,
+      "stepName": "Macro-to-Micro Transmission Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.484052+07:00",
+      "completedAt": "2026-11-13T01:34:09.489618+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [
+        "state.chains_bundle"
+      ],
+      "metrics": {
+        "totalChainsGenerated": 4,
+        "sevenStageStructureVerified": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_15",
+      "stepNumber": 15,
+      "stepName": "Payment Opportunity Radar Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.489660+07:00",
+      "completedAt": "2026-11-13T01:34:09.493294+07:00",
+      "inputReferences": [
+        "state.news_res.selectedEvents",
+        "state.mp_res.indicators"
+      ],
+      "outputReferences": [
+        "state.radars_bundle"
+      ],
+      "metrics": {
+        "totalSignalsGenerated": 5,
+        "verifiedOrEmergingCount": 0,
+        "potentialCount": 4,
+        "noDirectOpportunityCount": 1
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_16",
+      "stepNumber": 16,
+      "stepName": "Financial Decision Intelligence Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.493306+07:00",
+      "completedAt": "2026-11-13T01:34:09.493475+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle"
+      ],
+      "outputReferences": [
+        "state.decisions_bundle"
+      ],
+      "metrics": {
+        "totalDecisionCardsGenerated": 4,
+        "fiveStrategicQuestionsAnswered": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_17",
+      "stepNumber": 17,
+      "stepName": "Evidence Crosswalk & Schema Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.493481+07:00",
+      "completedAt": "2026-11-13T01:34:09.496930+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle"
+      ],
+      "outputReferences": [
+        "state.crosswalk"
+      ],
+      "metrics": {
+        "schemaV4Validation": "PASS",
+        "schemaV5Validation": "PASS",
+        "zeroOrphanReferences": true,
+        "zeroDuplicateFactsUsedInSynthesis": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_18",
+      "stepNumber": 18,
+      "stepName": "Daily JSON Package Generation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.496942+07:00",
+      "completedAt": "2026-11-13T01:34:09.820224+07:00",
+      "inputReferences": [
+        "state.theses_bundle",
+        "state.dots_bundle",
+        "state.chains_bundle",
+        "state.radars_bundle",
+        "state.decisions_bundle",
+        "state.crosswalk"
+      ],
+      "outputReferences": [
+        "04_INTELLIGENCE_OUTPUTS/*.json",
+        "06_DAILY_EDITIONS/latest-candidate.json",
+        "06_DAILY_EDITIONS/magspread-edition-candidate.json"
+      ],
+      "metrics": {
+        "preparedDailyComponentsCount": 17,
+        "combinedEditionSha256": "7c8bf3d3f0055191ce0da13608bfa350098c671bb987f096fbba0660de392d65",
+        "frontendPortalCandidateReady": true,
+        "magspreadCandidateReady": true
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_19",
+      "stepNumber": 19,
+      "stepName": "Google Sheets Staging Dry-Run Validation",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.820271+07:00",
+      "completedAt": "2026-11-13T01:34:09.849531+07:00",
+      "inputReferences": [
+        "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/03_SCHEMAS_AND_CONFIG/phase04b_staging_tables_readonly.json",
+        "state.payloads"
+      ],
+      "outputReferences": [
+        "05_GOOGLE_SHEETS_DRY_RUN/*.json"
+      ],
+      "metrics": {
+        "allTabsPassed": true,
+        "liveWriteApiCalled": false,
+        "baselinePreservedRows": 155,
+        "proposedNewRowsCount": 165,
+        "projectedTotalRowsCount": 320,
+        "foreignKeyViolationsCount": 0
+      },
+      "errorDetails": null
+    },
+    {
+      "stepId": "STEP_20",
+      "stepNumber": 20,
+      "stepName": "Daily Execution Report & Release Audit",
+      "status": "PASS",
+      "startedAt": "2026-11-13T01:34:09.849547+07:00",
+      "completedAt": "2026-11-13T01:34:10.095430+07:00",
+      "inputReferences": [
+        "state.payloads",
+        "state.sheets_bundle"
+      ],
+      "outputReferences": [
+        "06_DAILY_EDITIONS/daily-editions/2026-11-11/*.json",
+        "06_DAILY_EDITIONS/daily-editions/2026-11-11/SHA256SUMS.txt"
+      ],
+      "metrics": {
+        "sealedFilesCount": 21,
+        "editionManifestSha256": "a680bd1de029013712115a789d0c17aa57fa89be6f060263533cdd9d37015b49",
+        "executionId": "EXEC-20261113-013405-77dbeef0",
+        "executionDir": "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity/BRYAN_FINTECH_INTELLIGENCE/03_WORKING_PHASES/PHASE07_R1.0.4-P1/06_DAILY_EDITIONS/daily-editions/2026-11-11/executions/EXEC-20261113-013405-77dbeef0"
+      },
+      "errorDetails": null
+    }
+  ]
+}

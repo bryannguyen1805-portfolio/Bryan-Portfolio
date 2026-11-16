@@ -155,7 +155,7 @@ class MarketPulseExtractor:
         and footers.
         """
         # Find detail content container
-        m_start = re.search(r'class=["\'][^"\']*(?:detail__content|content-detail|detail-content|article-content|fck_detail)[^"\']*["\']', html_text, re.I)
+        m_start = re.search(r'class=["\'][^"\']*(?:detail__content|content-detail|detail-content|article-content|fck_detail|art-body|body-content)[^"\']*["\']', html_text, re.I)
         if m_start:
             content_sub = html_text[m_start.end():]
             m_end = re.search(r'class=["\'][^"\']*(?:tagdetail|link-source-detail|t-contentdetail|footer)[^"\']*["\']', content_sub, re.I)

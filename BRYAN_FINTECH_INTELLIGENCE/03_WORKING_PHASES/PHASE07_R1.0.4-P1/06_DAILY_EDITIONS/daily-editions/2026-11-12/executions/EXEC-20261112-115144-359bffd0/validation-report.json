@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "editionDate": "2026-11-12",
+  "executionId": "EXEC-20261112-115144-359bffd0",
+  "executionMode": "OFFLINE",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "NOT_APPLICABLE",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "dataIntegrityChecks": {
+    "schemaValidationV400": "PASS",
+    "schemaValidationV500": "PASS",
+    "eventReferenceIntegrity": "PASS",
+    "financialFactEntityBindingAudit": "PASS",
+    "duplicateFactPreventionAudit": "PASS",
+    "marketPulseFreshnessAndTemporalHonesty": "PASS",
+    "newsVsMarketPulseSeparation": "PASS",
+    "googleSheetsDryRunIntegrity": "PASS",
+    "frontendCandidateContractCompatibility": "PASS"
+  },
+  "quotaAndFreshnessAccounting": {
+    "gatePassed": true,
+    "gateStatusCode": "PASS_25_EVENTS_24H_80PCT",
+    "targetEventCount": 25,
+    "selectedEventCount": 25,
+    "count0To24h": 25,
+    "count24To48h": 0,
+    "count48To72h": 0,
+    "countOver72h": 0,
+    "ratio0To24h": 1.0,
+    "requiredRatio0To24h": 0.8,
+    "shortfallReasons": [],
+    "coveredResearchDomains": [
+      "Macroeconomic policy"
+    ],
+    "publisherDistribution": {
+      "baodautu.vn": 6,
+      "vneconomy.vn": 3,
+      "tuoitre.vn": 3,
+      "cafef.vn": 2,
+      "thanhnien.vn": 2,
+      "thoibaotaichinhvietnam.vn": 2,
+      "vietstock.vn": 2,
+      "laodong.vn": 1,
+      "nhandan.vn": 4
+    }
+  },
+  "marketPulseStatusBreakdown": {
+    "totalIndicators": 8,
+    "verifiedNumericCount": 8,
+    "staleObservationCount": 0,
+    "qualitativeUpdateOnlyCount": 0
+  },
+  "factAuditSummary": {
+    "totalRawFacts": 25,
+    "uniqueVerifiedFacts": 25,
+    "duplicateFactsIntercepted": 0,
+    "entitiesReboundFromQuote": 1,
+    "ambiguousOrUnverifiedEntities": 0
+  }
+}

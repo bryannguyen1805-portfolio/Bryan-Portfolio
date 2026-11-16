@@ -1,0 +1,674 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T17:45:00+07:00",
+  "cards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "title": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "headline": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whatChanged": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whyItMatters": "Dòng khách quốc tế và chi tiêu tại chỗ mở ra cơ hội gia tăng doanh thu phí xử lý giao dịch ngoại tệ.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-059",
+        "EVT-20261112-010",
+        "EVT-20261112-026",
+        "EVT-20261112-035",
+        "EVT-20261112-063"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "supportingFacts": [
+        "136 triệu đồng/lượng"
+      ],
+      "supportingFactIds": [
+        "136 triệu đồng/lượng"
+      ],
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunities": [
+        "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
+      ],
+      "risk": "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "EXPLORE",
+      "monitoringTriggers": [
+        "Doanh số thanh toán thẻ quốc tế và lượng khách tại các điểm đến trọng điểm."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+      "whyItMatters": "Chi phí vốn ngân hàng neo cao ảnh hưởng trực tiếp đến chi phí tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-053",
+        "EVT-20261112-058",
+        "EVT-20261112-063",
+        "EVT-20261112-068",
+        "EVT-20261112-035",
+        "EVT-20261112-020",
+        "EVT-20261112-050",
+        "EVT-20261112-010"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-03"
+      ],
+      "supportingFacts": [
+        "25.500 đồng"
+      ],
+      "supportingFactIds": [
+        "25.500 đồng"
+      ],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất 12 tháng tại các NHTM và số liệu can thiệp ngoại hối của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/msb-dang-thiet-ke-lai-trai-nghiem-tai-chinh-ca-nhan-nhu-the-nao-188261112165553953.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_88074b57d9.html",
+          "evidenceSha256": "88074b57d9cb0686830150f4f2e88d4eef733974dcb36c0116262482ee6281ce",
+          "supportingQuote": "‏Từ giao dịch trực tuyến đến một hành trình tài chính liền mạch ‏ ‏Khi mở tài khoản, đăng ký thẻ hay vay vốn đều có thể thực hiện trên điện thoại, lợi thế của ngân hàng số không cò"
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sinh-vien-cho-thue-tai-khoan-ngan-hang-lay-5-trieu-dong-thang-188261112190315249.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_aa1e0896b5.html",
+          "evidenceSha256": "aa1e0896b503ca09319aa330e5a719bd425782aea0d70460c71de893e0e09429",
+          "supportingQuote": "Ngày 12/11, đại diện Ngân hàng GPBank cho biết, một số sinh viên được trả khoảng 5 triệu đồng mỗi tháng cho mỗi tài khoản ngân hàng cho thuê."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25611",
+          "unit": "VND/USD",
+          "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_f021119824.html",
+          "evidenceSha256": "f021119824a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_502af9f374.html",
+          "evidenceSha256": "502af9f374e96db4f2cc8e15087cfac56e6ab7726482e4ab6a65b6126c6f0e7f"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "title": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "headline": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whatChanged": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whyItMatters": "Chính sách quản lý thuế siết chặt thúc đẩy nhu cầu chuẩn hóa đối soát và tích hợp máy tính tiền điện tử.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingRadarSignalId": "RADAR-04",
+      "relatedRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-068",
+        "EVT-20261112-016"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách.",
+      "risks": [
+        "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành chính thức của Bộ Tài chính và Tổng cục Thuế."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_cc031ca899.html",
+          "evidenceSha256": "cc031ca89999e7caaf62b2e86ce9ea8104c148a41fb4a824f8e40d6e37a1157d",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        }
+      ]
+    }
+  ],
+  "decisionCards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "title": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "headline": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whatChanged": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whyItMatters": "Dòng khách quốc tế và chi tiêu tại chỗ mở ra cơ hội gia tăng doanh thu phí xử lý giao dịch ngoại tệ.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-059",
+        "EVT-20261112-010",
+        "EVT-20261112-026",
+        "EVT-20261112-035",
+        "EVT-20261112-063"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "supportingFacts": [
+        "136 triệu đồng/lượng"
+      ],
+      "supportingFactIds": [
+        "136 triệu đồng/lượng"
+      ],
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunities": [
+        "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
+      ],
+      "risk": "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "EXPLORE",
+      "monitoringTriggers": [
+        "Doanh số thanh toán thẻ quốc tế và lượng khách tại các điểm đến trọng điểm."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+      "whyItMatters": "Chi phí vốn ngân hàng neo cao ảnh hưởng trực tiếp đến chi phí tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-053",
+        "EVT-20261112-058",
+        "EVT-20261112-063",
+        "EVT-20261112-068",
+        "EVT-20261112-035",
+        "EVT-20261112-020",
+        "EVT-20261112-050",
+        "EVT-20261112-010"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-03"
+      ],
+      "supportingFacts": [
+        "25.500 đồng"
+      ],
+      "supportingFactIds": [
+        "25.500 đồng"
+      ],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất 12 tháng tại các NHTM và số liệu can thiệp ngoại hối của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/msb-dang-thiet-ke-lai-trai-nghiem-tai-chinh-ca-nhan-nhu-the-nao-188261112165553953.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_88074b57d9.html",
+          "evidenceSha256": "88074b57d9cb0686830150f4f2e88d4eef733974dcb36c0116262482ee6281ce",
+          "supportingQuote": "‏Từ giao dịch trực tuyến đến một hành trình tài chính liền mạch ‏ ‏Khi mở tài khoản, đăng ký thẻ hay vay vốn đều có thể thực hiện trên điện thoại, lợi thế của ngân hàng số không cò"
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sinh-vien-cho-thue-tai-khoan-ngan-hang-lay-5-trieu-dong-thang-188261112190315249.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_aa1e0896b5.html",
+          "evidenceSha256": "aa1e0896b503ca09319aa330e5a719bd425782aea0d70460c71de893e0e09429",
+          "supportingQuote": "Ngày 12/11, đại diện Ngân hàng GPBank cho biết, một số sinh viên được trả khoảng 5 triệu đồng mỗi tháng cho mỗi tài khoản ngân hàng cho thuê."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25611",
+          "unit": "VND/USD",
+          "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_f021119824.html",
+          "evidenceSha256": "f021119824a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_502af9f374.html",
+          "evidenceSha256": "502af9f374e96db4f2cc8e15087cfac56e6ab7726482e4ab6a65b6126c6f0e7f"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "title": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "headline": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whatChanged": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whyItMatters": "Chính sách quản lý thuế siết chặt thúc đẩy nhu cầu chuẩn hóa đối soát và tích hợp máy tính tiền điện tử.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingRadarSignalId": "RADAR-04",
+      "relatedRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-068",
+        "EVT-20261112-016"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách.",
+      "risks": [
+        "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành chính thức của Bộ Tài chính và Tổng cục Thuế."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_cc031ca899.html",
+          "evidenceSha256": "cc031ca89999e7caaf62b2e86ce9ea8104c148a41fb4a824f8e40d6e37a1157d",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        }
+      ]
+    }
+  ],
+  "totalDecisionCards": 3,
+  "fiveQuestionsExecutiveSynthesis": {
+    "question1_whatIsMarketChanging": "Thị trường đang chuyển động theo các trục vĩ mô chính: Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB. Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Xung lực tăng trưởng mở rộng từ Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào? với các dữ kiện trọng yếu (FPT: 12,15 điểm; ACB: 25.500 đồng) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Biến động điểm số VN-Index (12,15 điểm) gắn với FPT.",
+    "question2_macroImpactOnBanksEnterprisesConsumers": "Ngân hàng duy trì cân đối chi phí huy động và thanh khoản; doanh nghiệp đối mặt với chi phí vốn chọn lọc nhưng hưởng lợi từ dòng tiền thông suốt hơn; người tiêu dùng duy trì tâm lý tích lũy phòng thủ kết hợp tập trung mua sắm có kế hoạch vào các dịp khuyến mại.",
+    "question3_cashlessPaymentOpportunities": "Các cơ hội thương mại nổi bật nhất cho thanh toán không tiền mặt bao gồm: (1) Du lịch, Khách sạn & Bán lẻ Quốc tế: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.; (2) Bán lẻ Giá trị cao, Điện máy & Xe điện: Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.; (3) Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền..",
+    "question4_keyWatchSignals": "Các tín hiệu điều hành và thị trường trọng điểm cần bám sát: Du lịch, Khách sạn & Bán lẻ Quốc tế: theo dõi Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.; Bán lẻ Giá trị cao, Điện máy & Xe điện: theo dõi Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phâ; Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): theo dõi Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh .",
+    "question5_bryanNextActions": "Kế hoạch hành động khuyến nghị cho Bryan: EXPLORE: Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế; MONITOR: Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động; INVESTIGATE: Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh."
+  }
+}

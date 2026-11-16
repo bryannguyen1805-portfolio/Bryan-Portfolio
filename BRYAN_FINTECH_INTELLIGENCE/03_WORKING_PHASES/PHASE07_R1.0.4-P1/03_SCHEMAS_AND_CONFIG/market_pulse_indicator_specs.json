@@ -59,23 +59,25 @@
     "MP-03": {
       "indicatorId": "MP-03",
       "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
-      "metricDefinition": "Lãi suất tiền gửi tiết kiệm kỳ hạn 12 tháng cao nhất quan sát được trên tập hợp các ngân hàng thương mại được khảo sát.",
+      "metricDefinition": "Lãi suất tiền gửi tiết kiệm kỳ hạn 12 tháng cao nhất quan sát được trên tập hợp các ngân hàng thương mại được khảo sát hàng ngày.",
       "canonicalUnit": "%/năm",
-      "primarySource": "Biểu lãi suất niêm yết của các NHTM Việt Nam",
+      "primarySource": "Báo Lao Động (laodong.vn) - Tuyến bài 'Lãi suất ngân hàng hôm nay' / Biểu lãi suất niêm yết của các NHTM Việt Nam",
+      "referenceSeries": "Lãi suất ngân hàng hôm nay",
+      "referenceUrl": "https://laodong.vn/tien-te-dau-tu",
       "approvedDomains": [
+        "laodong.vn",
         "sbv.gov.vn",
         "portal.vietcombank.com.vn",
         "bidv.com.vn",
         "vietinbank.vn",
         "techcombank.com",
         "vpbank.com.vn",
-        "laodong.vn",
         "cafef.vn",
         "vneconomy.vn"
       ],
-      "expectedFrequency": "BANK_PUBLISHED_RATE_CHANGES",
-      "freshnessMaxAgeHours": 168.0,
-      "methodology": "Khảo sát biểu lãi suất 12 tháng từ vũ trụ ngân hàng được công bố. Ghi nhận ngân hàng, kênh áp dụng (online/quầy), điều kiện tiền gửi và phân loại 'HIGHEST_OBSERVED_AMONG_SCANNED_BANKS'.",
+      "expectedFrequency": "DAILY_BANK_RATE_CHANGES",
+      "freshnessMaxAgeHours": 72.0,
+      "methodology": "Khảo sát tuyến bài 'Lãi suất ngân hàng hôm nay' hàng ngày tại Báo Lao Động (chuyên mục https://laodong.vn/tien-te-dau-tu) và biểu lãi suất 12 tháng từ vũ trụ các ngân hàng thương mại Việt Nam. Ghi nhận ngân hàng, kênh áp dụng (online/quầy), điều kiện tiền gửi và phân loại 'HIGHEST_OBSERVED_AMONG_SCANNED_BANKS'.",
       "scopeRules": {
         "allow13MonthComparison": false,
         "discloseCoverageUniverse": true,
@@ -85,7 +87,7 @@
         "changeCalculation": "CurrentMax - PreviousComparableMax",
         "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
       },
-      "updateFrequency": "PERIODIC"
+      "updateFrequency": "DAILY"
     },
     "MP-04": {
       "indicatorId": "MP-04",

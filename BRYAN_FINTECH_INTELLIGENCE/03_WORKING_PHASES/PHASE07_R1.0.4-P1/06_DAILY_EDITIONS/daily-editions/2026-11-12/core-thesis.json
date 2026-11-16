@@ -1,0 +1,1335 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T17:45:00+07:00",
+  "theses": [
+    {
+      "thesisId": "THESIS-01",
+      "themeGroup": "Banking & Credit",
+      "title": "MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào?",
+      "centralArgument": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+      "thematicPillar": "Ngân hàng, Tín dụng & Lãi suất",
+      "analyticalStance": "BALANCED_MARKET_MONITORING",
+      "riskPosture": "POSTURE_NEUTRAL_MONITORING",
+      "riskLevel": "MODERATE_RISK",
+      "whatHappened": "Ghi nhận 8 sự kiện xác minh trong nhóm Ngân hàng, Tín dụng & Lãi suất. Sự kiện trọng tâm: MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào?. Các diễn biến bổ sung: Sinh viên cho thuê tài khoản ngân hàng lấy 5 triệu đồng/tháng; VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam.",
+      "whatChanged": "Ghi nhận 8 sự kiện xác minh trong nhóm Ngân hàng, Tín dụng & Lãi suất. Sự kiện trọng tâm: MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào?. Các diễn biến bổ sung: Sinh viên cho thuê tài khoản ngân hàng lấy 5 triệu đồng/tháng; VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam.",
+      "whyItMatters": "Tác động lan tỏa của biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB tới hoạt động của các chủ thể trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "affectedVariables": [
+        "Tỷ giá USD/VND (25.500 đồng) gắn với ACB",
+        "Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm)",
+        "Lãi suất tiền gửi 12T cao nhất (MP-03: 6.4 %/năm)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB trong các kỳ báo cáo tới.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào?.",
+      "supportingEventIds": [
+        "EVT-20261112-053",
+        "EVT-20261112-058",
+        "EVT-20261112-063",
+        "EVT-20261112-068",
+        "EVT-20261112-035",
+        "EVT-20261112-020",
+        "EVT-20261112-050",
+        "EVT-20261112-010"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-004"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-02",
+        "MP-03",
+        "MP-05"
+      ],
+      "counterEvidenceEventIds": [],
+      "affectedSectors": [
+        "Ngân hàng & Thị trường Tiền tệ"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được bảo chứng vững chắc bởi 8 sự kiện xác minh độc lập, 1 dữ kiện tài chính đã đối soát chủ thể và 3 chỉ số Market Pulse liên đới.",
+      "causalExplanation": "Cơ chế truyền dẫn: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? qua các dữ kiện 25.500 đồng tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB trong ngành Ngân hàng, Tín dụng & Lãi suất.",
+      "counterEvidence": [],
+      "watchSignals": [
+        "Biến động số liệu mới của Tỷ giá USD/VND (25.500 đồng) gắn với ACB",
+        "Biến động số liệu mới của Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm)",
+        "Biến động số liệu mới của Lãi suất tiền gửi 12T cao nhất (MP-03: 6.4 %/năm)"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Ngân hàng, Tín dụng & Lãi suất đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Ngân hàng, Tín dụng & Lãi suất."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/msb-dang-thiet-ke-lai-trai-nghiem-tai-chinh-ca-nhan-nhu-the-nao-188261112165553953.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_88074b57d9.html",
+          "evidenceSha256": "88074b57d9cb0686830150f4f2e88d4eef733974dcb36c0116262482ee6281ce",
+          "supportingQuote": "‏Từ giao dịch trực tuyến đến một hành trình tài chính liền mạch ‏ ‏Khi mở tài khoản, đăng ký thẻ hay vay vốn đều có thể thực hiện trên điện thoại, lợi thế của ngân hàng số không cò"
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sinh-vien-cho-thue-tai-khoan-ngan-hang-lay-5-trieu-dong-thang-188261112190315249.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_aa1e0896b5.html",
+          "evidenceSha256": "aa1e0896b503ca09319aa330e5a719bd425782aea0d70460c71de893e0e09429",
+          "supportingQuote": "Ngày 12/11, đại diện Ngân hàng GPBank cho biết, một số sinh viên được trả khoảng 5 triệu đồng mỗi tháng cho mỗi tài khoản ngân hàng cho thuê."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá USD/VND",
+          "extractedExpression": "25.500 đồng",
+          "verifiedEntity": "ACB",
+          "boundEntity": "ACB",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "ACB mua vào 25.470 - 25.500 đồng, bán ra 25.860 đồng… Trong khi đó, tỷ giá ngoại tệ ngày 12.11 được Cục Quản lý ngoại hối NHNN đưa ra là 25.500 đồng chiều mua vào, bán ra 26.854 đồng."
+        },
+        {
+          "referenceId": "MP-02",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+          "currentValue": "2.8",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-hut-khoi-thi-truong-hon-53000-ty-dong-lai-suat-lien-ngan-hang-bien-dong-manh-trong-tuan-qua-188261005135654704.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_3455539292.html",
+          "evidenceSha256": "3455539292a77e5aad12d687b19bad4578fdd88e561ee2b57ffe4d2c4ef31af0"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_502af9f374.html",
+          "evidenceSha256": "502af9f374e96db4f2cc8e15087cfac56e6ab7726482e4ab6a65b6126c6f0e7f"
+        },
+        {
+          "referenceId": "MP-05",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+          "currentValue": null,
+          "unit": null,
+          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-da-co-co-che-loai-tru-17-trieu-ty-dong-ra-khoi-room-tin-dung-188261025124958826.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_2079708f4a.html",
+          "evidenceSha256": "2079708f4aba9dfa28a946afa6cbfdc6424311fafe13e766032f26967dbc8da4"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/msb-dang-thiet-ke-lai-trai-nghiem-tai-chinh-ca-nhan-nhu-the-nao-188261112165553953.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_88074b57d9.html",
+          "evidenceSha256": "88074b57d9cb0686830150f4f2e88d4eef733974dcb36c0116262482ee6281ce",
+          "supportingQuote": "‏Từ giao dịch trực tuyến đến một hành trình tài chính liền mạch ‏ ‏Khi mở tài khoản, đăng ký thẻ hay vay vốn đều có thể thực hiện trên điện thoại, lợi thế của ngân hàng số không cò"
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/sinh-vien-cho-thue-tai-khoan-ngan-hang-lay-5-trieu-dong-thang-188261112190315249.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_aa1e0896b5.html",
+          "evidenceSha256": "aa1e0896b503ca09319aa330e5a719bd425782aea0d70460c71de893e0e09429",
+          "supportingQuote": "Ngày 12/11, đại diện Ngân hàng GPBank cho biết, một số sinh viên được trả khoảng 5 triệu đồng mỗi tháng cho mỗi tài khoản ngân hàng cho thuê."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vietinbank-cung-cap-bo-giai-phap-giup-ho-kinh-doanh-ghi-nhan-giao-dich-tong-hop-doanh-thu-de-dang-188261112165513427.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_00b803bf45.html",
+          "evidenceSha256": "00b803bf4510982fbd548acb6cbbad165dfa6316ccaef83280e29a300d8da480",
+          "supportingQuote": "‏VietinBank và VNPAY trang bị loa thông báo biến động số dư và bộ giải pháp cho hộ kinh doanh ‏ ‏Đồng hành cùng hộ kinh doanh chuyển đổi số, VietinBank phối hợp với VNPAY triển kha"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá USD/VND",
+          "extractedExpression": "25.500 đồng",
+          "verifiedEntity": "ACB",
+          "boundEntity": "ACB",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "ACB mua vào 25.470 - 25.500 đồng, bán ra 25.860 đồng… Trong khi đó, tỷ giá ngoại tệ ngày 12.11 được Cục Quản lý ngoại hối NHNN đưa ra là 25.500 đồng chiều mua vào, bán ra 26.854 đồng."
+        },
+        {
+          "referenceId": "MP-02",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+          "currentValue": "2.8",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-hut-khoi-thi-truong-hon-53000-ty-dong-lai-suat-lien-ngan-hang-bien-dong-manh-trong-tuan-qua-188261005135654704.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_3455539292.html",
+          "evidenceSha256": "3455539292a77e5aad12d687b19bad4578fdd88e561ee2b57ffe4d2c4ef31af0"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_502af9f374.html",
+          "evidenceSha256": "502af9f374e96db4f2cc8e15087cfac56e6ab7726482e4ab6a65b6126c6f0e7f"
+        },
+        {
+          "referenceId": "MP-05",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+          "currentValue": null,
+          "unit": null,
+          "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-da-co-co-che-loai-tru-17-trieu-ty-dong-ra-khoi-room-tin-dung-188261025124958826.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_2079708f4a.html",
+          "evidenceSha256": "2079708f4aba9dfa28a946afa6cbfdc6424311fafe13e766032f26967dbc8da4"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-01",
+        "claimText": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ MSB đang thiết kế lại trải nghiệm tài chính cá nhân như thế nào? với các dữ kiện trọng yếu (ACB: 25.500 đồng) tác động trực tiếp lên biến số Tỷ giá USD/VND (25.500 đồng) gắn với ACB.",
+        "thematicPosture": "POSTURE_NEUTRAL_MONITORING",
+        "supportingEventIds": [
+          "EVT-20261112-053",
+          "EVT-20261112-058",
+          "EVT-20261112-063",
+          "EVT-20261112-068",
+          "EVT-20261112-035",
+          "EVT-20261112-020",
+          "EVT-20261112-050",
+          "EVT-20261112-010"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-004"
+        ],
+        "counterEvidenceEventIds": [],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": false,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-02",
+      "themeGroup": "Monetary Policy & Interest Rates",
+      "title": "Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?",
+      "centralArgument": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Xung lực tăng trưởng mở rộng từ Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào? với các dữ kiện trọng yếu (FPT: 12,15 điểm; ACB: 25.500 đồng) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Biến động điểm số VN-Index (12,15 điểm) gắn với FPT.",
+      "thematicPillar": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+      "analyticalStance": "EXPANSIVE_GROWTH_MOMENTUM",
+      "riskPosture": "POSTURE_EXPANSION_GROWTH",
+      "riskLevel": "LOW_RISK",
+      "whatHappened": "Ghi nhận 7 sự kiện xác minh trong nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn. Sự kiện trọng tâm: Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?. Các diễn biến bổ sung: VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam; Cổ phiếu FPT tiếp tục bị khối ngoại xả hàng, thủng mốc 50.000 đồng/cổ phiếu.",
+      "whatChanged": "Ghi nhận 7 sự kiện xác minh trong nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn. Sự kiện trọng tâm: Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?. Các diễn biến bổ sung: VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam; Cổ phiếu FPT tiếp tục bị khối ngoại xả hàng, thủng mốc 50.000 đồng/cổ phiếu.",
+      "whyItMatters": "Tăng trưởng mở rộng thúc đẩy chu chuyển vốn nhanh trong nền kinh tế, gia tăng doanh số thanh toán và mở rộng cơ hội thương mại cho doanh nghiệp.",
+      "affectedVariables": [
+        "Biến động điểm số VN-Index (12,15 điểm) gắn với FPT",
+        "Tỷ giá USD/VND (25.500 đồng) gắn với ACB",
+        "Tỷ giá trung tâm USD/VND (MP-01: 25611 VND/USD)",
+        "Chỉ số VN-Index (MP-04: 1743.00 Điểm)",
+        "Thanh khoản thị trường mở (OMO) (MP-08: 47915 tỷ VND)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng các tổ chức tín dụng và doanh nghiệp sẽ tiếp tục giải ngân mở rộng thị phần bám sát biến số Biến động điểm số VN-Index (12,15 điểm) gắn với FPT.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?.",
+      "supportingEventIds": [
+        "EVT-20261112-054",
+        "EVT-20261112-063",
+        "EVT-20261112-011",
+        "EVT-20261112-025",
+        "EVT-20261112-035",
+        "EVT-20261112-020",
+        "EVT-20261112-019"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-003",
+        "FACT-20261110-004"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-04",
+        "MP-08"
+      ],
+      "counterEvidenceEventIds": [
+        "EVT-20261112-016"
+      ],
+      "affectedSectors": [
+        "Thị trường Ngoại hối & Chứng khoán"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được hỗ trợ bởi 7 sự kiện xác minh nhưng ghi nhận 1 dữ kiện đối lập (EVT-20261112-016) phản ánh sự phân hóa nội tại và rủi ro ngược chiều.",
+      "causalExplanation": "Cơ chế truyền dẫn phức hợp: Diễn biến Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào? đan xen với các tín hiệu đối trọng từ Nợ thuế tăng gấp đôi, hơn một nửa là tiền sử dụng đất, buộc các chủ thể kinh tế phải đồng thời vừa khai thác cơ hội vừa thiết lập bộ đệm an toàn phòng ngừa rủi ro nợ xấu và thanh khoản.",
+      "counterEvidence": [
+        "Dữ kiện đối trọng từ EVT-20261112-016 (Nợ thuế tăng gấp đôi, hơn một nửa là tiền sử dụng đất): Tồn tại rủi ro gia tăng nợ xấu hoặc chi phí trích lập dự phòng, tạo lực cản ngược chiều với đà mở rộng."
+      ],
+      "watchSignals": [
+        "Biến động số liệu mới của Biến động điểm số VN-Index (12,15 điểm) gắn với FPT",
+        "Biến động số liệu mới của Tỷ giá USD/VND (25.500 đồng) gắn với ACB",
+        "Biến động số liệu mới của Tỷ giá trung tâm USD/VND (MP-01: 25611 VND/USD)"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-054",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/san-xuat-khoi-sac-co-hoi-lon-goi-ten-nhom-co-phieu-nao-1002611121747376.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_057_c1da5ac213.html",
+          "evidenceSha256": "c1da5ac21356ffa982650158472cd8a3e013b0ddf3d4a5f9340703241bad3b19",
+          "supportingQuote": "Theo báo cáo vĩ mô tháng 11 của Công ty Chứng khoán Yuanta Việt Nam, sản xuất công nghiệp tiếp tục khởi sắc."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/co-phieu-fpt-tiep-tuc-bi-khoi-ngoai-xa-hang-thung-moc-50000-dong-co-phieu-185261112164411553.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_013_3ff09d783a.html",
+          "evidenceSha256": "3ff09d783ab07b98263a1601b4d58d97ead540861aaf5406312140a19688aba9",
+          "supportingQuote": "Cổ phiếu FPT tiếp tục bị khối ngoại bán ròng gần 450 tỉ đồng, đẩy giá cổ phiếu của tập đoàn này thủng mốc 50.000 đồng, chỉ còn 49.550 đồng/cổ phiếu."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/chu-dau-tu-sieu-cang-can-gio-duoc-phep-chia-co-tuc-bang-co-phieu-185261112161148748.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_78a0feb031.html",
+          "evidenceSha256": "78a0feb0312e3e08abba0a1699f55e8124fde96817229d0eb3b86c0c983150bd",
+          "supportingQuote": "Tổng công ty Hàng hải Việt Nam - chủ đầu tư siêu cảng Cần Giờ - được phép chia cổ tức bằng cổ phiếu."
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-boc-hoi-hon-450-ti-usd-von-hoa-anh-huong-hang-trieu-tai-khoan-huu-tri-my-10026111215384323.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_104a3a4c43.html",
+          "evidenceSha256": "104a3a4c438976b29475fe529ba2a04a732ac4a8b3b8ad5e4d9ea503c097ec39",
+          "supportingQuote": "Theo CBS News ngày 11-11 (giờ Mỹ), Nvidia đã mất hơn 450 tỉ USD vốn hóa thị trường kể từ khi hãng mở cuộc điều tra liên quan đến CEO Jensen Huang hôm 8-11."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Biến động điểm số VN-Index",
+          "extractedExpression": "12,15 điểm",
+          "verifiedEntity": "FPT",
+          "boundEntity": "FPT",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Phiên giao dịch ngày 12.11 của chứng khoán Việt Nam chứng kiến trạng thái giằng co và phân hóa khi VN-Index chịu áp lực điều chỉnh lùi về 1.734,75 điểm, giảm 12,15 điểm so với chốt phiên hôm qua."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá USD/VND",
+          "extractedExpression": "25.500 đồng",
+          "verifiedEntity": "ACB",
+          "boundEntity": "ACB",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "ACB mua vào 25.470 - 25.500 đồng, bán ra 25.860 đồng… Trong khi đó, tỷ giá ngoại tệ ngày 12.11 được Cục Quản lý ngoại hối NHNN đưa ra là 25.500 đồng chiều mua vào, bán ra 26.854 đồng."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25611",
+          "unit": "VND/USD",
+          "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_f021119824.html",
+          "evidenceSha256": "f021119824a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc"
+        },
+        {
+          "referenceId": "MP-04",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Chỉ số VN-Index",
+          "currentValue": "1743.00",
+          "unit": "Điểm",
+          "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
+          "evidenceSha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_1e80fdd9a8.html",
+          "evidenceSha256": "1e80fdd9a8444d859e05ec090435c786326ff1d8a596f614cd8a192e50c1a332"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-054",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/san-xuat-khoi-sac-co-hoi-lon-goi-ten-nhom-co-phieu-nao-1002611121747376.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_057_c1da5ac213.html",
+          "evidenceSha256": "c1da5ac21356ffa982650158472cd8a3e013b0ddf3d4a5f9340703241bad3b19",
+          "supportingQuote": "Theo báo cáo vĩ mô tháng 11 của Công ty Chứng khoán Yuanta Việt Nam, sản xuất công nghiệp tiếp tục khởi sắc."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-011",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/co-phieu-fpt-tiep-tuc-bi-khoi-ngoai-xa-hang-thung-moc-50000-dong-co-phieu-185261112164411553.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_013_3ff09d783a.html",
+          "evidenceSha256": "3ff09d783ab07b98263a1601b4d58d97ead540861aaf5406312140a19688aba9",
+          "supportingQuote": "Cổ phiếu FPT tiếp tục bị khối ngoại bán ròng gần 450 tỉ đồng, đẩy giá cổ phiếu của tập đoàn này thủng mốc 50.000 đồng, chỉ còn 49.550 đồng/cổ phiếu."
+        },
+        {
+          "referenceId": "EVT-20261112-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/chu-dau-tu-sieu-cang-can-gio-duoc-phep-chia-co-tuc-bang-co-phieu-185261112161148748.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_78a0feb031.html",
+          "evidenceSha256": "78a0feb0312e3e08abba0a1699f55e8124fde96817229d0eb3b86c0c983150bd",
+          "supportingQuote": "Tổng công ty Hàng hải Việt Nam - chủ đầu tư siêu cảng Cần Giờ - được phép chia cổ tức bằng cổ phiếu."
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-boc-hoi-hon-450-ti-usd-von-hoa-anh-huong-hang-trieu-tai-khoan-huu-tri-my-10026111215384323.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_104a3a4c43.html",
+          "evidenceSha256": "104a3a4c438976b29475fe529ba2a04a732ac4a8b3b8ad5e4d9ea503c097ec39",
+          "supportingQuote": "Theo CBS News ngày 11-11 (giờ Mỹ), Nvidia đã mất hơn 450 tỉ USD vốn hóa thị trường kể từ khi hãng mở cuộc điều tra liên quan đến CEO Jensen Huang hôm 8-11."
+        },
+        {
+          "referenceId": "FACT-20261110-003",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Biến động điểm số VN-Index",
+          "extractedExpression": "12,15 điểm",
+          "verifiedEntity": "FPT",
+          "boundEntity": "FPT",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Phiên giao dịch ngày 12.11 của chứng khoán Việt Nam chứng kiến trạng thái giằng co và phân hóa khi VN-Index chịu áp lực điều chỉnh lùi về 1.734,75 điểm, giảm 12,15 điểm so với chốt phiên hôm qua."
+        },
+        {
+          "referenceId": "FACT-20261110-004",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Tỷ giá USD/VND",
+          "extractedExpression": "25.500 đồng",
+          "verifiedEntity": "ACB",
+          "boundEntity": "ACB",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "ACB mua vào 25.470 - 25.500 đồng, bán ra 25.860 đồng… Trong khi đó, tỷ giá ngoại tệ ngày 12.11 được Cục Quản lý ngoại hối NHNN đưa ra là 25.500 đồng chiều mua vào, bán ra 26.854 đồng."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25611",
+          "unit": "VND/USD",
+          "sourceUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_f021119824.html",
+          "evidenceSha256": "f021119824a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc"
+        },
+        {
+          "referenceId": "MP-04",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Chỉ số VN-Index",
+          "currentValue": "1743.00",
+          "unit": "Điểm",
+          "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_881a27f599.html",
+          "evidenceSha256": "881a27f599ec867478b90bc87fca57e64044edaf181419a9355f96f48e7ad61d"
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_1e80fdd9a8.html",
+          "evidenceSha256": "1e80fdd9a8444d859e05ec090435c786326ff1d8a596f614cd8a192e50c1a332"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-02",
+        "claimText": "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Xung lực tăng trưởng mở rộng từ Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào? với các dữ kiện trọng yếu (FPT: 12,15 điểm; ACB: 25.500 đồng) thúc đẩy dòng tiền và hoạt động tín dụng/thanh toán đối với biến số Biến động điểm số VN-Index (12,15 điểm) gắn với FPT.",
+        "thematicPosture": "POSTURE_EXPANSION_GROWTH",
+        "supportingEventIds": [
+          "EVT-20261112-054",
+          "EVT-20261112-063",
+          "EVT-20261112-011",
+          "EVT-20261112-025",
+          "EVT-20261112-035",
+          "EVT-20261112-020",
+          "EVT-20261112-019"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-003",
+          "FACT-20261110-004"
+        ],
+        "counterEvidenceEventIds": [
+          "EVT-20261112-016"
+        ],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": true,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-03",
+      "themeGroup": "Corporate & Business Expansion",
+      "title": "Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường",
+      "centralArgument": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Diễn biến từ Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường với các dữ kiện trọng yếu (Quốc hội: 5%; Doanh nghiệp: 265.000 tỷ đồng) tác động trực tiếp lên biến số Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội.",
+      "thematicPillar": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+      "analyticalStance": "BALANCED_MARKET_MONITORING",
+      "riskPosture": "POSTURE_NEUTRAL_MONITORING",
+      "riskLevel": "MODERATE_RISK",
+      "whatHappened": "Ghi nhận 16 sự kiện xác minh trong nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp. Sự kiện trọng tâm: Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường. Các diễn biến bổ sung: Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?; Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào.",
+      "whatChanged": "Ghi nhận 16 sự kiện xác minh trong nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp. Sự kiện trọng tâm: Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường. Các diễn biến bổ sung: Sản xuất khởi sắc, cơ hội lớn gọi tên nhóm cổ phiếu nào?; Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào.",
+      "whyItMatters": "Tác động lan tỏa của biến số Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội tới hoạt động của các chủ thể trong ngành Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+      "affectedVariables": [
+        "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội",
+        "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (265.000 tỷ đồng) gắn với Doanh nghiệp",
+        "Doanh thu (1 tỷ đồng) gắn với Doanh nghiệp",
+        "Doanh thu (10 tỷ đồng) gắn với Doanh nghiệp",
+        "Thanh khoản thị trường mở (OMO) (MP-08: 47915 tỷ VND)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội trong các kỳ báo cáo tới.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường.",
+      "supportingEventIds": [
+        "EVT-20261112-048",
+        "EVT-20261112-054",
+        "EVT-20261112-059",
+        "EVT-20261112-064",
+        "EVT-20261112-069",
+        "EVT-20261112-035",
+        "EVT-20261112-021",
+        "EVT-20261112-016",
+        "EVT-20261112-019",
+        "EVT-20261112-045",
+        "EVT-20261112-029",
+        "EVT-20261112-004",
+        "EVT-20261112-060",
+        "EVT-20261112-022",
+        "EVT-20261112-006",
+        "EVT-20261112-026"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-001",
+        "FACT-20261110-002",
+        "FACT-20261110-006",
+        "FACT-20261110-007",
+        "FACT-20261110-009"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-08"
+      ],
+      "counterEvidenceEventIds": [],
+      "affectedSectors": [
+        "Chính sách Vĩ mô & Tài chính Doanh nghiệp"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "HIGH",
+      "confidenceReason": "Được bảo chứng vững chắc bởi 16 sự kiện xác minh độc lập, 5 dữ kiện tài chính đã đối soát chủ thể và 1 chỉ số Market Pulse liên đới.",
+      "causalExplanation": "Cơ chế truyền dẫn: Diễn biến từ Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường qua các dữ kiện 5%, 265.000 tỷ đồng, 1 tỷ đồng tác động trực tiếp lên biến số Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội trong ngành Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp.",
+      "counterEvidence": [],
+      "watchSignals": [
+        "Biến động số liệu mới của Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội",
+        "Biến động số liệu mới của Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (265.000 tỷ đồng) gắn với Doanh nghiệp",
+        "Biến động số liệu mới của Doanh thu (1 tỷ đồng) gắn với Doanh nghiệp"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-048",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bo-truong-tai-chinh-doanh-nghiep-rut-khoi-thi-truong-la-chuyen-binh-thuong-188261112193609675.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_9f9e117de2.html",
+          "evidenceSha256": "9f9e117de261bd98208a508982b3043e99f9e6913bcd4004d554eaf08181cca4",
+          "supportingQuote": "Sáng 12/11, tiếp tục chương trình Kỳ họp thứ 2, Bộ trưởng Bộ Tài chính Ngô Văn Tuấn trả lời chất vấn trước Quốc hội."
+        },
+        {
+          "referenceId": "EVT-20261112-054",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/san-xuat-khoi-sac-co-hoi-lon-goi-ten-nhom-co-phieu-nao-1002611121747376.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_057_c1da5ac213.html",
+          "evidenceSha256": "c1da5ac21356ffa982650158472cd8a3e013b0ddf3d4a5f9340703241bad3b19",
+          "supportingQuote": "Theo báo cáo vĩ mô tháng 11 của Công ty Chứng khoán Yuanta Việt Nam, sản xuất công nghiệp tiếp tục khởi sắc."
+        },
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tang-cuong-chong-buon-lau-tron-thue-hang-gia-dip-tet-nguyen-dan-dinh-mui-2027-100261112180852257.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_7c0a27720b.html",
+          "evidenceSha256": "7c0a27720bb7e5ce759b5e917ac442a88979c655cca23be75156808c8fffb812",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc, Trưởng Ban Chỉ đạo quốc gia chống buôn lậu, gian lận thương mại , hàng giả vừa ký quyết định 186, ban hành kế hoạch cao điểm chống"
+        },
+        {
+          "referenceId": "EVT-20261112-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/thit-ga-my-tim-cach-vao-ban-an-viet-phia-my-khuyen-khich-dung-gia-vi-dia-phuong-ra-sao-100261112155953861.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_64000e8d85.html",
+          "evidenceSha256": "64000e8d85cb696cab25759e6297554328c81ebc6938b105b2c1a8f5a742da91",
+          "supportingQuote": "Trong khuôn khổ hoạt động xúc tiến thương mại nhân chuyến thăm Việt Nam của phái đoàn Bộ Nông nghiệp Mỹ (USDA) do Thứ trưởng Stephen Alexander Vaden dẫn đầu, cuộc thi Đầu bếp chuyê"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/hon-90-doanh-nghiep-nho-va-vua-co-the-duoc-lua-chon-cach-tinh-thue.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_024_10ae29d3a4.html",
+          "evidenceSha256": "10ae29d3a419d1ed711b50fad745f270d889ad487da46f5e072e6489f0df34a2",
+          "supportingQuote": "Tại phiên chất vấn Bộ trưởng Bộ Tài chính, đại biểu Nguyễn Ngọc Việt (Hà Nội) đặt vấn đề về cách thức các địa phương thu hút đầu tư và tạo nguồn thu ngân sách trong dài hạn."
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_cc031ca899.html",
+          "evidenceSha256": "cc031ca89999e7caaf62b2e86ce9ea8104c148a41fb4a824f8e40d6e37a1157d",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-boc-hoi-hon-450-ti-usd-von-hoa-anh-huong-hang-trieu-tai-khoan-huu-tri-my-10026111215384323.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_104a3a4c43.html",
+          "evidenceSha256": "104a3a4c438976b29475fe529ba2a04a732ac4a8b3b8ad5e4d9ea503c097ec39",
+          "supportingQuote": "Theo CBS News ngày 11-11 (giờ Mỹ), Nvidia đã mất hơn 450 tỉ USD vốn hóa thị trường kể từ khi hãng mở cuộc điều tra liên quan đến CEO Jensen Huang hôm 8-11."
+        },
+        {
+          "referenceId": "EVT-20261112-045",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vpbank-house-of-diamond-khi-su-du-day-bat-nguon-tu-su-can-bang-ben-trong-185261112160907597.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_048_27fb420004.html",
+          "evidenceSha256": "27fb420004d8dc9b3231e06a97cbcceb0d4cad6c102b5840318f4ebbeb84eb9d",
+          "supportingQuote": "Với chủ đề 'Inner Wealth: Vun đắp thân tâm – Bồi đắp phồn vinh', chuỗi sự kiện House of Diamond do VPBank Diamond tổ chức tại Hà Nội và TP.HCM, đã mang đến cho khách hàng khoảng lặ"
+        },
+        {
+          "referenceId": "EVT-20261112-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/doanh-nghiep-nhat-tim-co-hoi-mo-rong-dau-tu-ket-noi-nhan-luc-tai-tphcm-100261112142429565.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_032_3286b66ead.html",
+          "evidenceSha256": "3286b66ead0637b69892665c895027baac4861e40450f72f9add304d0556dd56",
+          "supportingQuote": "Ngày 12-11, Trung tâm Xúc tiến thương mại và đầu tư TP.HCM (ITPC) phối hợp Ngân hàng Gunma (Nhật Bản) tổ chức Hội nghị Xúc tiến đầu tư Nhật Bản tại TP.HCM năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/stavian-ed-phat-trien-ha-tang-nang-luong-cho-kcn-stavian-vinh-phuc-d742380.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_49b71967e0.html",
+          "evidenceSha256": "49b71967e05b4e99c9ae3eef7d36536ed54a2697a3558d1dc2aa08425c843e2b",
+          "supportingQuote": "Công ty cổ phần Phân phối Điện Stavian (Stavian ED), thành viên của Tập đoàn Stavian, vừa khởi công xây dựng Dự án Trạm biến áp 110kV Lập Thạch 4 và đường dây đấu nối, đánh dấu một"
+        },
+        {
+          "referenceId": "EVT-20261112-060",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-xang-dau-moi-nhat-ap-dung-tu-15-gio-hom-nay-1211-185261112145042422.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_063_268526f24c.html",
+          "evidenceSha256": "268526f24c8b76466393644c70e8c56ecd75f17d57600e40ec3387741348492f",
+          "supportingQuote": "Bộ Công thương đã công bố thông tin điều hành, bảng giá xăng dầu mới nhất, yêu cầu các doanh nghiệp áp dụng từ 15 giờ hôm nay 12.11."
+        },
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/fpt-voi-ong-lon-nhat-ban-cung-dau-tu-nha-may-dong-goi-kiem-thu-chip-nho-tai-viet-nam-d742341.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_025_66d57470a1.html",
+          "evidenceSha256": "66d57470a12ca68bc44b21e4b141a1730b5ef90d732e87b08875e59223795b95",
+          "supportingQuote": "Tập đoàn FPT và SBI Holdings (Nhật Bản) vừa ký kết biên bản ghi nhớ (MOU) hợp tác nhằm nghiên cứu khả năng SBI Holdings tham gia đầu tư vào dự án nhà máy đóng gói và kiểm thử chip"
+        },
+        {
+          "referenceId": "EVT-20261112-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tu-15h-gia-xang-dau-tiep-tuc-giam-co-mat-hang-giam-gan-2300-dong-100261112090659368.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_31ddb21e9f.html",
+          "evidenceSha256": "31ddb21e9f7217b855ab6b135f94fb167a83ec3408d564d7883ca47a625f78d7",
+          "supportingQuote": "Bộ Công Thương vừa phát đi thông báo điều chỉnh giá xăng dầu giảm kể từ 15h ngày 12-11."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh",
+          "extractedExpression": "5%",
+          "verifiedEntity": "Quốc hội",
+          "boundEntity": "Quốc hội",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đại biểu Phạm Văn Hòa (đoàn Đồng Tháp) nêu, nghị quyết của Quốc hội yêu cầu kiểm soát nợ thuế dưới 5% tổng thu ngân sách Nhà nước."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh",
+          "extractedExpression": "265.000 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tuy nhiên, nợ thuế vẫn tăng liên tục hằng năm, đến nay còn nợ khoảng 265.000 tỷ đồng, trong đó, rất nhiều nợ đọng khó thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Doanh thu",
+          "extractedExpression": "1 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Doanh nghiệp chuyển đổi từ hộ kinh doanh được miễn thuế trong ba năm; ngưỡng doanh thu được miễn thuế được nâng lên 1 tỷ đồng, đồng thời một số doanh nghiệp có doanh thu dưới 10 tỷ đồng được giảm 30% nghĩa vụ thuế theo chính sách hiện hành."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Doanh thu",
+          "extractedExpression": "10 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Doanh nghiệp chuyển đổi từ hộ kinh doanh được miễn thuế trong ba năm; ngưỡng doanh thu được miễn thuế được nâng lên 1 tỷ đồng, đồng thời một số doanh nghiệp có doanh thu dưới 10 tỷ đồng được giảm 30% nghĩa vụ thuế theo chính sách hiện hành."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá vàng trong nước",
+          "extractedExpression": "136 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trong suốt phiên sáng, Công ty SJC, DOJI, PNJ, Bảo Tín Mạnh Hải đều niêm yết giá mua ở ngưỡng 136 triệu đồng/lượng và giá bán là 139 triệu đồng/lượng ."
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_1e80fdd9a8.html",
+          "evidenceSha256": "1e80fdd9a8444d859e05ec090435c786326ff1d8a596f614cd8a192e50c1a332"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-048",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bo-truong-tai-chinh-doanh-nghiep-rut-khoi-thi-truong-la-chuyen-binh-thuong-188261112193609675.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_9f9e117de2.html",
+          "evidenceSha256": "9f9e117de261bd98208a508982b3043e99f9e6913bcd4004d554eaf08181cca4",
+          "supportingQuote": "Sáng 12/11, tiếp tục chương trình Kỳ họp thứ 2, Bộ trưởng Bộ Tài chính Ngô Văn Tuấn trả lời chất vấn trước Quốc hội."
+        },
+        {
+          "referenceId": "EVT-20261112-054",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/san-xuat-khoi-sac-co-hoi-lon-goi-ten-nhom-co-phieu-nao-1002611121747376.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_057_c1da5ac213.html",
+          "evidenceSha256": "c1da5ac21356ffa982650158472cd8a3e013b0ddf3d4a5f9340703241bad3b19",
+          "supportingQuote": "Theo báo cáo vĩ mô tháng 11 của Công ty Chứng khoán Yuanta Việt Nam, sản xuất công nghiệp tiếp tục khởi sắc."
+        },
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tang-cuong-chong-buon-lau-tron-thue-hang-gia-dip-tet-nguyen-dan-dinh-mui-2027-100261112180852257.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_7c0a27720b.html",
+          "evidenceSha256": "7c0a27720bb7e5ce759b5e917ac442a88979c655cca23be75156808c8fffb812",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc, Trưởng Ban Chỉ đạo quốc gia chống buôn lậu, gian lận thương mại , hàng giả vừa ký quyết định 186, ban hành kế hoạch cao điểm chống"
+        },
+        {
+          "referenceId": "EVT-20261112-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/thit-ga-my-tim-cach-vao-ban-an-viet-phia-my-khuyen-khich-dung-gia-vi-dia-phuong-ra-sao-100261112155953861.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_64000e8d85.html",
+          "evidenceSha256": "64000e8d85cb696cab25759e6297554328c81ebc6938b105b2c1a8f5a742da91",
+          "supportingQuote": "Trong khuôn khổ hoạt động xúc tiến thương mại nhân chuyến thăm Việt Nam của phái đoàn Bộ Nông nghiệp Mỹ (USDA) do Thứ trưởng Stephen Alexander Vaden dẫn đầu, cuộc thi Đầu bếp chuyê"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-021",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/hon-90-doanh-nghiep-nho-va-vua-co-the-duoc-lua-chon-cach-tinh-thue.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_024_10ae29d3a4.html",
+          "evidenceSha256": "10ae29d3a419d1ed711b50fad745f270d889ad487da46f5e072e6489f0df34a2",
+          "supportingQuote": "Tại phiên chất vấn Bộ trưởng Bộ Tài chính, đại biểu Nguyễn Ngọc Việt (Hà Nội) đặt vấn đề về cách thức các địa phương thu hút đầu tư và tạo nguồn thu ngân sách trong dài hạn."
+        },
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_cc031ca899.html",
+          "evidenceSha256": "cc031ca89999e7caaf62b2e86ce9ea8104c148a41fb4a824f8e40d6e37a1157d",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        },
+        {
+          "referenceId": "EVT-20261112-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nvidia-boc-hoi-hon-450-ti-usd-von-hoa-anh-huong-hang-trieu-tai-khoan-huu-tri-my-10026111215384323.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_022_104a3a4c43.html",
+          "evidenceSha256": "104a3a4c438976b29475fe529ba2a04a732ac4a8b3b8ad5e4d9ea503c097ec39",
+          "supportingQuote": "Theo CBS News ngày 11-11 (giờ Mỹ), Nvidia đã mất hơn 450 tỉ USD vốn hóa thị trường kể từ khi hãng mở cuộc điều tra liên quan đến CEO Jensen Huang hôm 8-11."
+        },
+        {
+          "referenceId": "EVT-20261112-045",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/vpbank-house-of-diamond-khi-su-du-day-bat-nguon-tu-su-can-bang-ben-trong-185261112160907597.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_048_27fb420004.html",
+          "evidenceSha256": "27fb420004d8dc9b3231e06a97cbcceb0d4cad6c102b5840318f4ebbeb84eb9d",
+          "supportingQuote": "Với chủ đề 'Inner Wealth: Vun đắp thân tâm – Bồi đắp phồn vinh', chuỗi sự kiện House of Diamond do VPBank Diamond tổ chức tại Hà Nội và TP.HCM, đã mang đến cho khách hàng khoảng lặ"
+        },
+        {
+          "referenceId": "EVT-20261112-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/doanh-nghiep-nhat-tim-co-hoi-mo-rong-dau-tu-ket-noi-nhan-luc-tai-tphcm-100261112142429565.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_032_3286b66ead.html",
+          "evidenceSha256": "3286b66ead0637b69892665c895027baac4861e40450f72f9add304d0556dd56",
+          "supportingQuote": "Ngày 12-11, Trung tâm Xúc tiến thương mại và đầu tư TP.HCM (ITPC) phối hợp Ngân hàng Gunma (Nhật Bản) tổ chức Hội nghị Xúc tiến đầu tư Nhật Bản tại TP.HCM năm 2026."
+        },
+        {
+          "referenceId": "EVT-20261112-004",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/stavian-ed-phat-trien-ha-tang-nang-luong-cho-kcn-stavian-vinh-phuc-d742380.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_49b71967e0.html",
+          "evidenceSha256": "49b71967e05b4e99c9ae3eef7d36536ed54a2697a3558d1dc2aa08425c843e2b",
+          "supportingQuote": "Công ty cổ phần Phân phối Điện Stavian (Stavian ED), thành viên của Tập đoàn Stavian, vừa khởi công xây dựng Dự án Trạm biến áp 110kV Lập Thạch 4 và đường dây đấu nối, đánh dấu một"
+        },
+        {
+          "referenceId": "EVT-20261112-060",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-xang-dau-moi-nhat-ap-dung-tu-15-gio-hom-nay-1211-185261112145042422.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_063_268526f24c.html",
+          "evidenceSha256": "268526f24c8b76466393644c70e8c56ecd75f17d57600e40ec3387741348492f",
+          "supportingQuote": "Bộ Công thương đã công bố thông tin điều hành, bảng giá xăng dầu mới nhất, yêu cầu các doanh nghiệp áp dụng từ 15 giờ hôm nay 12.11."
+        },
+        {
+          "referenceId": "EVT-20261112-022",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/fpt-voi-ong-lon-nhat-ban-cung-dau-tu-nha-may-dong-goi-kiem-thu-chip-nho-tai-viet-nam-d742341.html",
+          "evidencePath": "raw_evidence_store/snapshot_live_025_66d57470a1.html",
+          "evidenceSha256": "66d57470a12ca68bc44b21e4b141a1730b5ef90d732e87b08875e59223795b95",
+          "supportingQuote": "Tập đoàn FPT và SBI Holdings (Nhật Bản) vừa ký kết biên bản ghi nhớ (MOU) hợp tác nhằm nghiên cứu khả năng SBI Holdings tham gia đầu tư vào dự án nhà máy đóng gói và kiểm thử chip"
+        },
+        {
+          "referenceId": "EVT-20261112-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tu-15h-gia-xang-dau-tiep-tuc-giam-co-mat-hang-giam-gan-2300-dong-100261112090659368.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_007_31ddb21e9f.html",
+          "evidenceSha256": "31ddb21e9f7217b855ab6b135f94fb167a83ec3408d564d7883ca47a625f78d7",
+          "supportingQuote": "Bộ Công Thương vừa phát đi thông báo điều chỉnh giá xăng dầu giảm kể từ 15h ngày 12-11."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "FACT-20261110-001",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh",
+          "extractedExpression": "5%",
+          "verifiedEntity": "Quốc hội",
+          "boundEntity": "Quốc hội",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Đại biểu Phạm Văn Hòa (đoàn Đồng Tháp) nêu, nghị quyết của Quốc hội yêu cầu kiểm soát nợ thuế dưới 5% tổng thu ngân sách Nhà nước."
+        },
+        {
+          "referenceId": "FACT-20261110-002",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh",
+          "extractedExpression": "265.000 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Tuy nhiên, nợ thuế vẫn tăng liên tục hằng năm, đến nay còn nợ khoảng 265.000 tỷ đồng, trong đó, rất nhiều nợ đọng khó thu hồi."
+        },
+        {
+          "referenceId": "FACT-20261110-006",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Doanh thu",
+          "extractedExpression": "1 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Doanh nghiệp chuyển đổi từ hộ kinh doanh được miễn thuế trong ba năm; ngưỡng doanh thu được miễn thuế được nâng lên 1 tỷ đồng, đồng thời một số doanh nghiệp có doanh thu dưới 10 tỷ đồng được giảm 30% nghĩa vụ thuế theo chính sách hiện hành."
+        },
+        {
+          "referenceId": "FACT-20261110-007",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Doanh thu",
+          "extractedExpression": "10 tỷ đồng",
+          "verifiedEntity": "Doanh nghiệp",
+          "boundEntity": "Doanh nghiệp",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Doanh nghiệp chuyển đổi từ hộ kinh doanh được miễn thuế trong ba năm; ngưỡng doanh thu được miễn thuế được nâng lên 1 tỷ đồng, đồng thời một số doanh nghiệp có doanh thu dưới 10 tỷ đồng được giảm 30% nghĩa vụ thuế theo chính sách hiện hành."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá vàng trong nước",
+          "extractedExpression": "136 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trong suốt phiên sáng, Công ty SJC, DOJI, PNJ, Bảo Tín Mạnh Hải đều niêm yết giá mua ở ngưỡng 136 triệu đồng/lượng và giá bán là 139 triệu đồng/lượng ."
+        },
+        {
+          "referenceId": "MP-08",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Thanh khoản thị trường mở (OMO)",
+          "currentValue": "47915",
+          "unit": "tỷ VND",
+          "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_1e80fdd9a8.html",
+          "evidenceSha256": "1e80fdd9a8444d859e05ec090435c786326ff1d8a596f614cd8a192e50c1a332"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-03",
+        "claimText": "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp: Diễn biến từ Bộ trưởng Tài chính: Doanh nghiệp rút khỏi thị trường là chuyện bình thường với các dữ kiện trọng yếu (Quốc hội: 5%; Doanh nghiệp: 265.000 tỷ đồng) tác động trực tiếp lên biến số Ngưỡng nợ thuế áp dụng tạm hoãn xuất cảnh (5%) gắn với Quốc hội.",
+        "thematicPosture": "POSTURE_NEUTRAL_MONITORING",
+        "supportingEventIds": [
+          "EVT-20261112-048",
+          "EVT-20261112-054",
+          "EVT-20261112-059",
+          "EVT-20261112-064",
+          "EVT-20261112-069",
+          "EVT-20261112-035",
+          "EVT-20261112-021",
+          "EVT-20261112-016",
+          "EVT-20261112-019",
+          "EVT-20261112-045",
+          "EVT-20261112-029",
+          "EVT-20261112-004",
+          "EVT-20261112-060",
+          "EVT-20261112-022",
+          "EVT-20261112-006",
+          "EVT-20261112-026"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-001",
+          "FACT-20261110-002",
+          "FACT-20261110-006",
+          "FACT-20261110-007",
+          "FACT-20261110-009"
+        ],
+        "counterEvidenceEventIds": [],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": false,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    },
+    {
+      "thesisId": "THESIS-04",
+      "themeGroup": "Cashless Payment & Payment Infrastructure",
+      "title": "Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào",
+      "centralArgument": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Diễn biến từ Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào với các dữ kiện trọng yếu (SJC: 136 triệu đồng/lượng) tác động trực tiếp lên biến số Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC.",
+      "thematicPillar": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+      "analyticalStance": "BALANCED_MARKET_MONITORING",
+      "riskPosture": "POSTURE_NEUTRAL_MONITORING",
+      "riskLevel": "MODERATE_RISK",
+      "whatHappened": "Ghi nhận 5 sự kiện xác minh trong nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số. Sự kiện trọng tâm: Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào. Các diễn biến bổ sung: VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam; Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu.",
+      "whatChanged": "Ghi nhận 5 sự kiện xác minh trong nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số. Sự kiện trọng tâm: Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào. Các diễn biến bổ sung: VPBank và Visa ra mắt SkyOne Visa - tiên phong đổi mới trải nghiệm dòng thẻ du lịch tại Việt Nam; Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu.",
+      "whyItMatters": "Tác động lan tỏa của biến số Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC tới hoạt động của các chủ thể trong ngành Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+      "affectedVariables": [
+        "Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC",
+        "Khách du lịch quốc tế đến Việt Nam (MP-07: 19.5 triệu lượt)"
+      ],
+      "possibleNextDevelopment": "Kỳ vọng cơ quan quản lý và các đơn vị liên quan sẽ điều chỉnh kế hoạch vận hành bám sát biến số Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC trong các kỳ báo cáo tới.",
+      "fintechWatchpoint": "Theo dõi khả năng ứng dụng giải pháp thanh toán số và quản trị đối soát dòng tiền thích ứng với diễn biến của Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào.",
+      "supportingEventIds": [
+        "EVT-20261112-059",
+        "EVT-20261112-063",
+        "EVT-20261112-035",
+        "EVT-20261112-010",
+        "EVT-20261112-026"
+      ],
+      "supportingFactIds": [
+        "FACT-20261110-009"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-06",
+        "MP-07"
+      ],
+      "counterEvidenceEventIds": [],
+      "affectedSectors": [
+        "Bán lẻ, Tiêu dùng & Thanh toán Không Tiền mặt"
+      ],
+      "impactHorizon": "SHORT_TERM_0_3M",
+      "confidenceLevel": "MEDIUM",
+      "confidenceReason": "Được bảo chứng vững chắc bởi 5 sự kiện xác minh độc lập, 1 dữ kiện tài chính đã đối soát chủ thể và 2 chỉ số Market Pulse liên đới.",
+      "causalExplanation": "Cơ chế truyền dẫn: Diễn biến từ Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào qua các dữ kiện 136 triệu đồng/lượng tác động trực tiếp lên biến số Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC trong ngành Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số.",
+      "counterEvidence": [],
+      "watchSignals": [
+        "Biến động số liệu mới của Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC",
+        "Biến động số liệu mới của Khách du lịch quốc tế đến Việt Nam (MP-07: 19.5 triệu lượt)"
+      ],
+      "invalidationConditions": [
+        "Nếu số liệu thực tế của Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số đảo chiều hoặc cơ quan quản lý điều chỉnh định hướng chính sách."
+      ],
+      "limitations": [
+        "Phụ thuộc vào độ trễ truyền dẫn chính sách và các rủi ro bên ngoài của nhóm Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số."
+      ],
+      "sourceReferences": [
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá vàng trong nước",
+          "extractedExpression": "136 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trong suốt phiên sáng, Công ty SJC, DOJI, PNJ, Bảo Tín Mạnh Hải đều niêm yết giá mua ở ngưỡng 136 triệu đồng/lượng và giá bán là 139 triệu đồng/lượng ."
+        },
+        {
+          "referenceId": "MP-06",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+          "currentValue": null,
+          "unit": null,
+          "sourceUrl": "https://cafef.vn/vietqr-global-giai-bai-toan-dua-thanh-toan-den-tung-diem-ban-188260928064510139.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_f29deb4653.html",
+          "evidenceSha256": "f29deb4653a80d9dd79fcd617ebdf32f3b8b0015ae1ae697ea2301377907c4e0"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-059",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/nha-dau-tu-xin-bo-60-ti-dong-xay-cau-dakrong-moi-phuc-vu-nhap-10-trieu-tan-than-tu-lao-100261112181806112.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_062_997d4a5f0d.html",
+          "evidenceSha256": "997d4a5f0dbf99c2ac543c3139be7f5a78b03646d5239e6f57c84a28bef348c2",
+          "supportingQuote": "Một doanh nghiệp ở Thái Nguyên sẽ tự bỏ vốn xây cầu Đakrông mới cạnh cầu treo cũ trên đường Hồ Chí Minh nhánh tây qua Quảng Trị, Nhà nước không phải thanh toán."
+        },
+        {
+          "referenceId": "EVT-20261112-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_56f9b46b0e.html",
+          "evidenceSha256": "56f9b46b0e542c4a7276d4d79ea9bc63d78833134868d5215470d5e4eee7abae",
+          "supportingQuote": "Được phát triển trên nền tảng hợp tác chiến lược giữa VPBank và Visa, sản phẩm sở hữu mô hình tích điểm mở lần đầu tiên được triển khai tại khu vực châu Á - Thái Bình Dương (APAC),"
+        },
+        {
+          "referenceId": "EVT-20261112-035",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "FACT-20261110-009",
+          "referenceType": "FINANCIAL_FACT",
+          "metricName": "Giá vàng trong nước",
+          "extractedExpression": "136 triệu đồng/lượng",
+          "verifiedEntity": "SJC",
+          "boundEntity": "SJC",
+          "evidencePath": "",
+          "evidenceSha256": "",
+          "contextQuote": "Trong suốt phiên sáng, Công ty SJC, DOJI, PNJ, Bảo Tín Mạnh Hải đều niêm yết giá mua ở ngưỡng 136 triệu đồng/lượng và giá bán là 139 triệu đồng/lượng ."
+        },
+        {
+          "referenceId": "MP-06",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+          "currentValue": null,
+          "unit": null,
+          "sourceUrl": "https://cafef.vn/vietqr-global-giai-bai-toan-dua-thanh-toan-den-tung-diem-ban-188260928064510139.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_f29deb4653.html",
+          "evidenceSha256": "f29deb4653a80d9dd79fcd617ebdf32f3b8b0015ae1ae697ea2301377907c4e0"
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ],
+      "claimEvidenceCrosswalk": {
+        "crosswalkId": "CWK-THESIS-04",
+        "claimText": "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số: Diễn biến từ Nhà đầu tư xin bỏ 60 tỉ đồng xây cầu Đakrông mới phục vụ nhập 10 triệu tấn than từ Lào với các dữ kiện trọng yếu (SJC: 136 triệu đồng/lượng) tác động trực tiếp lên biến số Giá vàng trong nước (136 triệu đồng/lượng) gắn với SJC.",
+        "thematicPosture": "POSTURE_NEUTRAL_MONITORING",
+        "supportingEventIds": [
+          "EVT-20261112-059",
+          "EVT-20261112-063",
+          "EVT-20261112-035",
+          "EVT-20261112-010",
+          "EVT-20261112-026"
+        ],
+        "supportingFactIds": [
+          "FACT-20261110-009"
+        ],
+        "counterEvidenceEventIds": [],
+        "isClaimGroundedInEvents": true,
+        "isClaimGroundedInFacts": true,
+        "hasOpposingSignals": false,
+        "crosswalkIntegrityStatus": "VALIDATED_RELATIONSHIP"
+      }
+    }
+  ],
+  "totalTheses": 4,
+  "canonicalThemeCoverage": [
+    "Bán lẻ, Tiêu dùng, Vận tải & Thanh toán Số",
+    "Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn",
+    "Chính sách Tài khóa, Thuế & Đầu tư Doanh nghiệp",
+    "Ngân hàng, Tín dụng & Lãi suất"
+  ],
+  "totalSupportingEventsUsed": 25,
+  "totalUniqueFactsUsed": 7,
+  "synthesisMethodology": "Dynamic Thematic Event-Clustering & Fact-Grounded Synthesis"
+}

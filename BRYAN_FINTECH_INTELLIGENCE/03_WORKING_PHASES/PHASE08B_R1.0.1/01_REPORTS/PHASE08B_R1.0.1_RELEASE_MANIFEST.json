@@ -1,0 +1,83 @@
+{
+  "phaseId": "PHASE08B",
+  "releaseId": "PHASE08B_R1.0.1",
+  "releaseVersion": "1.0.1-restored-vneconomy-ui",
+  "remediationTitle": "Phase 08B R1.0.1 Restored Content Engine + Single Verbatim Press Quote (Cover Story & 25 Cards) + VnEconomy Nav Logo & Local Staging Guard",
+  "releaseStatus": "CANDIDATE_READY_FOR_REVIEW",
+  "projectOwnerAcceptance": "PENDING_OWNER_ACCEPTANCE",
+  "productionStatus": "PROHIBITED_UNTIL_OWNER_ACCEPTANCE",
+  "generatedTimestamp": "2026-11-14T19:33:15+07:00",
+  "parentCandidatePhase": "PHASE08B_R1.0.0",
+  "parentCandidateSha256": "be40d7cc748e6c834b8e742b20babf67db80408ee4030bf3bb76cfe945734f9",
+  "parentBackupSha256": "92ed309451b80c1335a1e721596282deec66238a101dd911d636f1293ec92f2c",
+  "backupFileName": "PHASE08B_R1.0.1_BACKUP.zip",
+  "backupSha256": "be40d7cc748e6c834b8e742b20babf67db80408ee4030bf3bb76cfe945734f9",
+  "backupSizeBytes": 1500185,
+  "packageFileName": "PHASE08B_R1.0.1_CANDIDATE.zip",
+  "packageSha256": "8317c3af2ff8d25b2606c5701e3769be293d7a07916b73ef669d97e8128a896f",
+  "packageSizeBytes": 1536905,
+  "packageFileCount": 42,
+  "canonicalEditionId": "ED-20261114-D01",
+  "canonicalEditionDate": "14/11/2026",
+  "canonicalEditionNumber": "ẤN BẢN SỐ 29",
+  "sourceChecksums": {
+    "index.html": "3ce9157fdb9dbf46e69b7a23ca53990fb1700957cd38276e8e841c08908cd293",
+    "magspread.css": "ffde219c942c5e0a124d6c79ba5a328236ccf50fdf4cb7f20ca3a14a0377cca4",
+    "magspread.js": "dd09cdca27cbfea98df0dbb67466fcbd25cb20595ed5c401ac61b4064724387f",
+    "edition-data.json": "949386de36e12ecb13bd356b60e7d8784407def4fca6f7d5b562203051518df6",
+    "edition-data.js": "18933f94766273d7ced0b0281af556e71df8e530396eb187a46eed6b39cec8ac",
+    "robots.txt": "6c13944aa03e1b6035bdb6a4991fdfaff4289c0a0d1b52e3129ffb5a72feba9e",
+    "sitemap.xml": "9dc9d8cc1843c90aeff22a0c2c2d6cfb5d2f22259944a04844fe931dd86c719d",
+    "bnews-logo-light-opt.webp": "bcc2a325a839960b3d1ef97254850390caae446038eefa6f331da7396f11",
+    "bnews-logo-dark-opt.webp": "d4cf70497795cc395598d8944a298d13abcddce8a44f72ba4f46147dec78dc9e",
+    "fintech-favicon-opt.webp": "2e558f17b1e5b234de25bd9ca9332aaa3911af130ce1a7a949c2d76e1941a24"
+  },
+  "defectsRemediated": {
+    "D-06_RestoredR101_SingleVerbatimQuote": "PASS: Restored update_magspread_pilot_ui.py + ed29_editorial_content.py from PHASE08B_R1.0.1; unified Quote model strictly to single verbatim press quote (supportingQuote) across sec02_coverStory (CafeF SHB quote), 25/25 news cards (.ms-card-editorial-quote), and Article Reader drawer (1 blockquote); audit_content_repetition() status=PASS (25/25 eligible, 0 repeated sentences >=25 chars, 0 '?;' artifacts).",
+    "D-11_VnEconomyUiStickyLogoNav": "PASS: Kept VnEconomy centered nameplate (no masthead logo, hidden intro button, icon-only #themeToggleBtn, promoted footer h2) and relocated Bnews WebP logo to left position of #desktopNavStrip & #mobileStickyNav replacing [B] badge; aligned 4 desktop tabs + CTA on single row at both 1024px & 1440px (overflow=0); verified 0 overflow & 0 mobile tab overlaps across 320/360/390/768/1024/1440px and equal 16px section alignment.",
+    "D-12_D13_SeoAndWebp": "PASS: Kept robots.txt (95 B), sitemap.xml (301 B), and genuine 280x85 RIFF WebP logos (10,380 B light / 9,312 B dark) + 96x96 WebP favicon (4,450 B) + PNG fallbacks <28 KB.",
+    "ProdGuard_LocalStaging": "PASS: Enforced --mode local-staging default in run_daily_edition.py, setup_daily_scheduler_9am.sh, and README_DAILY_RUN.md; dry-run exit 0 (BLOCKED LOCAL STAGING ONLY); unapproved manual-release rejected exit 2; zero git push executed."
+  },
+  "testResults": {
+    "lighthouseDesktopScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100,
+      "passed": 59,
+      "failed": 0
+    },
+    "lighthouseMobileScores": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100,
+      "passed": 58,
+      "failed": 0
+    },
+    "performanceTraceMobile390": {
+      "lcpMs": 187,
+      "ttfbMs": 3,
+      "renderDelayMs": 183,
+      "cls": 0.0
+    },
+    "consoleErrors": 0,
+    "mobileOverflowDetected": false,
+    "desktop1024SingleRowNav": true,
+    "singlePressQuoteCardsCount": 25,
+    "drawerBlockquotesCount": 1
+  },
+  "deliverablesManifest": [
+    "PHASE08B_R1.0.1_BACKUP.zip",
+    "PHASE08B_R1.0.1_CANDIDATE.zip",
+    "PHASE08B_R1.0.1_RELEASE_MANIFEST.json",
+    "PHASE08B_R1.0.1_REMEDIATION_REPORT.md",
+    "PHASE08B_R1.0.1_UAT_REPORT.md",
+    "PHASE08B_R1.0.1_CONTENT_AUDIT.md",
+    "PHASE08B_R1.0.1_ACCESSIBILITY_REPORT.md",
+    "PHASE08B_R1.0.1_SEO_REPORT.md",
+    "PHASE08B_R1.0.1_RESPONSIVE_REPORT.md",
+    "PHASE08B_R1.0.1_PERFORMANCE_REPORT.md",
+    "PHASE08B_R1.0.1_REGRESSION_REPORT.md"
+  ]
+}

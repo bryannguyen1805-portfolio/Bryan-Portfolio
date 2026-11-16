@@ -1,0 +1,622 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T16:15:00+07:00",
+  "cards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "title": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "headline": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whatChanged": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whyItMatters": "Dòng khách quốc tế và chi tiêu tại chỗ mở ra cơ hội gia tăng doanh thu phí xử lý giao dịch ngoại tệ.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-010",
+        "EVT-20261112-003",
+        "EVT-20261112-048",
+        "EVT-20261112-026",
+        "EVT-20261112-049"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunities": [
+        "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
+      ],
+      "risk": "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "EXPLORE",
+      "monitoringTriggers": [
+        "Doanh số thanh toán thẻ quốc tế và lượng khách tại các điểm đến trọng điểm."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-048",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/khong-chi-san-gia-hoi-nguoi-tieu-dung-dang-co-them-cach-de-loi-hon-moi-lan-mua-sam-188261112162341652.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_5fcf889923.html",
+          "evidenceSha256": "5fcf8899232576f4e78d39d97296385ac79fc86cdeea1870c41e8d0e1e9c1cf7",
+          "supportingQuote": "Mua sắm không đơn thuần là cuộc đua săn sale giá rẻ Càng về cuối năm, thị trường bán lẻ càng trở nên sôi động khi các thương hiệu đồng loạt triển khai chương trình khuyến mại."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "EVT-20261112-049",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/hdbank-vietjet-va-vikki-dong-hanh-mua-mua-sam-cuoi-nam-tphcm-100261112111940072.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_052_b049fc5038.html",
+          "evidenceSha256": "b049fc5038bceb26022d21d133245114df0e80b386d14912520b9b85fdcc04f6",
+          "supportingQuote": "Với thông điệp \"TP.HCM - Sống động từng trải nghiệm\", Vibrant HCMC kết nối các hoạt động mua sắm, dịch vụ, văn hóa và du lịch từ tháng 11-2026 đến tháng 2-2027."
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm).",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm).",
+      "whyItMatters": "Chi phí vốn ngân hàng neo cao ảnh hưởng trực tiếp đến chi phí tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-003",
+        "EVT-20261112-020",
+        "EVT-20261112-053",
+        "EVT-20261112-030",
+        "EVT-20261112-010",
+        "EVT-20261112-058",
+        "EVT-20261112-049"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-03"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất 12 tháng tại các NHTM và số liệu can thiệp ngoại hối của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/canh-bao-khan-toi-nguoi-dan-bay-tai-khoan-ngan-hang-tuyet-doi-khong-cho-muon-cho-thue-188261112134940751.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_9d81d1842f.html",
+          "evidenceSha256": "9d81d1842f34f870cc862228008af3e16b7dc05ce0a564e5eb830dff6f98878b",
+          "supportingQuote": "Lợi dụng nhu cầu kiếm thêm thu nhập của sinh viên, các đối tượng đưa ra mức thù lao hấp dẫn để dụ dỗ mở, cho thuê tài khoản ngân hàng và cung cấp thông tin đăng nhập."
+        },
+        {
+          "referenceId": "EVT-20261112-030",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/mot-ngan-hang-nho-bat-ngo-vuot-bidv-de-lot-top-5-nha-bang-co-ty-trong-tien-gui-gia-re-dan-dau-cung-mb-vietcombank-techcombank-vietinbank-188261112125252795.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_1b5e63e1f7.html",
+          "evidenceSha256": "1b5e63e1f7a470f8931358eeb0d5e12716ea37d7ce5f4355cb896eb5ecc1b2a9",
+          "supportingQuote": "PGBank bất ngờ góp mặt trong Top 5 Tính đến ngày 30/9/2026, PGBank ghi nhận tỷ lệ tiền gửi không kỳ hạn (CASA) đạt 21,4%, đứng thứ 5 trong nhóm 28 ngân hàng được khảo sát."
+        },
+        {
+          "referenceId": "EVT-20261112-049",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/hdbank-vietjet-va-vikki-dong-hanh-mua-mua-sam-cuoi-nam-tphcm-100261112111940072.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_052_b049fc5038.html",
+          "evidenceSha256": "b049fc5038bceb26022d21d133245114df0e80b386d14912520b9b85fdcc04f6",
+          "supportingQuote": "Với thông điệp \"TP.HCM - Sống động từng trải nghiệm\", Vibrant HCMC kết nối các hoạt động mua sắm, dịch vụ, văn hóa và du lịch từ tháng 11-2026 đến tháng 2-2027."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25600",
+          "unit": "VND/USD",
+          "sourceUrl": "https://cafef.vn/linh-hoat-cac-giai-phap-on-dinh-ty-gia-18826111013535336.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_49fc23f9b4.html",
+          "evidenceSha256": "49fc23f9b408d71cb27dc81e9247868f5ca597ab57c07d2e9911d17701219a56"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html",
+          "evidenceSha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "title": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "headline": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whatChanged": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whyItMatters": "Chính sách quản lý thuế siết chặt thúc đẩy nhu cầu chuẩn hóa đối soát và tích hợp máy tính tiền điện tử.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingRadarSignalId": "RADAR-04",
+      "relatedRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-016"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách.",
+      "risks": [
+        "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành chính thức của Bộ Tài chính và Tổng cục Thuế."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_60c92935da.html",
+          "evidenceSha256": "60c92935daf67a583ccde628f721dd0bd2d47847379eb4557ab2756935d7e6ae",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        }
+      ]
+    }
+  ],
+  "decisionCards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "title": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "headline": "Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whatChanged": "Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.",
+      "whyItMatters": "Dòng khách quốc tế và chi tiêu tại chỗ mở ra cơ hội gia tăng doanh thu phí xử lý giao dịch ngoại tệ.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-010",
+        "EVT-20261112-003",
+        "EVT-20261112-048",
+        "EVT-20261112-026",
+        "EVT-20261112-049"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunities": [
+        "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt."
+      ],
+      "risk": "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Cạnh tranh phí quẹt thẻ quốc tế và chi phí thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "EXPLORE",
+      "monitoringTriggers": [
+        "Doanh số thanh toán thẻ quốc tế và lượng khách tại các điểm đến trọng điểm."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-048",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/khong-chi-san-gia-hoi-nguoi-tieu-dung-dang-co-them-cach-de-loi-hon-moi-lan-mua-sam-188261112162341652.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_051_5fcf889923.html",
+          "evidenceSha256": "5fcf8899232576f4e78d39d97296385ac79fc86cdeea1870c41e8d0e1e9c1cf7",
+          "supportingQuote": "Mua sắm không đơn thuần là cuộc đua săn sale giá rẻ Càng về cuối năm, thị trường bán lẻ càng trở nên sôi động khi các thương hiệu đồng loạt triển khai chương trình khuyến mại."
+        },
+        {
+          "referenceId": "EVT-20261112-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/gia-vang-trong-nuoc-giam-manh-lien-tiep-ba-phien.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_029_98826ac27d.html",
+          "evidenceSha256": "98826ac27d2f4d5763ef8873e8c73282136e28a5c878df1b95749d38c5c85ee8",
+          "supportingQuote": "Thị trường vàng miếng SJC tiếp tục ghi nhận phiên giảm thứ ba liên tiếp (10-12/11)."
+        },
+        {
+          "referenceId": "EVT-20261112-049",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/hdbank-vietjet-va-vikki-dong-hanh-mua-mua-sam-cuoi-nam-tphcm-100261112111940072.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_052_b049fc5038.html",
+          "evidenceSha256": "b049fc5038bceb26022d21d133245114df0e80b386d14912520b9b85fdcc04f6",
+          "supportingQuote": "Với thông điệp \"TP.HCM - Sống động từng trải nghiệm\", Vibrant HCMC kết nối các hoạt động mua sắm, dịch vụ, văn hóa và du lịch từ tháng 11-2026 đến tháng 2-2027."
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+          "currentValue": "19.5",
+          "unit": "triệu lượt",
+          "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+          "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+          "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm).",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm).",
+      "whyItMatters": "Chi phí vốn ngân hàng neo cao ảnh hưởng trực tiếp đến chi phí tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-003",
+        "EVT-20261112-020",
+        "EVT-20261112-053",
+        "EVT-20261112-030",
+        "EVT-20261112-010",
+        "EVT-20261112-058",
+        "EVT-20261112-049"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-03"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống cuối năm."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất 12 tháng tại các NHTM và số liệu can thiệp ngoại hối của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/rut-ngan-thoi-han-cap-phep-xuat-khau-nhap-khau-vang-nguyen-lieu-185261112155553448.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_866e83d354.html",
+          "evidenceSha256": "866e83d354c9c1784e8c130c38a8cb1c43f1bd9d0fd8d210f6457d2259adbfed",
+          "supportingQuote": "Thủ tục cấp phép xuất nhập khẩu vàng nguyên liệu đối với doanh nghiệp khai thác vàng được phân cấp về Ngân hàng Nhà nước chi nhánh khu vực và cắt giảm thời gian xử lý hồ sơ xuống c"
+        },
+        {
+          "referenceId": "EVT-20261112-020",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_023_9fd73da54f.html",
+          "evidenceSha256": "9fd73da54f19ecc8984f606aee4a63415b5b9d459d30c3dbcdb8131181380648",
+          "supportingQuote": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối"
+        },
+        {
+          "referenceId": "EVT-20261112-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/canh-bao-khan-toi-nguoi-dan-bay-tai-khoan-ngan-hang-tuyet-doi-khong-cho-muon-cho-thue-188261112134940751.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_9d81d1842f.html",
+          "evidenceSha256": "9d81d1842f34f870cc862228008af3e16b7dc05ce0a564e5eb830dff6f98878b",
+          "supportingQuote": "Lợi dụng nhu cầu kiếm thêm thu nhập của sinh viên, các đối tượng đưa ra mức thù lao hấp dẫn để dụ dỗ mở, cho thuê tài khoản ngân hàng và cung cấp thông tin đăng nhập."
+        },
+        {
+          "referenceId": "EVT-20261112-030",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/ncb-canh-bao-3-thu-doan-danh-cap-thong-tin-the-tai-khoan-18526111215422077.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_9b3ae3dcd6.html",
+          "evidenceSha256": "9b3ae3dcd6f54d49b23c561d981a0b61dab723933c410062700ff27671f22794",
+          "supportingQuote": "Ngân hàng TMCP Quốc Dân (NCB) vừa phát đi cảnh báo khách hàng nâng cao cảnh giác trước một số thủ đoạn lừa đảo nhằm đánh cắp thông tin thẻ, tài khoản và chiếm đoạt tài sản."
+        },
+        {
+          "referenceId": "EVT-20261112-010",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/tphcm-vao-mua-sale-nhung-san-the-nao-cho-dang-tien-10026111213471021.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_012_5716afac30.html",
+          "evidenceSha256": "5716afac3062fbf992de6fc1710809b07d0e7437c1ec1ac920e181b96822b738",
+          "supportingQuote": "Với kinh nghiệm mua sắm onlie nhiều năm trên các sàn thương mại điện tử, các bà nội trợ chia sẻ bí kíp để săn sale giá tốt, hàng chất lượng."
+        },
+        {
+          "referenceId": "EVT-20261112-058",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/mot-ngan-hang-nho-bat-ngo-vuot-bidv-de-lot-top-5-nha-bang-co-ty-trong-tien-gui-gia-re-dan-dau-cung-mb-vietcombank-techcombank-vietinbank-188261112125252795.chn",
+          "evidencePath": "raw_evidence_store/snapshot_live_061_1b5e63e1f7.html",
+          "evidenceSha256": "1b5e63e1f7a470f8931358eeb0d5e12716ea37d7ce5f4355cb896eb5ecc1b2a9",
+          "supportingQuote": "PGBank bất ngờ góp mặt trong Top 5 Tính đến ngày 30/9/2026, PGBank ghi nhận tỷ lệ tiền gửi không kỳ hạn (CASA) đạt 21,4%, đứng thứ 5 trong nhóm 28 ngân hàng được khảo sát."
+        },
+        {
+          "referenceId": "EVT-20261112-049",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/hdbank-vietjet-va-vikki-dong-hanh-mua-mua-sam-cuoi-nam-tphcm-100261112111940072.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_052_b049fc5038.html",
+          "evidenceSha256": "b049fc5038bceb26022d21d133245114df0e80b386d14912520b9b85fdcc04f6",
+          "supportingQuote": "Với thông điệp \"TP.HCM - Sống động từng trải nghiệm\", Vibrant HCMC kết nối các hoạt động mua sắm, dịch vụ, văn hóa và du lịch từ tháng 11-2026 đến tháng 2-2027."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25600",
+          "unit": "VND/USD",
+          "sourceUrl": "https://cafef.vn/linh-hoat-cac-giai-phap-on-dinh-ty-gia-18826111013535336.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_49fc23f9b4.html",
+          "evidenceSha256": "49fc23f9b408d71cb27dc81e9247868f5ca597ab57c07d2e9911d17701219a56"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7",
+          "unit": "%/năm",
+          "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_702185d8bd.html",
+          "evidenceSha256": "702185d8bdfee8dd0f6e54729edaca87cb561d1e347aca8d5d7a0a0b9d4e8677"
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "title": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "headline": "Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whatChanged": "Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh và cá nhân.",
+      "whyItMatters": "Chính sách quản lý thuế siết chặt thúc đẩy nhu cầu chuẩn hóa đối soát và tích hợp máy tính tiền điện tử.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingRadarSignalId": "RADAR-04",
+      "relatedRadarIds": [
+        "RADAR-04"
+      ],
+      "supportingEventIds": [
+        "EVT-20261112-016"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách.",
+      "risks": [
+        "Ngưỡng nợ thuế hiện vẫn ở mức đề xuất dự thảo chính sách."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành chính thức của Bộ Tài chính và Tổng cục Thuế."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261112-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/no-thue-tang-gap-doi-hon-mot-nua-la-tien-su-dung-dat.htm",
+          "evidencePath": "raw_evidence_store/snapshot_live_019_60c92935da.html",
+          "evidenceSha256": "60c92935daf67a583ccde628f721dd0bd2d47847379eb4557ab2756935d7e6ae",
+          "supportingQuote": "Bên cạnh tình trạng mã số thuế tồn đọng, áp lực thu hồi nợ thuế cũng là vấn đề được đặt ra tại phiên chất vấn sáng ngày 2/11 đối với Bộ trưởng Bộ Tài chính."
+        }
+      ]
+    }
+  ],
+  "totalDecisionCards": 3,
+  "fiveQuestionsExecutiveSynthesis": {
+    "question1_whatIsMarketChanging": "Thị trường đang chuyển động theo các trục vĩ mô chính: Ngân hàng, Tín dụng & Lãi suất: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Lãi suất liên ngân hàng qua đêm (MP-02: 2.8 %/năm). Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Diễn biến từ Rút ngắn thời hạn cấp phép xuất khẩu, nhập khẩu vàng nguyên liệu tác động trực tiếp lên biến số Tỷ giá trung tâm USD/VND (MP-01: 25600 VND/USD).",
+    "question2_macroImpactOnBanksEnterprisesConsumers": "Ngân hàng duy trì cân đối chi phí huy động và thanh khoản; doanh nghiệp đối mặt với chi phí vốn chọn lọc nhưng hưởng lợi từ dòng tiền thông suốt hơn; người tiêu dùng duy trì tâm lý tích lũy phòng thủ kết hợp tập trung mua sắm có kế hoạch vào các dịp khuyến mại.",
+    "question3_cashlessPaymentOpportunities": "Các cơ hội thương mại nổi bật nhất cho thanh toán không tiền mặt bao gồm: (1) Du lịch, Khách sạn & Bán lẻ Quốc tế: Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.; (2) Bán lẻ Giá trị cao, Điện máy & Xe điện: Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.; (3) Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền..",
+    "question4_keyWatchSignals": "Các tín hiệu điều hành và thị trường trọng điểm cần bám sát: Du lịch, Khách sạn & Bán lẻ Quốc tế: theo dõi Sản lượng khách du lịch quốc tế đạt 19.5 triệu lượt.; Bán lẻ Giá trị cao, Điện máy & Xe điện: theo dõi Mặt bằng lãi suất tiền gửi 12 tháng 7%/năm và chi phí vốn thúc đẩy nhu cầu phân ; Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): theo dõi Đề xuất siết chặt quản lý thuế và quy định ngưỡng nợ thuế đối với hộ kinh doanh .",
+    "question5_bryanNextActions": "Kế hoạch hành động khuyến nghị cho Bryan: EXPLORE: Mở rộng Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế; MONITOR: Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động; INVESTIGATE: Nghiên cứu Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử cho Hộ kinh doanh."
+  }
+}

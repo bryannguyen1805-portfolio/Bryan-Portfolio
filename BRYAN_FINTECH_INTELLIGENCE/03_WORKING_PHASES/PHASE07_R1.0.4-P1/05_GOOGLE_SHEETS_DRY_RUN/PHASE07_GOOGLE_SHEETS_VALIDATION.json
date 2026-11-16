@@ -1,0 +1,109 @@
+{
+  "allTabsPassed": true,
+  "liveWriteApiCalled": false,
+  "originalStagingUnmodified": true,
+  "originalStagingSha256": "4c0fc0576ae2ec98bd80e40adcc957a9beaa29f82dbd7e67593d0d6066d598b7",
+  "existingBaselineRowCount": 155,
+  "proposedNewRowCount": 142,
+  "totalProjectedRowCount": 297,
+  "foreignKeyViolationsCount": 0,
+  "foreignKeyViolations": [],
+  "multiDaySyncSimulationPassed": true,
+  "tabValidation": {
+    "EDITIONS": {
+      "existingRowCount": 3,
+      "proposedNewRowCount": 1,
+      "mergedRowCount": 4,
+      "expectedColumns": 15,
+      "primaryKeys": [
+        "editionId"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "NEWS_EVENTS": {
+      "existingRowCount": 21,
+      "proposedNewRowCount": 25,
+      "mergedRowCount": 46,
+      "expectedColumns": 20,
+      "primaryKeys": [
+        "editionId",
+        "eventId"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "EDITORIAL_SECTIONS": {
+      "existingRowCount": 5,
+      "proposedNewRowCount": 5,
+      "mergedRowCount": 10,
+      "expectedColumns": 11,
+      "primaryKeys": [
+        "editionId",
+        "sectionKey"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "MARKET_PULSE_HISTORY": {
+      "existingRowCount": 8,
+      "proposedNewRowCount": 8,
+      "mergedRowCount": 16,
+      "expectedColumns": 14,
+      "primaryKeys": [
+        "editionId",
+        "indicatorId"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "EVENT_REGISTRY": {
+      "existingRowCount": 67,
+      "proposedNewRowCount": 25,
+      "mergedRowCount": 92,
+      "expectedColumns": 13,
+      "primaryKeys": [
+        "eventId"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "SOURCE_LEDGER": {
+      "existingRowCount": 50,
+      "proposedNewRowCount": 77,
+      "mergedRowCount": 127,
+      "expectedColumns": 12,
+      "primaryKeys": [
+        "collectionRunId",
+        "sourceUrl"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    },
+    "PUBLISH_AUDIT": {
+      "existingRowCount": 1,
+      "proposedNewRowCount": 1,
+      "mergedRowCount": 2,
+      "expectedColumns": 12,
+      "primaryKeys": [
+        "auditLogId"
+      ],
+      "duplicatePkCount": 0,
+      "duplicatePks": [],
+      "missingFieldsCount": 0,
+      "status": "PASS"
+    }
+  }
+}

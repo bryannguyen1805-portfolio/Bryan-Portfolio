@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contractVersion": "5.0.0",
+  "inheritedContractVersion": "4.0.0",
+  "project": "Bryan FinTech Intelligence — Phase 07 Dynamic Intelligence & Daily Runtime Engine",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "definitions": {
+    "RuntimeStepRecord": {
+      "type": "object",
+      "required": [
+        "stepId",
+        "stepNumber",
+        "stepName",
+        "status",
+        "startedAt",
+        "completedAt",
+        "inputReferences",
+        "outputReferences",
+        "metrics",
+        "errorDetails"
+      ],
+      "properties": {
+        "stepId": { "type": "string", "pattern": "^STEP_[0-9]{2}$" },
+        "stepNumber": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "stepName": { "type": "string", "minLength": 3 },
+        "status": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "startedAt": { "type": "string", "minLength": 10 },
+        "completedAt": { "type": "string", "minLength": 10 },
+        "inputReferences": { "type": "array", "items": { "type": "string" } },
+        "outputReferences": { "type": "array", "items": { "type": "string" } },
+        "metrics": { "type": "object" },
+        "errorDetails": { "type": ["string", "null"] }
+      }
+    },
+    "DynamicNewsEventRecord": {
+      "type": "object",
+      "required": [
+        "eventId",
+        "rank",
+        "headline",
+        "publisher",
+        "sourceUrl",
+        "publishedAt",
+        "originalPublicationTimestamp",
+        "cmsUpdateTimestamp",
+        "sourceRetrievalTimestamp",
+        "ageHours",
+        "freshnessBucket",
+        "category",
+        "researchDomain",
+        "evidencePath",
+        "evidenceSha256",
+        "verificationStages",
+        "extractedFinancialFacts"
+      ],
+      "properties": {
+        "eventId": { "type": "string", "pattern": "^EVT-[0-9]{8}-[0-9]{3}$" },
+        "rank": { "type": "integer", "minimum": 1, "maximum": 25 },
+        "headline": { "type": "string", "minLength": 10 },
+        "publisher": { "type": "string", "minLength": 2 },
+        "sourceUrl": { "type": "string", "minLength": 10 },
+        "publishedAt": { "type": "string", "minLength": 10 },
+        "originalPublicationTimestamp": { "type": "string", "minLength": 10 },
+        "cmsUpdateTimestamp": { "type": ["string", "null"] },
+        "sourceRetrievalTimestamp": { "type": "string", "minLength": 10 },
+        "ageHours": { "type": "number", "minimum": 0, "maximum": 72 },
+        "freshnessBucket": { "type": "string", "enum": ["0_TO_24H", "24_TO_48H", "48_TO_72H"] },
+        "category": { "type": "string", "minLength": 2 },
+        "researchDomain": { "type": "string", "minLength": 2 },
+        "evidencePath": { "type": "string", "minLength": 5 },
+        "evidenceSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "verificationStages": {
+          "type": "object",
+          "required": [
+            "SOURCE_VERIFIED",
+            "FACT_VERIFIED",
+            "WINDOW_ELIGIBLE",
+            "DEDUP_VERIFIED",
+            "READY_FOR_REVIEW"
+          ],
+          "properties": {
+            "SOURCE_VERIFIED": { "type": "boolean" },
+            "FACT_VERIFIED": { "type": "boolean" },
+            "WINDOW_ELIGIBLE": { "type": "boolean" },
+            "DEDUP_VERIFIED": { "type": "boolean" },
+            "READY_FOR_REVIEW": { "type": "boolean" }
+          }
+        },
+        "extractedFinancialFacts": { "type": "array" }
+      }
+    },
+    "DynamicMarketPulseIndicator": {
+      "type": "object",
+      "required": [
+        "indicatorId",
+        "indicatorName",
+        "currentValue",
+        "unit",
+        "observationTimestamp",
+        "previousComparableValue",
+        "absoluteChange",
+        "percentageChange",
+        "trendDirection",
+        "sourceOrganization",
+        "sourceUrl",
+        "evidenceReference",
+        "dataFrequency",
+        "verificationStatus",
+        "freshnessStatus"
+      ],
+      "properties": {
+        "indicatorId": { "type": "string", "pattern": "^MP-0[1-8]$" },
+        "indicatorName": { "type": "string", "minLength": 3 },
+        "currentValue": { "type": ["number", "string", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "observationTimestamp": { "type": "string", "minLength": 8 },
+        "previousComparableValue": { "type": ["number", "string", "null"] },
+        "absoluteChange": { "type": ["number", "string", "null"] },
+        "percentageChange": { "type": ["number", "string", "null"] },
+        "trendDirection": { "type": "string", "enum": ["UP", "DOWN", "FLAT", "UNKNOWN"] },
+        "sourceOrganization": { "type": "string", "minLength": 2 },
+        "sourceUrl": { "type": "string", "minLength": 10 },
+        "evidenceReference": { "type": "object" },
+        "dataFrequency": { "type": "string", "minLength": 3 },
+        "verificationStatus": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED"] },
+        "freshnessStatus": { "type": "string", "minLength": 3 }
+      }
+    },
+    "ConnectTheDotsNarrative": {
+      "type": "object",
+      "required": [
+        "dotId",
+        "title",
+        "desc",
+        "monetaryPolicyLink",
+        "bankingLink",
+        "corporateLink",
+        "consumerAndMarketLink",
+        "supportingEventIds",
+        "supportingFactIds",
+        "supportingMarketPulseIds",
+        "evidenceReferences"
+      ],
+      "properties": {
+        "dotId": { "type": "string", "pattern": "^DOT-[0-9]{2}$" },
+        "title": { "type": "string", "minLength": 15 },
+        "desc": { "type": "string", "minLength": 30 },
+        "monetaryPolicyLink": { "type": "string", "minLength": 15 },
+        "bankingLink": { "type": "string", "minLength": 15 },
+        "corporateLink": { "type": "string", "minLength": 15 },
+        "consumerAndMarketLink": { "type": "string", "minLength": 15 },
+        "supportingEventIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "supportingFactIds": { "type": "array", "items": { "type": "string" } },
+        "supportingMarketPulseIds": { "type": "array", "items": { "type": "string" } },
+        "evidenceReferences": { "type": "array", "minItems": 1, "items": { "type": "object" } }
+      }
+    },
+    "DynamicCoreThesis": {
+      "type": "object",
+      "required": [
+        "thesisId",
+        "themeGroup",
+        "title",
+        "centralArgument",
+        "whatHappened",
+        "whatChanged",
+        "whyItMatters",
+        "affectedVariables",
+        "possibleNextDevelopment",
+        "fintechWatchpoint",
+        "supportingEventIds",
+        "supportingFactIds",
+        "supportingMarketPulseIds",
+        "counterEvidence",
+        "causalExplanation",
+        "affectedSectors",
+        "impactHorizon",
+        "confidenceLevel",
+        "confidenceReason",
+        "watchSignals",
+        "invalidationConditions",
+        "sourceReferences"
+      ],
+      "properties": {
+        "thesisId": { "type": "string", "pattern": "^THESIS-[0-9]{2}$" },
+        "whatHappened": { "type": "string", "minLength": 20 },
+        "whyItMatters": { "type": "string", "minLength": 20 },
+        "affectedVariables": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "possibleNextDevelopment": { "type": "string", "minLength": 20 },
+        "fintechWatchpoint": { "type": "string", "minLength": 20 }
+      }
+    },
+    "DynamicMacroToMicroChain": {
+      "type": "object",
+      "required": [
+        "chainId",
+        "macroDriver",
+        "transmissionMechanism",
+        "bankingImpact",
+        "enterpriseImpact",
+        "consumerImpact",
+        "paymentImpact",
+        "sevenStageTransmission",
+        "evidenceReferences",
+        "inferenceClassification",
+        "confidenceLevel",
+        "potentialTimeLag",
+        "watchSignals"
+      ],
+      "properties": {
+        "chainId": { "type": "string", "pattern": "^CHAIN-[0-9]{2}$" },
+        "sevenStageTransmission": {
+          "type": "object",
+          "required": [
+            "stage1_globalEconomy",
+            "stage2_vietnamMacroeconomics",
+            "stage3_monetaryPolicy",
+            "stage4_bankingAndCapitalMarkets",
+            "stage5_corporateFinancingAndOperations",
+            "stage6_merchantPaymentBehavior",
+            "stage7_endUserPaymentBehavior"
+          ],
+          "properties": {
+            "stage1_globalEconomy": { "type": "string", "minLength": 10 },
+            "stage2_vietnamMacroeconomics": { "type": "string", "minLength": 10 },
+            "stage3_monetaryPolicy": { "type": "string", "minLength": 10 },
+            "stage4_bankingAndCapitalMarkets": { "type": "string", "minLength": 10 },
+            "stage5_corporateFinancingAndOperations": { "type": "string", "minLength": 10 },
+            "stage6_merchantPaymentBehavior": { "type": "string", "minLength": 10 },
+            "stage7_endUserPaymentBehavior": { "type": "string", "minLength": 10 }
+          }
+        }
+      }
+    },
+    "DynamicPaymentRadarSignal": {
+      "type": "object",
+      "required": [
+        "radarId",
+        "opportunityId",
+        "sector",
+        "verifiedMarketSignal",
+        "supportingEventIds",
+        "businessProblem",
+        "relevantPaymentSolution",
+        "targetPartnerType",
+        "commercialRationale",
+        "priority",
+        "confidence",
+        "recommendedNextAction",
+        "signalTitle",
+        "marketSignal",
+        "triggerEventIds",
+        "supportingFacts",
+        "marketDrivers",
+        "affectedSegments",
+        "paymentImplication",
+        "commercialRelevance",
+        "payooRelevance",
+        "opportunityType",
+        "riskFactors",
+        "recommendedMonitoring",
+        "confidenceLevel",
+        "evidenceReferences"
+      ],
+      "properties": {
+        "opportunityId": { "type": "string", "pattern": "^OPP-[0-9]{2}$" },
+        "sector": { "type": "string", "minLength": 3 },
+        "verifiedMarketSignal": { "type": "string", "minLength": 15 },
+        "supportingEventIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "businessProblem": { "type": "string", "minLength": 15 },
+        "relevantPaymentSolution": { "type": "string", "minLength": 10 },
+        "targetPartnerType": { "type": "string", "minLength": 5 },
+        "commercialRationale": { "type": "string", "minLength": 15 },
+        "priority": { "type": "string", "enum": ["P0_IMMEDIATE", "P1_HIGH", "P2_MEDIUM", "P3_MONITOR_ONLY"] },
+        "confidence": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+        "recommendedNextAction": { "type": "string", "minLength": 10 }
+      }
+    }
+  }
+}

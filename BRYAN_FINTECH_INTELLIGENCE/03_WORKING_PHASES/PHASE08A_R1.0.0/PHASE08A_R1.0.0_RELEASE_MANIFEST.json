@@ -1,0 +1,48 @@
+{
+  "phaseId": "PHASE08A",
+  "releaseId": "PHASE08A_R1.0.0",
+  "releaseVersion": "1.0.0",
+  "remediationTitle": "Phase 08A Critical Remediation & Production Quality Recovery",
+  "releaseStatus": "ACCEPTED_CANDIDATE",
+  "projectOwnerAcceptance": "ACCEPTED",
+  "productionStatus": "PRODUCTION_READY",
+  "generatedTimestamp": "2026-11-14T00:10:00+07:00",
+  "parentAcceptedPhase": "PHASE07_R1.0.4-P1",
+  "parentAcceptedSha256": "e206915dfab528e14f8e85dc25710033afb97f5a5e5b5ac96c245e08d1874fbc",
+  "backupFileName": "PHASE08A_R1.0.0_BACKUP.zip",
+  "backupSha256": "d8e41b2f84be1f001c76cadf9565ffc67762e3cd7af387f23676ca6dc4e199bc",
+  "backupSizeBytes": 2634919,
+  "packageFileName": "PHASE08A_R1.0.0_ACCEPTED_CANDIDATE.zip",
+  "packageSha256": "68c17bccc19cf135d055a916f5b94c3b1840383557e21bbada2630fb140969c8",
+  "packageSizeBytes": 2813668,
+  "canonicalEditionId": "ED-20261114-D01",
+  "testResults": {
+    "viewportTests": 5,
+    "marketPulseCardsTested": 4,
+    "navigationFlowsTested": 5,
+    "dailyAutomationRunsTested": 2,
+    "totalTests": 16,
+    "passedTests": 16,
+    "failedTests": 0,
+    "passRatePercent": 100.0,
+    "reproducibleFromExtractedPackage": true
+  },
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "dataIntegrityReadiness": "MARKET_PULSE_PASS",
+    "numberFormatStandard": "VND_VNI_VI_VN_PASS",
+    "responsiveMobileReadiness": "ZERO_OVERFLOW_PASS",
+    "dailyAutomationReadiness": "DAILY_PIPELINE_PASS",
+    "productionApprovalStatus": "APPROVED_FOR_DAILY_RUN"
+  },
+  "remediationSummary": {
+    "D01_MarketPulseDataIntegrity": "PASS: Restored true observation dates (2026-11-11 for USD/VND, 2026-11-10 for VN-Index/Deposit Rate) from raw market-pulse records; removed overwrite of publication date onto observation dates; updated dataPeriod to 'Phiên {asOf}' and drawer to 'Kỳ dữ liệu quan sát:'",
+    "D02_VNIndexNumberFormatting": "PASS: Applied vi-VN standard number formatting (.replace(',', 'X').replace('.', ',').replace('X', '.')) yielding '1.743,00 Điểm'; normalized interpretive text in statusReason",
+    "D03_HideArchiveUI": "PASS: Hidden Archive tab from desktop nav, mobile quick bar, mobile drawer, and container page; preserved 100% backend archive datasets in 06_DAILY_EDITIONS; router smoothly redirects #archive to #today",
+    "D04_CLS_Remediation": "PASS: Explicit width/height attributes (119x36 header, 126x38 footer) and CSS aspect-ratio/contain-intrinsic-size eliminating image layout shifts; cover story min-height enforced; webfont CLS documented for Phase 08B",
+    "D05_MobileOverflowElimination": "PASS: Added responsive media query (<768px) with overflow-x:hidden, single-column minmax(0, 1fr) grids, break-word, flex-wrap; verified zero horizontal overflow across 320px, 360px, 390px, 768px, 1440px"
+  },
+  "deferredOptimizations": {
+    "D06_to_D16": "Scheduled for Phase 08B non-critical enhancements (Self-hosted fonts for CLS 0.00, expanded metadata, B2B filters)"
+  }
+}

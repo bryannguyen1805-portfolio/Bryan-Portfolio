@@ -1,0 +1,509 @@
+{
+  "https://cafef.vn/tai-chinh-ngan-hang.chn": {
+    "publisher": "cafef.vn",
+    "statusCode": 200,
+    "finalUrl": "https://cafef.vn/tai-chinh-ngan-hang.chn",
+    "retrievedAt": "2026-11-10T23:30:56.401071+07:00",
+    "byteLength": 125919,
+    "error": null
+  },
+  "https://cafef.vn/thi-truong-chung-khoan.chn": {
+    "publisher": "cafef.vn",
+    "statusCode": 200,
+    "finalUrl": "https://cafef.vn/thi-truong-chung-khoan.chn",
+    "retrievedAt": "2026-11-10T23:30:56.630576+07:00",
+    "byteLength": 115026,
+    "error": null
+  },
+  "https://tuoitre.vn/kinh-doanh.htm": {
+    "publisher": "tuoitre.vn",
+    "statusCode": 200,
+    "finalUrl": "https://tuoitre.vn/kinh-doanh.htm",
+    "retrievedAt": "2026-11-10T23:30:56.848129+07:00",
+    "byteLength": 443540,
+    "error": null
+  },
+  "https://thanhnien.vn/kinh-te.htm": {
+    "publisher": "thanhnien.vn",
+    "statusCode": 200,
+    "finalUrl": "https://thanhnien.vn/kinh-te.htm",
+    "retrievedAt": "2026-11-10T23:30:57.250033+07:00",
+    "byteLength": 271440,
+    "error": null
+  },
+  "https://vneconomy.vn/tai-chinh.htm": {
+    "publisher": "vneconomy.vn",
+    "statusCode": 200,
+    "finalUrl": "https://vneconomy.vn/tai-chinh.htm",
+    "retrievedAt": "2026-11-10T23:30:57.492017+07:00",
+    "byteLength": 40507,
+    "error": null
+  },
+  "https://baodautu.vn/tai-chinh-ngan-hang-d4/": {
+    "publisher": "baodautu.vn",
+    "statusCode": 200,
+    "finalUrl": "https://baodautu.vn/tai-chinh-ngan-hang-d4/",
+    "retrievedAt": "2026-11-10T23:30:57.599038+07:00",
+    "byteLength": 51392,
+    "error": null
+  },
+  "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn",
+    "finalUrl": "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn",
+    "retrievedAt": "2026-11-10T23:30:58.021688+07:00",
+    "byteLength": 118063,
+    "responseSha256": "76c32fac7968e504403ca5781cb16abefc391046d260f0d5c5a6ca56492d1281",
+    "error": null
+  },
+  "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm",
+    "finalUrl": "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm",
+    "retrievedAt": "2026-11-10T23:30:58.258612+07:00",
+    "byteLength": 497516,
+    "responseSha256": "40b1d0f521eed26db3d05044565a4bee84dde62e4611f7f822777508799349fc",
+    "error": null
+  },
+  "https://thanhnien.vn/bo-xay-dung-ra-deadline-bao-cao-dau-viec-chuan-bi-khai-thac-san-bay-longthanh-185261110154349636.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/bo-xay-dung-ra-deadline-bao-cao-dau-viec-chuan-bi-khai-thac-san-bay-longthanh-185261110154349636.htm",
+    "finalUrl": "https://thanhnien.vn/bo-xay-dung-ra-deadline-bao-cao-dau-viec-chuan-bi-khai-thac-san-bay-longthanh-185261110154349636.htm",
+    "retrievedAt": "2026-11-10T23:30:58.371157+07:00",
+    "byteLength": 332163,
+    "responseSha256": "c493baeb51ac0f013b9a4449450a108b3b5205c3bcf10ee49182f7acb8bdba90",
+    "error": null
+  },
+  "https://vneconomy.vn/san-pham-thi-truong-kinh-te-so.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/san-pham-thi-truong-kinh-te-so.htm",
+    "finalUrl": "https://vneconomy.vn/san-pham-thi-truong-kinh-te-so.htm",
+    "retrievedAt": "2026-11-10T23:30:58.463933+07:00",
+    "byteLength": 40886,
+    "responseSha256": "b848ccc06eaca83c92223cbf304830e242503849c7e8bbf39018042618d960e0",
+    "error": null
+  },
+  "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html",
+    "finalUrl": "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html",
+    "retrievedAt": "2026-11-10T23:30:58.537866+07:00",
+    "byteLength": 63719,
+    "responseSha256": "164811dbaca8548ca34419e71b577d3fe26bb38525e37d79fd2d970bedfcb00e",
+    "error": null
+  },
+  "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+    "finalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+    "retrievedAt": "2026-11-10T23:30:59.528918+07:00",
+    "byteLength": 119793,
+    "responseSha256": "308b565f01b525ba5f06bb4e405dc2ff4188758ba2033e9eab79285430d8bb55",
+    "error": null
+  },
+  "https://tuoitre.vn/ngan-hang-nha-nuoc-mua-usd-them-tien-dong-cho-nen-kinh-te-100261110162658257.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-mua-usd-them-tien-dong-cho-nen-kinh-te-100261110162658257.htm",
+    "finalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-mua-usd-them-tien-dong-cho-nen-kinh-te-100261110162658257.htm",
+    "retrievedAt": "2026-11-10T23:30:59.778276+07:00",
+    "byteLength": 495721,
+    "responseSha256": "fbb073ed5fd81ccf9da59dc81c1bc1df80e9a7b47233f1cc3b4973d420cbe9e5",
+    "error": null
+  },
+  "https://thanhnien.vn/de-xuat-dau-tu-hai-cong-vien-tai-khu-vuc-cau-di-bo-vuot-song-sai-gon-nutifood-cam-ket-gi-185261110150751966.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/de-xuat-dau-tu-hai-cong-vien-tai-khu-vuc-cau-di-bo-vuot-song-sai-gon-nutifood-cam-ket-gi-185261110150751966.htm",
+    "finalUrl": "https://thanhnien.vn/de-xuat-dau-tu-hai-cong-vien-tai-khu-vuc-cau-di-bo-vuot-song-sai-gon-nutifood-cam-ket-gi-185261110150751966.htm",
+    "retrievedAt": "2026-11-10T23:30:59.914047+07:00",
+    "byteLength": 330434,
+    "responseSha256": "72d39de87a6d632a21b9bd160a3bde142b9c46794e3fbf8f7de2c490b24a8bcd",
+    "error": null
+  },
+  "https://vneconomy.vn/chuyen-dong-kinh-te-the-gioi-24h.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/chuyen-dong-kinh-te-the-gioi-24h.htm",
+    "finalUrl": "https://vneconomy.vn/chuyen-dong-kinh-te-the-gioi-24h.htm",
+    "retrievedAt": "2026-11-10T23:31:00.022405+07:00",
+    "byteLength": 33844,
+    "responseSha256": "7b3b339dc3d75a7d3d73ae5d0e2f031ea85a71710039ee15b1af2e3e8558f356",
+    "error": null
+  },
+  "https://baodautu.vn/seabank-thong-bao-moi-thau-d740937.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/seabank-thong-bao-moi-thau-d740937.html",
+    "finalUrl": "https://baodautu.vn/seabank-thong-bao-moi-thau-d740937.html",
+    "retrievedAt": "2026-11-10T23:31:00.096297+07:00",
+    "byteLength": 58430,
+    "responseSha256": "7d6ac77721d1b525de66b1e9ea0e7426270af62f97522c256ebb163df51d9615",
+    "error": null
+  },
+  "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+    "finalUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+    "retrievedAt": "2026-11-10T23:31:00.470394+07:00",
+    "byteLength": 114808,
+    "responseSha256": "91cfe25120f155dd556b3133ff4c36f51477970c37ebb2f9ed56f914f72e798d",
+    "error": null
+  },
+  "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+    "finalUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+    "retrievedAt": "2026-11-10T23:31:00.697379+07:00",
+    "byteLength": 492981,
+    "responseSha256": "1ceb7cd8fad5ce4b6e75fbd6b57c90a07106fe65a1d5293c29c0267db3cd60ab",
+    "error": null
+  },
+  "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+    "finalUrl": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+    "retrievedAt": "2026-11-10T23:31:00.825823+07:00",
+    "byteLength": 335333,
+    "responseSha256": "5a29e1103557e30e5efe18f8aaa45aeb6433b9862c0a52799a66a9063507aded",
+    "error": null
+  },
+  "https://vneconomy.vn/an-pham-tu-van-va-tieu-dung.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/an-pham-tu-van-va-tieu-dung.htm",
+    "finalUrl": "https://vneconomy.vn/an-pham-tu-van-va-tieu-dung.htm",
+    "retrievedAt": "2026-11-10T23:31:00.942599+07:00",
+    "byteLength": 33886,
+    "responseSha256": "c7531fea2fe4b6826912ae0be79fd7f9069132ed6513c3ac3ac153c8567671f9",
+    "error": null
+  },
+  "https://baodautu.vn/tnh-hop-tac-cung-benh-vien-my-duc-dua-dich-vu-ivf-ve-thai-nguyen-d740727.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/tnh-hop-tac-cung-benh-vien-my-duc-dua-dich-vu-ivf-ve-thai-nguyen-d740727.html",
+    "finalUrl": "https://baodautu.vn/tnh-hop-tac-cung-benh-vien-my-duc-dua-dich-vu-ivf-ve-thai-nguyen-d740727.html",
+    "retrievedAt": "2026-11-10T23:31:01.013713+07:00",
+    "byteLength": 66631,
+    "responseSha256": "d069d0262abb10c84f0f0880c85dea63e60468eb3fa27c7dce61c56c92367064",
+    "error": null
+  },
+  "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-chieu-9-11-tiep-tuc-giam-188261108214620632.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-chieu-9-11-tiep-tuc-giam-188261108214620632.chn",
+    "finalUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-chieu-9-11-tiep-tuc-giam-188261108214620632.chn",
+    "retrievedAt": "2026-11-10T23:31:01.489982+07:00",
+    "byteLength": 120916,
+    "responseSha256": "5650a486d6f0e3632fbb9ed051ebb5cc8630646ea7e7fd570380991e3b8ae3ec",
+    "error": null
+  },
+  "https://tuoitre.vn/ngan-hang-nha-nuoc-bom-them-vnd-tien-co-chay-vao-chung-khoan-100261110144814316.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-bom-them-vnd-tien-co-chay-vao-chung-khoan-100261110144814316.htm",
+    "finalUrl": "https://tuoitre.vn/ngan-hang-nha-nuoc-bom-them-vnd-tien-co-chay-vao-chung-khoan-100261110144814316.htm",
+    "retrievedAt": "2026-11-10T23:31:01.738118+07:00",
+    "byteLength": 497201,
+    "responseSha256": "077eece1f5205b2ccbb3c0b31a54f243d1dbda04746b6a2659a92ef5c70ee596",
+    "error": null
+  },
+  "https://thanhnien.vn/dai-bieu-le-thi-thuy-sen-bien-nguon-von-van-hoa-thanh-san-pham-co-gia-tri-kinh-te-185261110143049236.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/dai-bieu-le-thi-thuy-sen-bien-nguon-von-van-hoa-thanh-san-pham-co-gia-tri-kinh-te-185261110143049236.htm",
+    "finalUrl": "https://thanhnien.vn/dai-bieu-le-thi-thuy-sen-bien-nguon-von-van-hoa-thanh-san-pham-co-gia-tri-kinh-te-185261110143049236.htm",
+    "retrievedAt": "2026-11-10T23:31:01.861154+07:00",
+    "byteLength": 334934,
+    "responseSha256": "71cdbc25a9a056d59f3eca6e69031e7cb8731b095a0fb4b5a0e264619f59fe42",
+    "error": null
+  },
+  "https://vneconomy.vn/niem-tin-cua-nha-dau-tu-se-quyet-dinh-thanh-cong-cua-trai-phieu-doanh-nghiep.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/niem-tin-cua-nha-dau-tu-se-quyet-dinh-thanh-cong-cua-trai-phieu-doanh-nghiep.htm",
+    "finalUrl": "https://vneconomy.vn/niem-tin-cua-nha-dau-tu-se-quyet-dinh-thanh-cong-cua-trai-phieu-doanh-nghiep.htm",
+    "retrievedAt": "2026-11-10T23:31:01.984569+07:00",
+    "byteLength": 41514,
+    "responseSha256": "6aaecdd54226fcf3a825c42cb6b56f8af28eb680a41584b38fecc4467d79eeed",
+    "error": null
+  },
+  "https://baodautu.vn/uu-tien-dau-tu-truc-xuong-song-bac---nam-va-hanh-lang-dong---tay-the-he-moi-d740470.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/uu-tien-dau-tu-truc-xuong-song-bac---nam-va-hanh-lang-dong---tay-the-he-moi-d740470.html",
+    "finalUrl": "https://baodautu.vn/uu-tien-dau-tu-truc-xuong-song-bac---nam-va-hanh-lang-dong---tay-the-he-moi-d740470.html",
+    "retrievedAt": "2026-11-10T23:31:02.141090+07:00",
+    "byteLength": 72336,
+    "responseSha256": "a4a932f014f15dbc4b7c2ce7ecd0d68dab64b463110cf76a5461b92ef88546a0",
+    "error": null
+  },
+  "https://cafef.vn/lai-suat-ngan-hang-ngay-7-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261107203419664.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-7-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261107203419664.chn",
+    "finalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-7-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261107203419664.chn",
+    "retrievedAt": "2026-11-10T23:31:02.582730+07:00",
+    "byteLength": 118035,
+    "responseSha256": "2f20a382003fa3c1cf1d75ac7dbbcd9e06c91f1177fccc67b132234935a6b386",
+    "error": null
+  },
+  "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm",
+    "finalUrl": "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm",
+    "retrievedAt": "2026-11-10T23:31:02.896245+07:00",
+    "byteLength": 500281,
+    "responseSha256": "885a892a31750a5e381ba2807e827f8f29df50e82c88b99c6584394f556b77f4",
+    "error": null
+  },
+  "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+    "finalUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+    "retrievedAt": "2026-11-10T23:31:03.007618+07:00",
+    "byteLength": 333220,
+    "responseSha256": "255e01361aa0bae24f71c0a35984062121ac180cdcf0661e24780c1b1a99c3dc",
+    "error": null
+  },
+  "https://vneconomy.vn/da-giam-cua-gia-vang-trong-nuoc-chi-bang-30-so-voi-vang-the-gioi-1307504.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/da-giam-cua-gia-vang-trong-nuoc-chi-bang-30-so-voi-vang-the-gioi-1307504.htm",
+    "finalUrl": "https://vneconomy.vn/da-giam-cua-gia-vang-trong-nuoc-chi-bang-30-so-voi-vang-the-gioi-1307504.htm",
+    "retrievedAt": "2026-11-10T23:31:03.109292+07:00",
+    "byteLength": 39515,
+    "responseSha256": "7ebbe7facc452979cf60eca542e22e63405b4b3b62fccce9e55bfa4b1d190512",
+    "error": null
+  },
+  "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html",
+    "finalUrl": "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html",
+    "retrievedAt": "2026-11-10T23:31:03.191190+07:00",
+    "byteLength": 63576,
+    "responseSha256": "4f85c794d4c963de73d87fa4683925b988a64e64f1d8ba19db0d6d9d092e4b51",
+    "error": null
+  },
+  "https://cafef.vn/nong-ngan-hang-nha-nuoc-se-mua-ngoai-te-giao-ngay-bom-vnd-cho-he-thong-ngan-hang-vao-thu-hai-va-thu-tu-hang-tuan-tu-ngay-11-11-188261109200423359.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/nong-ngan-hang-nha-nuoc-se-mua-ngoai-te-giao-ngay-bom-vnd-cho-he-thong-ngan-hang-vao-thu-hai-va-thu-tu-hang-tuan-tu-ngay-11-11-188261109200423359.chn",
+    "finalUrl": "https://cafef.vn/nong-ngan-hang-nha-nuoc-se-mua-ngoai-te-giao-ngay-bom-vnd-cho-he-thong-ngan-hang-vao-thu-hai-va-thu-tu-hang-tuan-tu-ngay-11-11-188261109200423359.chn",
+    "retrievedAt": "2026-11-10T23:31:05.885628+07:00",
+    "byteLength": 121250,
+    "responseSha256": "047b309a347dcb00538b0c365881ac88c5b7ec043889ef571396b81cc9ef35e1",
+    "error": null
+  },
+  "https://tuoitre.vn/chi-hoa-hong-dai-ly-xo-so-bo-tai-chinh-noi-gi-ve-tran-15-100261110094830814.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/chi-hoa-hong-dai-ly-xo-so-bo-tai-chinh-noi-gi-ve-tran-15-100261110094830814.htm",
+    "finalUrl": "https://tuoitre.vn/chi-hoa-hong-dai-ly-xo-so-bo-tai-chinh-noi-gi-ve-tran-15-100261110094830814.htm",
+    "retrievedAt": "2026-11-10T23:31:06.170726+07:00",
+    "byteLength": 492265,
+    "responseSha256": "df49bb13e411c0bc8790e5f8775c326746564438194740c7c8c6b1c7956ddb57",
+    "error": null
+  },
+  "https://thanhnien.vn/nguon-dien-lon-nhat-he-thong-nguy-co-hut-hoi-vi-than-nhap-khau-1852611101554161.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/nguon-dien-lon-nhat-he-thong-nguy-co-hut-hoi-vi-than-nhap-khau-1852611101554161.htm",
+    "finalUrl": "https://thanhnien.vn/nguon-dien-lon-nhat-he-thong-nguy-co-hut-hoi-vi-than-nhap-khau-1852611101554161.htm",
+    "retrievedAt": "2026-11-10T23:31:06.282228+07:00",
+    "byteLength": 334059,
+    "responseSha256": "2932cb0dc7e950a2a2e0be457d620a0c2e6debabbd28b013e5cec580288a6929",
+    "error": null
+  },
+  "https://vneconomy.vn/vi-sao-dong-yen-kho-phuc-hoi-len-muc-cao-hon-sau-dot-can-thiep-ty-gia-ky-luc-cua-nhat-ban.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/vi-sao-dong-yen-kho-phuc-hoi-len-muc-cao-hon-sau-dot-can-thiep-ty-gia-ky-luc-cua-nhat-ban.htm",
+    "finalUrl": "https://vneconomy.vn/vi-sao-dong-yen-kho-phuc-hoi-len-muc-cao-hon-sau-dot-can-thiep-ty-gia-ky-luc-cua-nhat-ban.htm",
+    "retrievedAt": "2026-11-10T23:31:06.388814+07:00",
+    "byteLength": 41286,
+    "responseSha256": "9d7304fa9311a096ada70e6381c720752acafb5bb1d048cee89af86c5f69105d",
+    "error": null
+  },
+  "https://baodautu.vn/saigontourist-group-duoc-vinh-danh-tai-apea-2026-d740227.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/saigontourist-group-duoc-vinh-danh-tai-apea-2026-d740227.html",
+    "finalUrl": "https://baodautu.vn/saigontourist-group-duoc-vinh-danh-tai-apea-2026-d740227.html",
+    "retrievedAt": "2026-11-10T23:31:06.488647+07:00",
+    "byteLength": 64354,
+    "responseSha256": "bdc68b56a24d5e65a826581964724f63e45d30e4fb2d6b98e17e7ccdab45635a",
+    "error": null
+  },
+  "https://cafef.vn/ngay-8-11-gui-duoi-1-ty-dong-ky-han-1-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261107214517163.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/ngay-8-11-gui-duoi-1-ty-dong-ky-han-1-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261107214517163.chn",
+    "finalUrl": "https://cafef.vn/ngay-8-11-gui-duoi-1-ty-dong-ky-han-1-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261107214517163.chn",
+    "retrievedAt": "2026-11-10T23:31:06.994626+07:00",
+    "byteLength": 124642,
+    "responseSha256": "91890135c79db4e53aefd34b9d8e79def0b803b17958a4f734ddef99ccb0ad50",
+    "error": null
+  },
+  "https://tuoitre.vn/nhat-ban-cam-ket-cung-cap-von-hon-431-ti-yen-cho-hai-du-an-tai-viet-nam-100261109222428991.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/nhat-ban-cam-ket-cung-cap-von-hon-431-ti-yen-cho-hai-du-an-tai-viet-nam-100261109222428991.htm",
+    "finalUrl": "https://tuoitre.vn/nhat-ban-cam-ket-cung-cap-von-hon-431-ti-yen-cho-hai-du-an-tai-viet-nam-100261109222428991.htm",
+    "retrievedAt": "2026-11-10T23:31:07.244245+07:00",
+    "byteLength": 488170,
+    "responseSha256": "f1ce423b0e24b0fda0a2d310d75ffff738f7d2d18fa4e8df7b0dfa56f4c84a4f",
+    "error": null
+  },
+  "https://thanhnien.vn/el-nino-khien-thuy-dien-boc-hoi-16-ti-usd-185261107205931559.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://thanhnien.vn/el-nino-khien-thuy-dien-boc-hoi-16-ti-usd-185261107205931559.htm",
+    "finalUrl": "https://thanhnien.vn/el-nino-khien-thuy-dien-boc-hoi-16-ti-usd-185261107205931559.htm",
+    "retrievedAt": "2026-11-10T23:31:07.370256+07:00",
+    "byteLength": 330305,
+    "responseSha256": "1a5ae09b0e8aa0e60cbd1f2ce5795e36a59af6f63ecc5c221f4bd786da893bb5",
+    "error": null
+  },
+  "https://vneconomy.vn/don-doc-tap-chi-kinh-te-viet-nam-so-45-2026.htm": {
+    "statusCode": 200,
+    "originalUrl": "https://vneconomy.vn/don-doc-tap-chi-kinh-te-viet-nam-so-45-2026.htm",
+    "finalUrl": "https://vneconomy.vn/don-doc-tap-chi-kinh-te-viet-nam-so-45-2026.htm",
+    "retrievedAt": "2026-11-10T23:31:07.478303+07:00",
+    "byteLength": 34075,
+    "responseSha256": "d8d4c2f4fc3abfb1d703bdc568b2c11896b0ec2e70b4b7b5e60d71055488a4b0",
+    "error": null
+  },
+  "https://baodautu.vn/chot-chi-tieu-va-chi-tieu-de-nam-2027-tang-toc-but-pha-d740211.html": {
+    "statusCode": 200,
+    "originalUrl": "https://baodautu.vn/chot-chi-tieu-va-chi-tieu-de-nam-2027-tang-toc-but-pha-d740211.html",
+    "finalUrl": "https://baodautu.vn/chot-chi-tieu-va-chi-tieu-de-nam-2027-tang-toc-but-pha-d740211.html",
+    "retrievedAt": "2026-11-10T23:31:07.727102+07:00",
+    "byteLength": 64480,
+    "responseSha256": "f6a35cb752fc4753c1844bb90da295bdbb80d2c62bae2a6965c2e39b02c66c35",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=t%E1%BB%B7+gi%C3%A1+trung+t%C3%A2m": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=t%E1%BB%B7+gi%C3%A1+trung+t%C3%A2m",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=t%E1%BB%B7+gi%C3%A1+trung+t%C3%A2m",
+    "retrievedAt": "2026-11-10T23:31:08.758403+07:00",
+    "byteLength": 19447,
+    "responseSha256": "7d0eb2fb2beb635f17fb8a352561e009ca3876e42a1ec18c232be11fe852b797",
+    "error": null
+  },
+  "https://cafef.vn/ty-gia.html": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/ty-gia.html",
+    "finalUrl": "https://cafef.vn/ty-gia.html",
+    "retrievedAt": "2026-11-10T23:31:09.041188+07:00",
+    "byteLength": 22800,
+    "responseSha256": "bffea1a6636830ab8072578ad859be7794c767b5b80ecfb8f6bd65f82f5d780e",
+    "error": null
+  },
+  "https://cafef.vn/du-lieu/phan-tich-bao-cao/ban-tin-etf.chn": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/du-lieu/phan-tich-bao-cao/ban-tin-etf.chn",
+    "finalUrl": "https://cafef.vn/du-lieu/phan-tich-bao-cao/ban-tin-etf.chn",
+    "retrievedAt": "2026-11-10T23:31:09.558123+07:00",
+    "byteLength": 109941,
+    "responseSha256": "c1465c760558d6395188ed3ea3e6b5d249bf9a870accf3a62dd633fa53d3948a",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+li%C3%AAn+ng%C3%A2n+h%C3%A0ng": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+li%C3%AAn+ng%C3%A2n+h%C3%A0ng",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+li%C3%AAn+ng%C3%A2n+h%C3%A0ng",
+    "retrievedAt": "2026-11-10T23:31:09.969361+07:00",
+    "byteLength": 20543,
+    "responseSha256": "05fbd661fcec5648ede9751e641a4fc95b7209c3c9caf6a3c7391ba51eb9976c",
+    "error": null
+  },
+  "https://cafef.vn/lai-suat-ngan-hang.html": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/lai-suat-ngan-hang.html",
+    "finalUrl": "https://cafef.vn/lai-suat-ngan-hang.html",
+    "retrievedAt": "2026-11-10T23:31:10.880738+07:00",
+    "byteLength": 21458,
+    "responseSha256": "3ee8fa80c444fe5372662ea45739748aa04b9b357ca8b5abb94479ce39efa822",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng",
+    "retrievedAt": "2026-11-10T23:31:11.084375+07:00",
+    "byteLength": 19923,
+    "responseSha256": "05cf08c33165a5b54db8ba7ba4707f99751eade9027c4d27263cfab7176e3c70",
+    "error": null
+  },
+  "https://tuoitre.vn/tim-kiem.htm?keywords=VN-Index": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/tim-kiem.htm?keywords=VN-Index",
+    "finalUrl": "https://tuoitre.vn/tim-kiem.htm?keywords=VN-Index",
+    "retrievedAt": "2026-11-10T23:31:11.583819+07:00",
+    "byteLength": 84052,
+    "responseSha256": "c1e1ab4a68769d1c1364fd642b3c53d9abdce04aab690f411dac58272c7fe22d",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=VN-Index": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=VN-Index",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=VN-Index",
+    "retrievedAt": "2026-11-10T23:31:12.096979+07:00",
+    "byteLength": 21301,
+    "responseSha256": "91d9d61d53595ac8d84f8662315e7e580780ae616e42087981d41cb56b506d1b",
+    "error": null
+  },
+  "https://cafef.vn/tang-truong-tin-dung.html": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tang-truong-tin-dung.html",
+    "finalUrl": "https://cafef.vn/tang-truong-tin-dung.html",
+    "retrievedAt": "2026-11-10T23:31:12.512458+07:00",
+    "byteLength": 22474,
+    "responseSha256": "ec2ae0def608983729a11016a48c60dfbffc8648685f911c2b7497b79ecaa91d",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=t%C4%83ng+tr%C6%B0%E1%BB%9Fng+t%C3%ADn+d%E1%BB%A5ng": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=t%C4%83ng+tr%C6%B0%E1%BB%9Fng+t%C3%ADn+d%E1%BB%A5ng",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=t%C4%83ng+tr%C6%B0%E1%BB%9Fng+t%C3%ADn+d%E1%BB%A5ng",
+    "retrievedAt": "2026-11-10T23:31:12.762227+07:00",
+    "byteLength": 22448,
+    "responseSha256": "349bf4f5c6edf26ea560a94d365f21a3eee1f8d6bd9a33c8a4dcece887d3d1c1",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=VietQR": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=VietQR",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=VietQR",
+    "retrievedAt": "2026-11-10T23:31:13.275940+07:00",
+    "byteLength": 21399,
+    "responseSha256": "3384a53da26401c8de75605fd038462ba4fdf37725082097843fdfba8e974ea8",
+    "error": null
+  },
+  "https://cafef.vn/vietqr.html": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/vietqr.html",
+    "finalUrl": "https://cafef.vn/vietqr.html",
+    "retrievedAt": "2026-11-10T23:31:13.533620+07:00",
+    "byteLength": 17070,
+    "responseSha256": "bc38066852d494d28c07e4c7c96d2ff01da3dbfc9549fc79838ef82cc32f3d5f",
+    "error": null
+  },
+  "https://tuoitre.vn/tim-kiem.htm?keywords=kh%C3%A1ch+qu%E1%BB%91c+t%E1%BA%BF": {
+    "statusCode": 200,
+    "originalUrl": "https://tuoitre.vn/tim-kiem.htm?keywords=kh%C3%A1ch+qu%E1%BB%91c+t%E1%BA%BF",
+    "finalUrl": "https://tuoitre.vn/tim-kiem.htm?keywords=kh%C3%A1ch+qu%E1%BB%91c+t%E1%BA%BF",
+    "retrievedAt": "2026-11-10T23:31:13.971985+07:00",
+    "byteLength": 85134,
+    "responseSha256": "63af3892f735899a842974f7639e1f9a3af505c17bac3b6f715438896dbd9d2e",
+    "error": null
+  },
+  "https://nhandan.vn/du-lich/": {
+    "statusCode": 200,
+    "originalUrl": "https://nhandan.vn/du-lich/",
+    "finalUrl": "https://nhandan.vn/du-lich/",
+    "retrievedAt": "2026-11-10T23:31:14.460908+07:00",
+    "byteLength": 29559,
+    "responseSha256": "6eb2a00222f40cf431b9b0ab27c36355bfc4ca6759a01dcc11094ffb95cd2dcf",
+    "error": null
+  },
+  "https://cafef.vn/tim-kiem.chn?keywords=c%E1%BA%A5p+t%E1%BA%ADp+b%C6%A1m+thanh+kho%E1%BA%A3n": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/tim-kiem.chn?keywords=c%E1%BA%A5p+t%E1%BA%ADp+b%C6%A1m+thanh+kho%E1%BA%A3n",
+    "finalUrl": "https://cafef.vn/tim-kiem.chn?keywords=c%E1%BA%A5p+t%E1%BA%ADp+b%C6%A1m+thanh+kho%E1%BA%A3n",
+    "retrievedAt": "2026-11-10T23:31:14.642903+07:00",
+    "byteLength": 15676,
+    "responseSha256": "408fb1cbed5342a9e943e7966381db74844eab3f4263223d3e9e167baf8132c2",
+    "error": null
+  },
+  "https://cafef.vn/thi-truong-mo.html": {
+    "statusCode": 200,
+    "originalUrl": "https://cafef.vn/thi-truong-mo.html",
+    "finalUrl": "https://cafef.vn/thi-truong-mo.html",
+    "retrievedAt": "2026-11-10T23:31:14.904088+07:00",
+    "byteLength": 21692,
+    "responseSha256": "f4c330e7dcf8ab4c07b25ac7a133364ddb9531eb431da142a6a01ef6ed404667",
+    "error": null
+  }
+}

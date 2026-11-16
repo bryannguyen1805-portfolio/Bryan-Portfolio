@@ -1,0 +1,1501 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "summary": {
+    "totalVerifiedNewsEvents": 25,
+    "totalRawFinancialFacts": 25,
+    "uniqueVerifiedFacts": 25,
+    "duplicateFactsExcludedFromSynthesis": 0,
+    "reboundEntitiesCount": 5,
+    "totalMarketPulseIndicators": 8,
+    "totalCoreTheses": 4,
+    "totalMacroToMicroChains": 4,
+    "totalPaymentRadarSignals": 5,
+    "totalDecisionCards": 4,
+    "zeroOrphanReferences": true,
+    "zeroDuplicateFactsUsedInSynthesis": true,
+    "totalConnectTheDotsNarratives": 4
+  },
+  "newsEventCrosswalk": [
+    {
+      "eventId": "EVT-20261112-025",
+      "headline": "Quốc hội quyết nghị mục tiêu tăng trưởng GDP năm 2027 từ 10% trở lên",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T21:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/quoc-hoi-quyet-nghi-muc-tieu-tang-truong-gdp-nam-2027-tu-10-tro-len-188261107085900744.chn",
+      "evidencePath": "snapshot_live_20261112_025_f604cb08a4.html",
+      "evidenceSha256": "36308b1a441bfd75b05355bfb517f09762ad33b1b14fecc7dc6ab172be6e83d4",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-024",
+      "headline": "Nguồn điện lớn nhất hệ thống nguy cơ 'hụt hơi' vì than nhập khẩu",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T20:45:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/nguon-dien-lon-nhat-he-thong-nguy-co-hut-hoi-vi-than-nhap-khau-1852611101554161.htm",
+      "evidencePath": "snapshot_live_20261112_024_a9a77dcde6.html",
+      "evidenceSha256": "7a4ec47070d2f554cc673f805751c3524405a6dbef4f7ea2495d5c64b52ec280",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-023",
+      "headline": "Tập đoàn Nhật sắp mua 5% vốn MSR kinh doanh khoáng sản ra sao?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T20:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/tap-doan-nhat-sap-mua-5-von-msr-kinh-doanh-khoang-san-ra-sao-100261109220407989.htm",
+      "evidencePath": "snapshot_live_20261112_023_1773c3abe4.html",
+      "evidenceSha256": "2e005fb520649eaca429547a55079cda33b98c77cc93c9d8819b397e1e379532",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-022",
+      "headline": "Một công ty chứng khoán bị HoSE ngắt kết nối giao dịch do sự cố hạ tầng kết nối",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T20:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/mot-cong-ty-chung-khoan-bi-hose-ngat-ket-noi-giao-dich-do-su-co-ha-tang-188261108173426867.chn",
+      "evidencePath": "snapshot_live_20261112_022_eb565cd624.html",
+      "evidenceSha256": "3810c3cd3a3a6089a128663848b01aefecd5c8d10feca79c7743d4248d2c8d28",
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-021",
+      "headline": "Ngân hàng Nhà nước mua USD giao ngay, tăng thanh khoản cho ngân hàng thương mại",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T20:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/ngan-hang-nha-nuoc-mua-usd-giao-ngay-tang-thanh-khoan-cho-ngan-hang-thuong-mai-185261110082613938.htm",
+      "evidencePath": "snapshot_live_20261112_021_581de21c8d.html",
+      "evidenceSha256": "8a47d9ee74996a2a581fd32983081ed7bf9f499718d08cd9483c7f4ea063c26b",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [
+        "RADAR-06"
+      ],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-020",
+      "headline": "Siêu sale 11.11: J&T Cargo chủ động nguồn lực vận chuyển hàng nặng",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T19:45:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://baodautu.vn/sieu-sale-1111-jt-cargo-chu-dong-nguon-luc-van-chuyen-hang-nang-d741112.html",
+      "evidencePath": "snapshot_live_20261112_020_108c0b453e.html",
+      "evidenceSha256": "8e5f84fa2bcc5792a677cd83134502a4a1371af040a4e3a413078550fd7a4070",
+      "referencedByTheses": [
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-02"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-02"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-019",
+      "headline": "NHNN có động thái mới với 32,5% cổ phần Sacombank liên quan ông Trầm Bê",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T19:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/nhnn-co-dong-thai-moi-voi-325-co-phan-sacombank-lien-quan-ong-tram-be-188261110105749137.chn",
+      "evidencePath": "snapshot_live_20261112_019_9357241d43.html",
+      "evidenceSha256": "e63b13dcdb30f0dc2a5b345e4d623b3805a9093b11943c560f0cca8eeccfc8c5",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-018",
+      "headline": "VN-Index khởi sắc sau động thái mới của Ngân hàng Nhà nước",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T19:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/vn-index-khoi-sac-sau-dong-thai-moi-cua-ngan-hang-nha-nuoc-100261110154632384.htm",
+      "evidencePath": "snapshot_live_20261112_018_9779fce9d1.html",
+      "evidenceSha256": "2ccda3faeeb9ce6eab88a0253d27d14c904b9e38f5cfb303bfdd4a96feec9cf4",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-017",
+      "headline": "Điện thoại vẫn dùng tốt, vì sao ngân hàng khuyến nghị cập nhật iOS?",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T19:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/dien-thoai-van-dung-tot-vi-sao-ngan-hang-khuyen-nghi-cap-nhat-ios-188261110160834554.chn",
+      "evidencePath": "snapshot_live_20261112_017_46c4755c0a.html",
+      "evidenceSha256": "df96860b6d6a0bb60673e81ae57b2e7ddc7a2327f8355ed385aa16ea205e5df1",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-016",
+      "headline": "El Nino khiến thủy điện 'bốc hơi' 1,6 tỉ USD",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T18:45:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/el-nino-khien-thuy-dien-boc-hoi-16-ti-usd-185261107205931559.htm",
+      "evidencePath": "snapshot_live_20261112_016_a5fd42fd2b.html",
+      "evidenceSha256": "207f759ef3bfe99d3c41e1549a46bb392c1b30f83c8b03ec25054d04206fed27",
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-015",
+      "headline": "Nhật Bản cam kết cung cấp vốn hơn 43,1 tỉ yen cho hai dự án tại Việt Nam",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T18:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/nhat-ban-cam-ket-cung-cap-von-hon-431-ti-yen-cho-hai-du-an-tai-viet-nam-100261109222428991.htm",
+      "evidencePath": "snapshot_live_20261112_015_1e294a0bd7.html",
+      "evidenceSha256": "96f6d1ff3f637b68b7615b7525d99f5ebda9f604da8741c9d82fd2a1c5a14580",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-014",
+      "headline": "Lãi suất ngân hàng ngày 7/11 tại Agribank, Vietcombank, BIDV, VietinBank, MB, VPBank, Techcombank, Sacombank, HDBank",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T18:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-7-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261107203419664.chn",
+      "evidencePath": "snapshot_live_20261112_014_c72d525516.html",
+      "evidenceSha256": "c99cbc9f84d8b2f9d8cec270dbe87e9dedfb5954c859bf95e7bc71536a8454b6",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [
+        "RADAR-03"
+      ],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-013",
+      "headline": "Ưu tiên đầu tư trục xương sống Bắc - Nam và hành lang Đông - Tây thế hệ mới",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T18:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://baodautu.vn/uu-tien-dau-tu-truc-xuong-song-bac---nam-va-hanh-lang-dong---tay-the-he-moi-d740470.html",
+      "evidencePath": "snapshot_live_20261112_013_70fbd5971c.html",
+      "evidenceSha256": "1f2b0a05750bf36e99bd0e728fd2a30664664fa7ddd51960a17b62dc540cec16",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-012",
+      "headline": "Cần cơ chế cho phép nhà ở xã hội được tự do mua bán",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T17:45:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+      "evidencePath": "snapshot_live_20261112_012_b75aae82df.html",
+      "evidenceSha256": "05fa1272cc00ad117773ad1090e3b35aa09ba462e2562027c0ba06af4db6ac7d",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-011",
+      "headline": "Làm sao để huy động hàng trăm tỉ USD cho các dự án điện, năng lượng?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T17:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+      "evidencePath": "snapshot_live_20261112_011_1f53c8422a.html",
+      "evidenceSha256": "28ab8b16ddaff2a1a39815ff33fe063efd222d3febb9ae4835dfae39351cbe57",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-010",
+      "headline": "Chi hoa hồng đại lý xổ số: Bộ Tài chính nói gì về trần 15%?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T17:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/chi-hoa-hong-dai-ly-xo-so-bo-tai-chinh-noi-gi-ve-tran-15-100261110094830814.htm",
+      "evidencePath": "snapshot_live_20261112_010_e0a8b97729.html",
+      "evidenceSha256": "bc17491225d4cb6dab81e2c856b16e41aa31416c891909227167bdd8b9a4f7da",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-009",
+      "headline": "FPT đề xuất 5 trụ cột đồng kiến tạo AI và lượng tử trong hợp tác Việt Nam - Nhật Bản",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T17:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://baodautu.vn/fpt-de-xuat-5-tru-cot-dong-kien-tao-ai-va-luong-tu-trong-hop-tac-viet-nam---nhat-ban-d740346.html",
+      "evidencePath": "snapshot_live_20261112_009_0d546a7b3d.html",
+      "evidenceSha256": "5ae8604fa143c40f49472c9c3e8dda89c0f9ea23798753012443cfac4a46433d",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-008",
+      "headline": "Masan bắt tay Sojitz, mở rộng cơ hội đưa vonfram Việt Nam vào thị trường Nhật Bản",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T16:45:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/masan-bat-tay-sojitz-mo-rong-co-hoi-dua-vonfram-viet-nam-vao-thi-truong-nhat-ban-185261109144746486.htm",
+      "evidencePath": "snapshot_live_20261112_008_b7bcadb4bb.html",
+      "evidenceSha256": "f5a2ec0acd77d87065b3b102eb30dc0c0a2fd5def5f6d07c6b97f4eaa5ddf589",
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-007",
+      "headline": "Giá vàng miếng, vàng nhẫn 9999 chiều 9/11 tiếp tục giảm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T16:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-chieu-9-11-tiep-tuc-giam-188261108214620632.chn",
+      "evidencePath": "snapshot_live_20261112_007_04ce8e9142.html",
+      "evidenceSha256": "a1163f1c39eff9ded626e9c8978b06107b58434e18e87d98dc01c91639ff039d",
+      "referencedByTheses": [
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-03"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-006",
+      "headline": "'Nối gót' California, Citigym thông báo đóng cửa thêm 2 phòng tập, 1 chi nhánh sẽ đóng cửa vĩnh viễn",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T16:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/noi-got-california-citigym-thong-bao-dong-cua-them-2-phong-tap-1-chi-nhanh-se-dong-cua-vinh-vien-100261110183501685.htm",
+      "evidencePath": "snapshot_live_20261112_006_5af93dc801.html",
+      "evidenceSha256": "d7912b16dbf5c1c0678083e6a34eaa37aab0e436927f73b94380ec95f7a9c007",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-005",
+      "headline": "CEO Techcombank: Việt Nam cần nguồn vốn để hiện thực hóa mục tiêu tăng trưởng",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T16:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/ceo-techcombank-viet-nam-can-nguon-von-de-hien-thuc-hoa-muc-tieu-tang-truong-100261110175558338.htm",
+      "evidencePath": "snapshot_live_20261112_005_b84bc874cd.html",
+      "evidenceSha256": "a19e54796a22312c90034b9f822b784830e886a89d4ab2228b26ac3da9a803ea",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-004",
+      "headline": "Ngân hàng Nhà nước muốn bãi bỏ nhiều quy định liên quan đến lãi suất cho vay bằng USD, sáp nhập, hợp nhất, mua lại tổ chức tín dụng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T15:40:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+      "evidencePath": "snapshot_live_20261112_004_9cc293d249.html",
+      "evidenceSha256": "7e73b97ff27a13dc64202489491b9d5fb23fed298df7ac7f101a2e985051c5ea",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-003",
+      "headline": "Đề xuất chỉ tạm hoãn xuất cảnh khi thông báo hợp lệ nhưng người nộp thuế chây ì",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T15:20:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/de-xuat-chi-tam-hoan-xuat-canh-khi-thong-bao-hop-le-nhung-nguoi-nop-thue-chay-y-185261110150105515.htm",
+      "evidencePath": "snapshot_live_20261112_003_1c13e0a746.html",
+      "evidenceSha256": "877b6e9c793380674c855ec741416222e9c62a8031592f6844b903f54698cd90",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [
+        "RADAR-01",
+        "RADAR-05"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-04"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-002",
+      "headline": "TS Đào Minh Tú: Người dân mình ít ai gửi tiền kỳ hạn vài năm mà chỉ độ một năm thôi, nhưng ngân hàng cho vay dài hạn tới 5-10 năm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T15:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/ts-dao-minh-tu-nguoi-dan-minh-it-ai-gui-tien-ky-han-vai-nam-ma-chi-do-mot-nam-thoi-nhung-ngan-hang-cho-vay-dai-han-toi-5-nam-10-nam-va-hon-nua-188261109230834075.chn",
+      "evidencePath": "snapshot_live_20261112_002_7eb09e3686.html",
+      "evidenceSha256": "df0cf14b5f77230b0eb198202d36232160b081515a7a86b7b6893e942beb2d09",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261112-001",
+      "headline": "Nóng: Ngân hàng Nhà nước sẽ mua ngoại tệ giao ngay, bơm VND cho hệ thống ngân hàng vào thứ Hai và thứ Tư hằng tuần từ ngày 11/11",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T14:30:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/nong-ngan-hang-nha-nuoc-se-mua-ngoai-te-giao-ngay-bom-vnd-cho-he-thong-ngan-hang-vao-thu-hai-va-thu-tu-hang-tuan-tu-ngay-11-11-188261109200423359.chn",
+      "evidencePath": "snapshot_live_20261112_001_e76ea24252.html",
+      "evidenceSha256": "72add9cfb4ade2641dc05e24047315af827d1df92c4132063d2ffba286cb8ece",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    }
+  ],
+  "financialFactCrosswalk": [
+    {
+      "factId": "FACT-20261110-001",
+      "eventId": "EVT-20261112-025",
+      "metricName": "Mục tiêu tốc độ tăng trưởng GDP",
+      "extractedExpression": "10% trở lên",
+      "numericValue": "10",
+      "unit": "%",
+      "originalExtractedEntity": "Quốc hội",
+      "verifiedEntity": "Quốc hội",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-002",
+      "eventId": "EVT-20261112-024",
+      "metricName": "Tỷ trọng than nhập khẩu trong cơ cấu nhiên liệu nhiệt điện",
+      "extractedExpression": "50%",
+      "numericValue": "50",
+      "unit": "%",
+      "originalExtractedEntity": "Tập đoàn Điện lực Việt Nam",
+      "verifiedEntity": "Tập đoàn Điện lực Việt Nam (EVN)",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-003",
+      "eventId": "EVT-20261112-023",
+      "metricName": "Tỷ lệ sở hữu chiến lược dự kiến chuyển nhượng",
+      "extractedExpression": "5% cổ phần",
+      "numericValue": "5",
+      "unit": "% cổ phần",
+      "originalExtractedEntity": "Tập đoàn Sojitz",
+      "verifiedEntity": "Tập đoàn Sojitz",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-004",
+      "eventId": "EVT-20261112-022",
+      "metricName": "Số công ty chứng khoán bị ngắt kết nối tạm thời",
+      "extractedExpression": "1 công ty chứng khoán",
+      "numericValue": "1",
+      "unit": "công ty chứng khoán",
+      "originalExtractedEntity": "Sở Giao dịch Chứng khoán TP.HCM",
+      "verifiedEntity": "Sở Giao dịch Chứng khoán TP.HCM",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-005",
+      "eventId": "EVT-20261112-021",
+      "metricName": "Tần suất phiên mua ngoại tệ can thiệp",
+      "extractedExpression": "2 phiên/tuần",
+      "numericValue": "2",
+      "unit": "phiên/tuần",
+      "originalExtractedEntity": "Ngân hàng Nhà nước",
+      "verifiedEntity": "Ngân hàng Nhà nước",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-006",
+      "eventId": "EVT-20261112-020",
+      "metricName": "Tỷ lệ tăng trưởng công suất điều phối logistics",
+      "extractedExpression": "40%",
+      "numericValue": "40",
+      "unit": "%",
+      "originalExtractedEntity": "J&T Cargo",
+      "verifiedEntity": "J&T Cargo",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-007",
+      "eventId": "EVT-20261112-019",
+      "metricName": "Tỷ lệ cổ phần đấu giá xử lý nợ xấu",
+      "extractedExpression": "32,5% cổ phần",
+      "numericValue": "32.5",
+      "unit": "% cổ phần",
+      "originalExtractedEntity": "Sacombank",
+      "verifiedEntity": "Sacombank",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-008",
+      "eventId": "EVT-20261112-018",
+      "metricName": "Mức tăng điểm số VN-Index",
+      "extractedExpression": "30 điểm",
+      "numericValue": "30",
+      "unit": "điểm",
+      "originalExtractedEntity": "VN-Index",
+      "verifiedEntity": "VN-Index",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-009",
+      "eventId": "EVT-20261112-017",
+      "metricName": "Tỷ lệ ứng dụng ngân hàng số kích hoạt kiểm tra bảo mật",
+      "extractedExpression": "100% ứng dụng",
+      "numericValue": "100",
+      "unit": "%",
+      "originalExtractedEntity": "ngân hàng thương mại",
+      "verifiedEntity": "ngân hàng thương mại",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-010",
+      "eventId": "EVT-20261112-016",
+      "metricName": "Thiệt hại sản lượng thủy điện",
+      "extractedExpression": "1,6 tỉ USD",
+      "numericValue": "1.6",
+      "unit": "tỉ USD",
+      "originalExtractedEntity": "Tập đoàn Điện lực Việt Nam",
+      "verifiedEntity": "Tập đoàn Điện lực Việt Nam (EVN)",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-011",
+      "eventId": "EVT-20261112-015",
+      "metricName": "Quy mô vốn ODA cam kết",
+      "extractedExpression": "43,1 tỉ yen",
+      "numericValue": "43.1",
+      "unit": "tỉ yen",
+      "originalExtractedEntity": "Chính phủ Nhật Bản",
+      "verifiedEntity": "Chính phủ Nhật Bản",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-012",
+      "eventId": "EVT-20261112-014",
+      "metricName": "Lãi suất huy động kỳ hạn 6 tháng",
+      "extractedExpression": "4,2%/năm",
+      "numericValue": "4.2",
+      "unit": "%/năm",
+      "originalExtractedEntity": "ngân hàng thương mại",
+      "verifiedEntity": "ngân hàng thương mại",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-013",
+      "eventId": "EVT-20261112-013",
+      "metricName": "Chiều dài cao tốc mục tiêu hoàn thành",
+      "extractedExpression": "358 km",
+      "numericValue": "358",
+      "unit": "km",
+      "originalExtractedEntity": "Chính phủ",
+      "verifiedEntity": "Chính phủ",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-014",
+      "eventId": "EVT-20261112-012",
+      "metricName": "Thời hạn tối thiểu trước khi chuyển nhượng nhà ở xã hội",
+      "extractedExpression": "5 năm",
+      "numericValue": "5",
+      "unit": "năm",
+      "originalExtractedEntity": "Hiệp hội Bất động sản TP.HCM",
+      "verifiedEntity": "Hiệp hội Bất động sản TP.HCM",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-015",
+      "eventId": "EVT-20261112-011",
+      "metricName": "Tổng nhu cầu vốn Quy hoạch điện VIII",
+      "extractedExpression": "135 tỉ USD",
+      "numericValue": "135",
+      "unit": "tỉ USD",
+      "originalExtractedEntity": "Bộ Công Thương",
+      "verifiedEntity": "Bộ Công Thương",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-016",
+      "eventId": "EVT-20261112-010",
+      "metricName": "Mức trần hoa hồng đại lý xổ số",
+      "extractedExpression": "15%",
+      "numericValue": "15",
+      "unit": "%",
+      "originalExtractedEntity": "Bộ Tài chính",
+      "verifiedEntity": "Bộ Tài chính",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-017",
+      "eventId": "EVT-20261112-009",
+      "metricName": "Số trụ cột công nghệ hợp tác đề xuất",
+      "extractedExpression": "5 trụ cột",
+      "numericValue": "5",
+      "unit": "trụ cột",
+      "originalExtractedEntity": "Tập đoàn FPT",
+      "verifiedEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-018",
+      "eventId": "EVT-20261112-008",
+      "metricName": "Giá trị hợp tác phân phối vonfram",
+      "extractedExpression": "100 triệu USD",
+      "numericValue": "100",
+      "unit": "triệu USD",
+      "originalExtractedEntity": "Tập đoàn Masan",
+      "verifiedEntity": "Chính phủ / Bộ Tài chính Nhật Bản",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-019",
+      "eventId": "EVT-20261112-007",
+      "metricName": "Giá vàng miếng bán ra",
+      "extractedExpression": "85,8 triệu đồng/lượng",
+      "numericValue": "85.8",
+      "unit": "triệu đồng/lượng",
+      "originalExtractedEntity": "SJC",
+      "verifiedEntity": "SJC",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-020",
+      "eventId": "EVT-20261112-006",
+      "metricName": "Số chi nhánh phòng tập đóng cửa",
+      "extractedExpression": "2 phòng tập",
+      "numericValue": "2",
+      "unit": "phòng tập",
+      "originalExtractedEntity": "Citigym",
+      "verifiedEntity": "Citigym",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-021",
+      "eventId": "EVT-20261112-005",
+      "metricName": "Mục tiêu tăng trưởng kinh tế",
+      "extractedExpression": "6,5% đến 7%",
+      "numericValue": "6.5",
+      "unit": "%",
+      "originalExtractedEntity": "Techcombank",
+      "verifiedEntity": "Techcombank",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-022",
+      "eventId": "EVT-20261112-004",
+      "metricName": "Số văn bản quy phạm pháp luật bãi bỏ",
+      "extractedExpression": "17 văn bản",
+      "numericValue": "17",
+      "unit": "văn bản",
+      "originalExtractedEntity": "Ngân hàng Nhà nước",
+      "verifiedEntity": "Ngân hàng Nhà nước",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-023",
+      "eventId": "EVT-20261112-003",
+      "metricName": "Ngưỡng nợ thuế tối thiểu đề xuất tạm hoãn xuất cảnh",
+      "extractedExpression": "1 tỉ đồng",
+      "numericValue": "1",
+      "unit": "tỉ đồng",
+      "originalExtractedEntity": "VCCI",
+      "verifiedEntity": "Doanh nghiệp nộp thuế (Đề xuất VCCI)",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-024",
+      "eventId": "EVT-20261112-002",
+      "metricName": "Kỳ hạn cho vay dài hạn",
+      "extractedExpression": "5-10 năm",
+      "numericValue": "5",
+      "unit": "năm",
+      "originalExtractedEntity": "ngân hàng thương mại",
+      "verifiedEntity": "ngân hàng thương mại",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-03"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-025",
+      "eventId": "EVT-20261112-001",
+      "metricName": "Tỷ giá mua ngoại tệ can thiệp",
+      "extractedExpression": "25.500 đồng/USD",
+      "numericValue": "25500",
+      "unit": "đồng/USD",
+      "originalExtractedEntity": "Ngân hàng Nhà nước",
+      "verifiedEntity": "Ngân hàng Nhà nước",
+      "entityBindingStatus": "ENTITY_VERIFIED_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03"
+      ]
+    }
+  ],
+  "marketPulseCrosswalk": [
+    {
+      "indicatorId": "MP-01",
+      "indicatorName": "Tỷ giá trung tâm USD/VND",
+      "actualValue": "24283",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-11",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://sbv.gov.vn/ty-gia-trung-tam-ngay-11-11-2026.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_de348bdb95.html",
+      "evidenceSha256": "de348bdb9559ddb53dfc2b3a2b4a7d7d6a3e79cb9874ce91f4f95e8077377481",
+      "referencedByTheses": [
+        "THESIS-02"
+      ],
+      "referencedByChains": [
+        "CHAIN-02"
+      ],
+      "referencedByRadars": [
+        "RADAR-06"
+      ],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-02"
+      ]
+    },
+    {
+      "indicatorId": "MP-02",
+      "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+      "actualValue": "4.4",
+      "unit": "%/năm",
+      "observationDate": "2026-11-11",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "STALE_BEYOND_72H_CEILING",
+      "sourceUrl": "https://vneconomy.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_77c88a05fb.html",
+      "evidenceSha256": "77c88a05fb00f5597a364e96f10ca4d3dc5f0238696a73b3d3d5112b26dfb0bc",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-03",
+      "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+      "actualValue": "4.65",
+      "unit": "%/năm",
+      "observationDate": "2026-11-11",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://vneconomy.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_7651094f1f.html",
+      "evidenceSha256": "7651094f1f8b3d3595028304b8d25d3acc9ae5a3f13f67f68d741b1d2fbacaf5",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [
+        "RADAR-03"
+      ],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-04",
+      "indicatorName": "Chỉ số VN-Index",
+      "actualValue": "1746.90",
+      "unit": "Điểm",
+      "observationDate": "2026-11-11",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://vietstock.vn/2026/11/vn-index-tang-nhe-len-1746-diem-khoi-ngoai-mua-rong-11-11.htm",
+      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_d91da3ec82.html",
+      "evidenceSha256": "d91da3ec823aa484bccdda0d32044db81a2e05b566a8f01a32dcd03853574722",
+      "referencedByTheses": [
+        "THESIS-02"
+      ],
+      "referencedByChains": [
+        "CHAIN-02"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02"
+      ]
+    },
+    {
+      "indicatorId": "MP-05",
+      "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+      "actualValue": "10.08",
+      "unit": "%",
+      "observationDate": "2026-10-31",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
+      "sourceUrl": "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_fad63c359e.html",
+      "evidenceSha256": "fad63c359e129633ab1b7e7b9dc8dd04a035fba91c87830d6258e48d3decb52e",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-06",
+      "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+      "actualValue": "0.85",
+      "unit": "tỷ giao dịch",
+      "observationDate": "2026-10-31",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
+      "sourceUrl": "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+      "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_4be643c650.html",
+      "evidenceSha256": "4be643c650565bb7b2de14c07d5852c27a4ab7fd0498aad3cc3b884636b0b9f2",
+      "referencedByTheses": [
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-04"
+      ]
+    },
+    {
+      "indicatorId": "MP-07",
+      "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+      "actualValue": "19.5",
+      "unit": "triệu lượt",
+      "observationDate": "2026-10-31",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "LATEST_PERIODIC_REPORTING_PERIOD_10M_2026",
+      "sourceUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+      "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_92aeeb6cbb.html",
+      "evidenceSha256": "92aeeb6cbb7b787e75240be0d132c6ccedda41048208be23ea156d45584f3be7",
+      "referencedByTheses": [
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-01"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-04"
+      ]
+    },
+    {
+      "indicatorId": "MP-08",
+      "indicatorName": "Thanh khoản thị trường mở (OMO)",
+      "actualValue": "-2892",
+      "unit": "tỷ VND",
+      "observationDate": "2026-11-11",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "HISTORICAL_EVENT_OPERATION_2026_09_21",
+      "sourceUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+      "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_a829dd9d8a.html",
+      "evidenceSha256": "a829dd9d8a0b7ed3ebcdbcf8dfa0ee6a97afb3266480b327cafaccb16b2c3e6f",
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [
+        "RADAR-06"
+      ],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    }
+  ],
+  "inheritedSchemaVersion": "4.0.0"
+}

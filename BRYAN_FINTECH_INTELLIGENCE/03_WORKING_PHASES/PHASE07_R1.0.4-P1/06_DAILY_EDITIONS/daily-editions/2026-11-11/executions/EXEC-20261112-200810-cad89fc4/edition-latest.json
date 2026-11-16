@@ -1,0 +1,11 @@
+{
+  "pointerVersion": "1.0.0",
+  "editionId": "ED-20261111-D01",
+  "editionDate": "2026-11-11",
+  "latestExecutionId": "EXEC-20261112-200810-cad89fc4",
+  "status": "VALIDATED",
+  "completedAt": "2026-11-12T20:08:15.334729+07:00",
+  "inputDatasetHash": "2ec0b749f5d4ce613957088ac32f32e20ad38b29cac198323fa9f201d3b58bbc",
+  "outputDatasetHash": "a46966cfc6e55a974b8437c2eff0d3a20786d2d20e986774888e016e08b3baa0",
+  "executionMode": "OFFLINE"
+}

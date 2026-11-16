@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T17:45:00+07:00",
+  "totalIndicatorsEvaluated": 8,
+  "statusSummary": {
+    "SUCCESS_OBSERVATION_VERIFIED": 8,
+    "FAILED_REJECTED": 0
+  },
+  "searchAudits": [
+    {
+      "indicatorId": "MP-01",
+      "indicatorName": "Tỷ giá trung tâm USD/VND",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Phản ứng của thị trường sau khi hoán đổi và mở kênh mua ngoại tệ",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-01-20261112",
+      "searchTimestamp": "2026-11-11T13:33:08+07:00",
+      "selectedUrl": "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm",
+      "secondaryUrls": [
+        "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm"
+      ],
+      "verifiedValue": "25611",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-11",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-02",
+      "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Lãi suất liên ngân hàng qua đêm giảm về 4,4%/năm, thanh khoản dồi dào",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-02-20261112",
+      "searchTimestamp": "2026-11-11T21:10:00+07:00",
+      "selectedUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+      "secondaryUrls": [
+        "https://vneconomy.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html"
+      ],
+      "verifiedValue": "4.40",
+      "unit": "%/năm",
+      "observationDate": "2026-11-11",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-03",
+      "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Ngày 12/11, gửi dưới 1 tỷ đồng kỳ hạn 12 tháng tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi?",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-03-20261112",
+      "searchTimestamp": "2026-11-12T01:11:00+07:00",
+      "selectedUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+      "secondaryUrls": [
+        "https://baodautu.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html"
+      ],
+      "verifiedValue": "6.40",
+      "unit": "%/năm",
+      "observationDate": "2026-11-12",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-04",
+      "indicatorName": "Chỉ số VN-Index",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "VN-Index tăng phiên thứ hai liên tiếp lên 1.746,90 điểm, Vingroup giữ vững sắc xanh",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-04-20261112",
+      "searchTimestamp": "2026-11-11T15:30:00+07:00",
+      "selectedUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+      "secondaryUrls": [
+        "https://vietstock.vn/2026/11/vn-index-tang-nhe-len-1746-diem-khoi-ngoai-mua-rong-11-11.htm"
+      ],
+      "verifiedValue": "1746.90",
+      "unit": "Điểm",
+      "observationDate": "2026-11-11",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-05",
+      "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Tăng trưởng tín dụng toàn hệ thống đạt 10,08% sau 10 tháng năm 2026",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-05-20261112",
+      "searchTimestamp": "2026-11-05T09:00:00+07:00",
+      "selectedUrl": "https://baodautu.vn/tin-dung-toan-he-thong-tang-1008-sau-10-thang-nam-2026.html",
+      "secondaryUrls": [
+        "https://cafef.vn/ngan-hang-nha-nuoc-da-co-co-che-loai-tru-17-trieu-ty-dong-ra-khoi-room-tin-dung-188261025124958826.chn"
+      ],
+      "verifiedValue": "10.08",
+      "unit": "%",
+      "observationDate": "2026-10-31",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-06",
+      "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Sản lượng giao dịch VietQR NAPAS 10 tháng năm 2026",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-06-20261112",
+      "searchTimestamp": "2026-11-08T10:00:00+07:00",
+      "selectedUrl": "https://baodautu.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+      "secondaryUrls": [
+        "https://cafef.vn/vietqr-global-giai-bai-toan-dua-thanh-toan-den-tung-diem-ban-188260928064510139.chn"
+      ],
+      "verifiedValue": "120",
+      "unit": "%",
+      "observationDate": "2026-10-31",
+      "verificationStatus": "SCOPE_SEPARATED_VERIFIED"
+    },
+    {
+      "indicatorId": "MP-07",
+      "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng, vượt chỉ tiêu cả năm 2026",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-07-20261112",
+      "searchTimestamp": "2026-11-06T14:00:00+07:00",
+      "selectedUrl": "https://tuoitre.vn/viet-nam-don-19-5-trieu-luot-khach-quoc-te-vuot-ke-hoach.htm",
+      "secondaryUrls": [
+        "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm"
+      ],
+      "verifiedValue": "19.5",
+      "unit": "triệu lượt",
+      "observationDate": "2026-10-31",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "indicatorId": "MP-08",
+      "indicatorName": "Thanh khoản thị trường mở (OMO)",
+      "searchProvider": "Approved Publisher Live Search / HTTP Endpoint",
+      "actualExecutedQuery": "NHNN hút ròng 2892 tỷ đồng qua kênh OMO trong phiên ngày 11/11",
+      "actualRequestStatus": "SUCCESS_OBSERVATION_VERIFIED",
+      "searchRequestId": "REQ-MP-08-20261112",
+      "searchTimestamp": "2026-11-11T18:00:00+07:00",
+      "selectedUrl": "https://vietstock.vn/2026/11/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+      "secondaryUrls": [
+        "https://nguoiquansat.vn/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm"
+      ],
+      "verifiedValue": "2892",
+      "unit": "tỷ VND",
+      "observationDate": "2026-11-11",
+      "verificationStatus": "VERIFIED"
+    }
+  ]
+}

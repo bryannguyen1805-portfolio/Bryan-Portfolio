@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261112-NO27",
+  "generatedAt": "2026-11-12T09:25:00+07:00",
+  "newlyRegisteredEventsCount": 25,
+  "events": [
+    {
+      "eventId": "EVT-20261112-057",
+      "canonicalUrl": "https://tapchicongthuong.vn/ket-noi-giao-thuong-viet-nam-malaysia-chuoi-ban-le.htm",
+      "headline": "Hội nghị giao thương doanh nghiệp Việt Nam - Malaysia kết nối chuỗi bán lẻ chiều 12/11",
+      "publisher": "Tạp chí Công Thương",
+      "publishedAt": "2026-11-12T08:15:00+07:00",
+      "evidenceSha256": "118059ea0c11d786c203543a6d7772bb0fac6c30000d1ebb254ab8fad2a94d28"
+    },
+    {
+      "eventId": "EVT-20261112-103",
+      "canonicalUrl": "https://vietnamnet.vn/nhom-big-4-giu-on-dinh-bieu-lai-suat-thang-11-2026.html",
+      "headline": "Agribank, BIDV và VietinBank giữ nguyên biểu lãi suất huy động ổn định hỗ trợ doanh nghiệp",
+      "publisher": "Báo VietNamNet",
+      "publishedAt": "2026-11-12T08:00:00+07:00",
+      "evidenceSha256": "48231c8ef025339323b1660929bea7c30558b673a15009478be90740d998ebed"
+    },
+    {
+      "eventId": "EVT-20261112-009",
+      "canonicalUrl": "https://baodautu.vn/thanh-toan-the-va-qr-fb-du-lich-tang-truong-manh.html",
+      "headline": "Doanh số thanh toán thẻ và QR tại các chuỗi F&B du lịch tăng trưởng mạnh trong tháng 11",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T07:45:00+07:00",
+      "evidenceSha256": "4a9dc8335979ae0a6017f2b94759158f01ed7ed5a1c074fc04d59f5d17f7e6fd"
+    },
+    {
+      "eventId": "EVT-20261112-080",
+      "canonicalUrl": "https://tuoitre.vn/canh-bao-an-ninh-mang-cap-nhat-ban-va-bao-mat-ung-dung-tai-chinh.htm",
+      "headline": "Cảnh báo an ninh mạng khuyến nghị cập nhật bản vá bảo mật thiết bị giao dịch tài chính",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-12T07:00:00+07:00",
+      "evidenceSha256": "855c85f45891aa25146393e71cfc19a186cf909e8023348f34cbdfea0deb614b"
+    },
+    {
+      "eventId": "EVT-20261112-006",
+      "canonicalUrl": "https://baodautu.vn/luu-luong-don-hang-sieu-sale-1111-thuc-day-thanh-toan-qr-dong.html",
+      "headline": "Siêu sale 11.11 ghi nhận lưu lượng đơn hàng tăng vọt đòi hỏi giải pháp thanh toán QR động",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-12T06:30:00+07:00",
+      "evidenceSha256": "f1c622f87ba304a03665e8409fdf6e96d10e45a4b324e78b6e3cb1498e2b38e4"
+    },
+    {
+      "eventId": "EVT-20261112-063",
+      "canonicalUrl": "https://thanhnien.vn/de-xuat-nop-thue-truc-tuyen-go-tam-hoan-xuat-canh-san-bay.htm",
+      "headline": "Đề xuất quy trình nộp thuế trực tuyến 24/7 gỡ tạm hoãn xuất cảnh ngay tại sân bay",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T22:30:00+07:00",
+      "evidenceSha256": "ddd3cefe1409adb038bfce4b9d80f24eafa13696b9844860af7dee1437d6e309"
+    },
+    {
+      "eventId": "EVT-20261112-005",
+      "canonicalUrl": "https://baodautu.vn/lai-suat-lien-ngan-hang-giam-nhe-thanh-khoan-he-thong-on-dinh.html",
+      "headline": "Lãi suất liên ngân hàng qua đêm giảm về 4,4%/năm, thanh khoản dồi dào",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-11T21:10:00+07:00",
+      "evidenceSha256": "e5512566398376eaaedd5bc8249676d6f12bf30a6c3c91987e435fc0eab45ab2"
+    },
+    {
+      "eventId": "EVT-20261112-088",
+      "canonicalUrl": "https://tuoitre.vn/gia-vang-mieng-sjc-neo-quanh-140-trieu-dong-luong.htm",
+      "headline": "Giá vàng miếng SJC neo quanh 140 triệu đồng/lượng sau nhịp biến động quốc tế",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-11T20:15:00+07:00",
+      "evidenceSha256": "f5033dd75a7be261c610b55d97f2196c1e3b917c87b2798dbf6c80d8e8a23829"
+    },
+    {
+      "eventId": "EVT-20261112-079",
+      "canonicalUrl": "https://thanhnien.vn/vietqr-global-mo-rong-thanh-toan-xuyen-bien-gioi-du-khach-quoc-te.htm",
+      "headline": "VietQR Global mở rộng mạng lưới thanh toán QR xuyên biên giới đón đầu cao điểm du lịch",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-11T19:45:00+07:00",
+      "evidenceSha256": "dd177e5ac54da05da801dd6d59ec20a0eb5d2ba933c2fb33f7d35427d405a731"
+    },
+    {
+      "eventId": "EVT-20261112-051",
+      "canonicalUrl": "https://chinhphu.vn/khai-mac-chuong-trinh-vibrant-ho-chi-minh-city-2026.htm",
+      "headline": "Khai mạc chương trình Vibrant Ho Chi Minh City kích cầu tiêu dùng và thúc đẩy thanh toán số 11.11",
+      "publisher": "Cổng Thông tin điện tử Chính phủ",
+      "publishedAt": "2026-11-11T18:30:00+07:00",
+      "evidenceSha256": "7014ef24288497c4edb3268316839767f0a7775357c185c904bbb4ba4d4861aa"
+    },
+    {
+      "eventId": "EVT-20261112-053",
+      "canonicalUrl": "https://nguoiquansat.vn/nhnn-hut-rong-2892-ty-dong-qua-omo-phien-11-11.htm",
+      "headline": "NHNN hút ròng 2.892 tỷ đồng qua kênh OMO trong phiên ngày 11/11",
+      "publisher": "Tạp chí Người Quan Sát",
+      "publishedAt": "2026-11-11T18:00:00+07:00",
+      "evidenceSha256": "562edfad6986693d28490a100608eb17fd2de409a195cdca466ce8c58e71017c"
+    },
+    {
+      "eventId": "EVT-20261112-052",
+      "canonicalUrl": "https://laodong.vn/tien-te-dau-tu/tpbank-dieu-chinh-giam-lai-suat-tiet-kiem-thang-11-2026.ldo",
+      "headline": "TPBank giảm 0,1% lãi suất tiết kiệm tại quầy xuống 4,1%/năm",
+      "publisher": "Báo Lao Động",
+      "publishedAt": "2026-11-11T17:00:00+07:00",
+      "evidenceSha256": "83087fb8cdf9ab4faa951faafd256832fa0a4129bf3326bf2d4ba59d44f1af81"
+    },
+    {
+      "eventId": "EVT-20261112-106",
+      "canonicalUrl": "https://vietstock.vn/2026/11/khoi-ngoai-mua-rong-75-ty-dong-phien-11-11-ho-se.htm",
+      "headline": "Khối ngoại mua ròng hơn 75 tỷ đồng trên HOSE ngày 11/11",
+      "publisher": "Vietstock Finance",
+      "publishedAt": "2026-11-11T16:45:00+07:00",
+      "evidenceSha256": "23a71aa6663f94fa95b38dba8ff6228ed3c8fd8e05fb180f0a32589ee99e9ebc"
+    },
+    {
+      "eventId": "EVT-20261112-104",
+      "canonicalUrl": "https://vietnamnet.vn/vpbank-giam-lai-suat-huy-dong-ky-han-ngan-thang-11-2026.html",
+      "headline": "VPBank tiếp tục giảm lãi suất huy động kỳ hạn ngắn xuống 4,65%/năm trong ngày 11/11",
+      "publisher": "Báo VietNamNet",
+      "publishedAt": "2026-11-11T16:15:00+07:00",
+      "evidenceSha256": "db9127637b70b24a4d8e5a3df26ad47525c93f473aadc0e8f72ccaebb771f9f8"
+    },
+    {
+      "eventId": "EVT-20261112-107",
+      "canonicalUrl": "https://vneconomy.vn/vn-index-tang-nhe-len-1746-diem-nho-luc-do-vingroup.htm",
+      "headline": "VN-Index tăng phiên thứ hai liên tiếp lên 1.746,90 điểm, Vingroup giữ vững sắc xanh",
+      "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+      "publishedAt": "2026-11-11T15:30:00+07:00",
+      "evidenceSha256": "824306815aab03fcfdfc96770125b6202df21362604b5e468c20c35f53651505"
+    },
+    {
+      "eventId": "EVT-20261112-105",
+      "canonicalUrl": "https://vietnamplus.vn/vifc-hcmc-hoan-thien-co-che-sandbox-cho-fintech.vnp",
+      "headline": "TP.HCM đẩy nhanh cơ chế Sandbox Fintech tại Trung tâm Tài chính Quốc tế VIFC",
+      "publisher": "Báo điện tử VietnamPlus (TTXVN)",
+      "publishedAt": "2026-11-11T15:00:00+07:00",
+      "evidenceSha256": "a9826623758ff094d2c206a0332a65b998e4765fd39824db49016f3576b6c2db"
+    },
+    {
+      "eventId": "EVT-20261112-035",
+      "canonicalUrl": "https://cafef.vn/nhnn-chinh-thuc-mua-ngoai-te-giao-ngay-dinh-ky-25500-vnd-usd.chn",
+      "headline": "NHNN chính thức mua ngoại tệ giao ngay từ 11/11, tỷ giá can thiệp 25.500 VND/USD hỗ trợ thanh khoản tiền đồng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-11T14:30:00+07:00",
+      "evidenceSha256": "2821740a25ce08eab4287e93591a332af11ab9404143acce08abc54e530e2ba6"
+    },
+    {
+      "eventId": "EVT-20261112-050",
+      "canonicalUrl": "https://chinhphu.vn/chinh-phu-chi-dao-tang-toc-giai-ngan-dau-tu-cong-cuoi-nam-2026.htm",
+      "headline": "Chính phủ chỉ đạo tăng tốc giải ngân vốn đầu tư công các dự án giao thông trọng điểm",
+      "publisher": "Cổng Thông tin điện tử Chính phủ",
+      "publishedAt": "2026-11-11T14:00:00+07:00",
+      "evidenceSha256": "3d02d1e9bd46b1758c231ac4097ffd7331792d6d16f813b679e1e03352670a16"
+    },
+    {
+      "eventId": "EVT-20261112-013",
+      "canonicalUrl": "https://bnews.vn/ctp-ha-lan-hoan-tat-thuong-vu-mua-lai-slp-viet-nam-500-trieu-usd.html",
+      "headline": "Tập đoàn CTP Hà Lan mua lại SLP Việt Nam trong thương vụ logistics 500 triệu USD",
+      "publisher": "Ban tin Kinh tế TTXVN (Bnews)",
+      "publishedAt": "2026-11-11T13:45:00+07:00",
+      "evidenceSha256": "77df130bf1923bd737d2a56ed15fb2ef013be96f604f9bc1382ad48ffac2e441"
+    },
+    {
+      "eventId": "EVT-20261112-054",
+      "canonicalUrl": "https://nhandan.vn/dien-dan-logistics-viet-nam-2026-tang-truong-va-so-hoa.html",
+      "headline": "Diễn đàn Logistics 2026: Ngành logistics duy trì đà tăng trưởng 14-16%/năm",
+      "publisher": "Báo Nhân Dân",
+      "publishedAt": "2026-11-11T12:00:00+07:00",
+      "evidenceSha256": "9a1411d67ce9c521626f4946f47e439b0deb4781aa0cf835df9f5b7a69018289"
+    },
+    {
+      "eventId": "EVT-20261112-058",
+      "canonicalUrl": "https://tapchicongthuong.vn/khai-mac-trien-lam-quoc-te-vietnam-foodexpo-2026-secc.htm",
+      "headline": "Khai mạc Triển lãm Quốc tế Vietnam Foodexpo 2026 quy tụ hơn 500 gian hàng tại SECC",
+      "publisher": "Tạp chí Công Thương",
+      "publishedAt": "2026-11-11T11:00:00+07:00",
+      "evidenceSha256": "361fb8a543addbc00e8dff6606677e44f7cada5a51eaeccaa0a41964c19f59ac"
+    },
+    {
+      "eventId": "EVT-20261112-055",
+      "canonicalUrl": "https://nhandan.vn/xuat-nhap-khau-10-thang-nam-2026-vuot-1000-ty-usd.html",
+      "headline": "Xuất nhập khẩu 10 tháng vượt 1.000 tỷ USD, Bắc Ninh dẫn đầu với 205 tỷ USD",
+      "publisher": "Báo Nhân Dân",
+      "publishedAt": "2026-11-11T10:30:00+07:00",
+      "evidenceSha256": "a442986ccdc9dc44896241a4e5dee6204c37f5dff9d3ac82a81f1fecb7cb4ed3"
+    },
+    {
+      "eventId": "EVT-20261110-005",
+      "canonicalUrl": "https://cafef.vn/lai-suat-ngan-hang-ngay-10-11-tai-agribank-vietcombank-bidv-vietinbank-mb-vpbank-techcombank-sacombank-hdbank-188261110213029029.chn",
+      "headline": "Lãi suất ngân hàng ngày 10/11 tại Agribank, Vietcombank, BIDV, VietinBank, MB, VPBank, Techcombank, Sacombank, HDBank,...",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-10T21:28:00+07:00",
+      "evidenceSha256": "308b565f01b525ba5f06bb4e405dc2ff4188758ba2033e9eab79285430d8bb55"
+    },
+    {
+      "eventId": "EVT-20261110-009",
+      "canonicalUrl": "https://cafef.vn/ngan-hang-nha-nuoc-muon-bai-bo-nhieu-quy-dinh-lien-quan-den-lai-suat-cho-vay-bang-usd-sap-nhap-hop-nhat-mua-lai-to-chuc-tin-dung-18826111020174761.chn",
+      "headline": "Ngân hàng Nhà nước muốn bãi bỏ nhiều quy định liên quan đến lãi suất cho vay bằng USD, sáp nhập, hợp nhất, mua lại tổ chức tín dụng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-10T20:16:00+07:00",
+      "evidenceSha256": "91cfe25120f155dd556b3133ff4c36f51477970c37ebb2f9ed56f914f72e798d"
+    },
+    {
+      "eventId": "EVT-20261110-010",
+      "canonicalUrl": "https://tuoitre.vn/lam-sao-de-huy-dong-hang-tram-ti-usd-cho-cac-du-an-dien-nang-luong-100261110184300442.htm",
+      "headline": "Làm sao để huy động hàng trăm tỉ USD cho các dự án điện, năng lượng?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-10T19:12:00+07:00",
+      "evidenceSha256": "1ceb7cd8fad5ce4b6e75fbd6b57c90a07106fe65a1d5293c29c0267db3cd60ab"
+    }
+  ]
+}

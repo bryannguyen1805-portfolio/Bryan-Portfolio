@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "releaseId": "PHASE07_R1.0.4",
+  "releaseVersion": "1.0.4",
+  "parentReleaseId": "PHASE07_R1.0.3_REMEDIATION_BASELINE",
+  "parentAcceptedPhase": "PHASE06_R1.0.0",
+  "editionId": "ED-20261111-D01",
+  "editionDate": "2026-11-11",
+  "executionId": "EXEC-20261112-200637-bae4be70",
+  "executionMode": "OFFLINE",
+  "displayDate": "11/11/2026",
+  "editionTitle": "Bryan FinTech Intelligence — Ấn bản Dynamic Runtime ED-20261111-D01",
+  "generatedAt": "2026-11-11T02:20:00+07:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "parentBaselineReleaseId": "PHASE06_R1.0.0_ACCEPTED_RELEASE",
+  "readinessClassification": {
+    "engineeringReadiness": "ENGINEERING_PASS",
+    "liveRetrievalReadiness": "NOT_APPLICABLE",
+    "dailyEditionReadiness": "PASS_25_EVENTS_24H_80PCT",
+    "productionApprovalStatus": "NOT_APPROVED"
+  },
+  "counts": {
+    "verifiedNewsEvents": 25,
+    "verifiedNews0to24h": 24,
+    "uniqueVerifiedFinancialFacts": 21,
+    "marketPulseIndicators": 8,
+    "coreTheses": 4,
+    "connectTheDotsNarratives": 4,
+    "macroToMicroChains": 4,
+    "paymentRadarSignals": 5,
+    "financialDecisionCards": 4,
+    "claimsLayerCount": 31,
+    "postCutoffEvidenceCount": 0,
+    "marketPulseSearchesExecuted": 8
+  },
+  "files": [
+    {
+      "fileName": "GOOGLE_SHEETS_DRY_RUN_REPORT.md",
+      "sha256": "da751f49ca493d6bd8d96cbd9ba3fae45df6bf0accb97f04adb158f73ba6ea65"
+    },
+    {
+      "fileName": "claims-layer.json",
+      "sha256": "b89c82711aa498579c69d0fcd4f78fb97e5e375e024c6e28c39cb0c5e2037381"
+    },
+    {
+      "fileName": "combined-edition.json",
+      "sha256": "4f7e8a1f0d611084b2f83e25d82f65d236ed9f69f889c3f065bc656ac4cf274b"
+    },
+    {
+      "fileName": "connect-the-dots.json",
+      "sha256": "4ee2e80c4b617c1af293bf9eb6e549e27deccf8ebb47d8d4a3d0da1aaaa89f8d"
+    },
+    {
+      "fileName": "core-thesis.json",
+      "sha256": "83b3a9c12cf398172c52d6fce1e831d5ce8e6d166858616a6c7cee71c3b2a084"
+    },
+    {
+      "fileName": "event-registry-delta.json",
+      "sha256": "c3b4f6a5696f34149e72698539740a22a05d6eda35afc1510d5fd03c71273b42"
+    },
+    {
+      "fileName": "evidence-crosswalk.json",
+      "sha256": "2e3042dfd59db504e242a851cdf67fd30d103f32f7a463a587de6781e2b35243"
+    },
+    {
+      "fileName": "financial-decision-intelligence.json",
+      "sha256": "4495d5c805d211330b808ef0312abc354fd52f28caae761fc545787a3c09c207"
+    },
+    {
+      "fileName": "google-sheets-dry-run.json",
+      "sha256": "04617df8a07d6e6b5a4a8e3b0955c186125253a8d645ca0f8108303130d5db3c"
+    },
+    {
+      "fileName": "latest-candidate.json",
+      "sha256": "e880d738bb94968ac6aa876b3cd9c9275546d7e1bc8983ffd3f8b4b654fde987"
+    },
+    {
+      "fileName": "macro-to-micro.json",
+      "sha256": "1d800fc93a2ff27ee9f98c91c500e0b7a7672950c3aa6ba6c50b38c93af598a8"
+    },
+    {
+      "fileName": "magspread-edition-candidate.json",
+      "sha256": "34151879779c827cf58c388c2b0ce2d419ea67a02a041407d1cfebc8ada6c47a"
+    },
+    {
+      "fileName": "market-pulse-discovery-audit.json",
+      "sha256": "a98ed05f5292ed98059201f5cc4e1682c4d5809dcf74669374d83ecb72f1505c"
+    },
+    {
+      "fileName": "market-pulse.json",
+      "sha256": "4816e555de580bc93f6820dcf3d9e77ed720406260601cb987b5cf36593ca199"
+    },
+    {
+      "fileName": "payment-radar.json",
+      "sha256": "f4294670cdb29ffea7737d927e0a83392f4b2bd71d91a15297ccfe9cd82ff5eb"
+    },
+    {
+      "fileName": "post-cutoff-evidence.json",
+      "sha256": "9c4b9e90b0b5698b80ffd38c16e0675d069aeb169e368839ed269a43061df173"
+    },
+    {
+      "fileName": "rejected-candidates.json",
+      "sha256": "2d1473640232d74707563c87dc8d4fbcfc98e367b4ebc82f5c6abd2395612905"
+    },
+    {
+      "fileName": "source-ledger.json",
+      "sha256": "0e403399be97b966b039940f374a3685abff45ab3e7f459af9cf9782d6c8bb6d"
+    },
+    {
+      "fileName": "validation-report.json",
+      "sha256": "096e58892654265063c0572395ce841b86e18e6817cac65b00311feefc3e7c09"
+    },
+    {
+      "fileName": "verified-news.json",
+      "sha256": "abe9649fd81eeb8cd9ec2629f6811a30565bf4e9a2897dafcd9cfa38941dbf04"
+    }
+  ]
+}
