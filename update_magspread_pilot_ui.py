@@ -496,6 +496,54 @@ def build_daily_macro_chains(eligible_news: list, lead_title: str, stage_meta: l
     return chains
 
 
+def build_daily_editorial_synthesis(eligible_news: list, edition_date: str) -> str:
+    """
+    Sinh đúc kết toàn cảnh phiên gồm 4 mạch chuyển động lớn (1) (2) (3) (4)
+    hoàn toàn động từ 25 sự kiện xác minh trong ngày, tạo cấu trúc card UI [1] [2] [3] [4].
+    """
+    c1_words = ['ngân hàng', 'lãi suất', 'tín dụng', 'tiết kiệm', 'vốn hóa', 'nhtm', 'vietcombank', 'techcombank', 'vpbank', 'mb', 'shb', 'hdbank', 'acb', 'tpbank', 'bidv', 'agribank', 'tỷ giá', 'usd']
+    c2_words = ['thuế', 'hóa đơn', 'sàn tmđt', 'đầu tư công', 'bộ tài chính', 'nợ thuế', 'khoanh nợ', 'giám đốc', 'xăng dầu', 'quỹ bình ổn']
+    c3_words = ['bán lẻ', 'tiêu dùng', 'vàng', 'giá vàng', 'siêu thị', 'co.op', 'thưởng tết', 'khuyến mãi', 'ocop']
+
+    c1, c2, c3, c4 = [], [], [], []
+    for n in eligible_news:
+        hl = (n.get('headline') or '').lower()
+        if any(w in hl for w in c1_words) or bool(re.search(r'\bfed\b', hl)):
+            c1.append(n)
+        elif any(w in hl for w in c2_words):
+            c2.append(n)
+        elif any(w in hl for w in c3_words):
+            c3.append(n)
+        else:
+            c4.append(n)
+
+    c4_priority = ['trái phiếu', 'cổ phiếu', 'bất động sản', 'tài khoản', 'đấu giá', 'đầu tư']
+    c4.sort(key=lambda n: any(k in (n.get('headline') or '').lower() for k in c4_priority), reverse=True)
+
+    def _clean_title(hl):
+        clean = hl.rstrip('?!. :;')
+        if len(clean) > 80:
+            clean = clean[:75].rsplit(' ', 1)[0].rstrip(',;:')
+        return clean
+
+    def _summarize_cluster(items, label, fallback):
+        if not items:
+            return f'{label}: {fallback}'
+        h1 = _clean_title(items[0].get('headline', ''))
+        if len(items) > 1:
+            h2 = _clean_title(items[1].get('headline', ''))
+            return f'{label} ({h1}; {h2})'
+        return f'{label} ({h1})'
+
+    p1 = _summarize_cluster(c1, 'Khối NHTM phân hóa vốn hóa và chi phí vốn COF', 'mặt bằng lãi suất tiền gửi và thanh khoản liên ngân hàng')
+    p2 = _summarize_cluster(c2, 'Kỷ cương quản lý thuế và pháp lý doanh nghiệp', 'cải cách thủ tục tài khóa và lành mạnh hóa thị trường')
+    p3 = _summarize_cluster(c3, 'Kích cầu tiêu dùng và thị trường hàng hóa cuối năm', 'chiến dịch bán lẻ và bình ổn giá cả')
+    p4 = _summarize_cluster(c4, 'Thị trường vốn, bất động sản và an toàn giao dịch số', 'tái cơ cấu nợ trái phiếu và kiểm soát rủi ro tài khoản')
+
+    intro = f'Toàn cảnh phiên {edition_date} phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh:'
+    return f'{intro} (1) {p1}; (2) {p2}; (3) {p3}; (4) {p4}.'
+
+
 def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=None, fdi_raw=None):
     """
     Quy chuẩn chọn Bài đinh trang nhất (Cover Story) theo nguyên tắc biên tập R1.0.1:
@@ -674,10 +722,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             supporting_quote = (lead_event.get("supportingQuote") or "").strip().strip("“”\"'").strip()
             if not supporting_quote.endswith((".", "!", "?")):
                 supporting_quote += "."
-        editorial_synthesis = (
-            f"Toàn cảnh 25 sự kiện xác minh trong phiên nổi bật với tâm điểm '{lead_title}' ({lead_pub}), "
-            "cùng chuyển động của tỷ giá điều hành, tín dụng ưu đãi doanh nghiệp và mở rộng thương mại điện tử đa kênh."
-        )
+        editorial_synthesis = build_daily_editorial_synthesis(eligible_news, edition_date)
         market_impact = (
             f"(1) Tác động ngân hàng: Định hình chuẩn cạnh tranh mới về uy tín vốn và công nghệ quanh '{lead_title}'. "
             "(2) Giữ chân CASA: Hệ sinh thái số thuận tiện giúp tăng tiền gửi không kỳ hạn giá rẻ. "

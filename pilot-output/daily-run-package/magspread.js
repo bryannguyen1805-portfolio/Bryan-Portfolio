@@ -317,24 +317,27 @@ function renderMasthead() {
 function formatEditorialSynthesisHtml(rawSynthesis) {
   const text = (rawSynthesis || '').trim();
   if (!text) return '';
-  // Split enumerated items like "(1) ... (2) ... (3) ... (4) ..." for clean executive scanning
-  const firstMarkerIdx = text.search(/\(\d+\)\s+/);
+  // Split enumerated items like "(1) ... (2) ... (3) ... (4) ..." or "[1] ...", "1. ..." for clean executive scanning
+  const markerRegex = /(?:\(\d+\)|\[\d+\]|\b\d+\.)\s+/;
+  const firstMarkerIdx = text.search(markerRegex);
   if (firstMarkerIdx === -1) {
     return `<p class="ms-synthesis-lead">${escapeHtml(text)}</p>`;
   }
   const intro = text.slice(0, firstMarkerIdx).trim().replace(/:\s*$/, '');
   const rest = text.slice(firstMarkerIdx).trim();
-  const parts = rest.split(/(?=\(\d+\)\s+)/).map(s => s.trim()).filter(Boolean);
+  const parts = rest.split(/(?=(?:\(\d+\)|\[\d+\]|\b\d+\.)\s+)/).map(s => s.trim()).filter(Boolean);
   const listHtml = parts.map(part => {
-    const m = part.match(/^\((\d+)\)\s*([\s\S]+)$/);
-    if (!m) return `<li class="ms-synthesis-item">${escapeHtml(part)}</li>`;
+    const m = part.match(/^(?:\((\d+)\)|\[(\d+)\]|(\d+)\.)\s*([\s\S]+)$/);
+    if (!m) return '';
+    const num = m[1] || m[2] || m[3];
+    const copy = m[4];
     return `
       <li class="ms-synthesis-item">
-        <span class="ms-synthesis-num">${escapeHtml(m[1])}</span>
-        <span class="ms-synthesis-copy">${escapeHtml(m[2])}</span>
+        <span class="ms-synthesis-num">${escapeHtml(num)}</span>
+        <span class="ms-synthesis-copy">${escapeHtml(copy)}</span>
       </li>
     `;
-  }).join('');
+  }).filter(Boolean).join('');
   return `
     ${intro ? `<p class="ms-synthesis-lead">${escapeHtml(intro)}:</p>` : ''}
     <ul class="ms-synthesis-list">${listHtml}</ul>
