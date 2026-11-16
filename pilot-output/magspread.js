@@ -294,7 +294,7 @@ function renderMasthead() {
 
   if (dateEl) dateEl.textContent = (EDITION_DATA.dayOfWeek ? (EDITION_DATA.dayOfWeek.toUpperCase() + ', ') : '') + (EDITION_DATA.editionDate || '11/11/2026');
   if (editionBadge || drawerBadge) {
-    const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').split('·')[0].trim();
+    const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').trim();
     const isPreviewOnly = EDITION_DATA.publicationGateStatus?.status === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY' || EDITION_DATA.publicationGateStatus?.gateStatus === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY';
     const badgeLabel = EDITION_DATA.publicationGateStatus?.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN';
     const badgeSuffix = isPreviewOnly ? ` · ${badgeLabel}` : '';
@@ -354,7 +354,7 @@ function renderCoverStory() {
   const implicationEl = $('#coverImplication');
   const coverDateEl = $('#coverDate');
 
-  if (coverDateEl) coverDateEl.textContent = 'Phiên ngày ' + (EDITION_DATA.editionDate || '12/11/2026');
+  if (coverDateEl) coverDateEl.textContent = (EDITION_DATA.sessionName || ('Phiên ngày ' + (EDITION_DATA.editionDate || '12/11/2026')));
 
   const lead = ct.leadArticle || {};
   const headline = lead.headline || ct.editorialHeadline || 'Sự kiện điều hành trọng tâm của phiên';

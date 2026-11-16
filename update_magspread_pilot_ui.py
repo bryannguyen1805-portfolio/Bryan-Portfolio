@@ -597,22 +597,74 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         while len(base_sents) < 3:
             base_sents.append(f"Diễn biến này tác động trực tiếp tới mặt bằng chi phí vốn và lựa chọn kênh thanh toán của người gửi tiền.")
 
-        s1, s2, s3 = base_sents[0], base_sents[1], base_sents[2]
-        tot_len = len(s1) + 1 + len(s2) + 1 + len(s3)
-        if tot_len > 318:
-            budget = 310
-            l1 = min(len(s1), 110)
-            s1 = s1[:l1].rsplit(' ', 1)[0].rstrip(',;:') + '.'
-            l2 = min(len(s2), 105)
-            s2 = s2[:l2].rsplit(' ', 1)[0].rstrip(',;:') + '.'
-            rem = budget - (len(s1) + 1 + len(s2) + 1)
-            if len(s3) > rem:
-                s3 = s3[:rem].rsplit(' ', 1)[0].rstrip(',;:') + '.'
-        elif tot_len < 250:
-            needed = 260 - (len(s1) + 1 + len(s2) + 1)
-            if len(s3) < needed:
-                s3 = s3.rstrip('.') + " nhằm tối ưu hóa hiệu quả sinh lời trên từng đồng vốn lưu động."
+        s1 = base_sents[0].strip()
+        if len(s1) > 130:
+            parts = [p.strip() for p in s1.split(',') if p.strip()]
+            cand = ""
+            for p in parts:
+                if not cand:
+                    cand = p
+                elif len(cand) + len(p) + 2 <= 125:
+                    cand += f", {p}"
+                else:
+                    break
+            if len(cand) >= 40:
+                s1 = cand.rstrip('.?! ,;:') + '.'
+            else:
+                s1 = s1[:120].rsplit(' ', 1)[0].rstrip(',;:') + '.'
 
+        s2 = base_sents[1].strip() if len(base_sents) >= 2 else ""
+        if not s2 or s2 == s1:
+            for ss in cov_snaps:
+                if ss != s1 and len(ss) >= 30:
+                    s2 = ss.strip()
+                    break
+        if not s2:
+            s2 = "Diễn biến này cho thấy áp lực tái cơ cấu chi phí vốn và nâng cao tỷ trọng tiền gửi CASA."
+        if len(s2) > 115:
+            parts = [p.strip() for p in s2.split(',') if p.strip()]
+            cand = ""
+            for p in parts:
+                if not cand:
+                    cand = p
+                elif len(cand) + len(p) + 2 <= 112:
+                    cand += f", {p}"
+                else:
+                    break
+            if len(cand) >= 40:
+                s2 = cand.rstrip('.?! ,;:') + '.'
+            else:
+                s2 = s2[:110].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+
+        cur_len = len(s1) + 1 + len(s2) + 1
+        rem_budget = 314 - cur_len
+        min_rem = max(35, 255 - cur_len)
+
+        cand_s3 = ""
+        if len(base_sents) >= 3 and base_sents[2] not in (s1, s2):
+            cand_s3 = base_sents[2].strip()
+        if not cand_s3:
+            for ss in cov_snaps:
+                if ss not in (s1, s2) and min_rem <= len(ss) <= rem_budget:
+                    cand_s3 = ss.strip()
+                    break
+
+        if not cand_s3 or len(cand_s3) > rem_budget or len(cand_s3) < min_rem:
+            domain_s3_options = [
+                "Diễn biến này tác động trực tiếp tới cơ cấu nguồn vốn và chiến lược số hóa của các nhà băng.",
+                "Thị trường kỳ vọng bước chuyển dịch này sẽ thúc đẩy thanh toán số và tối ưu hóa chi phí.",
+                "Sự chuyển dịch này định hình lại bài toán thanh khoản và phân bổ dòng tiền trong hệ thống.",
+                "Động thái này mở ra cơ hội tối ưu chi phí vận hành và mở rộng thanh toán đa kênh."
+            ]
+            cand_s3 = domain_s3_options[0]
+            for opt in domain_s3_options:
+                if min_rem <= len(opt) <= rem_budget:
+                    cand_s3 = opt
+                    break
+            if len(cand_s3) > rem_budget:
+                cand_s3 = cand_s3[:rem_budget-1].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+
+        s3 = cand_s3.rstrip('.?!') + '.'
         lead_summary = f"{s1} {s2} {s3}".strip()
 
         cov_quotes = [s.strip().strip("“”\"'").strip() for s in cov_snaps if s not in lead_summary and len(s) >= 45 and s.endswith((".", "!", "?"))]
@@ -1674,12 +1726,17 @@ def main():
         "items": dynamic_watchlist_items
     }
 
+    now_vn = datetime.now()
+    is_afternoon = (now_vn.hour >= 12)
+    session_title = "Phiên chiều" if is_afternoon else "Phiên sáng"
+    session_badge = "PHIÊN CHIỀU" if is_afternoon else "PHIÊN SÁNG"
+
     # 12. Assemble Complete Editorial Sections
     editorial_sections = {
         "sec01_masthead": {
             "portalTitle": "BRYAN NEWS | FINTECH INTELLIGENCE",
             "tagline": "Tạp chí & Cổng thông tin thị trường tài chính, thanh toán số, ngân hàng và cơ hội B2B — Phong cách tạp chí biên tập MagSpread cao cấp.",
-            "editionDateDisplay": f"Phiên ngày {edition_date_display} — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
+            "editionDateDisplay": f"{session_title} ngày {edition_date_display} — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
             "bryanPortfolioUrl": "../index.html",
             "portfolioTitle": "Quay về Bryan Portfolio",
             "topics": [
@@ -1768,13 +1825,15 @@ def main():
         except Exception:
             ed_number_val = 27
 
-    edition_number_display = f"ẤN BẢN SỐ {ed_number_val}"
+    edition_number_display = f"ẤN BẢN SỐ {ed_number_val} · {session_badge}"
 
     edition_payload = {
         "editionId": edition_id,
         "editionDate": edition_date_display,
         "dayOfWeek": day_of_week,
-        "editionCutoffAt": news_raw.get("generatedAt") or "2026-11-12T19:50:00+07:00",
+        "sessionName": f"{session_title} ngày {edition_date_display}",
+        "sessionType": "AFTERNOON" if is_afternoon else "MORNING",
+        "editionCutoffAt": news_raw.get("generatedAt") or now_vn.isoformat(),
         "editionNumber": edition_number_display,
         "publicationGateStatus": {
             "status": "PASS_25_EVENTS_24H_80PCT",
