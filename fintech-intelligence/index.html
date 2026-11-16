@@ -806,51 +806,81 @@
         <div class="ms-welcome-eyebrow">
           <span>BRYAN NEWS | FINTECH INTELLIGENCE</span>
           <span class="ms-welcome-dot">·</span>
-          <span>FINANCIAL MARKET &amp; DIGITAL PAYMENT BRIEFING</span>
+          <span class="ms-welcome-eyebrow-sub">FINANCIAL MARKET &amp; PAYMENT BRIEFING</span>
         </div>
         <button type="button" class="ms-modal-close" onclick="closeWelcomeModal()" aria-label="Đóng lời chào mừng">✕</button>
       </div>
 
-      <div class="ms-welcome-hero">
-        <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
-        <p class="ms-welcome-lead">
-          Đây là không gian cập nhật và phân tích về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số.
-        </p>
-        <p class="ms-welcome-mission">
-          Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
-        </p>
-      </div>
-
-      <div class="ms-welcome-grid">
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">01</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">MARKET PULSE</div>
-            <p class="ms-welcome-item-desc">Theo dõi các chỉ số tài chính, tỷ giá, lãi suất, thanh khoản và xu hướng thanh toán.</p>
-          </div>
+      <div class="ms-welcome-scroll-body">
+        <div class="ms-welcome-hero">
+          <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
+          <p class="ms-welcome-lead">
+            Không gian tổng hợp và phân tích chuyên sâu về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số B2B.
+          </p>
+          <p class="ms-welcome-mission">
+            Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
+          </p>
         </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">02</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">THE NEWS DESK</div>
-            <p class="ms-welcome-item-desc">Tổng hợp những sự kiện nổi bật có nguồn dẫn, phân tích bối cảnh và ý nghĩa thị trường.</p>
+        <!-- HIGHLIGHT: BNEWS DAILY NEWSLETTER SUBSCRIPTION -->
+        <div class="ms-welcome-nl-card">
+          <div class="ms-welcome-nl-badge">
+            <span class="ms-welcome-nl-dot">■</span> BNEWS DAILY NEWSLETTER · 9H00 MỖI SÁNG (MIỄN PHÍ)
           </div>
+          <h3 class="ms-welcome-nl-title">Nắm trọn 25 tin đắt giá chỉ với 3 phút mỗi sáng</h3>
+          <p class="ms-welcome-nl-desc">
+            Bnews gửi bản tin tổng hợp 25 sự kiện tài chính xác minh, 4 chỉ số thị trường then chốt và cơ hội B2B tới hộp thư của bạn lúc 9h00 sáng mỗi ngày. Hoàn toàn miễn phí.
+          </p>
+          <form class="ms-welcome-nl-form" onsubmit="event.preventDefault(); handleNewsletterSubscribe('modal');">
+            <div class="ms-welcome-nl-input-wrap">
+              <input type="email" id="nlEmailInputModal" class="ms-welcome-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email" aria-label="Địa chỉ email nhận bản tin Bnews">
+              <button type="submit" id="nlSubmitBtnModal" class="ms-welcome-nl-btn">
+                ĐĂNG KÝ MIỄN PHÍ →
+              </button>
+            </div>
+            <p class="ms-welcome-nl-disclaimer">
+              Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
+            </p>
+            <div id="nlFeedbackModal" class="bnews-nl-feedback" role="status" aria-live="polite"></div>
+          </form>
         </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">03</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">MACRO TO MICRO</div>
-            <p class="ms-welcome-item-desc">Kết nối biến động vĩ mô với ngân hàng, doanh nghiệp, người tiêu dùng và thanh toán.</p>
+        <div class="ms-welcome-pillars-section">
+          <div class="ms-welcome-pillars-heading">
+            4 TRỤ CỘT NỘI DUNG XUYÊN SUỐT TRÊN HỆ THỐNG
           </div>
-        </div>
+          <div class="ms-welcome-grid">
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">01</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">MARKET PULSE</div>
+                <p class="ms-welcome-item-desc">Tỷ giá USD/VND, lãi suất liên ngân hàng, thanh khoản &amp; xung lực tài chính.</p>
+              </div>
+            </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">04</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">FINTECH &amp; B2B OPPORTUNITIES</div>
-            <p class="ms-welcome-item-desc">Khám phá xu hướng QR, POS, SmartPOS, Payment Gateway, Payment Link và các cơ hội kinh doanh thanh toán.</p>
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">02</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">THE NEWS DESK</div>
+                <p class="ms-welcome-item-desc">25 sự kiện tài chính xác minh 24h kèm nguồn dẫn và phân tích bối cảnh thị trường.</p>
+              </div>
+            </div>
+
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">03</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">MACRO TO MICRO</div>
+                <p class="ms-welcome-item-desc">Chuỗi truyền dẫn chính sách vĩ mô tới ngân hàng, doanh nghiệp &amp; tiêu dùng.</p>
+              </div>
+            </div>
+
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">04</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">B2B &amp; FINTECH</div>
+                <p class="ms-welcome-item-desc">Radar giải pháp thanh toán QR, POS, SmartPOS, Gateway &amp; cơ hội B2B.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -858,14 +888,14 @@
       <div class="ms-welcome-footer">
         <div class="ms-welcome-actions">
           <button type="button" class="ms-btn ms-btn-primary ms-welcome-cta" onclick="closeWelcomeModal()">
-            KHÁM PHÁ BẢN TIN →
+            KHÁM PHÁ BẢN TIN HÔM NAY →
           </button>
           <button type="button" class="ms-btn ms-btn-ghost ms-welcome-contact-btn" onclick="closeWelcomeModal(); openContactModal();">
             LIÊN HỆ BRYAN
           </button>
         </div>
         <div class="ms-welcome-signature">
-          BRYAN NGUYEN · FINTECH INTELLIGENCE
+          BRYAN NGUYEN · FINTECH &amp; FINANCIAL INTELLIGENCE
         </div>
       </div>
     </div>

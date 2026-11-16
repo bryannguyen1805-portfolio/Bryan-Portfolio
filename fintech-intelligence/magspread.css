@@ -3953,156 +3953,7 @@ body {
 }
 
 
-/* Welcome modal retained */
-.ms-welcome-card {
-  max-width: 580px !important;
-}
 
-.ms-welcome-header {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 16px 24px !important;
-  border-bottom: 1px solid var(--ms-border) !important;
-  background-color: var(--ms-surface-alt) !important;
-}
-
-.ms-welcome-eyebrow {
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  color: var(--ms-primary) !important;
-  text-transform: uppercase !important;
-}
-
-.ms-welcome-dot {
-  color: var(--ms-secondary) !important;
-}
-
-.ms-welcome-hero {
-  padding: 24px 24px 16px 24px !important;
-  border-bottom: 1px solid var(--ms-border) !important;
-}
-
-.ms-welcome-title {
-  font-family: var(--font-headline) !important;
-  font-size: 1.35rem !important;
-  font-weight: 700 !important;
-  color: var(--ms-primary) !important;
-  line-height: 1.3 !important;
-  margin: 0 0 10px 0 !important;
-}
-
-.ms-welcome-lead {
-  font-size: 0.9375rem !important;
-  line-height: 1.6 !important;
-  color: var(--ms-text-primary) !important;
-  margin: 0 0 8px 0 !important;
-  font-weight: 500 !important;
-}
-
-.ms-welcome-mission {
-  font-size: 0.8125rem !important;
-  line-height: 1.55 !important;
-  color: var(--ms-text-secondary) !important;
-  margin: 0 !important;
-}
-
-.ms-welcome-grid {
-  padding: 16px 24px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-  background-color: var(--ms-surface-card) !important;
-}
-
-.ms-welcome-item {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 12px !important;
-  padding: 10px 12px !important;
-  border-radius: 6px !important;
-  background-color: var(--ms-surface-alt) !important;
-  border: 1px solid var(--ms-border) !important;
-}
-
-.ms-welcome-item-num {
-  font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
-  font-weight: 800 !important;
-  color: var(--ms-primary) !important;
-  padding: 2px 6px !important;
-  background-color: var(--ms-surface-card) !important;
-  border: 1px solid var(--ms-border) !important;
-  border-radius: 4px !important;
-  flex-shrink: 0 !important;
-}
-
-.ms-welcome-item-body {
-  flex: 1 !important;
-}
-
-.ms-welcome-item-title {
-  font-family: var(--font-headline) !important;
-  font-size: 0.8125rem !important;
-  font-weight: 700 !important;
-  color: var(--ms-text-primary) !important;
-  letter-spacing: 0.04em !important;
-}
-
-.ms-welcome-item-desc {
-  font-size: 0.75rem !important;
-  line-height: 1.5 !important;
-  color: var(--ms-text-secondary) !important;
-  margin: 2px 0 0 0 !important;
-}
-
-.ms-welcome-footer {
-  padding: 16px 24px 20px 24px !important;
-  border-top: 1px solid var(--ms-border) !important;
-  background-color: var(--ms-surface-alt) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-}
-
-.ms-welcome-actions {
-  display: flex !important;
-  gap: 10px !important;
-}
-
-.ms-welcome-cta {
-  flex: 1.4 !important;
-  padding: 11px 16px !important;
-  font-weight: 700 !important;
-  font-size: 0.875rem !important;
-  cursor: pointer !important;
-  text-align: center !important;
-}
-
-.ms-welcome-contact-btn {
-  flex: 1 !important;
-  padding: 11px 16px !important;
-  font-weight: 700 !important;
-  font-size: 0.875rem !important;
-  cursor: pointer !important;
-  text-align: center !important;
-  border-color: var(--ms-border-dark) !important;
-}
-
-.ms-welcome-signature {
-  text-align: center !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  color: var(--ms-text-muted) !important;
-  text-transform: uppercase !important;
-}
 
 /* Floating contact launcher */
 .ms-floating-launcher-container {
@@ -4223,13 +4074,24 @@ body {
 }
 
 /* Welcome Modal specific typography & layout */
+.ms-welcome-card {
+  max-width: 620px !important;
+  max-height: 88vh !important;
+  max-height: 88dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
 .ms-welcome-header {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 14px 22px !important;
+  padding: 14px 20px !important;
   border-bottom: 1px solid var(--ms-border) !important;
   background-color: var(--ms-surface-alt) !important;
+  flex-shrink: 0 !important;
 }
 
 .ms-welcome-eyebrow {
@@ -4237,7 +4099,7 @@ body {
   align-items: center !important;
   gap: 6px !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
+  font-size: 0.72rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-primary) !important;
@@ -4248,8 +4110,15 @@ body {
   color: var(--ms-secondary) !important;
 }
 
+.ms-welcome-scroll-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 0 !important;
+}
+
 .ms-welcome-hero {
-  padding: 20px 22px 14px 22px !important;
+  padding: 18px 22px 14px 22px !important;
   border-bottom: 1px solid var(--ms-border) !important;
 }
 
@@ -4277,21 +4146,142 @@ body {
   margin: 0 !important;
 }
 
-.ms-welcome-grid {
-  padding: 14px 22px !important;
+/* Featured Newsletter Subscribe Card inside Welcome Modal */
+.ms-welcome-nl-card {
+  margin: 16px 20px !important;
+  padding: 16px 18px !important;
+  background-color: var(--ms-surface-alt) !important;
+  border: 1.5px solid var(--ms-primary) !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+html[data-theme="dark"] .ms-welcome-nl-card,
+body[data-theme="dark"] .ms-welcome-nl-card {
+  background: rgba(45, 212, 191, 0.05) !important;
+  border-color: rgba(45, 212, 191, 0.35) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.ms-welcome-nl-badge {
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: var(--ms-primary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 6px !important;
   display: flex !important;
-  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.ms-welcome-nl-dot {
+  color: var(--ms-secondary) !important;
+}
+
+.ms-welcome-nl-title {
+  font-family: var(--font-headline) !important;
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  color: var(--ms-text-primary) !important;
+  margin: 0 0 6px 0 !important;
+  line-height: 1.35 !important;
+}
+
+.ms-welcome-nl-desc {
+  font-size: 0.8125rem !important;
+  line-height: 1.5 !important;
+  color: var(--ms-text-secondary) !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.ms-welcome-nl-form {
+  margin: 0 !important;
+}
+
+.ms-welcome-nl-input-wrap {
+  display: flex !important;
   gap: 8px !important;
-  background-color: var(--ms-surface-card) !important;
-  overflow-y: auto !important;
-  max-height: 38vh !important;
+  align-items: stretch !important;
+}
+
+.ms-welcome-nl-input {
+  flex: 1 !important;
+  height: 40px !important;
+  padding: 0 12px !important;
+  border: 1px solid var(--ms-border-strong, #ccc) !important;
+  border-radius: 4px !important;
+  background-color: var(--ms-surface-card, #fff) !important;
+  color: var(--ms-text-primary) !important;
+  font-size: 0.84375rem !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s ease !important;
+}
+
+.ms-welcome-nl-input:focus {
+  border-color: var(--ms-primary) !important;
+}
+
+.ms-welcome-nl-btn {
+  background-color: var(--ms-secondary, #BE123C) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 0 16px !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  height: 40px !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.15s ease !important;
+}
+
+.ms-welcome-nl-btn:hover {
+  background-color: var(--ms-secondary-hover, #9F1239) !important;
+}
+
+.ms-welcome-nl-disclaimer {
+  font-size: 0.71875rem !important;
+  color: var(--ms-text-muted) !important;
+  margin: 8px 0 0 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* 4 Content Pillars section */
+.ms-welcome-pillars-section {
+  padding: 0 20px 18px 20px !important;
+}
+
+.ms-welcome-pillars-heading {
+  font-family: var(--font-mono) !important;
+  font-size: 0.6875rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--ms-text-muted) !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+}
+
+.ms-welcome-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 .ms-welcome-item {
   display: flex !important;
   align-items: flex-start !important;
   gap: 10px !important;
-  padding: 8px 12px !important;
+  padding: 10px 12px !important;
   border-radius: 6px !important;
   background-color: var(--ms-surface-alt) !important;
   border: 1px solid var(--ms-border) !important;
@@ -4299,7 +4289,7 @@ body {
 
 .ms-welcome-item-num {
   font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
+  font-size: 0.71875rem !important;
   font-weight: 800 !important;
   color: var(--ms-primary) !important;
   padding: 2px 5px !important;
@@ -4311,6 +4301,7 @@ body {
 
 .ms-welcome-item-body {
   flex: 1 !important;
+  min-width: 0 !important;
 }
 
 .ms-welcome-item-title {
@@ -4322,14 +4313,14 @@ body {
 }
 
 .ms-welcome-item-desc {
-  font-size: 0.75rem !important;
+  font-size: 0.71875rem !important;
   line-height: 1.45 !important;
   color: var(--ms-text-secondary) !important;
-  margin: 2px 0 0 0 !important;
+  margin: 3px 0 0 0 !important;
 }
 
 .ms-welcome-footer {
-  padding: 14px 22px 16px 22px !important;
+  padding: 14px 20px 16px 20px !important;
   border-top: 1px solid var(--ms-border) !important;
   background-color: var(--ms-surface-alt) !important;
   display: flex !important;
@@ -4376,10 +4367,99 @@ body {
 
 .ms-welcome-signature {
   font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
+  font-size: 0.72rem !important;
   letter-spacing: 0.08em !important;
   color: var(--ms-text-muted) !important;
   text-align: center !important;
+}
+
+@media (max-width: 600px) {
+  .ms-welcome-card {
+    max-width: calc(100% - 24px) !important;
+    margin: 12px auto !important;
+    max-height: 92vh !important;
+    max-height: 92dvh !important;
+  }
+  .ms-welcome-header {
+    padding: 10px 14px !important;
+  }
+  .ms-welcome-eyebrow {
+    font-size: 0.6875rem !important;
+    line-height: 1.2 !important;
+  }
+  .ms-welcome-eyebrow-sub,
+  .ms-welcome-header .ms-welcome-dot {
+    display: none !important;
+  }
+  .ms-welcome-hero {
+    padding: 14px 14px 10px 14px !important;
+  }
+  .ms-welcome-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+  }
+  .ms-welcome-lead {
+    font-size: 0.8125rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 4px !important;
+  }
+  .ms-welcome-mission {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+  .ms-welcome-nl-card {
+    margin: 10px 12px !important;
+    padding: 12px 14px !important;
+  }
+  .ms-welcome-nl-title {
+    font-size: 1rem !important;
+  }
+  .ms-welcome-nl-desc {
+    font-size: 0.75rem !important;
+    margin-bottom: 10px !important;
+  }
+  .ms-welcome-nl-input-wrap {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .ms-welcome-nl-input {
+    height: 38px !important;
+    font-size: 0.8125rem !important;
+  }
+  .ms-welcome-nl-btn {
+    height: 38px !important;
+    width: 100% !important;
+    font-size: 0.78125rem !important;
+  }
+  .ms-welcome-pillars-section {
+    padding: 0 12px 12px 12px !important;
+  }
+  .ms-welcome-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .ms-welcome-footer {
+    padding: 10px 14px 12px 14px !important;
+    gap: 8px !important;
+  }
+  .ms-welcome-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+  }
+  .ms-welcome-cta {
+    flex: 1.2 !important;
+    padding: 9px 8px !important;
+    font-size: 0.75rem !important;
+  }
+  .ms-welcome-contact-btn {
+    flex: 1 !important;
+    padding: 9px 8px !important;
+    font-size: 0.75rem !important;
+  }
+  .ms-welcome-signature {
+    font-size: 0.65rem !important;
+  }
 }
 
 /* ==========================================================================

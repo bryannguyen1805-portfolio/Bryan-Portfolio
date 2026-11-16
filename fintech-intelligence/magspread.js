@@ -1848,8 +1848,20 @@ function loadLatestNewsletterIssue() {
 }
 
 function handleNewsletterSubscribe(source) {
-  const inputId = source === 'bottom' ? 'nlEmailInputBottom' : 'nlEmailInputTop';
-  const feedbackId = source === 'bottom' ? 'nlFeedbackBottom' : 'nlFeedbackTop';
+  let inputId = 'nlEmailInputTop';
+  let feedbackId = 'nlFeedbackTop';
+  let sourceLabel = 'Bnews Tab 05 (Top Hero)';
+
+  if (source === 'bottom') {
+    inputId = 'nlEmailInputBottom';
+    feedbackId = 'nlFeedbackBottom';
+    sourceLabel = 'Bnews Tab 05 (Bottom)';
+  } else if (source === 'modal') {
+    inputId = 'nlEmailInputModal';
+    feedbackId = 'nlFeedbackModal';
+    sourceLabel = 'Bnews Welcome Modal';
+  }
+
   const input = document.getElementById(inputId);
   const feedback = document.getElementById(feedbackId);
   const form = input ? input.closest('form') : null;
@@ -1884,7 +1896,7 @@ function handleNewsletterSubscribe(source) {
   // Post directly to Google Apps Script Webhook
   const payload = JSON.stringify({
     email: email,
-    source: source === 'bottom' ? 'Bnews Tab 05 (Bottom)' : 'Bnews Tab 05 (Top Hero)',
+    source: sourceLabel,
     timestamp: new Date().toISOString()
   });
 
