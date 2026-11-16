@@ -92,6 +92,12 @@ except ImportError:
     ED30_ARTICLE_INTEL = {}
     ED30_MACRO_CHAINS = []
 
+try:
+    from ed31_editorial_content import ED31_COVER_OVERRIDE, ED31_ARTICLE_INTEL
+except ImportError:
+    ED31_COVER_OVERRIDE = {}
+    ED31_ARTICLE_INTEL = {}
+
 from html.parser import HTMLParser
 
 
@@ -568,8 +574,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (ED30 or ED29)
-    if "15/11/2026" in str(edition_date) or "2026-11-15" in str(edition_date):
+    # Check explicit curated lead override first (ED31, ED30 or ED29)
+    if "16/11/2026" in str(edition_date) or "2026-11-16" in str(edition_date):
+        cover_override = ED31_COVER_OVERRIDE
+    elif "15/11/2026" in str(edition_date) or "2026-11-15" in str(edition_date):
         cover_override = ED30_COVER_OVERRIDE
     elif "14/11/2026" in str(edition_date) or "2026-11-14" in str(edition_date):
         cover_override = ED29_COVER_OVERRIDE
@@ -988,10 +996,13 @@ def main():
         else:
             time_window = "0–24h"
 
+        is_ed31 = ("16/11/2026" in str(edition_date_display) or "2026-11-16" in str(edition_date_raw))
         is_ed30 = ("15/11/2026" in str(edition_date_display) or "2026-11-15" in str(edition_date_raw))
         is_ed29 = ("14/11/2026" in str(edition_date_display) or "2026-11-14" in str(edition_date_raw))
         curated = None
-        if is_ed30:
+        if is_ed31:
+            curated = ED31_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed30:
             curated = ED30_ARTICLE_INTEL.get(origin_evt_id)
         elif is_ed29:
             curated = ED29_ARTICLE_INTEL.get(origin_evt_id)
@@ -1128,19 +1139,19 @@ def main():
             "key": "maxDeposit12M",
             "label": "02. LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
             "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
+            "articleTitle": "Lãi suất ngân hàng hôm nay 16.11: Sáu ngân hàng có lãi suất trên 8%",
             "value": "7 %/năm",
             "unit": "%/năm",
             "asOf": last_trading_day,
-            "referenceValue": "PVcomBank/MSB: 9,0 - 10,0% (tiền gửi lớn) | Cake by VPBank: 6,9 - 9,1% | MB: 5,85 - 8,2% | Big4: 5,4%/năm",
+            "referenceValue": "PVcomBank: 10%/năm | Cake by VPBank: 6,9 - 9,1% | MSB: 9,0% | MB: 5,85 - 8,2% | SCB: 8,7% | Nam A Bank: 8,5% | Biểu 12T chuẩn: 7,0%/năm",
             "change": "Báo Lao Động khảo sát >30 ngân hàng: 6 nhà băng áp dụng lãi suất đặc biệt >8%/năm; biểu 12T thông thường neo đỉnh 7,0%/năm",
             "sourceName": "Báo Lao Động (laodong.vn)",
-            "sourceUrl": "https://laodong.vn/tien-te-dau-tu",
+            "sourceUrl": "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1611-sau-ngan-hang-co-lai-suat-tren-8-1800959.ldo",
             "secondarySourceUrls": [
-                "https://laodong.vn/tien-te-dau-tu",
-                "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1611-sau-ngan-hang-co-lai-suat-tren-8-1800959.ldo"
+                "https://laodong.vn/tien-te-dau-tu"
             ],
-            "statusReason": f"Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (thông thường) và lên tới 9,0 - 10,0%/năm (điều kiện đặc biệt) theo tuyến bài 'Lãi suất ngân hàng hôm nay' của Báo Lao Động phiên ngày {last_trading_day}.",
-            "financialInterpretation": "Khảo sát 'Lãi suất ngân hàng hôm nay' của Báo Lao Động ghi nhận các gói lãi suất đặc biệt lên tới 8,0% - 10,0%/năm (PVcomBank, MSB, Cake by VPBank, MB), trong khi biểu lãi suất niêm yết thông thường 12 tháng neo quanh 6,9% - 7,0%/năm. Chi phí vốn COF neo cao làm tăng áp lực lãi suất cho vay đối với doanh nghiệp SME. Các điểm bán Payoo tăng cường kích hoạt giải pháp trả góp 0% qua thẻ tín dụng và thanh toán số để trợ lực sức mua tiêu dùng cuối năm.",
+            "statusReason": f"Lãi suất tiền gửi 12 tháng cao nhất ghi nhận ở mức 7 %/năm (thông thường) và lên tới 9,0 - 10,0%/năm (điều kiện đặc biệt) theo bài viết 'Lãi suất ngân hàng hôm nay 16.11: Sáu ngân hàng có lãi suất trên 8%' trên Báo Lao Động phiên ngày {last_trading_day}.",
+            "financialInterpretation": "Bài viết 'Lãi suất ngân hàng hôm nay 16.11' trên Báo Lao Động phản ánh cuộc đua huy động vốn cuối năm với 6 ngân hàng áp dụng lãi suất đặc biệt trên 8%/năm (PVcomBank tới 10,0%/năm, MSB 9,0%/năm, Cake by VPBank 9,1%/năm, MB 8,2%/năm), trong khi lãi suất niêm yết thông thường kỳ hạn 12 tháng neo ở mức 6,9% - 7,0%/năm. Chi phí vốn COF neo cao làm tăng áp lực lãi suất cho vay đối với doanh nghiệp SME. Các điểm bán Payoo tăng cường kích hoạt giải pháp trả góp 0% qua thẻ tín dụng và thanh toán số để trợ lực sức mua tiêu dùng cuối năm.",
             "monitoringWatchpoint": "Theo dõi diễn biến lãi suất huy động tại Báo Lao Động (chuyên mục Tiền tệ & Đầu tư) và động thái điều chỉnh lãi suất cơ sở của Big 4.",
             "status": "positive",
             "verificationStatus": "VERIFIED",
@@ -1357,6 +1368,7 @@ def main():
             "fetchedAt": f"{edition_date_raw}T08:30:00+07:00",
             "ageHoursAtT0": 12.5,
             "sourceName": item["sourceName"],
+            "articleTitle": item.get("articleTitle", ""),
             "sourceUrl": item["sourceUrl"],
             "secondarySourceUrls": item["secondarySourceUrls"],
             "evidencePath": item["evidencePath"],
@@ -1376,7 +1388,11 @@ def main():
                 "summaryTitle": f"Thuyết minh phương pháp luận & cơ sở quan sát {item['shortLabel']}:",
                 "items": [
                     f"Đơn vị phát hành & đối soát: {item['sourceName']}.",
-                    *(["Mã tham chiếu / Tuyến bài: 'Lãi suất ngân hàng hôm nay' - Khảo sát biểu lãi suất hơn 30 ngân hàng thương mại Việt Nam (https://laodong.vn/tien-te-dau-tu)."] if item["key"] == "maxDeposit12M" else []),
+                    *( [
+                        f"Bài viết tham chiếu cụ thể: '{item.get('articleTitle', 'Lãi suất ngân hàng hôm nay 16.11: Sáu ngân hàng có lãi suất trên 8%')}' (Tác giả: Hà Vy, Báo Lao Động).",
+                        f"Đường dẫn bài báo gốc (Source URL): {item['sourceUrl']}",
+                        "Chuyên mục quét đối soát hàng ngày: https://laodong.vn/tien-te-dau-tu (Tiền tệ - Đầu tư | Báo Lao Động)."
+                    ] if item["key"] == "maxDeposit12M" else [] ),
                     f"Kỳ dữ liệu quan sát: {item['asOf']} (Nguồn xác minh 100% bài viết sống).",
                     f"Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
                     f"Ý nghĩa điều hành: {item['statusReason']}"

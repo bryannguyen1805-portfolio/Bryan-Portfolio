@@ -566,13 +566,18 @@ function openPulseDetail(key) {
           <div style="font-size:0.875rem; margin-bottom:8px;">
             <strong>Cơ quan công bố:</strong> ${escapeHtml(m.sourceName || 'Ngân hàng Nhà nước / Cơ quan thống kê')}
           </div>
+          ${m.articleTitle ? `
+            <div style="font-size:0.875rem; margin-bottom:8px; line-height:1.5;">
+              <strong>Bài viết cụ thể:</strong> <span style="color:var(--ms-primary); font-weight:600;">${escapeHtml(m.articleTitle)}</span>
+            </div>
+          ` : ''}
           <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
             <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm">
-              Mở link bài báo gốc ↗
+              Mở bài báo gốc ↗
             </a>
-            ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http') && u.length > 25 && !u.endsWith('.vn') && !u.endsWith('.com')).map((secUrl, idx) => `
+            ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http')).map((secUrl, idx) => `
               <a href="${escapeHtml(secUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-                Nguồn đối soát #${idx + 1} ↗
+                ${secUrl.includes('tien-te-dau-tu') ? 'Chuyên mục quét đối soát (Báo Lao Động) ↗' : `Nguồn đối soát #${idx + 1} ↗`}
               </a>
             `).join('')}
           </div>
