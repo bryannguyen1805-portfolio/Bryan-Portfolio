@@ -173,17 +173,18 @@ def _extract_snapshot_sentences(snapshot_file: str, title: str, sapo_exclude: st
     return out
 
 
-def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: dict = None, is_cover: bool = False, snapshot_sents: list = None) -> str:
+def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: dict = None, is_cover: bool = False, snapshot_sents: list = None, real_ent: str = "doanh nghiệp") -> str:
     """
     Quy chuẩn biên tập Standfirst / Sapo (D-06):
     - Tránh tuyệt đối việc nối câu mẫu sai chủ đề hoặc dùng dấu '...' cắt cụt.
     - Trả về đúng 2 câu hoàn chỉnh (160-240 ký tự) cho bản tin thường, sử dụng dữ kiện thực từ snapshot gốc.
     """
-    clean_hl = (headline or "").rstrip("?!. :;")
+    clean_hl = re.sub(r'[\.\?!…:]+', ' ', (headline or "")).strip()
+    clean_hl = ' '.join(clean_hl.split())
     cleaned_base = re.sub(r"\.\.\.+|…+", "", (base_sapo or headline)).strip()
     sents = [s if s.endswith((".", "!", "?")) else s + "." for s in _split_clean_sentences(cleaned_base) if len(s) >= 15]
 
-    first = sents[0] if sents else (headline.strip().rstrip(".") + ".")
+    first = sents[0] if sents else (clean_hl + ".")
     if not first.endswith((".", "!", "?")):
         first += "."
     if len(first) > 155:
@@ -192,18 +193,31 @@ def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: di
             first = cand_short
 
     second = sents[1] if len(sents) >= 2 and sents[1] != first else ""
+    max_sec_len = 238 - len(first)
+
     if not second:
         for ss in (snapshot_sents or []):
-            if ss != first and ss not in first and first not in ss:
-                second = ss
-                break
-    if not second and sections_dict:
-        for cs in _split_clean_sentences(sections_dict.get("analysisNature") or sections_dict.get("sectionB_context") or ""):
-            if cs != first and len(cs) >= 30:
-                second = cs
+            ss_clean = ss.strip()
+            if ss_clean != first and ss_clean not in first and first not in ss_clean and 30 <= len(ss_clean) <= max_sec_len:
+                second = ss_clean if ss_clean.endswith((".", "!", "?")) else ss_clean + "."
                 break
 
-    max_sec_len = 238 - len(first)
+    if not second:
+        # Build unique, personalized complete second sentence incorporating specific headline
+        candidate_phrasings = [
+            f"Thông tin quanh '{clean_hl[:45]}' tác động đến kế hoạch tài chính của {real_ent}.",
+            f"Diễn biến từ '{clean_hl[:45]}' đòi hỏi {real_ent} chủ động quản trị dòng tiền.",
+            f"Động thái mới về '{clean_hl[:45]}' là tín hiệu quan trọng trong vận hành của {real_ent}.",
+            f"Sự kiện '{clean_hl[:45]}' đặt ra yêu cầu theo dõi sát kế hoạch vốn của {real_ent}."
+        ]
+        for cand in candidate_phrasings:
+            if len(cand) <= max_sec_len and 160 <= (len(first) + 1 + len(cand)) <= 240:
+                second = cand
+                break
+        if not second:
+            avail = max(15, max_sec_len - len(f"Diễn biến '' tác động đến {real_ent}."))
+            second = f"Diễn biến '{clean_hl[:avail]}' tác động trực tiếp đến {real_ent}."
+
     if len(second) > max_sec_len:
         second = second[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
     elif not second.endswith((".", "!", "?")):
@@ -211,17 +225,9 @@ def enrich_editorial_standfirst(headline: str, base_sapo: str, sections_dict: di
 
     combined = f"{first} {second}".strip()
     if len(combined) < 160:
-        needed = 165 - len(first)
-        for ss in (snapshot_sents or []):
-            if ss != first and len(ss) >= needed:
-                cand_sec = ss[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
-                if 160 <= (len(first) + 1 + len(cand_sec)) <= 240:
-                    combined = f"{first} {cand_sec}".strip()
-                    break
-        if len(combined) < 160:
-            pad = f"Diễn biến quanh '{clean_hl[:55]}' tác động trực tiếp đến phương án quản trị chi phí và kế hoạch vận hành dòng tiền."
-            cand_sec = pad[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
-            combined = f"{first} {cand_sec}".strip()
+        pad = f"Diễn biến quanh '{clean_hl[:45]}' tác động trực tiếp đến kế hoạch quản trị chi phí và kế hoạch vận hành dòng tiền của {real_ent}."
+        cand_sec = pad[:max_sec_len].rsplit(" ", 1)[0].rstrip(",;:") + "."
+        combined = f"{first} {cand_sec}".strip()
     return combined
 
 
@@ -286,7 +292,7 @@ def extract_real_economic_entity(headline: str, r: dict, facts: list) -> str:
         "Thanh toán": "Đơn vị vận hành thanh toán số",
         "Doanh nghiệp": "Cộng đồng doanh nghiệp & Hộ kinh doanh"
     }
-    cat = r.get("category", "Doanh nghiệp")
+    cat = r.get("category", "Doanh nghiệp") if isinstance(r, dict) else str(r)
     return cat_fallbacks.get(cat, "Cộng đồng doanh nghiệp & Hộ kinh doanh")
 
 
@@ -296,7 +302,8 @@ def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str:
     tuyệt đối không dùng câu văn mẫu chung chung hay lấy tên báo làm chủ thể.
     """
     hl = (r.get("headline") or r.get("title") or "").strip()
-    clean_hl = hl.rstrip("?!. :;")
+    clean_hl = re.sub(r'[\.\?!…:]+', ' ', hl).strip()
+    clean_hl = ' '.join(clean_hl.split())
     sm = (r.get("summary") or "").strip()
     real_ent = ent_str
 
@@ -315,7 +322,7 @@ def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str:
         else:
             analysis_nature = f"Sự kiện ghi nhận tại {real_ent}: {fact_1}"
     else:
-        analysis_nature = f"Sự kiện ghi nhận tại {real_ent} tập trung vào diễn biến thực tế quanh '{clean_hl}'."
+        analysis_nature = f"Trọng tâm ghi nhận tại {real_ent} tập trung vào chuyển động thực tế từ '{clean_hl}'."
 
     # 02. CƠ CHẾ TÁC ĐỘNG
     cat_lower = mapped_cat.lower()
@@ -1032,7 +1039,7 @@ def main():
             if not base_sapo.endswith("."):
                 base_sapo += "."
 
-            final_sapo = enrich_editorial_standfirst(headline, base_sapo, sections_dict, is_cover=(idx == 0), snapshot_sents=snap_sents)
+            final_sapo = enrich_editorial_standfirst(headline, base_sapo, sections_dict, is_cover=(idx == 0), snapshot_sents=snap_sents, real_ent=real_ent)
 
             sapo_sents = set(_split_clean_sentences(final_sapo))
             quote_cand = str(r.get("supportingQuote", "") or "").strip().strip("“”\"'").strip()
@@ -1079,6 +1086,7 @@ def main():
             "publisherPublishedAt": f"{pub_display} | Nguồn gốc: {pub_name} ({pub_time})",
             "publicationTimestamp": pub_display,
             "originalSourcePublishedAt": pub_time,
+            "sourceName": pub_name,
             "originalSourceName": pub_name,
             "author": pub_name,
             "canonicalUrl": canonical_url,
@@ -1344,6 +1352,17 @@ def main():
                         if m_vni_chg:
                             sign = "-" if "giảm" in m_vni_chg.group("dir").lower() else "+"
                             item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}; +9,57 Điểm (+0,55%) tuần 9–13/11"
+                    elif item["key"] == "maxDeposit12M":
+                        with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef_raw:
+                            raw_txt = ef_raw.read()
+                        m_canon = re.search(r'<link\s+rel=[\'"]canonical[\'"]\s+href=[\'"](.*?)[\'"]', raw_txt, re.I)
+                        m_title = re.search(r'<title>(.*?)</title>', raw_txt, re.I)
+                        if m_canon and m_canon.group(1).startswith("http") and ".ldo" in m_canon.group(1):
+                            item["sourceUrl"] = m_canon.group(1).strip()
+                        if m_title:
+                            clean_t = m_title.group(1).replace("- Báo Lao Động", "").replace("| Báo Lao Động", "").strip()
+                            if clean_t:
+                                item["articleTitle"] = clean_t
                 except Exception:
                     pass
                 break

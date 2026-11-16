@@ -977,15 +977,42 @@ class MarketPulseDiscoveryEngine:
         candidate_pool: List[Dict[str, Any]] = []
         if status_code == 200 and http_resp.get("originalBytes"):
             raw_html = http_resp["originalBytes"].decode("utf-8", errors="replace")
-            link_matches = [m for m in re.findall(r'https?://[^\s"\'<>]+', raw_html, re.I)]
-            cand_urls = list(dict.fromkeys(link_matches))[:10]
+            # For MP-03 (deposit rates on Lao Dong), extract specific article links ending in .ldo
+            if indicator_id == "MP-03":
+                ldo_matches = re.findall(r'href=[\'"]([^\'"]*lai-suat-ngan-hang[^\'"]*\.ldo)[\'"]', raw_html, re.I)
+                if not ldo_matches:
+                    ldo_matches = re.findall(r'href=[\'"]([^\'"]*lai-suat[^\'"]*\.ldo)[\'"]', raw_html, re.I)
+                clean_ldos = []
+                for lm in ldo_matches:
+                    full_u = lm if lm.startswith("http") else f"https://laodong.vn{lm if lm.startswith('/') else '/' + lm}"
+                    if full_u not in clean_ldos:
+                        clean_ldos.append(full_u)
+                if clean_ldos:
+                    cand_urls = clean_ldos[:5]
+                else:
+                    link_matches = [m for m in re.findall(r'https?://[^\s"\'<>]+', raw_html, re.I)]
+                    cand_urls = list(dict.fromkeys(link_matches))[:10]
+            else:
+                link_matches = [m for m in re.findall(r'https?://[^\s"\'<>]+', raw_html, re.I)]
+                cand_urls = list(dict.fromkeys(link_matches))[:10]
             search_record["candidateCount"] = len(cand_urls)
             search_record["candidateUrls"] = cand_urls
 
             for cu in cand_urls:
+                # If this is a specific Lao Dong article, fetch or inspect its title
+                c_title = f"Cập nhật {ind_name}"
+                if indicator_id == "MP-03" and "laodong.vn" in cu and cu.endswith(".ldo"):
+                    art_resp = self.http_client.get(cu)
+                    if art_resp.get("statusCode") == 200 and art_resp.get("originalBytes"):
+                        art_html = art_resp["originalBytes"].decode("utf-8", errors="replace")
+                        m_art_title = re.search(r'<title>(.*?)</title>', art_html, re.I)
+                        if m_art_title:
+                            c_title = m_art_title.group(1).replace("- Báo Lao Động", "").replace("| Báo Lao Động", "").strip()
                 cand_pool_entry = {
                     "candidateUrl": cu,
-                    "title": f"Cập nhật {ind_name}",
+                    "sourceUrl": cu,
+                    "title": c_title,
+                    "headline": c_title,
                     "publishedAt": searched_at,
                     "candidateSource": "GENUINE_SEARCH_RESULT"
                 }
