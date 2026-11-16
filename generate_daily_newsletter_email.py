@@ -11,8 +11,9 @@ BRYAN FINTECH INTELLIGENCE — DAILY EMAIL NEWSLETTER GENERATOR (V1.2 PREVIEW)
   + Font chữ hiện đại: 'Be Vietnam Pro', -apple-system, Segoe UI, Roboto, Arial
   + Đổi toàn bộ "Web App" -> "Bnews".
   + Các bảng Market Pulse đồng đều, ngang hàng 100%.
-  + Fix dứt điểm lỗi font / mã hóa icon chuông vỡ hạt bằng ký tự Unicode an toàn.
-  + Chuẩn hóa độ rộng 600px tối ưu hiển thị Mobile (không bị tràn màn hình, không zoom).
+  + LOẠI BỎ 100% EMOJI 4-BYTE: Thay toàn bộ bằng ký tự chuẩn BMP '■' và '+' 
+    đảm bảo KHÔNG BAO GIỜ bị lỗi font ô vuông hỏi chấm () trên Gmail & Mobile.
+  + Chuẩn hóa độ rộng 600px tối ưu hiển thị Mobile.
   + Tối ưu phân cấp thị giác nút bấm: Nút chính đọc tin (Đỏ mận), Nút phụ Subscribe (Deep Teal).
 -----------------------------------------------------------------------------
 """
@@ -449,14 +450,15 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
     if not items:
         return ""
     
-    cat_icons = {
-        "Ngân hàng": "🏦",
-        "Thị trường vốn": "📈",
-        "Bán lẻ, D2C và xu hướng tiêu dùng": "🛒",
-        "Thanh toán": "💳",
-        "Doanh nghiệp": "🏢"
+    # 100% standard BMP Unicode characters (never corrupt into  in any mail client)
+    cat_bullets = {
+        "Ngân hàng": "■",
+        "Thị trường vốn": "■",
+        "Bán lẻ, D2C và xu hướng tiêu dùng": "■",
+        "Thanh toán": "■",
+        "Doanh nghiệp": "■"
     }
-    icon = cat_icons.get(cat_name, "📌")
+    bullet = cat_bullets.get(cat_name, "■")
 
     items_html = []
     for item in items:
@@ -528,8 +530,8 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
 
     return f"""
     <div style="margin-bottom: 14px;">
-      <div style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 800; color: #BE123C; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
-        {icon} {escape(cat_name)}
+      <div style="font-family: 'SF Mono', monospace; font-size: 11px; font-weight: 800; color: #BE123C; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
+        <span style="color: #BE123C; margin-right: 4px;">{bullet}</span> {escape(cat_name.upper())}
       </div>
       {''.join(items_html)}
     </div>
