@@ -1821,6 +1821,8 @@ function handleDrawerSearch(event) {
 }
 
 // ─── BNEWSLETTER CONTROLLER & LATEST ISSUE LOADER (VERSION 1.3) ───
+const BNEWS_SUBSCRIBE_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwzarTCq14B7wgY3LjdBjLpWFP8hNH1xSGdwybkxCDigKdz12P60YRnBVFy9yi4uFL4/exec';
+
 function loadLatestNewsletterIssue() {
   const container = document.getElementById('bnewsLatestIssuePaper');
   if (!container || container.getAttribute('data-loaded') === 'true') return;
@@ -1849,6 +1851,8 @@ function handleNewsletterSubscribe(source) {
   const feedbackId = source === 'bottom' ? 'nlFeedbackBottom' : 'nlFeedbackTop';
   const input = document.getElementById(inputId);
   const feedback = document.getElementById(feedbackId);
+  const form = input ? input.closest('form') : null;
+  const btn = form ? form.querySelector('button[type="submit"]') : null;
   if (!input || !feedback) return;
 
   const email = (input.value || '').trim();
@@ -1860,6 +1864,13 @@ function handleNewsletterSubscribe(source) {
     return;
   }
 
+  // Visual feedback during processing
+  if (btn) {
+    btn.disabled = true;
+    btn.setAttribute('data-orig-text', btn.textContent);
+    btn.textContent = 'ĐANG ĐĂNG KÝ...';
+  }
+
   // Save to localStorage for client-side persistence
   try {
     const saved = JSON.parse(localStorage.getItem('bnews_subscribers') || '[]');
@@ -1869,9 +1880,29 @@ function handleNewsletterSubscribe(source) {
     }
   } catch (e) {}
 
-  feedback.className = 'bnews-nl-feedback success';
-  feedback.innerHTML = '✓ <strong>Đăng ký thành công!</strong> Bản tin Bnews ngày mai sẽ được gửi đến <u>' + escapeHtml(email) + '</u> lúc 9h00 sáng.';
-  input.value = '';
+  // Post directly to Google Apps Script Webhook
+  const payload = JSON.stringify({
+    email: email,
+    source: source === 'bottom' ? 'Bnews Tab 05 (Bottom)' : 'Bnews Tab 05 (Top Hero)',
+    timestamp: new Date().toISOString()
+  });
+
+  fetch(BNEWS_SUBSCRIBE_WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: payload
+  }).catch(err => {
+    console.warn('Webhook post fallback:', err);
+  }).finally(() => {
+    feedback.className = 'bnews-nl-feedback success';
+    feedback.innerHTML = '✓ <strong>Đăng ký thành công!</strong> Bản tin Bnews ngày mai sẽ được gửi đến <u>' + escapeHtml(email) + '</u> lúc 9h00 sáng.';
+    input.value = '';
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = btn.getAttribute('data-orig-text') || 'ĐĂNG KÝ MIỄN PHÍ →';
+    }
+  });
 }
 
 // ─── FILTER & SEARCH EVENTS ───
