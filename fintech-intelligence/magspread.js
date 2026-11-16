@@ -1836,7 +1836,8 @@ function loadLatestNewsletterIssue() {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
       const emailContainer = doc.querySelector('.email-container') || doc.body;
-      container.innerHTML = emailContainer.outerHTML;
+      const styleEl = doc.querySelector('head style');
+      container.innerHTML = (styleEl ? styleEl.outerHTML : '') + emailContainer.outerHTML;
       container.setAttribute('data-loaded', 'true');
     })
     .catch(err => {
