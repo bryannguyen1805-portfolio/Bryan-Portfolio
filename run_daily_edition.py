@@ -220,6 +220,9 @@ def main():
         h_text = re.sub(r'href="(?:\.\/)?magspread\.css(?:\?v=[^"]*)?"', f'href="./magspread.css?v={ts}"', h_text)
         h_text = re.sub(r'src="(?:\.\/)?edition-data\.js(?:\?v=[^"]*)?"', f'src="./edition-data.js?v={ts}"', h_text)
         h_text = re.sub(r'src="(?:\.\/)?magspread\.js(?:\?v=[^"]*)?"', f'src="./magspread.js?v={ts}"', h_text)
+        ed_badge_val = data.get("editionNumber", "").split("·")[0].strip()
+        if ed_badge_val:
+            h_text = re.sub(r">ẤN BẢN SỐ \d+<", f">{ed_badge_val}<", h_text)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(h_text)
         preview_path = os.path.join(PACKAGE_DIR, "magspread-preview.html")
