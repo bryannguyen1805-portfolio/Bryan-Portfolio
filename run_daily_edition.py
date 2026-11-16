@@ -18,6 +18,9 @@ import sys
 import json
 import argparse
 import subprocess
+import re
+import shutil
+import hashlib
 from datetime import datetime
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -144,13 +147,12 @@ def main():
             print(f"   ⚠️ Lưu ý khi gọi Live Orchestrator: {e}")
 
     # Engine parity guard — Workspace root scripts are the Source of Truth.
-    import hashlib, shutil
-
     def _sha(p):
         with open(p, "rb") as fh:
             return hashlib.sha256(fh.read()).hexdigest()
 
-    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py", "ed30_editorial_content.py"]:
+    ed_modules = sorted([f for f in os.listdir(WORKSPACE_ROOT) if re.match(r"^ed\d+_editorial_content\.py$", f)])
+    for shared_mod in ["update_magspread_pilot_ui.py"] + ed_modules:
         root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
         pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
         if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):
@@ -212,8 +214,6 @@ def main():
 
     html_path = os.path.join(PACKAGE_DIR, "index.html")
     if os.path.exists(html_path):
-        import re
-
         ts = int(datetime.now().timestamp())
         with open(html_path, "r", encoding="utf-8") as f:
             h_text = f.read()
@@ -271,16 +271,15 @@ def main():
     else:
         print("   ⚠️ Đủ cờ nghiệm thu thủ công — Thực hiện git commit & push theo yêu cầu chủ sản phẩm...")
         try:
+            ed_files = sorted([f for f in os.listdir(workspace_root) if re.match(r"^ed\d+_editorial_content\.py$", f)])
             candidate_targets = [
                 "fintech-intelligence/",
                 "pilot-output/",
                 "update_magspread_pilot_ui.py",
-                "ed29_editorial_content.py",
-                "ed30_editorial_content.py",
                 "run_daily_edition.py",
                 "setup_daily_scheduler_9am.sh",
                 "README_DAILY_RUN.md",
-            ]
+            ] + ed_files
             git_targets = [p for p in candidate_targets if os.path.exists(os.path.join(workspace_root, p))]
             subprocess.run(["git", "add", "--"] + git_targets, cwd=workspace_root, check=True)
             staged_res = subprocess.run(
