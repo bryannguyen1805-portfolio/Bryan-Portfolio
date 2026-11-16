@@ -77,17 +77,20 @@ _BASE_SEARCH_PROFILES = {
         "name": "Lãi suất tiền gửi 12T cao nhất",
         "key": "maxDeposit12M",
         "canonicalUnit": "%/năm",
-        "searchFocus": "Latest 12-month deposit-rate announcement",
+        "searchFocus": "Latest 12-month deposit-rate announcement from Báo Lao Động",
         "searchQueries": [
-            "lãi suất ngân hàng",
-            "lãi suất tiết kiệm 12 tháng cao nhất",
+            "Lãi suất ngân hàng hôm nay",
+            "Lãi suất ngân hàng hôm nay Báo Lao Động",
+            "lãi suất ngân hàng hôm nay laodong.vn",
+            "lãi suất tiết kiệm 12 tháng cao nhất lao động",
             "biểu lãi suất huy động kỳ hạn 12 tháng"
         ],
         "searchEndpoints": [
-            ("https://cafef.vn/lai-suat-ngan-hang.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint"),
-            ("https://cafef.vn/tim-kiem.chn?keywords=l%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint")
+            ("https://laodong.vn/tien-te-dau-tu", "laodong.vn", "Báo Lao Động - Chuyên mục Tiền tệ - Đầu tư / Live Scan Index"),
+            ("https://laodong.vn/tim-kiem?q=L%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng+h%C3%B4m+nay", "laodong.vn", "Báo Lao Động Live Search Endpoint"),
+            ("https://cafef.vn/lai-suat-ngan-hang.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint")
         ],
-        "keywords": ["lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
+        "keywords": ["lãi suất ngân hàng hôm nay", "lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
         "disambiguationPenalties": [("lãi suất cho vay", -40), ("tiền vay", -30), ("cho vay", -30)]
     },
     "MP-04": {
@@ -235,7 +238,7 @@ def extract_main_article_body(html_text: str) -> str:
     article_html = ""
     class_pats = [
         r'<div[^>]+class=[\"\'][^\"\']*(?:bcpt_detail_1_news|bcpt_all_left|item-first-content)[^\"\']*[\"\'][^>]*>',
-        r'<div[^>]+class=[\"\'][^\"\']*(?:detail-content|content-detail|singular-content|article-body)[^\"\']*[\"\'][^>]*>',
+        r'<div[^>]+class=[\"\'][^\"\']*(?:detail-content|content-detail|singular-content|article-body|art-body|body-content)[^\"\']*[\"\'][^>]*>',
         r'<div[^>]+class=[\"\'][^\"\']*(?:detail__cmain|detail-cmain|content-news)[^\"\']*[\"\'][^>]*>',
         r'<div[^>]+id=[\"\'][^\"\']*(?:main-content|article-content|content-detail|main-detail)[^\"\']*[\"\'][^>]*>'
     ]
