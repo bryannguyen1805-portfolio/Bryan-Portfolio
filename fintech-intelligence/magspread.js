@@ -1593,10 +1593,15 @@ function switchFintechTab(tabKey, targetSubId) {
     today: 'page-today',
     market: 'page-market',
     analysis: 'page-analysis',
-    b2b: 'page-b2b'
+    b2b: 'page-b2b',
+    newsletter: 'page-newsletter'
   };
   
   const targetPageId = pages[tabKey] || 'page-today';
+
+  if (tabKey === 'newsletter') {
+    loadLatestNewsletterIssue();
+  }
 
   // 1. Toggle page sections visibility
   document.querySelectorAll('.ms-page-section').forEach(sec => {
@@ -1657,7 +1662,7 @@ function switchFintechTab(tabKey, targetSubId) {
 
 function initFintechTabs() {
   const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-  const validTabs = ['today', 'market', 'analysis', 'b2b'];
+  const validTabs = ['today', 'market', 'analysis', 'b2b', 'newsletter'];
   if (hash === 'archive') {
     switchFintechTab('today');
   } else if (validTabs.includes(hash)) {
@@ -1813,6 +1818,60 @@ function handleDrawerSearch(event) {
   const input = $('#drawerSearchInput');
   executePortalSearch(input ? input.value : '');
   return false;
+}
+
+// ─── BNEWSLETTER CONTROLLER & LATEST ISSUE LOADER (VERSION 1.3) ───
+function loadLatestNewsletterIssue() {
+  const container = document.getElementById('bnewsLatestIssuePaper');
+  if (!container || container.getAttribute('data-loaded') === 'true') return;
+
+  fetch('./preview/newsletter-preview.html?v=' + Date.now())
+    .then(res => {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text();
+    })
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const emailContainer = doc.querySelector('.email-container') || doc.body;
+      container.innerHTML = emailContainer.outerHTML;
+      container.setAttribute('data-loaded', 'true');
+    })
+    .catch(err => {
+      console.warn('Fallback loading newsletter preview via iframe/embed:', err);
+      container.innerHTML = '<iframe src="./preview/newsletter-preview.html" style="width:100%; min-height:1800px; border:none; display:block;" title="Bnews Latest Issue"></iframe>';
+      container.setAttribute('data-loaded', 'true');
+    });
+}
+
+function handleNewsletterSubscribe(source) {
+  const inputId = source === 'bottom' ? 'nlEmailInputBottom' : 'nlEmailInputTop';
+  const feedbackId = source === 'bottom' ? 'nlFeedbackBottom' : 'nlFeedbackTop';
+  const input = document.getElementById(inputId);
+  const feedback = document.getElementById(feedbackId);
+  if (!input || !feedback) return;
+
+  const email = (input.value || '').trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    feedback.className = 'bnews-nl-feedback error';
+    feedback.textContent = 'Vui lòng nhập địa chỉ email hợp lệ (ví dụ: tenban@gmail.com).';
+    input.focus();
+    return;
+  }
+
+  // Save to localStorage for client-side persistence
+  try {
+    const saved = JSON.parse(localStorage.getItem('bnews_subscribers') || '[]');
+    if (!saved.includes(email)) {
+      saved.push(email);
+      localStorage.setItem('bnews_subscribers', JSON.stringify(saved));
+    }
+  } catch (e) {}
+
+  feedback.className = 'bnews-nl-feedback success';
+  feedback.innerHTML = '✓ <strong>Đăng ký thành công!</strong> Bản tin Bnews ngày mai sẽ được gửi đến <u>' + escapeHtml(email) + '</u> lúc 9h00 sáng.';
+  input.value = '';
 }
 
 // ─── FILTER & SEARCH EVENTS ───

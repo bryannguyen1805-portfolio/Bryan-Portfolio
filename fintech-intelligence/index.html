@@ -242,21 +242,12 @@
               <span class="ms-nav-num">04.</span> CƠ HỘI B2B
             </button>
           </li>
-          <li class="ms-nav-group" role="none" style="display:none !important;" id="navGroupArchive" aria-hidden="true">
-            <button type="button" class="ms-nav-tab-btn" id="navTabArchive" data-tab="archive" tabindex="-1" aria-hidden="true" onclick="switchFintechTab('archive')">
-              <span class="ms-nav-num">05.</span> LƯU TRỮ
+          <li class="ms-nav-group" role="none" id="navGroupNewsletter">
+            <button class="ms-nav-tab-btn" role="tab" id="navTabNewsletter" data-tab="newsletter" aria-selected="false" aria-controls="page-newsletter" onclick="switchFintechTab('newsletter')">
+              <span class="ms-nav-num">05.</span> BẢN TIN &amp; ĐĂNG KÝ
             </button>
           </li>
         </ul>
-
-        <div class="ms-nav-quick-topics" aria-label="Lọc nhanh chuyên mục">
-          <span class="ms-nav-divider" aria-hidden="true">|</span>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Ngân hàng')">Ngân hàng</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Thị trường vốn')">Thị trường vốn</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Doanh nghiệp')">Doanh nghiệp</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Kinh tế vĩ mô')">Vĩ mô</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Bán lẻ, D2C và xu hướng tiêu dùng')">Tiêu dùng</button>
-        </div>
       </div>
 
       <div class="ms-nav-actions">
@@ -289,7 +280,7 @@
         <button type="button" class="ms-quick-tab" id="mobileTabMarket" role="tab" aria-selected="false" aria-controls="page-market" data-tab="market" onclick="switchFintechTab('market')">02. Thị trường &amp; Tin tức</button>
         <button type="button" class="ms-quick-tab" id="mobileTabAnalysis" role="tab" aria-selected="false" aria-controls="page-analysis" data-tab="analysis" onclick="switchFintechTab('analysis')">03. Phân tích &amp; Học tập</button>
         <button type="button" class="ms-quick-tab" id="mobileTabB2B" role="tab" aria-selected="false" aria-controls="page-b2b" data-tab="b2b" onclick="switchFintechTab('b2b')">04. Cơ hội B2B</button>
-        <button type="button" class="ms-quick-tab" data-tab="archive" style="display:none !important;" id="quickTabArchive" tabindex="-1" aria-hidden="true" onclick="switchFintechTab('archive')">05. Lưu trữ</button>
+        <button type="button" class="ms-quick-tab" id="mobileTabNewsletter" role="tab" aria-selected="false" aria-controls="page-newsletter" data-tab="newsletter" onclick="switchFintechTab('newsletter')">05. Bản tin &amp; Đăng ký</button>
       </div>
       <div class="ms-quick-topics-inline" aria-label="Chuyên mục tin tức">
         <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Ngân hàng')">Ngân hàng</button>
@@ -342,6 +333,10 @@
           <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="b2b" onclick="closeMobileDrawer(); switchFintechTab('b2b');">
             <span class="ms-drawer-ws-num">04</span>
             <span class="ms-drawer-ws-name">Tín hiệu &amp; Cơ hội B2B</span>
+          </button>
+          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="newsletter" onclick="closeMobileDrawer(); switchFintechTab('newsletter');">
+            <span class="ms-drawer-ws-num">05</span>
+            <span class="ms-drawer-ws-name">Bản tin &amp; Đăng ký</span>
           </button>
         </div>
       </div>
@@ -620,6 +615,84 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <!-- ======================================================================
+         PAGE 05: BẢN TIN & ĐĂNG KÝ (NEWSLETTER & LATEST ISSUE - MORNING BREW PARITY)
+         ====================================================================== -->
+    <div id="page-newsletter" class="ms-page-section" role="tabpanel" aria-labelledby="navTabNewsletter">
+      
+      <!-- TOP HERO SUBSCRIBE BANNER (MORNING BREW INSPIRATION) -->
+      <section class="bnews-nl-hero" aria-label="Đăng ký nhận bản tin Bnews">
+        <div class="ms-container">
+          <div class="bnews-nl-hero-wrap">
+            <div class="bnews-nl-hero-left">
+              <span class="bnews-nl-hero-kicker">■ BNEWS DAILY NEWSLETTER</span>
+              <h1 class="bnews-nl-hero-title">Thông thái hơn chỉ sau 3 phút mỗi sáng</h1>
+              <p class="bnews-nl-hero-desc">
+                Bnews gửi bản tin tổng hợp 25 sự kiện tài chính xác minh, 4 chỉ số thị trường then chốt và cơ hội B2B tới hộp thư của bạn lúc 9h00 sáng mỗi ngày. Hoàn toàn miễn phí.
+              </p>
+            </div>
+            <div class="bnews-nl-hero-right">
+              <form class="bnews-nl-form-row" onsubmit="event.preventDefault(); handleNewsletterSubscribe('top');">
+                <label for="nlEmailInputTop" class="ms-visually-hidden">Địa chỉ email</label>
+                <input type="email" id="nlEmailInputTop" class="bnews-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email">
+                <button type="submit" class="bnews-nl-btn">ĐĂNG KÝ MIỄN PHÍ →</button>
+              </form>
+              <div class="bnews-nl-disclaimer">
+                Bằng cách đăng ký, bạn đồng ý nhận email từ Bnews. Hủy đăng ký bất cứ lúc nào chỉ với 1 click.
+              </div>
+              <div id="nlFeedbackTop" class="bnews-nl-feedback" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LATEST ISSUE STAGE (CENTERED EMBEDDED PAPER) -->
+      <section class="bnews-issue-stage" aria-label="Ấn bản Bnews số mới nhất">
+        <div class="ms-container">
+          <div class="bnews-issue-paper-wrap">
+            <div class="bnews-issue-bar">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background-color:#15803D;"></span>
+                <span>ẤN BẢN MỚI NHẤT TRÊN HỆ THỐNG</span>
+              </div>
+              <div>
+                <a href="./preview/newsletter-preview.html" target="_blank" style="color:#BE123C; text-decoration:none; font-family:var(--font-mono); font-size:11px; font-weight:700;">
+                  MỞ TOÀN MÀN HÌNH ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- CONTAINER FOR THE NEWSLETTER -->
+            <div id="bnewsLatestIssuePaper" class="bnews-latest-issue-paper">
+              <div style="padding: 40px; text-align: center; color: #57534E; font-size: 14px;">
+                Đang tải ấn bản Bnews mới nhất...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM SUBSCRIBE CTA BANNER -->
+      <section class="bnews-nl-bottom-cta" aria-label="Đăng ký nhận bản tin ngày mai">
+        <div class="ms-container">
+          <div class="bnews-nl-bottom-wrap">
+            <span class="bnews-nl-hero-kicker" style="color:#F7EBE0;">■ ĐỪNG BỎ LỠ ẤN BẢN 9H00 SÁNG MAI</span>
+            <h2 style="font-size:24px; font-weight:800; color:#FFFFFF; margin:8px 0 12px 0;">Tham gia cùng cộng đồng độc giả Bnews</h2>
+            <p style="font-size:14px; color:#F7EBE0; opacity:0.9; margin:0 0 20px 0; line-height:1.6;">
+              Cập nhật phân tích tài chính, thanh toán số, lãi suất tiền gửi và 25 sự kiện xác minh được chuyển thẳng vào hộp thư mỗi ngày.
+            </p>
+            <form class="bnews-nl-form-row" onsubmit="event.preventDefault(); handleNewsletterSubscribe('bottom');">
+              <label for="nlEmailInputBottom" class="ms-visually-hidden">Địa chỉ email</label>
+              <input type="email" id="nlEmailInputBottom" class="bnews-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email">
+              <button type="submit" class="bnews-nl-btn" style="background-color:#BE123C;">ĐĂNG KÝ NHẬN BẢN TIN →</button>
+            </form>
+            <div id="nlFeedbackBottom" class="bnews-nl-feedback" role="alert" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <!-- PAGE 05: LƯU TRỮ (Ẩn khỏi giao diện người dùng theo D-03; dữ liệu backend bảo toàn 100%) -->
