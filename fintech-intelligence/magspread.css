@@ -861,7 +861,7 @@ small, .ms-small {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 8px;
   min-height: 280px;
 }
 
@@ -869,35 +869,153 @@ small, .ms-small {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.ms-cover-date {
+  color: var(--ms-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+/* VnEconomy-Style Cover Story Hero Thumbnail */
+.ms-cover-thumb-wrap {
+  width: 100%;
+  height: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--ms-surface-alt);
+  border: 1px solid var(--ms-border);
+  position: relative;
+  margin: 4px 0 8px 0;
+}
+
+.ms-cover-thumb-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.ms-cover-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.ms-cover-thumb-wrap:hover .ms-cover-thumb-img {
+  transform: scale(1.025);
 }
 
 .ms-cover-headline {
-  font-family: var(--font-headline);
-  font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+  font-family: 'Playfair Display', 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
   font-weight: 700;
-  line-height: 1.25;
-  color: var(--ms-primary);
-  margin: 0;
-  letter-spacing: -0.01em;
+  line-height: 1.32;
+  color: var(--ms-text-primary);
+  margin: 0 0 4px 0;
+  letter-spacing: -0.2px;
+}
+
+.ms-cover-headline a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.ms-cover-headline a:hover {
+  color: var(--ms-secondary);
 }
 
 .ms-cover-subheadline {
-  font-family: var(--font-reading);
-  font-size: 0.84375rem;
-  font-weight: 500;
-  color: var(--ms-text-secondary);
-  line-height: 1.45;
-  margin: 0;
+  margin: 0 0 6px 0;
   padding: 0;
+}
+
+.ms-cover-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78125rem;
+  color: var(--ms-text-muted);
+  flex-wrap: wrap;
+}
+
+.ms-cover-meta-item {
+  color: var(--ms-text-muted);
 }
 
 .ms-cover-summary {
   font-family: var(--font-reading);
-  font-size: 0.90625rem;
-  line-height: 1.65;
+  font-size: 0.9375rem;
+  line-height: 1.62;
   color: var(--ms-text-primary);
   margin: 0;
+}
+
+.ms-cover-sapo-text {
+  font-family: var(--font-reading), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--ms-text-secondary);
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ms-cover-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 4px;
+  flex-wrap: wrap;
+}
+
+.ms-cover-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ms-primary-light);
+  color: var(--ms-primary);
+  border: 1px solid var(--ms-primary);
+  padding: 7px 14px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ms-cover-read-btn:hover {
+  background: var(--ms-primary);
+  color: var(--ms-text-on-primary) !important;
+  gap: 9px;
+}
+
+.ms-cover-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.ms-cover-source-link:hover {
+  color: var(--ms-text-primary);
 }
 
 .ms-cover-sidebar {
@@ -3194,9 +3312,14 @@ body {
     gap: 14px !important;
   }
 
+  .ms-cover-thumb-wrap {
+    height: 180px !important;
+    margin: 4px 0 8px 0 !important;
+  }
+
   .ms-cover-headline {
-    font-size: 1.3rem !important;
-    line-height: 1.28 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.32 !important;
   }
 
   .ms-implication-grid {

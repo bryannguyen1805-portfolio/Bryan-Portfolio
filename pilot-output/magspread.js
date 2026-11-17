@@ -356,52 +356,91 @@ function renderCoverStory() {
   const synthesisEl = $('#coverPullQuote');
   const implicationEl = $('#coverImplication');
   const coverDateEl = $('#coverDate');
+  const categoryBadgeEl = $('#coverCategoryBadge');
+  const thumbContainerEl = $('#coverThumbContainer');
+  const actionsRowEl = $('#coverActionsRow');
 
   if (coverDateEl) coverDateEl.textContent = (EDITION_DATA.sessionName || ('Phiên ngày ' + (EDITION_DATA.editionDate || '12/11/2026')));
 
   const lead = ct.leadArticle || {};
   const headline = lead.headline || ct.editorialHeadline || 'Sự kiện điều hành trọng tâm của phiên';
-  const sourceName = lead.sourceName || 'Báo Thanh Niên';
+  const sourceName = lead.sourceName || 'CafeF / VCCorp';
   const publishedAt = lead.publishedAt || '';
   const sourceUrl = lead.sourceUrl || '#';
   const summary = lead.summary || ct.executiveSummary || '';
   const totalNews = (EDITION_DATA.eligibleNewsList || []).length || 25;
+  const imageUrl = ct.imageUrl || lead.imageUrl || '';
+  const eventId = lead.eventId || 'EVT-04';
+  const categoryName = lead.category || ct.category || 'NGÂN HÀNG & LÃI SUẤT';
 
-  if (headlineEl) headlineEl.textContent = headline;
+  if (categoryBadgeEl) {
+    categoryBadgeEl.textContent = categoryName;
+  }
 
+  // 1. High-Resolution Hero Thumbnail (VnEconomy Journalistic Style)
+  if (thumbContainerEl) {
+    if (imageUrl) {
+      thumbContainerEl.innerHTML = `
+        <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(eventId)}')" class="ms-cover-thumb-link" title="${escapeHtml(headline)}">
+          <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(headline)}" class="ms-cover-thumb-img" loading="eager" onerror="this.closest('.ms-cover-thumb-wrap').style.display='none'">
+        </a>
+      `;
+      thumbContainerEl.style.display = 'block';
+    } else {
+      thumbContainerEl.innerHTML = '';
+      thumbContainerEl.style.display = 'none';
+    }
+  }
+
+  // 2. Editorial Serif Headline (Clickable into deep reader modal)
+  if (headlineEl) {
+    headlineEl.innerHTML = `
+      <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(eventId)}')">
+        ${escapeHtml(headline)}
+      </a>
+    `;
+  }
+
+  // 3. Clean Journalistic Meta Bar
   if (subheadlineEl) {
     const cleanPubTime = publishedAt.split(' | ')[0].trim();
     subheadlineEl.innerHTML = `
-      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:2px 0 4px 0; font-size:0.8125rem;">
-        <span style="color:var(--ms-text-muted);">Nguồn xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong> ${cleanPubTime ? `(${escapeHtml(cleanPubTime)})` : ''}</span>
-        <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-source-link" style="color:var(--ms-primary); font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:3px;">
-          <span>Đọc bài báo gốc</span>
-          <span style="font-size:0.75rem;">↗</span>
-        </a>
+      <div class="ms-cover-meta-bar">
+        <span class="ms-cover-meta-item">Nguồn xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong></span>
+        ${cleanPubTime ? `<span class="ms-vne-dot">•</span><span class="ms-cover-meta-item">${escapeHtml(cleanPubTime)}</span>` : ''}
+        <span class="ms-vne-dot">•</span>
+        <span class="ms-badge ms-badge-neutral ms-vne-badge">XÁC MINH 100%</span>
       </div>
     `;
   }
 
+  // 4. Streamlined Editorial Sapo Text
   if (summaryEl) {
     summaryEl.innerHTML = `
-      <div class="ms-cover-sapo-text">
+      <p class="ms-cover-sapo-text">
         ${escapeHtml(summary)}
-      </div>
+      </p>
     `;
   }
 
-  const rawQuote = (ct.supportingQuote || ct.editorialPullQuote || lead.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
+  // 5. Clean Action Buttons Row (Deep Reader & Canonical Source)
+  if (actionsRowEl) {
+    actionsRowEl.innerHTML = `
+      <button type="button" class="ms-cover-read-btn" onclick="openArticleReader('${escapeHtml(eventId)}')">
+        <span>Đọc phân tích chuyên sâu</span>
+        <span aria-hidden="true">→</span>
+      </button>
+      <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-cover-source-link">
+        <span>Đọc bài báo gốc (${escapeHtml(sourceName)})</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    `;
+  }
+
+  // 6. Keep bulky quote box hidden from the front page (readers can view in reader modal)
   if (verbatimQuoteEl) {
-    if (rawQuote) {
-      verbatimQuoteEl.innerHTML = `
-        <blockquote class="ms-cover-source-quote">
-          <div class="ms-quote-text">“${escapeHtml(rawQuote)}”</div>
-          <footer class="ms-quote-attribution">■ TRÍCH DẪN NGUYÊN VĂN TỪ BÀI BÁO GỐC · ${escapeHtml((sourceName || 'BÁO CHÍ').toUpperCase())}</footer>
-        </blockquote>
-      `;
-    } else {
-      verbatimQuoteEl.innerHTML = '';
-    }
+    verbatimQuoteEl.innerHTML = '';
+    verbatimQuoteEl.style.display = 'none';
   }
 
   if (synthesisEl) {

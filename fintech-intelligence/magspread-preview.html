@@ -94,7 +94,7 @@
   <!-- Google Fonts: Be Vietnam Pro + Plus Jakarta Sans + Sora -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=optional" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=optional" rel="stylesheet">
   <link rel="icon" type="image/webp" href="./fintech-favicon-opt.webp">
   <link rel="apple-touch-icon" href="./fintech-favicon-opt.png">
   <link rel="stylesheet" href="./magspread.css?v=1794841513">
@@ -372,9 +372,12 @@
               <!-- Main Left Column -->
               <div class="ms-cover-main-col">
                 <div class="ms-cover-badge-row">
-                  <span class="ms-badge ms-badge-rose">BÀI ĐINH TRANG NHẤT (COVER STORY)</span>
-                  <span class="ms-badge ms-badge-primary">LUẬN ĐIỂM TRUNG TÂM</span>
-                  <span class="ms-xs" style="color:var(--ms-text-muted);" id="coverDate">Phiên hôm nay</span>
+                  <span class="ms-badge ms-badge-rose">BÀI ĐINH TRANG NHẤT</span>
+                  <span class="ms-badge ms-badge-primary" id="coverCategoryBadge">NGÂN HÀNG &amp; LÃI SUẤT</span>
+                  <span class="ms-xs ms-cover-date" id="coverDate">Phiên hôm nay</span>
+                </div>
+                <div id="coverThumbContainer" class="ms-cover-thumb-wrap">
+                  <!-- Rendered via JS -->
                 </div>
                 <h2 class="ms-cover-headline" id="coverHeadline">
                   Bản Tin Thị Trường Tài Chính, Ngân Hàng &amp; Hạ Tầng Thanh Toán Số Việt Nam
@@ -385,8 +388,11 @@
                 <div class="ms-cover-summary" id="coverSummary">
                   <p class="ms-lead-sapo">Bryan News là chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, lãi suất ngân hàng, tỷ giá ngoại hối và giải pháp hạ tầng thanh toán số Việt Nam. Dữ liệu được xác minh và tổng hợp tự động hàng ngày.</p>
                 </div>
-                <div id="coverVerbatimQuote">
-                  <!-- Verbatim Press Quote rendered via JS cleanly under Sapo -->
+                <div class="ms-cover-actions-row" id="coverActionsRow">
+                  <!-- Action buttons rendered via JS -->
+                </div>
+                <div id="coverVerbatimQuote" style="display:none;">
+                  <!-- Verbatim Press Quote preserved for JS compatibility, hidden from front page -->
                 </div>
               </div>
 
