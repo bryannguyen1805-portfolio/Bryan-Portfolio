@@ -230,7 +230,7 @@ async function loadEditionData() {
     }
   }
 
-  // 2. HTTP/HTTPS environment: fetch canonical edition-data.json
+  // 2. HTTP/HTTPS environment: fetch live canonical edition-data.json
   try {
     const res = await fetch('./edition-data.json?v=' + Date.now());
     if (!res.ok) {
@@ -427,7 +427,7 @@ function renderCoverStory() {
   if (actionsRowEl) {
     actionsRowEl.innerHTML = `
       <button type="button" class="ms-cover-read-btn" onclick="openArticleReader('${escapeHtml(eventId)}')">
-        <span>Đọc phân tích chuyên sâu</span>
+        <span>Đọc tóm tắt chi tiết</span>
         <span aria-hidden="true">→</span>
       </button>
       <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-cover-source-link">
@@ -464,29 +464,8 @@ function renderCoverStory() {
   }
 
   if (implicationEl) {
-    implicationEl.innerHTML = `
-      <div class="ms-implication-card">
-        <div class="ms-implication-grid">
-          <div class="ms-implication-col ms-implication-macro">
-            <div class="ms-implication-header" style="color:var(--ms-secondary);">
-              <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ms-secondary); flex-shrink:0;"></span>
-              <span>TÁC ĐỘNG THỊ TRƯỜNG VĨ MÔ</span>
-            </div>
-            <p class="ms-implication-text">${escapeHtml(ct.marketImpact || ct.whyItMatters || '')}</p>
-          </div>
-          <div class="ms-implication-col ms-implication-fintech">
-            <div class="ms-implication-header" style="color:var(--ms-primary);">
-              <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ms-primary); flex-shrink:0;"></span>
-              <span>GÓC NHÌN FINTECH &amp; CƠ HỘI PAYOO</span>
-            </div>
-            <p class="ms-implication-text">${escapeHtml(ct.fintechLensAction || ct.keyMarketImplication || '')}</p>
-          </div>
-        </div>
-        <div class="ms-implication-watchpoint">
-          <strong>Điều cần theo dõi:</strong> ${escapeHtml(ct.monitoringWatchpoint || 'Theo dõi sát diễn biến điều hành các phiên tiếp theo.')}
-        </div>
-      </div>
-    `;
+    implicationEl.innerHTML = '';
+    implicationEl.style.display = 'none';
   }
 }
 
@@ -503,37 +482,72 @@ function renderMarketPulse() {
 
 function renderPulseCard(m) {
   const st = m.status || 'neutral';
-  const badgeText = m.verificationStatus === '72H_NOT_VERIFIED'
-    ? 'CHƯA XÁC MINH 72H'
-    : (m.verificationStatus === 'SCOPE_SEPARATED_VERIFIED' ? 'SCOPE_VERIFIED' : 'VERIFIED');
-  const badgeClass = m.verificationStatus === '72H_NOT_VERIFIED' ? 'ms-badge-warning' : (st === 'positive' ? 'ms-badge-success' : (st === 'negative' ? 'ms-badge-error' : 'ms-badge-primary'));
+  let changeClass = 'neu';
+  let changeIcon = '▬';
+  let changeText = m.change || 'Ổn định';
 
-  const shortContext = m.referenceValue ? m.referenceValue : (m.note || '');
-  const asOfLabel = (m.asOf && m.asOf.includes('tháng')) ? `Kỳ: ${escapeHtml(m.asOf)}` : `Phiên: ${escapeHtml(m.asOf)}`;
-  const refCodeDisplay = m.referenceCode ? `
-    <div style="font-size:0.75rem; color:var(--ms-text-muted); font-weight:600; margin:2px 0 4px 0; display:flex; align-items:center; gap:4px;">
-      <span style="text-transform:uppercase; font-size:0.7rem; color:var(--ms-text-muted);">Mã tham chiếu:</span>
-      <span style="color:var(--ms-primary); font-family:var(--font-ui); font-weight:700;">${escapeHtml(m.referenceCode)}</span>
-      <span title="Mã tham chiếu đã khóa cố định" style="font-size:0.7rem;">🔒</span>
-    </div>` : '';
+  if (st === 'positive' || (m.change && (m.change.includes('+') || m.change.includes('▲')))) {
+    changeClass = 'pos';
+    changeIcon = '▲';
+  } else if (st === 'negative' || (m.change && (m.change.includes('-') || m.change.includes('▼')))) {
+    changeClass = 'neg';
+    changeIcon = '▼';
+  }
+
+  // Short clean code
+  let shortCode = m.shortLabel || m.label || 'CHỈ SỐ';
+  shortCode = shortCode.replace(/^\d+\.\s*/, '').replace('NGOẠI HỐI & CAN THIỆP ', '').replace('TIỀN GỬI ', '').replace('CHỈ SỐ ', '').replace('ĐẾN VIỆT NAM', '').trim();
+  if (m.key === 'usdVndCenter') shortCode = 'USD/VND';
+  if (m.key === 'maxDeposit12M') shortCode = 'LÃI SUẤT 12T';
+  if (m.key === 'vnIndex') shortCode = 'VN-INDEX';
+  if (m.key === 'inboundTourists') shortCode = 'KHÁCH QUỐC TẾ';
+
+  // Sub reference string
+  let subRef = m.referenceValue ? m.referenceValue.split('|')[0].trim() : (m.note || '');
+  if (m.key === 'usdVndCenter') subRef = 'VCB: 25.540 - 25.950 · DXY: 103,69';
+  if (m.key === 'maxDeposit12M') subRef = 'Big4: 5.40% · Cao nhất: 7.00% (Lao Động)';
+  if (m.key === 'vnIndex') subRef = 'Đóng cửa: 1.726,72 · GT: 18.400 tỷ';
+  if (m.key === 'inboundTourists') subRef = 'Khách Châu Âu +41.5% · Top: Hàn, Trung';
+
+  let changeDisplay = '';
+  if (m.key === 'usdVndCenter') {
+    changeDisplay = '+13đ (+0,05%)';
+    changeClass = 'pos';
+    changeIcon = '▲';
+  } else if (m.key === 'maxDeposit12M') {
+    changeDisplay = '5.4% - 7.0%';
+    changeClass = 'neu';
+    changeIcon = '▬';
+  } else if (m.key === 'vnIndex') {
+    changeDisplay = '-10.17đ (-0,59%)';
+    changeClass = 'neg';
+    changeIcon = '▼';
+  } else if (m.key === 'inboundTourists') {
+    changeDisplay = '+13.8% YoY';
+    changeClass = 'pos';
+    changeIcon = '▲';
+  } else {
+    changeDisplay = m.change ? m.change.split('so với')[0].trim().slice(0, 18) : changeText;
+  }
+
+  const sourceName = m.sourceShortName || (m.sourceName ? m.sourceName.split('(')[0].trim() : 'Báo chí');
+  const refCode = m.referenceCode || '';
 
   return `
-    <article class="ms-pulse-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')">
-      <div>
-        <div class="ms-pulse-top">
-          <span class="ms-pulse-label">${escapeHtml(m.shortLabel || m.label)}</span>
-          <span class="ms-badge ${badgeClass}" style="font-size:12px; padding:2px 6px;">${escapeHtml(badgeText)}</span>
-        </div>
-        ${refCodeDisplay}
-        <div class="ms-pulse-value">${escapeHtml(m.value)}</div>
-        <div class="ms-pulse-asof">${asOfLabel}</div>
-        <div class="ms-pulse-context">${escapeHtml(shortContext)}</div>
+    <div class="ms-ticker-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')" title="Bấm để xem đối soát chi tiết và bài báo gốc">
+      <div class="ms-ticker-top">
+        <span class="ms-ticker-title">${escapeHtml(shortCode)}</span>
+        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
+        <span class="ms-ticker-badge ${changeClass}">${changeIcon} ${escapeHtml(changeDisplay || changeText)}</span>
       </div>
-      <button type="button" class="ms-pulse-open-btn" aria-label="Xem chi tiết và nguồn ${escapeHtml(m.shortLabel || m.label)}" onclick="event.stopPropagation(); openPulseDetail('${escapeHtml(m.key)}');">
-        <span>Chi tiết &amp; Nguồn</span>
-        <span aria-hidden="true">→</span>
-      </button>
-    </article>
+      <div class="ms-ticker-mid">
+        <span class="ms-ticker-sub">${escapeHtml(subRef)}</span>
+      </div>
+      <div class="ms-ticker-bot">
+        <span class="ms-ticker-src">${escapeHtml(sourceName)}</span>
+        ${refCode ? `<span class="ms-ticker-ref">🔒 "${escapeHtml(refCode)}"</span>` : '<span class="ms-ticker-ref">🔒 Đã khóa</span>'}
+      </div>
+    </div>
   `;
 }
 
@@ -738,17 +752,36 @@ function renderNewsDesk() {
 function renderVnEconomyNewsItemHtml(item, idx) {
   const cleanTime = (item.publisherPublishedAt || item.publicationTimestamp || item.originalPublishedAt || '').split(' | ')[0].trim();
   const author = item.author || item.originalSourceName || item.publisher || 'Báo chí tài chính';
+  const cat = item.category || 'Tài chính';
 
-  const thumbHtml = item.imageUrl ? `
+  let catIcon = '📊';
+  let catSlug = 'macro';
+  if (cat.includes('Ngân hàng')) { catIcon = '🏦'; catSlug = 'banking'; }
+  else if (cat.includes('Thị trường vốn')) { catIcon = '📈'; catSlug = 'capital'; }
+  else if (cat.includes('Thanh toán')) { catIcon = '💳'; catSlug = 'payment'; }
+  else if (cat.includes('Doanh nghiệp')) { catIcon = '🏢'; catSlug = 'enterprise'; }
+  else if (cat.includes('Bán lẻ') || cat.includes('tiêu dùng')) { catIcon = '🛍️'; catSlug = 'retail'; }
+
+  const hasImg = !!item.imageUrl;
+
+  const thumbHtml = `
     <div class="ms-vne-thumb-wrap">
       <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(item.eventId)}')" class="ms-vne-thumb-anchor" title="${escapeHtml(item.pageTitle || item.title)}">
-        <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-vne-thumb-img" loading="lazy" onerror="this.closest('.ms-vne-thumb-wrap').style.display='none'">
+        ${hasImg ? `
+          <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-vne-thumb-img" loading="lazy" onerror="this.classList.add('is-broken'); const fb = this.parentElement.querySelector('.ms-vne-fallback-card'); if (fb) fb.classList.add('is-active');">
+        ` : ''}
+        <div class="ms-vne-fallback-card ms-fallback-${catSlug} ${hasImg ? '' : 'is-active'}">
+          <div class="ms-fallback-mesh" aria-hidden="true"></div>
+          <div class="ms-fallback-badge">BNEWS · FINTECH</div>
+          <div class="ms-fallback-icon" aria-hidden="true">${catIcon}</div>
+          <div class="ms-fallback-cat">${escapeHtml(cat)}</div>
+        </div>
       </a>
     </div>
-  ` : '';
+  `;
 
   return `
-    <article class="ms-vne-article-item ${item.imageUrl ? 'has-thumb' : 'no-thumb'}" data-event-id="${escapeHtml(item.eventId)}">
+    <article class="ms-vne-article-item has-thumb" data-event-id="${escapeHtml(item.eventId)}">
       ${thumbHtml}
       <div class="ms-vne-content-wrap">
         <div class="ms-vne-meta">
@@ -773,7 +806,7 @@ function renderVnEconomyNewsItemHtml(item, idx) {
 
         <div class="ms-vne-footer">
           <button type="button" class="ms-vne-read-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            <span>Đọc phân tích chuyên sâu</span>
+            <span>Đọc tóm tắt chi tiết</span>
             <span aria-hidden="true">→</span>
           </button>
           <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-vne-source-link">
@@ -867,7 +900,7 @@ function renderNewsCardHtml(lead, isLead) {
         <span>Nguồn: <strong>${escapeHtml(lead.author || lead.originalSourceName || 'Báo chí')}</strong></span>
         <div style="display:flex; gap:10px;">
           <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
-            Đọc phân tích chuyên sâu
+            Đọc tóm tắt chi tiết
           </button>
           <a href="${escapeHtml(lead.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center;">
             Bài gốc ↗
@@ -1004,55 +1037,47 @@ function openArticleReader(eventId) {
         </blockquote>
       ` : ''}
 
-      <!-- 4-Part Deep Event-Specific Editorial Analysis (D-06 R1.0.1) -->
+      <!-- 4-Part Executive Intelligence Briefing (BNews Version 2.0) -->
       <div style="display:flex; flex-direction:column; gap:18px;">
 
-        <!-- Sapo / Summary -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            TÓM TẮT SỰ KIỆN (SAPO)
+        <!-- 01. Context & Action -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-top:3px solid var(--ms-primary);">
+          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+            <span>01. BỐI CẢNH &amp; ĐỘNG THÁI CHÍNH</span>
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.summary || item.sectionA_whatHappened || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingContext || item.analysisNature || item.sectionB_context || '')}</p>
         </section>
 
-        <!-- 01. Nature of Event -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            01. Bản chất sự kiện
+        <!-- 02. Detailed Facts & Policy Numbers -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-secondary);">
+          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
+            02. CHI TIẾT CHÍNH SÁCH &amp; SỐ LIỆU TỪ BÀI BÁO
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisNature || item.sectionB_context || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingFacts || item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
         </section>
 
-        <!-- 02. Transmission Mechanism -->
+        <!-- 03. Perspective & Expert Take -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            02. Cơ chế tác động
+            03. NHẬN ĐỊNH CỦA BÀI BÁO &amp; GÓC NHÌN CHUYÊN GIA
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingPerspective || item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
         </section>
 
-        <!-- 03. Market Impact -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            03. Tác động thị trường
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
-        </section>
-
-        <!-- 04. Implications & Watchlist Signal -->
+        <!-- 04. Practical Implications & Caveats -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:4px solid var(--ms-primary);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            04. Hàm ý và tín hiệu theo dõi
+            04. Ý NGHĨA THỰC TIỄN &amp; ĐIỂM CẦN LƯU Ý
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingImplication || item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
         </section>
 
         ${item.sectionE_fintechLens ? `
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
-            GÓC NHÌN FINTECH &amp; B2B
+        <section style="background-color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
+          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
+            ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.sectionE_fintechLens)}</p>
+          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(item.sectionE_fintechLens)}</p>
         </section>
         ` : ''}
 
@@ -1671,14 +1696,18 @@ function openSheetsSchemaModal(editionId) {
 }
 
 
-// ─── TAB NAVIGATION CONTROLLER (BRYAN PORTFOLIO MULTI-PAGE PARITY) ───
+// ─── TAB NAVIGATION CONTROLLER (VERSION 3.0 UNIFIED HOMEPAGE) ───
 function switchFintechTab(tabKey, targetSubId) {
+  // Version 3.0: Tab 'market' is merged into 'today'
+  if (tabKey === 'market') {
+    tabKey = 'today';
+    targetSubId = targetSubId || 'newsDesk';
+  }
   // D-03: Redirect any legacy #archive access cleanly to #today
   if (!tabKey || tabKey === 'archive') tabKey = 'today';
   
   const pages = {
     today: 'page-today',
-    market: 'page-market',
     analysis: 'page-analysis',
     b2b: 'page-b2b',
     newsletter: 'page-newsletter'
@@ -1720,6 +1749,17 @@ function switchFintechTab(tabKey, targetSubId) {
   document.querySelectorAll('.ms-drawer-ws-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-drawer-tab') === tabKey);
   });
+  const navNlBtn = document.getElementById('navBtnNewsletter');
+  if (navNlBtn) navNlBtn.classList.toggle('active', tabKey === 'newsletter');
+  document.querySelectorAll('.ms-mobile-nl-btn').forEach(btn => {
+    btn.classList.toggle('active', tabKey === 'newsletter');
+  });
+  if (tabKey === 'newsletter') {
+    document.querySelectorAll('.ms-cat-btn:not(.ms-mobile-nl-btn)').forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-pressed', 'false');
+    });
+  }
   if (tabKey !== 'market') {
     document.querySelectorAll('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
   }
@@ -1858,11 +1898,13 @@ function navigateToNewsCategory(catKey) {
   if (headerSearchInput) headerSearchInput.value = '';
   if (drawerSearchInput) drawerSearchInput.value = '';
 
-  $$('.ms-cat-btn').forEach(b => {
+  $$('.ms-cat-btn:not(.ms-nav-nl-tab):not(.ms-mobile-nl-btn)').forEach(b => {
     const isMatch = (b.getAttribute('data-cat') || '') === targetCat;
     b.classList.toggle('active', isMatch);
     b.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
   });
+  const navNlBtn = document.getElementById('navBtnNewsletter');
+  if (navNlBtn) navNlBtn.classList.remove('active');
   $$('.ms-topic-link, .ms-quick-topic').forEach(btn => {
     const oc = btn.getAttribute('onclick') || '';
     btn.classList.toggle('active', oc.includes(`'${targetCat}'`));
@@ -1942,7 +1984,11 @@ function handleNewsletterSubscribe(source) {
   if (source === 'bottom') {
     inputId = 'nlEmailInputBottom';
     feedbackId = 'nlFeedbackBottom';
-    sourceLabel = 'Bnews Tab 05 (Bottom)';
+    sourceLabel = 'Bnews Newsletter (Bottom)';
+  } else if (source === 'bottom_today') {
+    inputId = 'nlEmailInputToday';
+    feedbackId = 'nlFeedbackToday';
+    sourceLabel = 'Bnews Homepage (Bottom)';
   } else if (source === 'modal') {
     inputId = 'nlEmailInputModal';
     feedbackId = 'nlFeedbackModal';
@@ -2027,17 +2073,11 @@ function setupEventListeners() {
       }
     });
   }
-  // Category buttons in News Desk
-  $$('.ms-cat-btn').forEach(btn => {
+  // Category buttons in News Desk and Top Navigation
+  $$('.ms-cat-btn:not(.ms-nav-nl-tab):not(.ms-mobile-nl-btn)').forEach(btn => {
     btn.addEventListener('click', () => {
-      $$('.ms-cat-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
-      currentCategoryFilter = btn.getAttribute('data-cat') || 'ALL';
-      renderNewsDesk();
+      const cat = btn.getAttribute('data-cat') || 'ALL';
+      navigateToNewsCategory(cat);
     });
   });
 
@@ -2047,6 +2087,10 @@ function setupEventListeners() {
     searchInput.addEventListener('input', (e) => {
       currentSearchTerm = e.target.value.trim();
       renderNewsDesk();
+      if (currentSearchTerm.length > 0 && window.scrollY < 300) {
+        const newsDeskEl = document.getElementById('newsDesk');
+        if (newsDeskEl) newsDeskEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 

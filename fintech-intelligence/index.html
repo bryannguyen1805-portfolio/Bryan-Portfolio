@@ -97,7 +97,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="./fintech-favicon-opt.webp">
   <link rel="apple-touch-icon" href="./fintech-favicon-opt.png">
-  <link rel="stylesheet" href="./magspread.css?v=1794841513">
+  <link rel="stylesheet" href="./magspread.css?v=1794936000">
 </head>
 <body>
   <!-- Accessibility Skip Link (D-09) -->
@@ -105,7 +105,7 @@
   <!-- ======================================================================
        TIER 1: UNIFIED TOP UTILITY & CONTACT BAR (VNECONOMY-INSPIRED)
        ====================================================================== -->
-  <aside class="ms-contact-topbar ms-hide-mobile" id="contactTopBar" aria-label="Thanh thông tin & liên hệ Bryan Nguyen" data-nosnippet>
+  <aside class="ms-contact-topbar" id="contactTopBar" aria-label="Thanh thông tin & liên hệ Bryan Nguyen" data-nosnippet>
     <div class="ms-container ms-contact-wrap">
       <div class="ms-top-utility-left">
         <span id="mastheadDate" class="ms-top-date">THỨ BẢY, 14/11/2026</span>
@@ -208,38 +208,27 @@
         </div>
       </div>
 
-      <div class="ms-nav-center-strip">
-        <ul class="ms-nav-menu" role="tablist">
-          <li class="ms-nav-group" role="none">
-            <button class="ms-nav-tab-btn active" role="tab" id="navTabToday" data-tab="today" aria-selected="true" aria-controls="page-today" onclick="switchFintechTab('today')">
-              <span class="ms-nav-num">01.</span> HÔM NAY
-            </button>
-          </li>
-          <li class="ms-nav-group" role="none">
-            <button class="ms-nav-tab-btn" role="tab" id="navTabMarket" data-tab="market" aria-selected="false" aria-controls="page-market" onclick="switchFintechTab('market')">
-              <span class="ms-nav-num">02.</span> THỊ TRƯỜNG &amp; TIN TỨC
-            </button>
-          </li>
-          <li class="ms-nav-group" role="none">
-            <button class="ms-nav-tab-btn" role="tab" id="navTabAnalysis" data-tab="analysis" aria-selected="false" aria-controls="page-analysis" onclick="switchFintechTab('analysis')">
-              <span class="ms-nav-num">03.</span> PHÂN TÍCH &amp; HỌC TẬP
-            </button>
-          </li>
-          <li class="ms-nav-group" role="none">
-            <button class="ms-nav-tab-btn" role="tab" id="navTabB2B" data-tab="b2b" aria-selected="false" aria-controls="page-b2b" onclick="switchFintechTab('b2b')">
-              <span class="ms-nav-num">04.</span> CƠ HỘI B2B
-            </button>
-          </li>
-          <li class="ms-nav-group" role="none" id="navGroupNewsletter">
-            <button class="ms-nav-tab-btn" role="tab" id="navTabNewsletter" data-tab="newsletter" aria-selected="false" aria-controls="page-newsletter" onclick="switchFintechTab('newsletter')">
-              <span class="ms-nav-num">05.</span> BẢN TIN &amp; ĐĂNG KÝ
-            </button>
-          </li>
-        </ul>
+      <div class="ms-nav-center-strip ms-nav-categories">
+        <div class="ms-category-buttons-nav" role="group" aria-label="Lọc theo chuyên mục tin tức">
+          <button type="button" class="ms-cat-btn active" aria-pressed="true" data-cat="ALL">TẤT CẢ</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thanh toán">THANH TOÁN SỐ</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Ngân hàng">NGÂN HÀNG</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thị trường vốn">THỊ TRƯỜNG VỐN</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Doanh nghiệp">DOANH NGHIỆP</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Kinh tế vĩ mô">KINH TẾ VĨ MÔ</button>
+          <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Bán lẻ, D2C và xu hướng tiêu dùng">BÁN LẺ &amp; TIÊU DÙNG</button>
+          <button type="button" class="ms-cat-btn ms-nav-nl-tab" id="navBtnNewsletter" onclick="switchFintechTab('newsletter')" title="Chuyên trang Bản tin &amp; Đăng ký">✉ BẢN TIN</button>
+        </div>
       </div>
 
       <div class="ms-nav-actions">
-        <button type="button" onclick="switchFintechTab('market', 'newsDesk')" class="ms-btn ms-btn-rose ms-btn-sm ms-hide-mobile ms-nav-cta-24h">Tin 24h ↓</button>
+        <div class="ms-search-input-wrap ms-nav-search-wrap">
+          <span class="ms-nav-search-icon" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <label for="newsSearchInput" class="ms-visually-hidden">Tìm kiếm trong 25 bản tin</label>
+          <input type="search" id="newsSearchInput" class="ms-search-input ms-top-search-input" placeholder="Tìm kiếm tin tức..." autocomplete="off">
+        </div>
       </div>
     </div>
   </nav>
@@ -263,12 +252,15 @@
     </div>
 
     <div class="ms-quick-tabs-scroll">
-      <div class="ms-quick-tablist" role="tablist" aria-label="Điều hướng chuyên mục nhanh">
-        <button type="button" class="ms-quick-tab active" id="mobileTabToday" role="tab" aria-selected="true" aria-controls="page-today" data-tab="today" onclick="switchFintechTab('today')">01. Hôm nay</button>
-        <button type="button" class="ms-quick-tab" id="mobileTabMarket" role="tab" aria-selected="false" aria-controls="page-market" data-tab="market" onclick="switchFintechTab('market')">02. Thị trường &amp; Tin tức</button>
-        <button type="button" class="ms-quick-tab" id="mobileTabAnalysis" role="tab" aria-selected="false" aria-controls="page-analysis" data-tab="analysis" onclick="switchFintechTab('analysis')">03. Phân tích &amp; Học tập</button>
-        <button type="button" class="ms-quick-tab" id="mobileTabB2B" role="tab" aria-selected="false" aria-controls="page-b2b" data-tab="b2b" onclick="switchFintechTab('b2b')">04. Cơ hội B2B</button>
-        <button type="button" class="ms-quick-tab" id="mobileTabNewsletter" role="tab" aria-selected="false" aria-controls="page-newsletter" data-tab="newsletter" onclick="switchFintechTab('newsletter')">05. Bản tin &amp; Đăng ký</button>
+      <div class="ms-quick-tablist ms-mobile-cat-strip" role="group" aria-label="Điều hướng chuyên mục nhanh">
+        <button type="button" class="ms-cat-btn active" aria-pressed="true" data-cat="ALL">Tất cả</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thanh toán">Thanh toán số</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Ngân hàng">Ngân hàng</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thị trường vốn">Thị trường vốn</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Doanh nghiệp">Doanh nghiệp</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Kinh tế vĩ mô">Kinh tế vĩ mô</button>
+        <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Bán lẻ, D2C và xu hướng tiêu dùng">Bán lẻ &amp; Tiêu dùng</button>
+        <button type="button" class="ms-cat-btn ms-mobile-nl-btn" onclick="switchFintechTab('newsletter')">✉ Bản tin &amp; Đăng ký</button>
       </div>
     </div>
   </div>
@@ -298,13 +290,13 @@
       <div class="ms-drawer-section">
         <div class="ms-drawer-section-label">CHUYÊN TRANG ĐIỀU HÀNH</div>
         <div class="ms-drawer-workspace-grid">
-          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="today" onclick="closeMobileDrawer(); switchFintechTab('today');">
+          <button type="button" class="ms-drawer-ws-btn active" data-drawer-tab="today" onclick="closeMobileDrawer(); switchFintechTab('today');">
             <span class="ms-drawer-ws-num">01</span>
-            <span class="ms-drawer-ws-name">Hôm nay &amp; Trang nhất</span>
+            <span class="ms-drawer-ws-name">Thời sự &amp; 25 Tin phiên</span>
           </button>
-          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="market" onclick="closeMobileDrawer(); switchFintechTab('market');">
+          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="newsletter" onclick="closeMobileDrawer(); switchFintechTab('newsletter');">
             <span class="ms-drawer-ws-num">02</span>
-            <span class="ms-drawer-ws-name">Thị trường &amp; 25 Bản tin</span>
+            <span class="ms-drawer-ws-name">Bản tin &amp; Đăng ký</span>
           </button>
           <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="analysis" onclick="closeMobileDrawer(); switchFintechTab('analysis');">
             <span class="ms-drawer-ws-num">03</span>
@@ -314,23 +306,19 @@
             <span class="ms-drawer-ws-num">04</span>
             <span class="ms-drawer-ws-name">Tín hiệu &amp; Cơ hội B2B</span>
           </button>
-          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="newsletter" onclick="closeMobileDrawer(); switchFintechTab('newsletter');">
-            <span class="ms-drawer-ws-num">05</span>
-            <span class="ms-drawer-ws-name">Bản tin &amp; Đăng ký</span>
-          </button>
         </div>
       </div>
 
       <div class="ms-drawer-section">
         <div class="ms-drawer-section-label">CHUYÊN MỤC TIN TỨC TRONG PHIÊN</div>
         <div class="ms-drawer-cat-list">
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('ALL')">Tất cả 25 tin xác minh trong phiên <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Thanh toán')">Thanh toán số &amp; Hạ tầng QR <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Ngân hàng')">Ngân hàng &amp; Tín dụng <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Thị trường vốn')">Thị trường vốn &amp; Chứng khoán <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Doanh nghiệp')">Doanh nghiệp &amp; Đầu tư <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Kinh tế vĩ mô')">Kinh tế vĩ mô &amp; Chính sách <span>→</span></button>
-          <button type="button" class="ms-drawer-cat-link" onclick="navigateToNewsCategory('Bán lẻ, D2C và xu hướng tiêu dùng')">Bán lẻ &amp; Xu hướng tiêu dùng <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('ALL');">Tất cả 25 tin xác minh trong phiên <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Thanh toán');">Thanh toán số <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Ngân hàng');">Ngân hàng <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Thị trường vốn');">Thị trường vốn <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Doanh nghiệp');">Doanh nghiệp <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Kinh tế vĩ mô');">Kinh tế vĩ mô <span>→</span></button>
+          <button type="button" class="ms-drawer-cat-link" onclick="closeMobileDrawer(); navigateToNewsCategory('Bán lẻ, D2C và xu hướng tiêu dùng');">Bán lẻ &amp; Tiêu dùng <span>→</span></button>
         </div>
       </div>
 
@@ -352,6 +340,28 @@
 
     <!-- PAGE 01: HÔM NAY -->
     <div id="page-today" class="ms-page-section active" role="tabpanel" aria-labelledby="navTabToday">
+
+      <!-- ======================================================================
+           FINANCIAL MARKET TICKER STRIP (IMAGE 2 PARITY)
+           ====================================================================== -->
+      <section class="ms-ticker-strip-section" id="marketTicker" aria-label="Thanh chỉ số thị trường trọng yếu">
+        <div class="ms-container">
+          <div class="ms-ticker-strip-wrap">
+            <div class="ms-ticker-header-bar">
+              <div class="ms-ticker-label-left">
+                <span class="ms-ticker-live-dot" aria-hidden="true"></span>
+                <span class="ms-ticker-label-text">MARKET PULSE · CHỈ SỐ THỊ TRƯỜNG TRỌNG TÂM (XÁC THỰC 100%)</span>
+              </div>
+              <div class="ms-ticker-label-right ms-hide-mobile">
+                <span>MÃ THAM CHIẾU ĐÃ KHÓA 🔒 · BẤM ĐỂ MỞ ĐỐI SOÁT CHI TIẾT</span>
+              </div>
+            </div>
+            <div class="ms-ticker-grid" id="marketPulseGrid">
+              <!-- Compact Financial Ticker Cards rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="ms-cover-story" id="coverStory">
         <div class="ms-container">
           <div class="ms-cover-layout">
@@ -391,98 +401,13 @@
               </div>
             </div>
 
-            <!-- Balanced Full-Width Implication Banner (Eliminates All Empty Void) -->
-            <div class="ms-implication-banner" id="coverImplication">
-              <!-- Rendered via JS -->
-            </div>
           </div>
         </div>
       </section>
 
-      <!-- Quick Executive Jump Cards on Today Tab -->
-      <section class="ms-today-quick-jump">
-        <div class="ms-container">
-          <div class="ms-today-nav-cards">
-            <button type="button" class="ms-today-jump-card" onclick="switchFintechTab('market')">
-              <span class="ms-jump-card-body">
-                <span class="ms-jump-kicker">MỤC 02 · THỊ TRƯỜNG</span>
-                <span class="ms-jump-title">Nhịp Đập Thị Trường &amp; 25 Bản Tin</span>
-                <span class="ms-jump-desc">4 chỉ số vĩ mô cốt lõi &amp; 25 sự kiện xác minh 100% trong 24h</span>
-              </span>
-              <span class="ms-jump-arrow" aria-hidden="true">→</span>
-            </button>
-            <button type="button" class="ms-today-jump-card" onclick="switchFintechTab('analysis')">
-              <span class="ms-jump-card-body">
-                <span class="ms-jump-kicker">MỤC 03 · PHÂN TÍCH</span>
-                <span class="ms-jump-title">4 Chuỗi Truyền Dẫn Vĩ Mô → Vi Mô</span>
-                <span class="ms-jump-desc">Cơ chế thẩm thấu chính sách tới điểm chạm bán lẻ và Payoo</span>
-              </span>
-              <span class="ms-jump-arrow" aria-hidden="true">→</span>
-            </button>
-            <button type="button" class="ms-today-jump-card" onclick="switchFintechTab('b2b')">
-              <span class="ms-jump-card-body">
-                <span class="ms-jump-kicker">MỤC 04 · QUYẾT ĐỊNH</span>
-                <span class="ms-jump-title">3 Tín Hiệu Hành Động &amp; Cơ Hội B2B</span>
-                <span class="ms-jump-desc">Đề xuất giải pháp SmartPOS, VietQR và tư vấn bán hàng tức thì</span>
-              </span>
-              <span class="ms-jump-arrow" aria-hidden="true">→</span>
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- PAGE 02: THỊ TRƯỜNG & TIN TỨC -->
-    <div id="page-market" class="ms-page-section" role="tabpanel" aria-labelledby="navTabMarket">
-      <!-- SECTION 03: COMPACT MAGSPREAD MARKET PULSE -->
-      <section class="ms-market-pulse-section" id="marketPulse">
-        <div class="ms-container">
-          <div class="ms-section-header">
-            <div class="ms-section-title-wrap">
-              <span class="ms-section-kicker">MARKET INTELLIGENCE TERMINAL</span>
-              <h2 class="ms-section-heading">NHỊP ĐẬP THỊ TRƯỜNG (MARKET PULSE)</h2>
-            </div>
-            <div class="ms-section-note ms-hide-mobile" style="font-family:var(--font-mono); font-size:0.75rem; color:var(--ms-text-muted);">
-              4 CHỈ SỐ TRỌNG TÂM · NGUỒN BÁO CHÍ XÁC THỰC 100%
-            </div>
-          </div>
-
-          <div class="ms-pulse-grid" id="marketPulseGrid">
-            <!-- 4 Core Market Pulse cards rendered via JS -->
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 04: THE NEWS DESK -->
       <section class="ms-news-section" id="newsDesk">
         <div class="ms-container">
-          <div class="ms-section-header">
-            <div class="ms-section-title-wrap">
-              <span class="ms-section-kicker">EDITORIAL DISPATCHES</span>
-              <h2 class="ms-section-heading">BÀN TIN TỨC (THE NEWS DESK)</h2>
-            </div>
-          </div>
-
-          <!-- Filter and Search Strip -->
-          <div class="ms-filter-strip">
-            <div class="ms-category-buttons" role="group" aria-label="Lọc theo chuyên mục">
-              <button type="button" class="ms-cat-btn active" aria-pressed="true" data-cat="ALL">Tất cả</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thanh toán">Thanh toán số</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Ngân hàng">Ngân hàng</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Thị trường vốn">Thị trường vốn</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Doanh nghiệp">Doanh nghiệp</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Kinh tế vĩ mô">Kinh tế vĩ mô</button>
-              <button type="button" class="ms-cat-btn" aria-pressed="false" data-cat="Bán lẻ, D2C và xu hướng tiêu dùng">Bán lẻ &amp; Tiêu dùng</button>
-            </div>
-            <div class="ms-search-input-wrap">
-              <label for="newsSearchInput" class="ms-visually-hidden">Tìm kiếm trong 25 bản tin</label>
-              <input type="search" id="newsSearchInput" class="ms-search-input" placeholder="Tìm kiếm tin tức hoặc từ khóa..." aria-controls="newsStandardGrid" autocomplete="off">
-            </div>
-          </div>
-
-          <div id="newsResultCounterBar" class="ms-news-result-counter" role="status" aria-live="polite">
-            25 bài phù hợp trên tổng 25 bài đủ điều kiện.
-          </div>
+          <div id="newsResultCounterBar" class="ms-news-result-counter" style="display:none !important;" aria-hidden="true"></div>
 
           <!-- VnEconomy-Style Journalistic News Stream -->
           <div class="ms-vne-news-stream" id="newsStreamContainer">
@@ -490,9 +415,31 @@
           </div>
         </div>
       </section>
+
+      <!-- INLINE NEWSLETTER SUBSCRIBE BANNER (HOMEPAGE) -->
+      <section class="bnews-nl-bottom-cta" aria-label="Đăng ký nhận bản tin Bnews">
+        <div class="ms-container">
+          <div class="bnews-nl-bottom-wrap">
+            <span class="bnews-nl-hero-kicker" style="color:#F7EBE0;">■ ĐỪNG BỎ LỠ ẤN BẢN 9H00 SÁNG MAI</span>
+            <h2 style="font-size:24px; font-weight:800; color:#FFFFFF; margin:8px 0 12px 0;">Tham gia cùng cộng đồng độc giả Bnews</h2>
+            <p style="font-size:14px; color:#F7EBE0; opacity:0.9; margin:0 0 20px 0; line-height:1.6;">
+              Cập nhật phân tích tài chính, thanh toán số, lãi suất tiền gửi và 25 sự kiện xác minh được chuyển thẳng vào hộp thư mỗi ngày.
+            </p>
+            <form class="bnews-nl-form-row" onsubmit="event.preventDefault(); handleNewsletterSubscribe('bottom_today');">
+              <label for="nlEmailInputToday" class="ms-visually-hidden">Địa chỉ email</label>
+              <input type="email" id="nlEmailInputToday" class="bnews-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email">
+              <button type="submit" class="bnews-nl-btn" style="background-color:#BE123C;">ĐĂNG KÝ NHẬN BẢN TIN →</button>
+            </form>
+            <div class="bnews-nl-disclaimer" style="text-align: center; margin-top: 10px;">
+              Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
+            </div>
+            <div id="nlFeedbackToday" class="bnews-nl-feedback" role="alert" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!-- PAGE 03: PHÂN TÍCH & HỌC TẬP -->
+    <!-- PAGE 02: PHÂN TÍCH & HỌC TẬP -->
     <div id="page-analysis" class="ms-page-section" role="tabpanel" aria-labelledby="navTabAnalysis">
       <!-- SECTION 05: MACRO TO MICRO -->
       <section class="ms-macro-micro-section" id="macroToMicro">
@@ -533,7 +480,7 @@
       </section>
     </div>
 
-    <!-- PAGE 04: CƠ HỘI B2B -->
+    <!-- PAGE 03: CƠ HỘI B2B & PAYOO -->
     <div id="page-b2b" class="ms-page-section" role="tabpanel" aria-labelledby="navTabB2B">
       <!-- SECTION 07: EXECUTIVE DECISION BRIEF -->
       <section class="ms-decision-section" id="decisionBrief">
@@ -594,9 +541,9 @@
     </div>
 
     <!-- ======================================================================
-         PAGE 05: BẢN TIN & ĐĂNG KÝ (NEWSLETTER & LATEST ISSUE - MORNING BREW PARITY)
+         PAGE 04: BẢN TIN & ĐĂNG KÝ (NEWSLETTER & LATEST ISSUE - MORNING BREW PARITY)
          ====================================================================== -->
-    <div id="page-newsletter" class="ms-page-section" role="tabpanel" aria-labelledby="navTabNewsletter">
+    <div id="page-newsletter" class="ms-page-section" role="tabpanel" aria-labelledby="navBtnNewsletter">
       
       <!-- TOP HERO SUBSCRIBE BANNER (MORNING BREW INSPIRATION) -->
       <section class="bnews-nl-hero" aria-label="Đăng ký nhận bản tin Bnews">
@@ -673,8 +620,6 @@
       </section>
 
     </div>
-
-    <!-- PAGE 05: LƯU TRỮ (Ẩn khỏi giao diện người dùng theo D-03; dữ liệu backend bảo toàn 100%) -->
     <div id="page-archive" class="ms-page-section" role="tabpanel" style="display:none !important;">
       <section class="ms-archive-section" id="archiveSection">
         <div class="ms-container">
@@ -802,81 +747,51 @@
         <div class="ms-welcome-eyebrow">
           <span>BRYAN NEWS | FINTECH INTELLIGENCE</span>
           <span class="ms-welcome-dot">·</span>
-          <span class="ms-welcome-eyebrow-sub">FINANCIAL MARKET &amp; PAYMENT BRIEFING</span>
+          <span>FINANCIAL MARKET &amp; DIGITAL PAYMENT BRIEFING</span>
         </div>
         <button type="button" class="ms-modal-close" onclick="closeWelcomeModal()" aria-label="Đóng lời chào mừng">✕</button>
       </div>
 
-      <div class="ms-welcome-scroll-body">
-        <div class="ms-welcome-hero">
-          <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
-          <p class="ms-welcome-lead">
-            Không gian tổng hợp và phân tích chuyên sâu về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số B2B.
-          </p>
-          <p class="ms-welcome-mission">
-            Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
-          </p>
+      <div class="ms-welcome-hero">
+        <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
+        <p class="ms-welcome-lead">
+          Đây là không gian cập nhật và phân tích về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số.
+        </p>
+        <p class="ms-welcome-mission">
+          Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
+        </p>
+      </div>
+
+      <div class="ms-welcome-grid">
+        <div class="ms-welcome-item">
+          <div class="ms-welcome-item-num">01</div>
+          <div class="ms-welcome-item-body">
+            <div class="ms-welcome-item-title">MARKET PULSE</div>
+            <p class="ms-welcome-item-desc">Theo dõi các chỉ số tài chính, tỷ giá, lãi suất, thanh khoản và xu hướng thanh toán.</p>
+          </div>
         </div>
 
-        <!-- HIGHLIGHT: BNEWS DAILY NEWSLETTER SUBSCRIPTION -->
-        <div class="ms-welcome-nl-card">
-          <div class="ms-welcome-nl-badge">
-            <span class="ms-welcome-nl-dot">■</span> BNEWS DAILY NEWSLETTER · 9H00 MỖI SÁNG (MIỄN PHÍ)
+        <div class="ms-welcome-item">
+          <div class="ms-welcome-item-num">02</div>
+          <div class="ms-welcome-item-body">
+            <div class="ms-welcome-item-title">THE NEWS DESK</div>
+            <p class="ms-welcome-item-desc">Tổng hợp những sự kiện nổi bật có nguồn dẫn, phân tích bối cảnh và ý nghĩa thị trường.</p>
           </div>
-          <h3 class="ms-welcome-nl-title">Nắm trọn 25 tin đắt giá chỉ với 3 phút mỗi sáng</h3>
-          <p class="ms-welcome-nl-desc">
-            Bnews gửi bản tin tổng hợp 25 sự kiện tài chính xác minh, 4 chỉ số thị trường then chốt và cơ hội B2B tới hộp thư của bạn lúc 9h00 sáng mỗi ngày. Hoàn toàn miễn phí.
-          </p>
-          <form class="ms-welcome-nl-form" onsubmit="event.preventDefault(); handleNewsletterSubscribe('modal');">
-            <div class="ms-welcome-nl-input-wrap">
-              <input type="email" id="nlEmailInputModal" class="ms-welcome-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email" aria-label="Địa chỉ email nhận bản tin Bnews">
-              <button type="submit" id="nlSubmitBtnModal" class="ms-welcome-nl-btn">
-                ĐĂNG KÝ MIỄN PHÍ →
-              </button>
-            </div>
-            <p class="ms-welcome-nl-disclaimer">
-              Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
-            </p>
-            <div id="nlFeedbackModal" class="bnews-nl-feedback" role="status" aria-live="polite"></div>
-          </form>
         </div>
 
-        <div class="ms-welcome-pillars-section">
-          <div class="ms-welcome-pillars-heading">
-            4 TRỤ CỘT NỘI DUNG XUYÊN SUỐT TRÊN HỆ THỐNG
+        <div class="ms-welcome-item">
+          <div class="ms-welcome-item-num">03</div>
+          <div class="ms-welcome-item-body">
+            <div class="ms-welcome-item-title">MACRO TO MICRO</div>
+            <p class="ms-welcome-item-desc">Kết nối biến động vĩ mô với ngân hàng, doanh nghiệp, người tiêu dùng và thanh toán.</p>
           </div>
-          <div class="ms-welcome-grid">
-            <div class="ms-welcome-item">
-              <div class="ms-welcome-item-num">01</div>
-              <div class="ms-welcome-item-body">
-                <div class="ms-welcome-item-title">MARKET PULSE</div>
-                <p class="ms-welcome-item-desc">Tỷ giá USD/VND, lãi suất liên ngân hàng, thanh khoản &amp; xung lực tài chính.</p>
-              </div>
-            </div>
+        </div>
 
-            <div class="ms-welcome-item">
-              <div class="ms-welcome-item-num">02</div>
-              <div class="ms-welcome-item-body">
-                <div class="ms-welcome-item-title">THE NEWS DESK</div>
-                <p class="ms-welcome-item-desc">25 sự kiện tài chính xác minh 24h kèm nguồn dẫn và phân tích bối cảnh thị trường.</p>
-              </div>
-            </div>
-
-            <div class="ms-welcome-item">
-              <div class="ms-welcome-item-num">03</div>
-              <div class="ms-welcome-item-body">
-                <div class="ms-welcome-item-title">MACRO TO MICRO</div>
-                <p class="ms-welcome-item-desc">Chuỗi truyền dẫn chính sách vĩ mô tới ngân hàng, doanh nghiệp &amp; tiêu dùng.</p>
-              </div>
-            </div>
-
-            <div class="ms-welcome-item">
-              <div class="ms-welcome-item-num">04</div>
-              <div class="ms-welcome-item-body">
-                <div class="ms-welcome-item-title">B2B &amp; FINTECH</div>
-                <p class="ms-welcome-item-desc">Radar giải pháp thanh toán QR, POS, SmartPOS, Gateway &amp; cơ hội B2B.</p>
-              </div>
-            </div>
+        <div class="ms-welcome-item">
+          <div class="ms-welcome-item-num">04</div>
+          <div class="ms-welcome-item-body">
+            <div class="ms-welcome-item-title">FINTECH &amp; B2B OPPORTUNITIES</div>
+            <p class="ms-welcome-item-desc">Khám phá xu hướng QR, POS, SmartPOS, Payment Gateway, Payment Link và các cơ hội kinh doanh thanh toán.</p>
           </div>
         </div>
       </div>
@@ -884,14 +799,14 @@
       <div class="ms-welcome-footer">
         <div class="ms-welcome-actions">
           <button type="button" class="ms-btn ms-btn-primary ms-welcome-cta" onclick="closeWelcomeModal()">
-            KHÁM PHÁ BẢN TIN HÔM NAY →
+            KHÁM PHÁ BẢN TIN →
           </button>
           <button type="button" class="ms-btn ms-btn-ghost ms-welcome-contact-btn" onclick="closeWelcomeModal(); openContactModal();">
             LIÊN HỆ BRYAN
           </button>
         </div>
         <div class="ms-welcome-signature">
-          BRYAN NGUYEN · FINTECH &amp; FINANCIAL INTELLIGENCE
+          BRYAN NGUYEN · FINTECH INTELLIGENCE
         </div>
       </div>
     </div>
@@ -1008,7 +923,7 @@
     </button>
   </div>
 
-  <script src="./edition-data.js?v=1794928000"></script>
-  <script src="./magspread.js?v=1794928000"></script>
+  <script src="./edition-data.js?v=1794936000"></script>
+  <script src="./magspread.js?v=1794936000"></script>
 </body>
 </html>

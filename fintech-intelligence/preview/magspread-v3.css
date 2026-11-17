@@ -1,0 +1,746 @@
+/* ==========================================================================
+   BNEWS VERSION 3.0 — MODERN ENEWS EDITORIAL DESIGN SYSTEM
+   Professional Financial Journalism & Market Terminal Layout
+   ========================================================================== */
+
+/* ─── 1. COMPACT FINANCIAL TICKER STRIP (IMAGE 2 PARITY) ─── */
+.ms-ticker-strip-wrap {
+  background: #FFFFFF;
+  border: 1px solid var(--ms-border, #E7E5E4);
+  border-radius: 6px;
+  padding: 10px 14px 12px 14px;
+  margin: 12px 0 22px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.ms-ticker-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.ms-ticker-label-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-ticker-live-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #16A34A;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+  animation: msPulseLive 2s infinite;
+}
+
+@keyframes msPulseLive {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 4px rgba(22, 163, 74, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+.ms-ticker-label-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ms-primary, #134E4A);
+}
+
+.ms-ticker-label-right {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  color: var(--ms-text-muted, #78716C);
+  letter-spacing: 0.02em;
+}
+
+.ms-ticker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.ms-ticker-card {
+  background: #FAFAF9;
+  border: 1px solid #E7E5E4;
+  border-radius: 4px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 78px;
+  position: relative;
+}
+
+.ms-ticker-card:hover {
+  background: #FFFFFF;
+  border-color: var(--ms-primary, #134E4A);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ms-ticker-card.status-positive { border-left: 3px solid #16A34A; }
+.ms-ticker-card.status-negative { border-left: 3px solid #DC2626; }
+.ms-ticker-card.status-neutral  { border-left: 3px solid #D97706; }
+
+.ms-ticker-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  margin-bottom: 3px;
+}
+
+.ms-ticker-title {
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ms-text-primary, #1C1917);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ms-ticker-val {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.ms-ticker-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ms-ticker-badge.pos { color: #16A34A; }
+.ms-ticker-badge.neg { color: #DC2626; }
+.ms-ticker-badge.neu { color: #D97706; }
+
+.ms-ticker-mid {
+  font-size: 0.725rem;
+  color: var(--ms-text-secondary, #44403C);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px 0 4px 0;
+  margin-bottom: 2px;
+  border-bottom: 1px dashed #E7E5E4;
+}
+
+.ms-ticker-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  line-height: 1.2;
+}
+
+.ms-ticker-src {
+  color: var(--ms-primary, #134E4A);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 65%;
+}
+
+.ms-ticker-ref {
+  color: var(--ms-text-muted, #78716C);
+  font-size: 0.65rem;
+  font-family: var(--font-mono, monospace);
+}
+
+@media (max-width: 1024px) {
+  .ms-ticker-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ms-ticker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── 2. REFINED BROADSHIT EDITORIAL HERO & HOMEPAGE RHYTHM ─── */
+.ms-hero-seamless-wrap {
+  margin-bottom: 32px;
+}
+
+.ms-vne-stream-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0 10px 0;
+  margin-top: 24px;
+  border-top: 2px solid var(--ms-primary, #134E4A);
+  margin-bottom: 16px;
+}
+
+.ms-vne-stream-title {
+  font-family: var(--font-headline, 'Spectral', serif);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--ms-primary, #134E4A);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.ms-vne-stream-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ms-text-muted, #78716C);
+  background: #F5F5F4;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid #E7E5E4;
+}
+
+/* ─── 3. MODERNIZED CATEGORY FILTER STRIP ─── */
+.ms-category-buttons-v3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.ms-cat-btn-v3 {
+  background: transparent;
+  border: 1px solid #D6D3D1;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ms-text-secondary, #44403C);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.ms-cat-btn-v3:hover {
+  border-color: var(--ms-primary, #134E4A);
+  color: var(--ms-primary, #134E4A);
+  background: #F5F5F4;
+}
+
+.ms-cat-btn-v3.active {
+  background: var(--ms-primary, #134E4A);
+  border-color: var(--ms-primary, #134E4A);
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(19, 78, 74, 0.2);
+}
+
+/* ─── MASTHEAD PERFECT DEAD-CENTER THREE-COLUMN ALIGNMENT ─── */
+.ms-masthead-main-row {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  position: relative !important;
+  padding: 12px 0 !important;
+  min-height: 72px !important;
+  width: 100% !important;
+}
+
+.ms-masthead-left {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  grid-column: 1 !important;
+}
+
+.ms-masthead-hero-title {
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  grid-column: 2 !important;
+}
+
+.ms-masthead-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+  margin-left: auto !important;
+  grid-column: 3 !important;
+}
+
+/* ─── 4. NEWSPAPER TOP CATEGORY NAVIGATION BAR (V3.0 PARITY) ─── */
+.ms-nav-strip .ms-nav-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  position: relative !important;
+  max-width: 1360px !important;
+  width: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  .ms-nav-center-strip {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+  }
+}
+
+.ms-nav-center-strip::-webkit-scrollbar {
+  display: none !important;
+}
+
+.ms-category-buttons-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  flex-wrap: nowrap !important;
+}
+
+.ms-category-buttons-nav .ms-cat-btn,
+.ms-mobile-cat-strip .ms-cat-btn {
+  font-family: var(--font-body, system-ui, -apple-system, sans-serif) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+  color: #374151 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  padding: 5px 9px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.15s ease-in-out !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+[data-theme="dark"] .ms-category-buttons-nav .ms-cat-btn,
+[data-theme="dark"] .ms-mobile-cat-strip .ms-cat-btn {
+  color: #D1D5DB !important;
+}
+
+.ms-category-buttons-nav .ms-cat-btn:hover,
+.ms-mobile-cat-strip .ms-cat-btn:hover {
+  background: rgba(13, 78, 72, 0.08) !important;
+  color: #0D4E48 !important;
+}
+
+.ms-category-buttons-nav .ms-cat-btn.active,
+.ms-mobile-cat-strip .ms-cat-btn.active {
+  background: #0D4E48 !important;
+  color: #FFFFFF !important;
+  border-color: #0D4E48 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .ms-category-buttons-nav .ms-cat-btn.active,
+[data-theme="dark"] .ms-mobile-cat-strip .ms-cat-btn.active {
+  background: #007A70 !important;
+  color: #FFFFFF !important;
+  border-color: #007A70 !important;
+}
+
+/* Newsletter tab in category strip */
+.ms-category-buttons-nav .ms-cat-btn.ms-nav-nl-tab {
+  background-color: rgba(190, 18, 60, 0.08) !important;
+  color: #BE123C !important;
+  border: 1px solid rgba(190, 18, 60, 0.25) !important;
+  margin-left: 4px !important;
+}
+
+.ms-category-buttons-nav .ms-cat-btn.ms-nav-nl-tab:hover,
+.ms-category-buttons-nav .ms-cat-btn.ms-nav-nl-tab.active {
+  background-color: #BE123C !important;
+  color: #FFFFFF !important;
+  border-color: #BE123C !important;
+}
+
+.ms-mobile-nl-btn {
+  background-color: rgba(190, 18, 60, 0.12) !important;
+  color: #BE123C !important;
+  border: 1px solid rgba(190, 18, 60, 0.3) !important;
+  font-weight: 700 !important;
+}
+
+.ms-mobile-nl-btn:hover,
+.ms-mobile-nl-btn.active {
+  background-color: #BE123C !important;
+  color: #FFFFFF !important;
+  border-color: #BE123C !important;
+}
+
+/* Nav search input matching screenshot */
+.ms-nav-actions {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+.ms-nav-search-wrap {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ms-nav-search-icon {
+  position: absolute !important;
+  left: 8px !important;
+  pointer-events: none !important;
+  color: #9CA3AF !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ms-top-search-input {
+  background: #FFFFFF !important;
+  border: 1px solid #D1D5DB !important;
+  border-radius: 4px !important;
+  padding: 5px 8px 5px 24px !important;
+  font-size: 0.78125rem !important;
+  color: var(--ms-text-primary, #1C1917) !important;
+  width: 145px !important;
+  max-width: 165px !important;
+  min-width: 120px !important;
+  transition: all 0.15s ease !important;
+}
+
+[data-theme="dark"] .ms-top-search-input {
+  background: #142826 !important;
+  border-color: #2D4A47 !important;
+  color: #F5F5F4 !important;
+}
+
+.ms-top-search-input:focus {
+  outline: none !important;
+  border-color: #0D4E48 !important;
+  box-shadow: 0 0 0 2px rgba(13, 78, 72, 0.15) !important;
+  width: 175px !important;
+}
+
+/* ─── 5. FLAWLESS FULL-WIDTH EDITORIAL NEWS STREAM (FLUSH ALIGNMENT) ─── */
+#newsDesk {
+  border-top: none !important;
+  border-bottom: none !important;
+  padding-top: 18px !important;
+  padding-bottom: 24px !important;
+}
+
+#newsDesk .ms-section-header,
+#newsDesk .ms-filter-strip,
+.ms-news-result-counter {
+  display: none !important;
+}
+
+.ms-cover-story {
+  border-bottom: none !important;
+}
+
+.ms-vne-news-stream {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-top: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.ms-vne-article-item {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 240px 1fr !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  padding: 20px 24px !important;
+  background: #FFFFFF !important;
+  border: 1px solid var(--ms-border, #E7E5E4) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+[data-theme="dark"] .ms-vne-article-item {
+  background: #132725 !important;
+  border-color: #2D4A47 !important;
+  box-shadow: none !important;
+}
+
+.ms-vne-article-item:hover {
+  border-color: #0D4E48 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="dark"] .ms-vne-article-item:hover {
+  border-color: #5EEAD4 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.ms-vne-thumb-wrap {
+  width: 240px !important;
+  height: 152px !important;
+  flex: 0 0 240px !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  background-color: #F3F4F6 !important;
+  position: relative !important;
+}
+
+.ms-vne-thumb-anchor {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  text-decoration: none !important;
+}
+
+.ms-vne-thumb-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.ms-vne-thumb-img.is-broken,
+.ms-vne-thumb-img[style*="display: none"] {
+  display: none !important;
+}
+
+.ms-vne-article-item:hover .ms-vne-thumb-img {
+  transform: scale(1.03) !important;
+}
+
+/* ─── BRANDED FINTECH EDITORIAL THUMBNAIL FALLBACK CARDS ─── */
+.ms-vne-fallback-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: none !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 14px 10px !important;
+  text-align: center !important;
+  border-radius: 4px !important;
+  color: #FFFFFF !important;
+  box-sizing: border-box !important;
+  user-select: none !important;
+}
+
+.ms-vne-fallback-card.is-active {
+  display: flex !important;
+}
+
+.ms-fallback-mesh {
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px) !important;
+  background-size: 8px 8px !important;
+  pointer-events: none !important;
+  opacity: 0.7 !important;
+}
+
+.ms-fallback-badge {
+  font-family: var(--font-mono, monospace) !important;
+  font-size: 0.625rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  text-transform: uppercase !important;
+  margin-bottom: 5px !important;
+  z-index: 1 !important;
+}
+
+.ms-fallback-icon {
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  margin-bottom: 6px !important;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3)) !important;
+  z-index: 1 !important;
+}
+
+.ms-fallback-cat {
+  font-family: var(--font-body, system-ui, sans-serif) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+  color: #FFFFFF !important;
+  z-index: 1 !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Category Specific Editorial Gradients */
+.ms-fallback-banking {
+  background: linear-gradient(135deg, #064E3B 0%, #0D9488 100%) !important;
+}
+
+.ms-fallback-capital {
+  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%) !important;
+}
+
+.ms-fallback-payment {
+  background: linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%) !important;
+}
+
+.ms-fallback-enterprise {
+  background: linear-gradient(135deg, #1E293B 0%, #475569 100%) !important;
+}
+
+.ms-fallback-macro {
+  background: linear-gradient(135deg, #14532D 0%, #15803D 100%) !important;
+}
+
+.ms-fallback-retail {
+  background: linear-gradient(135deg, #881337 0%, #BE123C 100%) !important;
+}
+
+.ms-vne-content-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-width: 0 !important;
+}
+
+.ms-vne-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 6px !important;
+  font-size: 0.75rem !important;
+}
+
+.ms-vne-cat {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: var(--ms-primary, #134E4A) !important;
+  letter-spacing: 0.04em !important;
+}
+
+.ms-vne-time {
+  font-family: var(--font-mono, monospace) !important;
+  color: var(--ms-text-muted, #78716C) !important;
+}
+
+.ms-vne-source {
+  margin-left: auto !important;
+  color: var(--ms-text-muted, #78716C) !important;
+  font-size: 0.75rem !important;
+}
+
+.ms-vne-title {
+  font-family: var(--font-headline, 'Spectral', serif) !important;
+  font-size: 1.1875rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: var(--ms-text-primary, #1C1917) !important;
+  margin: 0 0 8px 0 !important;
+}
+
+.ms-vne-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+
+.ms-vne-title a:hover {
+  color: var(--ms-secondary, #BE123C) !important;
+}
+
+.ms-vne-sapo {
+  font-family: var(--font-body, system-ui, sans-serif) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.62 !important;
+  color: var(--ms-text-secondary, #44403C) !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.ms-vne-footer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-top: auto !important;
+  padding-top: 4px !important;
+}
+
+.ms-vne-read-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--ms-primary, #134E4A) !important;
+  font-family: var(--font-body, system-ui, sans-serif) !important;
+  font-size: 0.78125rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: color 0.15s ease !important;
+}
+
+.ms-vne-read-btn:hover {
+  color: var(--ms-secondary, #BE123C) !important;
+}
+
+.ms-vne-source-link {
+  color: var(--ms-text-muted, #78716C) !important;
+  font-size: 0.78125rem !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.ms-vne-source-link:hover {
+  color: var(--ms-text-primary, #1C1917) !important;
+}
+
+@media (max-width: 820px) {
+  .ms-vne-article-item {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 16px !important;
+  }
+  .ms-vne-thumb-wrap {
+    width: 100% !important;
+    height: 180px !important;
+    flex: 0 0 auto !important;
+  }
+}
