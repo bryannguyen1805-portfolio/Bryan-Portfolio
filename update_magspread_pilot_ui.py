@@ -145,21 +145,42 @@ def _split_clean_sentences(text: str) -> list:
     return parts
 
 
-def _extract_snapshot_sentences(snapshot_file: str, title: str, sapo_exclude: str = "") -> list:
-    """Reads authentic source HTML snapshot paragraphs and returns clean, complete sentences."""
+def _extract_snapshot_sentences(snapshot_file: str, title: str, sapo_exclude: str = "", edition_date_raw: str = "") -> list:
+    """Reads authentic source HTML snapshot paragraphs (including gzip) and returns clean, complete sentences."""
     if not snapshot_file:
         return []
     cand = snapshot_file if os.path.isabs(snapshot_file) else os.path.join(WORKSPACE_ROOT, snapshot_file)
-    if not os.path.exists(cand):
-        cand = os.path.join(RUNTIME_DIR, "raw_evidence", os.path.basename(snapshot_file))
-    if not os.path.exists(cand):
-        cand = os.path.join(WORKSPACE_ROOT, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "05_LIVE_DATA", "raw_evidence", os.path.basename(snapshot_file))
-    if not os.path.exists(cand):
+    base_name = os.path.basename(snapshot_file)
+    search_paths = [
+        cand,
+        os.path.join(RUNTIME_DIR, "raw_evidence", base_name),
+        os.path.join(RUNTIME_DIR, "raw_evidence_store", base_name),
+        os.path.join(WORKSPACE_ROOT, "raw_evidence_store", base_name),
+        os.path.join(WORKSPACE_ROOT, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "06_DAILY_EDITIONS", "daily-editions", str(edition_date_raw or "2026-11-17"), "raw_evidence_store", base_name),
+        os.path.join(WORKSPACE_ROOT, "BRYAN_FINTECH_INTELLIGENCE", "03_WORKING_PHASES", "PHASE07_R1.0.4-P1", "05_LIVE_DATA", "raw_evidence", base_name)
+    ]
+    target_path = None
+    for p in search_paths:
+        if p and os.path.exists(p):
+            target_path = p
+            break
+    if not target_path:
         return []
     try:
-        with open(cand, "r", encoding="utf-8", errors="ignore") as f:
-            parser = _ArticleSnapshotParser()
-            parser.feed(f.read())
+        with open(target_path, "rb") as fb:
+            raw_data = fb.read()
+        if raw_data[:2] == b'\x1f\x8b':
+            import gzip
+            raw_data = gzip.decompress(raw_data)
+        html_txt = ""
+        for enc in ["utf-8", "latin-1"]:
+            try:
+                html_txt = raw_data.decode(enc)
+                break
+            except Exception:
+                pass
+        parser = _ArticleSnapshotParser()
+        parser.feed(html_txt)
     except Exception:
         return []
 
@@ -696,7 +717,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         monitoring_watchpoint = cover_override["monitoringWatchpoint"]
     else:
         base_sm = (lead_event.get("editorialStandfirst") or lead_event.get("summary") or lead_event.get("rawSnippet") or lead_title).strip()
-        cov_snaps = _extract_snapshot_sentences(lead_event.get("evidencePath", ""), lead_title, base_sm)
+        cov_snaps = _extract_snapshot_sentences(lead_event.get("evidencePath", ""), lead_title, base_sm, edition_date_raw=str(edition_date_raw))
         base_sents = [s.strip().rstrip('.') + '.' for s in _split_clean_sentences(base_sm) if len(s.strip()) >= 20]
         if len(base_sents) < 3:
             for ss in cov_snaps:
@@ -1041,7 +1062,7 @@ def main():
         val_items = [f"{f['metricName']}: {f['extractedExpression']}" for f in facts if f.get("extractedExpression") and f.get("metricName")]
         val_str = "; ".join(val_items) if val_items else headline
 
-        snap_sents = _extract_snapshot_sentences(r.get("evidencePath", ""), headline, summary)
+        snap_sents = _extract_snapshot_sentences(r.get("evidencePath", ""), headline, summary, edition_date_raw=str(edition_date_raw))
         sections_dict = synthesize_article_sections(r, mapped_cat, ent_str, val_str, snapshot_sents=snap_sents)
 
         canonical_url = r.get("canonicalUrl") or r.get("candidateUrl") or r.get("sourceUrl") or r.get("originalUrl") or "https://cafef.vn"
@@ -1152,6 +1173,11 @@ def main():
             "sourceUrl": canonical_url,
             "supportingQuote": final_quote,
             "facts": facts,
+            "briefingContext": sections_dict.get("briefingContext", an_nature),
+            "briefingFacts": sections_dict.get("briefingFacts", an_mech),
+            "briefingPerspective": sections_dict.get("briefingPerspective", an_impact),
+            "briefingImplication": sections_dict.get("briefingImplication", an_watch),
+            "fintechRelevance": sections_dict.get("fintechRelevance", sec_e),
             "analysisNature": an_nature,
             "analysisMechanism": an_mech,
             "analysisMarketImpact": an_impact,
