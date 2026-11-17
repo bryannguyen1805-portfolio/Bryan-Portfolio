@@ -230,7 +230,7 @@ async function loadEditionData() {
     }
   }
 
-  // 2. HTTP/HTTPS environment: fetch canonical edition-data.json
+  // 2. HTTP/HTTPS environment: fetch preview edition-data-v2.json
   try {
     const res = await fetch('./edition-data.json?v=' + Date.now());
     if (!res.ok) {
@@ -427,7 +427,7 @@ function renderCoverStory() {
   if (actionsRowEl) {
     actionsRowEl.innerHTML = `
       <button type="button" class="ms-cover-read-btn" onclick="openArticleReader('${escapeHtml(eventId)}')">
-        <span>Đọc phân tích chuyên sâu</span>
+        <span>Đọc tóm tắt chi tiết</span>
         <span aria-hidden="true">→</span>
       </button>
       <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-cover-source-link">
@@ -773,7 +773,7 @@ function renderVnEconomyNewsItemHtml(item, idx) {
 
         <div class="ms-vne-footer">
           <button type="button" class="ms-vne-read-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            <span>Đọc phân tích chuyên sâu</span>
+            <span>Đọc tóm tắt chi tiết</span>
             <span aria-hidden="true">→</span>
           </button>
           <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-vne-source-link">
@@ -867,7 +867,7 @@ function renderNewsCardHtml(lead, isLead) {
         <span>Nguồn: <strong>${escapeHtml(lead.author || lead.originalSourceName || 'Báo chí')}</strong></span>
         <div style="display:flex; gap:10px;">
           <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
-            Đọc phân tích chuyên sâu
+            Đọc tóm tắt chi tiết
           </button>
           <a href="${escapeHtml(lead.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center;">
             Bài gốc ↗
@@ -1004,55 +1004,47 @@ function openArticleReader(eventId) {
         </blockquote>
       ` : ''}
 
-      <!-- 4-Part Deep Event-Specific Editorial Analysis (D-06 R1.0.1) -->
+      <!-- 4-Part Executive Intelligence Briefing (BNews Version 2.0) -->
       <div style="display:flex; flex-direction:column; gap:18px;">
 
-        <!-- Sapo / Summary -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            TÓM TẮT SỰ KIỆN (SAPO)
+        <!-- 01. Context & Action -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-top:3px solid var(--ms-primary);">
+          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+            <span>01. BỐI CẢNH &amp; ĐỘNG THÁI CHÍNH</span>
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.summary || item.sectionA_whatHappened || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingContext || item.analysisNature || item.sectionB_context || '')}</p>
         </section>
 
-        <!-- 01. Nature of Event -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            01. Bản chất sự kiện
+        <!-- 02. Detailed Facts & Policy Numbers -->
+        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-secondary);">
+          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
+            02. CHI TIẾT CHÍNH SÁCH &amp; SỐ LIỆU TỪ BÀI BÁO
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisNature || item.sectionB_context || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingFacts || item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
         </section>
 
-        <!-- 02. Transmission Mechanism -->
+        <!-- 03. Perspective & Expert Take -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            02. Cơ chế tác động
+            03. NHẬN ĐỊNH CỦA BÀI BÁO &amp; GÓC NHÌN CHUYÊN GIA
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingPerspective || item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
         </section>
 
-        <!-- 03. Market Impact -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            03. Tác động thị trường
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
-        </section>
-
-        <!-- 04. Implications & Watchlist Signal -->
+        <!-- 04. Practical Implications & Caveats -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:4px solid var(--ms-primary);">
           <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            04. Hàm ý và tín hiệu theo dõi
+            04. Ý NGHĨA THỰC TIỄN &amp; ĐIỂM CẦN LƯU Ý
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
+          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingImplication || item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
         </section>
 
         ${item.sectionE_fintechLens ? `
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
-            GÓC NHÌN FINTECH &amp; B2B
+        <section style="background-color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
+          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
+            ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
           </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.65;">${escapeHtml(item.sectionE_fintechLens)}</p>
+          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(item.sectionE_fintechLens)}</p>
         </section>
         ` : ''}
 

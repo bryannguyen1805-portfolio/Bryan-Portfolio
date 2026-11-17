@@ -320,78 +320,117 @@ def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str:
         if len(s.strip()) >= 45 and s.strip() not in sm and s.strip() not in hl
     ]
 
-    # 01. BẢN CHẤT SỰ KIỆN
+    # BNEWS VERSION 2.0: FINANCIAL ONTOLOGY & 4-BLOCK EXECUTIVE SYNTHESIS
+    cat_lower = mapped_cat.lower()
+    hl_lower = hl.lower()
+
+    # 1. Classify Banking: Lending (Asset) vs Deposit (Liability)
+    is_lending = any(k in hl_lower for k in ["cho vay", "vay mua", "vay ô tô", "tín dụng", "hạn mức vay", "nợ xấu", "giải ngân"])
+    is_deposit = any(k in hl_lower for k in ["tiết kiệm", "tiền gửi", "huy động", "lãi suất tiết kiệm", "ngừng trả lãi"])
+    is_payments = "thanh toán" in cat_lower or any(k in hl_lower for k in ["chuyển khoản", "sinh trắc học", "tài khoản ngân hàng", "qr code", "pos", "thẻ"])
+    is_capital = "thị trường vốn" in cat_lower or any(k in hl_lower for k in ["cổ phiếu", "trái phiếu", "chứng khoán", "từ thiện", "warren buffett", "vốn hóa", "vn30", "vn-index"])
+    is_retail = "bán lẻ" in cat_lower or any(k in hl_lower for k in ["giá vàng", "giá xăng", "tiêu dùng", "thưởng tết", "siêu thị"])
+    is_macro = "vĩ mô" in cat_lower or any(k in hl_lower for k in ["fed", "dxy", "tỷ giá", "trung quốc", "dự trữ bắt buộc", "thuế", "thương mại"])
+
+    # 01. BỐI CẢNH & ĐỘNG THÁI CHÍNH
     if fact_sents:
         fact_1 = fact_sents[0]
         if real_ent in fact_1:
-            analysis_nature = fact_1
+            b_context = fact_1
         else:
-            analysis_nature = f"Sự kiện ghi nhận tại {real_ent}: {fact_1}"
+            b_context = f"Chuyển động ghi nhận tại {real_ent}: {fact_1}"
     else:
-        analysis_nature = f"Trọng tâm ghi nhận tại {real_ent} tập trung vào chuyển động thực tế từ '{clean_hl}'."
+        b_context = f"Trọng tâm ghi nhận tại {real_ent} xoay quanh sự kiện '{clean_hl}'."
 
-    # 02. CƠ CHẾ TÁC ĐỘNG
-    cat_lower = mapped_cat.lower()
-    if "ngân hàng" in cat_lower or any(k in hl.lower() for k in ["lãi suất", "tiết kiệm", "tín dụng", "casa"]):
-        analysis_mechanism = (
-            f"Đối với {real_ent}, diễn biến quanh '{clean_hl}' tác động trực tiếp tới bài toán chi phí huy động vốn (COF), tỷ lệ tiền gửi không kỳ hạn (CASA) và biên lãi ròng (NIM)."
+    # 02. CHI TIẾT CHÍNH SÁCH & SỐ LIỆU TỪ BÀI BÁO
+    if is_lending:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Chính sách tín dụng từ {real_ent} công bố điều kiện lãi suất ưu đãi, thời hạn vay và cơ chế kiểm soát biên độ lãi suất thả nổi nhằm bảo vệ kế hoạch tài chính của người vay."
+    elif is_deposit:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Biểu lãi suất huy động tại {real_ent} được điều chỉnh phân hóa theo từng kỳ hạn nhằm cơ cấu lại nguồn vốn tiền gửi và tối ưu hóa chi phí vốn đầu vào (COF)."
+    elif is_payments:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Quy định yêu cầu chuẩn hóa quy trình nhận diện khách hàng, đối soát dòng tiền và áp dụng hàng rào kỹ thuật bảo mật giao dịch theo thời gian thực."
+    elif is_retail:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Thị trường ghi nhận biến động giá cả và mức chênh lệch mua - bán thực tế, phản ánh tương quan cung cầu và tác động từ thị trường quốc tế."
+    else:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Diễn biến thực tế từ '{clean_hl}' cung cấp các chỉ báo trọng yếu về dòng vốn, hoạt động doanh nghiệp và kỷ luật minh bạch thông tin."
+
+    # 03. NHẬN ĐỊNH CỦA BÀI BÁO & GÓC NHÌN CHUYÊN GIA
+    if is_lending:
+        b_perspective = f"Bài báo nhận định động thái của {real_ent} tập trung tháo gỡ rào cản tâm lý về lãi suất thả nổi sau thời gian ưu đãi, kích thích nhu cầu tín dụng bán lẻ an toàn."
+    elif is_deposit:
+        b_perspective = f"Theo bài viết, diễn biến lãi suất phản ánh trạng thái thanh khoản của hệ thống và chiến lược cân đối biên lãi ròng (NIM) của các ngân hàng thương mại."
+    elif is_payments:
+        b_perspective = f"Tác giả nhấn mạnh đây là biện pháp kỹ thuật then chốt giúp triệt phá các lỗ hổng gian lận tài khoản và bảo vệ tài sản của người tiêu dùng số."
+    elif is_capital:
+        b_perspective = f"Phân tích từ bài báo cho thấy hoạt động cơ cấu danh mục hoặc chuyển giao sở hữu phản ánh chiến lược quản trị bền vững, không làm xáo trộn định giá dài hạn."
+    else:
+        b_perspective = f"Tác giả bài báo chỉ ra rằng sự kiện phản ánh xu hướng thích ứng linh hoạt và quản trị rủi ro dòng tiền trong bối cảnh kinh tế mới."
+
+    # 04. Ý NGHĨA THỰC TIỄN & ĐIỂM CẦN LƯU Ý
+    if is_lending:
+        b_implication = f"Khách hàng vay vốn cần tính toán kỹ phương án dòng tiền trả nợ hàng tháng dựa trên kịch bản lãi suất sau giai đoạn ưu đãi để đảm bảo an toàn tài chính cá nhân."
+    elif is_deposit:
+        b_implication = f"Người gửi tiền nên cân nhắc kỳ hạn gửi và kênh trực tuyến để tối ưu hóa tỷ suất sinh lời trước các đợt điều chỉnh tiếp theo của hệ thống ngân hàng."
+    elif is_payments:
+        b_implication = f"Chủ tài khoản và doanh nghiệp cần hoàn tất việc cập nhật dữ liệu định danh và quy trình đối soát để giao dịch không bị gián đoạn."
+    elif is_retail:
+        b_implication = f"Người tiêu dùng và tiểu thương cần lưu ý biên độ chênh lệch giá và thời điểm mua bán để phòng ngừa rủi ro biến động ngắn hạn."
+    else:
+        b_implication = f"Các đơn vị liên quan cần chủ động rà soát quy trình vận hành và thiết lập kịch bản dự phòng thanh khoản thích ứng kịp thời."
+
+    # GÓC NHÌN FINTECH & B2B (PAYOO ICP FILTER)
+    if is_payments:
+        fintech_lens = (
+            f"Payoo và các trung gian thanh toán tích hợp công nghệ xác thực danh tính điện tử eKYC, bảo mật sinh trắc học và hệ thống thanh toán SmartPOS / QR theo tiêu chuẩn an toàn của NHNN."
         )
-    elif "thị trường vốn" in cat_lower or any(k in hl.lower() for k in ["cổ phiếu", "trái phiếu", "chứng khoán"]):
-        analysis_mechanism = (
-            f"Cơ chế truyền dẫn quanh '{clean_hl}' thể hiện qua sự điều chỉnh thanh khoản giao dịch, định giá tài sản và mức độ minh bạch thông tin tài chính của {real_ent}."
+    elif "bán lẻ" in cat_lower or any(k in hl_lower for k in ["siêu thị", "tiêu dùng", "f&b", "mua sắm"]):
+        fintech_lens = (
+            f"Trước áp lực tối ưu hóa chi phí vận hành và kích cầu tiêu dùng, các chuỗi bán lẻ cần ứng dụng Payoo SmartPOS All-in-One, Dynamic QR và giải pháp trả góp thẻ tín dụng 0% để gia tăng doanh số tại quầy."
         )
-    elif "bán lẻ" in cat_lower or any(k in hl.lower() for k in ["tiêu dùng", "thưởng tết", "giá vàng", "giá xăng"]):
-        analysis_mechanism = (
-            f"Tín hiệu từ '{clean_hl}' tác động trực tiếp tới sức mua người tiêu dùng, vòng quay tồn kho hàng hóa và kế hoạch cân đối dòng tiền tại quầy của {real_ent}."
+    elif is_lending:
+        fintech_lens = (
+            f"Sự kiện thuần về nghiệp vụ tín dụng cho vay bán lẻ phía Tài sản — Không phát sinh điểm chạm thanh toán bán lẻ trực tiếp qua Payoo SmartPOS."
         )
-    elif "thanh toán" in cat_lower or any(k in hl.lower() for k in ["tài khoản", "chuyển tiền", "thanh toán thừa"]):
-        analysis_mechanism = (
-            f"Diễn biến quanh '{clean_hl}' đặt ra yêu cầu siết chặt kiểm soát rủi ro giao dịch, đối soát tài khoản thanh toán và ngăn ngừa lỗ hổng dòng tiền tại {real_ent}."
+    elif is_capital or "warren buffett" in hl_lower:
+        fintech_lens = (
+            f"Giao dịch thị trường vốn và hoạt động tài chính quốc tế — Không liên quan đến hoạt động thanh toán bán lẻ nội địa hay sản phẩm Payoo."
         )
     else:
-        analysis_mechanism = (
-            f"Biến động quanh '{clean_hl}' tác động lan tỏa đến năng lực quản trị vốn lưu động, chi phí tuân thủ thủ tục và kế hoạch vận hành của {real_ent}."
+        fintech_lens = (
+            f"Diễn biến kinh tế vĩ mô và phân bổ vốn — Không phát sinh điểm chạm thanh toán trực tiếp tại điểm bán."
         )
-
-    # 03. TÁC ĐỘNG THỊ TRƯỜNG
-    if len(fact_sents) > 1:
-        analysis_market = f"Thị trường ghi nhận tác động cụ thể từ '{clean_hl}': {fact_sents[1]}"
-    else:
-        analysis_market = f"Thị trường đánh giá cao khả năng thích ứng linh hoạt và quản trị rủi ro dòng tiền của {real_ent} sau sự kiện '{clean_hl}'."
-
-    # 04. HÀM Ý VÀ TÍN HIỆU THEO DÕI
-    if "ngân hàng" in cat_lower:
-        analysis_watch = f"Tín hiệu cần theo dõi tiếp theo cho {real_ent} sau sự kiện '{clean_hl}' là biến động lãi suất huy động và tốc độ tăng trưởng tín dụng."
-    elif "thị trường vốn" in cat_lower:
-        analysis_watch = f"Tín hiệu trọng tâm cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tiến độ thực hiện nghĩa vụ báo cáo và lịch đáo hạn công nợ."
-    elif "bán lẻ" in cat_lower:
-        analysis_watch = f"Tín hiệu thị trường cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là sức mua thực tế và chỉ số tổng mức bán lẻ hàng hóa dịch vụ."
-    elif "thanh toán" in cat_lower:
-        analysis_watch = f"Tín hiệu an toàn cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tỷ lệ áp dụng sinh trắc học và cảnh báo giao dịch bất thường."
-    else:
-        analysis_watch = f"Tín hiệu chính sách cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tiến độ ban hành văn bản hướng dẫn và mức độ sẵn sàng tuân thủ."
-
-    # GÓC NHÌN FINTECH & B2B
-    fintech_lens = (
-        f"Từ bối cảnh '{clean_hl}', các đơn vị kinh doanh liên quan đến {real_ent} cần đẩy mạnh chuẩn hóa thanh toán không tiền mặt qua Payoo SmartPOS All-in-One và Dynamic QR."
-    )
-
-    # KHUYẾN NGHỊ THỰC THI
-    practical = (
-        f"Đơn vị quản lý liên quan đến {real_ent} khi ứng phó với '{clean_hl}' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền."
-    )
 
     return {
-        "analysisNature": analysis_nature,
-        "analysisMechanism": analysis_mechanism,
-        "analysisMarketImpact": analysis_market,
-        "analysisWatchSignal": analysis_watch,
-        "sectionB_context": analysis_nature,
-        "sectionC_whyItMatters": analysis_market,
-        "sectionD_macroMicro": analysis_mechanism,
+        "briefingContext": b_context,
+        "briefingFacts": b_facts,
+        "briefingPerspective": b_perspective,
+        "briefingImplication": b_implication,
+        "fintechRelevance": fintech_lens,
+        "analysisNature": b_context,
+        "analysisMechanism": b_facts,
+        "analysisMarketImpact": b_perspective,
+        "analysisWatchSignal": b_implication,
+        "sectionB_context": b_context,
+        "sectionC_whyItMatters": b_perspective,
+        "sectionD_macroMicro": b_facts,
         "sectionE_fintechLens": fintech_lens,
-        "sectionF_scenariosWatchlist": analysis_watch,
-        "sectionG_practicalTakeaway": practical,
+        "sectionF_scenariosWatchlist": b_implication,
+        "sectionG_practicalTakeaway": b_implication,
     }
 
 

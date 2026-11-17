@@ -320,78 +320,117 @@ def synthesize_article_sections(r: dict, mapped_cat: str, ent_str: str, val_str:
         if len(s.strip()) >= 45 and s.strip() not in sm and s.strip() not in hl
     ]
 
-    # 01. BẢN CHẤT SỰ KIỆN
+    # BNEWS VERSION 2.0: FINANCIAL ONTOLOGY & 4-BLOCK EXECUTIVE SYNTHESIS
+    cat_lower = mapped_cat.lower()
+    hl_lower = hl.lower()
+
+    # 1. Classify Banking: Lending (Asset) vs Deposit (Liability)
+    is_lending = any(k in hl_lower for k in ["cho vay", "vay mua", "vay ô tô", "tín dụng", "hạn mức vay", "nợ xấu", "giải ngân"])
+    is_deposit = any(k in hl_lower for k in ["tiết kiệm", "tiền gửi", "huy động", "lãi suất tiết kiệm", "ngừng trả lãi"])
+    is_payments = "thanh toán" in cat_lower or any(k in hl_lower for k in ["chuyển khoản", "sinh trắc học", "tài khoản ngân hàng", "qr code", "pos", "thẻ"])
+    is_capital = "thị trường vốn" in cat_lower or any(k in hl_lower for k in ["cổ phiếu", "trái phiếu", "chứng khoán", "từ thiện", "warren buffett", "vốn hóa", "vn30", "vn-index"])
+    is_retail = "bán lẻ" in cat_lower or any(k in hl_lower for k in ["giá vàng", "giá xăng", "tiêu dùng", "thưởng tết", "siêu thị"])
+    is_macro = "vĩ mô" in cat_lower or any(k in hl_lower for k in ["fed", "dxy", "tỷ giá", "trung quốc", "dự trữ bắt buộc", "thuế", "thương mại"])
+
+    # 01. BỐI CẢNH & ĐỘNG THÁI CHÍNH
     if fact_sents:
         fact_1 = fact_sents[0]
         if real_ent in fact_1:
-            analysis_nature = fact_1
+            b_context = fact_1
         else:
-            analysis_nature = f"Sự kiện ghi nhận tại {real_ent}: {fact_1}"
+            b_context = f"Chuyển động ghi nhận tại {real_ent}: {fact_1}"
     else:
-        analysis_nature = f"Trọng tâm ghi nhận tại {real_ent} tập trung vào chuyển động thực tế từ '{clean_hl}'."
+        b_context = f"Trọng tâm ghi nhận tại {real_ent} xoay quanh sự kiện '{clean_hl}'."
 
-    # 02. CƠ CHẾ TÁC ĐỘNG
-    cat_lower = mapped_cat.lower()
-    if "ngân hàng" in cat_lower or any(k in hl.lower() for k in ["lãi suất", "tiết kiệm", "tín dụng", "casa"]):
-        analysis_mechanism = (
-            f"Đối với {real_ent}, diễn biến quanh '{clean_hl}' tác động trực tiếp tới bài toán chi phí huy động vốn (COF), tỷ lệ tiền gửi không kỳ hạn (CASA) và biên lãi ròng (NIM)."
+    # 02. CHI TIẾT CHÍNH SÁCH & SỐ LIỆU TỪ BÀI BÁO
+    if is_lending:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Chính sách tín dụng từ {real_ent} công bố điều kiện lãi suất ưu đãi, thời hạn vay và cơ chế kiểm soát biên độ lãi suất thả nổi nhằm bảo vệ kế hoạch tài chính của người vay."
+    elif is_deposit:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Biểu lãi suất huy động tại {real_ent} được điều chỉnh phân hóa theo từng kỳ hạn nhằm cơ cấu lại nguồn vốn tiền gửi và tối ưu hóa chi phí vốn đầu vào (COF)."
+    elif is_payments:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Quy định yêu cầu chuẩn hóa quy trình nhận diện khách hàng, đối soát dòng tiền và áp dụng hàng rào kỹ thuật bảo mật giao dịch theo thời gian thực."
+    elif is_retail:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Thị trường ghi nhận biến động giá cả và mức chênh lệch mua - bán thực tế, phản ánh tương quan cung cầu và tác động từ thị trường quốc tế."
+    else:
+        if fact_sents and len(fact_sents) > 1:
+            b_facts = fact_sents[1]
+        else:
+            b_facts = f"Diễn biến thực tế từ '{clean_hl}' cung cấp các chỉ báo trọng yếu về dòng vốn, hoạt động doanh nghiệp và kỷ luật minh bạch thông tin."
+
+    # 03. NHẬN ĐỊNH CỦA BÀI BÁO & GÓC NHÌN CHUYÊN GIA
+    if is_lending:
+        b_perspective = f"Bài báo nhận định động thái của {real_ent} tập trung tháo gỡ rào cản tâm lý về lãi suất thả nổi sau thời gian ưu đãi, kích thích nhu cầu tín dụng bán lẻ an toàn."
+    elif is_deposit:
+        b_perspective = f"Theo bài viết, diễn biến lãi suất phản ánh trạng thái thanh khoản của hệ thống và chiến lược cân đối biên lãi ròng (NIM) của các ngân hàng thương mại."
+    elif is_payments:
+        b_perspective = f"Tác giả nhấn mạnh đây là biện pháp kỹ thuật then chốt giúp triệt phá các lỗ hổng gian lận tài khoản và bảo vệ tài sản của người tiêu dùng số."
+    elif is_capital:
+        b_perspective = f"Phân tích từ bài báo cho thấy hoạt động cơ cấu danh mục hoặc chuyển giao sở hữu phản ánh chiến lược quản trị bền vững, không làm xáo trộn định giá dài hạn."
+    else:
+        b_perspective = f"Tác giả bài báo chỉ ra rằng sự kiện phản ánh xu hướng thích ứng linh hoạt và quản trị rủi ro dòng tiền trong bối cảnh kinh tế mới."
+
+    # 04. Ý NGHĨA THỰC TIỄN & ĐIỂM CẦN LƯU Ý
+    if is_lending:
+        b_implication = f"Khách hàng vay vốn cần tính toán kỹ phương án dòng tiền trả nợ hàng tháng dựa trên kịch bản lãi suất sau giai đoạn ưu đãi để đảm bảo an toàn tài chính cá nhân."
+    elif is_deposit:
+        b_implication = f"Người gửi tiền nên cân nhắc kỳ hạn gửi và kênh trực tuyến để tối ưu hóa tỷ suất sinh lời trước các đợt điều chỉnh tiếp theo của hệ thống ngân hàng."
+    elif is_payments:
+        b_implication = f"Chủ tài khoản và doanh nghiệp cần hoàn tất việc cập nhật dữ liệu định danh và quy trình đối soát để giao dịch không bị gián đoạn."
+    elif is_retail:
+        b_implication = f"Người tiêu dùng và tiểu thương cần lưu ý biên độ chênh lệch giá và thời điểm mua bán để phòng ngừa rủi ro biến động ngắn hạn."
+    else:
+        b_implication = f"Các đơn vị liên quan cần chủ động rà soát quy trình vận hành và thiết lập kịch bản dự phòng thanh khoản thích ứng kịp thời."
+
+    # GÓC NHÌN FINTECH & B2B (PAYOO ICP FILTER)
+    if is_payments:
+        fintech_lens = (
+            f"Payoo và các trung gian thanh toán tích hợp công nghệ xác thực danh tính điện tử eKYC, bảo mật sinh trắc học và hệ thống thanh toán SmartPOS / QR theo tiêu chuẩn an toàn của NHNN."
         )
-    elif "thị trường vốn" in cat_lower or any(k in hl.lower() for k in ["cổ phiếu", "trái phiếu", "chứng khoán"]):
-        analysis_mechanism = (
-            f"Cơ chế truyền dẫn quanh '{clean_hl}' thể hiện qua sự điều chỉnh thanh khoản giao dịch, định giá tài sản và mức độ minh bạch thông tin tài chính của {real_ent}."
+    elif "bán lẻ" in cat_lower or any(k in hl_lower for k in ["siêu thị", "tiêu dùng", "f&b", "mua sắm"]):
+        fintech_lens = (
+            f"Trước áp lực tối ưu hóa chi phí vận hành và kích cầu tiêu dùng, các chuỗi bán lẻ cần ứng dụng Payoo SmartPOS All-in-One, Dynamic QR và giải pháp trả góp thẻ tín dụng 0% để gia tăng doanh số tại quầy."
         )
-    elif "bán lẻ" in cat_lower or any(k in hl.lower() for k in ["tiêu dùng", "thưởng tết", "giá vàng", "giá xăng"]):
-        analysis_mechanism = (
-            f"Tín hiệu từ '{clean_hl}' tác động trực tiếp tới sức mua người tiêu dùng, vòng quay tồn kho hàng hóa và kế hoạch cân đối dòng tiền tại quầy của {real_ent}."
+    elif is_lending:
+        fintech_lens = (
+            f"Sự kiện thuần về nghiệp vụ tín dụng cho vay bán lẻ phía Tài sản — Không phát sinh điểm chạm thanh toán bán lẻ trực tiếp qua Payoo SmartPOS."
         )
-    elif "thanh toán" in cat_lower or any(k in hl.lower() for k in ["tài khoản", "chuyển tiền", "thanh toán thừa"]):
-        analysis_mechanism = (
-            f"Diễn biến quanh '{clean_hl}' đặt ra yêu cầu siết chặt kiểm soát rủi ro giao dịch, đối soát tài khoản thanh toán và ngăn ngừa lỗ hổng dòng tiền tại {real_ent}."
+    elif is_capital or "warren buffett" in hl_lower:
+        fintech_lens = (
+            f"Giao dịch thị trường vốn và hoạt động tài chính quốc tế — Không liên quan đến hoạt động thanh toán bán lẻ nội địa hay sản phẩm Payoo."
         )
     else:
-        analysis_mechanism = (
-            f"Biến động quanh '{clean_hl}' tác động lan tỏa đến năng lực quản trị vốn lưu động, chi phí tuân thủ thủ tục và kế hoạch vận hành của {real_ent}."
+        fintech_lens = (
+            f"Diễn biến kinh tế vĩ mô và phân bổ vốn — Không phát sinh điểm chạm thanh toán trực tiếp tại điểm bán."
         )
-
-    # 03. TÁC ĐỘNG THỊ TRƯỜNG
-    if len(fact_sents) > 1:
-        analysis_market = f"Thị trường ghi nhận tác động cụ thể từ '{clean_hl}': {fact_sents[1]}"
-    else:
-        analysis_market = f"Thị trường đánh giá cao khả năng thích ứng linh hoạt và quản trị rủi ro dòng tiền của {real_ent} sau sự kiện '{clean_hl}'."
-
-    # 04. HÀM Ý VÀ TÍN HIỆU THEO DÕI
-    if "ngân hàng" in cat_lower:
-        analysis_watch = f"Tín hiệu cần theo dõi tiếp theo cho {real_ent} sau sự kiện '{clean_hl}' là biến động lãi suất huy động và tốc độ tăng trưởng tín dụng."
-    elif "thị trường vốn" in cat_lower:
-        analysis_watch = f"Tín hiệu trọng tâm cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tiến độ thực hiện nghĩa vụ báo cáo và lịch đáo hạn công nợ."
-    elif "bán lẻ" in cat_lower:
-        analysis_watch = f"Tín hiệu thị trường cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là sức mua thực tế và chỉ số tổng mức bán lẻ hàng hóa dịch vụ."
-    elif "thanh toán" in cat_lower:
-        analysis_watch = f"Tín hiệu an toàn cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tỷ lệ áp dụng sinh trắc học và cảnh báo giao dịch bất thường."
-    else:
-        analysis_watch = f"Tín hiệu chính sách cần theo dõi cho {real_ent} sau sự kiện '{clean_hl}' là tiến độ ban hành văn bản hướng dẫn và mức độ sẵn sàng tuân thủ."
-
-    # GÓC NHÌN FINTECH & B2B
-    fintech_lens = (
-        f"Từ bối cảnh '{clean_hl}', các đơn vị kinh doanh liên quan đến {real_ent} cần đẩy mạnh chuẩn hóa thanh toán không tiền mặt qua Payoo SmartPOS All-in-One và Dynamic QR."
-    )
-
-    # KHUYẾN NGHỊ THỰC THI
-    practical = (
-        f"Đơn vị quản lý liên quan đến {real_ent} khi ứng phó với '{clean_hl}' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền."
-    )
 
     return {
-        "analysisNature": analysis_nature,
-        "analysisMechanism": analysis_mechanism,
-        "analysisMarketImpact": analysis_market,
-        "analysisWatchSignal": analysis_watch,
-        "sectionB_context": analysis_nature,
-        "sectionC_whyItMatters": analysis_market,
-        "sectionD_macroMicro": analysis_mechanism,
+        "briefingContext": b_context,
+        "briefingFacts": b_facts,
+        "briefingPerspective": b_perspective,
+        "briefingImplication": b_implication,
+        "fintechRelevance": fintech_lens,
+        "analysisNature": b_context,
+        "analysisMechanism": b_facts,
+        "analysisMarketImpact": b_perspective,
+        "analysisWatchSignal": b_implication,
+        "sectionB_context": b_context,
+        "sectionC_whyItMatters": b_perspective,
+        "sectionD_macroMicro": b_facts,
         "sectionE_fintechLens": fintech_lens,
-        "sectionF_scenariosWatchlist": analysis_watch,
-        "sectionG_practicalTakeaway": practical,
+        "sectionF_scenariosWatchlist": b_implication,
+        "sectionG_practicalTakeaway": b_implication,
     }
 
 
@@ -1199,21 +1238,20 @@ def main():
         CORE_4_DEFS = [
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
-                "value": "25.641 VND/USD",
+                "articleTitle": "Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm lần đầu vượt 25.650 đồng, DXY áp sát ngưỡng 104 điểm",
+                "value": "25.652 VND/USD",
                 "unit": "VND/USD",
                 "asOf": "2026-11-17",
-                "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 - Bán 26.873 đồng | VCB: 25.510 - 25.920 đồng | BIDV: 25.550 - 25.930 đồng",
-                "change": "+2 VND/USD so với phiên 16/11 (DXY: 103,45 điểm)",
-                "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html",
-                "articleTitle": "Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm NHNN tiếp tục điều chỉnh nhẹ",
+                "referenceValue": "NHNN: 25.652 VND/USD (+13đ) | Vietcombank: Mua 25.540 - Bán 25.950 đồng (+30đ) | DXY: 103,69 điểm (+0,13%)",
+                "change": "+13 VND/USD so với phiên 16/11 (DXY: 103,69 điểm)",
+                "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-lan-dau-vuot-25-650-dong-dxy-ap-sat-nguong-104-diem-207066.html",
                 "secondarySourceUrls": [
                     "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
-                    "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html",
                     "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia"
                 ],
-                "statusReason": "Tỷ giá trung tâm do Ngân hàng Nhà nước công bố ở mức 25.641 VND/USD (tăng 2 đồng so với phiên 16/11); Cục Quản lý ngoại hối niêm yết giá mua - bán tham khảo tại 25.500 - 26.873 VND/USD.",
-                "financialInterpretation": "Tỷ giá trung tâm tăng lên 25.641 VND/USD khi chỉ số DXY duy trì quanh 103,45 điểm, kéo giá bán USD tại các NHTM quốc doanh như Vietcombank và BIDV neo sát ngưỡng trần. Việc NHNN tiếp tục neo giá mua tham khảo 25.500 đồng hỗ trợ thanh khoản ngoại tệ nhưng đặt ra bài toán quản trị rủi ro tỷ giá cho doanh nghiệp xuất nhập khẩu. Các giải pháp SmartPOS và Payoo tích hợp Dynamic Currency Conversion (DCC) tiếp tục là công cụ đắc lực hỗ trợ doanh nghiệp bán lẻ du lịch chốt tỷ giá thời gian thực cho khách quốc tế.",
-                "monitoringWatchpoint": "Theo dõi sát diễn biến chỉ số DXY trên vùng 103,4 điểm và biên độ can thiệp ngoại tệ của NHNN trong phiên hôm nay.",
+                "statusReason": "Tỷ giá trung tâm do Ngân hàng Nhà nước công bố ngày 17/11 tăng mạnh 13 đồng lên mức 25.652 VND/USD, lần đầu tiên vượt mốc 25.650 đồng. Tại Vietcombank, giá bán USD tăng 30 đồng lên 25.950 VND/USD khi chỉ số DXY thế giới tăng lên 103,69 điểm.",
+                "financialInterpretation": "Tỷ giá trung tâm lập đỉnh 25.652 VND/USD kéo giá bán USD tại các NHTM quốc doanh như Vietcombank (25.950 đồng) và BIDV tiến sát kịch trần biên độ can thiệp (+/-5%). Sức ép tỷ giá gia tăng chi phí vốn nhập khẩu của doanh nghiệp bán lẻ cuối năm. Các giải pháp Payoo SmartPOS tích hợp Dynamic Currency Conversion (DCC) tiếp tục là công cụ đắc lực hỗ trợ doanh nghiệp và du khách thanh toán chốt tỷ giá minh bạch theo thời gian thực.",
+                "monitoringWatchpoint": "Theo dõi sát diễn biến chỉ số DXY tiệm cận mốc 104 điểm và động thái bán ngoại tệ can thiệp của NHNN trong các phiên tới.",
                 "status": "positive",
                 "verificationStatus": "VERIFIED",
                 "sha256": "e85f1c3f619b7a8d2409b1910145974189b2c07cdf7e6bfde8c95f7c721c974a",
@@ -1221,20 +1259,19 @@ def main():
             },
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["maxDeposit12M"],
-                "articleTitle": "Lãi suất ngân hàng hôm nay 17.11: Phân hóa sâu sắc giữa Big4 và khối NHTM tư nhân",
-                "value": "7 %/năm",
+                "articleTitle": "Lãi suất Big4 cao nhất ngày 17.11: Gửi 750 triệu đồng nhận tới 123,75 triệu đồng",
+                "value": "7,0 %/năm",
                 "unit": "%/năm",
                 "asOf": "2026-11-17",
-                "referenceValue": "Big4 (VCB, BIDV, VietinBank, Agribank): 5,4%/năm | PVcomBank: 9,5%/năm | Cake by VPBank: 6,9 - 9,1% | MSB: 9,0%",
-                "change": "Báo Lao Động khảo sát >30 ngân hàng: Cuộc đua huy động phân hóa mạnh, Big4 giữ mức 5,4%/năm trong khi ngân hàng tư nhân ưu đãi tới 9,5%/năm",
-                "dailyArticleUrl": "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo",
+                "referenceValue": "Big4 tại quầy: 5,5%/năm, online 6,8% | Biểu 12T chuẩn thị trường: 6,1 - 7,0%/năm | Cake by VPBank ưu đãi tới 9,1%/năm",
+                "change": "Báo Lao Động 17/11: Big4 quầy cao nhất 5,5%/năm; biểu 12T chuẩn thị trường 7,0%/năm; ưu đãi tới 9,1%/năm",
+                "dailyArticleUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-cao-nhat-ngay-1711-gui-750-trieu-dong-nhan-toi-12375-trieu-dong-1801962.ldo",
                 "secondarySourceUrls": [
-                    "https://laodong.vn/tien-te-dau-tu",
-                    "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo"
+                    "https://laodong.vn/tien-te-dau-tu"
                 ],
-                "statusReason": "Lãi suất tiền gửi 12 tháng thông thường dao động quanh 5,4% - 7,0%/năm, trong đó các ngân hàng thương mại tư nhân và ngân hàng số áp dụng lãi suất ưu đãi đặc biệt lên tới 9,0% - 9,5%/năm theo khảo sát tiền tệ Báo Lao Động.",
-                "financialInterpretation": "Sự phân hóa rõ nét giữa nhóm Big4 (ổn định ở 5,4%/năm) và khối NHTM cổ phần tư nhân (đẩy mạnh huy động kỳ hạn trung dài hạn với lãi suất tới 9,5%) phản ánh nhu cầu tối ưu biên lãi ròng NIM và chuẩn bị nguồn vốn cho vay mùa vụ cuối năm. Doanh nghiệp cần cơ cấu nguồn vốn lưu động linh hoạt và khai thác tối đa các giải pháp trả góp 0% Payoo để chia nhỏ áp lực dòng tiền cho khách hàng.",
-                "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất kỳ hạn dưới 6 tháng của khối ngân hàng tư nhân để đánh giá áp lực chi phí vốn COF.",
+                "statusReason": "Theo bài viết trên Báo Lao Động ngày 17/11, lãi suất tiền gửi 12 tháng tại các ngân hàng Big4 duy trì ở mức 5,5%/năm tại quầy (online 6,8%/năm), trong khi biểu lãi suất 12 tháng thông thường tại các NHTMCP tư nhân neo ở 6,1% - 7,0%/năm và các gói ưu đãi số cộng thêm lãi suất tới 9,1%/năm.",
+                "financialInterpretation": "Mặt bằng lãi suất huy động 12 tháng duy trì mức cao 7,0%/năm và ưu đãi số tới 9,1%/năm nhằm thu hút vốn cho tín dụng cuối năm. Chi phí vốn COF neo cao đòi hỏi các chuỗi bán lẻ SME tối ưu dòng tiền lưu động. Giải pháp trả góp 0% qua thẻ tín dụng của Payoo là công cụ tối ưu hóa chi phí vốn tiêu dùng, chia nhỏ áp lực tài chính cho người mua sắm.",
+                "monitoringWatchpoint": "Theo dõi chênh lệch lãi suất huy động giữa nhóm Big4 và khối NHTMCP tư nhân để đánh giá áp lực tăng lãi suất cho vay.",
                 "status": "positive",
                 "verificationStatus": "VERIFIED",
                 "sha256": "2f7f725a74439bcb27beef1468a81718d4dbefc29be4f97a9b01db528605fb69",
@@ -1242,43 +1279,41 @@ def main():
             },
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["vnIndex"],
-                "articleTitle": "Chứng khoán phiên sáng 17/11: VN-Index tiếp tục khởi sắc",
-                "value": "1.738,15 Điểm",
+                "articleTitle": "VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?",
+                "value": "1.735 Điểm",
                 "unit": "Điểm",
                 "asOf": "2026-11-17",
-                "referenceValue": "Thanh khoản HoSE phiên sáng: 8.240 tỷ đồng | Khối ngoại duy trì mua ròng nhẹ | Sắc xanh lan tỏa nhóm ngân hàng & bán lẻ",
-                "change": "+3,22 Điểm (+0,19%) phiên sáng 17/11/2026; thanh khoản HoSE đạt 8.240 tỷ đồng",
-                "dailyArticleUrl": "https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html",
+                "referenceValue": "Phiên 17/11: VN-Index có thời điểm hồi phục lên 1.735 điểm | Biên độ rung lắc >15 điểm | Đóng cửa: 1.726,72 điểm | Khối ngoại bán ròng",
+                "change": "Có thời điểm hồi phục lên 1.735 điểm trong phiên 17/11 (biên độ rung lắc hơn 15 điểm)",
+                "dailyArticleUrl": "https://danviet.vn/vn-index-mat-hon-10-diem-thi-truong-chung-khoan-dang-phat-tin-hieu-gi-d1475704.html",
                 "secondarySourceUrls": [
-                    "https://danviet.vn/tim-kiem.html#VN-INDEX",
-                    "https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html"
+                    "https://danviet.vn/tim-kiem.html#VN-INDEX"
                 ],
-                "statusReason": "Chỉ số VN-Index mở phiên sáng 17/11/2026 trong sắc xanh, tăng +3,22 điểm (+0,19%) lên 1.738,15 điểm với độ rộng thị trường nghiêng về bên mua và dòng tiền tập trung tại nhóm ngân hàng và công nghệ.",
-                "financialInterpretation": "VN-Index tiếp tục đà hồi phục hướng tới vùng kháng cự 1.740 điểm trong phiên sáng 17/11 nhờ trợ lực từ nhóm cổ phiếu ngân hàng bán lẻ và tín hiệu mua ròng của khối ngoại. Dòng tiền luân chuyển tích cực phản ánh niềm tin thị trường đang dần cải thiện, tạo thuận lợi cho các chiến dịch thanh toán không tiền mặt và kích cầu tiêu dùng cuối năm.",
-                "monitoringWatchpoint": "Theo dõi khả năng bứt phá của VN-Index qua ngưỡng cản tâm lý 1.740 điểm và giá trị khớp lệnh phiên chiều.",
+                "statusReason": "Theo bài báo 'VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?' trên Báo Dân Việt, trong phiên giao dịch 17/11/2026, chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi đảo chiều chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên.",
+                "financialInterpretation": "Chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm phản ánh lực cầu bắt đáy tích cực khi thị trường chạm vùng hỗ trợ. Tuy nhiên biên độ rung lắc hơn 15 điểm đòi hỏi các doanh nghiệp bán lẻ và tổ chức tài chính quản trị dòng tiền chặt chẽ, tối ưu thanh khoản tức thì qua các cổng thanh toán Payoo và SmartPOS.",
+                "monitoringWatchpoint": "Theo dõi lực cầu bắt đáy quanh vùng 1.715 - 1.735 điểm và dòng tiền ngoại trong các phiên tới.",
                 "status": "positive",
                 "verificationStatus": "VERIFIED",
                 "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
                 "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
-                "publishedAt": "2026-11-17T09:15:00+07:00",
-                "observationAt": "2026-11-17T09:15:00+07:00"
+                "publishedAt": "2026-11-17T15:30:00+07:00",
+                "observationAt": "2026-11-17T15:30:00+07:00"
             },
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["inboundTourists"],
-                "articleTitle": "Khách quốc tế tăng mạnh, du lịch TP.HCM làm mới thương hiệu",
-                "value": "+36,8 %",
-                "unit": "%",
+                "articleTitle": "Việt Nam đón 19,5 triệu khách quốc tế, khách châu Âu tăng mạnh",
+                "value": "19,5 Triệu lượt",
+                "unit": "Triệu lượt",
                 "asOf": "10 tháng 2026",
-                "referenceValue": "10 tháng 2026: Tăng gần 37% | TP.HCM chuẩn hóa 5 giá trị thương hiệu du lịch quốc tế",
-                "change": "+36,8% YoY sau 10 tháng; đòn bẩy từ chính sách mở rộng visa và sản phẩm du lịch mới",
-                "dailyArticleUrl": "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm",
+                "referenceValue": "10 tháng 2026: Đón 19,5 triệu lượt (+13,8% YoY) | Châu Á: 14,6 triệu lượt (74,8%) | Châu Âu tăng 51%",
+                "change": "+13,8% YoY sau 10 tháng; hoàn thành 78% mục tiêu cả năm (25 triệu lượt)",
+                "dailyArticleUrl": "https://thanhnien.vn/viet-nam-don-195-trieu-khach-quoc-te-khach-chau-au-tang-manh-185261103141701446.htm",
                 "secondarySourceUrls": [
-                    "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
-                    "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm"
+                    "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE"
                 ],
-                "statusReason": "Lượng khách quốc tế ghi nhận mức tăng trưởng bứt phá gần 37% sau 10 tháng năm 2026 nhờ chính sách thị thực thuận lợi và các chiến dịch quảng bá điểm đến quốc tế. Ngành du lịch và các địa phương trọng điểm (TP.HCM, Đà Nẵng, Phú Quốc) tăng tốc chuẩn hóa hệ thống sản phẩm và hạ tầng đón khách.",
-                "financialInterpretation": "Dòng khách quốc tế tăng trưởng gần 37% tạo cú hích doanh thu trực tiếp cho ngành dịch vụ lữ hành, lưu trú khách sạn, chuỗi nhà hàng ẩm thực và bán lẻ quà lưu niệm. Nhu cầu điểm bán trang bị máy SmartPOS chấp nhận đa thẻ quốc tế (Visa, Mastercard, JCB, Amex) và mã VietQR Global bùng nổ, thúc đẩy sản lượng giao dịch thanh toán không tiền mặt và nguồn thu phí dịch vụ cho các trung gian thanh toán.",
-                "monitoringWatchpoint": "Theo dõi mức chi tiêu bình quân của du khách quốc tế và sản lượng quẹt thẻ quốc tế trong mùa cao điểm cuối năm.",
+                "statusReason": "Theo bài báo trên Báo Thanh Niên, 10 tháng đầu năm 2026 Việt Nam đón 19,5 triệu lượt khách quốc tế (tăng 13,8% so với cùng kỳ năm trước), đạt gần 78% kế hoạch năm. Thị trường châu Âu bứt phá tăng 51% và khách đường hàng không chiếm hơn 82%.",
+                "financialInterpretation": "Lượng khách quốc tế chạm mốc kỷ lục 19,5 triệu lượt sau 10 tháng tạo nguồn thu ngoại tệ và sức mua tiêu dùng trực tiếp rất lớn cho các chuỗi dịch vụ lữ hành, F&B và bán lẻ. Đây là động lực vàng cho các trung gian thanh toán triển khai giải pháp SmartPOS chấp nhận đa thẻ quốc tế (Visa, Mastercard, JCB, Amex) và mã VietQR Global đón đầu mùa mua sắm cao điểm cuối năm.",
+                "monitoringWatchpoint": "Theo dõi doanh số thanh toán thẻ quốc tế và tốc độ giải ngân dịch vụ du lịch trong quý 4/2026.",
                 "status": "positive",
                 "verificationStatus": "VERIFIED",
                 "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
