@@ -1102,6 +1102,8 @@ def main():
             "publisherPublishedAt": f"{pub_display} | Nguồn gốc: {pub_name} ({pub_time})",
             "publicationTimestamp": pub_display,
             "originalSourcePublishedAt": pub_time,
+            "originalPublishedAt": pub_time,
+            "publisher": pub_name,
             "sourceName": pub_name,
             "originalSourceName": pub_name,
             "author": pub_name,
