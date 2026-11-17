@@ -157,23 +157,11 @@
   <header class="ms-masthead" id="masthead">
     <div class="ms-container">
       <div class="ms-masthead-main-row">
-        <!-- Left: Hamburger Menu + Quick Search (Pill on Desktop, Search Icon on Mobile) -->
+        <!-- Left: Hamburger Menu (VnEconomy Parity) -->
         <div class="ms-masthead-left" data-nosnippet>
           <button type="button" id="btnOpenCategoryDrawer" class="ms-hamburger-btn" aria-label="Mở menu chuyên mục và tìm kiếm" aria-controls="mobileNavDrawer" aria-expanded="false" onclick="openMobileDrawer(false)" title="Mở Menu Chuyên mục">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
-
-          <button type="button" id="btnMobileSearchDrawer" class="ms-mobile-search-btn ms-hide-desktop" aria-label="Tìm kiếm bài viết" onclick="openMobileDrawer(true)" title="Tìm kiếm bài viết">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-
-          <form id="headerQuickSearchForm" class="ms-header-search-form ms-hide-mobile" role="search" onsubmit="return handleHeaderQuickSearch(event)">
-            <button type="submit" class="ms-header-search-icon-btn" aria-label="Thực hiện tìm kiếm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <label for="headerQuickSearchInput" class="ms-visually-hidden">Nhập từ khóa bài viết</label>
-            <input type="search" id="headerQuickSearchInput" class="ms-header-search-input" placeholder="Nhập từ khóa bài viết..." autocomplete="off">
-          </form>
         </div>
 
         <!-- Center: Centered Brand Logo & Nameplate -->
@@ -187,7 +175,7 @@
 
         <!-- Right: Edition Badge & Icon Theme Toggle -->
         <div class="ms-masthead-actions" data-nosnippet>
-          <span id="mastheadEditionBadge" class="ms-badge ms-badge-primary ms-edition-pill">ẤN BẢN SỐ 31 · PHIÊN CHIỀU</span>
+          <span id="mastheadEditionBadge" class="ms-badge ms-badge-primary ms-edition-pill">ẤN BẢN SỐ 32 · PHIÊN CHIỀU</span>
           <button id="themeToggleBtn" type="button" class="ms-theme-toggle-btn" aria-label="Chuyển giao diện Sáng / Tối" title="Chuyển giao diện Sáng / Tối">
             <span class="ms-theme-icon" aria-hidden="true">🌙</span>
           </button>
@@ -312,7 +300,7 @@
       <a href="#masthead" class="ms-nav-drawer-brand" onclick="event.preventDefault(); closeMobileDrawer(); switchFintechTab('today');">
         <img src="./bnews-logo-light-opt.webp?v=1794692000" id="drawerBryanLogo" alt="Bnews | fintech" class="ms-nav-logo-img" width="108" height="33">
       </a>
-      <span id="drawerEditionBadge" class="ms-badge ms-badge-primary">ẤN BẢN SỐ 31 · PHIÊN CHIỀU</span>
+      <span id="drawerEditionBadge" class="ms-badge ms-badge-primary">ẤN BẢN SỐ 32 · PHIÊN CHIỀU</span>
     </div>
 
     <div class="ms-nav-drawer-body">

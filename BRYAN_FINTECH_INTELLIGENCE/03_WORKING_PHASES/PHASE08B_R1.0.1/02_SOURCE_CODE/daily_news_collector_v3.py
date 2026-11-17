@@ -722,6 +722,14 @@ def classify_canonical_category(headline: str, summary: str, text: str = "") -> 
     content = f"{headline} {clean_summary} {clean_text}".lower()
     head_sum = f"{headline} {clean_summary}".lower()
     
+    # Hard exclusion for crime, individual fraud, judicial proceedings, and court cases
+    CRIMINAL_EXCLUDES = [
+        "bị cáo", "xét xử", "lừa đảo", "đầu thú", "chiếm đoạt", "truy tố",
+        "bắt cựu", "bắt tạm giam", "khởi tố", "án mạng", "tống tiền", "chiếm đoạt tài sản"
+    ]
+    if any(k in head_sum for k in CRIMINAL_EXCLUDES) or any(k in content for k in ["bắt cựu cán bộ", "lừa đảo chiếm đoạt", "khởi tố vụ án"]):
+        return "IRRELEVANT", "LOW", True, "Criminal or judicial proceedings excluded from executive intelligence"
+    
     scores = {
         CATEGORY_MACRO_MONETARY: 0,
         CATEGORY_BANKING_CREDIT: 0,
@@ -815,6 +823,14 @@ def evaluate_editorial_and_commercial_relevance(headline: str, summary: str, tex
     content = f"{headline} {clean_summary} {clean_text}".lower()
     head_sum = f"{headline} {clean_summary}".lower()
     
+    # Hard exclusion for crime, individual fraud, judicial proceedings, and court cases
+    CRIMINAL_EXCLUDES = [
+        "bị cáo", "xét xử", "lừa đảo", "đầu thú", "chiếm đoạt", "truy tố",
+        "bắt cựu", "bắt tạm giam", "khởi tố", "án mạng", "tống tiền", "chiếm đoạt tài sản"
+    ]
+    if any(k in head_sum for k in CRIMINAL_EXCLUDES) or any(k in content for k in ["bắt cựu cán bộ", "lừa đảo chiếm đoạt", "khởi tố vụ án"]):
+        return "IRRELEVANT", "LOW", True, "Criminal or judicial proceedings excluded from executive intelligence"
+    
     # Non-financial / peripheral topic indicators
     irrelevant_keywords = [
         "thuốc lá", "hút thuốc", "bệnh viện", "y tế", "thể thao", "bóng đá",
@@ -822,7 +838,10 @@ def evaluate_editorial_and_commercial_relevance(headline: str, summary: str, tex
         "tai nạn giao thông", "thời tiết", "mưa bão", "ẩm thực", "thịt heo",
         "thực phẩm chức năng", "bệnh nhân", "công nghiệp văn hóa", "di sản văn hóa",
         "luật di sản", "khai thác sân bay", "chỉnh trang công viên", "công viên ven sông",
-        "cầu đi bộ"
+        "cầu đi bộ", "phòng gym", "thể hình", "thể dục", "fitness", "hóa chất", "sơn jotun",
+        "sơn nước", "cao tốc nối", "nối cao tốc", "quỹ bình ổn xăng dầu", "trao giải apea",
+        "asia pacific enterprise awards", "vinh danh doanh nghiệp xuất sắc", "doanh nghiệp xuất sắc châu á",
+        "bắt cựu", "lừa đảo", "chiếm đoạt", "truy tố", "xét xử", "bị cáo", "khởi tố", "đầu thú", "án mạng"
     ]
     
     core_financial_keywords = [
@@ -1455,17 +1474,17 @@ class DailyNewsCollector:
                 ("cafef.vn", "https://cafef.vn/tai-chinh-ngan-hang.chn"),
                 ("cafef.vn", "https://cafef.vn/thi-truong-chung-khoan.chn"),
                 ("cafef.vn", "https://cafef.vn/kinh-te-so.chn"),
-                ("cafef.vn", "https://cafef.vn/thoi-su.chn"),
-                ("cafef.vn", "https://cafef.vn/doanh-nghiep.chn"),
-                ("tuoitre.vn", "https://tuoitre.vn/kinh-doanh.htm"),
-                ("tuoitre.vn", "https://tuoitre.vn/tai-chinh.htm"),
-                ("thanhnien.vn", "https://thanhnien.vn/kinh-te.htm"),
-                ("thanhnien.vn", "https://thanhnien.vn/tai-chinh-ngan-hang.htm"),
+                ("cafef.vn", "https://cafef.vn/tai-chinh-quoc-te.chn"),
                 ("vneconomy.vn", "https://vneconomy.vn/tai-chinh.htm"),
                 ("vneconomy.vn", "https://vneconomy.vn/kinh-te-so.htm"),
+                ("vneconomy.vn", "https://vneconomy.vn/thi-truong.htm"),
+                ("tuoitre.vn", "https://tuoitre.vn/tai-chinh.htm"),
+                ("thanhnien.vn", "https://thanhnien.vn/tai-chinh-ngan-hang.htm"),
                 ("baodautu.vn", "https://baodautu.vn/tai-chinh-ngan-hang-d4/"),
+                ("baodautu.vn", "https://baodautu.vn/chung-khoan-d12/"),
                 ("baodautu.vn", "https://baodautu.vn/kinh-te-so-d23/"),
-                ("baodautu.vn", "https://baodautu.vn/doanh-nghiep-d5/")
+                ("baodautu.vn", "https://baodautu.vn/dau-tu-d3/"),
+                ("laodong.vn", "https://laodong.vn/tien-te-dau-tu")
             ]
 
         # 1. Gather links per publisher
@@ -1725,8 +1744,39 @@ class DailyNewsCollector:
             c["verificationStatus"] = c.get("verificationStatus", "PENDING_VERIFICATION")
             valid_pool.append(c)
 
-        # Sort valid candidates by freshness priority: ascending age
-        valid_pool.sort(key=lambda x: x["dataAgeHours"])
+        def compute_candidate_priority(c):
+            # Base freshness score: lower age is better
+            age_h = c.get("dataAgeHours", 24.0) or 24.0
+            score = 100.0 - (age_h * 2.0)
+            
+            # Massive priority for articles published on the target edition date
+            target_date_str = str(self.run_timestamp)[:10] if self.run_timestamp else ""
+            pub_str = str(c.get("originalPublishedAt") or c.get("eventDate") or "")
+            if target_date_str and target_date_str in pub_str:
+                score += 100.0
+            
+            # Editorial relevance bonus
+            ed_rel = c.get("editorialRelevance", "LOW")
+            if ed_rel == "HIGH":
+                score += 60.0
+            elif ed_rel == "MEDIUM":
+                score += 30.0
+                
+            cat = c.get("category", "")
+            if cat in [CATEGORY_BANKING_CREDIT, CATEGORY_FINTECH_PAYMENT, CATEGORY_MACRO_MONETARY]:
+                score += 50.0
+            elif cat == CATEGORY_CAPITAL_MARKETS:
+                score += 30.0
+                
+            # FinTech, Banking, Interest Rates, FX, Payment keywords bonus
+            hl_low = (c.get("headline") or "").lower()
+            if any(k in hl_low for k in ["lãi suất", "ngân hàng", "tín dụng", "tiền gửi", "tỷ giá", "nhnn", "usd", "vn-index", "thanh toán", "vietqr", "smartpos", "chứng khoán", "cổ phiếu"]):
+                score += 40.0
+
+            return score
+
+        # Sort valid candidates by priority descending
+        valid_pool.sort(key=compute_candidate_priority, reverse=True)
         total_valid = len(valid_pool)
         
         # Check quota

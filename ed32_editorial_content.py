@@ -7,7 +7,7 @@ Cover Story Sapo = 3 sentences (250-320 chars); News Desk Sapo = 2 sentences (16
 """
 
 ED32_COVER_OVERRIDE = {
-    "targetOriginEventId": "EVT-20261117-017",
+    "targetOriginEventId": "EVT-20261117-004",
     "editorialHeadline": "Lãi suất huy động phân hóa mạnh: Big4 giữ vững vùng trũng 5,4%, ngân hàng tư nhân linh hoạt hạ lãi suất kỳ hạn ngắn để tối ưu biên lãi ròng NIM",
     "editorialSubheadline": "Thanh khoản hệ thống dồi dào, tỷ giá trung tâm USD/VND giữ kỷ luật quanh 25.641 đồng khi NHNN điều hành nhịp nhàng qua thị trường mở OMO.",
     "dek": "Động thái tái cân đối chi phí vốn COF giúp các nhà băng chuẩn bị nguồn lực tài chính dồi dào, hỗ trợ tín dụng tiêu dùng và doanh nghiệp mùa cận Tết.",
@@ -44,7 +44,7 @@ ED32_COVER_OVERRIDE = {
 }
 
 ED32_ARTICLE_INTEL = {
-    "EVT-20261117-017": {
+    "EVT-20261117-004": {
         "summary": (
             "Khảo sát sáng 17/11 ghi nhận khối Big4 duy trì biểu lãi suất 12 tháng ổn định ở 5,4%/năm. "
             "Các ngân hàng tư nhân đẩy mạnh số hóa dịch vụ để thu hút tiền gửi không kỳ hạn CASA."
