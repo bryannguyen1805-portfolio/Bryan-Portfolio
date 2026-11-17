@@ -615,26 +615,34 @@ function openPulseDetail(key) {
           <div style="font-size:0.875rem; margin-bottom:6px;">
             <strong>Mã tham chiếu & Từ khóa quét:</strong> <code style="background:var(--ms-surface); padding:2px 6px; border:1px solid var(--ms-border); border-radius:3px; font-weight:700; color:var(--ms-primary); font-family:var(--font-ui);">${escapeHtml(m.referenceCode || m.searchKeyword || '')}</code> 🔒 <span style="font-size:0.75rem; color:var(--ms-text-muted);">(Đã khóa cố định)</span>
           </div>
-          <div style="font-size:0.8125rem; margin-bottom:10px; color:var(--ms-text-muted); word-break:break-all;">
-            <strong>Link tra cứu / quét gốc đã khóa:</strong> <br><a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-primary); text-decoration:underline;">${escapeHtml(m.sourceUrl)}</a>
-          </div>
           ${m.articleTitle ? `
-            <div style="font-size:0.875rem; margin-bottom:10px; line-height:1.5;">
-              <strong>Bài viết đối soát hôm nay:</strong> <span style="color:var(--ms-primary); font-weight:600;">${escapeHtml(m.articleTitle)}</span>
+            <div style="font-size:0.875rem; margin-bottom:8px; line-height:1.5;">
+              <strong>Bài báo đối soát chi tiết hôm nay:</strong> <br>
+              <span style="color:var(--ms-primary); font-weight:700;">${escapeHtml(m.articleTitle)}</span>
             </div>
           ` : ''}
-          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
-            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="font-weight:700;">
-              Mở link tra cứu / quét gốc (${escapeHtml(m.sourceShortName || 'Nguồn gốc')}) ↗
+          <div style="font-size:0.8125rem; margin-bottom:8px; color:var(--ms-text-muted); word-break:break-all;">
+            <strong>Link bài báo chi tiết:</strong> <br>
+            <a href="${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-primary); text-decoration:underline; font-weight:600;">
+              ${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}
             </a>
-            ${m.dailyArticleUrl ? `
-              <a href="${escapeHtml(m.dailyArticleUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-                Bài báo đối soát hôm nay ↗
-              </a>
-            ` : ''}
+          </div>
+          <div style="font-size:0.75rem; margin-bottom:12px; color:var(--ms-text-muted); word-break:break-all;">
+            <strong>Kênh quét / tra cứu gốc đã khóa:</strong> <br>
+            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-text-muted); text-decoration:underline;">
+              ${escapeHtml(m.sourceUrl)}
+            </a>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;">
+            <a href="${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="font-weight:700; background-color:#0b3c2b; color:#fff;">
+              Mở bài báo đối soát chi tiết (${escapeHtml(m.sourceShortName || 'Bài báo')}) ↗
+            </a>
+            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
+              Xem kênh quét / tra cứu gốc (${escapeHtml(m.sourceShortName || 'Nguồn gốc')}) ↗
+            </a>
             ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http') && u !== m.sourceUrl && u !== m.dailyArticleUrl).map((secUrl, idx) => `
               <a href="${escapeHtml(secUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-                Nguồn đối soát #${idx + 1} ↗
+                Nguồn bổ trợ #${idx + 1} ↗
               </a>
             `).join('')}
           </div>

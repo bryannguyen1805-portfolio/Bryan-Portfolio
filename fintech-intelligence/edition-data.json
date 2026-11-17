@@ -43,9 +43,9 @@
       "ageHoursAtT0": 12.5,
       "sourceName": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn)",
       "sourceShortName": "Thời báo Tài chính",
-      "articleTitle": "Giá USD hôm nay 17.11: Tỷ giá trung tâm vượt 25.650 đồng, Vietcombank tăng lên 25.950 đồng",
+      "articleTitle": "Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm lần đầu vượt 25.650 đồng, DXY áp sát ngưỡng 104 điểm",
       "sourceUrl": "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
-      "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+      "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-lan-dau-vuot-25-650-dong-dxy-ap-sat-nguong-104-diem-207066.html",
       "secondarySourceUrls": [
         "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
         "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia"
@@ -72,7 +72,7 @@
           "Mã tham chiếu (Đã khóa): 'Tỷ giá USD hôm nay' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
           "Cơ quan / Báo chí đối soát: Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn).",
           "Link tra cứu / quét gốc (Đã khóa): https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
-          "Bài báo đối soát hôm nay: 'Giá USD hôm nay 17.11: Tỷ giá trung tâm vượt 25.650 đồng, Vietcombank tăng lên 25.950 đồng' (https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD)",
+          "Bài báo đối soát hôm nay: 'Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm lần đầu vượt 25.650 đồng, DXY áp sát ngưỡng 104 điểm' (https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-lan-dau-vuot-25-650-dong-dxy-ap-sat-nguong-104-diem-207066.html)",
           "Từ khóa quét đối soát mỗi ngày: 'Tỷ giá USD hôm nay'.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
@@ -93,8 +93,8 @@
       "isLocked": true,
       "lockNotice": "Mã tham chiếu 'LÃI SUẤT' và link tra cứu gốc tại Báo Lao Động đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "7,0 %/năm",
-      "referenceValue": "Biểu 12T chuẩn: 6,1 - 7,0%/năm | Big4 tại quầy: 5,5%/năm, online 6,8% | Cake by VPBank ưu đãi tới 9,1%/năm",
-      "change": "Báo Lao Động khảo sát: Lãi suất 12T chuẩn neo 7,0%/năm; Big4 quầy 5,5%/năm; ưu đãi trực tuyến tới 9,1%/năm",
+      "referenceValue": "Big4 tại quầy: 5,5%/năm, online 6,8% | Biểu 12T chuẩn thị trường: 6,1 - 7,0%/năm | Cake by VPBank ưu đãi tới 9,1%/năm",
+      "change": "Báo Lao Động 17/11: Big4 quầy cao nhất 5,5%/năm; biểu 12T chuẩn thị trường 7,0%/năm; ưu đãi tới 9,1%/năm",
       "unit": "%/năm",
       "observationAt": "2026-11-17T08:30:00+07:00",
       "asOf": "2026-11-17",
@@ -104,9 +104,9 @@
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Lao Động (laodong.vn)",
       "sourceShortName": "Báo Lao Động",
-      "articleTitle": "Lãi suất ngân hàng hôm nay 17.11: Biểu 12 tháng neo đỉnh 7%/năm, ưu đãi số lên tới 9,1%/năm",
+      "articleTitle": "Lãi suất Big4 cao nhất ngày 17.11: Gửi 750 triệu đồng nhận tới 123,75 triệu đồng",
       "sourceUrl": "https://laodong.vn/tien-te-dau-tu",
-      "dailyArticleUrl": "https://laodong.vn/tien-te-dau-tu",
+      "dailyArticleUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-cao-nhat-ngay-1711-gui-750-trieu-dong-nhan-toi-12375-trieu-dong-1801962.ldo",
       "secondarySourceUrls": [
         "https://laodong.vn/tien-te-dau-tu"
       ],
@@ -114,8 +114,8 @@
       "sha256": "2f7f725a74439bcb27beef1468a81718d4dbefc29be4f97a9b01db528605fb69",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Theo khảo sát thị trường tiền tệ ngày 17/11 của Báo Lao Động, lãi suất tiền gửi 12 tháng thông thường neo ở mức 6,1% - 7,0%/năm, nhóm Big4 giữ mức quầy 5,5%/năm (online 6,8%/năm), trong khi các gói ưu đãi tiết kiệm số cộng thêm lãi suất tới 9,1%/năm.",
-      "financialInterpretation": "Khảo sát Báo Lao Động ngày 17/11 ghi nhận mặt bằng lãi suất huy động 12 tháng duy trì mức cao 7,0%/năm và ưu đãi số tới 9,1%/năm nhằm thu hút vốn cho tín dụng cuối năm. Chi phí vốn COF neo cao đòi hỏi các chuỗi bán lẻ SME tối ưu dòng tiền lưu động. Giải pháp trả góp 0% qua thẻ tín dụng của Payoo là công cụ tối ưu hóa chi phí vốn tiêu dùng, chia nhỏ áp lực tài chính cho người mua sắm.",
+      "statusReason": "Theo bài viết trên Báo Lao Động ngày 17/11, lãi suất tiền gửi 12 tháng tại các ngân hàng Big4 duy trì ở mức 5,5%/năm tại quầy (online 6,8%/năm), trong khi biểu lãi suất 12 tháng thông thường tại các NHTMCP tư nhân neo ở 6,1% - 7,0%/năm và các gói ưu đãi số cộng thêm lãi suất tới 9,1%/năm.",
+      "financialInterpretation": "Mặt bằng lãi suất huy động 12 tháng duy trì mức cao 7,0%/năm và ưu đãi số tới 9,1%/năm nhằm thu hút vốn cho tín dụng cuối năm. Chi phí vốn COF neo cao đòi hỏi các chuỗi bán lẻ SME tối ưu dòng tiền lưu động. Giải pháp trả góp 0% qua thẻ tín dụng của Payoo là công cụ tối ưu hóa chi phí vốn tiêu dùng, chia nhỏ áp lực tài chính cho người mua sắm.",
       "monitoringWatchpoint": "Theo dõi chênh lệch lãi suất huy động giữa nhóm Big4 và khối NHTMCP tư nhân để đánh giá áp lực tăng lãi suất cho vay.",
       "discoveryAudit": {
         "searchQuery": "LÃI SUẤT",
@@ -132,11 +132,11 @@
           "Mã tham chiếu (Đã khóa): 'LÃI SUẤT' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
           "Cơ quan / Báo chí đối soát: Báo Lao Động (laodong.vn).",
           "Link tra cứu / quét gốc (Đã khóa): https://laodong.vn/tien-te-dau-tu",
-          "Bài báo đối soát hôm nay: 'Lãi suất ngân hàng hôm nay 17.11: Biểu 12 tháng neo đỉnh 7%/năm, ưu đãi số lên tới 9,1%/năm' (https://laodong.vn/tien-te-dau-tu)",
+          "Bài báo đối soát hôm nay: 'Lãi suất Big4 cao nhất ngày 17.11: Gửi 750 triệu đồng nhận tới 123,75 triệu đồng' (https://laodong.vn/tien-te-dau-tu/lai-suat-big4-cao-nhat-ngay-1711-gui-750-trieu-dong-nhan-toi-12375-trieu-dong-1801962.ldo)",
           "Từ khóa quét đối soát mỗi ngày: 'LÃI SUẤT'.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
-          "Ý nghĩa điều hành: Theo khảo sát thị trường tiền tệ ngày 17/11 của Báo Lao Động, lãi suất tiền gửi 12 tháng thông thường neo ở mức 6,1% - 7,0%/năm, nhóm Big4 giữ mức quầy 5,5%/năm (online 6,8%/năm), trong khi các gói ưu đãi tiết kiệm số cộng thêm lãi suất tới 9,1%/năm."
+          "Ý nghĩa điều hành: Theo bài viết trên Báo Lao Động ngày 17/11, lãi suất tiền gửi 12 tháng tại các ngân hàng Big4 duy trì ở mức 5,5%/năm tại quầy (online 6,8%/năm), trong khi biểu lãi suất 12 tháng thông thường tại các NHTMCP tư nhân neo ở 6,1% - 7,0%/năm và các gói ưu đãi số cộng thêm lãi suất tới 9,1%/năm."
         ]
       }
     },
@@ -152,9 +152,9 @@
       "searchKeyword": "VN-INDEX",
       "isLocked": true,
       "lockNotice": "Mã tham chiếu 'VN-INDEX' và link tra cứu gốc tại Báo Dân Việt đã được khóa cố định theo chỉ đạo điều hành.",
-      "value": "1.726,72 Điểm",
-      "referenceValue": "Đóng cửa 17/11: 1.726,72 điểm (-10,17đ, -0,59%) | Vùng thấp nhất: 1.715,67 điểm | Khối ngoại bán ròng hàng trăm tỷ đồng",
-      "change": "-10,17 Điểm (-0,59%) kết phiên 17/11/2026; khối ngoại tiếp tục bán ròng",
+      "value": "1.735 Điểm",
+      "referenceValue": "Phiên 17/11: VN-Index có thời điểm hồi phục lên 1.735 điểm | Biên độ rung lắc >15 điểm | Đóng cửa: 1.726,72 điểm | Khối ngoại bán ròng",
+      "change": "Có thời điểm hồi phục lên 1.735 điểm trong phiên 17/11 (biên độ rung lắc hơn 15 điểm)",
       "unit": "Điểm",
       "observationAt": "2026-11-17T15:30:00+07:00",
       "asOf": "2026-11-17",
@@ -164,19 +164,19 @@
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Dân Việt (danviet.vn)",
       "sourceShortName": "Báo Dân Việt",
-      "articleTitle": "Chứng khoán ngày 17/11: VN-Index giảm 10,17 điểm lùi về 1.726,72 điểm, khối ngoại bán ròng",
+      "articleTitle": "VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?",
       "sourceUrl": "https://danviet.vn/tim-kiem.html#VN-INDEX",
-      "dailyArticleUrl": "https://danviet.vn/tim-kiem.html#VN-INDEX",
+      "dailyArticleUrl": "https://danviet.vn/vn-index-mat-hon-10-diem-thi-truong-chung-khoan-dang-phat-tin-hieu-gi-d1475704.html",
       "secondarySourceUrls": [
         "https://danviet.vn/tim-kiem.html#VN-INDEX"
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
       "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
-      "status": "negative",
+      "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Theo Báo Dân Việt, kết thúc phiên giao dịch ngày 17/11/2026, chỉ số VN-Index giảm 10,17 điểm (-0,59%) xuống 1.726,72 điểm. Thị trường chịu áp lực bán tháo diện rộng ở nhóm cổ phiếu vốn hóa lớn và động thái bán ròng của khối ngoại trước khi rút chân nhẹ từ đáy 1.715,67 điểm.",
-      "financialInterpretation": "VN-Index điều chỉnh giảm 10,17 điểm về 1.726,72 điểm sau áp lực chốt lời mạnh và dòng vốn ngoại bán ròng, phản ánh tâm lý thận trọng ngắn hạn của nhà đầu tư trước biến động tỷ giá. Trong bối cảnh dòng vốn đầu tư thận trọng, các giải pháp thanh toán số không tiền mặt, cổng thu hộ học phí và hóa đơn định kỳ Payoo đóng vai trò là dòng tiền thực bền vững, ít phụ thuộc vào chu kỳ đầu cơ chứng khoán.",
-      "monitoringWatchpoint": "Theo dõi lực đỡ quanh vùng hỗ trợ 1.715 - 1.720 điểm và áp lực bán ròng của khối ngoại trong các phiên tiếp theo.",
+      "statusReason": "Theo bài báo 'VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?' trên Báo Dân Việt, trong phiên giao dịch 17/11/2026, chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi đảo chiều chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên.",
+      "financialInterpretation": "Chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm phản ánh lực cầu bắt đáy tích cực khi thị trường chạm vùng hỗ trợ. Tuy nhiên biên độ rung lắc hơn 15 điểm đòi hỏi các doanh nghiệp bán lẻ và tổ chức tài chính quản trị dòng tiền chặt chẽ, tối ưu thanh khoản tức thì qua các cổng thanh toán Payoo và SmartPOS.",
+      "monitoringWatchpoint": "Theo dõi lực cầu bắt đáy quanh vùng 1.715 - 1.735 điểm và dòng tiền ngoại trong các phiên tới.",
       "discoveryAudit": {
         "searchQuery": "VN-INDEX",
         "searchRequestId": "SRCH-REQ-MP-03-LOCKED",
@@ -192,11 +192,11 @@
           "Mã tham chiếu (Đã khóa): 'VN-INDEX' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
           "Cơ quan / Báo chí đối soát: Báo Dân Việt (danviet.vn).",
           "Link tra cứu / quét gốc (Đã khóa): https://danviet.vn/tim-kiem.html#VN-INDEX",
-          "Bài báo đối soát hôm nay: 'Chứng khoán ngày 17/11: VN-Index giảm 10,17 điểm lùi về 1.726,72 điểm, khối ngoại bán ròng' (https://danviet.vn/tim-kiem.html#VN-INDEX)",
+          "Bài báo đối soát hôm nay: 'VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?' (https://danviet.vn/vn-index-mat-hon-10-diem-thi-truong-chung-khoan-dang-phat-tin-hieu-gi-d1475704.html)",
           "Từ khóa quét đối soát mỗi ngày: 'VN-INDEX '.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
-          "Ý nghĩa điều hành: Theo Báo Dân Việt, kết thúc phiên giao dịch ngày 17/11/2026, chỉ số VN-Index giảm 10,17 điểm (-0,59%) xuống 1.726,72 điểm. Thị trường chịu áp lực bán tháo diện rộng ở nhóm cổ phiếu vốn hóa lớn và động thái bán ròng của khối ngoại trước khi rút chân nhẹ từ đáy 1.715,67 điểm."
+          "Ý nghĩa điều hành: Theo bài báo 'VN-Index mất hơn 10 điểm, thị trường chứng khoán đang phát tín hiệu gì?' trên Báo Dân Việt, trong phiên giao dịch 17/11/2026, chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi đảo chiều chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên."
         ]
       }
     },
@@ -213,7 +213,7 @@
       "isLocked": true,
       "lockNotice": "Mã tham chiếu 'Khách quốc tế' và link tra cứu gốc tại Báo Thanh Niên đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "19,5 Triệu lượt",
-      "referenceValue": "10 tháng 2026: Đón 19,5 triệu lượt (+13,8% YoY) | Châu Á: 14,6 triệu lượt (74,8%) | Châu Âu: 3,22 triệu lượt (+51%)",
+      "referenceValue": "10 tháng 2026: Đón 19,5 triệu lượt (+13,8% YoY) | Châu Á: 14,6 triệu lượt (74,8%) | Châu Âu tăng 51%",
       "change": "+13,8% YoY sau 10 tháng; hoàn thành 78% mục tiêu cả năm (25 triệu lượt)",
       "unit": "Triệu lượt",
       "observationAt": "2026-10-31T23:59:59+07:00",
@@ -224,9 +224,9 @@
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Thanh Niên (thanhnien.vn)",
       "sourceShortName": "Báo Thanh Niên",
-      "articleTitle": "Du lịch Việt Nam 10 tháng 2026: Đón 19,5 triệu lượt khách quốc tế, tăng 13,8% và đạt 78% kế hoạch",
+      "articleTitle": "Việt Nam đón 19,5 triệu khách quốc tế, khách châu Âu tăng mạnh",
       "sourceUrl": "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
-      "dailyArticleUrl": "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+      "dailyArticleUrl": "https://thanhnien.vn/viet-nam-don-195-trieu-khach-quoc-te-khach-chau-au-tang-manh-185261103141701446.htm",
       "secondarySourceUrls": [
         "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE"
       ],
@@ -234,7 +234,7 @@
       "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
       "status": "positive",
       "verificationStatus": "VERIFIED",
-      "statusReason": "Báo Thanh Niên ghi nhận 10 tháng đầu năm 2026, Việt Nam đón 19,5 triệu lượt khách quốc tế (tăng 13,8% so với cùng kỳ năm trước), đạt gần 78% kế hoạch năm. Thị trường châu Âu bứt phá tăng 51% và khách đường hàng không chiếm hơn 82%.",
+      "statusReason": "Theo bài báo trên Báo Thanh Niên, 10 tháng đầu năm 2026 Việt Nam đón 19,5 triệu lượt khách quốc tế (tăng 13,8% so với cùng kỳ năm trước), đạt gần 78% kế hoạch năm. Thị trường châu Âu bứt phá tăng 51% và khách đường hàng không chiếm hơn 82%.",
       "financialInterpretation": "Lượng khách quốc tế chạm mốc kỷ lục 19,5 triệu lượt sau 10 tháng tạo nguồn thu ngoại tệ và sức mua tiêu dùng trực tiếp rất lớn cho các chuỗi dịch vụ lữ hành, F&B và bán lẻ. Đây là động lực vàng cho các trung gian thanh toán triển khai giải pháp SmartPOS chấp nhận đa thẻ quốc tế (Visa, Mastercard, JCB, Amex) và mã VietQR Global đón đầu mùa mua sắm cao điểm cuối năm.",
       "monitoringWatchpoint": "Theo dõi doanh số thanh toán thẻ quốc tế và tốc độ giải ngân dịch vụ du lịch trong quý 4/2026.",
       "discoveryAudit": {
@@ -252,11 +252,11 @@
           "Mã tham chiếu (Đã khóa): 'Khách quốc tế' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
           "Cơ quan / Báo chí đối soát: Báo Thanh Niên (thanhnien.vn).",
           "Link tra cứu / quét gốc (Đã khóa): https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
-          "Bài báo đối soát hôm nay: 'Du lịch Việt Nam 10 tháng 2026: Đón 19,5 triệu lượt khách quốc tế, tăng 13,8% và đạt 78% kế hoạch' (https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE)",
+          "Bài báo đối soát hôm nay: 'Việt Nam đón 19,5 triệu khách quốc tế, khách châu Âu tăng mạnh' (https://thanhnien.vn/viet-nam-don-195-trieu-khach-quoc-te-khach-chau-au-tang-manh-185261103141701446.htm)",
           "Từ khóa quét đối soát mỗi ngày: 'Khách quốc tế'.",
           "Kỳ dữ liệu quan sát: 10 tháng 2026 (Nguồn xác minh 100% bài viết sống).",
           "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
-          "Ý nghĩa điều hành: Báo Thanh Niên ghi nhận 10 tháng đầu năm 2026, Việt Nam đón 19,5 triệu lượt khách quốc tế (tăng 13,8% so với cùng kỳ năm trước), đạt gần 78% kế hoạch năm. Thị trường châu Âu bứt phá tăng 51% và khách đường hàng không chiếm hơn 82%."
+          "Ý nghĩa điều hành: Theo bài báo trên Báo Thanh Niên, 10 tháng đầu năm 2026 Việt Nam đón 19,5 triệu lượt khách quốc tế (tăng 13,8% so với cùng kỳ năm trước), đạt gần 78% kế hoạch năm. Thị trường châu Âu bứt phá tăng 51% và khách đường hàng không chiếm hơn 82%."
         ]
       }
     }
@@ -297,7 +297,7 @@
       "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "editorialPullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "pullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
-      "editorialSynthesis": "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; (2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; (3) Thị trường chứng khoán ngày 17/11 chịu áp lực điều chỉnh, chỉ số VN-Index đóng cửa tại 1.726,72 điểm (-10,17 điểm, tương đương -0,59%) khi khối ngoại bán ròng hàng trăm tỷ đồng; (4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm.",
+      "editorialSynthesis": "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; (2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; (3) Thị trường chứng khoán ngày 17/11 ghi nhận chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên; (4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm.",
       "marketImpact": "(1) Tối ưu hóa chi phí vốn đầu vào: Việc kiểm soát lãi suất huy động kỳ hạn ngắn hỗ trợ các NHTM tư nhân giảm bớt gánh nặng chi phí vốn, duy trì NIM ổn định trong quý 4. (2) Ổn định thị trường ngoại hối: Dự trữ thanh khoản VND và các công cụ thị trường mở giúp hạn chế áp lực đầu cơ tỷ giá khi chỉ số DXY quốc tế biến động. (3) Đẩy mạnh thanh toán số mùa vụ: Doanh nghiệp bán lẻ tăng cường kết nối cổng thanh toán đa kênh và máy quẹt thẻ POS để nắm bắt mùa cao điểm kích cầu mua sắm cuối năm.",
       "fintechLensAction": "Trước áp lực tối ưu hóa dòng tiền và chi phí vận hành cuối năm, các đơn vị bán lẻ và chuỗi phân phối cần chủ động ứng dụng hạ tầng thanh toán số toàn diện. Hệ sinh thái Payoo với SmartPOS All-in-One, VietQR động định danh và giải pháp trả góp 0% qua thẻ tín dụng giúp điểm bán gia tăng doanh số, giảm tỷ lệ hủy đơn và đối soát doanh thu thời gian thực mà không làm phát sinh gánh nặng nợ vay ngắn hạn.",
       "monitoringWatchpoint": "Theo dõi động thái bơm/hút tiền qua nghiệp vụ thị trường mở OMO của NHNN, diễn biến thanh khoản liên ngân hàng và tốc độ giải ngân tín dụng bán lẻ dịp cuối năm.",
@@ -324,7 +324,7 @@
       "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "editorialPullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "pullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
-      "editorialSynthesis": "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; (2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; (3) Thị trường chứng khoán ngày 17/11 chịu áp lực điều chỉnh, chỉ số VN-Index đóng cửa tại 1.726,72 điểm (-10,17 điểm, tương đương -0,59%) khi khối ngoại bán ròng hàng trăm tỷ đồng; (4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm.",
+      "editorialSynthesis": "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: (1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; (2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; (3) Thị trường chứng khoán ngày 17/11 ghi nhận chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên; (4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm.",
       "marketImpact": "(1) Tối ưu hóa chi phí vốn đầu vào: Việc kiểm soát lãi suất huy động kỳ hạn ngắn hỗ trợ các NHTM tư nhân giảm bớt gánh nặng chi phí vốn, duy trì NIM ổn định trong quý 4. (2) Ổn định thị trường ngoại hối: Dự trữ thanh khoản VND và các công cụ thị trường mở giúp hạn chế áp lực đầu cơ tỷ giá khi chỉ số DXY quốc tế biến động. (3) Đẩy mạnh thanh toán số mùa vụ: Doanh nghiệp bán lẻ tăng cường kết nối cổng thanh toán đa kênh và máy quẹt thẻ POS để nắm bắt mùa cao điểm kích cầu mua sắm cuối năm.",
       "fintechLensAction": "Trước áp lực tối ưu hóa dòng tiền và chi phí vận hành cuối năm, các đơn vị bán lẻ và chuỗi phân phối cần chủ động ứng dụng hạ tầng thanh toán số toàn diện. Hệ sinh thái Payoo với SmartPOS All-in-One, VietQR động định danh và giải pháp trả góp 0% qua thẻ tín dụng giúp điểm bán gia tăng doanh số, giảm tỷ lệ hủy đơn và đối soát doanh thu thời gian thực mà không làm phát sinh gánh nặng nợ vay ngắn hạn.",
       "monitoringWatchpoint": "Theo dõi động thái bơm/hút tiền qua nghiệp vụ thị trường mở OMO của NHNN, diễn biến thanh khoản liên ngân hàng và tốc độ giải ngân tín dụng bán lẻ dịp cuối năm.",

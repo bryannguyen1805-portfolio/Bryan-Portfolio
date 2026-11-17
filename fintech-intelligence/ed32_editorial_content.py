@@ -26,7 +26,7 @@ ED32_COVER_OVERRIDE = {
         "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: "
         "(1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; "
         "(2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; "
-        "(3) Thị trường chứng khoán ngày 17/11 chịu áp lực điều chỉnh, chỉ số VN-Index đóng cửa tại 1.726,72 điểm (-10,17 điểm, tương đương -0,59%) khi khối ngoại bán ròng hàng trăm tỷ đồng; "
+        "(3) Thị trường chứng khoán ngày 17/11 ghi nhận chỉ số VN-Index có thời điểm hồi phục lên 1.735 điểm trước khi chịu áp lực rung lắc hơn 15 điểm và xuất hiện lực cầu bắt đáy cuối phiên; "
         "(4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm."
     ),
     "marketImpact": (
