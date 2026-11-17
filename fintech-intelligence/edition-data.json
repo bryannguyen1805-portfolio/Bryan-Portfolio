@@ -27,6 +27,10 @@
       "tierNumber": 1,
       "label": "01. TỶ GIÁ NGOẠI HỐI & CAN THIỆP USD/VND",
       "shortLabel": "TỶ GIÁ CAN THIỆP USD/VND",
+      "referenceCode": "Tỷ giá USD hôm nay",
+      "searchKeyword": "Tỷ giá USD hôm nay",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu 'Tỷ giá USD hôm nay' và link tra cứu gốc tại Thời báo Tài chính đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "25.641 VND/USD",
       "referenceValue": "Cục QL Ngoại hối NHNN: Mua 25.500 - Bán 26.873 đồng | VCB: 25.510 - 25.920 đồng | BIDV: 25.550 - 25.930 đồng",
       "change": "+2 VND/USD so với phiên 16/11 (DXY: 103,45 điểm)",
@@ -38,11 +42,14 @@
       "fetchedAt": "2026-11-17T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn)",
-      "articleTitle": "",
-      "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html",
+      "sourceShortName": "Thời báo Tài chính",
+      "articleTitle": "Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm NHNN tiếp tục điều chỉnh nhẹ",
+      "sourceUrl": "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+      "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html",
       "secondarySourceUrls": [
-        "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia",
-        "https://vneconomy.vn/phan-ung-cua-thi-truong-sau-khi-hoan-doi-va-mo-kenh-mua-ngoai-te.htm"
+        "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+        "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html",
+        "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia"
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_e85f1c3f61.html",
       "sha256": "e85f1c3f619b7a8d2409b1910145974189b2c07cdf7e6bfde8c95f7c721c974a",
@@ -52,17 +59,24 @@
       "financialInterpretation": "Tỷ giá trung tâm tăng lên 25.641 VND/USD khi chỉ số DXY duy trì quanh 103,45 điểm, kéo giá bán USD tại các NHTM quốc doanh như Vietcombank và BIDV neo sát ngưỡng trần. Việc NHNN tiếp tục neo giá mua tham khảo 25.500 đồng hỗ trợ thanh khoản ngoại tệ nhưng đặt ra bài toán quản trị rủi ro tỷ giá cho doanh nghiệp xuất nhập khẩu. Các giải pháp SmartPOS và Payoo tích hợp Dynamic Currency Conversion (DCC) tiếp tục là công cụ đắc lực hỗ trợ doanh nghiệp bán lẻ du lịch chốt tỷ giá thời gian thực cho khách quốc tế.",
       "monitoringWatchpoint": "Theo dõi sát diễn biến chỉ số DXY trên vùng 103,4 điểm và biên độ can thiệp ngoại tệ của NHNN trong phiên hôm nay.",
       "discoveryAudit": {
-        "searchQuery": "TỶ GIÁ CAN THIỆP USD/VND",
-        "searchRequestId": "SRCH-REQ-MP-01-20261112",
+        "searchQuery": "Tỷ giá USD hôm nay",
+        "searchRequestId": "SRCH-REQ-MP-01-LOCKED",
         "requestStatus": "SUCCESS_OBSERVATION_VERIFIED",
-        "provider": "Approved Publisher Live Search / HTTP Endpoint"
+        "provider": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn) / Live Query Endpoint",
+        "canonicalScanUrl": "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+        "referenceCode": "Tỷ giá USD hôm nay",
+        "isLocked": true
       },
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát TỶ GIÁ CAN THIỆP USD/VND:",
         "items": [
-          "Đơn vị phát hành & đối soát: Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn).",
+          "Mã tham chiếu (Đã khóa): 'Tỷ giá USD hôm nay' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
+          "Cơ quan / Báo chí đối soát: Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn).",
+          "Link tra cứu / quét gốc (Đã khóa): https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+          "Bài báo đối soát hôm nay: 'Tỷ giá USD hôm nay 17/11: Tỷ giá trung tâm NHNN tiếp tục điều chỉnh nhẹ' (https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-17-11-ty-gia-trung-tam-nhnn-tiep-tuc-dieu-chinh-nhe-207010.html)",
+          "Từ khóa quét đối soát mỗi ngày: 'Tỷ giá USD hôm nay'.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
-          "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
+          "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
           "Ý nghĩa điều hành: Tỷ giá trung tâm do Ngân hàng Nhà nước công bố ở mức 25.641 VND/USD (tăng 2 đồng so với phiên 16/11); Cục Quản lý ngoại hối niêm yết giá mua - bán tham khảo tại 25.500 - 26.873 VND/USD."
         ]
       }
@@ -75,6 +89,10 @@
       "tierNumber": 1,
       "label": "02. LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
       "shortLabel": "LÃI SUẤT TIỀN GỬI 12T CAO NHẤT",
+      "referenceCode": "LÃI SUẤT",
+      "searchKeyword": "LÃI SUẤT",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu 'LÃI SUẤT' và link tra cứu gốc tại Báo Lao Động đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "7 %/năm",
       "referenceValue": "Big4 (VCB, BIDV, VietinBank, Agribank): 5,4%/năm | PVcomBank: 9,5%/năm | Cake by VPBank: 6,9 - 9,1% | MSB: 9,0%",
       "change": "Báo Lao Động khảo sát >30 ngân hàng: Cuộc đua huy động phân hóa mạnh, Big4 giữ mức 5,4%/năm trong khi ngân hàng tư nhân ưu đãi tới 9,5%/năm",
@@ -86,10 +104,13 @@
       "fetchedAt": "2026-11-17T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Lao Động (laodong.vn)",
+      "sourceShortName": "Báo Lao Động",
       "articleTitle": "Lãi suất ngân hàng hôm nay 17.11: Phân hóa sâu sắc giữa Big4 và khối NHTM tư nhân",
-      "sourceUrl": "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo",
+      "sourceUrl": "https://laodong.vn/tien-te-dau-tu",
+      "dailyArticleUrl": "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo",
       "secondarySourceUrls": [
-        "https://laodong.vn/tien-te-dau-tu"
+        "https://laodong.vn/tien-te-dau-tu",
+        "https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo"
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_laodong_1800959.html",
       "sha256": "2f7f725a74439bcb27beef1468a81718d4dbefc29be4f97a9b01db528605fb69",
@@ -99,20 +120,24 @@
       "financialInterpretation": "Sự phân hóa rõ nét giữa nhóm Big4 (ổn định ở 5,4%/năm) và khối NHTM cổ phần tư nhân (đẩy mạnh huy động kỳ hạn trung dài hạn với lãi suất tới 9,5%) phản ánh nhu cầu tối ưu biên lãi ròng NIM và chuẩn bị nguồn vốn cho vay mùa vụ cuối năm. Doanh nghiệp cần cơ cấu nguồn vốn lưu động linh hoạt và khai thác tối đa các giải pháp trả góp 0% Payoo để chia nhỏ áp lực dòng tiền cho khách hàng.",
       "monitoringWatchpoint": "Theo dõi động thái điều chỉnh lãi suất kỳ hạn dưới 6 tháng của khối ngân hàng tư nhân để đánh giá áp lực chi phí vốn COF.",
       "discoveryAudit": {
-        "searchQuery": "Lãi suất ngân hàng hôm nay",
-        "searchRequestId": "SRCH-REQ-MP-02-20261112",
+        "searchQuery": "LÃI SUẤT",
+        "searchRequestId": "SRCH-REQ-MP-02-LOCKED",
         "requestStatus": "SUCCESS_OBSERVATION_VERIFIED",
-        "provider": "Báo Lao Động - Tiền tệ & Đầu tư (laodong.vn) / Live HTTP Endpoint"
+        "provider": "Báo Lao Động (laodong.vn) / Live Query Endpoint",
+        "canonicalScanUrl": "https://laodong.vn/tien-te-dau-tu",
+        "referenceCode": "LÃI SUẤT",
+        "isLocked": true
       },
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát LÃI SUẤT TIỀN GỬI 12T CAO NHẤT:",
         "items": [
-          "Đơn vị phát hành & đối soát: Báo Lao Động (laodong.vn).",
-          "Bài viết tham chiếu cụ thể: 'Lãi suất ngân hàng hôm nay 17.11: Phân hóa sâu sắc giữa Big4 và khối NHTM tư nhân' (Tác giả: Hà Vy, Báo Lao Động).",
-          "Đường dẫn bài báo gốc (Source URL): https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo",
-          "Chuyên mục quét đối soát hàng ngày: https://laodong.vn/tien-te-dau-tu (Tiền tệ - Đầu tư | Báo Lao Động).",
+          "Mã tham chiếu (Đã khóa): 'LÃI SUẤT' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
+          "Cơ quan / Báo chí đối soát: Báo Lao Động (laodong.vn).",
+          "Link tra cứu / quét gốc (Đã khóa): https://laodong.vn/tien-te-dau-tu",
+          "Bài báo đối soát hôm nay: 'Lãi suất ngân hàng hôm nay 17.11: Phân hóa sâu sắc giữa Big4 và khối NHTM tư nhân' (https://laodong.vn/kinh-doanh/lai-suat-ngan-hang-hom-nay-1711-sau-ngan-hang-co-lai-suat-tren-8-1801020.ldo)",
+          "Từ khóa quét đối soát mỗi ngày: 'LÃI SUẤT'.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
-          "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
+          "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
           "Ý nghĩa điều hành: Lãi suất tiền gửi 12 tháng thông thường dao động quanh 5,4% - 7,0%/năm, trong đó các ngân hàng thương mại tư nhân và ngân hàng số áp dụng lãi suất ưu đãi đặc biệt lên tới 9,0% - 9,5%/năm theo khảo sát tiền tệ Báo Lao Động."
         ]
       }
@@ -125,6 +150,10 @@
       "tierNumber": 1,
       "label": "03. CHỈ SỐ VN-INDEX",
       "shortLabel": "CHỈ SỐ VN-INDEX",
+      "referenceCode": "VN-INDEX",
+      "searchKeyword": "VN-INDEX",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu 'VN-INDEX' và link tra cứu gốc tại Báo Dân Việt đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "1.738,15 Điểm",
       "referenceValue": "Thanh khoản HoSE phiên sáng: 8.240 tỷ đồng | Khối ngoại duy trì mua ròng nhẹ | Sắc xanh lan tỏa nhóm ngân hàng & bán lẻ",
       "change": "+3,22 Điểm (+0,19%) phiên sáng 17/11/2026; thanh khoản HoSE đạt 8.240 tỷ đồng",
@@ -136,11 +165,13 @@
       "fetchedAt": "2026-11-17T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Dân Việt (danviet.vn)",
-      "articleTitle": "",
-      "sourceUrl": "https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html",
+      "sourceShortName": "Báo Dân Việt",
+      "articleTitle": "Chứng khoán phiên sáng 17/11: VN-Index tiếp tục khởi sắc",
+      "sourceUrl": "https://danviet.vn/tim-kiem.html#VN-INDEX",
+      "dailyArticleUrl": "https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html",
       "secondarySourceUrls": [
-        "https://danviet.vn/vn-index-giang-co-quanh-1735-diem-khoi-ngoai-bat-ngo-xuong-tien-d1474782.html",
-        "https://thoibaotaichinhvietnam.vn/"
+        "https://danviet.vn/tim-kiem.html#VN-INDEX",
+        "https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html"
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
       "sha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
@@ -150,17 +181,24 @@
       "financialInterpretation": "VN-Index tiếp tục đà hồi phục hướng tới vùng kháng cự 1.740 điểm trong phiên sáng 17/11 nhờ trợ lực từ nhóm cổ phiếu ngân hàng bán lẻ và tín hiệu mua ròng của khối ngoại. Dòng tiền luân chuyển tích cực phản ánh niềm tin thị trường đang dần cải thiện, tạo thuận lợi cho các chiến dịch thanh toán không tiền mặt và kích cầu tiêu dùng cuối năm.",
       "monitoringWatchpoint": "Theo dõi khả năng bứt phá của VN-Index qua ngưỡng cản tâm lý 1.740 điểm và giá trị khớp lệnh phiên chiều.",
       "discoveryAudit": {
-        "searchQuery": "CHỈ SỐ VN-INDEX",
-        "searchRequestId": "SRCH-REQ-MP-03-20261112",
+        "searchQuery": "VN-INDEX",
+        "searchRequestId": "SRCH-REQ-MP-03-LOCKED",
         "requestStatus": "SUCCESS_OBSERVATION_VERIFIED",
-        "provider": "Approved Publisher Live Search / HTTP Endpoint"
+        "provider": "Báo Dân Việt (danviet.vn) / Live Query Endpoint",
+        "canonicalScanUrl": "https://danviet.vn/tim-kiem.html#VN-INDEX",
+        "referenceCode": "VN-INDEX",
+        "isLocked": true
       },
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát CHỈ SỐ VN-INDEX:",
         "items": [
-          "Đơn vị phát hành & đối soát: Báo Dân Việt (danviet.vn).",
+          "Mã tham chiếu (Đã khóa): 'VN-INDEX' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
+          "Cơ quan / Báo chí đối soát: Báo Dân Việt (danviet.vn).",
+          "Link tra cứu / quét gốc (Đã khóa): https://danviet.vn/tim-kiem.html#VN-INDEX",
+          "Bài báo đối soát hôm nay: 'Chứng khoán phiên sáng 17/11: VN-Index tiếp tục khởi sắc' (https://danviet.vn/chung-khoan-phien-sang-17-11-vn-index-tiep-tuc-khoi-sac-d1475010.html)",
+          "Từ khóa quét đối soát mỗi ngày: 'VN-INDEX '.",
           "Kỳ dữ liệu quan sát: 2026-11-17 (Nguồn xác minh 100% bài viết sống).",
-          "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
+          "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
           "Ý nghĩa điều hành: Chỉ số VN-Index mở phiên sáng 17/11/2026 trong sắc xanh, tăng +3,22 điểm (+0,19%) lên 1.738,15 điểm với độ rộng thị trường nghiêng về bên mua và dòng tiền tập trung tại nhóm ngân hàng và công nghệ."
         ]
       }
@@ -173,6 +211,10 @@
       "tierNumber": 1,
       "label": "04. KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM",
       "shortLabel": "KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM",
+      "referenceCode": "Khách quốc tế",
+      "searchKeyword": "Khách quốc tế",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu 'Khách quốc tế' và link tra cứu gốc tại Báo Thanh Niên đã được khóa cố định theo chỉ đạo điều hành.",
       "value": "+36,8 %",
       "referenceValue": "10 tháng 2026: Tăng gần 37% | TP.HCM chuẩn hóa 5 giá trị thương hiệu du lịch quốc tế",
       "change": "+36,8% YoY sau 10 tháng; đòn bẩy từ chính sách mở rộng visa và sản phẩm du lịch mới",
@@ -184,10 +226,13 @@
       "fetchedAt": "2026-11-17T08:30:00+07:00",
       "ageHoursAtT0": 12.5,
       "sourceName": "Báo Thanh Niên (thanhnien.vn)",
-      "articleTitle": "",
-      "sourceUrl": "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm",
+      "sourceShortName": "Báo Thanh Niên",
+      "articleTitle": "Khách quốc tế tăng mạnh, du lịch TP.HCM làm mới thương hiệu",
+      "sourceUrl": "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+      "dailyArticleUrl": "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm",
       "secondarySourceUrls": [
-        "https://cafef.vn/vpbank-va-visa-ra-mat-skyone-visa-tien-phong-doi-moi-trai-nghiem-dong-the-du-lich-tai-viet-nam-188261112165630303.chn"
+        "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+        "https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm"
       ],
       "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_20261106.html",
       "sha256": "4b9e111284a8ebb05456996c96afddf8feee95e34be1aeca78493727745f58fc",
@@ -197,17 +242,24 @@
       "financialInterpretation": "Dòng khách quốc tế tăng trưởng gần 37% tạo cú hích doanh thu trực tiếp cho ngành dịch vụ lữ hành, lưu trú khách sạn, chuỗi nhà hàng ẩm thực và bán lẻ quà lưu niệm. Nhu cầu điểm bán trang bị máy SmartPOS chấp nhận đa thẻ quốc tế (Visa, Mastercard, JCB, Amex) và mã VietQR Global bùng nổ, thúc đẩy sản lượng giao dịch thanh toán không tiền mặt và nguồn thu phí dịch vụ cho các trung gian thanh toán.",
       "monitoringWatchpoint": "Theo dõi mức chi tiêu bình quân của du khách quốc tế và sản lượng quẹt thẻ quốc tế trong mùa cao điểm cuối năm.",
       "discoveryAudit": {
-        "searchQuery": "KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM",
-        "searchRequestId": "SRCH-REQ-MP-04-20261112",
+        "searchQuery": "Khách quốc tế",
+        "searchRequestId": "SRCH-REQ-MP-04-LOCKED",
         "requestStatus": "SUCCESS_OBSERVATION_VERIFIED",
-        "provider": "Approved Publisher Live Search / HTTP Endpoint"
+        "provider": "Báo Thanh Niên (thanhnien.vn) / Live Query Endpoint",
+        "canonicalScanUrl": "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+        "referenceCode": "Khách quốc tế",
+        "isLocked": true
       },
       "detailsExpandable": {
         "summaryTitle": "Thuyết minh phương pháp luận & cơ sở quan sát KHÁCH DU LỊCH QUỐC TẾ ĐẾN VIỆT NAM:",
         "items": [
-          "Đơn vị phát hành & đối soát: Báo Thanh Niên (thanhnien.vn).",
+          "Mã tham chiếu (Đã khóa): 'Khách quốc tế' (Chỉ được phép thay đổi khi có văn bản ủy quyền).",
+          "Cơ quan / Báo chí đối soát: Báo Thanh Niên (thanhnien.vn).",
+          "Link tra cứu / quét gốc (Đã khóa): https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+          "Bài báo đối soát hôm nay: 'Khách quốc tế tăng mạnh, du lịch TP.HCM làm mới thương hiệu' (https://thanhnien.vn/khach-quoc-te-tang-manh-du-lich-tphcm-lam-moi-thuong-hieu-185261111103917198.htm)",
+          "Từ khóa quét đối soát mỗi ngày: 'Khách quốc tế'.",
           "Kỳ dữ liệu quan sát: 10 tháng 2026 (Nguồn xác minh 100% bài viết sống).",
-          "Tình trạng xác minh: Bằng chứng quan sát độc lập, đối soát chéo số liệu từ bài báo gốc.",
+          "Tình trạng khóa: 🔒 ĐÃ KHÓA CỐ ĐỊNH THEO QUYỀN TRUY CẬP HỆ THỐNG.",
           "Ý nghĩa điều hành: Lượng khách quốc tế ghi nhận mức tăng trưởng bứt phá gần 37% sau 10 tháng năm 2026 nhờ chính sách thị thực thuận lợi và các chiến dịch quảng bá điểm đến quốc tế. Ngành du lịch và các địa phương trọng điểm (TP.HCM, Đà Nẵng, Phú Quốc) tăng tốc chuẩn hóa hệ thống sản phẩm và hạ tầng đón khách."
         ]
       }

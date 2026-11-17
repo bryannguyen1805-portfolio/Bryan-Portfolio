@@ -8,7 +8,7 @@
       "indicatorName": "Tỷ giá trung tâm USD/VND",
       "metricDefinition": "Tỷ giá trung tâm của đồng Việt Nam với Đô la Mỹ do Ngân hàng Nhà nước Việt Nam (NHNN) công bố chính thức vào mỗi ngày làm việc.",
       "canonicalUnit": "VND/USD",
-      "primarySource": "Ngân hàng Nhà nước Việt Nam (SBV)",
+      "primarySource": "Thời báo Tài chính Việt Nam (thoibaotaichinhvietnam.vn)",
       "approvedDomains": [
         "thoibaotaichinhvietnam.vn",
         "sbv.gov.vn",
@@ -28,7 +28,12 @@
         "changeCalculation": "CurrentRate - PreviousBusinessDayRate",
         "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
       },
-      "updateFrequency": "DAILY"
+      "updateFrequency": "DAILY",
+      "referenceCode": "Tỷ giá USD hôm nay",
+      "lockedSourceUrl": "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+      "dailyScanKeyword": "Tỷ giá USD hôm nay",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu Tỷ giá USD hôm nay và link tra cứu gốc tại Thời báo Tài chính đã được khóa cố định theo chỉ đạo điều hành."
     },
     "MP-02": {
       "indicatorId": "MP-02",
@@ -61,7 +66,7 @@
       "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
       "metricDefinition": "Lãi suất tiền gửi tiết kiệm kỳ hạn 12 tháng cao nhất quan sát được trên tập hợp các ngân hàng thương mại được khảo sát.",
       "canonicalUnit": "%/năm",
-      "primarySource": "Biểu lãi suất niêm yết của các NHTM Việt Nam",
+      "primarySource": "Báo Lao Động (laodong.vn)",
       "approvedDomains": [
         "sbv.gov.vn",
         "portal.vietcombank.com.vn",
@@ -85,14 +90,19 @@
         "changeCalculation": "CurrentMax - PreviousComparableMax",
         "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
       },
-      "updateFrequency": "PERIODIC"
+      "updateFrequency": "PERIODIC",
+      "referenceCode": "LÃI SUẤT",
+      "lockedSourceUrl": "https://laodong.vn/tien-te-dau-tu",
+      "dailyScanKeyword": "LÃI SUẤT",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu LÃI SUẤT và link tra cứu gốc tại Báo Lao Động đã được khóa cố định theo chỉ đạo điều hành."
     },
     "MP-04": {
       "indicatorId": "MP-04",
       "indicatorName": "Chỉ số VN-Index",
       "metricDefinition": "Điểm số đóng cửa phiên giao dịch của chỉ số VN-Index đại diện cho Sở Giao dịch Chứng khoán TP. Hồ Chí Minh (HOSE).",
       "canonicalUnit": "Điểm",
-      "primarySource": "Sở Giao dịch Chứng khoán TP. Hồ Chí Minh (HOSE) / Nguồn tài chính được cấp phép",
+      "primarySource": "Báo Dân Việt (danviet.vn)",
       "approvedDomains": [
         "danviet.vn",
         "thoibaotaichinhvietnam.vn",
@@ -113,7 +123,12 @@
         "changeCalculation": "CurrentClose - PreviousClose",
         "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
       },
-      "updateFrequency": "DAILY"
+      "updateFrequency": "DAILY",
+      "referenceCode": "VN-INDEX",
+      "lockedSourceUrl": "https://danviet.vn/tim-kiem.html#VN-INDEX",
+      "dailyScanKeyword": "VN-INDEX ",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu VN-INDEX và link tra cứu gốc tại Báo Dân Việt đã được khóa cố định theo chỉ đạo điều hành."
     },
     "MP-05": {
       "indicatorId": "MP-05",
@@ -174,7 +189,7 @@
       "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
       "metricDefinition": "Tổng lượng khách quốc tế đến Việt Nam trong tháng hoặc lũy kế năm do Cục Du lịch Quốc gia Việt Nam hoặc Tổng cục Thống kê công bố.",
       "canonicalUnit": "triệu lượt",
-      "primarySource": "Tổng cục Thống kê (GSO) / Cục Du lịch Quốc gia Việt Nam",
+      "primarySource": "Báo Thanh Niên (thanhnien.vn)",
       "approvedDomains": [
         "gso.gov.vn",
         "vietnamtourism.gov.vn",
@@ -194,7 +209,12 @@
         "changeCalculation": "Compared with exact same period of previous year (YoY)",
         "directionRule": "UP if change > 0 else DOWN if change < 0 else FLAT if change == 0 else UNKNOWN"
       },
-      "updateFrequency": "MONTHLY"
+      "updateFrequency": "MONTHLY",
+      "referenceCode": "Khách quốc tế",
+      "lockedSourceUrl": "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE",
+      "dailyScanKeyword": "Khách quốc tế",
+      "isLocked": true,
+      "lockNotice": "Mã tham chiếu Khách quốc tế và link tra cứu gốc tại Báo Thanh Niên đã được khóa cố định theo chỉ đạo điều hành."
     },
     "MP-08": {
       "indicatorId": "MP-08",

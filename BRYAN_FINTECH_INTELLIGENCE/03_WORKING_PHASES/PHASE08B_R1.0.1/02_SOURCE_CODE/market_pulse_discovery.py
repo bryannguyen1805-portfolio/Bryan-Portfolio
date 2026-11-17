@@ -40,21 +40,23 @@ from market_pulse_interpreter import MarketPulseInterpreter
 # Canonical Indicator Search Specifications (Single Source of Truth from CANONICAL_SPECS)
 _BASE_SEARCH_PROFILES = {
     "MP-01": {
-        "name": "Tỷ giá trung tâm USD/VND",
+        "name": "Tỷ giá trung tâm USD/VND & Ngoại hối",
         "key": "usdVndCenter",
+        "referenceCode": "Tỷ giá USD hôm nay",
         "canonicalUnit": "VND/USD",
-        "searchFocus": "Latest central USD/VND exchange-rate update",
+        "searchFocus": "Latest USD/VND rate & central rate update from Thời báo Tài chính Việt Nam",
         "searchQueries": [
+            "Tỷ giá USD hôm nay",
+            "tỷ giá USD hôm nay",
             "tỷ giá trung tâm",
-            "tỷ giá trung tâm ngày Ngân hàng Nhà nước",
             "tỷ giá USD VND tỷ giá trung tâm"
         ],
         "searchEndpoints": [
-            ("https://cafef.vn/tim-kiem.chn?keywords=t%E1%BB%B7+gi%C3%A1+trung+t%C3%A2m", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint"),
-            ("https://cafef.vn/ty-gia.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint")
+            ("https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD", "thoibaotaichinhvietnam.vn", "Thời báo Tài chính Việt Nam Live Search Endpoint"),
+            ("https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia", "thoibaotaichinhvietnam.vn", "Thời báo Tài chính Tỷ giá Category")
         ],
-        "keywords": ["tỷ giá trung tâm", "tỷ giá usd/vnd", "ngân hàng nhà nước", "usd/vnd", "tỷ giá", "ổn định tỷ giá"],
-        "disambiguationPenalties": [("vàng", -60), ("ounce", -60), ("sjc", -60), ("thế giới", -30), ("ngân hàng thương mại", -20)]
+        "keywords": ["tỷ giá usd hôm nay", "tỷ giá trung tâm", "tỷ giá usd/vnd", "ngân hàng nhà nước", "usd/vnd", "tỷ giá"],
+        "disambiguationPenalties": [("vàng", -60), ("ounce", -60), ("sjc", -60), ("thế giới", -30)]
     },
     "MP-02": {
         "name": "Lãi suất liên ngân hàng qua đêm",
@@ -76,36 +78,37 @@ _BASE_SEARCH_PROFILES = {
     "MP-03": {
         "name": "Lãi suất tiền gửi 12T cao nhất",
         "key": "maxDeposit12M",
+        "referenceCode": "LÃI SUẤT",
         "canonicalUnit": "%/năm",
         "searchFocus": "Latest 12-month deposit-rate announcement from Báo Lao Động",
         "searchQueries": [
+            "LÃI SUẤT",
             "Lãi suất ngân hàng hôm nay",
             "Lãi suất ngân hàng hôm nay Báo Lao Động",
-            "lãi suất ngân hàng hôm nay laodong.vn",
-            "lãi suất tiết kiệm 12 tháng cao nhất lao động",
-            "biểu lãi suất huy động kỳ hạn 12 tháng"
+            "lãi suất ngân hàng hôm nay laodong.vn"
         ],
         "searchEndpoints": [
             ("https://laodong.vn/tien-te-dau-tu", "laodong.vn", "Báo Lao Động - Chuyên mục Tiền tệ - Đầu tư / Live Scan Index"),
-            ("https://laodong.vn/tim-kiem?q=L%C3%A3i+su%E1%BA%A5t+ng%C3%A2n+h%C3%A0ng+h%C3%B4m+nay", "laodong.vn", "Báo Lao Động Live Search Endpoint"),
-            ("https://cafef.vn/lai-suat-ngan-hang.html", "cafef.vn", "CafeF Topic Index / HTTP Endpoint")
+            ("https://laodong.vn/tim-kiem?q=L%C3%83I+SU%E1%BA%A4T", "laodong.vn", "Báo Lao Động Live Search Endpoint")
         ],
-        "keywords": ["lãi suất ngân hàng hôm nay", "lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
+        "keywords": ["lãi suất", "lãi suất ngân hàng hôm nay", "lãi suất ngân hàng", "lãi suất tiền gửi", "lãi suất tiết kiệm", "12 tháng", "lãi suất huy động", "kỳ hạn 12 tháng"],
         "disambiguationPenalties": [("lãi suất cho vay", -40), ("tiền vay", -30), ("cho vay", -30)]
     },
     "MP-04": {
         "name": "Chỉ số VN-Index",
         "key": "vnIndex",
+        "referenceCode": "VN-INDEX",
         "canonicalUnit": "Điểm",
-        "searchFocus": "Latest VN-Index closing-session update",
+        "searchFocus": "Latest VN-Index closing-session update from Báo Dân Việt",
         "searchQueries": [
-            "VN-Index",
+            "VN-INDEX ",
+            "VN-INDEX",
             "VN-Index đóng cửa kết phiên",
             "thị trường chứng khoán kết phiên VN-Index"
         ],
         "searchEndpoints": [
-            ("https://tuoitre.vn/tim-kiem.htm?keywords=VN-Index", "tuoitre.vn", "Tuổi Trẻ Live Search Engine / HTTP Endpoint"),
-            ("https://cafef.vn/tim-kiem.chn?keywords=VN-Index", "cafef.vn", "CafeF Live Search Engine / HTTP Endpoint")
+            ("https://danviet.vn/tim-kiem.html#VN-INDEX", "danviet.vn", "Báo Dân Việt Live Search Endpoint"),
+            ("https://danviet.vn/tim-kiem.htm?keywords=VN-INDEX", "danviet.vn", "Báo Dân Việt Search Index")
         ],
         "keywords": ["vn-index", "chỉ số vn-index", "kết phiên", "đóng cửa", "kết thúc phiên", "thị trường chứng khoán", "khởi sắc"],
         "disambiguationPenalties": [("phái sinh", -20)]
@@ -150,18 +153,20 @@ _BASE_SEARCH_PROFILES = {
     "MP-07": {
         "name": "Khách du lịch quốc tế đến Việt Nam",
         "key": "inboundTourists",
+        "referenceCode": "Khách quốc tế",
         "canonicalUnit": "triệu lượt",
-        "searchFocus": "Latest international tourist-arrival statistics",
+        "searchFocus": "Latest international tourist-arrival statistics from Báo Thanh Niên",
         "searchQueries": [
+            "Khách quốc tế",
             "khách quốc tế",
-            "lượng khách quốc tế Cục Du lịch Quốc gia",
-            "khách du lịch quốc tế 10 tháng"
+            "lượng khách quốc tế",
+            "khách du lịch quốc tế"
         ],
         "searchEndpoints": [
-            ("https://tuoitre.vn/tim-kiem.htm?keywords=kh%C3%A1ch+qu%E1%BB%91c+t%E1%BA%BF", "tuoitre.vn", "Tuổi Trẻ Live Search Engine / HTTP Endpoint"),
-            ("https://nhandan.vn/du-lich/", "nhandan.vn", "Nhân Dân Topic Index / HTTP Endpoint")
+            ("https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE", "thanhnien.vn", "Báo Thanh Niên Live Search Endpoint"),
+            ("https://thanhnien.vn/du-lich.htm", "thanhnien.vn", "Báo Thanh Niên Chuyên mục Du lịch")
         ],
-        "keywords": ["khách quốc tế", "khách du lịch quốc tế", "lượt khách quốc tế", "khách quốc tế đến việt nam", "10 tháng đầu năm"],
+        "keywords": ["khách quốc tế", "khách du lịch quốc tế", "lượt khách quốc tế", "khách quốc tế đến việt nam"],
         "disambiguationPenalties": [("vietqr", -60), ("thanh toán", -40), ("doanh thu du lịch", -50), ("lào cai", -50), ("quảng ninh", -40), ("đà nẵng", -40), ("tỉnh", -30)]
     },
     "MP-08": {

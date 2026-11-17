@@ -510,6 +510,12 @@ function renderPulseCard(m) {
 
   const shortContext = m.referenceValue ? m.referenceValue : (m.note || '');
   const asOfLabel = (m.asOf && m.asOf.includes('tháng')) ? `Kỳ: ${escapeHtml(m.asOf)}` : `Phiên: ${escapeHtml(m.asOf)}`;
+  const refCodeDisplay = m.referenceCode ? `
+    <div style="font-size:0.75rem; color:var(--ms-text-muted); font-weight:600; margin:2px 0 4px 0; display:flex; align-items:center; gap:4px;">
+      <span style="text-transform:uppercase; font-size:0.7rem; color:var(--ms-text-muted);">Mã tham chiếu:</span>
+      <span style="color:var(--ms-primary); font-family:var(--font-ui); font-weight:700;">${escapeHtml(m.referenceCode)}</span>
+      <span title="Mã tham chiếu đã khóa cố định" style="font-size:0.7rem;">🔒</span>
+    </div>` : '';
 
   return `
     <article class="ms-pulse-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')">
@@ -518,6 +524,7 @@ function renderPulseCard(m) {
           <span class="ms-pulse-label">${escapeHtml(m.shortLabel || m.label)}</span>
           <span class="ms-badge ${badgeClass}" style="font-size:12px; padding:2px 6px;">${escapeHtml(badgeText)}</span>
         </div>
+        ${refCodeDisplay}
         <div class="ms-pulse-value">${escapeHtml(m.value)}</div>
         <div class="ms-pulse-asof">${asOfLabel}</div>
         <div class="ms-pulse-context">${escapeHtml(shortContext)}</div>
@@ -589,7 +596,7 @@ function openPulseDetail(key) {
           </div>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.875rem;">
             <div><strong>Tên chỉ số:</strong> ${escapeHtml(m.label)}</div>
-            <div><strong>Mã tham chiếu:</strong> ${escapeHtml(m.key)}</div>
+            <div><strong>Mã tham chiếu:</strong> <span class="ms-badge ms-badge-primary" style="font-size:0.8125rem; font-weight:700;">${escapeHtml(m.referenceCode || m.key)}</span> 🔒 <em style="font-size:0.75rem; color:var(--ms-text-muted);">(Đã khóa)</em></div>
             <div><strong>Ngày quan sát:</strong> ${escapeHtml(m.observationAt || m.asOf)}</div>
             <div><strong>Ngày công bố:</strong> ${escapeHtml(m.publishedAt || m.asOf)}</div>
             <div style="grid-column:1/-1;"><strong>Kỳ dữ liệu:</strong> ${escapeHtml(m.dataPeriod || '')}</div>
@@ -602,21 +609,32 @@ function openPulseDetail(key) {
           <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:8px;">
             NGUỒN GỐC & ĐƯỜNG DẪN XÁC MINH (FIELDS 06–07)
           </div>
-          <div style="font-size:0.875rem; margin-bottom:8px;">
-            <strong>Cơ quan công bố:</strong> ${escapeHtml(m.sourceName || 'Ngân hàng Nhà nước / Cơ quan thống kê')}
+          <div style="font-size:0.875rem; margin-bottom:6px;">
+            <strong>Cơ quan công bố & Nguồn cố định:</strong> ${escapeHtml(m.sourceName || 'Cơ quan báo chí chính thống')}
+          </div>
+          <div style="font-size:0.875rem; margin-bottom:6px;">
+            <strong>Mã tham chiếu & Từ khóa quét:</strong> <code style="background:var(--ms-surface); padding:2px 6px; border:1px solid var(--ms-border); border-radius:3px; font-weight:700; color:var(--ms-primary); font-family:var(--font-ui);">${escapeHtml(m.referenceCode || m.searchKeyword || '')}</code> 🔒 <span style="font-size:0.75rem; color:var(--ms-text-muted);">(Đã khóa cố định)</span>
+          </div>
+          <div style="font-size:0.8125rem; margin-bottom:10px; color:var(--ms-text-muted); word-break:break-all;">
+            <strong>Link tra cứu / quét gốc đã khóa:</strong> <br><a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-primary); text-decoration:underline;">${escapeHtml(m.sourceUrl)}</a>
           </div>
           ${m.articleTitle ? `
-            <div style="font-size:0.875rem; margin-bottom:8px; line-height:1.5;">
-              <strong>Bài viết cụ thể:</strong> <span style="color:var(--ms-primary); font-weight:600;">${escapeHtml(m.articleTitle)}</span>
+            <div style="font-size:0.875rem; margin-bottom:10px; line-height:1.5;">
+              <strong>Bài viết đối soát hôm nay:</strong> <span style="color:var(--ms-primary); font-weight:600;">${escapeHtml(m.articleTitle)}</span>
             </div>
           ` : ''}
           <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
-            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm">
-              Mở bài báo gốc ↗
+            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="font-weight:700;">
+              Mở link tra cứu / quét gốc (${escapeHtml(m.sourceShortName || 'Nguồn gốc')}) ↗
             </a>
-            ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http')).map((secUrl, idx) => `
+            ${m.dailyArticleUrl ? `
+              <a href="${escapeHtml(m.dailyArticleUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
+                Bài báo đối soát hôm nay ↗
+              </a>
+            ` : ''}
+            ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http') && u !== m.sourceUrl && u !== m.dailyArticleUrl).map((secUrl, idx) => `
               <a href="${escapeHtml(secUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-                ${secUrl.includes('tien-te-dau-tu') ? 'Chuyên mục quét đối soát (Báo Lao Động) ↗' : `Nguồn đối soát #${idx + 1} ↗`}
+                Nguồn đối soát #${idx + 1} ↗
               </a>
             `).join('')}
           </div>
