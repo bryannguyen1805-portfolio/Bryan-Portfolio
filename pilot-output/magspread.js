@@ -639,10 +639,7 @@ function renderNewsDesk() {
     return (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || '');
   });
 
-  const leadContainer = $('#newsLeadContainer');
-  const subContainer = $('#newsSubContainer');
-  const editorialGrid = $('.ms-news-editorial-grid');
-  const standardGrid = $('#newsStandardGrid');
+  const streamContainer = $('#newsStreamContainer') || $('#newsStandardGrid');
   const countBadge = $('#newsCountBadge');
   if (countBadge) {
     countBadge.textContent = `${filtered.length}/${newsList.length} bài`;
@@ -654,12 +651,8 @@ function renderNewsDesk() {
 
   // D-08: Rich Empty State with exact spec wording & reset control
   if (filtered.length === 0) {
-    if (editorialGrid) editorialGrid.style.display = 'none';
-    if (leadContainer) leadContainer.innerHTML = '';
-    if (subContainer) subContainer.innerHTML = '';
-    if (standardGrid) {
-      standardGrid.style.display = 'block';
-      standardGrid.innerHTML = `
+    if (streamContainer) {
+      streamContainer.innerHTML = `
         <div class="ms-empty-state" role="status">
           <div style="font-size:2rem; margin-bottom:10px;" aria-hidden="true">🔍</div>
           <p>Không tìm thấy bản tin phù hợp với từ khóa hoặc bộ lọc hiện tại.</p>
@@ -672,62 +665,60 @@ function renderNewsDesk() {
     return;
   }
 
-  if (editorialGrid) editorialGrid.style.display = 'grid';
-
-  // DYNAMIC REFLOW: ZERO ORPHAN POLICY FOR CATEGORY AND SEARCH FILTERS
-  if (filtered.length === 1) {
-    if (editorialGrid) {
-      editorialGrid.style.display = 'grid';
-      editorialGrid.style.gridTemplateColumns = '1fr';
-    }
-    if (subContainer) {
-      subContainer.style.display = 'none';
-      subContainer.innerHTML = '';
-    }
-    if (standardGrid) {
-      standardGrid.style.display = 'none';
-      standardGrid.innerHTML = '';
-    }
-    if (leadContainer) {
-      leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
-    }
-  } else if (filtered.length % 2 === 0) {
-    // When results count is even (e.g. 2, 4, 10):
-    // Render balanced 2-column grid in standardGrid with 0 orphan cards!
-    if (editorialGrid) editorialGrid.style.display = 'none';
-    if (leadContainer) leadContainer.innerHTML = '';
-    if (subContainer) subContainer.innerHTML = '';
-    if (standardGrid) {
-      standardGrid.style.display = 'grid';
-      standardGrid.innerHTML = filtered.map(item => renderStandardNewsCardHtml(item)).join('');
-    }
-  } else {
-    // When results count is odd (e.g. 3, 5, 7, 9, 25):
-    // Editorial grid takes 3 items (1 lead + 2 subfeatures);
-    // remaining is (odd - 3) = EVEN, which fills 2-column standardGrid with 0 orphan cards!
-    if (editorialGrid) {
-      editorialGrid.style.display = 'grid';
-      editorialGrid.style.gridTemplateColumns = '';
-    }
-    if (leadContainer) {
-      leadContainer.innerHTML = renderNewsCardHtml(filtered[0], true);
-    }
-    if (subContainer) {
-      subContainer.style.display = 'flex';
-      const subFeatures = filtered.slice(1, 3);
-      subContainer.innerHTML = subFeatures.map(item => renderSubfeatureCardHtml(item)).join('');
-    }
-    if (standardGrid) {
-      const remaining = filtered.slice(3);
-      if (remaining.length > 0) {
-        standardGrid.style.display = 'grid';
-        standardGrid.innerHTML = remaining.map(item => renderStandardNewsCardHtml(item)).join('');
-      } else {
-        standardGrid.style.display = 'none';
-        standardGrid.innerHTML = '';
-      }
-    }
+  if (streamContainer) {
+    streamContainer.innerHTML = filtered.map((item, idx) => renderVnEconomyNewsItemHtml(item, idx)).join('');
   }
+}
+
+function renderVnEconomyNewsItemHtml(item, idx) {
+  const cleanTime = (item.publisherPublishedAt || item.publicationTimestamp || item.originalPublishedAt || '').split(' | ')[0].trim();
+  const author = item.author || item.originalSourceName || item.publisher || 'Báo chí tài chính';
+
+  const thumbHtml = item.imageUrl ? `
+    <div class="ms-vne-thumb-wrap">
+      <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(item.eventId)}')" class="ms-vne-thumb-anchor" title="${escapeHtml(item.pageTitle || item.title)}">
+        <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-vne-thumb-img" loading="lazy" onerror="this.closest('.ms-vne-thumb-wrap').style.display='none'">
+      </a>
+    </div>
+  ` : '';
+
+  return `
+    <article class="ms-vne-article-item ${item.imageUrl ? 'has-thumb' : 'no-thumb'}" data-event-id="${escapeHtml(item.eventId)}">
+      ${thumbHtml}
+      <div class="ms-vne-content-wrap">
+        <div class="ms-vne-meta">
+          <span class="ms-vne-cat">${escapeHtml(item.category || 'Tài chính')}</span>
+          <span class="ms-vne-dot">•</span>
+          <span class="ms-vne-time">${escapeHtml(cleanTime || '17/11/2026')}</span>
+          <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'} ms-vne-badge">
+            [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
+          </span>
+          <span class="ms-vne-source ms-hide-mobile">Nguồn: <strong>${escapeHtml(author)}</strong></span>
+        </div>
+
+        <h3 class="ms-vne-title">
+          <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+            ${escapeHtml(item.pageTitle || item.title)}
+          </a>
+        </h3>
+
+        <p class="ms-vne-sapo">
+          ${escapeHtml(item.summary || item.supportingQuote || '')}
+        </p>
+
+        <div class="ms-vne-footer">
+          <button type="button" class="ms-vne-read-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+            <span>Đọc phân tích chuyên sâu</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-vne-source-link">
+            <span>Bài gốc (${escapeHtml(author)})</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  `;
 }
 
 function clearNewsSearchAndFilter() {
