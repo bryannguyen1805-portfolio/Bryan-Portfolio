@@ -53,11 +53,13 @@
   --ms-info-bg: #DBEAFE;
   --ms-info-text: #1E40AF;
 
-  /* Typography Tokens — Strict Parity with Bryan Portfolio (Unified Be Vietnam Pro + Metric-matched Fallback) */
-  --font-headline: 'Be Vietnam Pro', 'Be Vietnam Pro Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-reading: 'Be Vietnam Pro', 'Be Vietnam Pro Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Be Vietnam Pro', 'Be Vietnam Pro Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'SF Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+  /* Typography Tokens — 100% Native Vietnamese Typography (VnEconomy Parity: Be Vietnam Pro + Merriweather + Lora) */
+  --font-headline: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Merriweather', 'Lora', Georgia, 'Times New Roman', serif;
+  --font-reading: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ui: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Typography Scale Tokens (Desktop >= 1024px) */
   --ms-text-masthead: clamp(2.25rem, 3.2vw, 2.75rem); /* 36px - 44px */
@@ -315,12 +317,13 @@ small, .ms-small {
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 0.75rem; /* 12px */
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
+  border-radius: 4px;
   border: none;
 }
 
@@ -881,8 +884,9 @@ small, .ms-small {
 
 .ms-cover-date {
   color: var(--ms-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.78125rem;
+  font-weight: 500;
 }
 
 /* VnEconomy-Style Cover Story Hero Thumbnail */
@@ -918,13 +922,13 @@ small, .ms-small {
 }
 
 .ms-cover-headline {
-  font-family: 'Playfair Display', 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-serif), 'Merriweather', 'Lora', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.25rem, 1.8vw, 1.6rem);
   font-weight: 700;
-  line-height: 1.32;
+  line-height: 1.36;
   color: var(--ms-text-primary);
   margin: 0 0 6px 0;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.01em;
 }
 
 .ms-cover-headline a {
@@ -946,7 +950,7 @@ small, .ms-small {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 0.78125rem;
   color: var(--ms-text-muted);
   flex-wrap: wrap;
@@ -993,13 +997,13 @@ small, .ms-small {
   background: var(--ms-primary-light);
   color: var(--ms-primary);
   border: 1px solid var(--ms-primary);
-  padding: 7px 14px;
+  padding: 8px 16px;
   border-radius: 4px;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -1014,8 +1018,9 @@ small, .ms-small {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--ms-text-muted);
   text-decoration: none;
   transition: color 0.15s ease;
@@ -1055,12 +1060,12 @@ small, .ms-small {
 }
 
 .ms-quote-attribution {
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 0.75rem;
   color: var(--ms-secondary);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 /* Implication Banner (Balanced Full Width Below Top Grid) */
@@ -1104,11 +1109,11 @@ small, .ms-small {
 }
 
 .ms-implication-header {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.78125rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   margin: 0 0 8px 0;
   line-height: 1.2;
   display: flex;
@@ -1516,8 +1521,8 @@ small, .ms-small {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.78125rem;
   color: var(--ms-text-muted);
   margin-bottom: 6px;
   flex-wrap: wrap;
@@ -1527,7 +1532,7 @@ small, .ms-small {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--ms-primary);
-  letter-spacing: 0.4px;
+  letter-spacing: 0.02em;
 }
 
 .ms-vne-dot {
@@ -1540,9 +1545,9 @@ small, .ms-small {
 }
 
 .ms-vne-badge {
-  font-size: 10px !important;
-  padding: 1px 6px !important;
-  font-family: var(--font-mono);
+  font-size: 11px !important;
+  padding: 2px 7px !important;
+  font-family: var(--font-ui);
 }
 
 .ms-vne-source {
@@ -1557,13 +1562,13 @@ small, .ms-small {
 }
 
 .ms-vne-title {
-  font-family: 'Playfair Display', 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-serif), 'Merriweather', 'Lora', Georgia, 'Times New Roman', serif;
   font-size: 1.25rem; /* 20px */
   font-weight: 700;
   line-height: 1.38;
   color: var(--ms-text-primary);
   margin: 0 0 8px 0;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.01em;
 }
 
 .ms-vne-title a {
@@ -1603,12 +1608,12 @@ small, .ms-small {
   background: transparent;
   border: none;
   padding: 0;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--ms-primary);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
   cursor: pointer;
   transition: color 0.15s ease, gap 0.15s ease;
 }
@@ -1622,8 +1627,9 @@ small, .ms-small {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--ms-text-muted);
   text-decoration: none;
   transition: color 0.15s ease;
@@ -6874,15 +6880,16 @@ button.ms-pulse-open-btn {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 20px !important;
-  height: 20px !important;
+  width: 22px !important;
+  height: 22px !important;
   margin-top: 2px !important;
   background-color: var(--ms-primary-light) !important;
   border: 1px solid var(--ms-primary) !important;
   color: var(--ms-primary) !important;
-  font-family: var(--font-mono) !important;
+  font-family: var(--font-ui) !important;
   font-size: 0.75rem !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
+  border-radius: 3px !important;
 }
 
 .ms-synthesis-copy {
