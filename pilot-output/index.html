@@ -91,10 +91,10 @@
   }
   </script>
 
-  <!-- Google Fonts: Be Vietnam Pro + Plus Jakarta Sans + Sora -->
+  <!-- Google Fonts: Be Vietnam Pro + Plus Jakarta Sans + Sora + Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=optional" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="./fintech-favicon-opt.webp">
   <link rel="apple-touch-icon" href="./fintech-favicon-opt.png">
   <link rel="stylesheet" href="./magspread.css?v=1794841513">
@@ -105,7 +105,7 @@
   <!-- ======================================================================
        TIER 1: UNIFIED TOP UTILITY & CONTACT BAR (VNECONOMY-INSPIRED)
        ====================================================================== -->
-  <aside class="ms-contact-topbar" id="contactTopBar" aria-label="Thanh thông tin & liên hệ Bryan Nguyen" data-nosnippet>
+  <aside class="ms-contact-topbar ms-hide-mobile" id="contactTopBar" aria-label="Thanh thông tin & liên hệ Bryan Nguyen" data-nosnippet>
     <div class="ms-container ms-contact-wrap">
       <div class="ms-top-utility-left">
         <span id="mastheadDate" class="ms-top-date">THỨ BẢY, 14/11/2026</span>
@@ -157,23 +157,11 @@
   <header class="ms-masthead" id="masthead">
     <div class="ms-container">
       <div class="ms-masthead-main-row">
-        <!-- Left: Hamburger Menu + Quick Search (Pill on Desktop, Search Icon on Mobile) -->
+        <!-- Left: Hamburger Menu (VnEconomy Parity) -->
         <div class="ms-masthead-left" data-nosnippet>
           <button type="button" id="btnOpenCategoryDrawer" class="ms-hamburger-btn" aria-label="Mở menu chuyên mục và tìm kiếm" aria-controls="mobileNavDrawer" aria-expanded="false" onclick="openMobileDrawer(false)" title="Mở Menu Chuyên mục">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
-
-          <button type="button" id="btnMobileSearchDrawer" class="ms-mobile-search-btn ms-hide-desktop" aria-label="Tìm kiếm bài viết" onclick="openMobileDrawer(true)" title="Tìm kiếm bài viết">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-
-          <form id="headerQuickSearchForm" class="ms-header-search-form ms-hide-mobile" role="search" onsubmit="return handleHeaderQuickSearch(event)">
-            <button type="submit" class="ms-header-search-icon-btn" aria-label="Thực hiện tìm kiếm">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <label for="headerQuickSearchInput" class="ms-visually-hidden">Nhập từ khóa bài viết</label>
-            <input type="search" id="headerQuickSearchInput" class="ms-header-search-input" placeholder="Nhập từ khóa bài viết..." autocomplete="off">
-          </form>
         </div>
 
         <!-- Center: Centered Brand Logo & Nameplate -->
@@ -187,7 +175,7 @@
 
         <!-- Right: Edition Badge & Icon Theme Toggle -->
         <div class="ms-masthead-actions" data-nosnippet>
-          <span id="mastheadEditionBadge" class="ms-badge ms-badge-primary ms-edition-pill">ẤN BẢN SỐ 31 · PHIÊN CHIỀU</span>
+          <span id="mastheadEditionBadge" class="ms-badge ms-badge-primary ms-edition-pill">ẤN BẢN SỐ 32 · PHIÊN SÁNG</span>
           <button id="themeToggleBtn" type="button" class="ms-theme-toggle-btn" aria-label="Chuyển giao diện Sáng / Tối" title="Chuyển giao diện Sáng / Tối">
             <span class="ms-theme-icon" aria-hidden="true">🌙</span>
           </button>
@@ -242,21 +230,12 @@
               <span class="ms-nav-num">04.</span> CƠ HỘI B2B
             </button>
           </li>
-          <li class="ms-nav-group" role="none" style="display:none !important;" id="navGroupArchive" aria-hidden="true">
-            <button type="button" class="ms-nav-tab-btn" id="navTabArchive" data-tab="archive" tabindex="-1" aria-hidden="true" onclick="switchFintechTab('archive')">
-              <span class="ms-nav-num">05.</span> LƯU TRỮ
+          <li class="ms-nav-group" role="none" id="navGroupNewsletter">
+            <button class="ms-nav-tab-btn" role="tab" id="navTabNewsletter" data-tab="newsletter" aria-selected="false" aria-controls="page-newsletter" onclick="switchFintechTab('newsletter')">
+              <span class="ms-nav-num">05.</span> BẢN TIN &amp; ĐĂNG KÝ
             </button>
           </li>
         </ul>
-
-        <div class="ms-nav-quick-topics" aria-label="Lọc nhanh chuyên mục">
-          <span class="ms-nav-divider" aria-hidden="true">|</span>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Ngân hàng')">Ngân hàng</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Thị trường vốn')">Thị trường vốn</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Doanh nghiệp')">Doanh nghiệp</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Kinh tế vĩ mô')">Vĩ mô</button>
-          <button type="button" class="ms-topic-link" onclick="navigateToNewsCategory('Bán lẻ, D2C và xu hướng tiêu dùng')">Tiêu dùng</button>
-        </div>
       </div>
 
       <div class="ms-nav-actions">
@@ -289,15 +268,7 @@
         <button type="button" class="ms-quick-tab" id="mobileTabMarket" role="tab" aria-selected="false" aria-controls="page-market" data-tab="market" onclick="switchFintechTab('market')">02. Thị trường &amp; Tin tức</button>
         <button type="button" class="ms-quick-tab" id="mobileTabAnalysis" role="tab" aria-selected="false" aria-controls="page-analysis" data-tab="analysis" onclick="switchFintechTab('analysis')">03. Phân tích &amp; Học tập</button>
         <button type="button" class="ms-quick-tab" id="mobileTabB2B" role="tab" aria-selected="false" aria-controls="page-b2b" data-tab="b2b" onclick="switchFintechTab('b2b')">04. Cơ hội B2B</button>
-        <button type="button" class="ms-quick-tab" data-tab="archive" style="display:none !important;" id="quickTabArchive" tabindex="-1" aria-hidden="true" onclick="switchFintechTab('archive')">05. Lưu trữ</button>
-      </div>
-      <div class="ms-quick-topics-inline" aria-label="Chuyên mục tin tức">
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Ngân hàng')">Ngân hàng</button>
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Thị trường vốn')">Thị trường vốn</button>
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Doanh nghiệp')">Doanh nghiệp</button>
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Kinh tế vĩ mô')">Vĩ mô</button>
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Bán lẻ, D2C và xu hướng tiêu dùng')">Tiêu dùng</button>
-        <button type="button" class="ms-quick-topic" onclick="navigateToNewsCategory('Thanh toán')">Thanh toán số</button>
+        <button type="button" class="ms-quick-tab" id="mobileTabNewsletter" role="tab" aria-selected="false" aria-controls="page-newsletter" data-tab="newsletter" onclick="switchFintechTab('newsletter')">05. Bản tin &amp; Đăng ký</button>
       </div>
     </div>
   </div>
@@ -312,7 +283,7 @@
       <a href="#masthead" class="ms-nav-drawer-brand" onclick="event.preventDefault(); closeMobileDrawer(); switchFintechTab('today');">
         <img src="./bnews-logo-light-opt.webp?v=1794692000" id="drawerBryanLogo" alt="Bnews | fintech" class="ms-nav-logo-img" width="108" height="33">
       </a>
-      <span id="drawerEditionBadge" class="ms-badge ms-badge-primary">ẤN BẢN SỐ 31 · PHIÊN CHIỀU</span>
+      <span id="drawerEditionBadge" class="ms-badge ms-badge-primary">ẤN BẢN SỐ 32 · PHIÊN SÁNG</span>
     </div>
 
     <div class="ms-nav-drawer-body">
@@ -342,6 +313,10 @@
           <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="b2b" onclick="closeMobileDrawer(); switchFintechTab('b2b');">
             <span class="ms-drawer-ws-num">04</span>
             <span class="ms-drawer-ws-name">Tín hiệu &amp; Cơ hội B2B</span>
+          </button>
+          <button type="button" class="ms-drawer-ws-btn" data-drawer-tab="newsletter" onclick="closeMobileDrawer(); switchFintechTab('newsletter');">
+            <span class="ms-drawer-ws-num">05</span>
+            <span class="ms-drawer-ws-name">Bản tin &amp; Đăng ký</span>
           </button>
         </div>
       </div>
@@ -622,6 +597,87 @@
       </section>
     </div>
 
+    <!-- ======================================================================
+         PAGE 05: BẢN TIN & ĐĂNG KÝ (NEWSLETTER & LATEST ISSUE - MORNING BREW PARITY)
+         ====================================================================== -->
+    <div id="page-newsletter" class="ms-page-section" role="tabpanel" aria-labelledby="navTabNewsletter">
+      
+      <!-- TOP HERO SUBSCRIBE BANNER (MORNING BREW INSPIRATION) -->
+      <section class="bnews-nl-hero" aria-label="Đăng ký nhận bản tin Bnews">
+        <div class="ms-container">
+          <div class="bnews-nl-hero-wrap">
+            <div class="bnews-nl-hero-left">
+              <span class="bnews-nl-hero-kicker">■ BNEWS DAILY NEWSLETTER</span>
+              <h1 class="bnews-nl-hero-title">Nắm trọn 25 tin đắt giá chỉ với 3 phút mỗi sáng</h1>
+              <p class="bnews-nl-hero-desc">
+                Bnews gửi bản tin tổng hợp 25 sự kiện tài chính xác minh, 4 chỉ số thị trường then chốt và cơ hội B2B tới hộp thư của bạn lúc 9h00 sáng mỗi ngày. Hoàn toàn miễn phí.
+              </p>
+            </div>
+            <div class="bnews-nl-hero-right">
+              <form class="bnews-nl-form-row" onsubmit="event.preventDefault(); handleNewsletterSubscribe('top');">
+                <label for="nlEmailInputTop" class="ms-visually-hidden">Địa chỉ email</label>
+                <input type="email" id="nlEmailInputTop" class="bnews-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email">
+                <button type="submit" id="nlSubmitBtnTop" class="bnews-nl-btn">ĐĂNG KÝ MIỄN PHÍ →</button>
+              </form>
+              <div class="bnews-nl-disclaimer">
+                Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
+              </div>
+              <div id="nlFeedbackTop" class="bnews-nl-feedback" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LATEST ISSUE STAGE (CENTERED EMBEDDED PAPER) -->
+      <section class="bnews-issue-stage" aria-label="Ấn bản Bnews số mới nhất">
+        <div class="ms-container">
+          <div class="bnews-issue-paper-wrap">
+            <div class="bnews-issue-bar">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background-color:#15803D;"></span>
+                <span>ẤN BẢN MỚI NHẤT TRÊN HỆ THỐNG</span>
+              </div>
+              <div>
+                <a href="./preview/newsletter-preview.html" target="_blank" style="color:#BE123C; text-decoration:none; font-family:var(--font-mono); font-size:11px; font-weight:700;">
+                  MỞ TOÀN MÀN HÌNH ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- CONTAINER FOR THE NEWSLETTER -->
+            <div id="bnewsLatestIssuePaper" class="bnews-latest-issue-paper">
+              <div style="padding: 40px; text-align: center; color: #57534E; font-size: 14px;">
+                Đang tải ấn bản Bnews mới nhất...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM SUBSCRIBE CTA BANNER -->
+      <section class="bnews-nl-bottom-cta" aria-label="Đăng ký nhận bản tin ngày mai">
+        <div class="ms-container">
+          <div class="bnews-nl-bottom-wrap">
+            <span class="bnews-nl-hero-kicker" style="color:#F7EBE0;">■ ĐỪNG BỎ LỠ ẤN BẢN 9H00 SÁNG MAI</span>
+            <h2 style="font-size:24px; font-weight:800; color:#FFFFFF; margin:8px 0 12px 0;">Tham gia cùng cộng đồng độc giả Bnews</h2>
+            <p style="font-size:14px; color:#F7EBE0; opacity:0.9; margin:0 0 20px 0; line-height:1.6;">
+              Cập nhật phân tích tài chính, thanh toán số, lãi suất tiền gửi và 25 sự kiện xác minh được chuyển thẳng vào hộp thư mỗi ngày.
+            </p>
+            <form class="bnews-nl-form-row" onsubmit="event.preventDefault(); handleNewsletterSubscribe('bottom');">
+              <label for="nlEmailInputBottom" class="ms-visually-hidden">Địa chỉ email</label>
+              <input type="email" id="nlEmailInputBottom" class="bnews-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email">
+              <button type="submit" class="bnews-nl-btn" style="background-color:#BE123C;">ĐĂNG KÝ NHẬN BẢN TIN →</button>
+            </form>
+            <div class="bnews-nl-disclaimer" style="text-align: center; margin-top: 10px;">
+              Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
+            </div>
+            <div id="nlFeedbackBottom" class="bnews-nl-feedback" role="alert" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
     <!-- PAGE 05: LƯU TRỮ (Ẩn khỏi giao diện người dùng theo D-03; dữ liệu backend bảo toàn 100%) -->
     <div id="page-archive" class="ms-page-section" role="tabpanel" style="display:none !important;">
       <section class="ms-archive-section" id="archiveSection">
@@ -750,51 +806,81 @@
         <div class="ms-welcome-eyebrow">
           <span>BRYAN NEWS | FINTECH INTELLIGENCE</span>
           <span class="ms-welcome-dot">·</span>
-          <span>FINANCIAL MARKET &amp; DIGITAL PAYMENT BRIEFING</span>
+          <span class="ms-welcome-eyebrow-sub">FINANCIAL MARKET &amp; PAYMENT BRIEFING</span>
         </div>
         <button type="button" class="ms-modal-close" onclick="closeWelcomeModal()" aria-label="Đóng lời chào mừng">✕</button>
       </div>
 
-      <div class="ms-welcome-hero">
-        <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
-        <p class="ms-welcome-lead">
-          Đây là không gian cập nhật và phân tích về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số.
-        </p>
-        <p class="ms-welcome-mission">
-          Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
-        </p>
-      </div>
-
-      <div class="ms-welcome-grid">
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">01</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">MARKET PULSE</div>
-            <p class="ms-welcome-item-desc">Theo dõi các chỉ số tài chính, tỷ giá, lãi suất, thanh khoản và xu hướng thanh toán.</p>
-          </div>
+      <div class="ms-welcome-scroll-body">
+        <div class="ms-welcome-hero">
+          <h2 class="ms-welcome-title" id="welcomeModalTitle">CHÀO MỪNG ĐẾN VỚI BRYAN NEWS | FINTECH INTELLIGENCE</h2>
+          <p class="ms-welcome-lead">
+            Không gian tổng hợp và phân tích chuyên sâu về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số B2B.
+          </p>
+          <p class="ms-welcome-mission">
+            Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
+          </p>
         </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">02</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">THE NEWS DESK</div>
-            <p class="ms-welcome-item-desc">Tổng hợp những sự kiện nổi bật có nguồn dẫn, phân tích bối cảnh và ý nghĩa thị trường.</p>
+        <!-- HIGHLIGHT: BNEWS DAILY NEWSLETTER SUBSCRIPTION -->
+        <div class="ms-welcome-nl-card">
+          <div class="ms-welcome-nl-badge">
+            <span class="ms-welcome-nl-dot">■</span> BNEWS DAILY NEWSLETTER · 9H00 MỖI SÁNG (MIỄN PHÍ)
           </div>
+          <h3 class="ms-welcome-nl-title">Nắm trọn 25 tin đắt giá chỉ với 3 phút mỗi sáng</h3>
+          <p class="ms-welcome-nl-desc">
+            Bnews gửi bản tin tổng hợp 25 sự kiện tài chính xác minh, 4 chỉ số thị trường then chốt và cơ hội B2B tới hộp thư của bạn lúc 9h00 sáng mỗi ngày. Hoàn toàn miễn phí.
+          </p>
+          <form class="ms-welcome-nl-form" onsubmit="event.preventDefault(); handleNewsletterSubscribe('modal');">
+            <div class="ms-welcome-nl-input-wrap">
+              <input type="email" id="nlEmailInputModal" class="ms-welcome-nl-input" placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email" aria-label="Địa chỉ email nhận bản tin Bnews">
+              <button type="submit" id="nlSubmitBtnModal" class="ms-welcome-nl-btn">
+                ĐĂNG KÝ MIỄN PHÍ →
+              </button>
+            </div>
+            <p class="ms-welcome-nl-disclaimer">
+              Cam kết không gửi spam. Bạn có thể hủy đăng ký bất kỳ lúc nào chỉ với 1 click.
+            </p>
+            <div id="nlFeedbackModal" class="bnews-nl-feedback" role="status" aria-live="polite"></div>
+          </form>
         </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">03</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">MACRO TO MICRO</div>
-            <p class="ms-welcome-item-desc">Kết nối biến động vĩ mô với ngân hàng, doanh nghiệp, người tiêu dùng và thanh toán.</p>
+        <div class="ms-welcome-pillars-section">
+          <div class="ms-welcome-pillars-heading">
+            4 TRỤ CỘT NỘI DUNG XUYÊN SUỐT TRÊN HỆ THỐNG
           </div>
-        </div>
+          <div class="ms-welcome-grid">
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">01</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">MARKET PULSE</div>
+                <p class="ms-welcome-item-desc">Tỷ giá USD/VND, lãi suất liên ngân hàng, thanh khoản &amp; xung lực tài chính.</p>
+              </div>
+            </div>
 
-        <div class="ms-welcome-item">
-          <div class="ms-welcome-item-num">04</div>
-          <div class="ms-welcome-item-body">
-            <div class="ms-welcome-item-title">FINTECH &amp; B2B OPPORTUNITIES</div>
-            <p class="ms-welcome-item-desc">Khám phá xu hướng QR, POS, SmartPOS, Payment Gateway, Payment Link và các cơ hội kinh doanh thanh toán.</p>
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">02</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">THE NEWS DESK</div>
+                <p class="ms-welcome-item-desc">25 sự kiện tài chính xác minh 24h kèm nguồn dẫn và phân tích bối cảnh thị trường.</p>
+              </div>
+            </div>
+
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">03</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">MACRO TO MICRO</div>
+                <p class="ms-welcome-item-desc">Chuỗi truyền dẫn chính sách vĩ mô tới ngân hàng, doanh nghiệp &amp; tiêu dùng.</p>
+              </div>
+            </div>
+
+            <div class="ms-welcome-item">
+              <div class="ms-welcome-item-num">04</div>
+              <div class="ms-welcome-item-body">
+                <div class="ms-welcome-item-title">B2B &amp; FINTECH</div>
+                <p class="ms-welcome-item-desc">Radar giải pháp thanh toán QR, POS, SmartPOS, Gateway &amp; cơ hội B2B.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -802,14 +888,14 @@
       <div class="ms-welcome-footer">
         <div class="ms-welcome-actions">
           <button type="button" class="ms-btn ms-btn-primary ms-welcome-cta" onclick="closeWelcomeModal()">
-            KHÁM PHÁ BẢN TIN →
+            KHÁM PHÁ BẢN TIN HÔM NAY →
           </button>
           <button type="button" class="ms-btn ms-btn-ghost ms-welcome-contact-btn" onclick="closeWelcomeModal(); openContactModal();">
             LIÊN HỆ BRYAN
           </button>
         </div>
         <div class="ms-welcome-signature">
-          BRYAN NGUYEN · FINTECH INTELLIGENCE
+          BRYAN NGUYEN · FINTECH &amp; FINANCIAL INTELLIGENCE
         </div>
       </div>
     </div>
@@ -927,6 +1013,6 @@
   </div>
 
   <script src="./edition-data.js?v=1794841513"></script>
-  <script src="./magspread.js?v=1794841513"></script>
+  <script src="./magspread.js?v=1794848800"></script>
 </body>
 </html>

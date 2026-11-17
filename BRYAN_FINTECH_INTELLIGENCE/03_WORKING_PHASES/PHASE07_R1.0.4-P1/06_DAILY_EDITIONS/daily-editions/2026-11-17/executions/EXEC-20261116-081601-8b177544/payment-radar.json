@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "5.0.0",
+  "inheritedSchemaVersion": "4.0.0",
+  "editionId": "ED-20261116-D01",
+  "generatedAt": "2026-11-16T08:16:01.724474+07:00",
+  "signals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261116-043",
+        "EVT-20261116-028",
+        "EVT-20261116-009"
+      ],
+      "supportingEventIds": [
+        "EVT-20261116-043",
+        "EVT-20261116-028",
+        "EVT-20261116-009"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261116-043",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-sang-16-11-tai-sjc-doji-pnj-bao-tin-minh-chau-bao-tin-manh-hai-18826111607421068.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-sang-16-11-tai-sjc-doji-pnj-bao-tin-minh-chau-bao-tin-manh-hai-18826111607421068.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-16T07:42:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_046_ec8d51f8f3.html",
+          "evidenceSha256": "ec8d51f8f381ed75703ea099633e4d6d4ae42ae528f97dc459cbe961792f89b8",
+          "supportingQuote": "Sáng 16/11, giá vàng trong nước không có biến động so với phiên giao dịch cuối tuần."
+        },
+        {
+          "referenceId": "EVT-20261116-028",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/giua-thang-11-gui-500-trieu-tai-bidv-vietcombank-vietinbank-agribank-shb-bac-a-bank-lai-toi-da-bao-nhieu-188261115125403534.chn",
+          "canonicalUrl": "https://cafef.vn/giua-thang-11-gui-500-trieu-tai-bidv-vietcombank-vietinbank-agribank-shb-bac-a-bank-lai-toi-da-bao-nhieu-188261115125403534.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T12:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_b1ad9a020a.html",
+          "evidenceSha256": "b1ad9a020a8f0213a716b1095c68c116d5a6ae3b3baa613741e68fe80dc1514e",
+          "supportingQuote": "Khảo sát lãi suất tiết kiệm tại các ngân hàng vào giữa tháng 11 cho thấy: BIDV, VietinBank và Vietcombank cùng niêm yết 1 mức lãi suất ở 3 kỳ hạn 3 tháng, 9 tháng và 12 tháng."
+        },
+        {
+          "referenceId": "EVT-20261116-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_011_7ef1a8dce9.html",
+          "evidenceSha256": "7ef1a8dce9f05d2fc138eba82f8fcce891b4029096618855a359bfe40b21d0ee",
+          "supportingQuote": "Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhâ"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-12",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_040246f233.html",
+          "evidenceSha256": "040246f233176e0d79e75762d21e7d61e5c0fbf46490de3bf3f4b04b1bb325ea"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử Khởi tạo từ Máy tính tiền cho SME",
+      "sector": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "paymentDomain": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "targetSegment": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "actualMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "marketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "verifiedMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "merchantProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "businessProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "paymentImplication": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantPaymentSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "targetPartnerType": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "commercialRationale": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooSolutionRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "commercialRelevance": "MEDIUM",
+      "priority": "P2_MEDIUM",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng.",
+      "recommendedMonitoring": [
+        "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261116-030",
+        "EVT-20261116-039"
+      ],
+      "supportingEventIds": [
+        "EVT-20261116-030",
+        "EVT-20261116-039"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+        "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động."
+      ],
+      "merchantImpact": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261116-030",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/nguoi-ban-hang-tren-san-nhe-ganh-hoa-don-185261115220914406.htm",
+          "canonicalUrl": "https://thanhnien.vn/nguoi-ban-hang-tren-san-nhe-ganh-hoa-don-185261115220914406.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-16T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_92ed545341.html",
+          "evidenceSha256": "92ed5453418f3c47a01719e3134a74ff40180184e14cc09025ffd08b814282a0",
+          "supportingQuote": "Chủ trương không bắt buộc lập hóa đơn điện tử đối với giao dịch đã được sàn thương mại điện tử khấu trừ thuế đang nhận được sự hưởng ứng của người bán."
+        },
+        {
+          "referenceId": "EVT-20261116-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xoa-no-thue-kien-nghi-go-vuong-cho-nguoi-khong-con-kha-nang-tra-no-100261115230537799.htm",
+          "canonicalUrl": "https://tuoitre.vn/xoa-no-thue-kien-nghi-go-vuong-cho-nguoi-khong-con-kha-nang-tra-no-100261115230537799.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-15T23:25:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_042_690875823e.html",
+          "evidenceSha256": "690875823e04e9e2cdb98fe8f2f8c96a82b7de1206deecad018001598d41121e",
+          "supportingQuote": "Bộ Tài chính vừa tổng hợp, giải trình ý kiến góp ý của các đoàn đại biểu Quốc hội với dự thảo nghị quyết về chính sách đặc thù xử lý nợ thuế ."
+        }
+      ]
+    }
+  ],
+  "radarSignals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261116-043",
+        "EVT-20261116-028",
+        "EVT-20261116-009"
+      ],
+      "supportingEventIds": [
+        "EVT-20261116-043",
+        "EVT-20261116-028",
+        "EVT-20261116-009"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 6.4%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261116-043",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-sang-16-11-tai-sjc-doji-pnj-bao-tin-minh-chau-bao-tin-manh-hai-18826111607421068.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-sang-16-11-tai-sjc-doji-pnj-bao-tin-minh-chau-bao-tin-manh-hai-18826111607421068.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-16T07:42:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_046_ec8d51f8f3.html",
+          "evidenceSha256": "ec8d51f8f381ed75703ea099633e4d6d4ae42ae528f97dc459cbe961792f89b8",
+          "supportingQuote": "Sáng 16/11, giá vàng trong nước không có biến động so với phiên giao dịch cuối tuần."
+        },
+        {
+          "referenceId": "EVT-20261116-028",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/giua-thang-11-gui-500-trieu-tai-bidv-vietcombank-vietinbank-agribank-shb-bac-a-bank-lai-toi-da-bao-nhieu-188261115125403534.chn",
+          "canonicalUrl": "https://cafef.vn/giua-thang-11-gui-500-trieu-tai-bidv-vietcombank-vietinbank-agribank-shb-bac-a-bank-lai-toi-da-bao-nhieu-188261115125403534.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T12:53:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_b1ad9a020a.html",
+          "evidenceSha256": "b1ad9a020a8f0213a716b1095c68c116d5a6ae3b3baa613741e68fe80dc1514e",
+          "supportingQuote": "Khảo sát lãi suất tiết kiệm tại các ngân hàng vào giữa tháng 11 cho thấy: BIDV, VietinBank và Vietcombank cùng niêm yết 1 mức lãi suất ở 3 kỳ hạn 3 tháng, 9 tháng và 12 tháng."
+        },
+        {
+          "referenceId": "EVT-20261116-009",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "canonicalUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "2026-11-15T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_011_7ef1a8dce9.html",
+          "evidenceSha256": "7ef1a8dce9f05d2fc138eba82f8fcce891b4029096618855a359bfe40b21d0ee",
+          "supportingQuote": "Theo biểu lãi suất mới nhất được cập nhật ngày 14/11, Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank) vừa điều chỉnh giảm lãi suất huy động tại một số kỳ hạn đối với khách hàng cá nhâ"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "6.4",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-12",
+          "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+          "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_040246f233.html",
+          "evidenceSha256": "040246f233176e0d79e75762d21e7d61e5c0fbf46490de3bf3f4b04b1bb325ea"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử Khởi tạo từ Máy tính tiền cho SME",
+      "sector": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "paymentDomain": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "targetSegment": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "actualMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "marketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "verifiedMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "merchantProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "businessProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "paymentImplication": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantPaymentSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "targetPartnerType": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "commercialRationale": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooSolutionRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "commercialRelevance": "MEDIUM",
+      "priority": "P2_MEDIUM",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng.",
+      "recommendedMonitoring": [
+        "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261116-030",
+        "EVT-20261116-039"
+      ],
+      "supportingEventIds": [
+        "EVT-20261116-030",
+        "EVT-20261116-039"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+        "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động."
+      ],
+      "merchantImpact": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261116-030",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/nguoi-ban-hang-tren-san-nhe-ganh-hoa-don-185261115220914406.htm",
+          "canonicalUrl": "https://thanhnien.vn/nguoi-ban-hang-tren-san-nhe-ganh-hoa-don-185261115220914406.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "2026-11-16T06:00:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_92ed545341.html",
+          "evidenceSha256": "92ed5453418f3c47a01719e3134a74ff40180184e14cc09025ffd08b814282a0",
+          "supportingQuote": "Chủ trương không bắt buộc lập hóa đơn điện tử đối với giao dịch đã được sàn thương mại điện tử khấu trừ thuế đang nhận được sự hưởng ứng của người bán."
+        },
+        {
+          "referenceId": "EVT-20261116-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/xoa-no-thue-kien-nghi-go-vuong-cho-nguoi-khong-con-kha-nang-tra-no-100261115230537799.htm",
+          "canonicalUrl": "https://tuoitre.vn/xoa-no-thue-kien-nghi-go-vuong-cho-nguoi-khong-con-kha-nang-tra-no-100261115230537799.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "2026-11-15T23:25:00+07:00",
+          "evidencePath": "raw_evidence_store/snapshot_live_042_690875823e.html",
+          "evidenceSha256": "690875823e04e9e2cdb98fe8f2f8c96a82b7de1206deecad018001598d41121e",
+          "supportingQuote": "Bộ Tài chính vừa tổng hợp, giải trình ý kiến góp ý của các đoàn đại biểu Quốc hội với dự thảo nghị quyết về chính sách đặc thù xử lý nợ thuế ."
+        }
+      ]
+    }
+  ],
+  "totalSignals": 2,
+  "verifiedOrEmergingOpportunitiesCount": 0,
+  "potentialOpportunitiesCount": 2,
+  "noDirectOpportunityCount": 0,
+  "commercialCoverage": "PRIORITY_PAYMENT_SECTORS_EVALUATED",
+  "modelProviderStatus": "MODEL_PROVIDER_UNAVAILABLE"
+}

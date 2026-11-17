@@ -1,0 +1,1649 @@
+{
+  "schemaVersion": "5.0.0",
+  "editionId": "ED-20261116-D01",
+  "generatedAt": "2026-11-16T08:16:01.724474+07:00",
+  "summary": {
+    "totalVerifiedNewsEvents": 25,
+    "totalRawFinancialFacts": 19,
+    "uniqueVerifiedFacts": 18,
+    "duplicateFactsExcludedFromSynthesis": 1,
+    "reboundEntitiesCount": 19,
+    "totalMarketPulseIndicators": 8,
+    "totalCoreTheses": 4,
+    "totalMacroToMicroChains": 4,
+    "totalPaymentRadarSignals": 2,
+    "totalDecisionCards": 3,
+    "zeroOrphanReferences": true,
+    "zeroDuplicateFactsUsedInSynthesis": true,
+    "totalConnectTheDotsNarratives": 4
+  },
+  "newsEventCrosswalk": [
+    {
+      "eventId": "EVT-20261116-049",
+      "headline": "Đọc nhanh 16-11: Phố Wall biến động nhẹ, gia đình chủ tịch PNJ chỉ còn nắm 7,09% vốn",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-16T08:03:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/doc-nhanh-16-11-pho-wall-bien-dong-nhe-gia-dinh-chu-tich-pnj-chi-con-nam-709-von-100261116070210215.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_052_9b85553b57.html",
+      "evidenceSha256": "9b85553b57d9e4ebb625620b443fa1eb5faf57a3ca78247042d3a3d0e765f9bb",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-010",
+      "headline": "Một công ty ở TP.HCM có 7 nhân viên, báo lãi đột biến hơn 200 tỉ sau 9 tháng",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-16T08:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/mot-cong-ty-o-tphcm-co-7-nhan-vien-bao-lai-dot-bien-hon-200-ti-sau-9-thang-100261115195604227.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_012_5439f13660.html",
+      "evidenceSha256": "5439f13660fb41ec3d2000356d4d3ab9f55af5efca0603b1c8eb2a80b819351d",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-043",
+      "headline": "Giá vàng miếng, vàng nhẫn 9999 sáng 16/11 tại SJC, DOJI, PNJ, Bảo Tín Minh Châu, Bảo Tín Mạnh Hải,...",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-16T07:42:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/gia-vang-mieng-vang-nhan-9999-sang-16-11-tai-sjc-doji-pnj-bao-tin-minh-chau-bao-tin-manh-hai-18826111607421068.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_046_ec8d51f8f3.html",
+      "evidenceSha256": "ec8d51f8f381ed75703ea099633e4d6d4ae42ae528f97dc459cbe961792f89b8",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-01"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-048",
+      "headline": "Dấu ấn thương hiệu ACB 2026: Tăng 18 bậc trên bảng xếp hạng toàn cầu, giá trị đạt 1,4 tỷ USD",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-16T07:29:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/dau-an-thuong-hieu-acb-2026-tang-18-bac-tren-bang-xep-hang-toan-cau-gia-tri-dat-14-ty-usd-188261115232954927.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_051_322a32a70f.html",
+      "evidenceSha256": "322a32a70ff37fd3af8134ab23ff336d39861587a1c0a2e6fee0469196b9c703",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-002",
+      "headline": "Sắp diễn ra Festival OCOP Việt Nam tại phố đi bộ Nguyễn Huệ",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-16T07:15:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/sap-dien-ra-festival-ocop-viet-nam-giua-long-pho-di-bo-nguyen-hue-100261115184743808.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_002_5fb2df5200.html",
+      "evidenceSha256": "5fb2df5200be0727473e12a0b320c1848005010accd70600cdfb9a77ed8f90d4",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-030",
+      "headline": "Người bán hàng trên sàn 'nhẹ gánh' hóa đơn",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-16T06:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/nguoi-ban-hang-tren-san-nhe-ganh-hoa-don-185261115220914406.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_033_92ed545341.html",
+      "evidenceSha256": "92ed5453418f3c47a01719e3134a74ff40180184e14cc09025ffd08b814282a0",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-02"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-02",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-053",
+      "headline": "Ngày 16/11, gửi 100 triệu tại MB, VPBank, Techcombank, Sacombank, SHB, HDBank và ACB nhận được bao nhiêu tiền lãi sau 9 tháng?",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-16T01:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/ngay-16-11-gui-100-trieu-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-sau-9-thang-188261115235833609.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_056_ef6523ba36.html",
+      "evidenceSha256": "ef6523ba360a1c15c9da664acaf60b3880900b318e728e4c94f2853e20f1291c",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-039",
+      "headline": "Xóa nợ thuế: Kiến nghị gỡ vướng cho người không còn khả năng trả nợ",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T23:25:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/xoa-no-thue-kien-nghi-go-vuong-cho-nguoi-khong-con-kha-nang-tra-no-100261115230537799.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_042_690875823e.html",
+      "evidenceSha256": "690875823e04e9e2cdb98fe8f2f8c96a82b7de1206deecad018001598d41121e",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-02"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-02",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-054",
+      "headline": "Vietcombank đồng hành cùng TP.HCM trong giai đoạn phát triển mới",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T22:54:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/vietcombank-dong-hanh-cung-tphcm-trong-giai-doan-phat-trien-moi-100261115215711419.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_057_8158c7c448.html",
+      "evidenceSha256": "8158c7c4487c152b2df0fc8aa204b4f7a52af2b8a0e0cbfec6900098f673b705",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-034",
+      "headline": "California Fitness tiếp tục đóng cửa, nhiều lý do khiến phòng gym lớn lao đao",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T21:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/california-fitness-tiep-tuc-dong-cua-nhieu-ly-do-khien-phong-gym-lon-lao-dao-100261115185021863.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_037_2e82140aec.html",
+      "evidenceSha256": "2e82140aec039c135a2cb86c1d8bd1b47d312c0a61ae515ff4a759b34a8e6f4b",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-063",
+      "headline": "Ngân hàng đẩy mạnh huy động vốn ngoại, hút hàng tỷ USD",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T20:24:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/ngan-hang-day-manh-huy-dong-von-ngoai-hut-hang-ty-usd-188261115202422833.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_066_3602e75f08.html",
+      "evidenceSha256": "3602e75f085f3f05faa726ce70184e3aa2935d6b9ee926788b322c5b603ab163",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-006",
+      "headline": "Hơn nửa triệu doanh nghiệp trên cả nước phải kê khai thông tin chủ sở hữu hưởng lợi",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T20:18:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/hon-nua-trieu-doanh-nghiep-tren-ca-nuoc-phai-ke-khai-thong-tin-chu-so-huu-huong-loi-100261115192010975.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_007_b5245fd3d7.html",
+      "evidenceSha256": "b5245fd3d760b6b724634ebf582ed4cf541e0e514b8b68c26a59f8a65ac8beb4",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-019",
+      "headline": "Làng nghề truyền thống kể chuyện văn hóa, tạo giá trị cho sản phẩm OCOP",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T19:35:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/lang-nghe-truyen-thong-ke-chuyen-van-hoa-tao-gia-tri-cho-san-pham-ocop-100261115182715211.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_022_5d46b8353c.html",
+      "evidenceSha256": "5d46b8353c3db9c293275ee5e313a3be7a3afafc4ef63ae3af76117fd35846ae",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-029",
+      "headline": "Nagakawa - hãng máy lạnh duy nhất trên sàn bất ngờ lỗ sau hai quý lãi kỷ lục",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T19:23:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/nagakawa-hang-may-lanh-duy-nhat-tren-san-bat-ngo-lo-sau-hai-quy-lai-ky-luc-100261115182932766.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_032_89d6a7038d.html",
+      "evidenceSha256": "89d6a7038d9bdbca0fa5cf3d6a0413298332694fc11e5b11852463b22020d1be",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-015",
+      "headline": "Bàn cách để Ban quản trị chung cư không 'lộng quyền'",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-15T16:54:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://thanhnien.vn/ban-cach-de-ban-quan-tri-chung-cu-khong-long-quyen-185261115162304769.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_018_9069bafa27.html",
+      "evidenceSha256": "9069bafa273715ba803081d1973d8f52ebce558e736b6b1522483e615210cb7e",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-014",
+      "headline": "Tiền gửi vào ngân hàng lập kỷ lục, vì sao tỉ trọng trong tổng nguồn vốn lại giảm?",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T16:47:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/tien-gui-vao-ngan-hang-lap-ky-luc-vi-sao-ti-trong-trong-tong-nguon-von-lai-giam-100261115095738299.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_017_0e619ae832.html",
+      "evidenceSha256": "0e619ae832c85f74acfd72d4dae2de78926a9883cd8e252587a4c87558ca17fe",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-001",
+      "headline": "Những mảnh ghép quyền lực Ván cờ mới của các nhà băng",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T15:00:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/van-co-he-sinh-thai-vietcombank-bidv-techcombank-mb-vpbank-dang-co-gi-trong-tay-188261115113043344.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_001_3348b35b4b.html",
+      "evidenceSha256": "3348b35b4bf0ff3a29a8b3c08959888d81b277771310b1e188aa3b3b58b991a9",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-028",
+      "headline": "Giữa tháng 11 gửi 500 triệu tại BIDV, Vietcombank, VietinBank, Agribank, SHB, BAC A Bank: Lãi tối đa bao nhiêu?",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T12:53:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/giua-thang-11-gui-500-trieu-tai-bidv-vietcombank-vietinbank-agribank-shb-bac-a-bank-lai-toi-da-bao-nhieu-188261115125403534.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_031_b1ad9a020a.html",
+      "evidenceSha256": "b1ad9a020a8f0213a716b1095c68c116d5a6ae3b3baa613741e68fe80dc1514e",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-01"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-069",
+      "headline": "Biến đổi khí hậu đi thẳng vào bảng cân đối kế toán của doanh nghiệp",
+      "publisher": "Báo Tuổi Trẻ",
+      "publishedAt": "2026-11-15T11:52:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://tuoitre.vn/bien-doi-khi-hau-di-thang-vao-bang-can-doi-ke-toan-cua-doanh-nghiep-10026111510193287.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_072_8491080230.html",
+      "evidenceSha256": "84910802308804f52d2ffeaaa0a30c2714b4266b0b5930d40880be9b428b5424",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-073",
+      "headline": "Từ sân khấu Tinh Hà “Say Hi”, TPBank chính thức ra mắt chương trình khách hàng thân thiết",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T10:24:00+07:00",
+      "freshnessBucket": "0_TO_24H",
+      "sourceUrl": "https://cafef.vn/tu-san-khau-tinh-ha-say-hi-tpbank-chinh-thuc-ra-mat-chuong-trinh-khach-hang-than-thiet-188261115102424437.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_076_226c9b65f0.html",
+      "evidenceSha256": "226c9b65f0e83b9f20ebe5f56970a34a1e5ec1d76bc04ad1b9ffefaef1e560d7",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-070",
+      "headline": "Cứ 1 doanh nghiệp rút lui thì có 1,3 doanh nghiệp gia nhập thị trường",
+      "publisher": "Báo Thanh Niên",
+      "publishedAt": "2026-11-15T08:11:00+07:00",
+      "freshnessBucket": "24_TO_48H",
+      "sourceUrl": "https://thanhnien.vn/cu-1-doanh-nghiep-rut-lui-thi-co-13-doanh-nghiep-gia-nhap-thi-truong-185261114234219579.htm",
+      "evidencePath": "raw_evidence_store/snapshot_live_073_8dce884e79.html",
+      "evidenceSha256": "8dce884e7933c7fd4b43ff1c6a990ad2875d030b05d45f32db6b888673da84dd",
+      "referencedByTheses": [
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-03"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-033",
+      "headline": "Cuộc đua ngân hàng tư nhân: VPBank và Techcombank đang ở một đẳng cấp khác so với phần còn lại",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T08:00:00+07:00",
+      "freshnessBucket": "24_TO_48H",
+      "sourceUrl": "https://cafef.vn/cuoc-dua-ngan-hang-tu-nhan-vpbank-va-techcombank-dang-o-mot-dang-cap-khac-so-voi-phan-con-lai-188261113110230086.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_036_8cd7343168.html",
+      "evidenceSha256": "8cd7343168a8e4ec4c1836a19b4891872f48f002f4f1c8cd174e97a8e8cc21be",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-009",
+      "headline": "Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm",
+      "publisher": "CafeF / VCCorp",
+      "publishedAt": "2026-11-15T06:00:00+07:00",
+      "freshnessBucket": "24_TO_48H",
+      "sourceUrl": "https://cafef.vn/ngan-hang-tu-nhan-lon-nhat-he-thong-vua-dieu-chinh-lai-suat-tiet-kiem-muc-cao-nhat-con-71-nam-188261114224604433.chn",
+      "evidencePath": "raw_evidence_store/snapshot_live_011_7ef1a8dce9.html",
+      "evidenceSha256": "7ef1a8dce9f05d2fc138eba82f8fcce891b4029096618855a359bfe40b21d0ee",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [
+        "RADAR-01"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-008",
+      "headline": "Công bố Top 10 Doanh nghiệp tạo giá trị hàng đầu Việt Nam 2026 ngành Xây dựng",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-14T18:07:00+07:00",
+      "freshnessBucket": "24_TO_48H",
+      "sourceUrl": "https://baodautu.vn/cong-bo-top-10-doanh-nghiep-tao-gia-tri-hang-dau-viet-nam-2026-nganh-xay-dung-d743447.html",
+      "evidencePath": "raw_evidence_store/snapshot_live_010_b45aeb23f1.html",
+      "evidenceSha256": "b45aeb23f1606b51f89ff2fcab27a9bdc54b7b9651fec7c608c2f2b01e498ce3",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "eventId": "EVT-20261116-027",
+      "headline": "Đoàn doanh nghiệp Hoa Kỳ ấn tượng với hệ thống sản xuất tại siêu nhà máy của Vinamilk",
+      "publisher": "Báo Đầu tư",
+      "publishedAt": "2026-11-14T12:18:00+07:00",
+      "freshnessBucket": "24_TO_48H",
+      "sourceUrl": "https://baodautu.vn/doan-doanh-nghiep-hoa-ky-an-tuong-voi-he-thong-san-xuat-tai-sieu-nha-may-cua-vinamilk-d743243.html",
+      "evidencePath": "raw_evidence_store/snapshot_live_030_9abd6839ec.html",
+      "evidenceSha256": "9abd6839ec22397d0d9774bec96e22c308cb288b0d204c7693f865ec5575fd00",
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    }
+  ],
+  "financialFactCrosswalk": [
+    {
+      "factId": "FACT-20261110-001",
+      "eventId": "EVT-20261116-049",
+      "metricName": "Tỷ lệ phân bổ / tăng trưởng vốn",
+      "extractedExpression": "5,1%",
+      "numericValue": "5.1",
+      "unit": "%",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Chính phủ Mỹ (Trái phiếu Chính phủ Mỹ kỳ hạn 10 năm)",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-002",
+      "eventId": "EVT-20261116-043",
+      "metricName": "Giá vàng trong nước",
+      "extractedExpression": "134,5 triệu đồng/lượng",
+      "numericValue": "134.5",
+      "unit": "triệu đồng/lượng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "SJC",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-003",
+      "eventId": "EVT-20261116-043",
+      "metricName": "Giá vàng trong nước",
+      "extractedExpression": "137,5 triệu đồng/lượng",
+      "numericValue": "137.5",
+      "unit": "triệu đồng/lượng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "SJC",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-004",
+      "eventId": "EVT-20261116-048",
+      "metricName": "Lợi nhuận",
+      "extractedExpression": "16.600 tỷ đồng",
+      "numericValue": "16600",
+      "unit": "tỷ đồng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "ACB",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-005",
+      "eventId": "EVT-20261116-048",
+      "metricName": "Tăng trưởng lợi nhuận",
+      "extractedExpression": "74%",
+      "numericValue": "74",
+      "unit": "%",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "ACB",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-006",
+      "eventId": "EVT-20261116-053",
+      "metricName": "Lãi suất",
+      "extractedExpression": "6,3%/năm",
+      "numericValue": "6.3",
+      "unit": "%/năm",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-007",
+      "eventId": "EVT-20261116-053",
+      "metricName": "Lãi suất",
+      "extractedExpression": "6,3%/năm",
+      "numericValue": "6.3",
+      "unit": "%/năm",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": true,
+      "duplicateOfFactId": "FACT-20261110-006",
+      "referencedByTheses": [],
+      "referencedByChains": [],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": []
+    },
+    {
+      "factId": "FACT-20261110-008",
+      "eventId": "EVT-20261116-063",
+      "metricName": "Quy mô vốn đầu tư / huy động",
+      "extractedExpression": "2,36 tỷ USD",
+      "numericValue": "2.36",
+      "unit": "tỷ USD",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-009",
+      "eventId": "EVT-20261116-063",
+      "metricName": "Quy mô vốn đầu tư / huy động",
+      "extractedExpression": "1,56 tỷ USD",
+      "numericValue": "1.56",
+      "unit": "tỷ USD",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-010",
+      "eventId": "EVT-20261116-006",
+      "metricName": "Ngưỡng quy định chính sách",
+      "extractedExpression": "70 triệu đồng",
+      "numericValue": "70",
+      "unit": "triệu đồng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Doanh nghiệp",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-011",
+      "eventId": "EVT-20261116-006",
+      "metricName": "Ngưỡng quy định chính sách",
+      "extractedExpression": "100 triệu đồng",
+      "numericValue": "100",
+      "unit": "triệu đồng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Doanh nghiệp",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-012",
+      "eventId": "EVT-20261116-028",
+      "metricName": "Lãi suất",
+      "extractedExpression": "4,9%/năm",
+      "numericValue": "4.9",
+      "unit": "%/năm",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Vietcombank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-013",
+      "eventId": "EVT-20261116-033",
+      "metricName": "Lợi nhuận",
+      "extractedExpression": "10.000 tỷ đồng",
+      "numericValue": "10000",
+      "unit": "tỷ đồng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-014",
+      "eventId": "EVT-20261116-033",
+      "metricName": "Lợi nhuận",
+      "extractedExpression": "1 tỷ USD",
+      "numericValue": "1",
+      "unit": "tỷ USD",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-015",
+      "eventId": "EVT-20261116-009",
+      "metricName": "Lãi suất",
+      "extractedExpression": "6,9%/năm",
+      "numericValue": "6.9",
+      "unit": "%/năm",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-016",
+      "eventId": "EVT-20261116-009",
+      "metricName": "Lãi suất",
+      "extractedExpression": "6,5%/năm",
+      "numericValue": "6.5",
+      "unit": "%/năm",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "VPBank",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-017",
+      "eventId": "EVT-20261116-008",
+      "metricName": "Quy mô vốn đầu tư / huy động",
+      "extractedExpression": "783,9 nghìn tỷ đồng",
+      "numericValue": "783.9",
+      "unit": "nghìn tỷ đồng",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Doanh nghiệp",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-018",
+      "eventId": "EVT-20261116-008",
+      "metricName": "Tỷ lệ phân bổ / tăng trưởng vốn",
+      "extractedExpression": "19,8%",
+      "numericValue": "19.8",
+      "unit": "%",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Doanh nghiệp",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    },
+    {
+      "factId": "FACT-20261110-019",
+      "eventId": "EVT-20261116-027",
+      "metricName": "Doanh thu",
+      "extractedExpression": "120 triệu USD",
+      "numericValue": "120",
+      "unit": "triệu USD",
+      "originalExtractedEntity": null,
+      "verifiedEntity": "Doanh nghiệp",
+      "entityBindingStatus": "ENTITY_REBOUND_FROM_QUOTE",
+      "isDuplicate": false,
+      "duplicateOfFactId": null,
+      "referencedByTheses": [
+        "THESIS-01",
+        "THESIS-02",
+        "THESIS-03",
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-01",
+        "CHAIN-02",
+        "CHAIN-03",
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByConnectTheDots": [
+        "DOT-01",
+        "DOT-02",
+        "DOT-03",
+        "DOT-04"
+      ]
+    }
+  ],
+  "marketPulseCrosswalk": [
+    {
+      "indicatorId": "MP-01",
+      "indicatorName": "Tỷ giá trung tâm USD/VND",
+      "actualValue": "25637",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-14",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-14-11-usd-dao-chieu-tang-manh-tin-hieu-fed-nang-lai-suat-50-diem-co-ban-day-dxy-vuot-103-diem-206945.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_e1302f7ae8.html",
+      "evidenceSha256": "e1302f7ae8ca651bb3312695df92e72547d6b74788a9197a0b08831f14f5a734",
+      "referencedByTheses": [
+        "THESIS-02"
+      ],
+      "referencedByChains": [
+        "CHAIN-02"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02"
+      ]
+    },
+    {
+      "indicatorId": "MP-02",
+      "indicatorName": "Lãi suất liên ngân hàng qua đêm",
+      "actualValue": "2.8",
+      "unit": "%/năm",
+      "observationDate": "2026-10-02",
+      "updateStatus": "STALE_OBSERVATION",
+      "verificationStatus": "UNVERIFIED",
+      "temporalClassification": "STALE_BEYOND_72H_CEILING",
+      "sourceUrl": "https://cafef.vn/ngan-hang-nha-nuoc-hut-khoi-thi-truong-hon-53000-ty-dong-lai-suat-lien-ngan-hang-bien-dong-manh-trong-tuan-qua-188261005135654704.chn",
+      "evidencePath": "raw_evidence_store/market_pulse/MP02/evidence_mp02_3455539292.html",
+      "evidenceSha256": "3455539292a77e5aad12d687b19bad4578fdd88e561ee2b57ffe4d2c4ef31af0",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-03",
+      "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+      "actualValue": "6.4",
+      "unit": "%/năm",
+      "observationDate": "2026-11-12",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://cafef.vn/ngay-12-11-gui-duoi-1-ty-dong-ky-han-12-thang-tai-mb-vpbank-techcombank-sacombank-shb-hdbank-va-acb-nhan-duoc-bao-nhieu-tien-lai-188261111232658813.chn",
+      "evidencePath": "raw_evidence_store/market_pulse/MP03/evidence_mp03_040246f233.html",
+      "evidenceSha256": "040246f233176e0d79e75762d21e7d61e5c0fbf46490de3bf3f4b04b1bb325ea",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [
+        "RADAR-01"
+      ],
+      "referencedByDecisions": [
+        "DECISION-01",
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-04",
+      "indicatorName": "Chỉ số VN-Index",
+      "actualValue": "1734.93",
+      "unit": "Điểm",
+      "observationDate": "2026-11-13",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "CURRENT_BUSINESS_DAY",
+      "sourceUrl": "https://danviet.vn/chung-khoan-tuan-qua-vn-index-hoi-phuc-nhieu-co-phieu-ve-vung-dinh-gia-day-nam-2023-d1474906.html",
+      "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_a7d058013e.html",
+      "evidenceSha256": "a7d058013ef1c93fdd10722fe65f1f9a32a3f749d3d62dc5cc9e97c8168c42d2",
+      "referencedByTheses": [
+        "THESIS-02"
+      ],
+      "referencedByChains": [
+        "CHAIN-02"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02"
+      ]
+    },
+    {
+      "indicatorId": "MP-05",
+      "indicatorName": "Tăng trưởng tín dụng toàn hệ thống",
+      "actualValue": "10.24",
+      "unit": "%",
+      "observationDate": "2026-08-31",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
+      "sourceUrl": "https://cafef.vn/thong-doc-pham-duc-an-cap-nhat-so-lieu-tang-truong-tin-dung-moi-nhat-188260913155049047.chn",
+      "evidencePath": "raw_evidence_store/market_pulse/MP05/evidence_mp05_75b507873c.html",
+      "evidenceSha256": "75b507873ce76cebfde3856ecf38b91707f970a65c9721b708f0742ad9766f0d",
+      "referencedByTheses": [
+        "THESIS-01"
+      ],
+      "referencedByChains": [
+        "CHAIN-01"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [
+        "DECISION-03"
+      ],
+      "referencedByConnectTheDots": [
+        "DOT-01"
+      ]
+    },
+    {
+      "indicatorId": "MP-06",
+      "indicatorName": "Sản lượng giao dịch VietQR NAPAS",
+      "actualValue": null,
+      "unit": null,
+      "observationDate": null,
+      "updateStatus": "QUALITATIVE_UPDATE_ONLY",
+      "verificationStatus": "UNVERIFIED",
+      "temporalClassification": "QUALITATIVE_POLICY_OR_INDUSTRY_UPDATE",
+      "sourceUrl": "https://cafef.vn/vietqr-global-giai-bai-toan-dua-thanh-toan-den-tung-diem-ban-188260928064510139.chn",
+      "evidencePath": "raw_evidence_store/market_pulse/MP06/evidence_mp06_f29deb4653.html",
+      "evidenceSha256": "f29deb4653a80d9dd79fcd617ebdf32f3b8b0015ae1ae697ea2301377907c4e0",
+      "referencedByTheses": [
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-04"
+      ]
+    },
+    {
+      "indicatorId": "MP-07",
+      "indicatorName": "Khách du lịch quốc tế đến Việt Nam",
+      "actualValue": "19.5",
+      "unit": "triệu lượt",
+      "observationDate": "2026-10-31",
+      "updateStatus": "NUMERIC_VALUE_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "LATEST_PERIODIC_REPORTING_PERIOD_10M_2026",
+      "sourceUrl": "https://tuoitre.vn/viet-nam-dang-rut-ngan-khoang-cach-ve-khach-quoc-te-so-voi-thai-lan-100261110155733107.htm",
+      "evidencePath": "raw_evidence_store/market_pulse/MP07/evidence_mp07_587c16a0a9.html",
+      "evidenceSha256": "587c16a0a9fb68b92a3979fe5b8f9554bb4be881e9e0537c04290ce683cd92ee",
+      "referencedByTheses": [
+        "THESIS-04"
+      ],
+      "referencedByChains": [
+        "CHAIN-04"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-04"
+      ]
+    },
+    {
+      "indicatorId": "MP-08",
+      "indicatorName": "Thanh khoản thị trường mở (OMO)",
+      "actualValue": "47915",
+      "unit": "tỷ VND",
+      "observationDate": "2026-09-21",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "temporalClassification": "HISTORICAL_EVENT_OPERATION_2026_09_21",
+      "sourceUrl": "https://cafef.vn/lai-suat-lien-ngan-hang-bat-tang-ngan-hang-nha-nuoc-cap-tap-bom-thanh-khoan-188260922112408073.chn",
+      "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_66ac0c3770.html",
+      "evidenceSha256": "66ac0c37707282973e9b71a94dfd278ffcba4f05fdfe009244e835cb4a24d268",
+      "referencedByTheses": [
+        "THESIS-02",
+        "THESIS-03"
+      ],
+      "referencedByChains": [
+        "CHAIN-02",
+        "CHAIN-03"
+      ],
+      "referencedByRadars": [],
+      "referencedByDecisions": [],
+      "referencedByConnectTheDots": [
+        "DOT-02",
+        "DOT-03"
+      ]
+    }
+  ],
+  "inheritedSchemaVersion": "4.0.0"
+}
