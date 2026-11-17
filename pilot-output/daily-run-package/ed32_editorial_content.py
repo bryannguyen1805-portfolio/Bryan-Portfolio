@@ -8,12 +8,12 @@ Cover Story Sapo = 3 sentences (250-320 chars); News Desk Sapo = 2 sentences (16
 
 ED32_COVER_OVERRIDE = {
     "targetOriginEventId": "EVT-20261117-004",
-    "editorialHeadline": "Lãi suất huy động phân hóa mạnh: Big4 giữ vững vùng trũng 5,4%, ngân hàng tư nhân linh hoạt hạ lãi suất kỳ hạn ngắn để tối ưu biên lãi ròng NIM",
-    "editorialSubheadline": "Thanh khoản hệ thống dồi dào, tỷ giá trung tâm USD/VND giữ kỷ luật quanh 25.641 đồng khi NHNN điều hành nhịp nhàng qua thị trường mở OMO.",
+    "editorialHeadline": "Lãi suất huy động phân hóa mạnh: Big4 giữ vững vùng trũng 5,5%, ngân hàng tư nhân linh hoạt hạ lãi suất kỳ hạn ngắn để tối ưu biên lãi ròng NIM",
+    "editorialSubheadline": "Thanh khoản hệ thống dồi dào, tỷ giá trung tâm USD/VND lập đỉnh 25.652 đồng khi NHNN điều hành nhịp nhàng qua thị trường mở OMO.",
     "dek": "Động thái tái cân đối chi phí vốn COF giúp các nhà băng chuẩn bị nguồn lực tài chính dồi dào, hỗ trợ tín dụng tiêu dùng và doanh nghiệp mùa cận Tết.",
     "editorialSummary3Sentences": (
         "Mặt bằng lãi suất huy động sáng 17/11 ghi nhận xu hướng điều chỉnh giảm nhẹ tại các ngân hàng thương mại tư nhân. "
-        "Trong khi nhóm Big4 neo lãi suất 12 tháng ở 5,4%/năm, khối tư nhân tập trung cơ cấu lại nguồn vốn trung dài hạn. "
+        "Trong khi nhóm Big4 neo lãi suất 12 tháng ở 5,5%/năm, khối tư nhân tập trung cơ cấu lại nguồn vốn trung dài hạn. "
         "Động thái này giúp hạ chi phí vốn COF và hỗ trợ thanh khoản tiêu dùng cuối năm."
     ),
     "supportingQuote": (
@@ -23,11 +23,11 @@ ED32_COVER_OVERRIDE = {
         "Tối ưu hóa bảng cân đối tài sản và đa dạng hóa nguồn thu từ dịch vụ số là chìa khóa giúp các ngân hàng thương mại bảo toàn biên lãi ròng trong chu kỳ vốn mới."
     ),
     "editorialSynthesis": (
-        "Toàn cảnh phiên sáng 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: "
-        "(1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất 12 tháng ở mức 5,4%/năm, trong khi các ngân hàng tư nhân linh hoạt giảm nhẹ lãi suất kỳ hạn dưới 6 tháng để kiểm soát chi phí vốn COF; "
-        "(2) Tỷ giá trung tâm USD/VND do NHNN công bố sáng 17/11 neo ở mức 25.641 đồng/USD, tỷ giá niêm yết tại Vietcombank dao động quanh 25.500 - 25.920 VND/USD, NHNN duy trì can thiệp linh hoạt qua kênh OMO để giữ ổn định tâm lý thị trường; "
-        "(3) Thị trường chứng khoán mở phiên sáng 17/11 tiếp tục quán tính giằng co tích lũy quanh mốc 1.735 - 1.740 điểm, thanh khoản giữ mức thận trọng nhưng dòng tiền khối ngoại duy trì trạng thái giải ngân ròng vào nhóm cổ phiếu ngân hàng và bán lẻ; "
-        "(4) B2B & Thanh toán số đón mùa tiêu dùng cao điểm: Các chuỗi bán lẻ, F&B và thương mại điện tử đồng loạt triển khai giải pháp trả góp thẻ tín dụng 0% và thanh toán mã QR động qua Payoo SmartPOS All-in-One nhằm trợ lực sức mua và đẩy nhanh vòng quay dòng tiền doanh nghiệp."
+        "Toàn cảnh phiên 17/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: "
+        "(1) Mặt bằng lãi suất huy động tại các NHTM tiếp tục xu hướng tái cân đối: Nhóm Big4 (Vietcombank, BIDV, VietinBank, Agribank) giữ vững lãi suất quầy ở mức 5,5%/năm, trong khi các ngân hàng tư nhân áp dụng lãi suất 12 tháng thông thường 6,1 - 7,0%/năm và ưu đãi số tới 9,1%/năm; "
+        "(2) Tỷ giá trung tâm USD/VND do NHNN công bố ngày 17/11 tăng 13 đồng lên kỷ lục 25.652 đồng/USD, giá bán USD tại Vietcombank chạm 25.950 đồng/USD khi chỉ số DXY tăng lên 103,69 điểm; "
+        "(3) Thị trường chứng khoán ngày 17/11 chịu áp lực điều chỉnh, chỉ số VN-Index đóng cửa tại 1.726,72 điểm (-10,17 điểm, tương đương -0,59%) khi khối ngoại bán ròng hàng trăm tỷ đồng; "
+        "(4) Du lịch và thanh toán số đón sóng tăng trưởng: Việt Nam đón 19,5 triệu lượt khách quốc tế sau 10 tháng (+13,8%), tạo xung lực mạnh cho các chuỗi bán lẻ triển khai máy quẹt thẻ Payoo SmartPOS và VietQR Global phục vụ mùa cao điểm cuối năm."
     ),
     "marketImpact": (
         "(1) Tối ưu hóa chi phí vốn đầu vào: Việc kiểm soát lãi suất huy động kỳ hạn ngắn hỗ trợ các NHTM tư nhân giảm bớt gánh nặng chi phí vốn, duy trì NIM ổn định trong quý 4. "
