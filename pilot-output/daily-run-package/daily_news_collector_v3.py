@@ -582,6 +582,19 @@ def extract_clean_article_content(html_text: str, url: str) -> dict:
     article_text = " ".join(article_text.split())
     clean_full_text = f"{headline} {summary} {article_text}"
 
+    # Extract og:image, twitter:image, or first substantive image
+    m_img = (
+        re.search(r'<meta[^>]+property=[\"\']og:image[\"\'][^>]+content=[\"\']([^\"\']+)[\"\']', html_text, re.I)
+        or re.search(r'<meta[^>]+content=[\"\']([^\"\']+)[\"\'][^>]+property=[\"\']og:image[\"\']', html_text, re.I)
+        or re.search(r'<meta[^>]+name=[\"\']twitter:image[\"\'][^>]+content=[\"\']([^\"\']+)[\"\']', html_text, re.I)
+        or re.search(r'<meta[^>]+content=[\"\']([^\"\']+)[\"\'][^>]+name=[\"\']twitter:image[\"\']', html_text, re.I)
+    )
+    raw_img = m_img.group(1).strip() if m_img else ""
+    if raw_img and not raw_img.startswith("http"):
+        from urllib.parse import urljoin
+        raw_img = urljoin(url, raw_img)
+    image_url = raw_img
+
     # Verify if article body is substantive
     if len(article_text) < 50:
         return {
@@ -589,6 +602,7 @@ def extract_clean_article_content(html_text: str, url: str) -> dict:
             "summary": summary,
             "articleBody": article_text,
             "cleanText": clean_full_text,
+            "imageUrl": image_url,
             "isArticle": False,
             "canonicalUrl": canonical_url,
             "extractionStatus": "ARTICLE_BODY_UNAVAILABLE"
@@ -599,6 +613,7 @@ def extract_clean_article_content(html_text: str, url: str) -> dict:
         "summary": summary,
         "articleBody": article_text,
         "cleanText": clean_full_text,
+        "imageUrl": image_url,
         "isArticle": True,
         "canonicalUrl": canonical_url,
         "extractionStatus": "SUCCESS"
@@ -1664,6 +1679,7 @@ class DailyNewsCollector:
                 "httpFinalUrl": final_url,
                 "editorialRelevance": edit_rel,
                 "commercialRelevance": comm_rel,
+                "imageUrl": art_content.get("imageUrl", ""),
                 "isIrrelevant": is_irrel,
                 "irrelevanceReason": irrel_reason if is_irrel else None,
                 "mainFacts": [summary[:120]]

@@ -781,8 +781,15 @@ function renderNewsCardHtml(lead, isLead) {
     </div>
   ` : '';
 
+  const leadThumbHtml = lead.imageUrl ? `
+    <div class="ms-lead-thumb-wrap">
+      <img src="${escapeHtml(lead.imageUrl)}" alt="${escapeHtml(lead.pageTitle || lead.title)}" class="ms-lead-thumb-img" loading="lazy" onerror="this.closest('.ms-lead-thumb-wrap').style.display='none'">
+    </div>
+  ` : '';
+
   return `
-    <article class="ms-news-lead-story">
+    <article class="ms-news-lead-story ${lead.imageUrl ? 'has-thumb' : ''}">
+      ${leadThumbHtml}
       <div class="ms-lead-body-wrap">
         <div class="ms-lead-meta">
           <span class="ms-badge ms-badge-rose">${escapeHtml(lead.category || 'Tin tức')}</span>
@@ -816,24 +823,33 @@ function renderNewsCardHtml(lead, isLead) {
 }
 
 function renderSubfeatureCardHtml(item) {
+  const thumbHtml = item.imageUrl ? `
+    <div class="ms-card-thumb-wrap ms-subfeature-thumb">
+      <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-card-thumb-img" loading="lazy" onerror="this.closest('.ms-card-thumb-wrap').style.display='none'">
+    </div>
+  ` : '';
+
   return `
-    <article class="ms-subfeature-card">
-      <div>
-        <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-          <span class="ms-badge ms-badge-primary" style="font-size:12px;">${escapeHtml(item.category || 'Tài chính')}</span>
-          <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:12px;">
-            [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
-          </span>
+    <article class="ms-subfeature-card ${item.imageUrl ? 'has-thumb' : ''}">
+      <div class="ms-card-body-flex">
+        ${thumbHtml}
+        <div class="ms-card-content-col">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+            <span class="ms-badge ms-badge-primary" style="font-size:12px;">${escapeHtml(item.category || 'Tài chính')}</span>
+            <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:12px;">
+              [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
+            </span>
+          </div>
+          <h3 class="ms-subfeature-title">
+            <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+              ${escapeHtml(item.pageTitle || item.title)}
+            </button>
+          </h3>
+          <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
+            ${escapeHtml(item.summary || item.supportingQuote || '')}
+          </p>
+          ${renderEditorialQuoteBlock(item)}
         </div>
-        <h3 class="ms-subfeature-title">
-          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            ${escapeHtml(item.pageTitle || item.title)}
-          </button>
-        </h3>
-        <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
-          ${escapeHtml(item.summary || item.supportingQuote || '')}
-        </p>
-        ${renderEditorialQuoteBlock(item)}
       </div>
       <div class="ms-news-card-footer">
         <span style="font-size:12px;">${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
@@ -851,24 +867,33 @@ function renderSubfeatureCardHtml(item) {
 }
 
 function renderStandardNewsCardHtml(item) {
+  const thumbHtml = item.imageUrl ? `
+    <div class="ms-card-thumb-wrap">
+      <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-card-thumb-img" loading="lazy" onerror="this.closest('.ms-card-thumb-wrap').style.display='none'">
+    </div>
+  ` : '';
+
   return `
-    <article class="ms-news-card">
-      <div>
-        <div class="ms-news-card-meta">
-          <div style="display:flex; align-items:center; gap:4px;">
-            <span class="ms-badge ms-badge-neutral">${escapeHtml(item.category || 'FinTech')}</span>
-            <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
-              [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
-            </span>
+    <article class="ms-news-card ${item.imageUrl ? 'has-thumb' : ''}">
+      <div class="ms-card-body-flex">
+        ${thumbHtml}
+        <div class="ms-card-content-col">
+          <div class="ms-news-card-meta">
+            <div style="display:flex; align-items:center; gap:4px;">
+              <span class="ms-badge ms-badge-neutral">${escapeHtml(item.category || 'FinTech')}</span>
+              <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
+                [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
+              </span>
+            </div>
           </div>
+          <h3 class="ms-news-card-title">
+            <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
+              ${escapeHtml(item.pageTitle || item.title)}
+            </button>
+          </h3>
+          <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
+          ${renderEditorialQuoteBlock(item)}
         </div>
-        <h3 class="ms-news-card-title">
-          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            ${escapeHtml(item.pageTitle || item.title)}
-          </button>
-        </h3>
-        <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
-        ${renderEditorialQuoteBlock(item)}
       </div>
       <div class="ms-news-card-footer">
         <span>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
@@ -909,6 +934,12 @@ function openArticleReader(eventId) {
       <div style="font-family:var(--font-mono); font-size:0.8125rem; color:var(--ms-text-muted); padding-bottom:12px; margin-bottom:18px; border-bottom:1px solid var(--ms-border);">
         Xuất bản: ${escapeHtml(pubDate)} | Nguồn: ${escapeHtml(item.originalSourceName || item.author || 'Báo chí')}
       </div>
+
+      ${item.imageUrl ? `
+        <div class="ms-reader-hero-wrap" style="margin: 0 0 18px 0; border-radius: 4px; overflow: hidden; border: 1px solid var(--ms-border); background: var(--ms-surface-alt);">
+          <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" style="width: 100%; max-height: 340px; object-fit: cover; display: block;" onerror="this.closest('.ms-reader-hero-wrap').style.display='none'">
+        </div>
+      ` : ''}
 
       ${item.supportingQuote ? `
         <blockquote class="ms-card-editorial-quote" style="font-family:var(--font-headline); font-style:italic; font-size:1.0625rem; padding:12px 18px; border-left:3px solid var(--ms-primary); margin:0 0 20px 0;">

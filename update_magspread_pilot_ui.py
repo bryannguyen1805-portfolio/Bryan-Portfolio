@@ -772,7 +772,8 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         "publishedAt": lead_time,
         "sourceUrl": lead_url,
         "summary": lead_summary,
-        "supportingQuote": supporting_quote
+        "supportingQuote": supporting_quote,
+        "imageUrl": lead_event.get("imageUrl", "")
     }
 
     return {
@@ -782,6 +783,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
         "dek": cover_override.get("dek") or f"Căn cứ bài báo gốc trên {lead_pub} ({lead_time})",
         "executiveSummary": lead_summary,
         "leadArticle": lead_article_payload,
+        "imageUrl": lead_event.get("imageUrl", ""),
         "supportingQuote": supporting_quote,
         "editorialPullQuote": editorial_pull_quote,
         "pullQuote": editorial_pull_quote,
@@ -1124,6 +1126,7 @@ def main():
             "sectionG_practicalTakeaway": sec_g,
             "computedSha256": r.get("evidenceSha256", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"),
             "snapshotFile": r.get("evidencePath", "evidence_snapshot.txt"),
+            "imageUrl": r.get("imageUrl", ""),
             "verificationStatus": "VERIFIED"
         }
         eligible_news.append(item)

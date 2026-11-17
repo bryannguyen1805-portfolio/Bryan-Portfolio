@@ -242,8 +242,10 @@ window.EDITION_DATA = {
         "publishedAt": "17/11/2026 01:00 | Nguồn gốc: CafeF / VCCorp (2026-11-17T01:00:00+07:00)",
         "sourceUrl": "https://cafef.vn/dien-bien-moi-tren-thi-truong-lai-suat-tiet-kiem-mot-ngan-hang-dua-lai-suat-ve-0-vpbank-va-bidv-tiep-tuc-giam-188261116232243753.chn",
         "summary": "Mặt bằng lãi suất huy động sáng 17/11 ghi nhận xu hướng điều chỉnh giảm nhẹ tại các ngân hàng thương mại tư nhân. Trong khi nhóm Big4 neo lãi suất 12 tháng ở 5,4%/năm, khối tư nhân tập trung cơ cấu lại nguồn vốn trung dài hạn. Động thái này giúp hạ chi phí vốn COF và hỗ trợ thanh khoản tiêu dùng cuối năm.",
-        "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm."
+        "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
+        "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/lai-suat-1788650272-1794846028513625103946-0-0-750-1200-crop-1794846033335295538196.jpg"
       },
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/lai-suat-1788650272-1794846028513625103946-0-0-750-1200-crop-1794846033335295538196.jpg",
       "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "editorialPullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "pullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
@@ -267,8 +269,10 @@ window.EDITION_DATA = {
         "publishedAt": "17/11/2026 01:00 | Nguồn gốc: CafeF / VCCorp (2026-11-17T01:00:00+07:00)",
         "sourceUrl": "https://cafef.vn/dien-bien-moi-tren-thi-truong-lai-suat-tiet-kiem-mot-ngan-hang-dua-lai-suat-ve-0-vpbank-va-bidv-tiep-tuc-giam-188261116232243753.chn",
         "summary": "Mặt bằng lãi suất huy động sáng 17/11 ghi nhận xu hướng điều chỉnh giảm nhẹ tại các ngân hàng thương mại tư nhân. Trong khi nhóm Big4 neo lãi suất 12 tháng ở 5,4%/năm, khối tư nhân tập trung cơ cấu lại nguồn vốn trung dài hạn. Động thái này giúp hạ chi phí vốn COF và hỗ trợ thanh khoản tiêu dùng cuối năm.",
-        "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm."
+        "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
+        "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/lai-suat-1788650272-1794846028513625103946-0-0-750-1200-crop-1794846033335295538196.jpg"
       },
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/lai-suat-1788650272-1794846028513625103946-0-0-750-1200-crop-1794846033335295538196.jpg",
       "supportingQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "editorialPullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
       "pullQuote": "Việc điều chỉnh giảm nhẹ lãi suất huy động ở các kỳ hạn ngắn giúp ngân hàng tối ưu hóa chi phí vốn đầu vào, đồng thời chuẩn bị nguồn lực tài chính dồi dào để đáp ứng nhu cầu thanh toán và vay vốn mùa cao điểm cuối năm.",
@@ -2461,6 +2465,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Việt Nam khi ứng phó với 'Một ngân hàng Việt Nam đóng cửa gần hết phòng giao dịch, giảm lãi suất tiết kiệm về 0%' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "ad806e65cd711fd136fc18dc3b30e007f7e27a22299ec067500dc4691c75df19",
       "snapshotFile": "raw_evidence_store/snapshot_live_066_ad806e65cd.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/17/avatar1794887869072-1794887869556916176072.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2527,6 +2532,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Tín dụng tăng tốc, chi phí vốn khó giảm' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "c2e4a4a201b47399f4b1b257080bb6484f826b752a551fd2c4cb52697b0cff47",
       "snapshotFile": "raw_evidence_store/snapshot_live_065_c2e4a4a201.html",
+      "imageUrl": "https://media.baodautu.vn/thumb_x470x250/Images/phuongthanh02/2026/11/09/tin-dung-tang-toc-chi-phi-von-kho-giam1794215578.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2593,6 +2599,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Vietcombank khi ứng phó với 'Giá vàng giảm sâu hơn vì USD không ngừng tăng giá, SPDR Gold Trust vẫn mua ròng' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "13cd81315f9d53991101aa8872bb8c25f9cb19d207a22309b043762020d89105",
       "snapshotFile": "raw_evidence_store/snapshot_live_017_13cd81315f.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/11/17/71b8e20e6f8848bda49f24343fdb54f2-136147.png?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2659,6 +2666,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Doanh nghiệp bán lẻ nên tận dụng các phương thức thanh toán trả góp thẻ tín dụng 0% và quét mã QR để gia tăng sức mua của người tiêu dùng mà không tăng chi phí vốn vay.",
       "computedSha256": "fcbbaa3db3503c92152dec75428715581ad3449bace0b939b14007d0b4725ebf",
       "snapshotFile": "raw_evidence_store/snapshot_live_011_fcbbaa3db3.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/lai-suat-1788650272-1794846028513625103946-0-0-750-1200-crop-1794846033335295538196.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2725,6 +2733,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến ACB khi ứng phó với 'ACB Một cổ đông đã bán sạch gần 51,5 triệu cổ phiếu' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "627c461828f4b8b9e48157b026ff312d7d6d3195ab65a199fbc2f45a56dff3be",
       "snapshotFile": "raw_evidence_store/snapshot_live_006_627c461828.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/avatar1794847389606-17948473902591550194016.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2762,6 +2771,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Nhà đầu tư huyền thoại Warren Buffett chi lượng cổ phiếu trị giá 5,5 tỷ USD làm từ thiện' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "2ea0dd6c4725f9e5a041b2d47adc64d28515db96666dd6cdf26e30506efe2288",
       "snapshotFile": "raw_evidence_store/snapshot_live_067_2ea0dd6c47.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/11/17/e19e34ed54d2489e93d49758809bbf54-136182.png?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2828,6 +2838,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến HDBank khi ứng phó với 'Vietcap Ban lãnh đạo HDBank tự tin đạt lợi nhuận hơn 30 000 tỷ đồng năm 2026, kỳ vọng bứt tốc trong quý cuối năm' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "edfc079b1bcdd536a77214c2bcd2d7268b2903cd56a77ecbebd136669ef200b2",
       "snapshotFile": "raw_evidence_store/snapshot_live_056_edfc079b1b.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/17/avatar1794889138084-1794889138682638420541.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2865,6 +2876,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Nguyên nhân loạt ngân hàng lớn gặp sự cố, gián đoạn toàn hệ thống tài chính Mỹ' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "9ee577de23eac74bc4b588d742df5c0080d4080ba3fad8c9411654f57759a8d6",
       "snapshotFile": "raw_evidence_store/snapshot_live_028_9ee577de23.html",
+      "imageUrl": "https://cdn2.tuoitre.vn/zoom/1200_630/471584752817336320/2026/11/17/ap26320743460715-1794890699398876984836-49-0-1389-2560-crop-17948907834732134139755.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2931,6 +2943,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến VIB khi ứng phó với 'VIB cho vay mua ô tô lãi suất ưu đãi từ 8,9%/năm, cam kết thả nổi không quá 15% sau thời gian cố định' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "605cd585209d0727a867bdf42fe7eed7dd1bafb16f0d52b27b4324d3d488bc98",
       "snapshotFile": "raw_evidence_store/snapshot_live_051_605cd58520.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/17/avatar1794888750964-179488875147390974005.jpeg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -2997,6 +3010,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Việt Nam khi ứng phó với 'Khách hàng Việt Nam mong đợi điều gì từ một đối tác tài chính' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "04e53a465caa34c2a36358af6f5f4fc9379b5ff5f35fbbdd8019d83f8be44932",
       "snapshotFile": "raw_evidence_store/snapshot_live_071_04e53a465c.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/11/17/a5b7dca8bc0042c084ce6e6695cc6676-136203.jpg?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3063,6 +3077,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến VPBank khi ứng phó với 'Ngày 17/11, gửi 200 triệu tại Techcombank, Sacombank, SHB, HDBank, MB, VPBank và ACB nhận được bao nhiêu tiền lãi sau 6 tháng' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "26c4e6b189a7106d05949d2e707d6dcecb6f91a722376bafa5d42b2ce8ecb468",
       "snapshotFile": "raw_evidence_store/snapshot_live_070_26c4e6b189.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/1794848106397363566929-0-0-424-678-crop-17948481094801721054654.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3100,6 +3115,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Thương mại Việt Nam - Hàn Quốc lần đầu tiên vượt 100 tỷ USD' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "50f4c6c4150c01e61128e06d1e27fb17aced32eb97c989bf5c8e2b5abbb1754f",
       "snapshotFile": "raw_evidence_store/snapshot_live_005_50f4c6c415.html",
+      "imageUrl": "https://media.baodautu.vn/thumb_x470x250/Images/haiyen/2026/11/17/thuong-mai-viet-nam--han-quoc-lan-dau-tien-vuot-100-ty-usd1794882915.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3166,6 +3182,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến SJC khi ứng phó với 'Giá vàng miếng SJC, vàng nhẫn 9999 sáng ngày 17/11' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "bd0be2b5267be14aba52970d15e6c977c240a72a9dcb4b0181d5c8961958095c",
       "snapshotFile": "raw_evidence_store/snapshot_live_001_bd0be2b526.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/17/avatar1794884306794-1794884307769972275652.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3232,6 +3249,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Doanh nghiệp khi ứng phó với 'Nhóm VN30 ghi nhận mùa lợi nhuận khởi sắc' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "eca06feda435f08f7bc688612df60794368028200d3a447beddcb9be59fc294e",
       "snapshotFile": "raw_evidence_store/snapshot_live_069_eca06feda4.html",
+      "imageUrl": "https://media.baodautu.vn/thumb_x470x250/Images/chicuong/2026/11/09/nhom-vn30-ghi-nhan-mua-loi-nhuan-khoi-sac1794195793.jpeg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3298,6 +3316,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Ngân hàng Nhà nước khi ứng phó với 'Tất cả người dân có tài khoản ngân hàng chú ý quy định chuyển khoản mới nhất vừa chính thức áp dụng' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "f2456a90cf1e9b07fa81fdea98af7a436901183511cb57645c4745c406f3a2e5",
       "snapshotFile": "raw_evidence_store/snapshot_live_036_f2456a90cf.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/avatar1794805692431-1794805692805568608561.jpeg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3364,6 +3383,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Ngân hàng Nhà nước khi ứng phó với 'AI trong ngân hàng phải tuân thủ những quy định gì' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "d1bea5aa8a5ede06e794a46949ae7b23b4b889ec39dc7d9208348e3fbd516fbf",
       "snapshotFile": "raw_evidence_store/snapshot_live_086_d1bea5aa8a.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/avatar1794825825389-1794825825581888975769.png",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3401,6 +3421,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Nóng Phó Thống đốc NHNN Phạm Quang Dũng được chỉ định giữ chức Bí thư Đảng ủy VCCI, nhiệm kỳ 2025-2030' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "3d60544f6380890dd60c7a3c4f6b5b64c813107f992c334995a271cdd95e3de3",
       "snapshotFile": "raw_evidence_store/snapshot_live_021_3d60544f63.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/avatar1794811505771-1794811506557524614753.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3467,6 +3488,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Ngân hàng Nhà nước khi ứng phó với 'Chính thức từ hôm nay (16/11), một ngân hàng ngừng trả lãi cho khách hàng gửi tiết kiệm ở hầu hết kỳ hạn' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "8f40d1d526a35c01816f87ffb2b135c080895e6af89f5b026a3442ee9dcdcf26",
       "snapshotFile": "raw_evidence_store/snapshot_live_016_8f40d1d526.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/f9636d2d-b10b-4f81-a0a1-3c4d82bc2517-17948111239021246831945-45-0-795-1200-crop-17948111274882120996115.jpeg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3533,6 +3555,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến TPBank khi ứng phó với 'TPBank tung loạt ưu đãi lãi suất, tiếp sức doanh nghiệp mùa cao điểm cuối năm' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "6b8a7c342acbdc3e4cceafcff14cf19b889be26dbd4df9c628c5f781d63559ea",
       "snapshotFile": "raw_evidence_store/snapshot_live_082_6b8a7c342a.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/photo1794800616261-1794800616516537782441-1794829640372959743775.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3599,6 +3622,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Vietcombank khi ứng phó với '6 năm qua, vốn hóa Vietcombank không tăng thậm chí sụt giảm - từng lớn hơn 10 ngân hàng tư nhân cộng lại, nay chưa bằng tổng giá trị Techcombank và VPBank' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "a04330c81837e3d0c2d31b2ca56ff1f6c947fa346697c6f85e34b5279d1cfec7",
       "snapshotFile": "raw_evidence_store/snapshot_live_090_a04330c818.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/16/toa-nha-vcb-resize20261031130424-17948213512061195153938-0-0-1173-1877-crop-1794821354710917786957.jpg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3665,6 +3689,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Vietcombank khi ứng phó với 'Lãi suất tiết kiệm ngân hàng nào cao nhất tháng 11/2026' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "04697875af39ccbf027bc409a61f5adca429ace7a543e733e62b368cef856fdd",
       "snapshotFile": "raw_evidence_store/snapshot_live_022_04697875af.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/09/03/33b974f1f3cb444085f5dc1df4e5e020-116378.jpg?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3731,6 +3756,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cục Dự trữ Liên bang Mỹ (Fed) khi ứng phó với 'Dự báo về sự cứng rắn của Fed Lãi suất có thể tăng vào tháng 12/2026 và tháng 1/2027' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "2980abd4920230446c628a5ea55cd56e0ec672275f7e1900a94c8315a2e94eae",
       "snapshotFile": "raw_evidence_store/snapshot_live_075_2980abd492.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/11/16/836b17327d684b10a2dc15b5061e0dbb-135992.png?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3783,6 +3809,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến Cộng đồng doanh nghiệp & Hộ kinh doanh khi ứng phó với 'Trung Quốc lần đầu tăng tỷ lệ dự trữ bắt buộc bằng ngoại tệ sau 5 năm' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "68e2dd57214e7a726589f9f2e9feeef9828241c921ad8dc5ed2fe7a29e86899b",
       "snapshotFile": "raw_evidence_store/snapshot_live_083_68e2dd5721.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/11/16/34fdf19a48194743ae65879d3e29d54c-135859.png?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3849,6 +3876,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến VPBank khi ứng phó với 'Ngân hàng tư nhân lớn nhất hệ thống vừa điều chỉnh lãi suất tiết kiệm, mức cao nhất còn 7,1%/năm' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "47e0a8a9a9f5c3eb989ac9679ea91775918511a019acce170feee9f9a3b00d44",
       "snapshotFile": "raw_evidence_store/snapshot_live_031_47e0a8a9a9.html",
+      "imageUrl": "https://cafefcdn.com/thumb_w/1200/203337114487263232/2026/11/14/avatar1794671094543-17946710951441073424299.jpeg",
       "verificationStatus": "VERIFIED"
     },
     {
@@ -3915,6 +3943,7 @@ window.EDITION_DATA = {
       "sectionG_practicalTakeaway": "Đơn vị quản lý liên quan đến SJC khi ứng phó với 'Giá vàng miếng và nhẫn đồng loạt đứng im' nên chủ động rà soát quy trình quản trị thanh khoản và thiết lập kịch bản dự phòng dòng tiền.",
       "computedSha256": "8b77b703a29c86da982b829f3f20c39af8345863ce8a06f6b18a3f9a043d7954",
       "snapshotFile": "raw_evidence_store/snapshot_live_087_8b77b703a2.html",
+      "imageUrl": "https://premedia.vneconomy.vn/files/uploads/2026/08/27/88bc6214bad34deda094f6fd2303182e-115407.jpg?w=1200&h=630&mode=crop",
       "verificationStatus": "VERIFIED"
     }
   ],

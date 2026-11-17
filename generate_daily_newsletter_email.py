@@ -56,6 +56,7 @@ def build_newsletter_html(data: dict) -> str:
         or ""
     )
     lead_quote = cover.get("supportingQuote", "")
+    lead_img = cover.get("imageUrl", "") or cover.get("leadArticle", {}).get("imageUrl", "")
 
     # 2. Parse 4 synthesis items [1], [2], [3], [4] with nested parentheses support
     synth_items = []
@@ -193,6 +194,11 @@ def build_newsletter_html(data: dict) -> str:
                 {escape(lead_hl)}
               </h1>
               {f'<div style="font-size: 13px; color: #57534E; font-weight: 500; line-height: 1.5; margin-bottom: 14px; font-style: italic;">{escape(lead_dek)}</div>' if lead_dek else ''}
+              {f'''
+              <div style="margin: 12px 0 16px 0; border-radius: 3px; overflow: hidden; border: 1px solid #E7E5E4;">
+                <img src="{escape(lead_img)}" alt="{escape(lead_hl)}" width="100%" style="width: 100%; max-height: 280px; object-fit: cover; display: block;" onerror="this.parentElement.style.display='none'" />
+              </div>
+              ''' if lead_img else ''}
               
               <!-- SAPO / EXECUTIVE SUMMARY -->
               <div style="font-size: 13px; line-height: 1.6; color: #1C1917; background-color: #FDF2E9; border-left: 3px solid #134E4A; padding: 12px 14px; margin-bottom: 16px; border-radius: 2px;">
@@ -470,6 +476,44 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
         fintech_lens = item.get("sectionE_fintechLens", "")
         quote = item.get("supportingQuote", "")
 
+        img_url = item.get("imageUrl", "")
+        if img_url:
+            media_content_html = f"""
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="stack-mobile" width="130" style="vertical-align: top; padding-right: 12px; padding-bottom: 8px;">
+                    <a href="{escape(url)}" target="_blank" style="display: block; text-decoration: none;">
+                      <img src="{escape(img_url)}" alt="{escape(hl)}" width="130" style="width: 130px; height: 86px; object-fit: cover; border-radius: 3px; border: 1px solid #E7E5E4; display: block;" onerror="this.style.display='none'" />
+                    </a>
+                  </td>
+                  <td class="stack-mobile" style="vertical-align: top;">
+                    <div style="font-size: 13px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
+                      <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
+                        {escape(hl)}
+                      </a>
+                    </div>
+                    <div style="font-size: 12px; color: #44403C; line-height: 1.5; margin-bottom: 8px;">
+                      {escape(sm)}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            """
+        else:
+            media_content_html = f"""
+              <!-- HEADLINE -->
+              <div style="font-size: 13px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
+                <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
+                  {escape(hl)}
+                </a>
+              </div>
+
+              <!-- SUMMARY -->
+              <div style="font-size: 12px; color: #44403C; line-height: 1.5; margin-bottom: 8px;">
+                {escape(sm)}
+              </div>
+            """
+
         items_html.append(f"""
         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border: 1px solid #E7E5E4; border-radius: 2px; margin-bottom: 10px;">
           <tr>
@@ -492,17 +536,7 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
                 </tr>
               </table>
 
-              <!-- HEADLINE -->
-              <div style="font-size: 13px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
-                <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
-                  {escape(hl)}
-                </a>
-              </div>
-
-              <!-- SUMMARY -->
-              <div style="font-size: 12px; color: #44403C; line-height: 1.5; margin-bottom: 8px;">
-                {escape(sm)}
-              </div>
+              {media_content_html}
 
               <!-- FINTECH LENS -->
               {f'''
