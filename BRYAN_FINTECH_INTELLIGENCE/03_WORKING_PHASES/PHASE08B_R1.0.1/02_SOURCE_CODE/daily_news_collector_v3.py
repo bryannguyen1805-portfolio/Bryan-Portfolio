@@ -1490,15 +1490,22 @@ class DailyNewsCollector:
                 ("cafef.vn", "https://cafef.vn/thi-truong-chung-khoan.chn"),
                 ("cafef.vn", "https://cafef.vn/kinh-te-so.chn"),
                 ("cafef.vn", "https://cafef.vn/tai-chinh-quoc-te.chn"),
+                ("cafef.vn", "https://cafef.vn/vi-mo-dau-tu.chn"),
+                ("cafef.vn", "https://cafef.vn/doanh-nghiep.chn"),
                 ("vneconomy.vn", "https://vneconomy.vn/tai-chinh.htm"),
                 ("vneconomy.vn", "https://vneconomy.vn/kinh-te-so.htm"),
                 ("vneconomy.vn", "https://vneconomy.vn/thi-truong.htm"),
+                ("vneconomy.vn", "https://vneconomy.vn/chung-khoan.htm"),
+                ("vneconomy.vn", "https://vneconomy.vn/doanh-nghiep.htm"),
                 ("tuoitre.vn", "https://tuoitre.vn/tai-chinh.htm"),
+                ("tuoitre.vn", "https://tuoitre.vn/kinh-doanh.htm"),
                 ("thanhnien.vn", "https://thanhnien.vn/tai-chinh-ngan-hang.htm"),
+                ("thanhnien.vn", "https://thanhnien.vn/kinh-te.htm"),
                 ("baodautu.vn", "https://baodautu.vn/tai-chinh-ngan-hang-d4/"),
                 ("baodautu.vn", "https://baodautu.vn/chung-khoan-d12/"),
                 ("baodautu.vn", "https://baodautu.vn/kinh-te-so-d23/"),
                 ("baodautu.vn", "https://baodautu.vn/dau-tu-d3/"),
+                ("baodautu.vn", "https://baodautu.vn/doanh-nghiep-d2/"),
                 ("laodong.vn", "https://laodong.vn/tien-te-dau-tu")
             ]
 
@@ -1791,8 +1798,11 @@ class DailyNewsCollector:
 
             return score
 
-        # Sort valid candidates by priority descending
-        valid_pool.sort(key=compute_candidate_priority, reverse=True)
+        # Sort valid candidates prioritizing 0-24h freshness (>= 80% target) then score
+        valid_pool.sort(
+            key=lambda c: (1 if c.get("freshnessBucket") == "0_TO_24H" else 0, compute_candidate_priority(c)),
+            reverse=True
+        )
         total_valid = len(valid_pool)
         
         # Check quota
