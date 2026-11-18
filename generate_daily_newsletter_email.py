@@ -107,7 +107,7 @@ def build_newsletter_html(data: dict) -> str:
       .email-container {{ width: 100% !important; max-width: 100% !important; }}
       .mp-col {{ display: block !important; width: 100% !important; box-sizing: border-box !important; margin-bottom: 12px !important; }}
       .mp-spacer {{ display: none !important; }}
-      .mobile-padding {{ padding-left: 16px !important; padding-right: 16px !important; }}
+      .mobile-padding {{ padding-left: 14px !important; padding-right: 14px !important; }}
       .mobile-p-top {{ padding-top: 16px !important; }}
       .cover-title {{ font-size: 19px !important; line-height: 1.35 !important; }}
       .header-title {{ font-size: 21px !important; }}
@@ -115,6 +115,8 @@ def build_newsletter_html(data: dict) -> str:
       .stack-mobile {{ display: block !important; width: 100% !important; box-sizing: border-box !important; }}
       .action-table {{ width: 100% !important; margin-top: 10px !important; }}
       .action-btn {{ display: block !important; width: 100% !important; text-align: center !important; margin-bottom: 6px !important; box-sizing: border-box !important; }}
+      .featured-img {{ width: 100% !important; max-width: 100% !important; height: auto !important; aspect-ratio: 16/9 !important; max-height: 220px !important; object-fit: cover !important; display: block !important; }}
+      .nowrap-badge {{ white-space: nowrap !important; }}
     }}
   </style>
 </head>
@@ -195,8 +197,8 @@ def build_newsletter_html(data: dict) -> str:
               </h1>
               {f'<div style="font-size: 13px; color: #57534E; font-weight: 500; line-height: 1.5; margin-bottom: 14px; font-style: italic;">{escape(lead_dek)}</div>' if lead_dek else ''}
               {f'''
-              <div style="margin: 12px 0 16px 0; border-radius: 3px; overflow: hidden; border: 1px solid #E7E5E4;">
-                <img src="{escape(lead_img)}" alt="{escape(lead_hl)}" width="100%" style="width: 100%; max-height: 280px; object-fit: cover; display: block;" onerror="this.parentElement.style.display='none'" />
+              <div style="margin: 12px 0 16px 0; border-radius: 4px; overflow: hidden; border: 1px solid #E7E5E4; background-color: #F5F5F4;">
+                <img src="{escape(lead_img)}" alt="{escape(lead_hl)}" width="100%" class="featured-img" style="width: 100%; max-width: 100%; height: auto; max-height: 280px; aspect-ratio: 16/9; object-fit: cover; display: block;" onerror="this.parentElement.style.display='none'" />
               </div>
               ''' if lead_img else ''}
               
@@ -477,66 +479,53 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
         quote = item.get("supportingQuote", "")
 
         img_url = item.get("imageUrl", "")
+        img_banner_html = ""
         if img_url:
-            media_content_html = f"""
-              <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="stack-mobile" width="130" style="vertical-align: top; padding-right: 12px; padding-bottom: 8px;">
-                    <a href="{escape(url)}" target="_blank" style="display: block; text-decoration: none;">
-                      <img src="{escape(img_url)}" alt="{escape(hl)}" width="130" style="width: 130px; height: 86px; object-fit: cover; border-radius: 3px; border: 1px solid #E7E5E4; display: block;" onerror="this.style.display='none'" />
-                    </a>
-                  </td>
-                  <td class="stack-mobile" style="vertical-align: top;">
-                    <div style="font-size: 13px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
-                      <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
-                        {escape(hl)}
-                      </a>
-                    </div>
-                    <div style="font-size: 12px; color: #44403C; line-height: 1.5; margin-bottom: 8px;">
-                      {escape(sm)}
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            """
-        else:
-            media_content_html = f"""
-              <!-- HEADLINE -->
-              <div style="font-size: 13px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
-                <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
-                  {escape(hl)}
-                </a>
-              </div>
-
-              <!-- SUMMARY -->
-              <div style="font-size: 12px; color: #44403C; line-height: 1.5; margin-bottom: 8px;">
-                {escape(sm)}
-              </div>
+            img_banner_html = f"""
+            <div style="margin: 8px 0 10px 0; border-radius: 4px; overflow: hidden; border: 1px solid #E7E5E4; background-color: #F5F5F4;">
+              <a href="{escape(url)}" target="_blank" style="display: block; text-decoration: none;">
+                <img src="{escape(img_url)}" alt="{escape(hl)}" width="100%" class="featured-img" style="width: 100%; max-width: 100%; height: auto; max-height: 220px; aspect-ratio: 16/9; object-fit: cover; display: block;" onerror="this.parentElement.parentElement.style.display='none'" />
+              </a>
+            </div>
             """
 
         items_html.append(f"""
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border: 1px solid #E7E5E4; border-radius: 2px; margin-bottom: 10px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border: 1px solid #E7E5E4; border-radius: 3px; margin-bottom: 12px;">
           <tr>
-            <td style="padding: 12px 14px;">
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 5px;">
+            <td style="padding: 13px 15px;">
+              <!-- META ROW: ID, SOURCE & 0-24H BADGE -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 6px;">
                 <tr>
-                  <td>
-                    <span style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; background-color: #134E4A; color: #FFFFFF; padding: 2px 6px; border-radius: 2px;">
+                  <td style="vertical-align: middle;">
+                    <span style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; background-color: #134E4A; color: #FFFFFF; padding: 2px 6px; border-radius: 2px; white-space: nowrap;">
                       {escape(eid)}
                     </span>
-                    <span style="font-size: 11px; color: #57534E; margin-left: 6px;">
-                      Nguồn: <strong>{escape(src)}</strong>
+                    <span style="font-size: 11px; color: #57534E; margin-left: 6px; line-height: 1.4;">
+                      Nguồn: <strong style="color: #1C1917;">{escape(src)}</strong>
                     </span>
                   </td>
-                  <td align="right">
-                    <span style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #15803D; background-color: #DCFCE7; padding: 2px 6px; border-radius: 2px;">
+                  <td align="right" style="vertical-align: top; white-space: nowrap; padding-left: 8px;">
+                    <span class="nowrap-badge" style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #15803D; background-color: #DCFCE7; padding: 2px 6px; border-radius: 2px; white-space: nowrap; display: inline-block;">
                       [0–24H]
                     </span>
                   </td>
                 </tr>
               </table>
 
-              {media_content_html}
+              <!-- FEATURED IMAGE BANNER (RESPONSIVE FULL-WIDTH) -->
+              {img_banner_html}
+
+              <!-- HEADLINE -->
+              <div style="font-size: 14px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
+                <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
+                  {escape(hl)}
+                </a>
+              </div>
+
+              <!-- SUMMARY -->
+              <div style="font-size: 12px; color: #44403C; line-height: 1.55; margin-bottom: 8px;">
+                {escape(sm)}
+              </div>
 
               <!-- FINTECH LENS -->
               {f'''
