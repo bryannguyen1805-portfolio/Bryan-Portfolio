@@ -29,10 +29,12 @@
 
   const state = {
     data: null,
+    activePage: 'today',
     activeCategory: 'ALL',
     searchTerm: '',
     activeChainIdx: 0,
     activeLayerIdx: 0,
+    nlLoaded: false,
     newsById: {}
   };
 
@@ -99,6 +101,7 @@
     const d = state.data;
     const dateEl = $('#v4Date');
     const edEl = $('#v4EditionLabel');
+    const drawerBadgeEl = $('#v4DrawerEditionBadge');
     const footerEl = $('#v4FooterNote');
 
     if (dateEl && (d.dayOfWeek || d.editionDate)) {
@@ -111,6 +114,13 @@
       const rawEd = String(d.editionNumber);
       const mNum = rawEd.match(/(\d+)/);
       edEl.textContent = mNum ? `Ấn bản số ${mNum[1]}` : rawEd;
+      if (drawerBadgeEl) {
+        const cleanBadge = rawEd
+          .replace(/ẤN BẢN SỐ/gi, 'Ấn bản số')
+          .replace(/PHIÊN CHIỀU/gi, 'Phiên chiều')
+          .replace(/PHIÊN SÁNG/gi, 'Phiên sáng');
+        drawerBadgeEl.textContent = cleanBadge;
+      }
     }
     if (footerEl && d.editionId) {
       footerEl.textContent = `Bnews | Fintech Intelligence — Giao diện Pilot V4.0 · ${d.editionId} (${d.editionDate || ''}). Nguồn tin tổng hợp từ báo chí kinh tế chính thống.`;
@@ -672,13 +682,188 @@
     }
   }
 
+  // ─── TRANG 04: TÍN HIỆU & CƠ HỘI B2B ───────────────────────────────────────
+  function renderB2BPage() {
+    const es = state.data.editorialSections || {};
+    const signals = es.sec04b_decisionBrief?.signals || [];
+    const opps = es.sec07_paymentRadar?.opportunities || [];
+    const watchlist = es.sec08b_watchlist?.items || es.sec08b_watchlist?.watchlistItems || [];
+
+    const dbMount = $('#v4DecisionBriefMount');
+    if (dbMount) {
+      dbMount.innerHTML = signals
+        .map((sig, idx) => {
+          const segs = (sig.relevantMerchantSegments || []).slice(0, 4);
+          const sols = (sig.potentialPaymentSolutions || []).slice(0, 2);
+          return `
+            <article class="v4-b2b-card">
+              <div class="v4-b2b-card-top">
+                <span class="v4-crimson-tag">${esc(sig.categoryBadge || 'TÍN HIỆU ĐIỀU HÀNH')}</span>
+                <span class="v4-b2b-pill">${esc(sig.signalId || `DECISION-0${idx + 1}`)}</span>
+              </div>
+              <h3 class="v4-b2b-title">${esc(sig.signalTitle || '')}</h3>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Diễn biến thị trường</div>
+                <p class="v4-b2b-text">${esc(sig.whatHappened || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Cơ hội ứng dụng B2B</div>
+                <p class="v4-b2b-text">${esc(sig.whatItMeansForMyWork || sig.proposedNextAction || '')}</p>
+              </div>
+              ${
+                segs.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Phân khúc ưu tiên</div>
+                      <div class="v4-b2b-tags">${segs.map((s) => `<span class="v4-b2b-tag">${esc(s)}</span>`).join('')}</div>
+                    </div>`
+                  : ''
+              }
+              ${
+                sols.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Giải pháp đối ứng</div>
+                      <p class="v4-b2b-text">${sols.map((s) => `<strong>${esc(s.solutionName)}</strong>: ${esc(s.capabilityNote)}`).join('<br>')}</p>
+                    </div>`
+                  : ''
+              }
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    const radarMount = $('#v4PaymentRadarMount');
+    if (radarMount) {
+      radarMount.innerHTML = opps
+        .map((op) => {
+          const rels = (op.relevantEventIds || op.originEventIds || [])
+            .map((eid) => state.newsById[eid])
+            .filter(Boolean);
+          return `
+            <article class="v4-b2b-card">
+              <div class="v4-b2b-card-top">
+                <span class="v4-crimson-tag">${esc(op.merchantSegment || 'B2B PAYMENT RADAR')}</span>
+                <span class="v4-b2b-pill">${esc(op.opportunityId || 'RADAR')} · ${esc(op.priority || 'P1')}</span>
+              </div>
+              <h3 class="v4-b2b-title">${esc(op.title || op.opportunityTitle || '')}</h3>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Điểm nghẽn thanh toán</div>
+                <p class="v4-b2b-text">${esc(op.paymentPainPoint || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Giải pháp &amp; Giá trị thương mại</div>
+                <p class="v4-b2b-text">${esc(op.paymentSolution || '')} ${esc(op.commercialRationale || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Hành động đề xuất</div>
+                <p class="v4-b2b-text"><strong>${esc(op.proposedBDAction || '')}</strong></p>
+              </div>
+              ${
+                rels.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Tin tức nền tảng (${rels.length})</div>
+                      <div class="v4-b2b-tags">
+                        ${rels
+                          .map(
+                            (ev) => `<button type="button" class="v4-b2b-tag" style="cursor:pointer;" data-open-event="${esc(ev.eventId)}">${esc(ev.eventId)} · ${esc((ev.headline || '').slice(0, 56))}...</button>`
+                          )
+                          .join('')}
+                      </div>
+                    </div>`
+                  : ''
+              }
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    const wlMount = $('#v4WatchlistMount');
+    if (wlMount) {
+      wlMount.innerHTML = watchlist
+        .map(
+          (wl, idx) => `
+          <article class="v4-b2b-card">
+            <div class="v4-b2b-card-top">
+              <span class="v4-crimson-tag">${esc(wl.category || 'GIÁM SÁT VĨ MÔ')}</span>
+              <span class="v4-b2b-pill">${esc(wl.watchlistId || `WL-0${idx + 1}`)} · ${esc(wl.impactLevel || 'HIGH')}</span>
+            </div>
+            <h3 class="v4-b2b-title">${esc(wl.itemTitle || '')}</h3>
+            <div class="v4-b2b-row">
+              <div class="v4-b2b-label">Chỉ báo theo dõi (${esc(wl.observationHorizon || '7 ngày tới')})</div>
+              <p class="v4-b2b-text">${esc(wl.signalTracked || wl.description || '')}</p>
+            </div>
+            <div class="v4-b2b-row">
+              <div class="v4-b2b-label">Ngưỡng kích hoạt &amp; Hành động</div>
+              <p class="v4-b2b-text"><strong>Ngưỡng:</strong> ${esc(wl.threshold || wl.conditionChangingAssessment || '')}<br><strong>Đề xuất:</strong> ${esc(wl.possibleAction || '')}</p>
+            </div>
+          </article>
+        `
+        )
+        .join('');
+    }
+  }
+
+  // ─── CHUYỂN TRANG ĐIỀU HÀNH (01 -> 04) ──────────────────────────────────────
+  function loadNewsletterPreview() {
+    if (state.nlLoaded) return;
+    const mount = $('#v4NlPreviewMount');
+    if (!mount) return;
+    state.nlLoaded = true;
+    mount.innerHTML = `<iframe src="./newsletter-preview.html?v=${Date.now()}" class="v4-nl-iframe" title="Bản tin Bnews mới nhất"></iframe>`;
+    const ifr = mount.querySelector('iframe');
+    if (ifr) {
+      ifr.addEventListener('load', () => {
+        try {
+          const h = ifr.contentDocument?.documentElement?.scrollHeight;
+          if (h && h > 400) ifr.style.height = `${h + 24}px`;
+        } catch (_) {
+          // Keep default min-height
+        }
+      });
+    }
+  }
+
+  function switchPage(pageKey) {
+    const pages = {
+      today: $('#v4PageToday'),
+      newsletter: $('#v4PageNewsletter'),
+      analysis: $('#v4PageAnalysis'),
+      b2b: $('#v4PageB2B')
+    };
+    if (!pages[pageKey]) pageKey = 'today';
+    state.activePage = pageKey;
+
+    Object.entries(pages).forEach(([k, el]) => {
+      if (el) el.hidden = k !== pageKey;
+    });
+
+    $$('[data-drawer-page]').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.drawerPage === pageKey);
+    });
+    $$('[data-switch-page]').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.switchPage === pageKey);
+    });
+
+    if (pageKey === 'newsletter') {
+      loadNewsletterPreview();
+    }
+    applyFilters();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
   // ─── CHẾ ĐỘ LỌC CHUYÊN MỤC & TÌM KIẾM ────────────────────────────────────
   function applyFilters() {
+    const isToday = state.activePage === 'today';
     const tabs = $$('#v4CatTabs .v4-cat-btn');
     tabs.forEach((btn) => {
-      const active = btn.dataset.cat === state.activeCategory;
+      const active = isToday && btn.dataset.cat === state.activeCategory;
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-selected', String(active));
+    });
+
+    $$('[data-drawer-cat]').forEach((btn) => {
+      btn.classList.toggle('active', isToday && btn.dataset.drawerCat === state.activeCategory);
     });
 
     const frontView = $('#v4FrontPageView');
@@ -687,6 +872,8 @@
     const needle = state.searchTerm.trim().toLowerCase();
 
     if (clearBtn) clearBtn.hidden = !needle;
+
+    if (!isToday) return;
 
     if (state.activeCategory === 'ALL' && !needle) {
       if (frontView) frontView.hidden = false;
@@ -923,6 +1110,46 @@
     openDrawer('Playbook B2B · Triển khai thực tế', html);
   }
 
+  // ─── LEFT DRAWER, THEME & VCARD MODAL ─────────────────────────────────────
+  function openNavDrawer() {
+    $('#v4NavBackdrop').hidden = false;
+    $('#v4NavDrawer').hidden = false;
+    $('#v4MenuBtn')?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNavDrawer() {
+    $('#v4NavBackdrop').hidden = true;
+    $('#v4NavDrawer').hidden = true;
+    $('#v4MenuBtn')?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  function openVCardModal() {
+    $('#v4VCardBackdrop').hidden = false;
+    $('#v4VCardModal').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVCardModal() {
+    $('#v4VCardBackdrop').hidden = true;
+    $('#v4VCardModal').hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    const logoPath = isDark ? '../bnews-logo-dark-opt.webp' : '../bnews-logo-light-opt.webp';
+    $$('.v4-brand-logo, .v4-nav-drawer-logo, .v4-footer-logo').forEach((img) => {
+      img.src = logoPath;
+    });
+    const tBtn = $('#v4ThemeToggleBtn');
+    if (tBtn) {
+      tBtn.textContent = isDark ? 'Chuyển sang Giao diện Sáng' : 'Đổi giao diện Sáng / Tối';
+    }
+  }
+
   // ─── EVENTS & INITIALIZATION ──────────────────────────────────────────────
   function bindGlobalEvents() {
     document.addEventListener('click', (e) => {
@@ -933,19 +1160,33 @@
         return;
       }
 
+      const pageBtn = e.target.closest('[data-switch-page], [data-drawer-page]');
+      if (pageBtn) {
+        const targetPage = pageBtn.dataset.switchPage || pageBtn.dataset.drawerPage;
+        closeNavDrawer();
+        switchPage(targetPage);
+        return;
+      }
+
+      const drawerCatBtn = e.target.closest('[data-drawer-cat]');
+      if (drawerCatBtn) {
+        state.activeCategory = drawerCatBtn.dataset.drawerCat;
+        closeNavDrawer();
+        switchPage('today');
+        return;
+      }
+
       const catFilterTrigger = e.target.closest('[data-filter-cat]');
       if (catFilterTrigger) {
         state.activeCategory = catFilterTrigger.dataset.filterCat;
-        applyFilters();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        switchPage('today');
       }
     });
 
     $$('#v4CatTabs .v4-cat-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         state.activeCategory = btn.dataset.cat;
-        applyFilters();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        switchPage('today');
       });
     });
 
@@ -957,8 +1198,7 @@
         state.searchTerm = '';
         const input = $('#v4SearchInput');
         if (input) input.value = '';
-        applyFilters();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        switchPage('today');
       });
     }
 
@@ -967,7 +1207,11 @@
     if (searchInput) {
       searchInput.addEventListener('input', () => {
         state.searchTerm = searchInput.value;
-        applyFilters();
+        if (state.activePage !== 'today') {
+          switchPage('today');
+        } else {
+          applyFilters();
+        }
       });
     }
     if (searchClear) {
@@ -979,42 +1223,70 @@
       });
     }
 
+    // Left Navigation Drawer controls
+    $('#v4MenuBtn')?.addEventListener('click', openNavDrawer);
+    $('#v4NavClose')?.addEventListener('click', closeNavDrawer);
+    $('#v4NavBackdrop')?.addEventListener('click', closeNavDrawer);
+
+    $('#v4DrawerSearchForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = ($('#v4DrawerSearchInput')?.value || '').trim();
+      state.searchTerm = val;
+      if (searchInput) searchInput.value = val;
+      closeNavDrawer();
+      switchPage('today');
+    });
+
+    // Utility buttons inside Drawer
+    $('#v4OpenVCardBtn')?.addEventListener('click', () => {
+      closeNavDrawer();
+      openVCardModal();
+    });
+    $('#v4ThemeToggleBtn')?.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('site_theme', next);
+      applyTheme(next);
+    });
+
+    // Right Detail Drawer
     $('#v4DrawerClose')?.addEventListener('click', closeDrawer);
     $('#v4DrawerBackdrop')?.addEventListener('click', closeDrawer);
 
-    // Modal Đăng ký Bản tin
-    const openSub = () => {
-      $('#v4ModalBackdrop').hidden = false;
-      $('#v4NewsletterModal').hidden = false;
-    };
-    const closeSub = () => {
-      $('#v4ModalBackdrop').hidden = true;
-      $('#v4NewsletterModal').hidden = true;
-    };
-    $('#v4SubscribeBtn')?.addEventListener('click', openSub);
-    $('#v4ModalClose')?.addEventListener('click', closeSub);
-    $('#v4ModalBackdrop')?.addEventListener('click', closeSub);
+    // Header "Đăng ký Bản tin" CTA -> Chuyển sang Trang 02 (Bản tin & Đăng ký)
+    $('#v4SubscribeBtn')?.addEventListener('click', () => {
+      switchPage('newsletter');
+    });
 
-    $('#v4SubscribeForm')?.addEventListener('submit', (e) => {
+    // Newsletter subscribe form on Trang 02
+    $('#v4NlForm')?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = ($('#v4EmailInput')?.value || '').trim();
-      const fb = $('#v4SubscribeFeedback');
+      const email = ($('#v4NlEmailInput')?.value || '').trim();
+      const fb = $('#v4NlFeedback');
       if (fb && email) {
         fb.hidden = false;
-        fb.textContent = `Đã ghi nhận yêu cầu đăng ký bản tin cho địa chỉ: ${email}.`;
-        $('#v4EmailInput').value = '';
+        fb.textContent = `Đã ghi nhận yêu cầu đăng ký bản tin sáng cho địa chỉ: ${email}.`;
+        $('#v4NlEmailInput').value = '';
       }
     });
+
+    // vCard Modal controls
+    $('#v4VCardClose')?.addEventListener('click', closeVCardModal);
+    $('#v4VCardBackdrop')?.addEventListener('click', closeVCardModal);
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeDrawer();
-        closeSub();
+        closeNavDrawer();
+        closeVCardModal();
       }
     });
   }
 
   async function init() {
+    const savedTheme = localStorage.getItem('site_theme') === 'dark' ? 'dark' : 'light';
+    applyTheme(savedTheme);
+
     const data = await loadEditionData();
     if (!data) {
       const mount = $('#v4FrontPageView');
@@ -1035,8 +1307,9 @@
     renderCategoryClusters();
     renderMacroMicro();
     renderFintechCorner();
+    renderB2BPage();
     bindGlobalEvents();
-    applyFilters();
+    switchPage('today');
   }
 
   if (document.readyState === 'loading') {

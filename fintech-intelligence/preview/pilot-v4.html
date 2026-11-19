@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -18,16 +18,33 @@
   <a href="#mainContent" class="v4-skip-link">Chuyển đến nội dung chính</a>
 
   <!-- =====================================================================
-       A. HEADER (CHỈ 2 THANH DUY NHẤT THEO CHUẨN VNECONOMY)
+       A. HEADER (2 THANH GỌN + NÚT DANH MỤC ☰ ĐỒNG NHẤT PILOT V4.0)
        ===================================================================== -->
   <header class="v4-header" id="v4Header">
-    <!-- Thanh 1: Logo + Ngày/Portfolio | Tìm kiếm giữa | Ấn bản + CTA Navy -->
+    <!-- Thanh 1: [☰] Logo + Ngày/Portfolio | Tìm kiếm giữa | Ấn bản + CTA Navy -->
     <div class="v4-masthead-bar">
       <div class="v4-container v4-masthead-inner">
         <div class="v4-masthead-left">
+          <button
+            type="button"
+            class="v4-menu-btn"
+            id="v4MenuBtn"
+            aria-label="Mở menu danh mục & chuyên trang"
+            aria-expanded="false"
+            aria-controls="v4NavDrawer"
+            title="Menu Danh mục & Chuyên trang"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+
           <a href="#top" class="v4-brand-link" id="v4BrandReset" title="Về Trang nhất Bnews">
             <img src="../bnews-logo-light-opt.webp" alt="Bnews Fintech" class="v4-brand-logo" width="142" height="38">
           </a>
+
           <div class="v4-brand-meta">
             <span class="v4-date-text" id="v4Date">Thứ Năm, 19/11/2026</span>
             <span class="v4-meta-dot" aria-hidden="true">·</span>
@@ -57,8 +74,8 @@
       </div>
     </div>
 
-    <!-- Thanh 2: Menu 6 chuyên mục (nền trắng, chữ 14px, không viết hoa toàn bộ, gạch chân Navy 2px) -->
-    <nav class="v4-cat-nav" aria-label="Chuyên mục tin tức">
+    <!-- Thanh 2: Menu 6 chuyên mục + Chuyển nhanh Chuyên trang điều hành -->
+    <nav class="v4-cat-nav" aria-label="Chuyên mục tin tức và chuyên trang">
       <div class="v4-container v4-cat-nav-inner">
         <div class="v4-cat-tabs" role="tablist" id="v4CatTabs">
           <button type="button" class="v4-cat-btn active" role="tab" aria-selected="true" data-cat="ALL">Tất cả</button>
@@ -71,9 +88,11 @@
         </div>
 
         <div class="v4-nav-anchors">
-          <a href="#secMacroMicro" class="v4-anchor-link">Vĩ mô &rarr; Vi mô</a>
+          <button type="button" class="v4-page-link-btn" data-switch-page="analysis">Vĩ mô &rarr; Vi mô</button>
           <span class="v4-meta-dot" aria-hidden="true">|</span>
-          <a href="#secFintechCorner" class="v4-anchor-link">Góc Fintech</a>
+          <button type="button" class="v4-page-link-btn" data-switch-page="b2b">Cơ hội B2B</button>
+          <span class="v4-meta-dot" aria-hidden="true">|</span>
+          <button type="button" class="v4-page-link-btn" data-switch-page="newsletter">Bản tin</button>
         </div>
       </div>
     </nav>
@@ -87,31 +106,75 @@
   </section>
 
   <!-- =====================================================================
-       NỘI DUNG CHÍNH (TRANG NHẤT + 6 CHUYÊN MỤC + CHUYÊN ĐỀ TẠP CHÍ)
+       NỘI DUNG CHÍNH — CHIA THEO 4 CHUYÊN TRANG ĐIỀU HÀNH ĐỘC LẬP
        ===================================================================== -->
   <main class="v4-main" id="mainContent">
-    <!-- Chế độ lọc chuyên mục / tìm kiếm -->
-    <section class="v4-container v4-filtered-view" id="v4FilteredView" hidden>
-      <!-- Render khi chọn chuyên mục hoặc tìm kiếm -->
+
+    <!-- TRANG 01: THỜI SỰ & 25 TIN PHIÊN (DEFAULT) -->
+    <section id="v4PageToday" class="v4-page-view" aria-label="Trang 01 — Thời sự & 25 Tin phiên">
+      <section class="v4-container v4-filtered-view" id="v4FilteredView" hidden></section>
+
+      <div id="v4FrontPageView">
+        <!-- B1. Lưới tòa soạn 3 cột (25% | 50% | 25%) -->
+        <section class="v4-front-section" aria-label="Trang nhất">
+          <div class="v4-container v4-hero-grid" id="v4HeroGrid">
+            <div class="v4-hero-col v4-hero-col-left" id="v4SynthesisCol"></div>
+            <div class="v4-hero-col v4-hero-col-center" id="v4CoverCol"></div>
+            <div class="v4-hero-col v4-hero-col-right" id="v4LatestFeedCol"></div>
+          </div>
+        </section>
+
+        <!-- B2. Cụm 6 chuyên mục tin tức (không trùng bài đinh) -->
+        <section class="v4-categories-section" aria-label="Tin tức theo 6 chuyên mục">
+          <div class="v4-container" id="v4CategoriesMount"></div>
+        </section>
+      </div>
     </section>
 
-    <!-- Chế độ Trang nhất mặc định -->
-    <div id="v4FrontPageView">
-      <!-- B1. LƯỚI TÒA SOẠN 3 CỘT (25% ĐÚC KẾT | 50% BÀI ĐINH | 25% DÒNG TIN MỚI 0-24H) -->
-      <section class="v4-front-section" aria-label="Trang nhất">
-        <div class="v4-container v4-hero-grid" id="v4HeroGrid">
-          <div class="v4-hero-col v4-hero-col-left" id="v4SynthesisCol"></div>
-          <div class="v4-hero-col v4-hero-col-center" id="v4CoverCol"></div>
-          <div class="v4-hero-col v4-hero-col-right" id="v4LatestFeedCol"></div>
+    <!-- TRANG 02: BẢN TIN & ĐĂNG KÝ -->
+    <section id="v4PageNewsletter" class="v4-page-view" aria-label="Trang 02 — Bản tin & Đăng ký" hidden>
+      <div class="v4-nl-hero">
+        <div class="v4-container v4-nl-hero-inner">
+          <div class="v4-nl-hero-copy">
+            <span class="v4-nl-kicker">BNEWS DAILY BRIEFING · ẤN BẢN SÁNG</span>
+            <h1 class="v4-nl-title">Nắm trọn 25 tin đắt giá chỉ với 3 phút mỗi sáng</h1>
+            <p class="v4-nl-desc">
+              Tổng hợp 25 sự kiện kinh tế – tài chính xác minh trong 24 giờ, 4 chỉ số Market Pulse và cơ hội B2B thanh toán số gửi thẳng tới hộp thư lúc 9h00 hằng ngày.
+            </p>
+          </div>
+          <div class="v4-nl-form-wrap">
+            <form class="v4-nl-form" id="v4NlForm">
+              <label for="v4NlEmailInput" class="v4-sr-only">Địa chỉ email của bạn</label>
+              <input type="email" id="v4NlEmailInput" class="v4-nl-input" placeholder="Nhập địa chỉ email công việc..." required autocomplete="email">
+              <button type="submit" class="v4-btn-crimson">Đăng ký miễn phí &rarr;</button>
+            </form>
+            <div class="v4-nl-disclaimer">Không gửi spam · Hủy đăng ký bất kỳ lúc nào với 1 lần nhấp.</div>
+            <div class="v4-subscribe-feedback" id="v4NlFeedback" hidden></div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <!-- B2. PHẦN 6 CHUYÊN MỤC (VẠCH XANH NAVY BÊN TRÁI TIÊU ĐỀ, KHÔNG TRÙNG BÀI ĐINH) -->
-      <section class="v4-categories-section" aria-label="Tin tức theo 6 chuyên mục">
-        <div class="v4-container" id="v4CategoriesMount"></div>
-      </section>
+      <div class="v4-nl-stage">
+        <div class="v4-container">
+          <div class="v4-nl-stage-bar">
+            <div class="v4-nl-stage-label">
+              <span class="v4-live-dot" aria-hidden="true"></span>
+              <span>Ấn bản mới nhất trên hệ thống</span>
+            </div>
+            <a href="./newsletter-preview.html" target="_blank" rel="noopener noreferrer" class="v4-anchor-link">
+              Mở toàn màn hình &nearr;
+            </a>
+          </div>
+          <div class="v4-nl-paper-frame" id="v4NlPreviewMount">
+            <div class="v4-nl-loading">Đang nạp giao diện Bản tin mới nhất...</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- C1. CHUỖI TRUYỀN DẪN VĨ MÔ → VI MÔ (CHẤT TẠP CHÍ THE VIETNAMESE) -->
+    <!-- TRANG 03: PHÂN TÍCH VĨ MÔ → VI MÔ & GÓC CHUYÊN MÔN FINTECH -->
+    <section id="v4PageAnalysis" class="v4-page-view" aria-label="Trang 03 — Phân tích Vĩ mô → Vi mô & Fintech" hidden>
+      <!-- C1. Chuỗi truyền dẫn Vĩ mô → Vi mô (7 bước ngang) -->
       <section class="v4-magazine-section v4-macro-section" id="secMacroMicro" aria-labelledby="macroSecHeading">
         <div class="v4-container">
           <div class="v4-sec-header">
@@ -129,7 +192,7 @@
         </div>
       </section>
 
-      <!-- C2. GÓC CHUYÊN MÔN FINTECH (LƯỚI 3 CỘT + PLAYBOOK 2 CỘT + TỪ ĐIỂN PHẲNG 2 CỘT) -->
+      <!-- C2. Góc chuyên môn Fintech (Lưới 3 cột + Playbook 2 cột + Từ điển 2 cột phẳng) -->
       <section class="v4-magazine-section v4-fintech-section" id="secFintechCorner" aria-labelledby="fintechSecHeading">
         <div class="v4-container">
           <div class="v4-sec-header">
@@ -137,10 +200,8 @@
             <p class="v4-sec-subtitle">Phân tích mô hình thanh toán số, khung quản trị rủi ro và giải pháp thương mại B2B.</p>
           </div>
 
-          <!-- Lưới 3 cột không viền khung (The Vietnamese) -->
           <div class="v4-fintech-grid" id="v4FintechGrid"></div>
 
-          <!-- Playbook 2 cột cân đối -->
           <div class="v4-subblock">
             <div class="v4-subblock-head">
               <h3 class="v4-subblock-title">Playbook Triển khai Thương mại B2B</h3>
@@ -148,7 +209,6 @@
             <div class="v4-playbook-grid" id="v4PlaybookGrid"></div>
           </div>
 
-          <!-- Từ điển 2 cột phẳng (không bao giờ lẻ ô trống) -->
           <div class="v4-subblock">
             <div class="v4-subblock-head">
               <h3 class="v4-subblock-title">Từ điển Nghiệp vụ &amp; Hạ tầng Thanh toán</h3>
@@ -167,7 +227,41 @@
           </div>
         </div>
       </section>
-    </div>
+    </section>
+
+    <!-- TRANG 04: TÍN HIỆU & CƠ HỘI B2B -->
+    <section id="v4PageB2B" class="v4-page-view" aria-label="Trang 04 — Tín hiệu & Cơ hội B2B" hidden>
+      <section class="v4-magazine-section v4-b2b-section" id="v4DecisionBriefSection">
+        <div class="v4-container">
+          <div class="v4-sec-header">
+            <h2 class="v4-sec-title">Tín hiệu Hành động Điều hành (Decision Brief)</h2>
+            <p class="v4-sec-subtitle">Khuyến nghị chiến lược và giải pháp thanh toán B2B rút ra trực tiếp từ dữ kiện trong phiên.</p>
+          </div>
+          <div class="v4-decision-grid" id="v4DecisionBriefMount"></div>
+        </div>
+      </section>
+
+      <section class="v4-magazine-section v4-macro-section" id="v4PaymentRadarSection">
+        <div class="v4-container">
+          <div class="v4-sec-header">
+            <h2 class="v4-sec-title">Radar Cơ hội Thanh toán B2B (Payment Radar)</h2>
+            <p class="v4-sec-subtitle">Nhận diện điểm nghẽn dòng tiền tại điểm bán và gói giải pháp chuyển đổi số phù hợp.</p>
+          </div>
+          <div class="v4-radar-grid" id="v4PaymentRadarMount"></div>
+        </div>
+      </section>
+
+      <section class="v4-magazine-section v4-b2b-section" id="v4WatchlistSection">
+        <div class="v4-container">
+          <div class="v4-sec-header">
+            <h2 class="v4-sec-title">Điều cần Theo dõi tiếp (Monitoring Watchlist)</h2>
+            <p class="v4-sec-subtitle">4 biến số trọng yếu, ngưỡng kích hoạt hành động và kịch bản theo dõi tuần tới.</p>
+          </div>
+          <div class="v4-watchlist-grid" id="v4WatchlistMount"></div>
+        </div>
+      </section>
+    </section>
+
   </main>
 
   <!-- FOOTER GỌN SẠCH -->
@@ -189,7 +283,92 @@
     </div>
   </footer>
 
-  <!-- DRAWER ĐỌC CHI TIẾT (BÀI BÁO / MARKET PULSE / GÓC FINTECH) -->
+  <!-- =====================================================================
+       LEFT NAVIGATION DRAWER (ĐỒNG NHẤT MÀU & CHỮ PILOT V4.0)
+       ===================================================================== -->
+  <div class="v4-drawer-backdrop" id="v4NavBackdrop" hidden></div>
+  <aside class="v4-nav-drawer" id="v4NavDrawer" role="dialog" aria-modal="true" aria-label="Menu danh mục và chuyên trang Bnews" hidden>
+    <div class="v4-nav-drawer-top">
+      <button type="button" class="v4-drawer-close" id="v4NavClose" aria-label="Đóng menu danh mục">&times;</button>
+      <img src="../bnews-logo-light-opt.webp" alt="Bnews Fintech" id="v4DrawerLogo" class="v4-nav-drawer-logo" width="104" height="28">
+      <span class="v4-nav-edition-badge" id="v4DrawerEditionBadge">Ấn bản số 34</span>
+    </div>
+
+    <div class="v4-nav-drawer-body">
+      <form class="v4-nav-search-form" id="v4DrawerSearchForm">
+        <label for="v4DrawerSearchInput" class="v4-sr-only">Tìm kiếm bài viết</label>
+        <input type="search" id="v4DrawerSearchInput" class="v4-nav-search-input" placeholder="Nhập từ khóa bài viết, ngân hàng...">
+        <button type="submit" class="v4-btn-navy v4-nav-search-btn">Tìm</button>
+      </form>
+
+      <div class="v4-nav-group">
+        <div class="v4-nav-group-label">Chuyên trang điều hành</div>
+        <div class="v4-nav-pages-grid" id="v4DrawerPagesGrid">
+          <button type="button" class="v4-nav-page-tile active" data-drawer-page="today">
+            <span class="v4-nav-page-num">01</span>
+            <span class="v4-nav-page-name">Thời sự &amp; 25 Tin phiên</span>
+          </button>
+          <button type="button" class="v4-nav-page-tile" data-drawer-page="newsletter">
+            <span class="v4-nav-page-num">02</span>
+            <span class="v4-nav-page-name">Bản tin &amp; Đăng ký</span>
+          </button>
+          <button type="button" class="v4-nav-page-tile" data-drawer-page="analysis">
+            <span class="v4-nav-page-num">03</span>
+            <span class="v4-nav-page-name">Phân tích Vĩ mô &rarr; Vi mô</span>
+          </button>
+          <button type="button" class="v4-nav-page-tile" data-drawer-page="b2b">
+            <span class="v4-nav-page-num">04</span>
+            <span class="v4-nav-page-name">Tín hiệu &amp; Cơ hội B2B</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="v4-nav-group">
+        <div class="v4-nav-group-label">Chuyên mục tin tức trong phiên</div>
+        <div class="v4-nav-cat-list" id="v4DrawerCatList">
+          <button type="button" class="v4-nav-cat-row active" data-drawer-cat="ALL">
+            <span>Tất cả 25 tin xác minh trong phiên</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Thanh toán">
+            <span>Thanh toán số</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Ngân hàng">
+            <span>Ngân hàng</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Thị trường vốn">
+            <span>Thị trường vốn</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Doanh nghiệp">
+            <span>Doanh nghiệp</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Kinh tế vĩ mô">
+            <span>Kinh tế vĩ mô</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+          <button type="button" class="v4-nav-cat-row" data-drawer-cat="Bán lẻ, D2C và xu hướng tiêu dùng">
+            <span>Bán lẻ &amp; Tiêu dùng</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="v4-nav-group">
+        <div class="v4-nav-group-label">Liên hệ &amp; Tiện ích</div>
+        <div class="v4-nav-utils">
+          <a href="../../index.html" class="v4-nav-util-btn v4-nav-util-outline">&larr; Về Bryan Portfolio</a>
+          <button type="button" class="v4-nav-util-btn v4-nav-util-navy" id="v4OpenVCardBtn">Danh Thiếp Số (vCard QR)</button>
+          <button type="button" class="v4-nav-util-btn v4-nav-util-subtle" id="v4ThemeToggleBtn">Đổi giao diện Sáng / Tối</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- RIGHT DRAWER ĐỌC CHI TIẾT (BÀI BÁO / MARKET PULSE / GÓC FINTECH) -->
   <div class="v4-drawer-backdrop" id="v4DrawerBackdrop" hidden></div>
   <aside class="v4-drawer" id="v4Drawer" role="dialog" aria-modal="true" aria-labelledby="v4DrawerTitle" hidden>
     <div class="v4-drawer-top">
@@ -199,27 +378,49 @@
     <div class="v4-drawer-body" id="v4DrawerBody"></div>
   </aside>
 
-  <!-- MODAL ĐĂNG KÝ BẢN TIN -->
-  <div class="v4-modal-backdrop" id="v4ModalBackdrop" hidden></div>
-  <div class="v4-modal" id="v4NewsletterModal" role="dialog" aria-modal="true" aria-labelledby="v4ModalTitle" hidden>
-    <div class="v4-modal-head">
+  <!-- MODAL DANH THIẾP SỐ (VCARD QR) ĐỒNG NHẤT V4.0 -->
+  <div class="v4-modal-backdrop" id="v4VCardBackdrop" hidden></div>
+  <div class="v4-modal v4-vcard-modal" id="v4VCardModal" role="dialog" aria-modal="true" aria-labelledby="v4VCardTitle" hidden>
+    <div class="v4-vcard-banner">
       <div>
-        <span class="v4-modal-kicker">BNEWS DAILY BRIEFING</span>
-        <h3 class="v4-modal-title" id="v4ModalTitle">Đăng ký Bản tin Kinh tế &amp; Fintech Sáng</h3>
+        <span class="v4-vcard-kicker">DANH THIẾP SỐ CHUYÊN GIA</span>
+        <div class="v4-vcard-profile">
+          <img src="../../avatar.webp" alt="Bryan Nguyen" class="v4-vcard-avatar" width="52" height="52" onerror="this.src='../bnews-logo-light-opt.webp'">
+          <div>
+            <h3 class="v4-vcard-name" id="v4VCardTitle">Bryan Nguyen (Quang Trí)</h3>
+            <p class="v4-vcard-role">Enterprise B2B &amp; Fintech Executive · Payoo (VietUnion)</p>
+          </div>
+        </div>
       </div>
-      <button type="button" class="v4-drawer-close" id="v4ModalClose" aria-label="Đóng hộp thoại">&times;</button>
+      <button type="button" class="v4-drawer-close" id="v4VCardClose" aria-label="Đóng Danh Thiếp Số">&times;</button>
     </div>
-    <p class="v4-modal-desc">
-      Tổng hợp 25 sự kiện xác minh 0–24h, 4 chỉ số Market Pulse và góc nhìn ứng dụng thanh toán số B2B gửi qua email mỗi sáng.
-    </p>
-    <form class="v4-subscribe-form" id="v4SubscribeForm">
-      <label for="v4EmailInput" class="v4-sr-only">Email công việc của bạn</label>
-      <input type="email" id="v4EmailInput" required placeholder="Nhập địa chỉ email của bạn..." class="v4-subscribe-input">
-      <button type="submit" class="v4-btn-navy v4-btn-navy-lg">Đăng ký nhận bản tin</button>
-    </form>
-    <div class="v4-subscribe-feedback" id="v4SubscribeFeedback" hidden></div>
-    <div class="v4-modal-foot">
-      <a href="./newsletter-preview.html" target="_blank" rel="noopener" class="v4-anchor-link">Xem trước mẫu Email Bản tin số 34 &rarr;</a>
+
+    <div class="v4-vcard-body">
+      <div class="v4-vcard-grid">
+        <a href="tel:0838673639" class="v4-vcard-pill">
+          <span class="v4-vcard-pill-label">Hotline / Zalo</span>
+          <strong class="v4-vcard-pill-val">+84 838 673 639</strong>
+        </a>
+        <a href="mailto:quangtritc1805@gmail.com" class="v4-vcard-pill">
+          <span class="v4-vcard-pill-label">Email công việc</span>
+          <strong class="v4-vcard-pill-val">quangtritc1805@gmail.com</strong>
+        </a>
+      </div>
+
+      <div class="v4-vcard-channels">
+        <a href="https://zalo.me/0838673639" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
+          <img src="../zalo-icon.svg" alt="Zalo" width="16" height="16"> Zalo
+        </a>
+        <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
+          LinkedIn &nearr;
+        </a>
+        <a href="https://www.facebook.com/Tori1005" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
+          Facebook &nearr;
+        </a>
+        <a href="../../index.html" class="v4-vcard-social">
+          Bryan Portfolio &nearr;
+        </a>
+      </div>
     </div>
   </div>
 
