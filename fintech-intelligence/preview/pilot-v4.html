@@ -3,9 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- PREVIEW ONLY: đổi sang index, follow khi phát hành chính thức -->
   <meta name="robots" content="noindex, nofollow">
   <title>Bnews Fintech V4 Pilot — Clean Institutional UI Preview</title>
+  <meta name="description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
+  <meta name="keywords" content="Bryan News, Fintech Intelligence, tin tức kinh tế, thị trường tài chính, ngân hàng, thanh toán số, kinh tế vĩ mô, lãi suất, tỷ giá, Payoo, SmartPOS, chứng khoán">
+  <meta name="author" content="Nguyễn Huỳnh Quang Trí (Bryan Nguyen)">
+  <meta name="theme-color" content="#0A3D7A">
   <link rel="icon" type="image/webp" href="../fintech-favicon-opt.webp">
+
+  <!-- Open Graph / Facebook / LinkedIn / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bryanportfolio.io.vn/fintech-intelligence/">
+  <meta property="og:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính &amp; Thanh toán số">
+  <meta property="og:description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
+  <meta property="og:image" content="https://bryanportfolio.io.vn/bnews-logo-light.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Bryan News | Fintech Intelligence">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://bryanportfolio.io.vn/fintech-intelligence/">
+  <meta name="twitter:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính &amp; Thanh toán số">
+  <meta name="twitter:description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
+  <meta name="twitter:image" content="https://bryanportfolio.io.vn/bnews-logo-light.png">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["NewsMediaOrganization", "WebSite"],
+        "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#website",
+        "name": "Bryan News | Fintech Intelligence",
+        "alternateName": ["Bryan News", "BNews", "Fintech Intelligence VN"],
+        "url": "https://bryanportfolio.io.vn/fintech-intelligence/",
+        "description": "Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.",
+        "inLanguage": "vi-VN",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bryanportfolio.io.vn/bnews-logo-light.png",
+          "width": 600,
+          "height": 180
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Nguyễn Huỳnh Quang Trí (Bryan Nguyen)",
+          "jobTitle": "Fintech & Enterprise Product Specialist",
+          "url": "https://bryanportfolio.io.vn/",
+          "sameAs": [
+            "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
+            "https://zalo.me/0838673639"
+          ]
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bryanportfolio.io.vn/fintech-intelligence/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Bryan Portfolio",
+            "item": "https://bryanportfolio.io.vn/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Bryan News | Fintech Intelligence",
+            "item": "https://bryanportfolio.io.vn/fintech-intelligence/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Google Fonts: Merriweather + Be Vietnam Pro + JetBrains Mono + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,6 +194,7 @@
         <div class="v4-masthead-right">
           <span class="v4-edition-label" id="v4EditionLabel">Ấn bản số 34</span>
           <button type="button" class="v4-btn-navy" id="v4SubscribeBtn">Đăng ký Bản tin</button>
+          <button type="button" class="v4-theme-btn" id="v4HeaderThemeBtn" aria-label="Chuyển giao diện Sáng / Tối" title="Chuyển giao diện Sáng / Tối"></button>
         </div>
       </div>
     </div>
@@ -484,6 +568,7 @@
         <div class="v4-nav-utils">
           <a href="../../index.html" class="v4-nav-util-btn v4-nav-util-outline">&larr; Về Bryan Portfolio</a>
           <button type="button" class="v4-nav-util-btn v4-nav-util-navy" id="v4OpenVCardBtn">Danh Thiếp Số (vCard QR)</button>
+          <button type="button" class="v4-nav-util-btn v4-nav-util-subtle" id="v4OpenWelcomeBtn">Giới thiệu bản tin (Welcome)</button>
           <button type="button" class="v4-nav-util-btn v4-nav-util-subtle" id="v4ThemeToggleBtn">Đổi giao diện Sáng / Tối</button>
         </div>
       </div>
@@ -500,12 +585,12 @@
     <div class="v4-drawer-body" id="v4DrawerBody"></div>
   </aside>
 
-  <!-- MODAL DANH THIẾP SỐ (VCARD QR) ĐỒNG NHẤT V4.0 -->
+  <!-- MODAL DANH THIẾP SỐ (VCARD QR 3 TAB + .VCF + CHÉP LINK) ĐỒNG NHẤT V4.0 -->
   <div class="v4-modal-backdrop" id="v4VCardBackdrop" hidden></div>
   <div class="v4-modal v4-vcard-modal" id="v4VCardModal" role="dialog" aria-modal="true" aria-labelledby="v4VCardTitle" hidden>
     <div class="v4-vcard-banner">
       <div>
-        <span class="v4-vcard-kicker">DANH THIẾP SỐ CHUYÊN GIA</span>
+        <span class="v4-vcard-kicker">DANH THIẾP SỐ CHUYÊN GIA (DIGITAL BUSINESS CARD)</span>
         <div class="v4-vcard-profile">
           <img src="../../avatar.webp" alt="Bryan Nguyen" class="v4-vcard-avatar" width="52" height="52" onerror="this.src='../bnews-logo-light-opt.webp'">
           <div>
@@ -518,6 +603,15 @@
     </div>
 
     <div class="v4-vcard-body">
+      <div class="v4-vcard-qr-tabs" role="tablist" aria-label="Loại mã QR kết nối">
+        <button type="button" class="v4-vcard-qr-tab active" role="tab" aria-selected="true" data-vcard-tab="vcard">vCard iPhone</button>
+        <button type="button" class="v4-vcard-qr-tab" role="tab" aria-selected="false" data-vcard-tab="zalo">Chat Zalo</button>
+        <button type="button" class="v4-vcard-qr-tab" role="tab" aria-selected="false" data-vcard-tab="linkedin">LinkedIn</button>
+      </div>
+
+      <div class="v4-vcard-qr-frame" id="v4VCardQrContainer" aria-label="Mã QR Vector"></div>
+      <div class="v4-vcard-scan-hint" id="v4VCardScanHint">Đưa Camera iPhone vào quét để lưu thẳng Danh bạ trong 1 giây</div>
+
       <div class="v4-vcard-grid">
         <a href="tel:0838673639" class="v4-vcard-pill">
           <span class="v4-vcard-pill-label">Hotline / Zalo</span>
@@ -530,20 +624,127 @@
       </div>
 
       <div class="v4-vcard-channels">
-        <a href="https://zalo.me/0838673639" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
-          <img src="../zalo-icon.svg" alt="Zalo" width="16" height="16"> Zalo
-        </a>
-        <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
-          LinkedIn &nearr;
-        </a>
-        <a href="https://www.facebook.com/Tori1005" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">
-          Facebook &nearr;
-        </a>
-        <a href="../../index.html" class="v4-vcard-social">
-          Bryan Portfolio &nearr;
-        </a>
+        <a href="https://zalo.me/0838673639" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">Zalo &nearr;</a>
+        <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">LinkedIn &nearr;</a>
+        <a href="https://www.facebook.com/Tori1005" target="_blank" rel="noopener noreferrer" class="v4-vcard-social">Facebook &nearr;</a>
+        <a href="mailto:quangtritc1805@gmail.com" class="v4-vcard-social">Email &nearr;</a>
+      </div>
+
+      <div class="v4-vcard-actions">
+        <button type="button" class="v4-btn-navy" id="v4DownloadVCardBtn">Lưu Danh Bạ (.vcf)</button>
+        <button type="button" class="v4-vcard-action-btn" id="v4CopyVCardLinkBtn">Chép Link</button>
+        <a href="../../index.html" class="v4-vcard-action-btn">Portfolio &nearr;</a>
       </div>
     </div>
+  </div>
+
+  <!-- MODAL CHÀO MỪNG LẦN ĐẦU (EDITORIAL WELCOME MODAL - V4.0 PHẲNG) -->
+  <div class="v4-modal-backdrop" id="v4WelcomeBackdrop" hidden></div>
+  <div class="v4-modal v4-welcome-modal" id="v4WelcomeModal" role="dialog" aria-modal="true" aria-labelledby="v4WelcomeTitle" hidden>
+    <div class="v4-welcome-top">
+      <span class="v4-welcome-kicker">BRYAN NEWS | FINTECH INTELLIGENCE · DAILY BRIEFING</span>
+      <button type="button" class="v4-drawer-close" id="v4WelcomeClose" aria-label="Đóng lời chào mừng">&times;</button>
+    </div>
+
+    <div class="v4-welcome-hero">
+      <h2 class="v4-welcome-title" id="v4WelcomeTitle">Chào mừng đến với Bryan News | Fintech Intelligence</h2>
+      <p class="v4-welcome-lead">
+        Đây là không gian cập nhật và phân tích về thị trường tài chính, ngân hàng, kinh tế vĩ mô và hệ sinh thái thanh toán số.
+      </p>
+      <p class="v4-welcome-mission">
+        Mục tiêu là giúp người đọc không chỉ biết điều gì đang xảy ra, mà còn hiểu vì sao nó quan trọng, tác động đến doanh nghiệp và dòng tiền như thế nào.
+      </p>
+    </div>
+
+    <div class="v4-welcome-grid">
+      <div class="v4-welcome-item">
+        <span class="v4-welcome-num">01</span>
+        <div>
+          <h3 class="v4-welcome-item-title">Market Pulse</h3>
+          <p class="v4-welcome-item-desc">Theo dõi các chỉ số tài chính, tỷ giá, lãi suất, thanh khoản và xu hướng thanh toán.</p>
+        </div>
+      </div>
+      <div class="v4-welcome-item">
+        <span class="v4-welcome-num">02</span>
+        <div>
+          <h3 class="v4-welcome-item-title">The News Desk</h3>
+          <p class="v4-welcome-item-desc">Tổng hợp những sự kiện nổi bật có nguồn dẫn, phân tích bối cảnh và ý nghĩa thị trường.</p>
+        </div>
+      </div>
+      <div class="v4-welcome-item">
+        <span class="v4-welcome-num">03</span>
+        <div>
+          <h3 class="v4-welcome-item-title">Macro to Micro</h3>
+          <p class="v4-welcome-item-desc">Kết nối biến động vĩ mô với ngân hàng, doanh nghiệp, người tiêu dùng và thanh toán.</p>
+        </div>
+      </div>
+      <div class="v4-welcome-item">
+        <span class="v4-welcome-num">04</span>
+        <div>
+          <h3 class="v4-welcome-item-title">Fintech &amp; B2B Opportunities</h3>
+          <p class="v4-welcome-item-desc">Khám phá xu hướng QR, POS, SmartPOS, Payment Gateway, Payment Link và các cơ hội kinh doanh thanh toán.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="v4-welcome-footer">
+      <div class="v4-welcome-actions">
+        <button type="button" class="v4-btn-navy" id="v4WelcomeExploreBtn">Khám phá bản tin &rarr;</button>
+        <button type="button" class="v4-vcard-action-btn" id="v4WelcomeContactBtn">Liên hệ Bryan</button>
+      </div>
+      <span class="v4-welcome-sig">BRYAN NGUYEN · FINTECH INTELLIGENCE</span>
+    </div>
+  </div>
+
+  <!-- TIỆN ÍCH NỔI ĐƠN SẮC PHẲNG + BACK TO TOP (QUẢN TRỊ LIÊN HỆ NHANH V4.0) -->
+  <div class="v4-float-widget" id="v4FloatWidget" aria-label="Tiện ích liên hệ nhanh">
+    <div class="v4-float-menu" id="v4FloatMenu">
+      <button type="button" class="v4-float-btn" id="v4FloatVCard" title="Mở Danh Thiếp Số QR vCard" aria-label="Mở Danh Thiếp Số QR vCard">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+          <path d="M7 7h.01M17 7h.01M7 17h.01"></path>
+        </svg>
+      </button>
+      <a href="https://zalo.me/0838673639" target="_blank" rel="noopener noreferrer" class="v4-float-btn" title="Chat Zalo Bryan Nguyen" aria-label="Chat Zalo">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" rel="noopener noreferrer" class="v4-float-btn" title="LinkedIn Bryan Nguyen" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/Tori1005" target="_blank" rel="noopener noreferrer" class="v4-float-btn" title="Facebook Nguyễn Huỳnh Quang Trí" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+        </svg>
+      </a>
+      <a href="mailto:quangtritc1805@gmail.com" class="v4-float-btn" title="Gửi Email quangtritc1805@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+    </div>
+
+    <button type="button" class="v4-fab-toggle" id="v4FabToggleBtn" aria-label="Liên hệ nhanh" aria-expanded="false" title="Liên hệ nhanh">
+      <svg class="v4-fab-icon-chat" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+      </svg>
+      <svg class="v4-fab-icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <button type="button" class="v4-float-btn v4-back-top" id="v4BackToTopBtn" title="Cuộn lên đầu trang" aria-label="Cuộn lên đầu trang">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+      </svg>
+    </button>
   </div>
 
   <!-- Nạp fallback edition-data.js rồi chạy Pilot V4 Engine -->
