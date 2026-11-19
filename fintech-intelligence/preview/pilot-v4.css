@@ -66,9 +66,16 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: var(--v4-bg);
   color: var(--v4-text);
   overflow-x: hidden;
+}
+
+.v4-main {
+  flex: 1 0 auto;
 }
 
 img {
@@ -122,33 +129,135 @@ a {
 }
 
 /* =========================================================================
-   A. HEADER 2 THANH DUY NHẤT + MARKET PULSE 44PX
+   A. HEADER 3 TẦNG CHUẨN VNECONOMY (UTILITY DARK -> CENTER LOGO -> STICKY NAV)
    ========================================================================= */
 .v4-header {
   background: var(--v4-bg);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
+/* Tầng 1: Slim Dark Institutional Utility Bar */
+.v4-top-utility {
+  background: #0F172A;
+  color: #CBD5E1;
+  font-size: 12px;
+  border-bottom: 1px solid #1E293B;
+}
+
+html[data-theme="dark"] .v4-top-utility {
+  background: #060B14;
+}
+
+.v4-top-utility-inner {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.v4-utility-left,
+.v4-utility-pages,
+.v4-utility-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.v4-date-text {
+  color: #F8FAFC;
+  font-weight: 500;
+}
+
+.v4-utility-sep {
+  color: #475569;
+  font-size: 11px;
+}
+
+.v4-utility-link {
+  color: #93C5FD;
+  font-weight: 500;
+}
+.v4-utility-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.v4-utility-page-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.v4-utility-page-btn:hover,
+.v4-utility-page-btn.active {
+  color: #FFFFFF;
+}
+.v4-utility-page-btn.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.v4-utility-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #94A3B8;
+  transition: color 0.15s ease;
+}
+.v4-utility-icon-link:hover {
+  color: #FFFFFF;
+}
+
+.v4-utility-vcard-btn {
+  border: 1px solid #334155;
+  background: transparent;
+  color: #E2E8F0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.v4-utility-vcard-btn:hover {
+  border-color: #93C5FD;
+  color: #FFFFFF;
+}
+
+/* Tầng 2: Masthead Logo Chính Giữa ([☰ + Search] | [Logo] | [Ấn bản + CTA]) */
 .v4-masthead-bar {
   background: var(--v4-bg);
   border-bottom: 1px solid var(--v4-border);
 }
 
 .v4-masthead-inner {
-  height: 62px;
-  display: flex;
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
 }
 
 .v4-masthead-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   min-width: 0;
+}
+
+.v4-masthead-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .v4-brand-link {
@@ -158,43 +267,27 @@ a {
 }
 
 .v4-brand-logo {
-  height: 34px;
+  height: 40px;
   width: auto;
   object-fit: contain;
-}
-
-.v4-brand-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12.5px;
-  color: var(--v4-muted);
-  white-space: nowrap;
-}
-
-.v4-portfolio-link {
-  color: var(--v4-navy);
-  font-weight: 500;
-}
-.v4-portfolio-link:hover {
-  text-decoration: underline;
 }
 
 .v4-meta-dot {
   color: #D1D5DB;
 }
 
-/* Thanh tìm kiếm giữa */
+/* Thanh tìm kiếm bo tròn gọn bên trái giống VnEconomy */
 .v4-search-wrap {
   position: relative;
-  flex: 0 1 360px;
+  width: 245px;
+  max-width: 100%;
   display: flex;
   align-items: center;
 }
 
 .v4-search-icon {
   position: absolute;
-  left: 12px;
+  left: 13px;
   color: var(--v4-muted);
   pointer-events: none;
 }
@@ -202,12 +295,12 @@ a {
 .v4-search-input {
   width: 100%;
   height: 36px;
-  padding: 0 32px 0 36px;
-  font-size: 13.5px;
+  padding: 0 30px 0 36px;
+  font-size: 13px;
   color: var(--v4-text);
-  background: var(--v4-bg-subtle);
+  background: var(--v4-bg);
   border: 1px solid var(--v4-border);
-  border-radius: 4px;
+  border-radius: 999px;
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 .v4-search-input::placeholder {
@@ -215,7 +308,7 @@ a {
 }
 .v4-search-input:focus {
   outline: none;
-  background: var(--v4-bg);
+  background: var(--v4-bg-subtle);
   border-color: var(--v4-navy);
 }
 
@@ -237,6 +330,7 @@ a {
 .v4-masthead-right {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 14px;
   flex-shrink: 0;
 }
@@ -295,29 +389,53 @@ a {
   background: var(--v4-bg-subtle);
 }
 
-/* Thanh 2: Menu 6 chuyên mục (nền trắng, viền 1px, chữ 14px không viết hoa) */
+/* Tầng 3: Menu Chuyên mục Căn Giữa + Sticky độc lập */
 .v4-cat-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--v4-bg);
   border-bottom: 1px solid var(--v4-border);
 }
 
 .v4-cat-nav-inner {
-  height: 44px;
+  height: 42px;
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: center;
 }
 
 .v4-cat-tabs {
   display: flex;
   align-items: stretch;
-  gap: 24px;
+  justify-content: center;
+  gap: 26px;
   overflow-x: auto;
   scrollbar-width: none;
 }
 .v4-cat-tabs::-webkit-scrollbar {
   display: none;
+}
+
+.v4-home-icon-btn {
+  border: none;
+  background: var(--v4-bg-subtle);
+  color: var(--v4-muted);
+  width: 28px;
+  height: 28px;
+  align-self: center;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.v4-home-icon-btn:hover,
+.v4-home-icon-btn.active {
+  color: var(--v4-navy);
+  background: var(--v4-navy-tint);
 }
 
 .v4-cat-btn {
@@ -345,38 +463,14 @@ a {
   border-bottom-color: var(--v4-navy);
 }
 
-.v4-nav-anchors {
-  display: flex;
-  align-items: stretch;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.v4-anchor-link,
-.v4-page-link-btn {
-  border: none;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  padding: 0;
+.v4-anchor-link {
   font-size: 13px;
   font-weight: 500;
   color: var(--v4-navy);
   white-space: nowrap;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
 }
-.v4-anchor-link:hover,
-.v4-page-link-btn:hover {
+.v4-anchor-link:hover {
   text-decoration: underline;
-}
-.v4-page-link-btn.active {
-  font-weight: 600;
-  border-bottom-color: var(--v4-navy);
-  text-decoration: none;
-}
-.v4-nav-anchors .v4-meta-dot {
-  align-self: center;
 }
 
 /* Dải Market Pulse mỏng 44px nền #F8FAFC */
@@ -579,7 +673,7 @@ a {
 .v4-cover-img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  max-height: 318px;
+  max-height: 280px;
   object-fit: cover;
   transition: opacity 0.15s ease;
 }
@@ -945,19 +1039,123 @@ a {
   background: var(--v4-bg-hover);
 }
 
-.v4-filtered-grid {
+.v4-filtered-layout {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 36px;
+  grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
 }
 
-.v4-filtered-card {
+.v4-filtered-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.v4-filtered-row {
   display: grid;
-  grid-template-columns: 168px minmax(0, 1fr);
-  gap: 16px;
-  padding-bottom: 20px;
+  grid-template-columns: 224px minmax(0, 1fr);
+  gap: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--v4-border);
+  align-items: start;
+}
+.v4-filtered-row:first-child {
+  padding-top: 0;
+}
+.v4-filtered-row:last-child {
+  border-bottom: none;
+}
+
+.v4-filtered-row-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--v4-text);
+  margin: 4px 0 8px;
   cursor: pointer;
+}
+.v4-filtered-row-title:hover {
+  color: var(--v4-navy);
+}
+
+.v4-filtered-row-sapo {
+  font-size: 14px;
+  line-height: 1.58;
+  color: var(--v4-body);
+  margin: 0 0 12px;
+}
+
+.v4-filtered-row-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.v4-filtered-read-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--v4-navy);
+  cursor: pointer;
+}
+.v4-filtered-read-btn:hover {
+  text-decoration: underline;
+}
+
+.v4-filtered-orig-link {
+  font-size: 12.5px;
+  color: var(--v4-muted);
+}
+.v4-filtered-orig-link:hover {
+  color: var(--v4-navy);
+  text-decoration: underline;
+}
+
+.v4-filtered-sidebar {
+  border-left: 1px solid var(--v4-border);
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.v4-sidebar-cats {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--v4-border);
+}
+
+.v4-sidebar-cat-btn {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--v4-border);
+  background: transparent;
+  padding: 9px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--v4-body);
+  cursor: pointer;
+  text-align: left;
+}
+.v4-sidebar-cat-btn:hover,
+.v4-sidebar-cat-btn.active {
+  color: var(--v4-navy);
+  font-weight: 600;
+}
+
+.v4-sidebar-cat-count {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--v4-muted);
 }
 
 /* =========================================================================
@@ -1408,51 +1606,282 @@ a {
 }
 
 /* =========================================================================
-   FOOTER
+   CỘNG ĐỒNG ĐỘC GIẢ BNEWS CTA BAND (NGAY TRÊN FOOTER)
+   ========================================================================= */
+.v4-community-cta {
+  background: var(--v4-navy-fill);
+  color: #FFFFFF;
+  border-top: 2px solid #C8102E;
+  padding: 46px 0;
+}
+
+.v4-community-wrap {
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.v4-community-kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93C5FD;
+  margin-bottom: 10px;
+}
+
+.v4-community-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.28;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+
+.v4-community-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #DBEAFE;
+  margin: 0 auto 22px;
+  max-width: 580px;
+}
+
+.v4-community-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.v4-community-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 42px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+}
+.v4-community-input::placeholder {
+  color: #6B7280;
+}
+.v4-community-input:focus {
+  outline: none;
+  border-color: #93C5FD;
+}
+
+.v4-community-btn {
+  height: 42px;
+  padding: 0 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #C8102E;
+  border: 1px solid #C8102E;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+.v4-community-btn:hover {
+  background: #9F0D24;
+  border-color: #9F0D24;
+}
+
+.v4-community-disclaimer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #BFDBFE;
+}
+
+.v4-community-cta .v4-subscribe-feedback {
+  margin: 12px auto 0;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* =========================================================================
+   FOOTER 4 CỘT CHUẨN BẢN CHÍNH THỨC (CLEAN INSTITUTIONAL V4.0)
    ========================================================================= */
 .v4-footer {
   background: var(--v4-bg-subtle);
   border-top: 1px solid var(--v4-border);
-  padding: 28px 0;
+  padding: 46px 0 28px;
 }
 
-.v4-footer-inner {
+.v4-footer-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1.15fr 1.15fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.v4-footer-col {
+  min-width: 0;
+}
+
+.v4-footer-logo {
+  height: 34px;
+  width: auto;
+  margin-bottom: 14px;
+}
+
+.v4-footer-bio {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: var(--v4-body);
+}
+
+.v4-footer-loc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--v4-muted);
+}
+
+.v4-footer-heading {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--v4-navy);
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--v4-border);
+}
+
+.v4-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13.5px;
+}
+
+.v4-footer-list li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  line-height: 1.45;
+}
+
+.v4-footer-k {
+  font-weight: 600;
+  color: var(--v4-text);
+  white-space: nowrap;
+}
+
+.v4-footer-v {
+  color: var(--v4-body);
+  word-break: break-word;
+}
+.v4-footer-v:hover {
+  color: var(--v4-navy);
+  text-decoration: underline;
+}
+
+.v4-footer-link-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--v4-navy);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.v4-footer-link-btn:hover {
+  text-decoration: underline;
+}
+
+.v4-footer-link-accent {
+  font-weight: 600;
+  color: var(--v4-crimson);
+  white-space: nowrap;
+}
+.v4-footer-link-accent:hover {
+  text-decoration: underline;
+}
+
+.v4-footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.v4-social-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--v4-body);
+  transition: color 0.15s ease;
+}
+.v4-social-item:hover {
+  color: var(--v4-navy);
+}
+
+.v4-social-badge {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--v4-border);
+  border-radius: 4px;
+  background: var(--v4-bg);
+  color: var(--v4-navy);
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.v4-social-item:hover .v4-social-badge {
+  border-color: var(--v4-navy-fill);
+  background: var(--v4-navy-fill);
+  color: #FFFFFF;
+}
+
+.v4-footer-disclaimer {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--v4-muted);
+}
+
+.v4-footer-bottom {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--v4-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px 28px;
-}
-
-.v4-footer-left {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.v4-footer-logo {
-  height: 28px;
-  width: auto;
-}
-
-.v4-footer-note {
-  margin: 0;
+  gap: 10px 20px;
   font-size: 12.5px;
   color: var(--v4-muted);
 }
 
-.v4-footer-links {
+.v4-footer-bottom-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  font-size: 12.5px;
-  color: var(--v4-navy);
-  font-weight: 500;
-}
-.v4-footer-links a:hover {
-  text-decoration: underline;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
 }
 
 /* =========================================================================
@@ -2253,8 +2682,14 @@ a {
     padding-top: 20px;
   }
   .v4-cat-extra-grid,
-  .v4-fintech-grid {
+  .v4-fintech-grid,
+  .v4-footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .v4-filtered-layout {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 28px;
   }
   .v4-step-canvas,
   .v4-nl-hero-inner {
@@ -2269,25 +2704,77 @@ a {
   }
 }
 
+@media (max-width: 960px) {
+  .v4-utility-pages {
+    display: none;
+  }
+  .v4-cat-nav-inner {
+    justify-content: flex-start;
+  }
+  .v4-cat-tabs {
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
 @media (max-width: 760px) {
   .v4-container {
     padding-left: 16px;
     padding-right: 16px;
   }
+  .v4-utility-left .v4-utility-sep,
+  .v4-utility-left .v4-utility-link,
+  .v4-edition-label {
+    display: none;
+  }
+  .v4-date-text {
+    font-size: 11px;
+  }
+  .v4-utility-socials {
+    gap: 6px;
+  }
+  .v4-utility-icon-link {
+    width: 22px;
+    height: 22px;
+  }
   .v4-masthead-inner {
     height: auto;
     padding: 10px 0;
-    flex-wrap: wrap;
-    gap: 10px;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px 12px;
   }
-  .v4-brand-meta,
-  .v4-edition-label,
-  .v4-nav-anchors {
-    display: none;
+  .v4-masthead-left {
+    display: contents;
+  }
+  .v4-menu-btn {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .v4-masthead-center {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+  }
+  .v4-brand-logo {
+    height: 32px;
+  }
+  .v4-masthead-right {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .v4-masthead-right .v4-btn-navy {
+    height: 34px;
+    padding: 0 11px;
+    font-size: 12.5px;
   }
   .v4-search-wrap {
-    order: 3;
-    flex: 1 1 100%;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    width: 100%;
+  }
+  .v4-cat-tabs {
+    gap: 18px;
   }
   .v4-pulse-item {
     padding: 0 12px;
@@ -2322,23 +2809,40 @@ a {
   .v4-cat-rich-grid,
   .v4-cat-extra-grid,
   .v4-sparse-grid,
-  .v4-filtered-grid,
+  .v4-filtered-layout,
   .v4-fintech-grid,
   .v4-playbook-grid,
   .v4-decision-grid,
   .v4-watchlist-grid,
-  .v4-vcard-grid {
+  .v4-vcard-grid,
+  .v4-footer-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
   }
-  .v4-nl-form {
+  .v4-filtered-sidebar {
+    border-left: none;
+    border-top: 1px solid var(--v4-border);
+    padding-left: 0;
+    padding-top: 22px;
+  }
+  .v4-nl-form,
+  .v4-community-form {
     flex-direction: column;
+  }
+  .v4-community-cta {
+    padding: 34px 0;
+  }
+  .v4-community-title {
+    font-size: 22px;
   }
   .v4-cat-lead,
   .v4-sparse-card,
-  .v4-filtered-card {
+  .v4-filtered-row {
     grid-template-columns: 120px minmax(0, 1fr);
     gap: 12px;
+  }
+  .v4-filtered-row-title {
+    font-size: 16px;
   }
   .v4-cat-stack {
     border-left: none;

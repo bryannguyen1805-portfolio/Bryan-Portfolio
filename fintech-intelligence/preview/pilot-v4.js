@@ -102,7 +102,7 @@
     const dateEl = $('#v4Date');
     const edEl = $('#v4EditionLabel');
     const drawerBadgeEl = $('#v4DrawerEditionBadge');
-    const footerEl = $('#v4FooterNote');
+    const footerMetaEl = $('#v4FooterEditionMeta');
 
     if (dateEl && (d.dayOfWeek || d.editionDate)) {
       const dow = String(d.dayOfWeek || '')
@@ -122,8 +122,8 @@
         drawerBadgeEl.textContent = cleanBadge;
       }
     }
-    if (footerEl && d.editionId) {
-      footerEl.textContent = `Bnews | Fintech Intelligence — Giao diện Pilot V4.0 · ${d.editionId} (${d.editionDate || ''}). Nguồn tin tổng hợp từ báo chí kinh tế chính thống.`;
+    if (footerMetaEl && d.editionId) {
+      footerMetaEl.textContent = `${d.editionId} · ${d.editionDate || ''} · Pilot V4.0`;
     }
   }
 
@@ -845,6 +845,11 @@
       btn.classList.toggle('active', btn.dataset.switchPage === pageKey);
     });
 
+    const communityCta = $('#v4CommunityCta');
+    if (communityCta) {
+      communityCta.hidden = pageKey === 'newsletter';
+    }
+
     if (pageKey === 'newsletter') {
       loadNewsletterPreview();
     }
@@ -873,6 +878,11 @@
 
     if (clearBtn) clearBtn.hidden = !needle;
 
+    const homeBtn = $('#v4HomeIconBtn');
+    if (homeBtn) {
+      homeBtn.classList.toggle('active', isToday && state.activeCategory === 'ALL' && !needle);
+    }
+
     if (!isToday) return;
 
     if (state.activeCategory === 'ALL' && !needle) {
@@ -898,10 +908,102 @@
       })
       .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''));
 
+    const matchedIds = new Set(matches.map((m) => m.eventId));
+    const otherNews = allNews
+      .filter((it) => !matchedIds.has(it.eventId))
+      .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''))
+      .slice(0, 5);
+
+    const catCounts = {};
+    allNews.forEach((it) => {
+      if (it.category) catCounts[it.category] = (catCounts[it.category] || 0) + 1;
+    });
+
     const headingText =
       state.activeCategory === 'ALL'
         ? `Kết quả tìm kiếm: "${state.searchTerm.trim()}"`
         : `${catLabel(state.activeCategory)}${needle ? ` · lọc "${state.searchTerm.trim()}"` : ''}`;
+
+    const rowsHtml = matches.length
+      ? `<div class="v4-filtered-list">
+          ${matches
+            .map(
+              (it) => `
+            <article class="v4-filtered-row">
+              <div class="v4-thumb-wrap" data-open-event="${esc(it.eventId)}" style="cursor:pointer;">${imgTag(it.imageUrl, it.headline, 'v4-thumb-img')}</div>
+              <div>
+                <div class="v4-crimson-tag" style="margin-bottom:4px;">${esc(catLabel(it.category))}</div>
+                <h3 class="v4-filtered-row-title" data-open-event="${esc(it.eventId)}">${esc(it.headline || it.title)}</h3>
+                <p class="v4-filtered-row-sapo">${esc(it.summary || '')}</p>
+                <div class="v4-filtered-row-actions">
+                  <div class="v4-article-meta">
+                    <span>${esc(sourceLabel(it))}</span>
+                    <span aria-hidden="true">·</span>
+                    <span class="v4-mono-time">${esc(extractDateTimeReadable(it))}</span>
+                  </div>
+                  <button type="button" class="v4-filtered-read-btn" data-open-event="${esc(it.eventId)}">Đọc phân tích chi tiết &rarr;</button>
+                  ${
+                    it.sourceUrl
+                      ? `<a href="${esc(it.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="v4-filtered-orig-link">Nguồn báo gốc &nearr;</a>`
+                      : ''
+                  }
+                </div>
+              </div>
+            </article>
+          `
+            )
+            .join('')}
+        </div>`
+      : `<p class="v4-sec-subtitle">Không có bản tin nào khớp bộ lọc hiện tại.</p>`;
+
+    const otherNewsBlockHtml = otherNews.length
+      ? `<div class="v4-sidebar-block">
+          <div class="v4-col-label">
+            <span>Tin khác trong phiên</span>
+            <span class="v4-col-label-sub">Đọc thêm</span>
+          </div>
+          <div class="v4-feed-list">
+            ${otherNews
+              .map(
+                (it) => `
+              <article class="v4-feed-item" data-open-event="${esc(it.eventId)}">
+                <div class="v4-feed-meta">
+                  <span class="v4-crimson-tag">${esc(catLabel(it.category))}</span>
+                  <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                </div>
+                <h3 class="v4-feed-title">${esc(it.headline || it.title)}</h3>
+              </article>
+            `
+              )
+              .join('')}
+          </div>
+        </div>`
+      : '';
+
+    const catSidebarHtml = `
+      <div class="v4-sidebar-block">
+        <div class="v4-col-label">
+          <span>Chuyên mục phiên</span>
+          <span class="v4-col-label-sub">${allNews.length} tin</span>
+        </div>
+        <div class="v4-sidebar-cats">
+          <button type="button" class="v4-sidebar-cat-btn ${state.activeCategory === 'ALL' ? 'active' : ''}" data-filter-cat="ALL">
+            <span>Trang nhất (Tất cả)</span>
+            <span class="v4-sidebar-cat-count">${allNews.length}</span>
+          </button>
+          ${CATEGORIES.map((c) => {
+            const cnt = catCounts[c.key] || 0;
+            const active = state.activeCategory === c.key ? 'active' : '';
+            return `
+              <button type="button" class="v4-sidebar-cat-btn ${active}" data-filter-cat="${esc(c.key)}">
+                <span>${esc(c.label)}</span>
+                <span class="v4-sidebar-cat-count">${cnt}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
 
     filteredView.innerHTML = `
       <div class="v4-filtered-head">
@@ -912,31 +1014,13 @@
         <button type="button" class="v4-back-front-btn" id="v4BackFrontBtn">&larr; Quay lại Trang nhất</button>
       </div>
 
-      ${
-        matches.length
-          ? `<div class="v4-filtered-grid">
-              ${matches
-                .map(
-                  (it) => `
-                <article class="v4-filtered-card" data-open-event="${esc(it.eventId)}">
-                  <div class="v4-thumb-wrap">${imgTag(it.imageUrl, it.headline, 'v4-thumb-img')}</div>
-                  <div>
-                    <div class="v4-crimson-tag" style="margin-bottom:4px;">${esc(catLabel(it.category))}</div>
-                    <h3 class="v4-cat-lead-title">${esc(it.headline || it.title)}</h3>
-                    <p class="v4-cat-lead-sapo">${esc(it.summary || '')}</p>
-                    <div class="v4-article-meta">
-                      <span>${esc(sourceLabel(it))}</span>
-                      <span aria-hidden="true">·</span>
-                      <span class="v4-mono-time">${esc(extractDateTimeReadable(it))}</span>
-                    </div>
-                  </div>
-                </article>
-              `
-                )
-                .join('')}
-            </div>`
-          : `<p class="v4-sec-subtitle">Không có bản tin nào khớp bộ lọc hiện tại.</p>`
-      }
+      <div class="v4-filtered-layout">
+        <div class="v4-filtered-main">${rowsHtml}</div>
+        <aside class="v4-filtered-sidebar" aria-label="Tin khác và danh mục trong phiên">
+          ${otherNewsBlockHtml}
+          ${catSidebarHtml}
+        </aside>
+      </div>
     `;
 
     const backBtn = $('#v4BackFrontBtn');
@@ -1151,6 +1235,29 @@
   }
 
   // ─── EVENTS & INITIALIZATION ──────────────────────────────────────────────
+  function bindNewsletterForm(formSel, inputSel, feedbackSel) {
+    $(formSel)?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = $(inputSel);
+      const email = (input?.value || '').trim();
+      const fb = $(feedbackSel);
+      if (fb && email) {
+        fb.hidden = false;
+        fb.textContent = `Đã ghi nhận yêu cầu đăng ký bản tin sáng cho địa chỉ: ${email}.`;
+        if (input) input.value = '';
+      }
+    });
+  }
+
+  function resetToFrontPage(e) {
+    if (e) e.preventDefault();
+    state.activeCategory = 'ALL';
+    state.searchTerm = '';
+    const input = $('#v4SearchInput');
+    if (input) input.value = '';
+    switchPage('today');
+  }
+
   function bindGlobalEvents() {
     document.addEventListener('click', (e) => {
       const eventTrigger = e.target.closest('[data-open-event]');
@@ -1179,6 +1286,11 @@
       const catFilterTrigger = e.target.closest('[data-filter-cat]');
       if (catFilterTrigger) {
         state.activeCategory = catFilterTrigger.dataset.filterCat;
+        if (state.activeCategory === 'ALL') {
+          state.searchTerm = '';
+          const input = $('#v4SearchInput');
+          if (input) input.value = '';
+        }
         switchPage('today');
       }
     });
@@ -1190,17 +1302,8 @@
       });
     });
 
-    const resetBrand = $('#v4BrandReset');
-    if (resetBrand) {
-      resetBrand.addEventListener('click', (e) => {
-        e.preventDefault();
-        state.activeCategory = 'ALL';
-        state.searchTerm = '';
-        const input = $('#v4SearchInput');
-        if (input) input.value = '';
-        switchPage('today');
-      });
-    }
+    $('#v4BrandReset')?.addEventListener('click', resetToFrontPage);
+    $('#v4HomeIconBtn')?.addEventListener('click', resetToFrontPage);
 
     const searchInput = $('#v4SearchInput');
     const searchClear = $('#v4SearchClear');
@@ -1237,7 +1340,10 @@
       switchPage('today');
     });
 
-    // Utility buttons inside Drawer
+    // Utility buttons for vCard modal (Header utility bar, Drawer, Footer)
+    ['#v4TopVCardBtn', '#v4FooterVCardBtn'].forEach((sel) => {
+      $(sel)?.addEventListener('click', openVCardModal);
+    });
     $('#v4OpenVCardBtn')?.addEventListener('click', () => {
       closeNavDrawer();
       openVCardModal();
@@ -1258,17 +1364,9 @@
       switchPage('newsletter');
     });
 
-    // Newsletter subscribe form on Trang 02
-    $('#v4NlForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = ($('#v4NlEmailInput')?.value || '').trim();
-      const fb = $('#v4NlFeedback');
-      if (fb && email) {
-        fb.hidden = false;
-        fb.textContent = `Đã ghi nhận yêu cầu đăng ký bản tin sáng cho địa chỉ: ${email}.`;
-        $('#v4NlEmailInput').value = '';
-      }
-    });
+    // Newsletter subscribe forms (Trang 02 Hero & Footer Community CTA Band)
+    bindNewsletterForm('#v4NlForm', '#v4NlEmailInput', '#v4NlFeedback');
+    bindNewsletterForm('#v4FooterNlForm', '#v4FooterNlInput', '#v4FooterNlFeedback');
 
     // vCard Modal controls
     $('#v4VCardClose')?.addEventListener('click', closeVCardModal);
