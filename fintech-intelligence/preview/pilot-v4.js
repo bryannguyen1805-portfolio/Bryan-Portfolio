@@ -1239,7 +1239,6 @@
   function openMarketPulseDrawer(m) {
     if (!m) return;
     const isNotVerified = m.verificationStatus === '72H_NOT_VERIFIED';
-    const items = Array.isArray(m.detailsExpandable?.items) ? m.detailsExpandable.items : [];
     const primaryArticleUrl = m.dailyArticleUrl || m.sourceUrl;
     const secUrls = (m.secondarySourceUrls || []).filter(
       (u) => u && /^https?:\/\//i.test(u) && u !== m.sourceUrl && u !== m.dailyArticleUrl
@@ -1271,7 +1270,7 @@
           : ''
       }
       <div class="v4-drawer-block">
-        <div class="v4-drawer-block-label">Thông tin quan sát &amp; Chu kỳ (Fields 01–05)</div>
+        <div class="v4-drawer-block-label">Thông tin quan sát &amp; Chu kỳ</div>
         <div class="v4-drawer-meta-grid">
           <div><strong>Tên chỉ số:</strong> ${esc(m.label || m.shortLabel)}</div>
           <div><strong>Mã tham chiếu:</strong> <span class="v4-mono-time">${esc(m.referenceCode || m.key || '')}</span></div>
@@ -1282,7 +1281,7 @@
         </div>
       </div>
       <div class="v4-drawer-block">
-        <div class="v4-drawer-block-label">Nguồn gốc &amp; Đường dẫn xác minh (Fields 06–07)</div>
+        <div class="v4-drawer-block-label">Nguồn gốc &amp; Đường dẫn xác minh</div>
         <p class="v4-drawer-block-text">
           <strong>Cơ quan / Nguồn công bố:</strong> ${esc(m.sourceName || m.sourceShortName || 'Báo chí chính thống')}<br>
           ${m.searchKeyword || m.referenceCode ? `<strong>Từ khóa quét cố định:</strong> <span class="v4-mono-time">${esc(m.referenceCode || m.searchKeyword)}</span><br>` : ''}
@@ -1307,29 +1306,20 @@
             .join('')}
         </div>
       </div>
-      ${
-        items.length || m.detailsExpandable?.summaryTitle
-          ? `<div class="v4-drawer-block">
-              <div class="v4-drawer-block-label">Ý nghĩa chỉ số &amp; Chi tiết cấu thành (Fields 08–09)</div>
-              ${m.detailsExpandable?.summaryTitle ? `<p class="v4-drawer-block-text"><strong>${esc(m.detailsExpandable.summaryTitle)}</strong></p>` : ''}
-              ${items.length ? `<ul class="v4-drawer-list">${items.map((it) => `<li>${esc(it)}</li>`).join('')}</ul>` : ''}
-            </div>`
-          : ''
-      }
       <div class="v4-drawer-block">
-        <div class="v4-drawer-block-label">Diễn giải tài chính &amp; Tác động thực tế (Field 10)</div>
+        <div class="v4-drawer-block-label">Diễn giải tài chính &amp; Tác động thực tế</div>
         <p class="v4-drawer-block-text">${esc(m.financialInterpretation || m.implication || m.statusReason || m.note || '')}</p>
       </div>
       ${
         m.monitoringWatchpoint
           ? `<div class="v4-drawer-block">
-              <div class="v4-drawer-block-label">Điểm cần theo dõi tiếp theo (Field 11)</div>
+              <div class="v4-drawer-block-label">Điểm cần theo dõi tiếp theo</div>
               <p class="v4-drawer-block-text">${esc(m.monitoringWatchpoint)}</p>
             </div>`
           : ''
       }
     `;
-    openDrawer('Market Pulse · Đối soát 11 trường chuẩn hóa', html);
+    openDrawer('Market Pulse · Đối soát chi tiết', html);
   }
 
   function openDecisionSignalDrawer(signalId) {
@@ -1684,15 +1674,6 @@
     if (tBtn) {
       tBtn.textContent = isDark ? 'Chuyển sang Giao diện Sáng' : 'Đổi giao diện Sáng / Tối';
     }
-    const hdrBtn = $('#v4HeaderThemeBtn');
-    if (hdrBtn) {
-      const label = isDark ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối';
-      hdrBtn.setAttribute('aria-label', label);
-      hdrBtn.setAttribute('title', label);
-      hdrBtn.innerHTML = isDark
-        ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-        : '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    }
   }
 
   function toggleTheme() {
@@ -1921,8 +1902,7 @@
       openVCardModal();
     });
 
-    // Theme toggles (Masthead icon + Drawer button)
-    $('#v4HeaderThemeBtn')?.addEventListener('click', toggleTheme);
+    // Theme toggle (Drawer button)
     $('#v4ThemeToggleBtn')?.addEventListener('click', toggleTheme);
 
     // Welcome modal controls
@@ -1947,8 +1927,9 @@
       switchPage('newsletter');
     });
 
-    // Newsletter subscribe forms (Trang 02 Hero & Footer Community CTA Band) -> Google Apps Script Webhook
+    // Newsletter subscribe forms (Trang 02, Welcome Modal & Footer Community CTA Band) -> Google Apps Script Webhook
     bindNewsletterForm('#v4NlForm', '#v4NlEmailInput', '#v4NlFeedback', 'Bnews V4 Tab 02 (Top Hero)');
+    bindNewsletterForm('#v4WelcomeNlForm', '#v4WelcomeNlInput', '#v4WelcomeNlFeedback', 'Bnews V4 Welcome Modal');
     bindNewsletterForm('#v4FooterNlForm', '#v4FooterNlInput', '#v4FooterNlFeedback', 'Bnews V4 Community Band (Footer)');
 
     // vCard Modal controls & QR Tabs & Save/Copy actions
