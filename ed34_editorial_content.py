@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Curated, Fact-Grounded Editorial Content Registry for ED-20261119-D01 (Edition 34 — 19/11/2026)
-Refreshed with 25 0-24h verified articles (0 cross-day overlap vs 14/11-18/11).
+Refreshed with 40 verified articles across all 6 core categories (0 cross-day overlap vs 14/11-18/11).
 Cover Story Sapo = 3 sentences (250-320 chars); News Desk Sapo = 2 sentences (160-240 chars).
 """
 
@@ -22,7 +22,7 @@ ED34_COVER_OVERRIDE = {
         "Sự kết hợp giữa nghiệp vụ FX Swap kỳ hạn 182 ngày trên liên ngân hàng và gói 500.000 tỷ đồng tín dụng ưu đãi đang mở thêm van thanh khoản chi phí hợp lý cho cả ngân hàng lẫn doanh nghiệp trước mùa cao điểm cuối năm."
     ),
     "editorialSynthesis": (
-        "Toàn cảnh phiên 19/11/2026 phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh: "
+        "Toàn cảnh phiên 19/11/2026 phản ánh bốn mạch chuyển động lớn từ 40 sự kiện xác minh: "
         "(1) Thanh khoản ngoại hối và tín dụng ưu đãi cuối năm: Nhu cầu đặt thầu FX Swap 182 ngày quy mô 2 tỷ USD của NHNN vượt 20% hạn mức giúp hạ lãi suất hoán đổi liên ngân hàng, song hành với gói 500.000 tỷ đồng của BIDV và dự thảo sửa Thông tư 21 nâng chuẩn ngân hàng lớn lên 500.000 tỷ đồng từ 2027; "
         "(2) Tỷ giá hai tầng trước áp lực Fed cứng rắn và cú lao dốc của vàng: Tỷ giá trung tâm sáng 19/11 lùi 10 đồng về 25.646 VND/USD nhưng giá bán tại Vietcombank và BIDV tăng lên 25.920 VND/USD khi đồng USD đạt đỉnh 19 tháng, còn vàng thế giới rơi về vùng 3.726–3.757 USD/oz; "
         "(3) Chứng khoán mất mốc tâm lý trong phiên đáo hạn phái sinh 19/11: Khối ngoại bán ròng hơn 1.100 tỷ đồng cùng nhịp điều chỉnh của nhóm vốn hóa lớn kéo VN-Index đóng cửa tại 1.689,62 điểm và VN30 lùi xuống 1.788,51 điểm đúng dịp ngành chứng khoán hướng tới mốc kỷ niệm 30 năm; "
@@ -716,6 +716,426 @@ ED34_ARTICLE_INTEL = {
         ),
         "practicalTakeaway": (
             "Nhà đầu tư cá nhân tuyệt đối tránh sử dụng vốn vay hoặc đòn bẩy cao để lướt sóng kim loại quý khi biên độ dao động theo kỳ họp Fed vẫn đang rất lớn."
+        ),
+    },
+    "EVT-20261119-026": {
+        "uiCategory": "Thanh toán",
+        "summary": (
+            "VPBank vừa ra mắt tính năng quản lý tiền gửi theo nhóm Hũ Mục Tiêu trên ứng dụng VPBank NEO. "
+            "Cơ chế mới cho phép nhiều người cùng tích lũy chung mục tiêu trong khi mỗi cá nhân vẫn giữ quyền sở hữu tài sản độc lập."
+        ),
+        "supportingQuote": (
+            "Dù tham gia tiết kiệm theo nhóm, mỗi thành viên vẫn sở hữu và quản lý độc lập khoản tiền gửi của mình, đồng thời theo dõi được quá trình hoàn thành mục tiêu chung của cả nhóm."
+        ),
+        "briefingContext": (
+            "Các ngân hàng bán lẻ đang biến ứng dụng ngân hàng số từ công cụ chuyển khoản đơn thuần thành không gian quản trị tài chính nhóm và gia đình."
+        ),
+        "briefingFacts": (
+            "Hũ Mục Tiêu hỗ trợ kỳ hạn gửi từ 31 đến 1.095 ngày, tự động trích tiền từ tài khoản thanh toán theo chu kỳ linh hoạt và cho phép rút trước hạn một phần gốc."
+        ),
+        "briefingPerspective": (
+            "Thiết kế tách bạch quyền sở hữu tài sản giúp người dùng giải tỏa lo ngại rủi ro pháp lý hoặc tranh chấp khi lập quỹ nhóm cho kế hoạch mua sắm, du lịch."
+        ),
+        "briefingImplication": (
+            "Tính năng tiền gửi cộng đồng góp phần gia tăng tần suất mở ứng dụng VPBank NEO hàng tuần và duy trì dòng tiền gửi gắn bó dài hạn cho nhà băng."
+        ),
+        "fintechLens": (
+            "Tích hợp tích lũy tự động gắn với các khoản chi tiêu nhóm mở ra dư địa liên kết thanh toán QR và thu hộ dịch vụ cho hệ sinh thái đối tác như Payoo."
+        ),
+        "practicalTakeaway": (
+            "Nhóm bạn bè hoặc hộ gia đình nên kiểm tra biểu lãi suất theo từng kỳ hạn trên VPBank NEO trước khi cài đặt lệnh trích tiền định kỳ tự động."
+        ),
+    },
+    "EVT-20261119-027": {
+        "uiCategory": "Thanh toán",
+        "summary": (
+            "MoMo trở thành đối tác thanh toán của chương trình tổng kích cầu Vibrant HCMC với loạt ưu đãi từ 10.000 đến 200.000 đồng. "
+            "Khuyến mại áp dụng đến cuối năm cho chuyển tiền, hóa đơn điện nước, vé phim và Ví Trả Sau."
+        ),
+        "supportingQuote": (
+            "Từ tháng 11 đến trước Tết, chương trình Vibrant HCMC kết nối 57 sự kiện cùng hơn 100 thương hiệu theo mô hình năm trong một gồm mua sắm, giải trí, thương mại điện tử và thanh toán số."
+        ),
+        "briefingContext": (
+            "Thành phố lớn nhất cả nước kết hợp hạ tầng ví điện tử để biến chiến dịch khuyến mại tập trung cuối năm thành đòn bẩy thúc đẩy tiêu dùng không tiền mặt."
+        ),
+        "briefingFacts": (
+            "Gói kích cầu bao gồm hoàn 10.000–15.000 đồng chuyển tiền cuối năm, giảm tới 50.000 đồng thanh toán hóa đơn tiện ích lần đầu và trợ giá vé rạp chiếu phim."
+        ),
+        "briefingPerspective": (
+            "Tài trợ trực tiếp vào các giao dịch sinh hoạt thường nhật giúp ví điện tử giữ chân người dùng thường xuyên thay vì chỉ thu hút khách hàng ngắn hạn."
+        ),
+        "briefingImplication": (
+            "Sức nóng từ liên minh hơn 100 thương hiệu và nền tảng số dự kiến đẩy doanh số thanh toán QR, hóa đơn tiện ích qua ví tăng nhanh trong quý IV."
+        ),
+        "fintechLens": (
+            "Sự tham gia sâu của ví điện tử vào thu hộ điện nước, dịch vụ công và Ví Trả Sau đòi hỏi hệ thống đối tác chấp nhận đa kênh như Payoo tối ưu hóa tỷ lệ chuyển đổi tại quầy."
+        ),
+        "practicalTakeaway": (
+            "Doanh nghiệp bán lẻ tham gia mùa kích cầu cần đồng bộ mã khuyến mại thanh toán ví trên cả cửa hàng vật lý lẫn kênh đặt hàng trực tuyến."
+        ),
+    },
+    "EVT-20261119-028": {
+        "uiCategory": "Thanh toán",
+        "summary": (
+            "Cơ quan Thuế yêu cầu người nộp thuế rà soát tài khoản định danh điện tử và chữ ký số khi thực hiện giao dịch theo Thông tư 89/2026/TT-BTC. "
+            "Mọi thay đổi thông tin đăng ký phải cập nhật trong vòng ba ngày làm việc."
+        ),
+        "supportingQuote": (
+            "Khi phát sinh thay đổi thông tin đăng ký giao dịch thuế điện tử, người nộp thuế có trách nhiệm thực hiện cập nhật trong thời hạn 03 ngày làm việc kể từ ngày phát sinh."
+        ),
+        "briefingContext": (
+            "Chuyển đổi số ngành thuế đi kèm quy chuẩn định danh chặt chẽ nhằm ngăn ngừa sai lệch chứng từ và giả mạo giao dịch nộp ngân sách trực tuyến."
+        ),
+        "briefingFacts": (
+            "Thông tư 89/2026/TT-BTC quy định thống nhất hồ sơ thuế điện tử bằng tài khoản định danh hiệu lực và xác thực chữ ký số chuyên dùng theo Điều 8, 10 và 13."
+        ),
+        "briefingPerspective": (
+            "Việc chuẩn hóa hồ sơ định danh và chữ ký số giúp rút ngắn thời gian hoàn thuế, đối chiếu chứng từ tự động giữa doanh nghiệp với kho bạc nhà nước."
+        ),
+        "briefingImplication": (
+            "Các tổ chức chưa đồng bộ thông tin tài khoản điện tử kịp thời hạn 3 ngày có thể gặp gián đoạn khi ký gửi tờ khai hoặc nộp thuế định kỳ."
+        ),
+        "fintechLens": (
+            "Hành lang giao dịch thuế điện tử định danh mở cơ hội tích hợp sâu hơn cho dịch vụ thanh toán nghĩa vụ tài chính công qua SmartPOS và cổng thu hộ B2B của Payoo."
+        ),
+        "practicalTakeaway": (
+            "Bộ phận kế toán doanh nghiệp và hộ kinh doanh nên kiểm tra thời hạn chữ ký số và thông tin định danh trên cổng thuế điện tử trước kỳ kê khai cuối năm."
+        ),
+    },
+    "EVT-20261119-029": {
+        "uiCategory": "Thanh toán",
+        "summary": (
+            "NAPAS và NETS chính thức vận hành kết nối thanh toán VietQRGlobal cho người Việt đi du lịch, công tác tại Singapore. "
+            "Khách hàng 12 ngân hàng cùng ví MoMo và Payoo đã quét được mã NETSQR tại hơn 150.000 điểm bán."
+        ),
+        "supportingQuote": (
+            "Các giao dịch được xử lý theo thời gian thực với cơ chế quy đổi trực tiếp giữa Đô la Singapore (SGD) và Đồng Việt Nam (VND), đáp ứng nhu cầu mua sắm và ăn uống tại Singapore."
+        ),
+        "briefingContext": (
+            "Sau Thái Lan, Campuchia và Lào, hành lang thanh toán bán lẻ bằng mã QR liên thông song phương tại Đông Nam Á tiếp tục mở rộng tới trung tâm tài chính Singapore."
+        ),
+        "briefingFacts": (
+            "14 đơn vị đầu tiên tham gia kết nối gồm Vietcombank, BIDV, VietinBank, Agribank, MBBank, ACB, Sacombank, TPBank, Nam A Bank, MSB, BVBank, Saigonbank, MoMo và Payoo."
+        ),
+        "briefingPerspective": (
+            "Thanh toán QR trực tiếp bằng VND tại mạng lưới 150.000 điểm NETSQR giúp du khách Việt tránh chi phí đổi ngoại tệ tiền mặt và minh bạch hóa tỷ giá quy đổi."
+        ),
+        "briefingImplication": (
+            "Việc chuẩn hóa hạ tầng liên thông với NETS đặt nền móng tăng trưởng cho giao dịch thương mại, du lịch xuyên biên giới của người Việt trong năm 2027."
+        ),
+        "fintechLens": (
+            "Payoo là một trong các trung gian thanh toán đầu tiên góp mặt trên mạng lưới VietQRGlobal tại Singapore, gia tăng rõ rệt sức hút cho hệ sinh thái ứng dụng và điểm bán đối tác."
+        ),
+        "practicalTakeaway": (
+            "Người tiêu dùng chuẩn bị sang Singapore công tác hoặc du lịch có thể kích hoạt thanh toán quốc tế ngay trên ứng dụng Payoo hoặc ngân hàng thành viên để giao dịch không tiền mặt."
+        ),
+    },
+    "EVT-20261119-030": {
+        "uiCategory": "Thanh toán",
+        "summary": (
+            "Trong 10 tháng năm 2026, hệ thống NAPAS xử lý 12,4 tỷ giao dịch, tăng gần 32% so với cùng kỳ với độ sẵn sàng đạt 99,99%. "
+            "Đơn vị đồng thời nâng cấp Napas247 chuẩn 2.0, tích hợp SIMO và mở rộng giải pháp VietQRMe."
+        ),
+        "supportingQuote": (
+            "Tính đến tháng 10/2026, hệ thống Napas đã xử lý 12,4 tỷ giao dịch, tăng gần 32% so với cùng kỳ năm 2025, với đỉnh ngày ghi nhận hơn 50 triệu giao dịch trị giá trên 334.761 tỷ đồng."
+        ),
+        "briefingContext": (
+            "Tốc độ dịch chuyển sang thanh toán không tiền mặt đòi hỏi hạ tầng chuyển mạch quốc gia vận hành liên tục ở quy mô hàng chục triệu lệnh mỗi ngày."
+        ),
+        "briefingFacts": (
+            "Hội nghị Thành viên NAPAS 2026 vinh danh 5 ngân hàng tiêu biểu Techcombank, Vietcombank, MBBank, BIDV, VietinBank và giới thiệu nền tảng Napas DPP chạy mô hình Active-Active."
+        ),
+        "briefingPerspective": (
+            "Tích hợp hệ thống giám sát rủi ro SIMO của NHNN giúp phát hiện sớm tài khoản bất thường và nâng cao an toàn bảo mật cho toàn mạng lưới chuyển mạch."
+        ),
+        "briefingImplication": (
+            "Sự chuyển dịch từ VietQR chuyển tiền cá nhân sang VietQRPay và VietQRMe tạo chuẩn mực dữ liệu minh bạch cho các hộ kinh doanh và chuỗi bán lẻ."
+        ),
+        "fintechLens": (
+            "Các nâng cấp Napas247 2.0, VietQRPay và Napas DPP hỗ trợ trực tiếp cho giải pháp SmartPOS và cổng thanh toán Payoo rút ngắn thời gian xử lý tại quầy."
+        ),
+        "practicalTakeaway": (
+            "Đơn vị chấp nhận thanh toán nên chuyển dần từ mã QR chuyển khoản cá nhân sang chuẩn VietQRPay thương mại để được đối soát doanh thu tự động."
+        ),
+    },
+    "EVT-20261119-031": {
+        "uiCategory": "Doanh nghiệp",
+        "summary": (
+            "Sau hơn một thập kỷ triển khai tại khu đô thị Ciputra, dự án VietinBank Tower vừa được chuyển giao cho thành viên thuộc hệ sinh thái Sun Group. "
+            "Tổ hợp gồm hai tòa tháp 68 tầng và 48 tầng trên quỹ đất gần 30.000 m²."
+        ),
+        "supportingQuote": (
+            "Theo hợp đồng chuyển nhượng dự án, VietinBank Tower tại Khu đô thị Nam Thăng Long, Hà Nội được chuyển giao cho Công ty TNHH Thành phố Mặt Trời thuộc hệ sinh thái Sun Group."
+        ),
+        "briefingContext": (
+            "Các tổ chức tín dụng đẩy mạnh thoái vốn tại dự án trụ sở quy mô lớn để tập trung nguồn lực cho hoạt động lõi và lành mạnh hóa bảng cân đối tài sản."
+        ),
+        "briefingFacts": (
+            "Tổ hợp khởi công năm 2010 tại lô TM1 Ciputra Hà Nội với tổng diện tích gần 29.917 m², quy hoạch hai tòa tháp cao 68 tầng và 48 tầng nối chung khối đế 7 tầng."
+        ),
+        "briefingPerspective": (
+            "Chuyển giao siêu dự án đình trệ cho tập đoàn phát triển bất động sản chuyên nghiệp giúp khơi thông quỹ đất thương mại chiến lược ở cửa ngõ phía Tây Hà Nội."
+        ),
+        "briefingImplication": (
+            "Thương vụ mở ra kỳ vọng tái khởi công tổ hợp cao tầng quy mô lớn, tạo động lực lan tỏa cho thị trường văn phòng và bất động sản thương mại thủ đô."
+        ),
+        "fintechLens": (
+            "Thương vụ mua bán chuyển nhượng dự án bất động sản quy mô lớn giữa ngân hàng và tập đoàn đầu tư không tác động trực tiếp đến hạ tầng thanh toán bán lẻ Payoo."
+        ),
+        "practicalTakeaway": (
+            "Nhà đầu tư khu vực Nam Thăng Long cần theo dõi quy hoạch hoàn thiện hạ tầng mới từ chủ đầu tư tiếp quản trước khi định giá tài sản lân cận."
+        ),
+    },
+    "EVT-20261119-032": {
+        "uiCategory": "Doanh nghiệp",
+        "summary": (
+            "Vinapharm sẽ chốt danh sách cổ đông vào ngày 1/12/2026 để lấy ý kiến về phương án tạm ứng cổ tức bằng tiền mặt. "
+            "Động thái diễn ra khi lợi nhuận sau thuế 9 tháng của hãng dược đạt 438 tỷ đồng, tăng 33,9% so với cùng kỳ."
+        ),
+        "supportingQuote": (
+            "Tại ngày 30/9/2026, Vinapharm còn nắm giữ 1.390 tỷ đồng lợi nhuận sau thuế lũy kế chưa phân phối và 419 tỷ đồng quỹ đầu tư phát triển."
+        ),
+        "briefingContext": (
+            "Nhóm doanh nghiệp dược phẩm giữ vững biên lợi nhuận và dòng tiền tiền mặt dồi dào bất chấp biến động chi phí đầu vào trên thị trường quốc tế."
+        ),
+        "briefingFacts": (
+            "Trong 9 tháng đầu năm 2026, DVN ghi nhận doanh thu 4.095 tỷ đồng và lãi từ công ty liên doanh liên kết đạt 274 tỷ đồng, gấp hơn năm lần cùng kỳ."
+        ),
+        "briefingPerspective": (
+            "Nền tảng lợi nhuận chưa phân phối gần 1.400 tỷ đồng giúp doanh nghiệp duy trì chính sách trả cổ tức tiền mặt hấp dẫn sau đợt chia tỷ lệ 10% hồi tháng 9."
+        ),
+        "briefingImplication": (
+            "Cổ phiếu ngành dược có nền tảng tài chính lành mạnh tiếp tục đóng vai trò tài sản phòng thủ tốt khi thị trường chứng khoán xuất hiện nhịp điều chỉnh."
+        ),
+        "fintechLens": (
+            "Mạng lưới phân phối nhà thuốc và đối tác y tế của doanh nghiệp dược phẩm lớn là nhóm khách hàng phù hợp cho giải pháp thanh toán SmartPOS và hóa đơn B2B."
+        ),
+        "practicalTakeaway": (
+            "Cổ đông nắm giữ cổ phiếu DVN cần theo dõi ngày chốt quyền 1/12/2026 để thực hiện biểu quyết phương án tạm ứng cổ tức tiền mặt năm 2026."
+        ),
+    },
+    "EVT-20261119-033": {
+        "uiCategory": "Doanh nghiệp",
+        "summary": (
+            "Novaland lần thứ hai lùi hạn nộp tiền chào bán 800,7 triệu cổ phiếu giá 10.000 đồng sang cuối tháng 12/2026 để huy động 8.007 tỷ đồng. "
+            "Phần lớn số tiền thu về sẽ ưu tiên thanh toán nợ gốc trái phiếu quá hạn."
+        ),
+        "supportingQuote": (
+            "Theo phương án sử dụng vốn, Novaland dự kiến dành khoảng 5.953 tỷ đồng để thanh toán gốc của 13 lô trái phiếu và hơn 2.053 tỷ đồng góp vốn vào hai công ty con xử lý nghĩa vụ nợ."
+        ),
+        "briefingContext": (
+            "Áp lực tái cấu trúc nợ trái phiếu khiến các doanh nghiệp bất động sản phụ thuộc lớn vào tiến độ giải ngân từ những đợt phát hành cổ phiếu cho cổ đông hiện hữu."
+        ),
+        "briefingFacts": (
+            "Thời hạn nộp tiền mua quyền lùi tới ngày 28/12/2026 trong bối cảnh thị giá cổ phiếu NVL đóng cửa phiên 19/11 tại 10.300 đồng và tổng nợ quá hạn gần 14.975 tỷ đồng."
+        ),
+        "briefingPerspective": (
+            "Khoảng cách giữa thị giá sàn 10.300 đồng và giá phát hành 10.000 đồng chỉ còn 3% làm giảm động lực nộp tiền của nhà đầu tư nhỏ lẻ."
+        ),
+        "briefingImplication": (
+            "Tỷ lệ thành công của thương vụ 8.007 tỷ đồng sẽ quyết định trực tiếp tốc độ tất toán 13 lô trái phiếu đến hạn và sức khỏe thanh khoản doanh nghiệp."
+        ),
+        "fintechLens": (
+            "Diễn biến tái cấu trúc nợ trái phiếu của doanh nghiệp bất động sản niêm yết không tạo ra nhu cầu mới đối với hạ tầng thanh toán bán lẻ Payoo."
+        ),
+        "practicalTakeaway": (
+            "Trái chủ và cổ đông cần đối chiếu tỷ lệ thực hiện quyền mới đến ngày 23/12/2026 cùng kịch bản giải ngân thực tế cho các công ty con của tập đoàn."
+        ),
+    },
+    "EVT-20261119-034": {
+        "uiCategory": "Doanh nghiệp",
+        "summary": (
+            "UBCKNN vừa tiếp nhận hồ sơ phát hành riêng lẻ 85 triệu cổ phiếu của EVF giá 13.500 đồng để huy động khoảng 1.147 tỷ đồng. "
+            "Nguồn vốn mới từ bốn định chế tài chính sẽ bổ sung cho hoạt động cấp tín dụng giai đoạn 2027–2028."
+        ),
+        "supportingQuote": (
+            "Tổng cộng, bốn tổ chức gồm Leadvisors Capital, JVCF, SSIAM và Daiwa-SSIAM Vietnam Growth Fund IV dự kiến nắm giữ 85 triệu cổ phiếu, tương đương 10,05% vốn điều lệ EVF sau phát hành."
+        ),
+        "briefingContext": (
+            "Các công ty tài chính tăng cường gọi vốn ngoại từ đối tác Nhật Bản và quỹ nội để mở rộng quy mô tài trợ doanh nghiệp, tín dụng xanh và tiêu dùng."
+        ),
+        "briefingFacts": (
+            "Riêng Leadvisors Capital đăng ký mua 40 triệu cổ phiếu trị giá 540 tỷ đồng, tương đương 4,73% vốn điều lệ dự kiến của EVF sau đợt tăng vốn."
+        ),
+        "briefingPerspective": (
+            "Sự góp mặt đồng thời của quỹ tài chính Nhật Bản giúp công ty tài chính nâng cao chuẩn mực quản trị rủi ro và nguồn vốn trung hạn."
+        ),
+        "briefingImplication": (
+            "Nguồn bổ sung hơn 1.147 tỷ đồng tạo thêm dư địa cạnh tranh cho khối công ty tài chính tổng hợp ở phân khúc cho vay doanh nghiệp vừa và nhỏ."
+        ),
+        "fintechLens": (
+            "Việc định chế tài chính mở rộng cấp tín dụng tiêu dùng và SME là dư địa tốt để tích hợp cổng thu hộ khoản vay tự động qua Payoo và SmartPOS."
+        ),
+        "practicalTakeaway": (
+            "Nhà đầu tư theo dõi mốc chấp thuận chính thức từ UBCKNN và kế hoạch giải ngân hạn mức tín dụng mới trong năm tài chính 2027."
+        ),
+    },
+    "EVT-20261119-035": {
+        "uiCategory": "Kinh tế vĩ mô",
+        "summary": (
+            "TS Cấn Văn Lực chỉ ra khu vực FDI hiện chiếm tới 80% kim ngạch xuất khẩu và 73% nhập khẩu của Việt Nam. "
+            "Chuyên gia khuyến nghị doanh nghiệp nội nâng cao năng lực công nghệ và nội địa hóa trước đà giảm tốc tăng trưởng toàn cầu."
+        ),
+        "supportingQuote": (
+            "Giai đoạn 2026–2030, tăng trưởng kinh tế thế giới có thể giảm từ mức 4% xuống khoảng 3,2%, đòi hỏi doanh nghiệp Việt chủ động làm chủ công nghệ và minh bạch xuất xứ."
+        ),
+        "briefingContext": (
+            "Cơ cấu xuất nhập khẩu phụ thuộc sâu vào khối doanh nghiệp ngoại tạo áp lực lên khả năng giữ lại giá trị gia tăng nội địa trong chuỗi cung ứng."
+        ),
+        "briefingFacts": (
+            "Đánh giá công bố tại Diễn đàn Đầu tư và Kinh doanh quốc tế chỉ ra bán dẫn, dữ liệu, chuyển đổi năng lượng và logistics là các mũi nhọn tăng trưởng mới."
+        ),
+        "briefingPerspective": (
+            "Rủi ro địa chính trị và hàng rào kỹ thuật xanh buộc nhà sản xuất trong nước chuẩn hóa truy xuất nguồn gốc để tránh lệ thuộc gia công giá trị thấp."
+        ),
+        "briefingImplication": (
+            "Áp lực tỷ giá và đơn hàng xuất khẩu của khối doanh nghiệp nội sẽ tiếp tục nhạy cảm với chu kỳ lãi suất toàn cầu trong trung hạn."
+        ),
+        "fintechLens": (
+            "Quá trình nội địa hóa chuỗi cung ứng B2B trong nước thúc đẩy nhu cầu số hóa hóa đơn, quản trị công nợ và thanh toán qua ngân hàng cho nhà cung cấp nội."
+        ),
+        "practicalTakeaway": (
+            "Doanh nghiệp sản xuất định hướng xuất khẩu cần đầu tư chứng chỉ xanh và minh bạch dữ liệu nguyên liệu đầu vào trước kỳ kiểm định năm 2027."
+        ),
+    },
+    "EVT-20261119-036": {
+        "uiCategory": "Bán lẻ, D2C và xu hướng tiêu dùng",
+        "summary": (
+            "Khảo sát ACSS của Ngân hàng UOB cho thấy Việt Nam đạt 63 điểm tâm lý tiêu dùng, dẫn đầu khu vực ASEAN và cao hơn mức trung bình 54 điểm. "
+            "Tuy vậy, 62% người dân được hỏi bày tỏ lo ngại áp lực chi phí sinh hoạt leo thang."
+        ),
+        "supportingQuote": (
+            "Tỷ lệ người tiêu dùng Việt Nam đánh giá tích cực về cả tình hình kinh tế hiện tại và tương lai đều đạt 84%, song có tới 89% hộ gia đình chủ động tiết kiệm trên 10% thu nhập."
+        ),
+        "briefingContext": (
+            "Niềm tin kinh tế vĩ mô củng cố sức mua tổng thể nhưng thói quen chi tiêu hộ gia đình đang phân hóa mạnh về các nhóm hàng thiết yếu và dịch vụ giáo dục."
+        ),
+        "briefingFacts": (
+            "Nghiên cứu UOB ghi nhận mức tăng ròng chi tiêu lớn nhất thuộc về điện nước gas đạt 16%, giáo dục và chăm sóc sức khỏe cùng 15%, thực phẩm đạt 14%."
+        ),
+        "briefingPerspective": (
+            "Xu hướng vừa lạc quan vừa thắt chặt phòng thủ tài chính lý giải vì sao người mua ưu tiên khuyến mại, trả góp và hoàn tiền khi chi tiêu."
+        ),
+        "briefingImplication": (
+            "Thị trường bán lẻ cuối năm sẽ ghi nhận sức tăng ổn định ở nhóm hàng thiết yếu thay vì bùng nổ đồng loạt ở phân khúc xa xỉ."
+        ),
+        "fintechLens": (
+            "Việc chi tiêu hóa đơn điện nước tiện ích tăng ròng 16% phản ánh lưu lượng giao dịch thiết yếu tiếp tục đổ mạnh qua các kênh thu hộ trực tuyến như Payoo."
+        ),
+        "practicalTakeaway": (
+            "Nhãn hàng D2C và chuỗi bán lẻ nên thiết kế combo thiết yếu kèm ưu đãi thanh toán trả góp 0% để phù hợp tâm lý phòng thủ tài chính của hộ gia đình."
+        ),
+    },
+    "EVT-20261119-037": {
+        "uiCategory": "Bán lẻ, D2C và xu hướng tiêu dùng",
+        "summary": (
+            "Các siêu thị tại TP.HCM phối hợp ngân hàng tung 150 chương trình khuyến mại trị giá hơn 270 tỷ đồng trong chiến dịch kích cầu cuối năm. "
+            "Khối bán lẻ đồng thời chuẩn bị khoảng 30.000 tỷ đồng hàng hóa với mức giảm giá tới 50–70%."
+        ),
+        "supportingQuote": (
+            "Điểm mới năm nay là mô hình liên kết năm trong một, kết hợp mua sắm tại hơn 5.000 điểm bán lẻ với giải trí, du lịch, thương mại điện tử và thanh toán số."
+        ),
+        "briefingContext": (
+            "Cộng hưởng giữa ngân hàng thương mại, ví điện tử và hệ thống siêu thị lớn giúp kéo giảm chi phí mua sắm cuối năm và thúc đẩy vòng quay hàng hóa."
+        ),
+        "briefingFacts": (
+            "Các nhà bán lẻ Saigon Co.op, SATRA, MM Mega Market, GO! và Vissan chuẩn bị 13.000 tỷ đồng hàng bình ổn, tăng 10–20% nguồn cung cho mùa cao điểm Tết."
+        ),
+        "briefingPerspective": (
+            "Đồng tài trợ voucher giảm giá trực tiếp và ưu đãi lãi suất tại quầy giúp kích hoạt sức mua thực chất thay vì giảm giá hình thức."
+        ),
+        "briefingImplication": (
+            "Sức tiêu thụ trên 66 trung tâm thương mại và hệ thống bán lẻ hiện đại kỳ vọng phục hồi rõ nét trong hai tháng cuối năm."
+        ),
+        "fintechLens": (
+            "Hàng trăm nghìn giao dịch khuyến mại thanh toán số tại 5.000 điểm bán tạo cơ hội mở rộng lưu lượng chạm thẻ, quét QR qua hạ tầng Payoo SmartPOS."
+        ),
+        "practicalTakeaway": (
+            "Chuỗi cửa hàng nên đồng bộ tích điểm thành viên và mã ưu đãi ngân hàng ngay tại thiết bị POS thu ngân để tăng giá trị giỏ hàng trung bình."
+        ),
+    },
+    "EVT-20261119-038": {
+        "uiCategory": "Bán lẻ, D2C và xu hướng tiêu dùng",
+        "summary": (
+            "Báo cáo tại diễn đàn VSMCamp 2026 cho thấy 94% người dùng AI thường xuyên sẵn sàng mua sản phẩm do trợ lý ảo gợi ý. "
+            "Tuy nhiên, 57% người tiêu dùng giảm niềm tin nếu thương hiệu lạm dụng nội dung tự động thiếu dấu ấn con người."
+        ),
+        "supportingQuote": (
+            "Báo cáo Razorfish cho thấy 59% người khảo sát từng mua sản phẩm của thương hiệu chưa từng nghĩ tới trước đó nhờ đề xuất của công cụ AI."
+        ),
+        "briefingContext": (
+            "Sự lên ngôi của thương mại tác nhân buộc các nhà bán lẻ D2C tái cấu trúc dữ liệu sản phẩm để được các hệ thống trợ lý AI nhận diện và xếp hạng."
+        ),
+        "briefingFacts": (
+            "Số liệu Gartner công bố cùng diễn đàn chỉ ra 65% người tiêu dùng nhận thấy thương hiệu dùng quá nhiều nội dung do AI tạo lập."
+        ),
+        "briefingPerspective": (
+            "Công cụ AI hỗ trợ mạnh khâu lọc chọn và khám phá thương hiệu mới, nhưng yếu tố quyết định chốt đơn cuối cùng vẫn nằm ở độ xác thực và trải nghiệm."
+        ),
+        "briefingImplication": (
+            "Doanh nghiệp bán lẻ quá phụ thuộc vào tiếp thị tự động có nguy cơ đánh mất lợi thế niềm tin dài hạn trước đối thủ đầu tư dịch vụ khách hàng thật."
+        ),
+        "fintechLens": (
+            "Tích hợp thanh toán một chạm và đường link thanh toán bảo mật trong luồng tư vấn sản phẩm giúp chuyển hóa ngay gợi ý từ AI thành đơn hàng thành công."
+        ),
+        "practicalTakeaway": (
+            "Đội ngũ tiếp thị D2C cần chuẩn hóa thông số sản phẩm cho tìm kiếm AI nhưng phải giữ kiểm duyệt nội dung con người và đánh giá thực tế từ người mua."
+        ),
+    },
+    "EVT-20261119-039": {
+        "uiCategory": "Bán lẻ, D2C và xu hướng tiêu dùng",
+        "summary": (
+            "Trong 10 tháng đầu năm, Quản lý thị trường TP.HCM đã xử lý 6.069 vụ vi phạm hàng giả và thực phẩm trôi nổi, thu nộp ngân sách hơn 106,7 tỷ đồng. "
+            "Công tác hậu kiểm tập trung mạnh vào kho hàng phân tán bán qua sàn TMĐT dịp cận Tết."
+        ),
+        "supportingQuote": (
+            "Trong các nhóm hàng vi phạm, hàng hóa không rõ nguồn gốc chiếm 3.103 trường hợp với hơn 5,4 triệu đơn vị sản phẩm, tổng trị giá ước tính hơn 71,8 tỷ đồng."
+        ),
+        "briefingContext": (
+            "Kênh bán hàng mạng xã hội và kho phân tán gây nhiều thách thức cho kiểm soát an toàn thực phẩm lẫn thất thu thuế trước cao điểm Tết Đinh Mùi 2027."
+        ),
+        "briefingFacts": (
+            "Cơ quan chức năng kiểm tra 6.357 vụ, tịch thu hàng trị giá gần 58 tỷ đồng, tiêu hủy hơn 39 tỷ đồng hàng lậu và chuyển điều tra 36 vụ vi phạm nghiêm trọng."
+        ),
+        "briefingPerspective": (
+            "Siết chặt định danh chủ thể bán hàng trực tuyến buộc các sàn TMĐT và đơn vị logistics thanh lọc gian hàng ảo bán hàng nhái."
+        ),
+        "briefingImplication": (
+            "Doanh nghiệp bán lẻ chính hãng hưởng lợi từ môi trường cạnh tranh minh bạch hơn khi nguồn cung hàng giá rẻ trôi nổi bị thu hẹp."
+        ),
+        "fintechLens": (
+            "Kiểm soát dòng hàng TMĐT đi kèm yêu cầu minh bạch hóa dòng tiền thanh toán điện tử, thay thế giao dịch COD thiếu chứng từ bằng hóa đơn gắn Payment Link."
+        ),
+        "practicalTakeaway": (
+            "Nhà bán lẻ D2C cần lưu trữ đầy đủ chứng từ hóa đơn đầu vào và nhãn phụ chuẩn hóa trên mọi kho vệ tinh trước đợt kiểm tra cao điểm cuối năm."
+        ),
+    },
+    "EVT-20261119-040": {
+        "uiCategory": "Bán lẻ, D2C và xu hướng tiêu dùng",
+        "summary": (
+            "Liên Bộ Công Thương – Tài chính điều chỉnh giảm giá xăng dầu chiều 19/11, đưa xăng E5RON92 xuống tối đa 18.576 đồng/lít và E10RON95-III còn 19.100 đồng/lít. "
+            "Chi phí nhiên liệu hạ nhiệt giúp giảm cước vận tải bán lẻ cuối năm."
+        ),
+        "supportingQuote": (
+            "Trong kỳ điều hành ngày 19/11/2026, liên Bộ trích lập Quỹ bình ổn đối với xăng sinh học ở mức 200 đồng/lít, dầu madút 800 đồng/kg và không chi sử dụng Quỹ."
+        ),
+        "briefingContext": (
+            "Dự báo dư cung dầu mỏ quý IV từ IEA đẩy giá xăng thành phẩm thế giới giảm 2,3% đến 5,8%, tạo dư địa hạ giá bán lẻ trong nước bốn kỳ liên tiếp."
+        ),
+        "briefingFacts": (
+            "So với kỳ điều hành trước, xăng E5RON92 giảm 823 đồng/lít, E10RON95-III giảm 745 đồng/lít, dầu diesel về 26.347 đồng/lít và dầu mazut còn 18.671 đồng/kg."
+        ),
+        "briefingPerspective": (
+            "Mặt bằng giá nhiên liệu nội địa thấp hơn đáng kể so với Thái Lan, Campuchia và Lào góp phần kiềm chế chỉ số CPI vận tải trong tháng 11."
+        ),
+        "briefingImplication": (
+            "Giá dầu diesel hạ 475 đồng/lít trực tiếp tiết giảm chi phí logistics chuỗi cung ứng hàng tiêu dùng nhanh chuẩn bị cho mùa mua sắm."
+        ),
+        "fintechLens": (
+            "Hệ thống cây xăng điện tử hóa hóa đơn từng lần bán tiếp tục mở rộng lưu lượng thanh toán không tiền mặt qua SmartPOS chuyên dụng và mã QR tại trụ bơm."
+        ),
+        "practicalTakeaway": (
+            "Doanh nghiệp phân phối và vận tải bán lẻ có thể tận dụng nhịp giảm giá nhiên liệu để tối ưu cước giao hàng nhanh trong giai đoạn cao điểm khuyến mại."
         ),
     },
 }

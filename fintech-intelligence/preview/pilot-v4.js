@@ -267,7 +267,7 @@
       synthCol.innerHTML = `
         <div class="v4-col-label">
           <span>Đúc kết 4 mạch phiên</span>
-          <span class="v4-col-label-sub">25 tin</span>
+          <span class="v4-col-label-sub">${newsList.length} tin</span>
         </div>
         <div class="v4-synth-list">
           ${points

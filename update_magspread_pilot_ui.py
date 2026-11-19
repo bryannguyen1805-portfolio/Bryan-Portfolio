@@ -631,7 +631,7 @@ def build_daily_editorial_synthesis(eligible_news: list, edition_date: str) -> s
     p3 = _summarize_cluster(c3, 'Kích cầu tiêu dùng và thị trường hàng hóa cuối năm', 'chiến dịch bán lẻ và bình ổn giá cả')
     p4 = _summarize_cluster(c4, 'Thị trường vốn, bất động sản và an toàn giao dịch số', 'tái cơ cấu nợ trái phiếu và kiểm soát rủi ro tài khoản')
 
-    intro = f'Toàn cảnh phiên {edition_date} phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh:'
+    intro = f'Toàn cảnh phiên {edition_date} phản ánh bốn mạch chuyển động lớn từ {len(eligible_news)} sự kiện xác minh:'
     return f'{intro} (1) {p1}; (2) {p2}; (3) {p3}; (4) {p4}.'
 
 
@@ -653,7 +653,7 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "leadArticle": {},
             "editorialPullQuote": "Điều hành tiền tệ ổn định và hạ tầng số là động lực tăng trưởng kinh tế.",
             "pullQuote": "Điều hành tiền tệ ổn định và hạ tầng số là động lực tăng trưởng kinh tế.",
-            "editorialSynthesis": "Đang cập nhật đúc kết biên tập từ 25 bản tin...",
+            "editorialSynthesis": "Đang cập nhật đúc kết biên tập từ 40 bản tin...",
             "marketImpact": "Đang cập nhật tác động thị trường...",
             "fintechLensAction": "Đang cập nhật cơ hội Payoo & POS...",
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
@@ -947,8 +947,28 @@ def audit_content_repetition(edition_payload: dict) -> dict:
     blocklist_hits = {b: payload_text.count(b) for b in BLOCKLIST if b in payload_text}
     join_artifacts = payload_text.count("?;")
 
+    core_ui_categories = [
+        "Thanh toán",
+        "Ngân hàng",
+        "Thị trường vốn",
+        "Doanh nghiệp",
+        "Kinh tế vĩ mô",
+        "Bán lẻ, D2C và xu hướng tiêu dùng",
+    ]
+    cat_counts = {cat_name: sum(1 for item in news if item.get("category") == cat_name) for cat_name in core_ui_categories}
+    ed_date_m = re.search(r"(\d{8})", str(edition_payload.get("editionId") or ""))
+    ed_date_num = ed_date_m.group(1) if ed_date_m else "20261119"
+    expected_count = 40 if ed_date_num >= "20261119" else 25
+    cat_balance_violations = []
+    if expected_count == 40:
+        cat_balance_violations = [
+            {"category": cat_name, "count": cnt, "requiredMin": 5}
+            for cat_name, cnt in cat_counts.items() if cnt < 5
+        ]
+
     passed = (
-        len(news) == 25
+        len(news) == expected_count
+        and not cat_balance_violations
         and not repeated
         and not blocklist_hits
         and join_artifacts == 0
@@ -960,6 +980,9 @@ def audit_content_repetition(edition_payload: dict) -> dict:
         "editionId": edition_payload.get("editionId"),
         "checkedAt": datetime.now().isoformat(),
         "articlesChecked": len(news),
+        "expectedArticles": expected_count,
+        "categoryCounts": cat_counts,
+        "categoryBalanceViolations": cat_balance_violations,
         "repeatedSentencesAcrossArticles": repeated,
         "articleViolations": article_violations,
         "coverViolations": cover_violations,
@@ -979,9 +1002,9 @@ def audit_content_repetition(edition_payload: dict) -> dict:
             print(f"⚠️ Không thể ghi log audit tại {log_dir}: {exc}")
 
     if status == "PASS":
-        print(f"✅ D-06 Content Quality Gate: PASS — {len(news)} bài, 0 câu lặp (>=25 ký tự), 0 câu mẫu, Cover 3 câu & 25 bài 2 câu hợp lệ.")
+        print(f"✅ D-06 Content Quality Gate: PASS — {len(news)} bài ({cat_counts}), 0 câu lặp (>=25 ký tự), 0 câu mẫu, Cover 3 câu & {len(news)} bài 2 câu hợp lệ.")
     else:
-        print(f"❌ D-06 Content Quality Gate: FAIL — repeated={len(repeated)}, articleViolations={len(article_violations)}, coverViolations={cover_violations}, blocklist={blocklist_hits}, '?;'={join_artifacts}")
+        print(f"❌ D-06 Content Quality Gate: FAIL — count={len(news)}/{expected_count}, catViolations={cat_balance_violations}, repeated={len(repeated)}, articleViolations={len(article_violations)}, coverViolations={cover_violations}, blocklist={blocklist_hits}, '?;'={join_artifacts}")
         raise RuntimeError(f"D-06 Content Quality Gate FAILED: {json.dumps(report, ensure_ascii=False)}")
     return report
 
@@ -1034,19 +1057,33 @@ def main():
     CAT_MAP = {
         "BANKING_CREDIT": "Ngân hàng",
         "MACRO_MONETARY": "Kinh tế vĩ mô",
+        "GLOBAL_MACRO": "Kinh tế vĩ mô",
         "CORPORATE_ENTERPRISE": "Doanh nghiệp",
         "CAPITAL_MARKETS": "Thị trường vốn",
+        "FINTECH_PAYMENT": "Thanh toán",
         "PAYMENT_FINTECH": "Thanh toán",
         "RETAIL_CONSUMER": "Bán lẻ, D2C và xu hướng tiêu dùng"
     }
+    VALID_UI_CATS = [
+        "Thanh toán",
+        "Ngân hàng",
+        "Thị trường vốn",
+        "Doanh nghiệp",
+        "Kinh tế vĩ mô",
+        "Bán lẻ, D2C và xu hướng tiêu dùng"
+    ]
 
-    # 3. Build 25 Eligible News List with rich, event-specific analysis
+    # 3. Build Verified Eligible News List with rich, event-specific analysis
     eligible_news = []
     records = news_raw.get("records", [])
-    for idx, r in enumerate(records):
-        raw_cat = r.get("category", "BANKING_CREDIT")
-        mapped_cat = CAT_MAP.get(raw_cat, "Doanh nghiệp")
+    is_ed34 = ("19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw))
+    is_ed33 = ("18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw))
+    is_ed32 = ("17/11/2026" in str(edition_date_display) or "2026-11-17" in str(edition_date_raw))
+    is_ed31 = ("16/11/2026" in str(edition_date_display) or "2026-11-16" in str(edition_date_raw))
+    is_ed30 = ("15/11/2026" in str(edition_date_display) or "2026-11-15" in str(edition_date_raw))
+    is_ed29 = ("14/11/2026" in str(edition_date_display) or "2026-11-14" in str(edition_date_raw))
 
+    for idx, r in enumerate(records):
         headline = r.get("headline", "")
         summary = r.get("summary", "")
         origin_evt_id = r.get("eventId", f"EVT-20261112-{idx+1:03d}")
@@ -1059,18 +1096,32 @@ def main():
         except Exception:
             pub_display = pub_time[:16].replace("T", " ")
 
-        # Dynamic fine-grained UI categorization
-        hl_lower = headline.lower()
-        if any(k in hl_lower for k in ["smartpos", "vietqr", "thanh toán", "thẻ", "pos", "qr", "mã độc", "tài khoản", "sinh trắc"]):
-            mapped_cat = "Thanh toán"
-        elif any(k in hl_lower for k in ["lãi suất", "nhnn", "ngân hàng", "tín dụng", "msb", "vietinbank", "vpbank", "ncb", "acb"]):
-            mapped_cat = "Ngân hàng"
-        elif any(k in hl_lower for k in ["chứng khoán", "cổ phiếu", "fpt", "nvidia", "vốn hóa", "trái phiếu", "cổ tức"]):
-            mapped_cat = "Thị trường vốn"
-        elif any(k in hl_lower for k in ["thuế", "nợ thuế", "bộ trưởng tài chính", "doanh nghiệp", "kcn", "đakrông"]):
-            mapped_cat = "Doanh nghiệp"
-        elif any(k in hl_lower for k in ["sale", "giá xăng", "giá vàng", "thịt gà", "tiêu dùng"]):
-            mapped_cat = "Bán lẻ, D2C và xu hướng tiêu dùng"
+        curated = None
+        if is_ed34:
+            curated = ED34_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed33:
+            curated = ED33_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed32:
+            curated = ED32_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed31:
+            curated = ED31_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed30:
+            curated = ED30_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed29:
+            curated = ED29_ARTICLE_INTEL.get(origin_evt_id)
+
+        # Deterministic category resolution: respect explicit curated/record UI category and canonical CAT_MAP
+        raw_cat = r.get("category", "BANKING_CREDIT")
+        cur_cat = ((curated.get("uiCategory") or curated.get("category")) if curated else None) or ""
+        rec_ui_cat = r.get("uiCategory") or ""
+        if cur_cat in VALID_UI_CATS:
+            mapped_cat = cur_cat
+        elif cur_cat in CAT_MAP:
+            mapped_cat = CAT_MAP[cur_cat]
+        elif rec_ui_cat in VALID_UI_CATS:
+            mapped_cat = rec_ui_cat
+        else:
+            mapped_cat = CAT_MAP.get(raw_cat, "Doanh nghiệp")
 
         facts = r.get("financialFacts", [])
         real_ent = extract_real_economic_entity(headline, r, facts)
@@ -1093,26 +1144,6 @@ def main():
             time_window = "48–72h"
         else:
             time_window = "0–24h"
-
-        is_ed34 = ("19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw))
-        is_ed33 = ("18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw))
-        is_ed32 = ("17/11/2026" in str(edition_date_display) or "2026-11-17" in str(edition_date_raw))
-        is_ed31 = ("16/11/2026" in str(edition_date_display) or "2026-11-16" in str(edition_date_raw))
-        is_ed30 = ("15/11/2026" in str(edition_date_display) or "2026-11-15" in str(edition_date_raw))
-        is_ed29 = ("14/11/2026" in str(edition_date_display) or "2026-11-14" in str(edition_date_raw))
-        curated = None
-        if is_ed34:
-            curated = ED34_ARTICLE_INTEL.get(origin_evt_id)
-        elif is_ed33:
-            curated = ED33_ARTICLE_INTEL.get(origin_evt_id)
-        elif is_ed32:
-            curated = ED32_ARTICLE_INTEL.get(origin_evt_id)
-        elif is_ed31:
-            curated = ED31_ARTICLE_INTEL.get(origin_evt_id)
-        elif is_ed30:
-            curated = ED30_ARTICLE_INTEL.get(origin_evt_id)
-        elif is_ed29:
-            curated = ED29_ARTICLE_INTEL.get(origin_evt_id)
 
         if curated:
             final_sapo = curated["summary"].strip()
@@ -2352,6 +2383,11 @@ def main():
 
     edition_number_display = f"ẤN BẢN SỐ {ed_number_val} · {session_badge}"
 
+    total_events = len(eligible_news)
+    ed_date_m_gate = re.search(r"(\d{8})", str(edition_id))
+    expected_quota = 40 if (ed_date_m_gate and ed_date_m_gate.group(1) >= "20261119") else 25
+    cat_distribution = {cat_name: sum(1 for item in eligible_news if item.get("category") == cat_name) for cat_name in VALID_UI_CATS}
+
     edition_payload = {
         "editionId": edition_id,
         "editionDate": edition_date_display,
@@ -2361,16 +2397,18 @@ def main():
         "editionCutoffAt": news_raw.get("generatedAt") or now_vn.isoformat(),
         "editionNumber": edition_number_display,
         "publicationGateStatus": {
-            "status": "PASS_25_EVENTS_24H_80PCT",
-            "publicBadgeLabel": f"ĐÃ XÁC MINH · 0–24H: {count_0_24}/25 ({ratio_0_24:.1f}%)",
-            "eligibleCount": len(eligible_news),
+            "status": f"PASS_{total_events}_EVENTS_24H_80PCT",
+            "publicBadgeLabel": f"ĐÃ XÁC MINH · 0–24H: {count_0_24}/{total_events} ({ratio_0_24:.1f}%)",
+            "eligibleCount": total_events,
+            "targetQuota": expected_quota,
+            "categoryCounts": cat_distribution,
             "count0To24h": count_0_24,
             "count24To48h": count_24_48,
             "percentage0To24h": ratio_0_24,
             "required0To24hPercentage": 80.0,
-            "quotaPass": (len(eligible_news) == 25 and ratio_0_24 >= 80.0),
-            "freshnessRatio": f"0–24h: {count_0_24}/25 ({ratio_0_24:.2f}%) | 24–48h: {count_24_48}/25 ({100.0 - ratio_0_24:.2f}%)",
-            "notes": f"Đạt chuẩn xuất bản: {count_0_24}/25 sự kiện xác minh trong 0–24h ({ratio_0_24:.1f}%), {count_24_48}/25 trong 24–48h, 100% bằng chứng sống có nguồn đối soát, 0 sự kiện giả."
+            "quotaPass": (total_events == expected_quota and ratio_0_24 >= 80.0 and (expected_quota == 25 or all(v >= 5 for v in cat_distribution.values()))),
+            "freshnessRatio": f"0–24h: {count_0_24}/{total_events} ({ratio_0_24:.2f}%) | 24–48h: {count_24_48}/{total_events} ({100.0 - ratio_0_24:.2f}%)",
+            "notes": f"Đạt chuẩn xuất bản: {count_0_24}/{total_events} sự kiện xác minh trong 0–24h ({ratio_0_24:.1f}%), {count_24_48}/{total_events} trong 24–48h, 100% bằng chứng sống có nguồn đối soát, 0 sự kiện giả."
         },
         "marketPulseSnapshot": mp_snapshot,
         "editorialSections": editorial_sections,

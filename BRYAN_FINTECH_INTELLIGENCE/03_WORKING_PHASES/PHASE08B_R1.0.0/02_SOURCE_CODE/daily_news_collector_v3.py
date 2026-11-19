@@ -29,18 +29,29 @@ import urllib.request
 import urllib.error
 
 # Operational Constants
-TARGET_EVENTS = 25
+TARGET_EVENTS = 40
+MIN_EVENTS_PER_CATEGORY = 5
 MIN_FRESHNESS_RATIO = 0.80  # Minimum 80% within 0-24h
 MAX_AGE_HOURS = 48.0        # Hard ceiling: maximum 48h (strict 2-day cap; prevents 3-day carry-over)
 TIMEZONE_HCM = timezone(timedelta(hours=7))
 
-# Canonical V3.0.4 Categories
+# Canonical V3.0.4 Categories (6 core categories aligned with 6 UI sections)
 CATEGORY_MACRO_MONETARY = "MACRO_MONETARY"
 CATEGORY_BANKING_CREDIT = "BANKING_CREDIT"
 CATEGORY_FINTECH_PAYMENT = "FINTECH_PAYMENT"
 CATEGORY_CAPITAL_MARKETS = "CAPITAL_MARKETS"
 CATEGORY_CORPORATE_ENTERPRISE = "CORPORATE_ENTERPRISE"
+CATEGORY_RETAIL_CONSUMER = "RETAIL_CONSUMER"
 CATEGORY_GLOBAL_MACRO = "GLOBAL_MACRO"
+
+CORE_EDITION_CATEGORIES = [
+    CATEGORY_FINTECH_PAYMENT,
+    CATEGORY_BANKING_CREDIT,
+    CATEGORY_CAPITAL_MARKETS,
+    CATEGORY_CORPORATE_ENTERPRISE,
+    CATEGORY_MACRO_MONETARY,
+    CATEGORY_RETAIL_CONSUMER
+]
 
 VALID_CANONICAL_CATEGORIES = {
     CATEGORY_MACRO_MONETARY,
@@ -48,6 +59,7 @@ VALID_CANONICAL_CATEGORIES = {
     CATEGORY_FINTECH_PAYMENT,
     CATEGORY_CAPITAL_MARKETS,
     CATEGORY_CORPORATE_ENTERPRISE,
+    CATEGORY_RETAIL_CONSUMER,
     CATEGORY_GLOBAL_MACRO
 }
 
@@ -96,6 +108,9 @@ TRUSTED_DOMAINS = {
     "nhandan.vn": "Báo Nhân Dân",
     "thoibaotaichinhvietnam.vn": "Thời báo Tài chính Việt Nam",
     "tapchikinhtetaichinh.vn": "Tạp chí Kinh tế và Tài chính",
+    "thitruongtaichinhtiente.vn": "Tạp chí Thị trường Tài chính Tiền tệ",
+    "thoibaonganhang.vn": "Thời báo Ngân hàng",
+    "vnexpress.net": "Báo VnExpress",
     "cand.com.vn": "Báo Công an Nhân dân",
     "congluan.vn": "Báo Nhà báo & Công luận",
     "laodong.vn": "Báo Lao Động",
@@ -833,38 +848,38 @@ def _strip_author_biography(text: str) -> str:
     return " ".join(cleaned.split())
 
 
-def classify_canonical_category(headline: str, summary: str, text: str = "") -> str:
+def classify_canonical_category(headline: str, summary: str, text: str = "", feed_category: str = None) -> str:
     """
-    Classifies an event strictly into one of the 6 canonical V3.0.4 contract categories
-    based on clean content (excluding whole page footers/navbars and incidental author bios).
+    Classifies an event strictly into one of the canonical V3.0.4 categories
+    based on clean content (excluding whole page footers/navbars and incidental author bios),
+    incorporating target category signal from the originating category feed.
     """
     clean_text = _strip_author_biography(text)
     clean_summary = _strip_author_biography(summary)
     content = f"{headline} {clean_summary} {clean_text}".lower()
     head_sum = f"{headline} {clean_summary}".lower()
-    
-    # Hard exclusion for crime, individual fraud, judicial proceedings, and court cases
-    CRIMINAL_EXCLUDES = [
-        "bị cáo", "xét xử", "lừa đảo", "đầu thú", "chiếm đoạt", "truy tố",
-        "bắt cựu", "bắt tạm giam", "khởi tố", "án mạng", "tống tiền", "chiếm đoạt tài sản"
-    ]
-    if any(k in head_sum for k in CRIMINAL_EXCLUDES) or any(k in content for k in ["bắt cựu cán bộ", "lừa đảo chiếm đoạt", "khởi tố vụ án"]):
-        return "IRRELEVANT", "LOW", True, "Criminal or judicial proceedings excluded from executive intelligence"
-    
+
     scores = {
         CATEGORY_MACRO_MONETARY: 0,
         CATEGORY_BANKING_CREDIT: 0,
         CATEGORY_FINTECH_PAYMENT: 0,
         CATEGORY_CAPITAL_MARKETS: 0,
         CATEGORY_CORPORATE_ENTERPRISE: 0,
+        CATEGORY_RETAIL_CONSUMER: 0,
         CATEGORY_GLOBAL_MACRO: 0
     }
-    
-    # 1. FinTech & Payment Keywords (Specific, not generic payment link)
+
+    if feed_category and feed_category in scores:
+        scores[feed_category] += 6
+
+    # 1. FinTech & Payment Keywords
     fintech_kw = [
         "fintech", "vietqr", "napas", "payoo", "thanh toán không dùng tiền mặt",
         "thanh toán số", "mã qr", "qr code", "ví điện tử", "cổng thanh toán",
-        "payment gateway", "smartpos", "pos", "ekyc", "ngân hàng số", "thanh toán điện tử"
+        "payment gateway", "smartpos", "pos", "ekyc", "ngân hàng số", "thanh toán điện tử",
+        "thẻ tín dụng", "thẻ nội địa", "chuyển khoản", "sinh trắc học", "giao dịch trực tuyến",
+        "chuyển đổi số ngân hàng", "open banking", "open api", "bnpl", "ví trả sau",
+        "momo", "zalopay", "vnpay", "apple pay", "google pay", "tap to phone", "dịch vụ ngân hàng số"
     ]
     for k in fintech_kw:
         if k in content:
@@ -875,7 +890,10 @@ def classify_canonical_category(headline: str, summary: str, text: str = "") -> 
     macro_kw = [
         "nhnn", "ngân hàng nhà nước", "chính sách tiền tệ", "tỷ giá trung tâm",
         "tỷ giá", "usd/vnd", "ngoại tệ", "ngoại hối", "dự trữ ngoại hối",
-        "tín phiếu", "omo", "bơm ròng", "hút ròng", "lạm phát", "cpi", "gdp", "kinh tế vĩ mô"
+        "tín phiếu", "omo", "bơm ròng", "hút ròng", "lạm phát", "cpi", "gdp",
+        "kinh tế vĩ mô", "vĩ mô", "tăng trưởng kinh tế", "điều hành tiền tệ",
+        "ngân sách nhà nước", "đầu tư công", "xuất nhập khẩu", "cán cân thương mại",
+        "fed", "cục dự trữ liên bang"
     ]
     for k in macro_kw:
         if k in content:
@@ -884,8 +902,9 @@ def classify_canonical_category(headline: str, summary: str, text: str = "") -> 
 
     # 3. Capital Markets
     cap_kw = [
-        "chứng khoán", "vn-index", "cổ phiếu", "trái phiếu", "hose", "hnx",
-        "vietstock", "thanh khoản sàn", "khớp lệnh", "khối ngoại", "thị trường vốn", "ubcknn"
+        "chứng khoán", "vn-index", "cổ phiếu", "trái phiếu", "hose", "hnx", "upcom",
+        "vietstock", "thanh khoản sàn", "khớp lệnh", "khối ngoại", "thị trường vốn", "ubcknn",
+        "nâng hạng", "vốn hóa", "phiên giao dịch", "cổ tức", "phát hành cổ phiếu"
     ]
     for k in cap_kw:
         if k in content:
@@ -895,8 +914,9 @@ def classify_canonical_category(headline: str, summary: str, text: str = "") -> 
     # 4. Banking & Credit
     bank_kw = [
         "ngân hàng", "tín dụng", "lãi suất", "tiền gửi", "cho vay", "tiết kiệm",
-        "dư nợ", "nợ xấu", "vietcombank", "bidv", "vietinbank", "techcombank",
-        "vpbank", "mbbank", "acb", "sacombank", "hdbank", "pgbank", "ocb"
+        "dư nợ", "nợ xấu", "tăng trưởng tín dụng", "huy động vốn", "niêm yết lãi suất",
+        "vietcombank", "bidv", "vietinbank", "techcombank",
+        "vpbank", "mbbank", "acb", "sacombank", "hdbank", "pgbank", "ocb", "tpbank", "msb", "vib"
     ]
     for k in bank_kw:
         if k in content:
@@ -905,30 +925,45 @@ def classify_canonical_category(headline: str, summary: str, text: str = "") -> 
 
     # 5. Global Macro
     global_kw = [
-        "fed", "cục dự trữ liên bang", "kinh tế thế giới", "thương mại toàn cầu",
-        "kinh tế mỹ", "trung quốc", "châu âu", "fdi", "wall street"
+        "kinh tế thế giới", "thương mại toàn cầu", "kinh tế mỹ", "trung quốc",
+        "châu âu", "fdi", "wall street"
     ]
     for k in global_kw:
         if k in content:
-            weight = 4 if k in head_sum else 1
+            weight = 3 if k in head_sum else 1
             scores[CATEGORY_GLOBAL_MACRO] += weight
 
     # 6. Corporate & Enterprise
     corp_kw = [
         "doanh nghiệp", "tập đoàn", "lợi nhuận", "doanh thu", "báo cáo tài chính",
-        "sản xuất kinh doanh", "bất động sản", "m&a", "thâu tóm", "thuế", "hộ kinh doanh"
+        "sản xuất kinh doanh", "bất động sản", "m&a", "thâu tóm", "thuế", "hộ kinh doanh",
+        "niêm yết", "cổ đông", "chủ tịch", "tái cấu trúc", "kết quả kinh doanh"
     ]
     for k in corp_kw:
         if k in content:
-            weight = 3 if k in head_sum else 1
+            weight = 4 if k in head_sum else 1
             scores[CATEGORY_CORPORATE_ENTERPRISE] += weight
+
+    # 7. Retail, D2C & Consumer Trends
+    retail_kw = [
+        "bán lẻ", "tiêu dùng", "người tiêu dùng", "sức mua", "siêu thị",
+        "thương mại điện tử", "tmđt", "sàn tmđt", "chuỗi bán lẻ", "d2c",
+        "fmcg", "hàng tiêu dùng", "tổng mức bán lẻ", "giá cả thị trường",
+        "thị trường hàng hóa", "giá xăng", "giá vàng", "nông sản", "dịch vụ ăn uống",
+        "mua sắm", "khuyến mãi", "shopee", "lazada", "tiktok shop",
+        "bách hóa xanh", "wincommerce", "thế giới di động", "masan consumer", "pnj"
+    ]
+    for k in retail_kw:
+        if k in content:
+            weight = 4 if k in head_sum else 1
+            scores[CATEGORY_RETAIL_CONSUMER] += weight
 
     # Find highest scoring category
     sorted_cats = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     best_cat, best_score = sorted_cats[0]
-    
+
     if best_score == 0:
-        return CATEGORY_CORPORATE_ENTERPRISE
+        return feed_category if (feed_category and feed_category in scores) else CATEGORY_CORPORATE_ENTERPRISE
     return best_cat
 
 
@@ -979,7 +1014,8 @@ def evaluate_editorial_and_commercial_relevance(headline: str, summary: str, tex
 
     broad_economic_keywords = core_financial_keywords + [
         "doanh nghiệp", "kinh tế", "bất động sản", "thương mại", "đầu tư", "bán lẻ",
-        "tiêu dùng", "fdi", "gdp", "thị trường", "tài chính", "condotel", "sổ hồng"
+        "tiêu dùng", "người tiêu dùng", "sức mua", "siêu thị", "hàng hóa", "tmđt",
+        "thương mại điện tử", "fdi", "gdp", "thị trường", "tài chính", "condotel", "sổ hồng"
     ]
     
     matched_irrelevant = [k for k in irrelevant_keywords if k in content]
@@ -1558,7 +1594,7 @@ class DailyNewsCollector:
     def _extract_numeric_article_id(url_str: str) -> int:
         """Extracts trailing monotonic numeric article ID for newest-first feed ordering."""
         path = urlparse(url_str).path or ""
-        m_id = re.search(r'-d?(\d{5,})\.(?:html|htm|chn)$', path)
+        m_id = re.search(r'-d?(\d{4,})\.(?:html|htm|chn)$', path)
         return int(m_id.group(1)) if m_id else 0
 
     def extract_article_links_from_feed(self, publisher_domain: str, feed_url: str, html_text: str) -> list:
@@ -1585,7 +1621,13 @@ class DailyNewsCollector:
             elif parsed_netloc.endswith("thanhnien.vn") and re.search(r'-\d{10,}\.htm$', parsed_path):
                 is_article = True
             elif parsed_netloc.endswith("vneconomy.vn") and parsed_path.endswith(".htm") and parsed_path.count("-") >= 6:
-                if not any(sect in parsed_path for sect in ["/tai-chinh.htm", "/kinh-te.htm", "/chung-khoan.htm", "/ngan-hang.htm", "/index.htm"]):
+                vne_sections = [
+                    "/tai-chinh.htm", "/tai-chinh-ngan-hang.htm", "/kinh-te.htm",
+                    "/kin-te-thi-truong.htm", "/thi-truong.htm", "/chung-khoan.htm",
+                    "/ngan-hang.htm", "/doanh-nghiep.htm", "/kinh-te-so.htm",
+                    "/san-pham-thi-truong-kinh-te-so.htm", "/index.htm"
+                ]
+                if not any(parsed_path.endswith(sect) for sect in vne_sections):
                     is_article = True
             elif parsed_netloc.endswith("baodautu.vn") and re.search(r'-d\d{4,}\.html$', parsed_path):
                 is_article = True
@@ -1594,6 +1636,14 @@ class DailyNewsCollector:
             elif parsed_netloc.endswith("thoibaotaichinhvietnam.vn") and re.search(r'-\d{5,}\.html$', parsed_path):
                 is_article = True
             elif parsed_netloc.endswith("nguoiquansat.vn") and re.search(r'-\d{5,}\.html$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("thitruongtaichinhtiente.vn") and re.search(r'-\d{4,}\.html$', parsed_path) and not parsed_path.endswith("-ptag.html"):
+                is_article = True
+            elif parsed_netloc.endswith("vietstock.vn") and re.search(r'^/20\d{2}/\d{1,2}/.*-\d{5,}\.htm$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("vnexpress.net") and re.search(r'-\d{6,}\.html$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("thoibaonganhang.vn") and re.search(r'-\d{5,}\.html$', parsed_path):
                 is_article = True
 
             if is_article and not any(skip in parsed_path.lower() for skip in ["video", "podcast", "photo", "infographic", "media", "/du-lich/"]):
@@ -1605,18 +1655,23 @@ class DailyNewsCollector:
         # Sort links descending by trailing numeric article ID so newest articles come first
         if any(dom in publisher_domain or dom in feed_url for dom in (
             "baodautu.vn", "cafef.vn", "cafebiz.vn", "tuoitre.vn", "thanhnien.vn",
-            "vietnamnet.vn", "thoibaotaichinhvietnam.vn", "nguoiquansat.vn"
+            "vietnamnet.vn", "thoibaotaichinhvietnam.vn", "nguoiquansat.vn",
+            "thitruongtaichinhtiente.vn", "vietstock.vn", "vnexpress.net", "thoibaonganhang.vn"
         )):
             links.sort(key=self._extract_numeric_article_id, reverse=True)
 
         return links
 
-    def discover_live_candidates(self, feeds: list = None, max_articles: int = 140) -> tuple:
+    def discover_live_candidates(self, feeds: list = None, max_articles: int = 200) -> tuple:
         """
-        Executes genuine multi-source live news research across monitored financial publications:
-        1. Queries feeds across CafeF, VnEconomy, Tuổi Trẻ, Thanh Niên, Báo Đầu tư, VietNamNet, Thời báo Tài chính, CafeBiz, Người Quan Sát.
-        2. Gathers links per publisher, skipping URLs already published in prior editions.
-        3. Applies balanced round-robin interleaving to enforce publisher diversity.
+        Executes genuine multi-source live news research across monitored financial publications
+        spanning all 6 editorial categories (Thanh toan so, Ngan hang, Thi truong von,
+        Doanh nghiep, Kinh te vi mo, Ban le & Tieu dung):
+        1. Queries category-tagged feeds across CafeF, VnEconomy, Tuoi Tre, Thanh Nien, VietNamNet,
+           Thoi bao Tai chinh, Thoi bao Ngan hang, Thi truong Tai chinh Tien te, Vietstock, VnExpress,
+           CafeBiz, Nguoi Quan Sat, Bao Dau tu.
+        2. Gathers links per category & publisher, skipping URLs already published in prior editions.
+        3. Applies category-balanced round-robin interleaving across all 6 categories & publishers.
         4. Extracts clean article body (stripping footers/navs).
         5. Extracts true publication timestamp (hierarchy without retrieval fallback).
         6. Extracts named entities and assigns canonical V3.0.4 categories.
@@ -1624,90 +1679,142 @@ class DailyNewsCollector:
         """
         if feeds is None:
             feeds = [
-                ("cafef.vn", "https://cafef.vn/tai-chinh-ngan-hang.chn"),
-                ("cafef.vn", "https://cafef.vn/thi-truong-chung-khoan.chn"),
-                ("cafef.vn", "https://cafef.vn/kinh-te-so.chn"),
-                ("cafef.vn", "https://cafef.vn/tai-chinh-quoc-te.chn"),
-                ("cafef.vn", "https://cafef.vn/vi-mo-dau-tu.chn"),
-                ("cafef.vn", "https://cafef.vn/doanh-nghiep.chn"),
-                ("vneconomy.vn", "https://vneconomy.vn/tai-chinh.htm"),
-                ("vneconomy.vn", "https://vneconomy.vn/kinh-te-so.htm"),
-                ("vneconomy.vn", "https://vneconomy.vn/thi-truong.htm"),
-                ("vneconomy.vn", "https://vneconomy.vn/chung-khoan.htm"),
-                ("vneconomy.vn", "https://vneconomy.vn/doanh-nghiep.htm"),
-                ("tuoitre.vn", "https://tuoitre.vn/tai-chinh.htm"),
-                ("tuoitre.vn", "https://tuoitre.vn/kinh-doanh.htm"),
-                ("thanhnien.vn", "https://thanhnien.vn/tai-chinh-ngan-hang.htm"),
-                ("thanhnien.vn", "https://thanhnien.vn/kinh-te.htm"),
-                ("baodautu.vn", "https://baodautu.vn/tai-chinh-ngan-hang-d4/"),
-                ("baodautu.vn", "https://baodautu.vn/chung-khoan-d12/"),
-                ("baodautu.vn", "https://baodautu.vn/kinh-te-so-d23/"),
-                ("baodautu.vn", "https://baodautu.vn/dau-tu-d3/"),
-                ("baodautu.vn", "https://baodautu.vn/doanh-nghiep-d2/"),
-                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh/tai-chinh"),
-                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh"),
-                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem"),
-                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/chung-khoan"),
-                ("cafebiz.vn", "https://cafebiz.vn/tai-chinh.chn"),
-                ("cafebiz.vn", "https://cafebiz.vn/vi-mo.chn"),
-                ("nguoiquansat.vn", "https://nguoiquansat.vn/tai-chinh-ngan-hang")
+                # 1. Thanh toán số (FINTECH_PAYMENT)
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/tai-chinh-ngan-hang/ngan-hang", CATEGORY_FINTECH_PAYMENT),
+                ("thitruongtaichinhtiente.vn", "https://thitruongtaichinhtiente.vn/hoat-dong-ngan-hang/san-pham-dich-vu", CATEGORY_FINTECH_PAYMENT),
+                ("cafef.vn", "https://cafef.vn/kinh-te-so.chn", CATEGORY_FINTECH_PAYMENT),
+                ("vneconomy.vn", "https://vneconomy.vn/kinh-te-so.htm", CATEGORY_FINTECH_PAYMENT),
+                ("baodautu.vn", "https://baodautu.vn/kinh-te-so-d23/", CATEGORY_FINTECH_PAYMENT),
+
+                # 2. Ngân hàng (BANKING_CREDIT)
+                ("cafef.vn", "https://cafef.vn/tai-chinh-ngan-hang.chn", CATEGORY_BANKING_CREDIT),
+                ("thitruongtaichinhtiente.vn", "https://thitruongtaichinhtiente.vn/hoat-dong-ngan-hang", CATEGORY_BANKING_CREDIT),
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/tai-chinh-ngan-hang/ngan-hang", CATEGORY_BANKING_CREDIT),
+                ("vneconomy.vn", "https://vneconomy.vn/tai-chinh-ngan-hang.htm", CATEGORY_BANKING_CREDIT),
+                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh/tai-chinh", CATEGORY_BANKING_CREDIT),
+                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem", CATEGORY_BANKING_CREDIT),
+
+                # 3. Thị trường vốn (CAPITAL_MARKETS)
+                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/chung-khoan", CATEGORY_CAPITAL_MARKETS),
+                ("cafef.vn", "https://cafef.vn/thi-truong-chung-khoan.chn", CATEGORY_CAPITAL_MARKETS),
+                ("tuoitre.vn", "https://tuoitre.vn/chung-khoan.htm", CATEGORY_CAPITAL_MARKETS),
+                ("thanhnien.vn", "https://thanhnien.vn/kinh-te/chung-khoan.htm", CATEGORY_CAPITAL_MARKETS),
+
+                # 4. Doanh nghiệp (CORPORATE_ENTERPRISE)
+                ("thanhnien.vn", "https://thanhnien.vn/kinh-te/doanh-nghiep.htm", CATEGORY_CORPORATE_ENTERPRISE),
+                ("tuoitre.vn", "https://tuoitre.vn/chung-khoan/doanh-nghiep-niem-yet.htm", CATEGORY_CORPORATE_ENTERPRISE),
+                ("cafef.vn", "https://cafef.vn/doanh-nghiep.chn", CATEGORY_CORPORATE_ENTERPRISE),
+                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/doanh-nghiep", CATEGORY_CORPORATE_ENTERPRISE),
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/doanh-nghiep", CATEGORY_CORPORATE_ENTERPRISE),
+
+                # 5. Kinh tế vĩ mô (MACRO_MONETARY)
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/vi-mo", CATEGORY_MACRO_MONETARY),
+                ("cafef.vn", "https://cafef.vn/vi-mo-dau-tu.chn", CATEGORY_MACRO_MONETARY),
+                ("vietstock.vn", "https://vietstock.vn/kinh-te/vi-mo.htm", CATEGORY_MACRO_MONETARY),
+                ("thitruongtaichinhtiente.vn", "https://thitruongtaichinhtiente.vn/kinh-te-vi-mo-ptag.html", CATEGORY_MACRO_MONETARY),
+                ("cafebiz.vn", "https://cafebiz.vn/vi-mo.chn", CATEGORY_MACRO_MONETARY),
+                ("vnexpress.net", "https://vnexpress.net/tag/kinh-te-vi-mo-750740", CATEGORY_MACRO_MONETARY),
+
+                # 6. Bán lẻ & Tiêu dùng (RETAIL_CONSUMER)
+                ("thoibaonganhang.vn", "https://thoibaonganhang.vn/thi-truong", CATEGORY_RETAIL_CONSUMER),
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/thi-truong", CATEGORY_RETAIL_CONSUMER),
+                ("thanhnien.vn", "https://thanhnien.vn/tieu-dung-thong-minh.htm", CATEGORY_RETAIL_CONSUMER),
+                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh/thi-truong", CATEGORY_RETAIL_CONSUMER),
+                ("vneconomy.vn", "https://vneconomy.vn/kin-te-thi-truong.htm", CATEGORY_RETAIL_CONSUMER),
+                ("vneconomy.vn", "https://vneconomy.vn/thi-truong.htm", CATEGORY_RETAIL_CONSUMER),
             ]
 
-        # 1. Gather links per publisher (pre-filtering previously published URLs)
-        publisher_links = {}
-        publisher_seen_canon = {}
-        for pub, feed_url in feeds:
-            if pub not in publisher_links:
-                publisher_links[pub] = []
-                publisher_seen_canon[pub] = set()
-                
-            res = self.fetch_url(feed_url)
-            code = res["statusCode"]
-            raw_bytes = res["originalBytes"]
-            
-            self.feed_retrieval_ledger[feed_url] = {
-                "publisher": pub,
-                "statusCode": code,
-                "finalUrl": res["finalUrl"],
-                "retrievedAt": res["retrievedAt"],
-                "byteLength": len(raw_bytes),
-                "error": res["error"]
-            }
-            self.http_retrieval_ledger[feed_url] = dict(self.feed_retrieval_ledger[feed_url])
-            
-            if code != 200 or not raw_bytes:
-                continue
-                
-            if raw_bytes[:2] == b'\x1f\x8b':
-                try:
-                    html_text = gzip.decompress(raw_bytes).decode("utf-8", errors="replace")
-                except Exception:
-                    html_text = raw_bytes.decode("utf-8", errors="replace")
+        # 1. Gather links per category bucket & publisher (caching duplicate feed URLs)
+        feed_html_cache = {}
+        cat_pub_links = {}
+        cat_pub_seen = {}
+
+        for feed_item in feeds:
+            if len(feed_item) >= 3:
+                pub, feed_url, feed_cat = feed_item[0], feed_item[1], feed_item[2]
             else:
-                html_text = raw_bytes.decode("utf-8", errors="replace")
-                
+                pub, feed_url = feed_item[0], feed_item[1]
+                feed_cat = None
+            bucket_key = feed_cat or "GENERAL"
+            if bucket_key not in cat_pub_links:
+                cat_pub_links[bucket_key] = {}
+                cat_pub_seen[bucket_key] = {}
+            if pub not in cat_pub_links[bucket_key]:
+                cat_pub_links[bucket_key][pub] = []
+                cat_pub_seen[bucket_key][pub] = set()
+
+            if feed_url in feed_html_cache:
+                html_text = feed_html_cache[feed_url]
+            else:
+                res = self.fetch_url(feed_url)
+                code = res["statusCode"]
+                raw_bytes = res["originalBytes"]
+
+                self.feed_retrieval_ledger[feed_url] = {
+                    "publisher": pub,
+                    "statusCode": code,
+                    "finalUrl": res["finalUrl"],
+                    "retrievedAt": res["retrievedAt"],
+                    "byteLength": len(raw_bytes),
+                    "error": res["error"]
+                }
+                self.http_retrieval_ledger[feed_url] = dict(self.feed_retrieval_ledger[feed_url])
+
+                if code != 200 or not raw_bytes:
+                    continue
+
+                if raw_bytes[:2] == b'\x1f\x8b':
+                    try:
+                        html_text = gzip.decompress(raw_bytes).decode("utf-8", errors="replace")
+                    except Exception:
+                        html_text = raw_bytes.decode("utf-8", errors="replace")
+                else:
+                    html_text = raw_bytes.decode("utf-8", errors="replace")
+                feed_html_cache[feed_url] = html_text
+
             feed_links = self.extract_article_links_from_feed(pub, feed_url, html_text)
             for fl in feed_links:
                 canon_fl = normalize_url(fl)
-                if canon_fl in self.prior_urls or canon_fl in publisher_seen_canon[pub]:
+                if canon_fl in self.prior_urls or canon_fl in cat_pub_seen[bucket_key][pub]:
                     continue
-                publisher_seen_canon[pub].add(canon_fl)
-                publisher_links[pub].append(fl)
+                cat_pub_seen[bucket_key][pub].add(canon_fl)
+                cat_pub_links[bucket_key][pub].append(fl)
 
-        for pub, fl_list in publisher_links.items():
-            if pub != "vneconomy.vn":
-                fl_list.sort(key=self._extract_numeric_article_id, reverse=True)
+        # Build balanced per-category queues (interleaving publishers within each category)
+        cat_queues = {}
+        for bucket_key, pub_dict in cat_pub_links.items():
+            q = []
+            seen_in_cat = set()
+            pubs = list(pub_dict.keys())
+            for p, lst in pub_dict.items():
+                if p != "vneconomy.vn":
+                    lst.sort(key=self._extract_numeric_article_id, reverse=True)
+            for round_idx in range(25):
+                for p in pubs:
+                    lst = pub_dict.get(p, [])
+                    if round_idx < len(lst):
+                        link_u = lst[round_idx]
+                        c_u = normalize_url(link_u)
+                        if c_u not in seen_in_cat:
+                            seen_in_cat.add(c_u)
+                            q.append((p, link_u, None if bucket_key == "GENERAL" else bucket_key))
+            cat_queues[bucket_key] = q
 
-        # 2. Balanced Round-Robin Selection to enforce multi-source diversity
+        # 2. Balanced Round-Robin Selection across categories & publishers
         selected_article_queue = []
-        max_per_pub = 30
-        publishers = list(publisher_links.keys())
-        
-        for round_idx in range(max_per_pub):
-            for pub in publishers:
-                links_for_pub = publisher_links.get(pub, [])
-                if round_idx < len(links_for_pub):
-                    selected_article_queue.append((pub, links_for_pub[round_idx]))
+        queued_canon = set()
+        bucket_keys = list(cat_queues.keys())
+        max_per_cat = 60
+
+        for round_idx in range(max_per_cat):
+            for bk in bucket_keys:
+                cq = cat_queues.get(bk, [])
+                if round_idx < len(cq):
+                    p, link_u, f_cat = cq[round_idx]
+                    c_u = normalize_url(link_u)
+                    if c_u not in queued_canon:
+                        queued_canon.add(c_u)
+                        selected_article_queue.append((p, link_u, f_cat))
                 if len(selected_article_queue) >= max_articles:
                     break
             if len(selected_article_queue) >= max_articles:
@@ -1716,8 +1823,8 @@ class DailyNewsCollector:
         # 3. Retrieve individual articles and extract clean content
         candidates = []
         today_str = self.run_timestamp.strftime("%Y%m%d")
-        
-        for idx, (pub, art_url) in enumerate(selected_article_queue):
+
+        for idx, (pub, art_url, feed_cat) in enumerate(selected_article_queue):
             res = self.fetch_url(art_url)
             retrieved_at = res["retrievedAt"]
             code = res["statusCode"]
@@ -1775,8 +1882,8 @@ class DailyNewsCollector:
             # Dynamic Relevance Scoring on clean content
             edit_rel, comm_rel, is_irrel, irrel_reason = evaluate_editorial_and_commercial_relevance(headline, summary, article_body)
 
-            # Canonical Category Mapping on clean content
-            canonical_cat = classify_canonical_category(headline, summary, article_body)
+            # Canonical Category Mapping on clean content + originating category feed signal
+            canonical_cat = classify_canonical_category(headline, summary, article_body, feed_category=feed_cat)
 
             # Extract Subject Named Entities (NOT publisher domain!)
             main_entities = extract_named_entities(headline, summary, article_body)
@@ -1826,6 +1933,7 @@ class DailyNewsCollector:
                 "eventDate": event_date,
                 "timestampExtractionMethod": ts_method,
                 "category": canonical_cat,
+                "feedCategory": feed_cat,
                 "summary": summary,
                 "mainEntities": main_entities,
                 "supportingQuote": supporting_quote,
@@ -2032,24 +2140,72 @@ class DailyNewsCollector:
                 "shortfallReason": f"Discovered {total_valid} valid unique events meeting freshness criteria; requires {TARGET_EVENTS}. Zero fabrication enforced."
             }
             
-        selected = valid_pool[:TARGET_EVENTS]
-        excess = valid_pool[TARGET_EVENTS:]
+        # Balanced Category Selection: guarantee >= MIN_EVENTS_PER_CATEGORY across all 6 core categories,
+        # then fill remaining slots up to TARGET_EVENTS prioritizing under-represented categories & priority score
+        def _norm_core_cat(cat_val: str) -> str:
+            if cat_val == CATEGORY_GLOBAL_MACRO:
+                return CATEGORY_MACRO_MONETARY
+            return cat_val if cat_val in CORE_EDITION_CATEGORIES else CATEGORY_CORPORATE_ENTERPRISE
+
+        cat_buckets = {c: [] for c in CORE_EDITION_CATEGORIES}
+        for cand in valid_pool:
+            cat_buckets[_norm_core_cat(cand.get("category", ""))].append(cand)
+
+        selected = []
+        selected_ids = set()
+
+        # Pass 1: take top MIN_EVENTS_PER_CATEGORY per category
+        for c_key in CORE_EDITION_CATEGORIES:
+            for item in cat_buckets[c_key][:MIN_EVENTS_PER_CATEGORY]:
+                selected.append(item)
+                selected_ids.add(id(item))
+
+        # Pass 2: balance extra slots round-robin across categories until TARGET_EVENTS (or pool exhausted)
+        cat_cursors = {c_key: MIN_EVENTS_PER_CATEGORY for c_key in CORE_EDITION_CATEGORIES}
+        made_progress = True
+        while len(selected) < TARGET_EVENTS and made_progress:
+            made_progress = False
+            # Pick from category with smallest current selection first
+            ordered_cats = sorted(
+                CORE_EDITION_CATEGORIES,
+                key=lambda k: min(cat_cursors[k], len(cat_buckets[k]))
+            )
+            for c_key in ordered_cats:
+                idx = cat_cursors[c_key]
+                while idx < len(cat_buckets[c_key]) and id(cat_buckets[c_key][idx]) in selected_ids:
+                    idx += 1
+                if idx < len(cat_buckets[c_key]):
+                    item = cat_buckets[c_key][idx]
+                    selected.append(item)
+                    selected_ids.add(id(item))
+                    cat_cursors[c_key] = idx + 1
+                    made_progress = True
+                    if len(selected) >= TARGET_EVENTS:
+                        break
+
+        excess = [cand for cand in valid_pool if id(cand) not in selected_ids]
 
         for ex in excess:
             ex_copy = dict(ex)
             ex_copy["disposition"] = "EXCESS_NOT_SELECTED"
-            ex_copy["rejectionReason"] = "Candidate pool exceeded target quota ceiling of 25"
+            ex_copy["rejectionReason"] = f"Candidate pool exceeded target quota ceiling of {TARGET_EVENTS}"
             rejected_pool.append(ex_copy)
-            
+
         count_0_24h = sum(1 for c in selected if c.get("freshnessBucket") == "0_TO_24H")
         freshness_ratio = count_0_24h / len(selected) if selected else 0.0
-        
+        category_distribution = {
+            c_key: sum(1 for c in selected if _norm_core_cat(c.get("category", "")) == c_key)
+            for c_key in CORE_EDITION_CATEGORIES
+        }
+
         return "DATA_READY", {
             "status": "DATA_READY",
             "runTimestamp": self.run_timestamp.isoformat(),
             "targetQuota": TARGET_EVENTS,
+            "minPerCategory": MIN_EVENTS_PER_CATEGORY,
             "validCount": total_valid,
             "selectedCandidates": selected,
+            "categoryDistribution": category_distribution,
             "count0To24h": count_0_24h,
             "freshnessRatio": round(freshness_ratio, 4),
             "rejectedCount": len(rejected_pool),
