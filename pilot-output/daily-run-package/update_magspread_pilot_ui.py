@@ -110,6 +110,12 @@ except ImportError:
     ED33_COVER_OVERRIDE = {}
     ED33_ARTICLE_INTEL = {}
 
+try:
+    from ed34_editorial_content import ED34_COVER_OVERRIDE, ED34_ARTICLE_INTEL
+except ImportError:
+    ED34_COVER_OVERRIDE = {}
+    ED34_ARTICLE_INTEL = {}
+
 from html.parser import HTMLParser
 
 
@@ -653,8 +659,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (ED33, ED32, ED31, ED30 or ED29)
-    if "18/11/2026" in str(edition_date) or "2026-11-18" in str(edition_date):
+    # Check explicit curated lead override first (ED34, ED33, ED32, ED31, ED30 or ED29)
+    if "19/11/2026" in str(edition_date) or "2026-11-19" in str(edition_date):
+        cover_override = ED34_COVER_OVERRIDE
+    elif "18/11/2026" in str(edition_date) or "2026-11-18" in str(edition_date):
         cover_override = ED33_COVER_OVERRIDE
     elif "17/11/2026" in str(edition_date) or "2026-11-17" in str(edition_date):
         cover_override = ED32_COVER_OVERRIDE
@@ -1086,13 +1094,16 @@ def main():
         else:
             time_window = "0–24h"
 
+        is_ed34 = ("19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw))
         is_ed33 = ("18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw))
         is_ed32 = ("17/11/2026" in str(edition_date_display) or "2026-11-17" in str(edition_date_raw))
         is_ed31 = ("16/11/2026" in str(edition_date_display) or "2026-11-16" in str(edition_date_raw))
         is_ed30 = ("15/11/2026" in str(edition_date_display) or "2026-11-15" in str(edition_date_raw))
         is_ed29 = ("14/11/2026" in str(edition_date_display) or "2026-11-14" in str(edition_date_raw))
         curated = None
-        if is_ed33:
+        if is_ed34:
+            curated = ED34_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed33:
             curated = ED33_ARTICLE_INTEL.get(origin_evt_id)
         elif is_ed32:
             curated = ED32_ARTICLE_INTEL.get(origin_evt_id)
@@ -1106,10 +1117,10 @@ def main():
         if curated:
             final_sapo = curated["summary"].strip()
             final_quote = curated.get("supportingQuote", "").strip().strip("“”\"'").strip()
-            an_nature = curated["analysisNature"].strip()
-            an_mech = curated["analysisMechanism"].strip()
-            an_impact = curated["analysisMarketImpact"].strip()
-            an_watch = curated["analysisWatchSignal"].strip()
+            an_nature = (curated.get("briefingContext") or curated.get("analysisNature") or "").strip()
+            an_mech = (curated.get("briefingFacts") or curated.get("analysisMechanism") or "").strip()
+            an_impact = (curated.get("briefingPerspective") or curated.get("analysisMarketImpact") or "").strip()
+            an_watch = (curated.get("briefingImplication") or curated.get("analysisWatchSignal") or "").strip()
             sec_b = an_nature
             sec_c = an_impact
             sec_d = an_mech
@@ -1184,11 +1195,11 @@ def main():
             "sourceUrl": canonical_url,
             "supportingQuote": final_quote,
             "facts": facts,
-            "briefingContext": sections_dict.get("briefingContext", an_nature),
-            "briefingFacts": sections_dict.get("briefingFacts", an_mech),
-            "briefingPerspective": sections_dict.get("briefingPerspective", an_impact),
-            "briefingImplication": sections_dict.get("briefingImplication", an_watch),
-            "fintechRelevance": sections_dict.get("fintechRelevance", sec_e),
+            "briefingContext": (curated.get("briefingContext") or an_nature) if curated else sections_dict.get("briefingContext", an_nature),
+            "briefingFacts": (curated.get("briefingFacts") or an_mech) if curated else sections_dict.get("briefingFacts", an_mech),
+            "briefingPerspective": (curated.get("briefingPerspective") or an_impact) if curated else sections_dict.get("briefingPerspective", an_impact),
+            "briefingImplication": (curated.get("briefingImplication") or an_watch) if curated else sections_dict.get("briefingImplication", an_watch),
+            "fintechRelevance": (curated.get("fintechLens") or sec_e) if curated else sections_dict.get("fintechRelevance", sec_e),
             "analysisNature": an_nature,
             "analysisMechanism": an_mech,
             "analysisMarketImpact": an_impact,
@@ -1271,7 +1282,107 @@ def main():
         }
     }
 
-    if "18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw):
+    if "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
+        CORE_4_DEFS = [
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
+                "articleTitle": "Tỷ giá USD hôm nay 19/11: USD ngân hàng tăng, DXY áp sát 104 điểm trước tín hiệu cứng rắn từ Fed",
+                "value": "25.646 VND/USD",
+                "unit": "VND/USD",
+                "asOf": "2026-11-19",
+                "referenceValue": "NHNN: 25.646 VND/USD (-10đ) | VCB: 25.510 - 25.920 VND/USD (+30đ) | DXY: 103,79 điểm",
+                "change": "-10 VND/USD so với phiên 18/11 (VCB bán tăng 30đ lên 25.920đ)",
+                "compactDelta": "-10đ (VCB +30đ)",
+                "compactSubRef": "VCB: 25.510 - 25.920 · DXY: 103,79",
+                "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-19-11-usd-ngan-hang-tang-dxy-ap-sat-104-diem-truoc-tin-hieu-cung-ran-tu-fed-207175.html",
+                "secondarySourceUrls": [
+                    "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+                    "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia"
+                ],
+                "statusReason": "Sáng 19/11, Ngân hàng Nhà nước công bố tỷ giá trung tâm ở mức 25.646 VND/USD (-10 đồng), biên độ +/-5% trong khung 24.363,7 - 26.928,3 VND/USD. Tuy nhiên giá bán USD tại Vietcombank và BIDV cùng tăng 30 đồng lên 25.920 VND/USD khi chỉ số DXY neo tại 103,79 điểm trước kỳ vọng Fed nâng lãi suất tháng 12.",
+                "financialInterpretation": "Diễn biến tỷ giá trung tâm lùi nhẹ về 25.646 VND/USD nhưng giá USD thương mại tăng lên 25.920 VND/USD (tự do 26.100–26.130 VND/USD) đòi hỏi doanh nghiệp nhập khẩu hàng Tết quản trị sát chi phí ngoại tệ. Tại điểm bán đón khách quốc tế, Payoo SmartPOS tích hợp Dynamic Currency Conversion (DCC) giúp khóa tỷ giá quy đổi minh bạch theo thời gian thực.",
+                "monitoringWatchpoint": "Theo dõi phản ứng của chỉ số DXY quanh ngưỡng 104 điểm và biên độ chênh lệch USD tự do so với kênh ngân hàng.",
+                "status": "negative",
+                "verificationStatus": "VERIFIED",
+                "sha256": "244a2a71ffad5f2fc1783375089bf08e628a906dba0ac9e846f194633edd1676",
+                "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_244a2a71ff.html",
+                "publishedAt": "2026-11-19T08:50:00+07:00",
+                "observationAt": "2026-11-19T08:50:00+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["maxDeposit12M"],
+                "articleTitle": "Lãi suất Big4 cao nhất 5,5%/năm và mặt bằng 12T NHTM ngày 19/11",
+                "value": "7,1 %/năm",
+                "unit": "%/năm",
+                "asOf": "2026-11-19",
+                "referenceValue": "Big4 tại quầy: 5,4–5,5%/năm | 12T NHTMCP thường: 6,7 - 7,1%/năm | Đặc biệt/ưu đãi: 9,1 - 10%/năm",
+                "change": "Báo Lao Động 19/11: Big4 duy trì đỉnh quầy 5,5%/năm; NHTM tư nhân 12T thường cao nhất 7,1%/năm",
+                "compactDelta": "5,4% - 7,1%",
+                "compactSubRef": "Big4: 5,4–5,5% · NHTMCP: 6,7–7,1%",
+                "dailyArticleUrl": "https://laodong.vn/kinh-doanh/lai-suat-big4-cao-nhat-55nam-gui-150-trieu-dong-nhan-bao-nhieu-tien-1802837.ldo",
+                "secondarySourceUrls": [
+                    "https://laodong.vn/tien-te-dau-tu"
+                ],
+                "statusReason": "Theo khảo sát trên Báo Lao Động ngày 19/11, khối ngân hàng Big4 tiếp tục giữ đỉnh lãi suất tại quầy 5,5%/năm (kỳ hạn 12T quanh 5,4%/năm), trong khi mặt bằng 12 tháng điều kiện thường tại khối NHTMCP tư nhân đạt tối đa 7,0% - 7,1%/năm giữa bối cảnh NHNN ban hành Công văn 10488 thanh tra hạ lãi suất.",
+                "financialInterpretation": "Mặt bằng lãi suất 12 tháng có xu hướng hạ nhiệt dần nhờ định hướng điều hành quyết liệt của NHNN giúp tiết giảm chi phí vốn đầu vào (COF) cho các ngân hàng bán lẻ. Chuỗi bán lẻ và đơn vị thương mại có thể phối hợp chương trình Trả góp 0% qua thẻ tín dụng trên hệ sinh thái Payoo để kích cầu mua sắm cuối năm.",
+                "monitoringWatchpoint": "Theo dõi đợt thanh tra chuyên đề giảm lãi suất theo Công văn 10488/NHNN-TTNH và biểu huy động trực tuyến cuối tháng 11.",
+                "status": "positive",
+                "verificationStatus": "VERIFIED",
+                "sha256": "eb43e5fa93b479e1c4a9c007cb9e4d3ef64fa65b33d65359fa78f8459ea97dc7",
+                "evidencePath": "raw_evidence_store/market_pulse/MP03/laodong_1802837_verified.txt",
+                "publishedAt": "2026-11-19T08:30:00+07:00",
+                "observationAt": "2026-11-19T08:30:00+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["vnIndex"],
+                "articleTitle": "Áp lực bán dồn dập cuối phiên, VN-Index mất hơn 23 điểm",
+                "value": "1.703,01 Điểm",
+                "unit": "Điểm",
+                "asOf": "2026-11-18",
+                "referenceValue": "Chốt phiên gần nhất: 1.703,01 điểm (-23,71đ, -1,37%) | GTGD: 17.187,9 tỷ đồng | Hỗ trợ: 1.700 điểm",
+                "change": "-23,71 điểm (-1,37%), kiểm định mốc tâm lý 1.700 điểm trước phiên đáo hạn phái sinh 19/11",
+                "compactDelta": "-23,71đ (-1,37%)",
+                "compactSubRef": "GTGD: 17.187,9 tỷ · Hỗ trợ: 1.700",
+                "dailyArticleUrl": "https://danviet.vn/ap-luc-ban-don-dap-cuoi-phien-vn-index-mat-hon-23-diem-d1475984.html",
+                "secondarySourceUrls": [
+                    "https://danviet.vn/tim-kiem.html#VN-INDEX"
+                ],
+                "statusReason": "Theo Báo Dân Việt, kết phiên giao dịch liền trước 18/11 trước giờ mở cửa 19/11, áp lực bán cuối phiên đẩy VN-Index giảm 23,71 điểm (-1,37%) về mức 1.703,01 điểm với tổng giá trị giao dịch 17.187,9 tỷ đồng, trong bối cảnh nhóm vốn hóa lớn như VIC, VCB, VHM, VPB chịu áp lực chốt lời.",
+                "financialInterpretation": "Nhịp lùi của VN-Index về sát mốc tâm lý 1.700 điểm ngay trước phiên đáo hạn hợp đồng tương lai VN30 ngày 19/11 cho thấy dòng tiền chứng khoán tiếp tục ưu tiên phòng thủ. Doanh nghiệp sản xuất – bán lẻ cần chú trọng quản trị vòng quay vốn thực thông qua thanh toán không tiền mặt tức thì và đối soát dòng tiền qua Payoo.",
+                "monitoringWatchpoint": "Theo dõi lực cầu bắt đáy tại ngưỡng hỗ trợ tâm lý 1.700 điểm và diễn biến giao dịch khối ngoại trong phiên đáo hạn phái sinh 19/11.",
+                "status": "negative",
+                "verificationStatus": "VERIFIED",
+                "sha256": "0b34fd7de5fc82e10f8bbdb890f26505e05e78370df7531b68302b9d322b35d4",
+                "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_0b34fd7de5.html",
+                "publishedAt": "2026-11-18T16:30:00+07:00",
+                "observationAt": "2026-11-18T16:30:00+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["inboundTourists"],
+                "articleTitle": "Việt Nam đón 19,5 triệu khách quốc tế, khách châu Âu tăng mạnh",
+                "value": "19,5 Triệu lượt",
+                "unit": "Triệu lượt",
+                "asOf": "10 tháng 2026",
+                "referenceValue": "10 tháng 2026: Đón 19,5 triệu lượt (+13,8% YoY) | Châu Á: 14,6 triệu lượt | Châu Âu: 3,22 triệu lượt",
+                "change": "+13,8% YoY sau 10 tháng; hoàn thành 78% mục tiêu cả năm (25 triệu lượt)",
+                "compactDelta": "+13,8% YoY",
+                "compactSubRef": "Châu Á: 14,6M · Châu Âu: 3,22M (10T)",
+                "dailyArticleUrl": "https://thanhnien.vn/viet-nam-don-195-trieu-khach-quoc-te-khach-chau-au-tang-manh-185261103141701446.htm",
+                "secondarySourceUrls": [
+                    "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE"
+                ],
+                "statusReason": "Theo Báo Thanh Niên và Cục Du lịch Quốc gia Việt Nam, lũy kế 10 tháng năm 2026 Việt Nam đón 19,5 triệu lượt khách quốc tế (+13,8% YoY), hoàn thành 78% mục tiêu 25 triệu lượt cả năm, trong đó thị trường châu Á đạt 14,6 triệu lượt và châu Âu bứt phá lên 3,22 triệu lượt.",
+                "financialInterpretation": "Dòng khách quốc tế 19,5 triệu lượt duy trì động lực tăng trưởng vững chắc cho ngành lưu trú, lữ hành và mua sắm bán lẻ cao điểm cuối năm. Triển khai đồng bộ máy Payoo SmartPOS All-in-One chấp nhận thẻ quốc tế và mã VietQR Global giúp điểm bán nắm bắt tối đa doanh thu chi tiêu ngoại tệ.",
+                "monitoringWatchpoint": "Theo dõi số liệu thống kê khách quốc tế tháng 11 và tốc độ mở rộng thanh toán QR xuyên biên giới tại các đô thị du lịch.",
+                "status": "positive",
+                "verificationStatus": "VERIFIED",
+                "sha256": "8736f03a06cdf6d65b71294e5df41ea9231c27057f0a4b33720aed487328e65e",
+                "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_8736f03a06.html",
+                "publishedAt": "2026-11-03T14:17:00+07:00",
+                "observationAt": "2026-11-03T14:17:00+07:00"
+            }
+        ]
+    elif "18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw):
         CORE_4_DEFS = [
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
@@ -1531,7 +1642,9 @@ def main():
         ]
 
     # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
-    if "18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw):
+    if "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
+        raw_indicators = []  # Curated 19/11 values take full precedence
+    elif "18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw):
         raw_indicators = []  # Curated 18/11 values take full precedence
     elif "17/11/2026" in str(edition_date_display) or "2026-11-17" in str(edition_date_raw):
         raw_indicators = []  # Curated 17/11 values take full precedence
@@ -1638,50 +1751,51 @@ def main():
             if matched_raw.get("evidencePath") and not is_stale_raw:
                 item["evidencePath"] = matched_raw["evidencePath"]
 
-        # Dynamic secondary metric extraction from live evidence HTML (for daily operational continuity)
+        # Dynamic secondary metric extraction from live evidence HTML (only when uncurated raw_indicators path is active)
         ev_rel = item.get("evidencePath", "")
-        for base_ev_dir in [intel_dir, RUNTIME_DIR]:
-            ev_abs = os.path.join(base_ev_dir, ev_rel) if ev_rel else ""
-            if ev_abs and os.path.exists(ev_abs):
-                try:
-                    with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef:
-                        ev_html = re.sub(r'<[^>]+>', ' ', ef.read())
-                        ev_html = ' '.join(ev_html.split())
-                    if item["key"] == "usdVndCenter":
-                        ref_parts = []
-                        m_sbv = re.search(r'Cục Quản lý ngoại hối[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
-                        if m_sbv:
-                            ref_parts.append(f"Cục QL Ngoại hối NHNN: Mua {m_sbv.group(1)} - Bán {m_sbv.group(2)} đồng")
-                        m_vcb = re.search(r'Vietcombank[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
-                        if m_vcb:
-                            ref_parts.append(f"VCB: {m_vcb.group(1)} - {m_vcb.group(2)} đồng")
-                        m_bidv = re.search(r'BIDV[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
-                        if m_bidv:
-                            ref_parts.append(f"BIDV: {m_bidv.group(1)} - {m_bidv.group(2)} đồng")
-                        if ref_parts:
-                            item["referenceValue"] = " | ".join(ref_parts)
-                        m_dxy = re.search(r'DXY[^.!?\n]{0,100}?(\d{3},\d{1,2})\s*điểm', ev_html, re.I)
-                        if m_dxy and "DXY" not in str(item.get("change", "")):
-                            item["change"] = f"{item['change']} (DXY: {m_dxy.group(1)} điểm)"
-                    elif item["key"] == "vnIndex":
-                        m_vni_chg = re.search(r'(?P<dir>tăng|giảm)(?:\s+nhẹ|\s+mạnh)?\s+(?P<pts>\d+(?:,\d+)?)\s*điểm,\s*tương\s*(?:ứng|đương)\s*(?P<pct>\d+(?:,\d+)?%)', ev_html, re.I)
-                        if m_vni_chg:
-                            sign = "-" if "giảm" in m_vni_chg.group("dir").lower() else "+"
-                            item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}; +9,57 Điểm (+0,55%) tuần 9–13/11"
-                    elif item["key"] == "maxDeposit12M":
-                        with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef_raw:
-                            raw_txt = ef_raw.read()
-                        m_canon = re.search(r'<link\s+rel=[\'"]canonical[\'"]\s+href=[\'"](.*?)[\'"]', raw_txt, re.I)
-                        m_title = re.search(r'<title>(.*?)</title>', raw_txt, re.I)
-                        if m_canon and m_canon.group(1).startswith("http") and ".ldo" in m_canon.group(1):
-                            item["sourceUrl"] = m_canon.group(1).strip()
-                        if m_title:
-                            clean_t = m_title.group(1).replace("- Báo Lao Động", "").replace("| Báo Lao Động", "").strip()
-                            if clean_t:
-                                item["articleTitle"] = clean_t
-                except Exception:
-                    pass
-                break
+        if raw_indicators and ev_rel:
+            for base_ev_dir in [intel_dir, RUNTIME_DIR]:
+                ev_abs = os.path.join(base_ev_dir, ev_rel) if ev_rel else ""
+                if ev_abs and os.path.exists(ev_abs):
+                    try:
+                        with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef:
+                            ev_html = re.sub(r'<[^>]+>', ' ', ef.read())
+                            ev_html = ' '.join(ev_html.split())
+                        if item["key"] == "usdVndCenter":
+                            ref_parts = []
+                            m_sbv = re.search(r'Cục Quản lý ngoại hối[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                            if m_sbv:
+                                ref_parts.append(f"Cục QL Ngoại hối NHNN: Mua {m_sbv.group(1)} - Bán {m_sbv.group(2)} đồng")
+                            m_vcb = re.search(r'Vietcombank[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                            if m_vcb:
+                                ref_parts.append(f"VCB: {m_vcb.group(1)} - {m_vcb.group(2)} đồng")
+                            m_bidv = re.search(r'BIDV[^.!?\n]{0,120}?(2\d\.\d{3})\s*-\s*(2\d\.\d{3})\s*đồng', ev_html, re.I)
+                            if m_bidv:
+                                ref_parts.append(f"BIDV: {m_bidv.group(1)} - {m_bidv.group(2)} đồng")
+                            if ref_parts:
+                                item["referenceValue"] = " | ".join(ref_parts)
+                            m_dxy = re.search(r'DXY[^.!?\n]{0,100}?(\d{3},\d{1,2})\s*điểm', ev_html, re.I)
+                            if m_dxy and "DXY" not in str(item.get("change", "")):
+                                item["change"] = f"{item['change']} (DXY: {m_dxy.group(1)} điểm)"
+                        elif item["key"] == "vnIndex":
+                            m_vni_chg = re.search(r'(?P<dir>tăng|giảm)(?:\s+nhẹ|\s+mạnh)?\s+(?P<pts>\d+(?:,\d+)?)\s*điểm,\s*tương\s*(?:ứng|đương)\s*(?P<pct>\d+(?:,\d+)?%)', ev_html, re.I)
+                            if m_vni_chg:
+                                sign = "-" if "giảm" in m_vni_chg.group("dir").lower() else "+"
+                                item["change"] = f"{sign}{m_vni_chg.group('pts')} Điểm ({sign}{m_vni_chg.group('pct')}) phiên {item['asOf']}"
+                        elif item["key"] == "maxDeposit12M":
+                            with open(ev_abs, "r", encoding="utf-8", errors="replace") as ef_raw:
+                                raw_txt = ef_raw.read()
+                            m_canon = re.search(r'<link\s+rel=[\'"]canonical[\'"]\s+href=[\'"](.*?)[\'"]', raw_txt, re.I)
+                            m_title = re.search(r'<title>(.*?)</title>', raw_txt, re.I)
+                            if m_canon and m_canon.group(1).startswith("http") and ".ldo" in m_canon.group(1):
+                                item["sourceUrl"] = m_canon.group(1).strip()
+                            if m_title:
+                                clean_t = m_title.group(1).replace("- Báo Lao Động", "").replace("| Báo Lao Động", "").strip()
+                                if clean_t:
+                                    item["articleTitle"] = clean_t
+                    except Exception:
+                        pass
+                    break
 
     for item in CORE_4_DEFS:
         card = {
@@ -1699,6 +1813,8 @@ def main():
             "value": item["value"],
             "referenceValue": item["referenceValue"],
             "change": item["change"],
+            "compactDelta": item.get("compactDelta", ""),
+            "compactSubRef": item.get("compactSubRef", ""),
             "unit": item["unit"],
             "observationAt": item.get("observationAt") or (f"{item['asOf']}T08:30:00+07:00" if "-" in item["asOf"] else "2026-10-31T23:59:59+07:00"),
             "asOf": item["asOf"],

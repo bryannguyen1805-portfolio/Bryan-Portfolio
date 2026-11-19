@@ -502,32 +502,44 @@ function renderPulseCard(m) {
   if (m.key === 'vnIndex') shortCode = 'VN-INDEX';
   if (m.key === 'inboundTourists') shortCode = 'KHÁCH QUỐC TẾ';
 
-  // Sub reference string
-  let subRef = m.referenceValue ? m.referenceValue.split('|')[0].trim() : (m.note || '');
-  if (m.key === 'usdVndCenter') subRef = 'VCB: 25.540 - 25.950 · DXY: 103,69';
-  if (m.key === 'maxDeposit12M') subRef = 'Big4: 5.40% · Cao nhất: 7.00% (Lao Động)';
-  if (m.key === 'vnIndex') subRef = 'Đóng cửa: 1.726,72 · GT: 18.400 tỷ';
-  if (m.key === 'inboundTourists') subRef = 'Khách Châu Âu +41.5% · Top: Hàn, Trung';
+  // Dynamic sub-reference string from EDITION_DATA (zero hardcoded daily values)
+  let subRef = m.compactSubRef || '';
+  if (!subRef) {
+    if (m.referenceValue) {
+      const refParts = m.referenceValue.split('|').map(s => s.trim()).filter(Boolean);
+      subRef = refParts.length >= 2 ? refParts.slice(1, 3).join(' · ') : refParts[0];
+    } else {
+      subRef = m.note || '';
+    }
+  }
 
-  let changeDisplay = '';
-  if (m.key === 'usdVndCenter') {
-    changeDisplay = '+13đ (+0,05%)';
+  let changeDisplay = m.compactDelta || '';
+  if (!changeDisplay) {
+    const rawChg = String(m.change || '');
+    const rangeMatch = rawChg.match(/(\d+(?:[.,]\d+)?%?\s*[-–]\s*\d+(?:[.,]\d+)?%)/);
+    if (m.key === 'maxDeposit12M' && rangeMatch) {
+      changeDisplay = rangeMatch[1];
+    } else {
+      const signedMatch = rawChg.match(/([+-]\s*\d+(?:[.,]\d+)?\s*(?:đ|VND\/USD|điểm|%)(?:\s*(?:YoY|\([^)]*\)))?)/i);
+      if (signedMatch) {
+        changeDisplay = signedMatch[1].replace(/\s*VND\/USD/gi, 'đ').replace(/\s*điểm/gi, 'đ').trim();
+      } else {
+        changeDisplay = rawChg ? rawChg.split('so với')[0].trim().slice(0, 22) : changeText;
+      }
+    }
+  }
+
+  // Recompute class & icon cleanly from compact changeDisplay
+  const trimmedDelta = String(changeDisplay || '').trim();
+  if (trimmedDelta.startsWith('+')) {
     changeClass = 'pos';
     changeIcon = '▲';
-  } else if (m.key === 'maxDeposit12M') {
-    changeDisplay = '5.4% - 7.0%';
-    changeClass = 'neu';
-    changeIcon = '▬';
-  } else if (m.key === 'vnIndex') {
-    changeDisplay = '-10.17đ (-0,59%)';
+  } else if (trimmedDelta.startsWith('-')) {
     changeClass = 'neg';
     changeIcon = '▼';
-  } else if (m.key === 'inboundTourists') {
-    changeDisplay = '+13.8% YoY';
-    changeClass = 'pos';
-    changeIcon = '▲';
-  } else {
-    changeDisplay = m.change ? m.change.split('so với')[0].trim().slice(0, 18) : changeText;
+  } else if (/^\d/.test(trimmedDelta) || st === 'neutral') {
+    changeClass = 'neu';
+    changeIcon = '▬';
   }
 
   const sourceName = m.sourceShortName || (m.sourceName ? m.sourceName.split('(')[0].trim() : 'Báo chí');
@@ -1072,14 +1084,17 @@ function openArticleReader(eventId) {
           <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingImplication || item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
         </section>
 
-        ${item.sectionE_fintechLens ? `
-        <section style="background-color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
-          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
-            ${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
+        ${item.sectionE_fintechLens ? (() => {
+          const lensTxt = item.sectionE_fintechLens;
+          const isNonDirect = lensTxt.includes('Không áp dụng') || lensTxt.includes('Không liên quan') || lensTxt.includes('Không phát sinh');
+          return `
+        <section style="background-color:${isNonDirect ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
+          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
+            ${isNonDirect ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
           </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${(item.sectionE_fintechLens.includes('Không áp dụng') || item.sectionE_fintechLens.includes('Không liên quan')) ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(item.sectionE_fintechLens)}</p>
-        </section>
-        ` : ''}
+          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
+        </section>`;
+        })() : ''}
 
         <!-- Source Provenance -->
         <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
