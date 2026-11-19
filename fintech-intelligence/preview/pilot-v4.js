@@ -61,16 +61,37 @@
     newsById: {}
   };
 
+  const INITIAL_PATH = window.location.pathname || '/';
+  const CURRENT_DIR_BASE = (() => {
+    if (window.location.protocol === 'file:') return './';
+    const slashIdx = INITIAL_PATH.lastIndexOf('/');
+    if (slashIdx >= 0 && /\.[a-z0-9]+$/i.test(INITIAL_PATH.slice(slashIdx + 1))) {
+      return INITIAL_PATH.slice(0, slashIdx + 1);
+    }
+    return INITIAL_PATH.endsWith('/') ? INITIAL_PATH : `${INITIAL_PATH}/`;
+  })();
+  const IS_PREVIEW_SUBDIR = /\/preview\/$/i.test(CURRENT_DIR_BASE);
+  const ROOT_ASSET_BASE =
+    window.location.protocol === 'file:'
+      ? (IS_PREVIEW_SUBDIR ? '../' : './')
+      : (IS_PREVIEW_SUBDIR ? CURRENT_DIR_BASE.replace(/preview\/$/i, '') : CURRENT_DIR_BASE);
+  const PORTFOLIO_HOME_URL =
+    window.location.protocol === 'file:'
+      ? (IS_PREVIEW_SUBDIR ? '../../index.html' : '../index.html')
+      : (ROOT_ASSET_BASE.replace(/[^/]+\/$/, '') || '/');
+
   function getCleanPortalPath() {
     if (window.location.protocol === 'file:') return window.location.pathname;
-    let p = window.location.pathname || '/';
+    let p = INITIAL_PATH;
     if (p.endsWith('/index.html')) {
       p = p.slice(0, -'index.html'.length);
+    } else if (p.endsWith('/magspread-preview.html')) {
+      p = p.slice(0, -'magspread-preview.html'.length);
     }
     if (p.length > 1 && p.endsWith('/')) {
       p = p.slice(0, -1);
     }
-    return p;
+    return p || '/';
   }
 
   const $ = (sel) => document.querySelector(sel);
@@ -121,7 +142,7 @@
   // ─── DATA LOADER ──────────────────────────────────────────────────────────
   async function loadEditionData() {
     try {
-      const resp = await fetch(`../edition-data.json?v=${Date.now()}`, { cache: 'no-store' });
+      const resp = await fetch(`${ROOT_ASSET_BASE}edition-data.json?v=${Date.now()}`, { cache: 'no-store' });
       if (resp.ok) {
         return await resp.json();
       }
@@ -129,6 +150,148 @@
       // Fall back silently to window.EDITION_DATA
     }
     return window.EDITION_DATA || null;
+  }
+
+  function updateSeoAndStructuredData() {
+    const d = state.data;
+    if (!d) return;
+    const cs = d.editorialSections?.sec02_coverStory || {};
+    const newsList = d.eligibleNewsList || [];
+    const edMatch = String(d.editionNumber || '').match(/(\d+)/);
+    const edLabel = edMatch ? `Ấn bản số ${edMatch[1]}` : 'Ấn bản mới nhất';
+    const edDate = d.editionDate || '19/11/2026';
+    const isoDate = (() => {
+      const m = String(edDate).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      return m ? `${m[3]}-${m[2]}-${m[1]}` : '2026-11-19';
+    })();
+    const modifiedIso = d.editionCutoffAt || `${isoDate}T19:30:00+07:00`;
+    const coverTitle = String(cs.editorialHeadline || '').trim();
+    const seoTitle = IS_PREVIEW_SUBDIR
+      ? `Bnews Fintech V4 Pilot — ${edLabel} (${edDate})`
+      : `Bryan News | Fintech Intelligence — ${edLabel} (${edDate}) · ${newsList.length} Tin Kinh tế & Thanh toán số`;
+    const seoDesc = coverTitle
+      ? `Bryan News (${edLabel} · ${edDate}): ${coverTitle}. Tổng hợp ${newsList.length} sự kiện xác minh về Thanh toán số, Ngân hàng, Thị trường vốn, Doanh nghiệp, Vĩ mô và Bán lẻ.`
+      : `Bryan News - Chuyên trang thông tin và phân tích ${newsList.length} sự kiện kinh tế vĩ mô, ngân hàng, thị trường tài chính và thanh toán số Việt Nam.`;
+
+    document.title = seoTitle;
+
+    const setMeta = (selector, content) => {
+      if (!content) return;
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute('content', content);
+    };
+    setMeta('meta[name="description"]', seoDesc);
+    setMeta('meta[property="og:title"]', seoTitle);
+    setMeta('meta[property="og:description"]', seoDesc);
+    setMeta('meta[name="twitter:title"]', seoTitle);
+    setMeta('meta[name="twitter:description"]', seoDesc);
+    if (cs.leadArticle?.imageUrl) {
+      setMeta('meta[property="og:image"]', cs.leadArticle.imageUrl);
+      setMeta('meta[name="twitter:image"]', cs.leadArticle.imageUrl);
+    }
+
+    const schemaEl = document.getElementById('v4JsonLdSchema');
+    if (schemaEl) {
+      const portalUrl = 'https://bryanportfolio.io.vn/fintech-intelligence/';
+      const topArticles = newsList.slice(0, 10).map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        url: item.canonicalUrl || item.sourceUrl || portalUrl,
+        item: {
+          '@type': 'NewsArticle',
+          headline: item.headline || item.title || '',
+          description: item.summary || '',
+          datePublished: item.originalSourcePublishedAt || item.originalPublishedAt || modifiedIso,
+          articleSection: catLabel(item.category),
+          image: item.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+          url: item.canonicalUrl || item.sourceUrl || portalUrl,
+          publisher: {
+            '@type': 'Organization',
+            name: sourceLabel(item)
+          }
+        }
+      }));
+
+      const ldObj = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': ['NewsMediaOrganization', 'WebSite'],
+            '@id': `${portalUrl}#website`,
+            name: 'Bryan News | Fintech Intelligence',
+            alternateName: ['Bryan News', 'Bnews Fintech', 'Fintech Intelligence VN'],
+            url: portalUrl,
+            description: seoDesc,
+            inLanguage: 'vi-VN',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+              width: 1200,
+              height: 630
+            },
+            publisher: {
+              '@type': 'Person',
+              name: 'Nguyễn Huỳnh Quang Trí (Bryan Nguyen)',
+              jobTitle: 'Enterprise B2B & Fintech Product Specialist',
+              url: 'https://bryanportfolio.io.vn/',
+              sameAs: [
+                'https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/',
+                'https://zalo.me/0838673639',
+                'https://www.facebook.com/Tori1005'
+              ]
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${portalUrl}?q={search_term_string}`
+              },
+              'query-input': 'required name=search_term_string'
+            }
+          },
+          {
+            '@type': 'CollectionPage',
+            '@id': `${portalUrl}#webpage`,
+            url: portalUrl,
+            name: seoTitle,
+            description: seoDesc,
+            inLanguage: 'vi-VN',
+            datePublished: `${isoDate}T09:00:00+07:00`,
+            dateModified: modifiedIso,
+            isPartOf: { '@id': `${portalUrl}#website` },
+            breadcrumb: { '@id': `${portalUrl}#breadcrumb` }
+          },
+          {
+            '@type': 'BreadcrumbList',
+            '@id': `${portalUrl}#breadcrumb`,
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Bryan Portfolio', item: 'https://bryanportfolio.io.vn/' },
+              { '@type': 'ListItem', position: 2, name: 'Bryan News | Fintech Intelligence', item: portalUrl }
+            ]
+          },
+          {
+            '@type': 'NewsArticle',
+            '@id': `${portalUrl}#cover-story`,
+            headline: coverTitle || seoTitle,
+            description: cs.editorialSubheadline || cs.dek || seoDesc,
+            image: cs.leadArticle?.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+            datePublished: `${isoDate}T09:00:00+07:00`,
+            dateModified: modifiedIso,
+            author: { '@type': 'Person', name: 'Nguyễn Huỳnh Quang Trí (Bryan Nguyen)', url: 'https://bryanportfolio.io.vn/' },
+            publisher: { '@id': `${portalUrl}#website` },
+            mainEntityOfPage: { '@id': `${portalUrl}#webpage` }
+          },
+          {
+            '@type': 'ItemList',
+            '@id': `${portalUrl}#edition-articles`,
+            name: `Danh sách tin nổi bật ${edLabel} (${edDate})`,
+            numberOfItems: newsList.length,
+            itemListElement: topArticles
+          }
+        ]
+      };
+      schemaEl.textContent = JSON.stringify(ldObj);
+    }
   }
 
   // ─── HEADER & MARKET PULSE (44PX) ─────────────────────────────────────────
@@ -158,7 +321,7 @@
       }
     }
     if (footerMetaEl && d.editionId) {
-      footerMetaEl.textContent = `${d.editionId} · ${d.editionDate || ''} · Pilot V4.0`;
+      footerMetaEl.textContent = `${d.editionId} · ${d.editionDate || ''} · Institutional V4.0`;
     }
   }
 
@@ -847,7 +1010,8 @@
     const mount = $('#v4NlPreviewMount');
     if (!mount) return;
     state.nlLoaded = true;
-    mount.innerHTML = `<iframe src="./newsletter-preview.html?v=${Date.now()}" class="v4-nl-iframe" title="Bản tin Bnews mới nhất"></iframe>`;
+    const nlUrl = `${CURRENT_DIR_BASE}newsletter-preview.html?v=${Date.now()}`;
+    mount.innerHTML = `<iframe src="${nlUrl}" class="v4-nl-iframe" title="Bản tin Bnews mới nhất"></iframe>`;
     const ifr = mount.querySelector('iframe');
     if (ifr) {
       ifr.addEventListener('load', () => {
@@ -1079,9 +1243,11 @@
   }
 
   // ─── ACCESSIBLE FOCUS TRAP & DRAWER READER ─────────────────────────────────
+  const OVERLAY_SELECTORS = '#v4Drawer, #v4NavDrawer, #v4VCardModal, #v4WelcomeModal';
   const LANDMARK_SELECTORS =
-    '#v4Header, .v4-cat-nav, #v4PulseStrip, #mainContent, #v4CommunityCta, #siteFooter, #v4FloatWidget';
+    '.v4-skip-link, #v4Header, .v4-cat-nav, #v4PulseStrip, #mainContent, #v4CommunityCta, #siteFooter, #v4FloatWidget';
   let activeTrap = null;
+  let lastExternalFocus = null;
 
   function setBackgroundInert(isInert, activeEl) {
     $$(LANDMARK_SELECTORS).forEach((el) => {
@@ -1096,20 +1262,53 @@
     });
   }
 
+  function isElementVisible(el) {
+    if (!el || el.disabled || el.closest('[hidden]') || el.closest('[aria-hidden="true"]')) return false;
+    const style = window.getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden') return false;
+    return el.getClientRects().length > 0;
+  }
+
   function getFocusable(container) {
     if (!container) return [];
     return Array.from(
       container.querySelectorAll(
-        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
       )
-    ).filter((el) => !el.closest('[hidden]') && el.offsetParent !== null);
+    ).filter(isElementVisible);
   }
 
   function activateTrap(overlayEl, onClose) {
     if (!overlayEl) return;
-    const prevTrigger = document.activeElement;
-    if (activeTrap && activeTrap.handler) {
-      document.removeEventListener('keydown', activeTrap.handler, true);
+    const currentFocus = document.activeElement;
+    if (
+      currentFocus &&
+      currentFocus !== document.body &&
+      currentFocus !== document.documentElement &&
+      !currentFocus.closest(OVERLAY_SELECTORS)
+    ) {
+      lastExternalFocus = currentFocus;
+    } else if (!lastExternalFocus || !document.contains(lastExternalFocus)) {
+      lastExternalFocus = null;
+    }
+
+    const prevTrigger =
+      currentFocus && currentFocus !== document.body && !currentFocus.closest(OVERLAY_SELECTORS)
+        ? currentFocus
+        : lastExternalFocus;
+
+    if (activeTrap) {
+      if (activeTrap.handler) document.removeEventListener('keydown', activeTrap.handler, true);
+      if (activeTrap.focusHandler) document.removeEventListener('focusin', activeTrap.focusHandler, true);
+    }
+
+    // Move focus out of background landmarks BEFORE setting aria-hidden / inert
+    if (!overlayEl.hasAttribute('tabindex')) overlayEl.setAttribute('tabindex', '-1');
+    const syncItems = getFocusable(overlayEl);
+    if (syncItems.length) {
+      syncItems[0].focus({ preventScroll: true });
+    } else {
+      overlayEl.focus({ preventScroll: true });
     }
     setBackgroundInert(true, overlayEl);
 
@@ -1129,48 +1328,73 @@
         }
         const first = items[0];
         const last = items[items.length - 1];
+        if (first === last) {
+          e.preventDefault();
+          first.focus({ preventScroll: true });
+          return;
+        }
         if (e.shiftKey) {
           if (document.activeElement === first || !overlayEl.contains(document.activeElement)) {
             e.preventDefault();
-            last.focus();
+            last.focus({ preventScroll: true });
           }
         } else if (document.activeElement === last || !overlayEl.contains(document.activeElement)) {
           e.preventDefault();
-          first.focus();
+          first.focus({ preventScroll: true });
         }
       }
     };
 
+    const focusHandler = (e) => {
+      if (!activeTrap || activeTrap.overlayEl !== overlayEl || overlayEl.hidden) return;
+      if (!overlayEl.contains(e.target)) {
+        e.stopPropagation();
+        const items = getFocusable(overlayEl);
+        const fallback = items[0] || overlayEl;
+        if (fallback === overlayEl && !overlayEl.hasAttribute('tabindex')) {
+          overlayEl.setAttribute('tabindex', '-1');
+        }
+        fallback.focus({ preventScroll: true });
+      }
+    };
+
     document.addEventListener('keydown', handler, true);
-    activeTrap = { overlayEl, prevTrigger, handler };
+    document.addEventListener('focusin', focusHandler, true);
+    activeTrap = { overlayEl, prevTrigger, handler, focusHandler };
 
     setTimeout(() => {
       if (overlayEl.hidden) return;
+      if (overlayEl.contains(document.activeElement) && document.activeElement !== overlayEl) return;
       const items = getFocusable(overlayEl);
       if (items.length) {
         items[0].focus({ preventScroll: true });
-      } else {
-        if (!overlayEl.hasAttribute('tabindex')) overlayEl.setAttribute('tabindex', '-1');
-        overlayEl.focus({ preventScroll: true });
       }
     }, 30);
   }
 
   function deactivateTrap(overlayEl, restoreFocus = true) {
-    const anyOpen = ['#v4Drawer', '#v4NavDrawer', '#v4VCardModal', '#v4WelcomeModal'].some((sel) => {
-      const el = $(sel);
-      return el && !el.hidden;
-    });
+    const anyOpen = [$( '#v4Drawer' ), $( '#v4NavDrawer' ), $( '#v4VCardModal' ), $( '#v4WelcomeModal' )].some(
+      (el) => el && !el.hidden
+    );
     if (!anyOpen) {
       setBackgroundInert(false);
       document.body.style.overflow = '';
     }
     if (activeTrap && (!overlayEl || activeTrap.overlayEl === overlayEl)) {
-      const { prevTrigger, handler } = activeTrap;
+      const { prevTrigger, handler, focusHandler } = activeTrap;
       if (handler) document.removeEventListener('keydown', handler, true);
+      if (focusHandler) document.removeEventListener('focusin', focusHandler, true);
       activeTrap = null;
-      if (restoreFocus && !anyOpen && prevTrigger && typeof prevTrigger.focus === 'function' && document.contains(prevTrigger)) {
-        prevTrigger.focus({ preventScroll: true });
+      if (restoreFocus && !anyOpen) {
+        const targetRestore =
+          (prevTrigger && document.contains(prevTrigger) && isElementVisible(prevTrigger) ? prevTrigger : null) ||
+          (lastExternalFocus && document.contains(lastExternalFocus) && isElementVisible(lastExternalFocus)
+            ? lastExternalFocus
+            : null);
+        if (targetRestore) {
+          targetRestore.focus({ preventScroll: true });
+        }
+        lastExternalFocus = null;
       }
     }
   }
@@ -1666,10 +1890,14 @@
   function applyTheme(theme) {
     const isDark = theme === 'dark';
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    const logoPath = isDark ? '../bnews-logo-dark-opt.webp' : '../bnews-logo-light-opt.webp';
+    const logoPath = isDark ? `${ROOT_ASSET_BASE}bnews-logo-dark-opt.webp` : `${ROOT_ASSET_BASE}bnews-logo-light-opt.webp`;
     $$('.v4-brand-logo, .v4-nav-drawer-logo, .v4-footer-logo').forEach((img) => {
       img.src = logoPath;
     });
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute('content', isDark ? '#0B0F19' : '#0A3D7A');
+    }
     const tBtn = $('#v4ThemeToggleBtn');
     if (tBtn) {
       tBtn.textContent = isDark ? 'Chuyển sang Giao diện Sáng' : 'Đổi giao diện Sáng / Tối';
@@ -1986,10 +2214,23 @@
       return;
     }
 
+    // Rewrite internal links so trailing-slash-free replaceState URL never breaks relative paths
+    if (window.location.protocol !== 'file:') {
+      $$('a[href$="newsletter-preview.html"]').forEach((a) => {
+        a.setAttribute('href', `${CURRENT_DIR_BASE}newsletter-preview.html`);
+      });
+      $$('a[href$="../index.html"]').forEach((a) => {
+        if (!a.classList.contains('v4-anchor-link')) {
+          a.setAttribute('href', PORTFOLIO_HOME_URL);
+        }
+      });
+    }
+
     state.data = data;
     (data.eligibleNewsList || []).forEach((item) => {
       if (item.eventId) state.newsById[item.eventId] = item;
     });
+    updateSeoAndStructuredData();
 
     try {
       const q = new URLSearchParams(window.location.search).get('q');

@@ -222,6 +222,11 @@ def main():
         h_text = re.sub(r'src="(?:\.\/)?magspread\.js(?:\?v=[^"]*)?"', f'src="./magspread.js?v={ts}"', h_text)
         ed_badge_val = data.get("editionNumber", "").strip()
         if ed_badge_val:
+            ed_num_m = re.search(r"(\d+)", ed_badge_val)
+            if ed_num_m:
+                short_ed = f"Ấn bản số {ed_num_m.group(1)}"
+                h_text = re.sub(r'(<span[^>]*id="v4EditionLabel"[^>]*>)[^<]+(</span>)', rf'\g<1>{short_ed}\g<2>', h_text)
+                h_text = re.sub(r'(<span[^>]*id="v4DrawerEditionBadge"[^>]*>)[^<]+(</span>)', rf'\g<1>{short_ed}\g<2>', h_text)
             h_text = re.sub(r">ẤN BẢN SỐ [^<]+<", f">{ed_badge_val}<", h_text)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(h_text)
@@ -232,6 +237,8 @@ def main():
     sync_files = [
         "index.html",
         "magspread-preview.html",
+        "newsletter-preview.html",
+        "avatar.webp",
         "edition-data.js",
         "edition-data.json",
         "EVIDENCE_INDEX.json",

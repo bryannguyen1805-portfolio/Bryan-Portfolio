@@ -1,2888 +1,2275 @@
 /**
- * Bryan FinTech Market Intelligence — MagSpread Editorial Portal Engine
- * Strict MagSpread Design System Implementation
+ * Bryan News | Fintech Intelligence — V4.0 Clean Institutional UI Pilot
+ * Isolated preview reading live ../edition-data.json with ../edition-data.js fallback.
  */
-
 'use strict';
 
-let EDITION_DATA = null;
-let currentCategoryFilter = 'ALL';
-let currentSearchTerm = '';
+(() => {
+  const CATEGORIES = [
+    { key: 'Thanh toán', label: 'Thanh toán số' },
+    { key: 'Ngân hàng', label: 'Ngân hàng' },
+    { key: 'Thị trường vốn', label: 'Thị trường vốn' },
+    { key: 'Doanh nghiệp', label: 'Doanh nghiệp' },
+    { key: 'Kinh tế vĩ mô', label: 'Kinh tế vĩ mô' },
+    { key: 'Bán lẻ, D2C và xu hướng tiêu dùng', label: 'Bán lẻ & Tiêu dùng' }
+  ];
 
-// Clean canonical portal URL helpers (strips /index.html and #today while keeping asset/fetch base safe)
-const PORTAL_BASE_DIR = (() => {
-  if (window.location.protocol === 'file:') return './';
-  let p = window.location.pathname || '/';
-  if (p.endsWith('/index.html')) p = p.slice(0, -'index.html'.length);
-  else if (p.endsWith('/magspread-preview.html')) p = p.slice(0, -'magspread-preview.html'.length);
-  else if (!p.endsWith('/')) p = p + '/';
-  return p;
-})();
+  const CAT_LABEL_MAP = Object.fromEntries(CATEGORIES.map(c => [c.key, c.label]));
 
-function getCleanPortalPath() {
-  if (window.location.protocol === 'file:') return window.location.pathname;
-  let p = PORTAL_BASE_DIR;
-  if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
-  return p;
-}
+  const BNEWS_SUBSCRIBE_WEBHOOK_URL =
+    'https://script.google.com/macros/s/AKfycbwzarTCq14B7wgY3LjdBjLpWFP8hNH1xSGdwybkxCDigKdz12P60YRnBVFy9yi4uFL4/exec';
+  const WELCOME_STORAGE_KEY = 'bryan_fintech_welcome_shown_v4';
 
-// DOM Helpers
-const $ = (sel) => document.querySelector(sel);
-const $$ = (sel) => document.querySelectorAll(sel);
-
-function escapeHtml(str) {
-  if (str === null || str === undefined) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-// ─── THEME CONTROLLER (D-15 Single Canonical Storage: site_theme) ───
-function initTheme() {
-  let saved = localStorage.getItem('site_theme');
-  const legacy = localStorage.getItem('ms-theme');
-  if (!saved && (legacy === 'dark' || legacy === 'light')) {
-    saved = legacy;
-    localStorage.setItem('site_theme', saved);
-  }
-  if (legacy !== null) {
-    localStorage.removeItem('ms-theme');
-  }
-  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-  updateThemeIcon();
-}
-
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  // D-15: Single canonical key 'site_theme' only
-  localStorage.setItem('site_theme', next);
-  localStorage.removeItem('ms-theme');
-  updateThemeIcon();
-}
-
-function updateThemeIcon() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const btn = $('#themeToggleBtn');
-  if (btn) {
-    btn.setAttribute('aria-label', isDark ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối');
-    btn.setAttribute('title', isDark ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối');
-    btn.innerHTML = isDark
-      ? '<span class="ms-theme-icon" aria-hidden="true">☀️</span>'
-      : '<span class="ms-theme-icon" aria-hidden="true">🌙</span>';
-  }
-  const targetLogo = PORTAL_BASE_DIR + (isDark ? 'bnews-logo-dark-opt.webp?v=1794692000' : 'bnews-logo-light-opt.webp?v=1794692000');
-  const headerLogo = $('#headerBryanLogo');
-  const desktopStickyLogo = $('#desktopStickyLogo');
-  const mobileLogo = $('#mobileBryanLogo');
-  const drawerLogo = $('#drawerBryanLogo');
-  const footerLogo = $('#footerBryanLogo');
-  if (headerLogo) headerLogo.src = targetLogo;
-  if (desktopStickyLogo) desktopStickyLogo.src = targetLogo;
-  if (mobileLogo) mobileLogo.src = targetLogo;
-  if (drawerLogo) drawerLogo.src = targetLogo;
-  if (footerLogo) footerLogo.src = targetLogo;
-  $$('.ms-nav-logo-img').forEach(img => { img.src = targetLogo; });
-}
-
-// ─── UNIFIED ACCESSIBLE FOCUS TRAP & DRAWER CONTROLLER (D-09) ───
-let drawerLastFocusedElement = null;
-let activeTrapState = null;
-
-function setBackgroundInert(isInert, activeEl) {
-  const landmarks = document.querySelectorAll(
-    '#contactTopBar, body > header, body > nav, .ms-mobile-quick-tabs, #mainContent, body > footer, .ms-floating-launcher-container, .floating-widget'
-  );
-  landmarks.forEach(el => {
-    if (activeEl && el.contains(activeEl)) return;
-    if (isInert) {
-      el.setAttribute('aria-hidden', 'true');
-      el.inert = true;
-    } else {
-      el.removeAttribute('aria-hidden');
-      el.inert = false;
-    }
-  });
-}
-
-function getFocusableElements(container) {
-  if (!container) return [];
-  return Array.from(container.querySelectorAll(
-    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-  )).filter(el => !el.closest('[aria-hidden="true"]') && el.offsetParent !== null);
-}
-
-function activateFocusTrap(modalEl, onClose, triggerOverride) {
-  if (!modalEl) return;
-  const prevTrigger = triggerOverride || document.activeElement;
-  if (activeTrapState && activeTrapState.keydownHandler) {
-    document.removeEventListener('keydown', activeTrapState.keydownHandler, true);
-  }
-  modalEl.setAttribute('aria-hidden', 'false');
-  setBackgroundInert(true, modalEl);
-
-  const keydownHandler = (e) => {
-    if (!activeTrapState || activeTrapState.modalEl !== modalEl) return;
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      e.stopPropagation();
-      onClose();
-      return;
-    }
-    if (e.key === 'Tab') {
-      const focusables = getFocusableElements(modalEl);
-      if (focusables.length === 0) {
-        e.preventDefault();
-        return;
-      }
-      const first = focusables[0];
-      const last = focusables[focusables.length - 1];
-      if (e.shiftKey) {
-        if (document.activeElement === first || !modalEl.contains(document.activeElement)) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else {
-        if (document.activeElement === last || !modalEl.contains(document.activeElement)) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
+  const QR_SVG_DATA = {
+    vcard: {
+      size: 71,
+      color: '#292524',
+      path: 'M1,1h7v1h-7zM9,1h2v1h-2zM12,1h1v1h-1zM14,1h1v1h-1zM17,1h1v1h-1zM21,1h1v1h-1zM23,1h2v1h-2zM26,1h1v1h-1zM30,1h1v1h-1zM35,1h1v1h-1zM37,1h2v1h-2zM41,1h2v1h-2zM45,1h3v1h-3zM50,1h2v1h-2zM54,1h2v1h-2zM60,1h2v1h-2zM64,1h1v1h-1zM67,1h3v1h-3zM1,2h1v1h-1zM7,2h1v1h-1zM12,2h1v1h-1zM15,2h3v1h-3zM19,2h1v1h-1zM22,2h2v1h-2zM29,2h3v1h-3zM35,2h1v1h-1zM37,2h2v1h-2zM40,2h1v1h-1zM42,2h1v1h-1zM44,2h3v1h-3zM50,2h1v1h-1zM52,2h2v1h-2zM58,2h7v1h-7zM66,2h1v1h-1zM69,2h1v1h-1zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM10,3h4v1h-4zM18,3h1v1h-1zM21,3h2v1h-2zM24,3h1v1h-1zM26,3h2v1h-2zM31,3h1v1h-1zM33,3h5v1h-5zM39,3h2v1h-2zM42,3h3v1h-3zM46,3h1v1h-1zM48,3h1v1h-1zM50,3h2v1h-2zM53,3h1v1h-1zM57,3h1v1h-1zM59,3h2v1h-2zM63,3h1v1h-1zM65,3h3v1h-3zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM11,4h1v1h-1zM15,4h2v1h-2zM19,4h2v1h-2zM23,4h1v1h-1zM30,4h2v1h-2zM34,4h1v1h-1zM40,4h2v1h-2zM43,4h4v1h-4zM49,4h1v1h-1zM51,4h1v1h-1zM58,4h1v1h-1zM60,4h3v1h-3zM64,4h1v1h-1zM67,4h3v1h-3zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h3v1h-3zM13,5h3v1h-3zM20,5h1v1h-1zM24,5h3v1h-3zM29,5h2v1h-2zM33,5h6v1h-6zM47,5h1v1h-1zM50,5h1v1h-1zM57,5h1v1h-1zM59,5h1v1h-1zM61,5h5v1h-5zM67,5h1v1h-1zM69,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM11,6h1v1h-1zM14,6h2v1h-2zM19,6h1v1h-1zM21,6h5v1h-5zM29,6h3v1h-3zM33,6h1v1h-1zM37,6h2v1h-2zM40,6h1v1h-1zM42,6h1v1h-1zM44,6h1v1h-1zM46,6h4v1h-4zM51,6h2v1h-2zM54,6h1v1h-1zM57,6h1v1h-1zM59,6h1v1h-1zM61,6h1v1h-1zM65,6h3v1h-3zM69,6h1v1h-1zM1,7h7v1h-7zM9,7h2v1h-2zM12,7h3v1h-3zM17,7h1v1h-1zM22,7h1v1h-1zM24,7h4v1h-4zM29,7h2v1h-2zM32,7h2v1h-2zM35,7h1v1h-1zM37,7h4v1h-4zM42,7h1v1h-1zM46,7h1v1h-1zM50,7h2v1h-2zM54,7h2v1h-2zM57,7h1v1h-1zM61,7h1v1h-1zM63,7h1v1h-1zM65,7h3v1h-3zM9,8h3v1h-3zM14,8h1v1h-1zM19,8h6v1h-6zM26,8h2v1h-2zM32,8h2v1h-2zM37,8h1v1h-1zM39,8h2v1h-2zM43,8h1v1h-1zM46,8h1v1h-1zM50,8h2v1h-2zM53,8h3v1h-3zM58,8h2v1h-2zM61,8h1v1h-1zM65,8h1v1h-1zM67,8h1v1h-1zM69,8h1v1h-1zM1,9h1v1h-1zM4,9h2v1h-2zM7,9h2v1h-2zM11,9h1v1h-1zM14,9h1v1h-1zM16,9h1v1h-1zM18,9h1v1h-1zM23,9h1v1h-1zM25,9h1v1h-1zM28,9h1v1h-1zM31,9h8v1h-8zM41,9h1v1h-1zM44,9h2v1h-2zM47,9h2v1h-2zM52,9h1v1h-1zM54,9h2v1h-2zM57,9h1v1h-1zM60,9h7v1h-7zM69,9h1v1h-1zM1,10h1v1h-1zM8,10h2v1h-2zM11,10h3v1h-3zM15,10h1v1h-1zM19,10h3v1h-3zM24,10h2v1h-2zM27,10h1v1h-1zM29,10h1v1h-1zM31,10h2v1h-2zM35,10h1v1h-1zM38,10h1v1h-1zM42,10h1v1h-1zM44,10h4v1h-4zM49,10h1v1h-1zM52,10h2v1h-2zM56,10h2v1h-2zM59,10h2v1h-2zM63,10h1v1h-1zM65,10h1v1h-1zM69,10h1v1h-1zM1,11h1v1h-1zM3,11h1v1h-1zM5,11h8v1h-8zM15,11h4v1h-4zM20,11h1v1h-1zM23,11h1v1h-1zM25,11h2v1h-2zM28,11h6v1h-6zM35,11h5v1h-5zM44,11h1v1h-1zM46,11h1v1h-1zM50,11h5v1h-5zM57,11h5v1h-5zM63,11h1v1h-1zM65,11h1v1h-1zM2,12h2v1h-2zM5,12h1v1h-1zM9,12h1v1h-1zM12,12h2v1h-2zM15,12h1v1h-1zM19,12h3v1h-3zM24,12h1v1h-1zM26,12h3v1h-3zM30,12h1v1h-1zM32,12h3v1h-3zM37,12h1v1h-1zM39,12h1v1h-1zM41,12h5v1h-5zM47,12h1v1h-1zM49,12h1v1h-1zM51,12h2v1h-2zM54,12h2v1h-2zM60,12h1v1h-1zM62,12h3v1h-3zM66,12h2v1h-2zM69,12h1v1h-1zM1,13h1v1h-1zM3,13h3v1h-3zM7,13h1v1h-1zM9,13h1v1h-1zM15,13h5v1h-5zM21,13h1v1h-1zM24,13h2v1h-2zM27,13h2v1h-2zM30,13h3v1h-3zM34,13h1v1h-1zM36,13h3v1h-3zM40,13h11v1h-11zM52,13h1v1h-1zM54,13h4v1h-4zM59,13h1v1h-1zM62,13h2v1h-2zM67,13h1v1h-1zM69,13h1v1h-1zM1,14h1v1h-1zM5,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM12,14h2v1h-2zM16,14h2v1h-2zM19,14h3v1h-3zM23,14h1v1h-1zM26,14h4v1h-4zM31,14h2v1h-2zM34,14h1v1h-1zM38,14h1v1h-1zM40,14h2v1h-2zM45,14h5v1h-5zM54,14h1v1h-1zM56,14h1v1h-1zM58,14h2v1h-2zM62,14h3v1h-3zM66,14h1v1h-1zM1,15h1v1h-1zM4,15h1v1h-1zM7,15h1v1h-1zM9,15h1v1h-1zM12,15h2v1h-2zM15,15h2v1h-2zM20,15h1v1h-1zM23,15h1v1h-1zM27,15h5v1h-5zM33,15h1v1h-1zM35,15h1v1h-1zM37,15h2v1h-2zM41,15h1v1h-1zM44,15h1v1h-1zM46,15h3v1h-3zM51,15h4v1h-4zM58,15h3v1h-3zM62,15h1v1h-1zM65,15h1v1h-1zM68,15h1v1h-1zM3,16h4v1h-4zM9,16h2v1h-2zM12,16h1v1h-1zM14,16h2v1h-2zM18,16h1v1h-1zM23,16h1v1h-1zM25,16h2v1h-2zM29,16h2v1h-2zM32,16h1v1h-1zM34,16h1v1h-1zM37,16h3v1h-3zM43,16h2v1h-2zM46,16h1v1h-1zM48,16h2v1h-2zM51,16h2v1h-2zM55,16h2v1h-2zM58,16h1v1h-1zM63,16h1v1h-1zM65,16h1v1h-1zM67,16h1v1h-1zM69,16h1v1h-1zM1,17h4v1h-4zM7,17h4v1h-4zM12,17h2v1h-2zM16,17h3v1h-3zM23,17h3v1h-3zM27,17h1v1h-1zM29,17h1v1h-1zM31,17h4v1h-4zM36,17h2v1h-2zM39,17h3v1h-3zM44,17h1v1h-1zM46,17h1v1h-1zM52,17h1v1h-1zM54,17h1v1h-1zM56,17h1v1h-1zM58,17h1v1h-1zM61,17h2v1h-2zM66,17h2v1h-2zM69,17h1v1h-1zM1,18h1v1h-1zM9,18h1v1h-1zM16,18h2v1h-2zM20,18h1v1h-1zM22,18h2v1h-2zM25,18h2v1h-2zM28,18h1v1h-1zM31,18h1v1h-1zM34,18h1v1h-1zM37,18h1v1h-1zM40,18h1v1h-1zM44,18h1v1h-1zM47,18h2v1h-2zM51,18h1v1h-1zM54,18h2v1h-2zM60,18h2v1h-2zM64,18h3v1h-3zM1,19h1v1h-1zM4,19h1v1h-1zM6,19h4v1h-4zM12,19h2v1h-2zM15,19h2v1h-2zM22,19h2v1h-2zM25,19h2v1h-2zM30,19h1v1h-1zM33,19h1v1h-1zM35,19h1v1h-1zM38,19h1v1h-1zM41,19h4v1h-4zM46,19h1v1h-1zM48,19h2v1h-2zM52,19h1v1h-1zM55,19h1v1h-1zM60,19h3v1h-3zM67,19h2v1h-2zM2,20h1v1h-1zM5,20h1v1h-1zM8,20h1v1h-1zM10,20h1v1h-1zM12,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM18,20h1v1h-1zM21,20h7v1h-7zM29,20h1v1h-1zM31,20h3v1h-3zM37,20h3v1h-3zM41,20h1v1h-1zM44,20h1v1h-1zM46,20h1v1h-1zM49,20h1v1h-1zM51,20h8v1h-8zM61,20h1v1h-1zM64,20h1v1h-1zM67,20h1v1h-1zM69,20h1v1h-1zM1,21h3v1h-3zM7,21h1v1h-1zM14,21h1v1h-1zM19,21h2v1h-2zM22,21h1v1h-1zM25,21h2v1h-2zM29,21h9v1h-9zM40,21h2v1h-2zM43,21h1v1h-1zM45,21h2v1h-2zM48,21h2v1h-2zM51,21h2v1h-2zM54,21h1v1h-1zM56,21h3v1h-3zM60,21h1v1h-1zM62,21h5v1h-5zM68,21h2v1h-2zM1,22h1v1h-1zM3,22h1v1h-1zM6,22h1v1h-1zM9,22h1v1h-1zM13,22h1v1h-1zM15,22h1v1h-1zM18,22h2v1h-2zM23,22h1v1h-1zM25,22h1v1h-1zM27,22h3v1h-3zM31,22h1v1h-1zM34,22h1v1h-1zM36,22h2v1h-2zM39,22h2v1h-2zM42,22h1v1h-1zM44,22h1v1h-1zM47,22h1v1h-1zM50,22h2v1h-2zM54,22h1v1h-1zM64,22h1v1h-1zM66,22h1v1h-1zM68,22h2v1h-2zM3,23h2v1h-2zM7,23h1v1h-1zM10,23h2v1h-2zM14,23h1v1h-1zM17,23h1v1h-1zM19,23h1v1h-1zM22,23h1v1h-1zM25,23h1v1h-1zM33,23h1v1h-1zM36,23h1v1h-1zM38,23h2v1h-2zM41,23h1v1h-1zM46,23h1v1h-1zM48,23h2v1h-2zM53,23h4v1h-4zM63,23h1v1h-1zM67,23h2v1h-2zM2,24h1v1h-1zM4,24h3v1h-3zM8,24h3v1h-3zM12,24h1v1h-1zM14,24h1v1h-1zM16,24h1v1h-1zM18,24h1v1h-1zM21,24h4v1h-4zM27,24h1v1h-1zM29,24h1v1h-1zM31,24h4v1h-4zM36,24h1v1h-1zM39,24h1v1h-1zM41,24h1v1h-1zM43,24h3v1h-3zM47,24h1v1h-1zM50,24h2v1h-2zM54,24h2v1h-2zM57,24h2v1h-2zM60,24h2v1h-2zM63,24h2v1h-2zM67,24h3v1h-3zM1,25h1v1h-1zM4,25h2v1h-2zM7,25h8v1h-8zM20,25h1v1h-1zM24,25h1v1h-1zM26,25h2v1h-2zM30,25h1v1h-1zM32,25h1v1h-1zM40,25h8v1h-8zM50,25h1v1h-1zM54,25h1v1h-1zM57,25h2v1h-2zM62,25h7v1h-7zM1,26h2v1h-2zM4,26h1v1h-1zM8,26h3v1h-3zM12,26h1v1h-1zM14,26h1v1h-1zM16,26h1v1h-1zM20,26h2v1h-2zM24,26h1v1h-1zM28,26h1v1h-1zM30,26h1v1h-1zM32,26h2v1h-2zM37,26h1v1h-1zM39,26h2v1h-2zM42,26h1v1h-1zM46,26h4v1h-4zM52,26h4v1h-4zM58,26h2v1h-2zM61,26h1v1h-1zM64,26h3v1h-3zM68,26h2v1h-2zM1,27h1v1h-1zM4,27h2v1h-2zM7,27h4v1h-4zM12,27h2v1h-2zM16,27h1v1h-1zM24,27h1v1h-1zM27,27h1v1h-1zM32,27h1v1h-1zM34,27h1v1h-1zM36,27h1v1h-1zM38,27h1v1h-1zM41,27h2v1h-2zM46,27h1v1h-1zM48,27h4v1h-4zM53,27h1v1h-1zM55,27h2v1h-2zM58,27h2v1h-2zM61,27h1v1h-1zM64,27h2v1h-2zM67,27h1v1h-1zM69,27h1v1h-1zM2,28h2v1h-2zM5,28h2v1h-2zM11,28h1v1h-1zM13,28h2v1h-2zM18,28h3v1h-3zM23,28h1v1h-1zM25,28h2v1h-2zM31,28h1v1h-1zM35,28h3v1h-3zM40,28h1v1h-1zM42,28h1v1h-1zM45,28h1v1h-1zM47,28h2v1h-2zM54,28h2v1h-2zM57,28h2v1h-2zM60,28h2v1h-2zM63,28h1v1h-1zM65,28h1v1h-1zM67,28h1v1h-1zM69,28h1v1h-1zM3,29h2v1h-2zM7,29h2v1h-2zM12,29h1v1h-1zM14,29h4v1h-4zM20,29h2v1h-2zM24,29h3v1h-3zM29,29h1v1h-1zM32,29h3v1h-3zM36,29h1v1h-1zM39,29h1v1h-1zM42,29h2v1h-2zM46,29h2v1h-2zM50,29h1v1h-1zM52,29h1v1h-1zM54,29h1v1h-1zM56,29h4v1h-4zM63,29h1v1h-1zM66,29h1v1h-1zM68,29h1v1h-1zM1,30h1v1h-1zM4,30h2v1h-2zM9,30h1v1h-1zM12,30h3v1h-3zM16,30h1v1h-1zM19,30h1v1h-1zM21,30h3v1h-3zM27,30h7v1h-7zM39,30h1v1h-1zM42,30h3v1h-3zM46,30h5v1h-5zM53,30h2v1h-2zM57,30h5v1h-5zM64,30h6v1h-6zM4,31h2v1h-2zM7,31h2v1h-2zM10,31h2v1h-2zM13,31h2v1h-2zM18,31h2v1h-2zM21,31h2v1h-2zM24,31h2v1h-2zM30,31h1v1h-1zM32,31h1v1h-1zM34,31h2v1h-2zM40,31h1v1h-1zM50,31h6v1h-6zM60,31h1v1h-1zM65,31h1v1h-1zM67,31h2v1h-2zM1,32h1v1h-1zM4,32h1v1h-1zM6,32h1v1h-1zM8,32h2v1h-2zM11,32h1v1h-1zM13,32h1v1h-1zM15,32h2v1h-2zM19,32h1v1h-1zM24,32h1v1h-1zM26,32h2v1h-2zM34,32h1v1h-1zM36,32h2v1h-2zM39,32h1v1h-1zM41,32h3v1h-3zM46,32h1v1h-1zM48,32h3v1h-3zM52,32h2v1h-2zM55,32h2v1h-2zM60,32h1v1h-1zM64,32h1v1h-1zM67,32h1v1h-1zM2,33h1v1h-1zM4,33h11v1h-11zM16,33h1v1h-1zM18,33h1v1h-1zM20,33h4v1h-4zM27,33h1v1h-1zM31,33h8v1h-8zM40,33h1v1h-1zM42,33h1v1h-1zM45,33h3v1h-3zM53,33h2v1h-2zM56,33h10v1h-10zM67,33h3v1h-3zM3,34h1v1h-1zM5,34h1v1h-1zM9,34h1v1h-1zM12,34h1v1h-1zM15,34h2v1h-2zM20,34h3v1h-3zM26,34h5v1h-5zM33,34h1v1h-1zM37,34h1v1h-1zM39,34h2v1h-2zM42,34h1v1h-1zM47,34h3v1h-3zM54,34h1v1h-1zM58,34h2v1h-2zM61,34h1v1h-1zM65,34h1v1h-1zM68,34h2v1h-2zM3,35h3v1h-3zM7,35h1v1h-1zM9,35h2v1h-2zM12,35h1v1h-1zM15,35h1v1h-1zM17,35h1v1h-1zM19,35h1v1h-1zM21,35h1v1h-1zM24,35h1v1h-1zM27,35h1v1h-1zM29,35h1v1h-1zM32,35h2v1h-2zM35,35h1v1h-1zM37,35h2v1h-2zM40,35h4v1h-4zM46,35h1v1h-1zM50,35h2v1h-2zM53,35h3v1h-3zM57,35h5v1h-5zM63,35h1v1h-1zM65,35h1v1h-1zM67,35h2v1h-2zM1,36h3v1h-3zM5,36h1v1h-1zM9,36h3v1h-3zM14,36h2v1h-2zM17,36h1v1h-1zM21,36h1v1h-1zM26,36h1v1h-1zM30,36h4v1h-4zM37,36h1v1h-1zM39,36h3v1h-3zM45,36h1v1h-1zM49,36h3v1h-3zM53,36h1v1h-1zM56,36h2v1h-2zM60,36h2v1h-2zM65,36h3v1h-3zM1,37h1v1h-1zM5,37h5v1h-5zM11,37h2v1h-2zM20,37h1v1h-1zM24,37h2v1h-2zM27,37h2v1h-2zM31,37h8v1h-8zM41,37h2v1h-2zM45,37h4v1h-4zM51,37h1v1h-1zM54,37h1v1h-1zM56,37h1v1h-1zM59,37h8v1h-8zM68,37h2v1h-2zM2,38h5v1h-5zM12,38h2v1h-2zM16,38h1v1h-1zM18,38h1v1h-1zM20,38h1v1h-1zM26,38h2v1h-2zM29,38h1v1h-1zM33,38h3v1h-3zM37,38h2v1h-2zM40,38h3v1h-3zM45,38h2v1h-2zM49,38h2v1h-2zM53,38h2v1h-2zM57,38h3v1h-3zM61,38h2v1h-2zM64,38h2v1h-2zM68,38h1v1h-1zM4,39h6v1h-6zM11,39h1v1h-1zM13,39h2v1h-2zM16,39h1v1h-1zM20,39h1v1h-1zM22,39h4v1h-4zM30,39h1v1h-1zM32,39h1v1h-1zM38,39h3v1h-3zM47,39h1v1h-1zM51,39h3v1h-3zM57,39h1v1h-1zM60,39h2v1h-2zM63,39h1v1h-1zM65,39h4v1h-4zM1,40h1v1h-1zM4,40h3v1h-3zM8,40h4v1h-4zM17,40h4v1h-4zM22,40h1v1h-1zM25,40h3v1h-3zM29,40h1v1h-1zM31,40h1v1h-1zM33,40h1v1h-1zM35,40h3v1h-3zM40,40h8v1h-8zM49,40h1v1h-1zM51,40h1v1h-1zM53,40h1v1h-1zM60,40h5v1h-5zM66,40h3v1h-3zM1,41h3v1h-3zM7,41h1v1h-1zM9,41h3v1h-3zM13,41h1v1h-1zM15,41h3v1h-3zM22,41h1v1h-1zM26,41h1v1h-1zM28,41h1v1h-1zM31,41h2v1h-2zM37,41h2v1h-2zM43,41h4v1h-4zM48,41h4v1h-4zM56,41h5v1h-5zM67,41h1v1h-1zM69,41h1v1h-1zM1,42h2v1h-2zM6,42h1v1h-1zM8,42h1v1h-1zM11,42h1v1h-1zM14,42h4v1h-4zM19,42h1v1h-1zM22,42h5v1h-5zM29,42h1v1h-1zM33,42h2v1h-2zM36,42h3v1h-3zM40,42h1v1h-1zM42,42h1v1h-1zM46,42h1v1h-1zM48,42h3v1h-3zM52,42h2v1h-2zM59,42h1v1h-1zM62,42h1v1h-1zM65,42h2v1h-2zM69,42h1v1h-1zM1,43h1v1h-1zM3,43h2v1h-2zM6,43h2v1h-2zM9,43h2v1h-2zM12,43h2v1h-2zM16,43h1v1h-1zM20,43h1v1h-1zM22,43h1v1h-1zM24,43h1v1h-1zM26,43h1v1h-1zM30,43h1v1h-1zM32,43h1v1h-1zM36,43h2v1h-2zM39,43h4v1h-4zM47,43h2v1h-2zM50,43h6v1h-6zM57,43h2v1h-2zM60,43h3v1h-3zM65,43h5v1h-5zM1,44h6v1h-6zM8,44h1v1h-1zM12,44h1v1h-1zM14,44h2v1h-2zM17,44h2v1h-2zM20,44h2v1h-2zM23,44h3v1h-3zM27,44h2v1h-2zM30,44h3v1h-3zM36,44h2v1h-2zM40,44h2v1h-2zM44,44h1v1h-1zM47,44h1v1h-1zM51,44h2v1h-2zM57,44h1v1h-1zM59,44h2v1h-2zM63,44h2v1h-2zM67,44h2v1h-2zM1,45h4v1h-4zM6,45h2v1h-2zM11,45h1v1h-1zM13,45h2v1h-2zM17,45h1v1h-1zM19,45h5v1h-5zM28,45h1v1h-1zM30,45h2v1h-2zM34,45h1v1h-1zM36,45h4v1h-4zM47,45h1v1h-1zM49,45h1v1h-1zM55,45h1v1h-1zM57,45h1v1h-1zM64,45h1v1h-1zM66,45h1v1h-1zM69,45h1v1h-1zM5,46h2v1h-2zM10,46h1v1h-1zM12,46h2v1h-2zM16,46h1v1h-1zM20,46h1v1h-1zM22,46h1v1h-1zM24,46h1v1h-1zM26,46h1v1h-1zM28,46h2v1h-2zM31,46h1v1h-1zM34,46h5v1h-5zM40,46h2v1h-2zM45,46h2v1h-2zM48,46h1v1h-1zM51,46h4v1h-4zM56,46h5v1h-5zM62,46h1v1h-1zM64,46h2v1h-2zM67,46h1v1h-1zM69,46h1v1h-1zM1,47h1v1h-1zM3,47h1v1h-1zM5,47h1v1h-1zM7,47h3v1h-3zM11,47h2v1h-2zM14,47h1v1h-1zM16,47h1v1h-1zM18,47h1v1h-1zM20,47h2v1h-2zM24,47h1v1h-1zM27,47h1v1h-1zM30,47h1v1h-1zM34,47h1v1h-1zM36,47h2v1h-2zM39,47h4v1h-4zM44,47h1v1h-1zM47,47h1v1h-1zM50,47h6v1h-6zM60,47h4v1h-4zM65,47h1v1h-1zM67,47h3v1h-3zM1,48h1v1h-1zM3,48h2v1h-2zM6,48h1v1h-1zM8,48h1v1h-1zM10,48h3v1h-3zM15,48h2v1h-2zM19,48h2v1h-2zM22,48h1v1h-1zM26,48h2v1h-2zM29,48h1v1h-1zM31,48h4v1h-4zM36,48h2v1h-2zM40,48h1v1h-1zM42,48h2v1h-2zM51,48h3v1h-3zM55,48h1v1h-1zM58,48h1v1h-1zM63,48h6v1h-6zM1,49h3v1h-3zM6,49h2v1h-2zM11,49h3v1h-3zM16,49h1v1h-1zM23,49h1v1h-1zM29,49h1v1h-1zM31,49h1v1h-1zM35,49h1v1h-1zM37,49h3v1h-3zM42,49h1v1h-1zM44,49h2v1h-2zM50,49h1v1h-1zM55,49h2v1h-2zM59,49h3v1h-3zM66,49h2v1h-2zM69,49h1v1h-1zM2,50h5v1h-5zM9,50h1v1h-1zM12,50h2v1h-2zM16,50h1v1h-1zM19,50h1v1h-1zM25,50h2v1h-2zM29,50h1v1h-1zM31,50h4v1h-4zM38,50h1v1h-1zM41,50h1v1h-1zM45,50h2v1h-2zM53,50h2v1h-2zM56,50h1v1h-1zM59,50h1v1h-1zM64,50h1v1h-1zM67,50h1v1h-1zM69,50h1v1h-1zM1,51h1v1h-1zM5,51h1v1h-1zM7,51h2v1h-2zM11,51h1v1h-1zM13,51h1v1h-1zM15,51h2v1h-2zM18,51h1v1h-1zM21,51h1v1h-1zM24,51h2v1h-2zM27,51h1v1h-1zM29,51h3v1h-3zM34,51h2v1h-2zM37,51h1v1h-1zM40,51h2v1h-2zM44,51h1v1h-1zM46,51h1v1h-1zM48,51h1v1h-1zM50,51h3v1h-3zM54,51h1v1h-1zM58,51h5v1h-5zM65,51h1v1h-1zM68,51h2v1h-2zM1,52h2v1h-2zM4,52h1v1h-1zM9,52h6v1h-6zM16,52h1v1h-1zM19,52h2v1h-2zM23,52h3v1h-3zM27,52h2v1h-2zM30,52h1v1h-1zM32,52h1v1h-1zM36,52h2v1h-2zM40,52h2v1h-2zM44,52h1v1h-1zM46,52h2v1h-2zM51,52h1v1h-1zM54,52h1v1h-1zM56,52h3v1h-3zM63,52h2v1h-2zM68,52h1v1h-1zM2,53h2v1h-2zM7,53h1v1h-1zM10,53h2v1h-2zM13,53h2v1h-2zM16,53h1v1h-1zM20,53h3v1h-3zM24,53h1v1h-1zM30,53h2v1h-2zM34,53h1v1h-1zM38,53h1v1h-1zM41,53h2v1h-2zM45,53h1v1h-1zM47,53h1v1h-1zM52,53h1v1h-1zM54,53h1v1h-1zM56,53h8v1h-8zM65,53h2v1h-2zM69,53h1v1h-1zM3,54h3v1h-3zM11,54h4v1h-4zM16,54h3v1h-3zM20,54h3v1h-3zM24,54h1v1h-1zM27,54h3v1h-3zM31,54h2v1h-2zM34,54h1v1h-1zM38,54h3v1h-3zM44,54h1v1h-1zM47,54h1v1h-1zM49,54h1v1h-1zM51,54h1v1h-1zM53,54h2v1h-2zM59,54h2v1h-2zM65,54h1v1h-1zM1,55h1v1h-1zM3,55h1v1h-1zM6,55h4v1h-4zM12,55h1v1h-1zM14,55h1v1h-1zM16,55h2v1h-2zM19,55h6v1h-6zM26,55h1v1h-1zM30,55h4v1h-4zM38,55h5v1h-5zM44,55h1v1h-1zM46,55h3v1h-3zM50,55h4v1h-4zM55,55h1v1h-1zM57,55h2v1h-2zM61,55h1v1h-1zM63,55h2v1h-2zM68,55h2v1h-2zM2,56h2v1h-2zM6,56h1v1h-1zM8,56h1v1h-1zM10,56h3v1h-3zM15,56h1v1h-1zM18,56h4v1h-4zM23,56h1v1h-1zM25,56h2v1h-2zM29,56h2v1h-2zM32,56h3v1h-3zM36,56h1v1h-1zM38,56h1v1h-1zM41,56h1v1h-1zM43,56h2v1h-2zM47,56h1v1h-1zM50,56h1v1h-1zM52,56h1v1h-1zM57,56h1v1h-1zM59,56h2v1h-2zM63,56h2v1h-2zM67,56h3v1h-3zM2,57h3v1h-3zM6,57h2v1h-2zM10,57h1v1h-1zM12,57h2v1h-2zM15,57h2v1h-2zM19,57h2v1h-2zM22,57h2v1h-2zM27,57h2v1h-2zM31,57h1v1h-1zM34,57h1v1h-1zM37,57h1v1h-1zM39,57h1v1h-1zM42,57h1v1h-1zM44,57h2v1h-2zM47,57h1v1h-1zM50,57h3v1h-3zM54,57h1v1h-1zM56,57h3v1h-3zM60,57h2v1h-2zM64,57h2v1h-2zM68,57h1v1h-1zM2,58h1v1h-1zM4,58h1v1h-1zM8,58h1v1h-1zM11,58h1v1h-1zM13,58h1v1h-1zM16,58h1v1h-1zM18,58h2v1h-2zM21,58h3v1h-3zM27,58h3v1h-3zM31,58h4v1h-4zM39,58h4v1h-4zM44,58h6v1h-6zM52,58h1v1h-1zM54,58h1v1h-1zM58,58h4v1h-4zM63,58h7v1h-7zM3,59h1v1h-1zM5,59h4v1h-4zM10,59h1v1h-1zM13,59h1v1h-1zM15,59h2v1h-2zM18,59h3v1h-3zM23,59h1v1h-1zM26,59h1v1h-1zM33,59h1v1h-1zM36,59h1v1h-1zM41,59h2v1h-2zM44,59h1v1h-1zM46,59h1v1h-1zM48,59h1v1h-1zM51,59h4v1h-4zM56,59h1v1h-1zM60,59h2v1h-2zM63,59h2v1h-2zM67,59h1v1h-1zM69,59h1v1h-1zM1,60h1v1h-1zM8,60h1v1h-1zM12,60h3v1h-3zM19,60h3v1h-3zM23,60h1v1h-1zM25,60h1v1h-1zM27,60h2v1h-2zM31,60h1v1h-1zM34,60h1v1h-1zM37,60h1v1h-1zM39,60h1v1h-1zM41,60h2v1h-2zM44,60h4v1h-4zM51,60h1v1h-1zM53,60h3v1h-3zM58,60h1v1h-1zM61,60h1v1h-1zM63,60h3v1h-3zM67,60h2v1h-2zM1,61h1v1h-1zM5,61h1v1h-1zM7,61h6v1h-6zM14,61h1v1h-1zM16,61h2v1h-2zM19,61h2v1h-2zM22,61h3v1h-3zM26,61h6v1h-6zM33,61h6v1h-6zM41,61h1v1h-1zM44,61h2v1h-2zM49,61h2v1h-2zM52,61h1v1h-1zM54,61h1v1h-1zM56,61h4v1h-4zM61,61h6v1h-6zM69,61h1v1h-1zM9,62h2v1h-2zM12,62h1v1h-1zM14,62h1v1h-1zM16,62h1v1h-1zM23,62h4v1h-4zM28,62h2v1h-2zM33,62h1v1h-1zM37,62h1v1h-1zM41,62h1v1h-1zM43,62h1v1h-1zM47,62h3v1h-3zM53,62h3v1h-3zM57,62h2v1h-2zM60,62h2v1h-2zM1,63h7v1h-7zM9,63h1v1h-1zM11,63h1v1h-1zM13,63h1v1h-1zM15,63h1v1h-1zM17,63h1v1h-1zM19,63h1v1h-1zM21,63h1v1h-1zM23,63h1v1h-1zM25,63h1v1h-1zM27,63h1v1h-1zM29,63h1v1h-1zM31,63h1v1h-1zM33,63h1v1h-1zM35,63h1v1h-1zM37,63h1v1h-1zM39,63h1v1h-1zM41,63h1v1h-1zM43,63h1v1h-1zM45,63h1v1h-1zM47,63h1v1h-1zM49,63h1v1h-1zM51,63h1v1h-1zM53,63h1v1h-1zM55,63h1v1h-1zM57,63h1v1h-1zM59,63h1v1h-1zM61,63h1v1h-1zM63,63h7v1h-7zM1,64h1v1h-1zM7,64h1v1h-1zM9,64h2v1h-2zM12,64h2v1h-2zM16,64h2v1h-2zM19,64h1v1h-1zM26,64h6v1h-6zM33,64h1v1h-1zM37,64h1v1h-1zM39,64h2v1h-2zM42,64h1v1h-1zM44,64h2v1h-2zM47,64h1v1h-1zM51,64h2v1h-2zM57,64h3v1h-3zM63,64h1v1h-1zM69,64h1v1h-1zM1,65h1v1h-1zM3,65h3v1h-3zM7,65h1v1h-1zM9,65h5v1h-5zM15,65h2v1h-2zM19,65h1v1h-1zM21,65h1v1h-1zM23,65h2v1h-2zM26,65h3v1h-3zM31,65h1v1h-1zM33,65h6v1h-6zM40,65h2v1h-2zM46,65h3v1h-3zM50,65h1v1h-1zM52,65h1v1h-1zM54,65h1v1h-1zM56,65h4v1h-4zM61,65h1v1h-1zM63,65h1v1h-1zM65,65h3v1h-3zM69,65h1v1h-1zM1,66h1v1h-1zM3,66h3v1h-3zM7,66h1v1h-1zM9,66h2v1h-2zM12,66h1v1h-1zM15,66h2v1h-2zM19,66h1v1h-1zM21,66h3v1h-3zM26,66h5v1h-5zM35,66h7v1h-7zM44,66h1v1h-1zM46,66h2v1h-2zM49,66h5v1h-5zM56,66h1v1h-1zM61,66h1v1h-1zM63,66h1v1h-1zM65,66h3v1h-3zM69,66h1v1h-1zM1,67h1v1h-1zM3,67h3v1h-3zM7,67h1v1h-1zM13,67h1v1h-1zM15,67h1v1h-1zM17,67h1v1h-1zM23,67h1v1h-1zM25,67h1v1h-1zM27,27h0v0zM27,67h2v1h-2zM30,67h2v1h-2zM34,67h2v1h-2zM37,67h1v1h-1zM40,67h4v1h-4zM47,67h2v1h-2zM50,67h1v1h-1zM52,67h1v1h-1zM54,67h6v1h-6zM63,67h1v1h-1zM65,67h3v1h-3zM69,67h1v1h-1zM1,68h1v1h-1zM7,68h1v1h-1zM10,68h3v1h-3zM15,68h1v1h-1zM17,68h3v1h-3zM21,68h1v1h-1zM23,68h2v1h-2zM28,68h2v1h-2zM31,68h1v1h-1zM34,68h1v1h-1zM37,68h3v1h-3zM41,68h2v1h-2zM44,68h1v1h-1zM47,68h2v1h-2zM57,68h2v1h-2zM63,68h1v1h-1zM69,68h1v1h-1zM1,69h7v1h-7zM9,69h3v1h-3zM15,69h1v1h-1zM17,69h2v1h-2zM20,69h2v1h-2zM26,69h1v1h-1zM28,69h1v1h-1zM30,69h1v1h-1zM32,69h1v1h-1zM37,69h3v1h-3zM41,69h3v1h-3zM46,69h3v1h-3zM50,69h1v1h-1zM52,69h2v1h-2zM55,69h3v1h-3zM59,69h3v1h-3zM63,69h7v1h-7z'
+    },
+    zalo: {
+      size: 27,
+      color: '#0068FF',
+      path: 'M1,1h7v1h-7zM9,1h1v1h-1zM11,1h1v1h-1zM13,1h1v1h-1zM15,1h2v1h-2zM18,1h1v1h-1zM20,1h6v1h-6zM1,2h1v1h-1zM7,2h1v1h-1zM10,2h1v1h-1zM13,2h2v1h-2zM16,2h3v1h-3zM20,2h3v1h-3zM25,2h1v1h-1zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM9,3h2v1h-2zM14,3h2v1h-2zM17,3h1v1h-1zM22,3h2v1h-2zM25,3h1v1h-1zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM9,4h1v1h-1zM13,4h2v1h-2zM16,4h4v1h-4zM21,4h5v1h-5zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h1v1h-1zM12,5h1v1h-1zM16,5h6v1h-6zM23,5h1v1h-1zM25,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM9,6h1v1h-1zM12,6h1v1h-1zM15,6h1v1h-1zM17,6h1v1h-1zM21,6h2v1h-2zM25,6h1v1h-1zM1,7h7v1h-7zM10,7h4v1h-4zM17,7h1v1h-1zM19,7h1v1h-1zM21,7h1v1h-1zM23,7h3v1h-3zM9,8h1v1h-1zM11,8h1v1h-1zM14,8h4v1h-4zM21,8h2v1h-2zM1,9h1v1h-1zM3,9h3v1h-3zM7,9h3v1h-3zM11,9h1v1h-1zM13,9h2v1h-2zM17,9h5v1h-5zM23,9h1v1h-1zM1,10h1v1h-1zM3,10h4v1h-4zM8,10h4v1h-4zM13,10h2v1h-2zM16,10h2v1h-2zM19,10h3v1h-3zM25,10h1v1h-1zM1,11h1v1h-1zM5,11h1v1h-1zM7,11h1v1h-1zM9,11h3v1h-3zM14,11h5v1h-5zM20,11h3v1h-3zM24,11h2v1h-2zM1,12h2v1h-2zM5,12h1v1h-1zM8,12h2v1h-2zM11,12h1v1h-1zM13,12h1v1h-1zM15,12h1v1h-1zM17,12h1v1h-1zM20,12h1v1h-1zM22,12h1v1h-1zM24,12h1v1h-1zM1,13h1v1h-1zM3,13h5v1h-5zM9,13h3v1h-3zM15,13h2v1h-2zM18,13h4v1h-4zM23,13h3v1h-3zM5,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM12,14h3v1h-3zM16,14h4v1h-4zM21,14h1v1h-1zM25,14h1v1h-1zM1,15h2v1h-2zM4,15h4v1h-4zM9,15h1v1h-1zM11,15h3v1h-3zM16,15h2v1h-2zM19,15h1v1h-1zM21,15h2v1h-2zM24,15h2v1h-2zM1,16h3v1h-3zM5,16h2v1h-2zM10,16h2v1h-2zM14,16h2v1h-2zM20,16h1v1h-1zM24,16h1v1h-1zM1,17h1v1h-1zM3,17h5v1h-5zM10,17h1v1h-1zM13,17h1v1h-1zM15,17h1v1h-1zM19,17h5v1h-5zM9,18h2v1h-2zM12,18h4v1h-4zM17,18h1v1h-1zM1,19h7v1h-7zM9,19h1v1h-1zM11,19h1v1h-1zM13,19h1v1h-1zM15,19h1v1h-1zM17,19h1v1h-1zM19,19h7v1h-7zM1,20h1v1h-1zM7,20h1v1h-1zM9,20h2v1h-2zM14,20h1v1h-1zM16,20h2v1h-2zM19,20h1v1h-1zM25,20h1v1h-1zM1,21h1v1h-1zM3,21h3v1h-3zM7,21h1v1h-1zM9,21h1v1h-1zM11,21h1v1h-1zM15,21h2v1h-2zM19,21h1v1h-1zM21,21h3v1h-3zM25,21h1v1h-1zM1,22h1v1h-1zM3,22h3v1h-3zM7,22h1v1h-1zM9,22h5v1h-5zM15,22h3v1h-3zM19,22h1v1h-1zM21,22h3v1h-3zM25,22h1v1h-1zM1,23h1v1h-1zM3,23h3v1h-3zM7,23h1v1h-1zM9,23h2v1h-2zM16,23h1v1h-1zM19,23h1v1h-1zM21,23h3v1h-3zM25,23h1v1h-1zM1,24h1v1h-1zM7,24h1v1h-1zM10,24h1v1h-1zM13,24h1v1h-1zM16,24h1v1h-1zM19,24h1v1h-1zM25,24h1v1h-1zM1,25h7v1h-7zM11,25h4v1h-4zM19,25h7v1h-7z'
+    },
+    linkedin: {
+      size: 35,
+      color: '#0A66C2',
+      path: 'M1,1h7v1h-7zM9,1h3v1h-3zM14,1h1v1h-1zM16,1h1v1h-1zM18,1h1v1h-1zM23,1h1v1h-1zM25,1h2v1h-2zM28,1h1v1h-1zM30,1h1v1h-1zM32,1h1v1h-1zM1,2h1v1h-1zM7,2h1v1h-1zM10,2h1v1h-1zM12,2h5v1h-5zM22,2h3v1h-3zM26,2h2v1h-2zM29,2h3v1h-3zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM9,3h2v1h-2zM13,3h1v1h-1zM15,3h4v1h-4zM21,3h8v1h-8zM30,3h1v1h-1zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM9,4h1v1h-1zM12,4h1v1h-1zM14,4h1v1h-1zM16,4h1v1h-1zM18,4h5v1h-5zM24,4h1v1h-1zM26,4h1v1h-1zM29,4h5v1h-5zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h2v1h-2zM13,5h1v1h-1zM15,5h1v1h-1zM17,5h1v1h-1zM23,5h1v1h-1zM25,5h6v1h-6zM33,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM9,6h1v1h-1zM12,6h2v1h-2zM15,6h2v1h-2zM18,6h2v1h-2zM21,6h5v1h-5zM29,6h4v1h-4zM1,7h7v1h-7zM11,7h3v1h-3zM16,7h3v1h-3zM22,7h1v1h-1zM24,7h2v1h-2zM27,7h1v1h-1zM29,7h1v1h-1zM31,7h2v1h-2zM9,8h1v1h-1zM14,8h1v1h-1zM17,8h6v1h-6zM24,8h2v1h-2zM29,8h1v1h-1zM31,8h1v1h-1zM33,8h1v1h-1zM1,9h1v1h-1zM5,9h3v1h-3zM9,9h2v1h-2zM12,9h2v1h-2zM18,9h2v1h-2zM23,9h1v1h-1zM25,9h5v1h-5zM1,10h1v1h-1zM3,10h1v1h-1zM6,10h1v1h-1zM9,10h1v1h-1zM11,10h5v1h-5zM17,10h1v1h-1zM20,10h1v1h-1zM22,10h3v1h-3zM26,10h2v1h-2zM30,10h4v1h-4zM1,11h1v1h-1zM3,11h2v1h-2zM6,11h4v1h-4zM11,11h1v1h-1zM13,11h3v1h-3zM26,11h1v1h-1zM32,11h1v1h-1zM1,12h4v1h-4zM8,12h1v1h-1zM10,12h2v1h-2zM13,12h2v1h-2zM16,12h3v1h-3zM20,12h1v1h-1zM23,12h3v1h-3zM27,12h1v1h-1zM30,12h1v1h-1zM33,12h1v1h-1zM1,13h2v1h-2zM4,13h2v1h-2zM7,13h2v1h-2zM10,13h3v1h-3zM14,13h1v1h-1zM19,13h2v1h-2zM29,13h2v1h-2zM1,14h2v1h-2zM5,14h1v1h-1zM11,14h1v1h-1zM13,14h2v1h-2zM17,14h1v1h-1zM22,14h1v1h-1zM24,14h1v1h-1zM27,14h6v1h-6zM2,15h7v1h-7zM12,15h1v1h-1zM16,15h1v1h-1zM19,15h1v1h-1zM21,15h1v1h-1zM26,15h4v1h-4zM31,15h2v1h-2zM1,16h1v1h-1zM3,16h1v1h-1zM8,16h1v1h-1zM13,16h2v1h-2zM19,16h4v1h-4zM24,16h5v1h-5zM30,16h2v1h-2zM33,16h1v1h-1zM5,17h4v1h-4zM11,17h6v1h-6zM18,17h1v1h-1zM20,17h1v1h-1zM23,17h4v1h-4zM28,17h2v1h-2zM33,17h1v1h-1zM2,18h2v1h-2zM8,18h1v1h-1zM11,18h1v1h-1zM13,18h4v1h-4zM20,18h3v1h-3zM25,18h7v1h-7zM7,19h1v1h-1zM10,19h1v1h-1zM13,19h2v1h-2zM16,19h3v1h-3zM21,19h1v1h-1zM23,19h1v1h-1zM26,19h2v1h-2zM30,19h3v1h-3zM1,20h3v1h-3zM5,20h2v1h-2zM8,20h2v1h-2zM11,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM18,20h2v1h-2zM24,20h2v1h-2zM27,20h1v1h-1zM30,20h1v1h-1zM32,20h2v1h-2zM3,21h2v1h-2zM6,21h2v1h-2zM9,21h2v1h-2zM12,21h1v1h-1zM15,21h1v1h-1zM17,21h1v1h-1zM20,21h1v1h-1zM23,21h2v1h-2zM26,21h1v1h-1zM28,21h3v1h-3zM32,21h2v1h-2zM2,22h3v1h-3zM6,22h1v1h-1zM9,22h2v1h-2zM12,22h3v1h-3zM17,22h8v1h-8zM26,22h1v1h-1zM29,22h3v1h-3zM33,22h1v1h-1zM1,23h2v1h-2zM4,23h2v1h-2zM7,23h2v1h-2zM11,23h1v1h-1zM14,23h5v1h-5zM23,23h1v1h-1zM25,23h2v1h-2zM29,23h1v1h-1zM31,23h1v1h-1zM2,24h2v1h-2zM8,24h2v1h-2zM12,24h1v1h-1zM14,24h2v1h-2zM17,24h4v1h-4zM22,24h1v1h-1zM24,24h1v1h-1zM27,24h2v1h-2zM30,24h2v1h-2zM33,24h1v1h-1zM1,25h1v1h-1zM3,25h5v1h-5zM10,25h1v1h-1zM12,25h1v1h-1zM14,25h2v1h-2zM18,25h1v1h-1zM20,25h1v1h-1zM23,25h1v1h-1zM25,25h1v1h-1zM27,25h5v1h-5zM9,26h1v1h-1zM11,26h1v1h-1zM17,26h1v1h-1zM20,26h5v1h-5zM1,27h7v1h-7zM9,27h1v1h-1zM11,27h1v1h-1zM13,27h1v1h-1zM15,27h1v1h-1zM17,27h1v1h-1zM19,27h1v1h-1zM21,27h1v1h-1zM23,27h1v1h-1zM25,27h1v1h-1zM27,27h7v1h-7zM1,28h1v1h-1zM7,28h1v1h-1zM9,28h1v1h-1zM11,28h2v1h-2zM14,28h1v1h-1zM18,28h3v1h-3zM22,28h1v1h-1zM25,28h1v1h-1zM27,28h1v1h-1zM33,28h1v1h-1zM1,29h1v1h-1zM3,29h3v1h-3zM7,29h1v1h-1zM9,29h2v1h-2zM15,29h3v1h-3zM21,29h1v1h-1zM23,29h2v1h-2zM27,29h1v1h-1zM29,29h3v1h-3zM33,29h1v1h-1zM1,30h1v1h-1zM3,30h3v1h-3zM7,30h1v1h-1zM9,30h3v1h-3zM13,30h1v1h-1zM16,30h1v1h-1zM19,30h2v1h-2zM24,30h2v1h-2zM27,30h1v1h-1zM29,30h3v1h-3zM33,30h1v1h-1zM1,31h1v1h-1zM3,31h3v1h-3zM7,31h1v1h-1zM9,31h2v1h-2zM15,31h1v1h-1zM20,31h4v1h-4zM27,31h1v1h-1zM29,31h3v1h-3zM33,31h1v1h-1zM1,32h1v1h-1zM7,32h1v1h-1zM11,32h1v1h-1zM16,32h1v1h-1zM19,32h1v1h-1zM22,32h1v1h-1zM25,32h1v1h-1zM27,32h1v1h-1zM33,32h1v1h-1zM1,33h7v1h-7zM11,33h3v1h-3zM15,33h1v1h-1zM17,33h1v1h-1zM19,33h4v1h-4zM24,33h1v1h-1zM27,33h7v1h-7z'
     }
   };
 
-  document.addEventListener('keydown', keydownHandler, true);
-  activeTrapState = { modalEl, prevTrigger, keydownHandler };
+  const V4_FALLBACK_IMG =
+    'data:image/svg+xml;charset=UTF-8,' +
+    encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">' +
+        '<rect width="800" height="450" fill="#F8FAFC"/>' +
+        '<rect x="36" y="36" width="728" height="378" fill="none" stroke="#E5E7EB" stroke-width="2"/>' +
+        '<text x="400" y="218" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#0A3D7A">Bnews Fintech</text>' +
+        '<text x="400" y="252" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7280">Clean Institutional Intelligence</text>' +
+      '</svg>'
+    );
 
-  setTimeout(() => {
-    if (!modalEl.classList.contains('open')) return;
-    const focusables = getFocusableElements(modalEl);
-    if (focusables.length > 0) {
-      focusables[0].focus();
-    } else {
-      if (!modalEl.hasAttribute('tabindex')) modalEl.setAttribute('tabindex', '-1');
-      modalEl.focus();
+  const state = {
+    data: null,
+    activePage: 'today',
+    activeCategory: 'ALL',
+    searchTerm: '',
+    activeChainIdx: 0,
+    activeLayerIdx: 0,
+    vcardTab: 'vcard',
+    nlLoaded: false,
+    newsById: {}
+  };
+
+  const INITIAL_PATH = window.location.pathname || '/';
+  const CURRENT_DIR_BASE = (() => {
+    if (window.location.protocol === 'file:') return './';
+    const slashIdx = INITIAL_PATH.lastIndexOf('/');
+    if (slashIdx >= 0 && /\.[a-z0-9]+$/i.test(INITIAL_PATH.slice(slashIdx + 1))) {
+      return INITIAL_PATH.slice(0, slashIdx + 1);
     }
-  }, 40);
-}
+    return INITIAL_PATH.endsWith('/') ? INITIAL_PATH : `${INITIAL_PATH}/`;
+  })();
+  const IS_PREVIEW_SUBDIR = /\/preview\/$/i.test(CURRENT_DIR_BASE);
+  const ROOT_ASSET_BASE =
+    window.location.protocol === 'file:'
+      ? (IS_PREVIEW_SUBDIR ? '../' : './')
+      : (IS_PREVIEW_SUBDIR ? CURRENT_DIR_BASE.replace(/preview\/$/i, '') : CURRENT_DIR_BASE);
+  const PORTFOLIO_HOME_URL =
+    window.location.protocol === 'file:'
+      ? (IS_PREVIEW_SUBDIR ? '../../index.html' : '../index.html')
+      : (ROOT_ASSET_BASE.replace(/[^/]+\/$/, '') || '/');
 
-function deactivateFocusTrap(modalEl, restoreFocus = true) {
-  if (modalEl) modalEl.setAttribute('aria-hidden', 'true');
-  const stillOpen = document.querySelector('#sideDrawer.open, #mobileNavDrawer.open, #welcome-modal-backdrop.open, #contact-modal-backdrop.open');
-  if (!stillOpen) {
-    setBackgroundInert(false);
-    document.body.style.overflow = '';
-  }
-  if (activeTrapState && (!modalEl || activeTrapState.modalEl === modalEl)) {
-    const { prevTrigger, keydownHandler } = activeTrapState;
-    if (keydownHandler) document.removeEventListener('keydown', keydownHandler, true);
-    activeTrapState = null;
-    if (restoreFocus && !stillOpen && prevTrigger && typeof prevTrigger.focus === 'function' && document.contains(prevTrigger)) {
-      prevTrigger.focus();
+  function getCleanPortalPath() {
+    if (window.location.protocol === 'file:') return window.location.pathname;
+    let p = INITIAL_PATH;
+    if (p.endsWith('/index.html')) {
+      p = p.slice(0, -'index.html'.length);
+    } else if (p.endsWith('/magspread-preview.html')) {
+      p = p.slice(0, -'magspread-preview.html'.length);
     }
-  }
-}
-
-function openDrawer(title, htmlContent) {
-  const drawer = $('#sideDrawer');
-  const backdrop = $('#drawerBackdrop');
-  const titleEl = $('#drawerTitle');
-  const contentEl = $('#drawerContent');
-
-  if (!drawer || !backdrop) return;
-  drawerLastFocusedElement = document.activeElement;
-  titleEl.textContent = title;
-  contentEl.innerHTML = htmlContent;
-
-  backdrop.classList.add('open');
-  drawer.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  activateFocusTrap(drawer, closeDrawer, drawerLastFocusedElement);
-}
-
-function closeDrawer(restoreFocus = true) {
-  const drawer = $('#sideDrawer');
-  const backdrop = $('#drawerBackdrop');
-  if (!drawer || !drawer.classList.contains('open')) {
-    if (drawer) drawer.setAttribute('aria-hidden', 'true');
-    return;
-  }
-  drawer.classList.remove('open');
-  if (backdrop) backdrop.classList.remove('open');
-  deactivateFocusTrap(drawer, restoreFocus !== false);
-  drawerLastFocusedElement = null;
-}
-
-// ─── DATA LOADING ───
-async function loadEditionData() {
-  const isFileProtocol = window.location.protocol === 'file:';
-
-  // 1. file:// environment: use existing synchronized JS mirror directly
-  if (isFileProtocol) {
-    if (window.EDITION_DATA && typeof window.EDITION_DATA === 'object') {
-      console.log('[MagSpread] Chế độ file://: Nạp thành công window.EDITION_DATA nội tuyến.');
-      EDITION_DATA = window.EDITION_DATA;
-      renderAllSections();
-      return;
-    } else {
-      console.error('[MagSpread] Chế độ file://: Không tìm thấy window.EDITION_DATA.');
-      const mc = document.getElementById('mainContent');
-      if (mc) {
-        mc.innerHTML = `
-          <div class="ms-container" style="padding:48px 0; text-align:center;">
-            <h2 style="color:var(--ms-error);">Không thể tải dữ liệu ấn bản (file://)</h2>
-            <p style="margin-top:12px;">Vui lòng kiểm tra file edition-data.js trong thư mục pilot-output/.</p>
-          </div>
-        `;
-      }
-      return;
+    if (p.length > 1 && p.endsWith('/')) {
+      p = p.slice(0, -1);
     }
+    return p || '/';
   }
 
-  // 2. HTTP/HTTPS environment: fetch live canonical edition-data.json
-  try {
-    const res = await fetch(PORTAL_BASE_DIR + 'edition-data.json?v=' + Date.now());
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-    }
-    const freshData = await res.json();
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-    // Validate required editorial and Archive structure before updating runtime state
-    if (!freshData || typeof freshData !== 'object' || !freshData.editorialSections || !freshData.editorialSections.sec09_archive) {
-      throw new Error('Dữ liệu edition-data.json không đạt tiêu chuẩn schema biên tập hoặc thiếu sec09_archive.');
-    }
-
-    // Replace runtime state only after successful validation
-    EDITION_DATA = freshData;
-    window.EDITION_DATA = freshData;
-    console.log('[MagSpread] Nạp và thẩm định thành công canonical edition-data.json.');
-    renderAllSections();
-  } catch (err) {
-    console.warn('[MagSpread] Không thể tải hoặc thẩm định edition-data.json qua HTTP, fallback sang window.EDITION_DATA:', err.message);
-    if (window.EDITION_DATA && typeof window.EDITION_DATA === 'object') {
-      EDITION_DATA = window.EDITION_DATA;
-      renderAllSections();
-    } else {
-      const mc = document.getElementById('mainContent');
-      if (mc) {
-        mc.innerHTML = `
-          <div class="ms-container" style="padding:48px 0; text-align:center;">
-            <h2 style="color:var(--ms-error);">Không thể tải dữ liệu ấn bản</h2>
-            <p style="margin-top:12px;">Vui lòng kiểm tra file edition-data.json hoặc edition-data.js trong thư mục pilot-output/.</p>
-          </div>
-        `;
-      }
-    }
+  function esc(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
   }
-}
 
-function resolveRelativeDomUrls() {
-  if (window.location.protocol === 'file:') return;
-  const baseUrl = window.location.origin + PORTAL_BASE_DIR;
-  document.querySelectorAll('img[src^="./"], img[src^="../"], a[href^="./"], a[href^="../"]').forEach(el => {
-    const attr = el.hasAttribute('src') ? 'src' : 'href';
-    const rawVal = el.getAttribute(attr);
-    if (!rawVal) return;
+  function catLabel(rawCat) {
+    return CAT_LABEL_MAP[rawCat] || rawCat || 'Tài chính';
+  }
+
+  function sourceLabel(item) {
+    return item.originalSourceName || item.publisher || item.sourceName || 'Báo chí chính thống';
+  }
+
+  function extractTimeHM(item) {
+    const iso = item.originalSourcePublishedAt || item.originalPublishedAt || '';
+    const mIso = String(iso).match(/T(\d{2}:\d{2})/);
+    if (mIso) return mIso[1];
+    const pub = item.publisherPublishedAt || item.publicationTimestamp || '';
+    const mPub = String(pub).match(/(\d{2}:\d{2})/);
+    return mPub ? mPub[1] : '--:--';
+  }
+
+  function extractDateTimeReadable(item) {
+    const pub = String(item.publisherPublishedAt || '').trim();
+    const mPub = pub.match(/^(\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2})/);
+    if (mPub) return mPub[1];
+    const iso = String(item.originalSourcePublishedAt || item.originalPublishedAt || '').trim();
+    const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}:\d{2})/);
+    if (m) return `${m[3]}/${m[2]}/${m[1]} ${m[4]}`;
+    return state.data?.editionDate || '';
+  }
+
+  function imgTag(src, alt, cls) {
+    const safeSrc = src && /^https?:|^data:|^\./.test(src) ? src : V4_FALLBACK_IMG;
+    return `<img src="${esc(safeSrc)}" alt="${esc(alt)}" class="${cls}" loading="lazy" onerror="this.onerror=null;this.src='${V4_FALLBACK_IMG}'">`;
+  }
+
+  // ─── DATA LOADER ──────────────────────────────────────────────────────────
+  async function loadEditionData() {
     try {
-      el.setAttribute(attr, new URL(rawVal, baseUrl).pathname);
-    } catch (e) { /* keep original */ }
-  });
-}
-
-// ─── RENDER ALL SECTIONS ───
-function renderAllSections() {
-  if (!EDITION_DATA) return;
-
-  resolveRelativeDomUrls();
-  renderMasthead();
-  renderCoverStory();
-  renderMarketPulse();
-  renderDecisionBrief();
-  renderNewsDesk();
-  // renderConnectTheDots();
-  renderMacroToMicro();
-  renderPaymentRadar();
-  renderExpertLearning();
-  renderWatchlist();
-  renderArchive();
-  initFintechTabs();
-}
-
-// ─── SECTION 01: MASTHEAD ───
-function renderMasthead() {
-  const dateEl = $('#mastheadDate');
-  const editionBadge = $('#mastheadEditionBadge');
-  const drawerBadge = $('#drawerEditionBadge');
-  const metaBar = $('#mastheadMetaBar');
-
-  if (dateEl) dateEl.textContent = (EDITION_DATA.dayOfWeek ? (EDITION_DATA.dayOfWeek.toUpperCase() + ', ') : '') + (EDITION_DATA.editionDate || '11/11/2026');
-  if (editionBadge || drawerBadge) {
-    const baseEdition = (EDITION_DATA.editionNumber || 'ẤN BẢN SỐ 28').trim();
-    const isPreviewOnly = EDITION_DATA.publicationGateStatus?.status === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY' || EDITION_DATA.publicationGateStatus?.gateStatus === 'FAIL_SHORTFALL_24H_PREVIEW_ONLY';
-    const badgeLabel = EDITION_DATA.publicationGateStatus?.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN';
-    const badgeSuffix = isPreviewOnly ? ` · ${badgeLabel}` : '';
-    const finalText = baseEdition + badgeSuffix;
-    if (editionBadge) {
-      editionBadge.textContent = finalText;
-      if (isPreviewOnly) editionBadge.className = 'ms-badge ms-badge-warning ms-edition-pill';
+      const resp = await fetch(`${ROOT_ASSET_BASE}edition-data.json?v=${Date.now()}`, { cache: 'no-store' });
+      if (resp.ok) {
+        return await resp.json();
+      }
+    } catch (_) {
+      // Fall back silently to window.EDITION_DATA
     }
-    if (drawerBadge) {
-      drawerBadge.textContent = finalText;
-      if (isPreviewOnly) drawerBadge.className = 'ms-badge ms-badge-warning';
+    return window.EDITION_DATA || null;
+  }
+
+  function updateSeoAndStructuredData() {
+    const d = state.data;
+    if (!d) return;
+    const cs = d.editorialSections?.sec02_coverStory || {};
+    const newsList = d.eligibleNewsList || [];
+    const edMatch = String(d.editionNumber || '').match(/(\d+)/);
+    const edLabel = edMatch ? `Ấn bản số ${edMatch[1]}` : 'Ấn bản mới nhất';
+    const edDate = d.editionDate || '19/11/2026';
+    const isoDate = (() => {
+      const m = String(edDate).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      return m ? `${m[3]}-${m[2]}-${m[1]}` : '2026-11-19';
+    })();
+    const modifiedIso = d.editionCutoffAt || `${isoDate}T19:30:00+07:00`;
+    const coverTitle = String(cs.editorialHeadline || '').trim();
+    const seoTitle = IS_PREVIEW_SUBDIR
+      ? `Bnews Fintech V4 Pilot — ${edLabel} (${edDate})`
+      : `Bryan News | Fintech Intelligence — ${edLabel} (${edDate}) · ${newsList.length} Tin Kinh tế & Thanh toán số`;
+    const seoDesc = coverTitle
+      ? `Bryan News (${edLabel} · ${edDate}): ${coverTitle}. Tổng hợp ${newsList.length} sự kiện xác minh về Thanh toán số, Ngân hàng, Thị trường vốn, Doanh nghiệp, Vĩ mô và Bán lẻ.`
+      : `Bryan News - Chuyên trang thông tin và phân tích ${newsList.length} sự kiện kinh tế vĩ mô, ngân hàng, thị trường tài chính và thanh toán số Việt Nam.`;
+
+    document.title = seoTitle;
+
+    const setMeta = (selector, content) => {
+      if (!content) return;
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute('content', content);
+    };
+    setMeta('meta[name="description"]', seoDesc);
+    setMeta('meta[property="og:title"]', seoTitle);
+    setMeta('meta[property="og:description"]', seoDesc);
+    setMeta('meta[name="twitter:title"]', seoTitle);
+    setMeta('meta[name="twitter:description"]', seoDesc);
+    if (cs.leadArticle?.imageUrl) {
+      setMeta('meta[property="og:image"]', cs.leadArticle.imageUrl);
+      setMeta('meta[name="twitter:image"]', cs.leadArticle.imageUrl);
     }
-  }
 
-  if (metaBar) {
-    metaBar.style.display = 'none';
-  }
-}
+    const schemaEl = document.getElementById('v4JsonLdSchema');
+    if (schemaEl) {
+      const portalUrl = 'https://bryanportfolio.io.vn/fintech-intelligence/';
+      const topArticles = newsList.slice(0, 10).map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        url: item.canonicalUrl || item.sourceUrl || portalUrl,
+        item: {
+          '@type': 'NewsArticle',
+          headline: item.headline || item.title || '',
+          description: item.summary || '',
+          datePublished: item.originalSourcePublishedAt || item.originalPublishedAt || modifiedIso,
+          articleSection: catLabel(item.category),
+          image: item.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+          url: item.canonicalUrl || item.sourceUrl || portalUrl,
+          publisher: {
+            '@type': 'Organization',
+            name: sourceLabel(item)
+          }
+        }
+      }));
 
-function formatEditorialSynthesisHtml(rawSynthesis) {
-  const text = (rawSynthesis || '').trim();
-  if (!text) return '';
-  // Split enumerated items like "(1) ... (2) ... (3) ... (4) ..." or "[1] ...", "1. ..." for clean executive scanning
-  const markerRegex = /(?:\(\d+\)|\[\d+\]|\b\d+\.)\s+/;
-  const firstMarkerIdx = text.search(markerRegex);
-  if (firstMarkerIdx === -1) {
-    return `<p class="ms-synthesis-lead">${escapeHtml(text)}</p>`;
-  }
-  const intro = text.slice(0, firstMarkerIdx).trim().replace(/:\s*$/, '');
-  const rest = text.slice(firstMarkerIdx).trim();
-  const parts = rest.split(/(?=(?:\(\d+\)|\[\d+\]|\b\d+\.)\s+)/).map(s => s.trim()).filter(Boolean);
-  const listHtml = parts.map(part => {
-    const m = part.match(/^(?:\((\d+)\)|\[(\d+)\]|(\d+)\.)\s*([\s\S]+)$/);
-    if (!m) return '';
-    const num = m[1] || m[2] || m[3];
-    const copy = m[4];
-    return `
-      <li class="ms-synthesis-item">
-        <span class="ms-synthesis-num">${escapeHtml(num)}</span>
-        <span class="ms-synthesis-copy">${escapeHtml(copy)}</span>
-      </li>
-    `;
-  }).filter(Boolean).join('');
-  return `
-    ${intro ? `<p class="ms-synthesis-lead">${escapeHtml(intro)}:</p>` : ''}
-    <ul class="ms-synthesis-list">${listHtml}</ul>
-  `;
-}
-
-// ─── SECTION 02: COVER STORY / CORE THESIS ───
-function renderCoverStory() {
-  const ct = EDITION_DATA.editorialSections?.sec02_coverStory || EDITION_DATA.editorialSections?.coreThesis;
-  if (!ct) return;
-
-  const headlineEl = $('#coverHeadline');
-  const subheadlineEl = $('#coverSubheadline');
-  const summaryEl = $('#coverSummary');
-  const verbatimQuoteEl = $('#coverVerbatimQuote');
-  const synthesisEl = $('#coverPullQuote');
-  const implicationEl = $('#coverImplication');
-  const coverDateEl = $('#coverDate');
-  const categoryBadgeEl = $('#coverCategoryBadge');
-  const thumbContainerEl = $('#coverThumbContainer');
-  const actionsRowEl = $('#coverActionsRow');
-
-  if (coverDateEl) coverDateEl.textContent = (EDITION_DATA.sessionName || ('Phiên ngày ' + (EDITION_DATA.editionDate || '12/11/2026')));
-
-  const lead = ct.leadArticle || {};
-  const headline = lead.headline || ct.editorialHeadline || 'Sự kiện điều hành trọng tâm của phiên';
-  const sourceName = lead.sourceName || 'CafeF / VCCorp';
-  const publishedAt = lead.publishedAt || '';
-  const sourceUrl = lead.sourceUrl || '#';
-  const summary = lead.summary || ct.executiveSummary || '';
-  const totalNews = (EDITION_DATA.eligibleNewsList || []).length || 25;
-  const imageUrl = ct.imageUrl || lead.imageUrl || '';
-  const eventId = lead.eventId || 'EVT-04';
-  const categoryName = lead.category || ct.category || 'NGÂN HÀNG & LÃI SUẤT';
-
-  if (categoryBadgeEl) {
-    categoryBadgeEl.textContent = categoryName;
-  }
-
-  // 1. High-Resolution Hero Thumbnail (VnEconomy Journalistic Style)
-  if (thumbContainerEl) {
-    if (imageUrl) {
-      thumbContainerEl.innerHTML = `
-        <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(eventId)}')" class="ms-cover-thumb-link" title="${escapeHtml(headline)}">
-          <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(headline)}" class="ms-cover-thumb-img" loading="eager" onerror="this.closest('.ms-cover-thumb-wrap').style.display='none'">
-        </a>
-      `;
-      thumbContainerEl.style.display = 'block';
-    } else {
-      thumbContainerEl.innerHTML = '';
-      thumbContainerEl.style.display = 'none';
-    }
-  }
-
-  // 2. Editorial Serif Headline (Clickable into deep reader modal)
-  if (headlineEl) {
-    headlineEl.innerHTML = `
-      <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(eventId)}')">
-        ${escapeHtml(headline)}
-      </a>
-    `;
-  }
-
-  // 3. Clean Journalistic Meta Bar
-  if (subheadlineEl) {
-    const cleanPubTime = publishedAt.split(' | ')[0].trim();
-    subheadlineEl.innerHTML = `
-      <div class="ms-cover-meta-bar">
-        <span class="ms-cover-meta-item">Nguồn xác minh: <strong style="color:var(--ms-text-primary);">${escapeHtml(sourceName)}</strong></span>
-        ${cleanPubTime ? `<span class="ms-vne-dot">•</span><span class="ms-cover-meta-item">${escapeHtml(cleanPubTime)}</span>` : ''}
-        <span class="ms-vne-dot">•</span>
-        <span class="ms-badge ms-badge-neutral ms-vne-badge">XÁC MINH 100%</span>
-      </div>
-    `;
-  }
-
-  // 4. Streamlined Editorial Sapo Text
-  if (summaryEl) {
-    summaryEl.innerHTML = `
-      <p class="ms-cover-sapo-text">
-        ${escapeHtml(summary)}
-      </p>
-    `;
-  }
-
-  // 5. Clean Action Buttons Row (Deep Reader & Canonical Source)
-  if (actionsRowEl) {
-    actionsRowEl.innerHTML = `
-      <button type="button" class="ms-cover-read-btn" onclick="openArticleReader('${escapeHtml(eventId)}')">
-        <span>Đọc tóm tắt chi tiết</span>
-        <span aria-hidden="true">→</span>
-      </button>
-      <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" class="ms-cover-source-link">
-        <span>Đọc bài báo gốc (${escapeHtml(sourceName)})</span>
-        <span aria-hidden="true">↗</span>
-      </a>
-    `;
-  }
-
-  // 6. Keep bulky quote box hidden from the front page (readers can view in reader modal)
-  if (verbatimQuoteEl) {
-    verbatimQuoteEl.innerHTML = '';
-    verbatimQuoteEl.style.display = 'none';
-  }
-
-  if (synthesisEl) {
-    const synthHtml = ct.editorialSynthesis
-      ? formatEditorialSynthesisHtml(ct.editorialSynthesis)
-      : (rawQuote ? `<p class="ms-synthesis-lead">Tổng hợp bối cảnh và dòng sự kiện xác minh trong phiên.</p>` : '');
-    synthesisEl.innerHTML = `
-      <div>
-        <div class="ms-synthesis-header">
-          <span class="ms-synthesis-kicker">■ ĐÚC KẾT TOÀN CẢNH PHIÊN</span>
-          <span class="ms-badge ms-badge-primary">${totalNews} SỰ KIỆN XÁC MINH</span>
-        </div>
-        ${synthHtml}
-      </div>
-      <div class="ms-synthesis-footer">
-        <button type="button" class="ms-btn ms-btn-primary ms-btn-sm ms-synthesis-cta" onclick="switchFintechTab('market', 'newsDesk')">
-          Đọc toàn bộ ${totalNews} bản tin xác minh →
-        </button>
-      </div>
-    `;
-  }
-
-  if (implicationEl) {
-    implicationEl.innerHTML = '';
-    implicationEl.style.display = 'none';
-  }
-}
-
-
-// ─── SECTION 03: COMPACT MAGSPREAD MARKET PULSE ───
-function renderMarketPulse() {
-  const grid = $('#marketPulseGrid') || $('#pulseTier1Grid');
-  const metrics = EDITION_DATA.marketPulseSnapshot || EDITION_DATA.metrics || [];
-
-  if (grid) {
-    grid.innerHTML = metrics.slice(0, 4).map(renderPulseCard).join('');
-  }
-}
-
-function renderPulseCard(m) {
-  const st = m.status || 'neutral';
-  let changeClass = 'neu';
-  let changeIcon = '▬';
-  let changeText = m.change || 'Ổn định';
-
-  if (st === 'positive' || (m.change && (m.change.includes('+') || m.change.includes('▲')))) {
-    changeClass = 'pos';
-    changeIcon = '▲';
-  } else if (st === 'negative' || (m.change && (m.change.includes('-') || m.change.includes('▼')))) {
-    changeClass = 'neg';
-    changeIcon = '▼';
-  }
-
-  // Short clean code
-  let shortCode = m.shortLabel || m.label || 'CHỈ SỐ';
-  shortCode = shortCode.replace(/^\d+\.\s*/, '').replace('NGOẠI HỐI & CAN THIỆP ', '').replace('TIỀN GỬI ', '').replace('CHỈ SỐ ', '').replace('ĐẾN VIỆT NAM', '').trim();
-  if (m.key === 'usdVndCenter') shortCode = 'USD/VND';
-  if (m.key === 'maxDeposit12M') shortCode = 'LÃI SUẤT 12T';
-  if (m.key === 'vnIndex') shortCode = 'VN-INDEX';
-  if (m.key === 'inboundTourists') shortCode = 'KHÁCH QUỐC TẾ';
-
-  // Dynamic sub-reference string from EDITION_DATA (zero hardcoded daily values)
-  let subRef = m.compactSubRef || '';
-  if (!subRef) {
-    if (m.referenceValue) {
-      const refParts = m.referenceValue.split('|').map(s => s.trim()).filter(Boolean);
-      subRef = refParts.length >= 2 ? refParts.slice(1, 3).join(' · ') : refParts[0];
-    } else {
-      subRef = m.note || '';
+      const ldObj = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': ['NewsMediaOrganization', 'WebSite'],
+            '@id': `${portalUrl}#website`,
+            name: 'Bryan News | Fintech Intelligence',
+            alternateName: ['Bryan News', 'Bnews Fintech', 'Fintech Intelligence VN'],
+            url: portalUrl,
+            description: seoDesc,
+            inLanguage: 'vi-VN',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+              width: 1200,
+              height: 630
+            },
+            publisher: {
+              '@type': 'Person',
+              name: 'Nguyễn Huỳnh Quang Trí (Bryan Nguyen)',
+              jobTitle: 'Enterprise B2B & Fintech Product Specialist',
+              url: 'https://bryanportfolio.io.vn/',
+              sameAs: [
+                'https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/',
+                'https://zalo.me/0838673639',
+                'https://www.facebook.com/Tori1005'
+              ]
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${portalUrl}?q={search_term_string}`
+              },
+              'query-input': 'required name=search_term_string'
+            }
+          },
+          {
+            '@type': 'CollectionPage',
+            '@id': `${portalUrl}#webpage`,
+            url: portalUrl,
+            name: seoTitle,
+            description: seoDesc,
+            inLanguage: 'vi-VN',
+            datePublished: `${isoDate}T09:00:00+07:00`,
+            dateModified: modifiedIso,
+            isPartOf: { '@id': `${portalUrl}#website` },
+            breadcrumb: { '@id': `${portalUrl}#breadcrumb` }
+          },
+          {
+            '@type': 'BreadcrumbList',
+            '@id': `${portalUrl}#breadcrumb`,
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Bryan Portfolio', item: 'https://bryanportfolio.io.vn/' },
+              { '@type': 'ListItem', position: 2, name: 'Bryan News | Fintech Intelligence', item: portalUrl }
+            ]
+          },
+          {
+            '@type': 'NewsArticle',
+            '@id': `${portalUrl}#cover-story`,
+            headline: coverTitle || seoTitle,
+            description: cs.editorialSubheadline || cs.dek || seoDesc,
+            image: cs.leadArticle?.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+            datePublished: `${isoDate}T09:00:00+07:00`,
+            dateModified: modifiedIso,
+            author: { '@type': 'Person', name: 'Nguyễn Huỳnh Quang Trí (Bryan Nguyen)', url: 'https://bryanportfolio.io.vn/' },
+            publisher: { '@id': `${portalUrl}#website` },
+            mainEntityOfPage: { '@id': `${portalUrl}#webpage` }
+          },
+          {
+            '@type': 'ItemList',
+            '@id': `${portalUrl}#edition-articles`,
+            name: `Danh sách tin nổi bật ${edLabel} (${edDate})`,
+            numberOfItems: newsList.length,
+            itemListElement: topArticles
+          }
+        ]
+      };
+      schemaEl.textContent = JSON.stringify(ldObj);
     }
   }
 
-  let changeDisplay = m.compactDelta || '';
-  if (!changeDisplay) {
-    const rawChg = String(m.change || '');
-    const rangeMatch = rawChg.match(/(\d+(?:[.,]\d+)?%?\s*[-–]\s*\d+(?:[.,]\d+)?%)/);
-    if (m.key === 'maxDeposit12M' && rangeMatch) {
-      changeDisplay = rangeMatch[1];
-    } else {
-      const signedMatch = rawChg.match(/([+-]\s*\d+(?:[.,]\d+)?\s*(?:đ|VND\/USD|điểm|%)(?:\s*(?:YoY|\([^)]*\)))?)/i);
-      if (signedMatch) {
-        changeDisplay = signedMatch[1].replace(/\s*VND\/USD/gi, 'đ').replace(/\s*điểm/gi, 'đ').trim();
-      } else {
-        changeDisplay = rawChg ? rawChg.split('so với')[0].trim().slice(0, 22) : changeText;
+  // ─── HEADER & MARKET PULSE (44PX) ─────────────────────────────────────────
+  function renderMasthead() {
+    const d = state.data;
+    const dateEl = $('#v4Date');
+    const edEl = $('#v4EditionLabel');
+    const drawerBadgeEl = $('#v4DrawerEditionBadge');
+    const footerMetaEl = $('#v4FooterEditionMeta');
+
+    if (dateEl && (d.dayOfWeek || d.editionDate)) {
+      const dow = String(d.dayOfWeek || '')
+        .toLowerCase()
+        .replace(/(^|\s)\S/g, (ch) => ch.toUpperCase());
+      dateEl.textContent = `${dow ? dow + ', ' : ''}${d.editionDate || ''}`;
+    }
+    if (edEl && d.editionNumber) {
+      const rawEd = String(d.editionNumber);
+      const mNum = rawEd.match(/(\d+)/);
+      edEl.textContent = mNum ? `Ấn bản số ${mNum[1]}` : rawEd;
+      if (drawerBadgeEl) {
+        const cleanBadge = rawEd
+          .replace(/ẤN BẢN SỐ/gi, 'Ấn bản số')
+          .replace(/PHIÊN CHIỀU/gi, 'Phiên chiều')
+          .replace(/PHIÊN SÁNG/gi, 'Phiên sáng');
+        drawerBadgeEl.textContent = cleanBadge;
       }
     }
+    if (footerMetaEl && d.editionId) {
+      footerMetaEl.textContent = `${d.editionId} · ${d.editionDate || ''} · Institutional V4.0`;
+    }
   }
 
-  // Recompute class & icon cleanly from compact changeDisplay
-  const trimmedDelta = String(changeDisplay || '').trim();
-  if (trimmedDelta.startsWith('+')) {
-    changeClass = 'pos';
-    changeIcon = '▲';
-  } else if (trimmedDelta.startsWith('-')) {
-    changeClass = 'neg';
-    changeIcon = '▼';
-  } else if (/^\d/.test(trimmedDelta) || st === 'neutral') {
-    changeClass = 'neu';
-    changeIcon = '▬';
+  function formatPulseParts(m) {
+    const sl = String(m.shortLabel || m.label || '').toUpperCase();
+    const rawVal = String(m.value || '');
+    const rawDelta = String(m.compactDelta || '');
+
+    let shortName = m.shortLabel || m.label || 'Chỉ số';
+    let cleanVal = rawVal;
+    let cleanDelta = '';
+    let tone = 'is-neutral';
+
+    if (sl.includes('USD')) {
+      shortName = 'USD/VND';
+      cleanVal = rawVal.replace(/\s*VND\/USD/i, '').trim();
+      const mDelta = rawDelta.match(/^([+-]?\d[\d.,]*đ)/i);
+      cleanDelta = mDelta ? `(${mDelta[1]})` : rawDelta ? `(${rawDelta})` : '';
+      tone = m.status === 'negative' ? 'is-down' : m.status === 'positive' ? 'is-up' : 'is-neutral';
+    } else if (sl.includes('LÃI SUẤT')) {
+      shortName = 'Lãi suất 12T';
+      cleanVal = rawVal.replace(/\s*%\/năm/i, '%').replace(/\s+%/g, '%').trim();
+      cleanDelta = '';
+      tone = 'is-neutral';
+    } else if (sl.includes('VN-INDEX')) {
+      shortName = 'VN-Index';
+      cleanVal = rawVal.replace(/\s*Điểm/i, '').trim();
+      const mPct = rawDelta.match(/\(([+-]?[\d.,]+%)\)/);
+      cleanDelta = mPct ? `(${mPct[1]})` : rawDelta ? `(${rawDelta})` : '';
+      tone = cleanDelta.includes('-') || m.status === 'negative' ? 'is-down' : 'is-up';
+    } else if (sl.includes('KHÁCH')) {
+      shortName = 'Khách QT';
+      cleanVal = rawVal.replace(/\s*Triệu lượt/i, 'M').replace(/\s+M$/i, 'M').trim();
+      const mYoy = rawDelta.match(/([+-]?[\d.,]+%)/);
+      cleanDelta = mYoy ? `(${mYoy[1]})` : rawDelta ? `(${rawDelta})` : '';
+      tone = m.status === 'positive' ? 'is-up' : m.status === 'negative' ? 'is-down' : 'is-neutral';
+    }
+
+    return { shortName, cleanVal, cleanDelta, tone };
   }
 
-  const sourceName = m.sourceShortName || (m.sourceName ? m.sourceName.split('(')[0].trim() : 'Báo chí');
-  const refCode = m.referenceCode || '';
+  function renderPulseStrip() {
+    const track = $('#v4PulseTrack');
+    const items = state.data.marketPulseSnapshot || [];
+    if (!track || !items.length) return;
 
-  return `
-    <div class="ms-ticker-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')" title="Bấm để xem đối soát chi tiết và bài báo gốc">
-      <div class="ms-ticker-head">
-        <span class="ms-ticker-title">${escapeHtml(shortCode)}</span>
-        <span class="ms-ticker-badge ${changeClass}">${changeIcon} ${escapeHtml(changeDisplay || changeText)}</span>
-      </div>
-      <div class="ms-ticker-val-row">
-        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
-      </div>
-      <div class="ms-ticker-mid">
-        <span class="ms-ticker-sub">${escapeHtml(subRef)}</span>
-      </div>
-      <div class="ms-ticker-bot">
-        <span class="ms-ticker-src">${escapeHtml(sourceName)}</span>
-        ${refCode ? `<span class="ms-ticker-ref">🔒 "${escapeHtml(refCode)}"</span>` : '<span class="ms-ticker-ref">🔒 Đã khóa</span>'}
-      </div>
-    </div>
-  `;
-}
-
-function openPulseDetail(key) {
-  const metrics = EDITION_DATA.marketPulseSnapshot || EDITION_DATA.metrics || [];
-  const m = metrics.find(x => x.key === key);
-  if (!m) return;
-
-  const gates = m.qualityGates || {};
-  const items = (m.detailsExpandable && m.detailsExpandable.items) ? m.detailsExpandable.items : [];
-
-  const html = `
-    <div style="font-size:0.9375rem; line-height:1.7;">
-      <!-- Header banner -->
-      <div style="padding-bottom:16px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span class="ms-badge ms-badge-primary" style="font-size:0.75rem;">THẺ ${escapeHtml(m.cardNumber || '')} · ${escapeHtml(m.tierGroup || 'MARKET PULSE')}</span>
-          <span class="ms-badge ${m.verificationStatus === '72H_NOT_VERIFIED' ? 'ms-badge-warning' : 'ms-badge-success'}">
-            ${escapeHtml(m.verificationStatus || 'VERIFIED')}
-          </span>
-        </div>
-        <h3 style="font-family:var(--font-headline); font-size:1.5rem; font-weight:800; color:var(--ms-primary); margin:8px 0 4px 0;">
-          ${escapeHtml(m.label)}
-        </h3>
-        <div style="font-size:2rem; font-weight:900; color:var(--ms-text-primary); font-family:var(--font-mono); letter-spacing:-0.02em;">
-          ${escapeHtml(m.value)}
-        </div>
-        ${m.change ? `
-          <div style="font-size:0.875rem; color:var(--ms-text-muted); font-weight:600; margin-top:2px;">
-            Biến động: <span style="color:var(--ms-primary);">${escapeHtml(m.change)}</span>
-          </div>
-        ` : ''}
-      </div>
-
-      ${m.verificationStatus === '72H_NOT_VERIFIED' ? `
-        <div style="background-color:var(--ms-warning-bg); border:1px solid var(--ms-warning); padding:12px 16px; border-radius:4px; margin-bottom:18px;">
-          <div style="font-weight:700; color:var(--ms-warning-text); margin-bottom:4px;">⚠️ THÔNG BÁO KIỂM ĐỊNH FRESHNESS 72H</div>
-          <div style="font-size:0.875rem; line-height:1.6;">
-            Số liệu phiên quan sát chưa có công bố chính thức kèm timestamp đối soát trong vòng 72 giờ qua. Để đảm bảo tính trung thực báo chí tài chính, giá trị hiển thị là <strong>Chưa xác minh trong 72h</strong>.
-            <br>Giá trị tham khảo gần nhất: <strong>${escapeHtml(m.referenceValue || 'Kỳ quan sát trước')}</strong>.
-          </div>
-        </div>
-      ` : ''}
-
-      ${m.key === 'vietqrVolume' ? `
-        <div style="background-color:var(--ms-primary-light); border:1px solid var(--ms-primary); padding:12px 16px; border-radius:4px; margin-bottom:18px;">
-          <div style="font-weight:700; color:var(--ms-primary); margin-bottom:4px;">📌 LƯU Ý PHẠM VI DỮ LIỆU (SCOPE SEPARATION)</div>
-          <div style="font-size:0.875rem; line-height:1.6;">
-            Mức tăng trưởng <strong>${escapeHtml(m.value)}</strong> là số liệu áp dụng riêng cho luồng khách du lịch quốc tế và các điểm bán chấp nhận <strong>VietQR Global (Inbound & Cross-border)</strong>. Tuyệt đối không đồng nhất với tổng sản lượng giao dịch toàn hệ thống NAPAS.
-          </div>
-        </div>
-      ` : ''}
-
-      <!-- 11 Standardized Detailed Fields -->
-      <div style="display:flex; flex-direction:column; gap:16px;">
-        <!-- Field 01 to 05: Core Metadata -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:10px;">
-            THÔNG TIN QUAN SÁT & CHU KỲ (FIELDS 01–05)
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.875rem;">
-            <div><strong>Tên chỉ số:</strong> ${escapeHtml(m.label)}</div>
-            <div><strong>Mã tham chiếu:</strong> <span class="ms-badge ms-badge-primary" style="font-size:0.8125rem; font-weight:700;">${escapeHtml(m.referenceCode || m.key)}</span> 🔒 <em style="font-size:0.75rem; color:var(--ms-text-muted);">(Đã khóa)</em></div>
-            <div><strong>Ngày quan sát:</strong> ${escapeHtml(m.observationAt || m.asOf)}</div>
-            <div><strong>Ngày công bố:</strong> ${escapeHtml(m.publishedAt || m.asOf)}</div>
-            <div style="grid-column:1/-1;"><strong>Kỳ dữ liệu:</strong> ${escapeHtml(m.dataPeriod || '')}</div>
-            ${m.referenceValue ? `<div style="grid-column:1/-1;"><strong>Giá trị tham chiếu:</strong> ${escapeHtml(m.referenceValue)}</div>` : ''}
-          </div>
-        </div>
-
-        <!-- Field 06 & 07: Sources & Canonical Provenance -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:8px;">
-            NGUỒN GỐC & ĐƯỜNG DẪN XÁC MINH (FIELDS 06–07)
-          </div>
-          <div style="font-size:0.875rem; margin-bottom:6px;">
-            <strong>Cơ quan công bố & Nguồn cố định:</strong> ${escapeHtml(m.sourceName || 'Cơ quan báo chí chính thống')}
-          </div>
-          <div style="font-size:0.875rem; margin-bottom:6px;">
-            <strong>Mã tham chiếu & Từ khóa quét:</strong> <code style="background:var(--ms-surface); padding:2px 6px; border:1px solid var(--ms-border); border-radius:3px; font-weight:700; color:var(--ms-primary); font-family:var(--font-ui);">${escapeHtml(m.referenceCode || m.searchKeyword || '')}</code> 🔒 <span style="font-size:0.75rem; color:var(--ms-text-muted);">(Đã khóa cố định)</span>
-          </div>
-          ${m.articleTitle ? `
-            <div style="font-size:0.875rem; margin-bottom:8px; line-height:1.5;">
-              <strong>Bài báo đối soát chi tiết hôm nay:</strong> <br>
-              <span style="color:var(--ms-primary); font-weight:700;">${escapeHtml(m.articleTitle)}</span>
-            </div>
-          ` : ''}
-          <div style="font-size:0.8125rem; margin-bottom:8px; color:var(--ms-text-muted); word-break:break-all;">
-            <strong>Link bài báo chi tiết:</strong> <br>
-            <a href="${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-primary); text-decoration:underline; font-weight:600;">
-              ${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}
-            </a>
-          </div>
-          <div style="font-size:0.75rem; margin-bottom:12px; color:var(--ms-text-muted); word-break:break-all;">
-            <strong>Kênh quét / tra cứu gốc đã khóa:</strong> <br>
-            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" style="color:var(--ms-text-muted); text-decoration:underline;">
-              ${escapeHtml(m.sourceUrl)}
-            </a>
-          </div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;">
-            <a href="${escapeHtml(m.dailyArticleUrl || m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-primary ms-btn-sm" style="font-weight:700; background-color:#0b3c2b; color:#fff;">
-              Mở bài báo đối soát chi tiết (${escapeHtml(m.sourceShortName || 'Bài báo')}) ↗
-            </a>
-            <a href="${escapeHtml(m.sourceUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-              Xem kênh quét / tra cứu gốc (${escapeHtml(m.sourceShortName || 'Nguồn gốc')}) ↗
-            </a>
-            ${(m.secondarySourceUrls || []).filter(u => u && u.startsWith('http') && u !== m.sourceUrl && u !== m.dailyArticleUrl).map((secUrl, idx) => `
-              <a href="${escapeHtml(secUrl)}" target="_blank" rel="noopener" class="ms-btn ms-btn-ghost ms-btn-sm">
-                Nguồn bổ trợ #${idx + 1} ↗
-              </a>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Field 08 & 09: Methodology & Details -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:8px;">
-            Ý NGHĨA CHỈ SỐ & CÔNG THỨC QUY CHUẨN (FIELDS 08–09)
-          </div>
-          <div style="font-size:0.875rem; margin-bottom:8px; font-weight:600;">
-            ${escapeHtml(m.detailsExpandable?.summaryTitle || 'Thuyết minh phương pháp luận & cơ sở tính toán:')}
-          </div>
-          <ul style="padding-left:18px; margin:0; font-size:0.875rem; display:flex; flex-direction:column; gap:6px;">
-            ${items.map(it => `<li>${escapeHtml(it)}</li>`).join('')}
-          </ul>
-        </div>
-
-        <!-- Field 10: Financial Interpretation & Impact -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; color:var(--ms-primary); font-weight:700; margin-bottom:8px;">
-            DIỄN GIẢI TÀI CHÍNH & TÁC ĐỘNG THỰC TẾ (FIELD 10)
-          </div>
-          <p style="font-size:0.875rem; line-height:1.6; margin:0;">
-            ${escapeHtml(m.financialInterpretation || m.implication || m.statusReason || m.note || 'Chỉ số phản ánh trạng thái cân bằng vĩ mô và tính thanh khoản của hệ thống.')}
-          </p>
-        </div>
-      </div>
-    </div>
-  `;
-
-  openDrawer(m.label, html);
-}
-
-
-// ─── SECTION 04: THE NEWS DESK ───
-function renderNewsDesk() {
-  const newsList = EDITION_DATA.eligibleNewsList || [];
-  
-  // Filter
-  const needle = (currentSearchTerm || '').toLowerCase();
-  let filtered = newsList.filter(item => {
-    const matchCat = currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter;
-    const matchSearch = !needle || 
-      (item.title && item.title.toLowerCase().includes(needle)) ||
-      (item.summary && item.summary.toLowerCase().includes(needle)) ||
-      (item.supportingQuote && item.supportingQuote.toLowerCase().includes(needle)) ||
-      (item.category && item.category.toLowerCase().includes(needle)) ||
-      (item.publisher && item.publisher.toLowerCase().includes(needle)) ||
-      (item.author && item.author.toLowerCase().includes(needle));
-    return matchCat && matchSearch;
-  });
-
-  // Strict sorting: 0–24h first, then 24–48h
-  filtered.sort((a, b) => {
-    const rankA = a.strictCombinedTimeWindow === '0–24h' ? 1 : 2;
-    const rankB = b.strictCombinedTimeWindow === '0–24h' ? 1 : 2;
-    if (rankA !== rankB) return rankA - rankB;
-    return (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || '');
-  });
-
-  const streamContainer = $('#newsStreamContainer') || $('#newsStandardGrid');
-  const countBadge = $('#newsCountBadge');
-  if (countBadge) {
-    countBadge.textContent = `${filtered.length}/${newsList.length} bài`;
-  }
-  const counterBar = $('#newsResultCounterBar');
-  if (counterBar) {
-    counterBar.textContent = `${filtered.length} bài phù hợp trên tổng ${newsList.length} bài đủ điều kiện.`;
-  }
-
-  // D-08: Rich Empty State with exact spec wording & reset control
-  if (filtered.length === 0) {
-    if (streamContainer) {
-      streamContainer.innerHTML = `
-        <div class="ms-empty-state" role="status">
-          <div style="font-size:2rem; margin-bottom:10px;" aria-hidden="true">🔍</div>
-          <p>Không tìm thấy bản tin phù hợp với từ khóa hoặc bộ lọc hiện tại.</p>
-          <button type="button" class="ms-filter-reset-btn" onclick="clearNewsSearchAndFilter()">
-            Xóa bộ lọc
+    track.innerHTML = items
+      .map((m, idx) => {
+        const p = formatPulseParts(m);
+        return `
+          <button type="button" class="v4-pulse-item" data-mp-idx="${idx}" title="Bấm xem nguồn đối soát ${esc(p.shortName)}">
+            <span class="v4-pulse-name">${esc(p.shortName)}</span>
+            <span class="v4-pulse-val">${esc(p.cleanVal)}</span>
+            ${p.cleanDelta ? `<span class="v4-pulse-delta ${p.tone}">${esc(p.cleanDelta)}</span>` : ''}
           </button>
+        `;
+      })
+      .join('');
+
+    track.querySelectorAll('.v4-pulse-item').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.dataset.mpIdx);
+        openMarketPulseDrawer(items[idx]);
+      });
+    });
+  }
+
+  // ─── B1. TRANG NHẤT 3 CỘT (25% | 50% | 25%) ─────────────────────────────────
+  function parseSynthesisPoints(synthStr) {
+    if (!synthStr) return [];
+    const cleaned = String(synthStr)
+      .replace(/^Toàn cảnh phiên[^:]*:\s*/i, '')
+      .trim();
+    const matches = cleaned.match(/\(\d\)\s*[^;]+(?:;|$)/g);
+    if (!matches || !matches.length) {
+      return [{ num: '01', title: 'Đúc kết thị trường', body: cleaned }];
+    }
+    return matches.slice(0, 4).map((rawItem, idx) => {
+      const noPrefix = rawItem.replace(/^\(\d\)\s*/, '').replace(/;$/, '').trim();
+      const colonIdx = noPrefix.indexOf(':');
+      if (colonIdx > 0 && colonIdx < 80) {
+        return {
+          num: `0${idx + 1}`,
+          title: noPrefix.slice(0, colonIdx).trim(),
+          body: noPrefix.slice(colonIdx + 1).trim()
+        };
+      }
+      return {
+        num: `0${idx + 1}`,
+        title: `Mạch chuyển động ${idx + 1}`,
+        body: noPrefix
+      };
+    });
+  }
+
+  function renderFrontPage() {
+    const cs = state.data.editorialSections?.sec02_coverStory || {};
+    const newsList = state.data.eligibleNewsList || [];
+    const leadId = cs.leadArticle?.eventId || newsList[0]?.eventId;
+    const leadItem = state.newsById[leadId] || cs.leadArticle || newsList[0];
+
+    // Cột trái (25%): Đúc kết 4 mạch phiên 01 -> 04
+    const synthCol = $('#v4SynthesisCol');
+    if (synthCol) {
+      const points = parseSynthesisPoints(cs.editorialSynthesis);
+      synthCol.innerHTML = `
+        <div class="v4-col-label">
+          <span>Đúc kết 4 mạch phiên</span>
+          <span class="v4-col-label-sub">${newsList.length} tin</span>
+        </div>
+        <div class="v4-synth-list">
+          ${points
+            .map(
+              (pt) => `
+            <div class="v4-synth-item">
+              <div class="v4-synth-num">${esc(pt.num)}</div>
+              <div>
+                <h3 class="v4-synth-title">${esc(pt.title)}</h3>
+                <p class="v4-synth-desc">${esc(pt.body)}</p>
+              </div>
+            </div>
+          `
+            )
+            .join('')}
         </div>
       `;
     }
-    return;
-  }
 
-  if (streamContainer) {
-    streamContainer.innerHTML = filtered.map((item, idx) => renderVnEconomyNewsItemHtml(item, idx)).join('');
-  }
-}
+    // Cột giữa (50%): Bài đinh trang nhất (không có nhãn XÁC MINH 100%)
+    const coverCol = $('#v4CoverCol');
+    if (coverCol && leadItem) {
+      const coverTitle = cs.editorialHeadline || leadItem.headline || leadItem.title;
+      const coverSapo = cs.editorialSubheadline || leadItem.summary || cs.dek || '';
+      const coverImg = leadItem.imageUrl || cs.imageUrl;
+      const categoryTxt = catLabel(leadItem.category || 'Ngân hàng');
+      const srcTxt = sourceLabel(leadItem);
+      const timeTxt = extractDateTimeReadable(leadItem);
 
-function renderVnEconomyNewsItemHtml(item, idx) {
-  const cleanTime = (item.publisherPublishedAt || item.publicationTimestamp || item.originalPublishedAt || '').split(' | ')[0].trim();
-  const author = item.author || item.originalSourceName || item.publisher || 'Báo chí tài chính';
-  const cat = item.category || 'Tài chính';
-
-  let catIcon = '📊';
-  let catSlug = 'macro';
-  if (cat.includes('Ngân hàng')) { catIcon = '🏦'; catSlug = 'banking'; }
-  else if (cat.includes('Thị trường vốn')) { catIcon = '📈'; catSlug = 'capital'; }
-  else if (cat.includes('Thanh toán')) { catIcon = '💳'; catSlug = 'payment'; }
-  else if (cat.includes('Doanh nghiệp')) { catIcon = '🏢'; catSlug = 'enterprise'; }
-  else if (cat.includes('Bán lẻ') || cat.includes('tiêu dùng')) { catIcon = '🛍️'; catSlug = 'retail'; }
-
-  const hasImg = !!item.imageUrl;
-
-  const thumbHtml = `
-    <div class="ms-vne-thumb-wrap">
-      <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(item.eventId)}')" class="ms-vne-thumb-anchor" title="${escapeHtml(item.pageTitle || item.title)}">
-        ${hasImg ? `
-          <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-vne-thumb-img" loading="lazy" onerror="this.classList.add('is-broken'); const fb = this.parentElement.querySelector('.ms-vne-fallback-card'); if (fb) fb.classList.add('is-active');">
-        ` : ''}
-        <div class="ms-vne-fallback-card ms-fallback-${catSlug} ${hasImg ? '' : 'is-active'}">
-          <div class="ms-fallback-mesh" aria-hidden="true"></div>
-          <div class="ms-fallback-badge">BNEWS · FINTECH</div>
-          <div class="ms-fallback-icon" aria-hidden="true">${catIcon}</div>
-          <div class="ms-fallback-cat">${escapeHtml(cat)}</div>
-        </div>
-      </a>
-    </div>
-  `;
-
-  return `
-    <article class="ms-vne-article-item has-thumb" data-event-id="${escapeHtml(item.eventId)}">
-      ${thumbHtml}
-      <div class="ms-vne-content-wrap">
-        <div class="ms-vne-meta">
-          <span class="ms-vne-cat">${escapeHtml(item.category || 'Tài chính')}</span>
-          <span class="ms-vne-dot">•</span>
-          <span class="ms-vne-time">${escapeHtml(cleanTime || '17/11/2026')}</span>
-          <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'} ms-vne-badge">
-            [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
-          </span>
-          <span class="ms-vne-source ms-hide-mobile">Nguồn: <strong>${escapeHtml(author)}</strong></span>
-        </div>
-
-        <h3 class="ms-vne-title">
-          <a href="javascript:void(0)" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            ${escapeHtml(item.pageTitle || item.title)}
-          </a>
-        </h3>
-
-        <p class="ms-vne-sapo">
-          ${escapeHtml(item.summary || item.supportingQuote || '')}
-        </p>
-
-        <div class="ms-vne-footer">
-          <button type="button" class="ms-vne-read-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            <span>Đọc tóm tắt chi tiết</span>
-            <span aria-hidden="true">→</span>
+      coverCol.innerHTML = `
+        <article class="v4-cover-card">
+          <button type="button" class="v4-cover-img-btn" data-open-event="${esc(leadItem.eventId)}" aria-label="Đọc bài đinh: ${esc(coverTitle)}">
+            ${imgTag(coverImg, coverTitle, 'v4-cover-img')}
           </button>
-          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-vne-source-link">
-            <span>Bài gốc (${escapeHtml(author)})</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-function clearNewsSearchAndFilter() {
-  currentSearchTerm = '';
-  currentCategoryFilter = 'ALL';
-  const searchInput = $('#newsSearchInput');
-  const headerSearchInput = $('#headerQuickSearchInput');
-  const drawerSearchInput = $('#drawerSearchInput');
-  if (searchInput) searchInput.value = '';
-  if (headerSearchInput) headerSearchInput.value = '';
-  if (drawerSearchInput) drawerSearchInput.value = '';
-  $$('.ms-cat-btn').forEach(b => {
-    const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
-    b.classList.toggle('active', isAll);
-    b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
-  });
-  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
-  renderNewsDesk();
-}
-window.clearNewsSearchAndFilter = clearNewsSearchAndFilter;
-
-function renderEditorialQuoteBlock(item) {
-  const raw = (item.supportingQuote || '').replace(/^[“”"']+|[“”"']+$/g, '').trim();
-  if (!raw) return '';
-  return `
-    <blockquote class="ms-card-editorial-quote">
-      <span class="ms-card-editorial-quote-label">Trích dẫn nguồn báo chí</span>
-      “${escapeHtml(raw)}”
-    </blockquote>
-  `;
-}
-
-function renderNewsCardHtml(lead, isLead) {
-  const cleanTime = (lead.publisherPublishedAt || lead.publicationTimestamp || '').split(' | ')[0].trim();
-  const natureText = lead.analysisNature || lead.sectionB_context || '';
-  const impactText = lead.analysisMarketImpact || lead.sectionC_whyItMatters || '';
-  const leadBreakdownHtml = (isLead && (natureText || impactText)) ? `
-    <div class="ms-lead-analysis-preview">
-      ${natureText ? `
-        <div class="ms-lead-analysis-col">
-          <div class="ms-lead-analysis-label">01. Bản chất &amp; Cơ chế tác động</div>
-          <p class="ms-lead-analysis-text">${escapeHtml(natureText)}</p>
-        </div>
-      ` : ''}
-      ${impactText ? `
-        <div class="ms-lead-analysis-col">
-          <div class="ms-lead-analysis-label">02. Tác động thị trường &amp; Hàm ý</div>
-          <p class="ms-lead-analysis-text">${escapeHtml(impactText)}</p>
-        </div>
-      ` : ''}
-    </div>
-  ` : '';
-
-  const leadThumbHtml = lead.imageUrl ? `
-    <div class="ms-lead-thumb-wrap">
-      <img src="${escapeHtml(lead.imageUrl)}" alt="${escapeHtml(lead.pageTitle || lead.title)}" class="ms-lead-thumb-img" loading="lazy" onerror="this.closest('.ms-lead-thumb-wrap').style.display='none'">
-    </div>
-  ` : '';
-
-  return `
-    <article class="ms-news-lead-story ${lead.imageUrl ? 'has-thumb' : ''}">
-      ${leadThumbHtml}
-      <div class="ms-lead-body-wrap">
-        <div class="ms-lead-meta">
-          <span class="ms-badge ms-badge-rose">${escapeHtml(lead.category || 'Tin tức')}</span>
-          <span class="ms-badge ${lead.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
-            [${escapeHtml(lead.strictCombinedTimeWindow || '24h')}]
-          </span>
-          ${cleanTime ? `<span class="ms-xs" style="color:var(--ms-text-muted); font-family:var(--font-mono); font-size:12px;">${escapeHtml(cleanTime)}</span>` : ''}
-        </div>
-        <h2 class="ms-lead-title">
-          <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
-            ${escapeHtml(lead.pageTitle || lead.title)}
-          </button>
-        </h2>
-        <p class="ms-lead-summary">${escapeHtml(lead.summary || lead.supportingQuote || '')}</p>
-        ${renderEditorialQuoteBlock(lead)}
-        ${leadBreakdownHtml}
-      </div>
-      <div class="ms-news-card-footer">
-        <span>Nguồn: <strong>${escapeHtml(lead.author || lead.originalSourceName || 'Báo chí')}</strong></span>
-        <div style="display:flex; gap:10px;">
-          <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openArticleReader('${escapeHtml(lead.eventId)}')">
-            Đọc tóm tắt chi tiết
-          </button>
-          <a href="${escapeHtml(lead.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center;">
-            Bài gốc ↗
-          </a>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-function renderSubfeatureCardHtml(item) {
-  const thumbHtml = item.imageUrl ? `
-    <div class="ms-card-thumb-wrap ms-subfeature-thumb">
-      <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-card-thumb-img" loading="lazy" onerror="this.closest('.ms-card-thumb-wrap').style.display='none'">
-    </div>
-  ` : '';
-
-  return `
-    <article class="ms-subfeature-card ${item.imageUrl ? 'has-thumb' : ''}">
-      <div class="ms-card-body-flex">
-        ${thumbHtml}
-        <div class="ms-card-content-col">
-          <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-            <span class="ms-badge ms-badge-primary" style="font-size:12px;">${escapeHtml(item.category || 'Tài chính')}</span>
-            <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}" style="font-size:12px;">
-              [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
-            </span>
+          <div class="v4-cover-kicker">
+            <span class="v4-crimson-tag">${esc(categoryTxt)} · Tiêu điểm</span>
           </div>
-          <h3 class="ms-subfeature-title">
-            <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-              ${escapeHtml(item.pageTitle || item.title)}
-            </button>
-          </h3>
-          <p style="font-size:0.875rem; line-height:1.55; color:var(--ms-text-secondary); margin-bottom:8px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">
-            ${escapeHtml(item.summary || item.supportingQuote || '')}
-          </p>
-          ${renderEditorialQuoteBlock(item)}
-        </div>
-      </div>
-      <div class="ms-news-card-footer">
-        <span style="font-size:12px;">${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
-        <div style="display:flex; gap:8px;">
-          <button class="ms-btn ms-btn-ghost ms-btn-sm" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            Phân tích
-          </button>
-          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center; font-size:12px;">
-            Bài gốc ↗
-          </a>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-function renderStandardNewsCardHtml(item) {
-  const thumbHtml = item.imageUrl ? `
-    <div class="ms-card-thumb-wrap">
-      <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" class="ms-card-thumb-img" loading="lazy" onerror="this.closest('.ms-card-thumb-wrap').style.display='none'">
-    </div>
-  ` : '';
-
-  return `
-    <article class="ms-news-card ${item.imageUrl ? 'has-thumb' : ''}">
-      <div class="ms-card-body-flex">
-        ${thumbHtml}
-        <div class="ms-card-content-col">
-          <div class="ms-news-card-meta">
-            <div style="display:flex; align-items:center; gap:4px;">
-              <span class="ms-badge ms-badge-neutral">${escapeHtml(item.category || 'FinTech')}</span>
-              <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
-                [${escapeHtml(item.strictCombinedTimeWindow || '24h')}]
-              </span>
-            </div>
-          </div>
-          <h3 class="ms-news-card-title">
-            <button type="button" class="ms-title-btn" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-              ${escapeHtml(item.pageTitle || item.title)}
-            </button>
-          </h3>
-          <p class="ms-news-card-summary">${escapeHtml(item.summary || item.supportingQuote || '')}</p>
-          ${renderEditorialQuoteBlock(item)}
-        </div>
-      </div>
-      <div class="ms-news-card-footer">
-        <span>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</span>
-        <div style="display:flex; gap:8px;">
-          <button class="ms-btn ms-btn-ghost ms-btn-sm" onclick="openArticleReader('${escapeHtml(item.eventId)}')">
-            Phân tích
-          </button>
-          <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener" class="ms-source-link" style="align-self:center;">
-            Bài gốc ↗
-          </a>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-
-function openArticleReader(eventId) {
-  const item = (EDITION_DATA.eligibleNewsList || []).find(x => x.eventId === eventId);
-  if (!item) return;
-
-  const pubDate = (item.publisherPublishedAt || item.originalSourcePublishedAt || item.publicationTimestamp || '').split(' | ')[0].trim();
-
-  const html = `
-    <article style="font-size:1rem; line-height:1.75;">
-      <!-- Article Header -->
-      <div style="margin-bottom:16px;">
-        <span class="ms-badge ms-badge-rose">${escapeHtml(item.category || 'Tin tức')}</span>
-        <span class="ms-badge ${item.strictCombinedTimeWindow === '0–24h' ? 'ms-badge-success' : 'ms-badge-neutral'}">
-          [${escapeHtml(item.strictCombinedTimeWindow || '0–24h')}]
-        </span>
-      </div>
-
-      <h2 style="font-family:var(--font-headline); font-size:1.875rem; line-height:1.25; color:var(--ms-primary); margin-bottom:12px;">
-        ${escapeHtml(item.pageTitle || item.title)}
-      </h2>
-
-      <div style="font-family:var(--font-mono); font-size:0.8125rem; color:var(--ms-text-muted); padding-bottom:12px; margin-bottom:18px; border-bottom:1px solid var(--ms-border);">
-        Xuất bản: ${escapeHtml(pubDate)} | Nguồn: ${escapeHtml(item.originalSourceName || item.author || 'Báo chí')}
-      </div>
-
-      ${item.imageUrl ? `
-        <div class="ms-reader-hero-wrap" style="margin: 0 0 18px 0; border-radius: 4px; overflow: hidden; border: 1px solid var(--ms-border); background: var(--ms-surface-alt);">
-          <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.pageTitle || item.title)}" style="width: 100%; max-height: 340px; object-fit: cover; display: block;" onerror="this.closest('.ms-reader-hero-wrap').style.display='none'">
-        </div>
-      ` : ''}
-
-      ${item.supportingQuote ? `
-        <blockquote class="ms-card-editorial-quote" style="font-family:var(--font-headline); font-style:italic; font-size:1.0625rem; padding:12px 18px; border-left:3px solid var(--ms-primary); margin:0 0 20px 0;">
-          <span class="ms-card-editorial-quote-label" style="color:var(--ms-primary);">Trích dẫn nguyên văn từ bài báo gốc</span>
-          “${escapeHtml(item.supportingQuote.replace(/^[“”"']+|[“”"']+$/g, '').trim())}”
-        </blockquote>
-      ` : ''}
-
-      <!-- 4-Part Executive Intelligence Briefing (BNews Version 2.0) -->
-      <div style="display:flex; flex-direction:column; gap:18px;">
-
-        <!-- 01. Context & Action -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-top:3px solid var(--ms-primary);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
-            <span>01. BỐI CẢNH &amp; ĐỘNG THÁI CHÍNH</span>
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingContext || item.analysisNature || item.sectionB_context || '')}</p>
-        </section>
-
-        <!-- 02. Detailed Facts & Policy Numbers -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-secondary);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:8px;">
-            02. CHI TIẾT CHÍNH SÁCH &amp; SỐ LIỆU TỪ BÀI BÁO
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingFacts || item.analysisMechanism || item.sectionD_macroMicro || '')}</p>
-        </section>
-
-        <!-- 03. Perspective & Expert Take -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            03. NHẬN ĐỊNH CỦA BÀI BÁO &amp; GÓC NHÌN CHUYÊN GIA
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingPerspective || item.analysisMarketImpact || item.sectionC_whyItMatters || '')}</p>
-        </section>
-
-        <!-- 04. Practical Implications & Caveats -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border); border-left:4px solid var(--ms-primary);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-            04. Ý NGHĨA THỰC TIỄN &amp; ĐIỂM CẦN LƯU Ý
-          </h4>
-          <p style="margin:0; font-size:0.9375rem; line-height:1.7; color:var(--ms-text);">${escapeHtml(item.briefingImplication || item.analysisWatchSignal || item.sectionF_scenariosWatchlist || '')}</p>
-        </section>
-
-        ${item.sectionE_fintechLens ? (() => {
-          const lensTxt = item.sectionE_fintechLens;
-          const isNonDirect = lensTxt.includes('Không áp dụng') || lensTxt.includes('Không liên quan') || lensTxt.includes('Không phát sinh');
-          return `
-        <section style="background-color:${isNonDirect ? 'var(--ms-surface-subtle)' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.9;' : 'border-left:3px solid var(--ms-secondary);'}">
-          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-secondary)'}; margin-bottom:8px;">
-            ${isNonDirect ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
-          </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
-        </section>`;
-        })() : ''}
-
-        <!-- Source Provenance -->
-        <section style="background-color:var(--ms-surface-alt); padding:16px 20px; border:1px solid var(--ms-border);">
-          <h4 style="font-family:var(--font-headline); font-size:1rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-            NGUỒN BÀI VIẾT GỐC &amp; ĐỐI SOÁT BÁO CHÍ
-          </h4>
-          <div style="font-size:0.875rem; line-height:1.6; margin-bottom:12px;">
-            <div>• Tác giả / Nguồn: <strong>${escapeHtml(item.author || item.originalSourceName || 'Báo chí')}</strong></div>
-            <div>• Thời gian xuất bản gốc: <strong>${escapeHtml(pubDate)}</strong></div>
-          </div>
-          <div>
-            <a href="${escapeHtml(item.canonicalUrl)}" target="_blank" rel="noopener noreferrer" class="ms-btn ms-btn-primary ms-btn-sm" style="display:inline-flex; align-items:center; gap:6px; min-height:44px;">
-              <span>Đọc bài viết gốc trên ${escapeHtml(item.originalSourceName || 'báo')}</span>
-              <span>↗</span>
-            </a>
-          </div>
-        </section>
-
-      </div>
-    </article>
-  `;
-
-  openDrawer(item.pageTitle || item.title || 'Phân tích chuyên sâu', html);
-}
-
-
-// ─── SECTION 05: CONNECT THE DOTS ───
-function renderConnectTheDots() {
-  const dots = EDITION_DATA.editorialSections?.sec05_connectTheDots || EDITION_DATA.editorialSections?.connectTheDots;
-  const grid = $('#connectTheDotsGrid');
-  if (!dots || !grid) return;
-
-  grid.innerHTML = (dots.clusters || []).map(cluster => `
-    <article class="ms-dot-story-card">
-      <div style="margin-bottom:8px;">
-        <span class="ms-badge ms-badge-rose">PHÂN TÍCH CHUỖI SỰ KIỆN</span>
-      </div>
-      <h3 class="ms-dot-title">${escapeHtml(cluster.clusterTitle)}</h3>
-      <p class="ms-dot-narrative">${escapeHtml(cluster.synthesisNarrative)}</p>
-      
-      <div style="margin-top:16px; border-top:1px solid var(--ms-border); padding-top:12px;">
-        ${(cluster.factStatements || []).map(f => `
-          <div class="ms-pill-block"><span class="ms-pill-tag tag-fact">FACT</span>${escapeHtml(f.replace(/^FACT \d+:\s*/, ''))}</div>
-        `).join('')}
-        ${(cluster.inferenceStatements || []).map(inf => `
-          <div class="ms-pill-block"><span class="ms-pill-tag tag-inference">INFERENCE</span>${escapeHtml(inf.replace(/^INFERENCE \d+:\s*/, ''))}</div>
-        `).join('')}
-        ${(cluster.scenarioStatements || []).map(sc => `
-          <div class="ms-pill-block"><span class="ms-pill-tag tag-scenario">SCENARIO</span>${escapeHtml(sc.replace(/^SCENARIO:\s*/, ''))}</div>
-        `).join('')}
-      </div>
-    </article>
-  `).join('');
-}
-
-// ─── SECTION 06: MACRO TO MICRO ───
-function renderMacroToMicro() {
-  const m2m = EDITION_DATA.editorialSections?.sec06_macroToMicro || EDITION_DATA.editorialSections?.macroToMicro;
-  const flowContainer = $('#macroMicroFlow');
-  if (!m2m || !flowContainer) return;
-
-  const chains = m2m.chains || [];
-  if (chains.length === 0) {
-    flowContainer.innerHTML = '<p class="ms-text-muted">Đang cập nhật các chuỗi phân tích truyền dẫn...</p>';
-    return;
-  }
-
-  flowContainer.innerHTML = chains.map(chain => {
-    const layers = chain.layers || [];
-    const layersHtml = layers.map((layer, lIdx) => {
-      let badgeClass = 'ms-badge-neutral';
-      if (layer.badge === 'FACT') badgeClass = 'ms-badge-success';
-      else if (layer.badge === 'INFERENCE') badgeClass = 'ms-badge-primary';
-      else if (layer.badge === 'HYPOTHESIS') badgeClass = 'ms-badge-warning';
-
-      const rawNum = layer.levelNumber || layer.level || layer.stageNumber || (lIdx != null ? lIdx + 1 : 1);
-      let numVal = parseInt(rawNum, 10);
-      if (isNaN(numVal) || numVal < 1) numVal = (lIdx != null ? lIdx + 1 : 1);
-      const lvlNum = String(numVal).padStart(2, '0');
-      let lvlName = layer.levelName || layer.layerName || layer.stageName || `Khâu ${lvlNum}`;
-      if (typeof lvlName !== 'string' || lvlName.includes('undefined')) {
-        lvlName = `Khâu ${lvlNum}`;
-      }
-      lvlName = lvlName.replace(/^Tầng\s*\d+\s*[:·-]\s*/i, '').trim() || lvlName;
-      let title = layer.title || layer.stageTitle || layer.layerName || `Tác động tầng ${lvlNum}`;
-      if (typeof title !== 'string' || title.includes('undefined')) {
-        title = `Tác động tầng ${lvlNum}`;
-      }
-      const desc = layer.content || layer.description || '';
-
-      return `
-        <div class="ms-chain-layer-step">
-          <div class="ms-layer-step-header">
-            <div class="ms-layer-step-top">
-              <span class="ms-layer-num">TẦNG ${escapeHtml(lvlNum)}</span>
-              <span class="ms-badge ${badgeClass} ms-layer-badge">[${escapeHtml(layer.badge || 'FACT')}]</span>
-            </div>
-            <div class="ms-layer-name">${escapeHtml(lvlName)}</div>
-          </div>
-          <h4 class="ms-layer-step-title">${escapeHtml(title)}</h4>
-          <p class="ms-layer-step-desc">${escapeHtml(desc)}</p>
-        </div>
-      `;
-    }).join('');
-
-    return `
-      <article class="ms-analysis-chain-card">
-        <div class="ms-chain-header">
-          <div>
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
-              <span class="ms-badge ms-badge-secondary" style="font-size:12px;">ECONOMIC ANALYSIS CHAIN</span>
-              <span class="ms-badge ms-badge-neutral" style="font-size:12px;">${layers.length} TẦNG TRUYỀN DẪN</span>
-            </div>
-            <h3 class="ms-chain-title">${escapeHtml(chain.chainTitle)}</h3>
-            <p class="ms-chain-thesis">${escapeHtml(chain.coreThesis)}</p>
-          </div>
-          <div style="flex-shrink:0;">
-            <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openMacroChainDrawer('${escapeHtml(chain.chainId)}')">
-              Xem phân tích đầy đủ →
-            </button>
-          </div>
-        </div>
-        <div class="ms-chain-layers-flow" data-layer-count="${layers.length}">
-          ${layersHtml}
-        </div>
-      </article>
-    `;
-  }).join('');
-}
-
-function openMacroChainDrawer(chainId) {
-  const m2m = EDITION_DATA.editorialSections?.sec06_macroToMicro || EDITION_DATA.editorialSections?.macroToMicro;
-  const chain = (m2m?.chains || []).find(c => c.chainId === chainId);
-  if (!chain) return;
-
-  const layersList = (chain.layers || []).map((layer, lIdx) => {
-    let badgeClass = 'ms-badge-neutral';
-    if (layer.badge === 'FACT') badgeClass = 'ms-badge-success';
-    else if (layer.badge === 'INFERENCE') badgeClass = 'ms-badge-primary';
-    else if (layer.badge === 'HYPOTHESIS') badgeClass = 'ms-badge-warning';
-
-    const numVal = parseInt(layer.levelNumber || layer.level || (lIdx + 1), 10) || (lIdx + 1);
-    const lvlNum = String(numVal).padStart(2, '0');
-    let lvlName = layer.levelName || layer.layerName || `Tầng ${lvlNum}`;
-    if (typeof lvlName !== 'string' || lvlName.includes('undefined')) {
-      lvlName = `Tầng ${lvlNum}`;
-    }
-    let title = layer.title || layer.stageTitle || layer.layerName || `Tác động tầng ${lvlNum}`;
-    if (typeof title !== 'string' || title.includes('undefined')) {
-      title = `Tác động tầng ${lvlNum}`;
-    }
-    const desc = layer.content || layer.description || '';
-
-    return `
-      <div style="background-color:var(--ms-surface-alt); border:1px solid var(--ms-border); border-left:4px solid var(--ms-primary); padding:14px 16px; border-radius:4px; margin-bottom:12px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <div style="font-family:var(--font-mono); font-size:0.8125rem; font-weight:800; color:var(--ms-primary);">
-            LỚP ${lvlNum} · ${escapeHtml(lvlName)}
-          </div>
-          <span class="ms-badge ${badgeClass}" style="font-size:12px;">[${escapeHtml(layer.badge || 'FACT')}]</span>
-        </div>
-        <h4 style="font-family:var(--font-headline); font-size:1rem; margin:0 0 6px 0; color:var(--ms-text-primary);">
-          ${escapeHtml(title)}
-        </h4>
-        <p style="font-size:0.875rem; line-height:1.6; margin:0 0 8px 0; color:var(--ms-text-secondary);">
-          ${escapeHtml(desc)}
-        </p>
-      </div>
-    `;
-  }).join('');
-
-  const html = `
-    <article style="font-size:0.9375rem; line-height:1.7;">
-      <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-secondary">CHUỖI PHÂN TÍCH</span>
-        <h2 style="font-family:var(--font-headline); font-size:1.625rem; line-height:1.25; color:var(--ms-primary); margin:8px 0 6px 0;">
-          ${escapeHtml(chain.chainTitle)}
-        </h2>
-        <div style="font-size:1rem; font-weight:600; color:var(--ms-text-primary); line-height:1.5;">
-          ${escapeHtml(chain.coreThesis)}
-        </div>
-      </div>
-
-      <div style="margin-bottom:20px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-          ${(chain.layers || []).length} TẦNG TRUYỀN DẪN TÁC ĐỘNG (TRANSMISSION LAYERS)
-        </h4>
-        ${layersList}
-      </div>
-
-      <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px; margin-bottom:16px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-          Ý NGHĨA CHIẾN LƯỢC (STRATEGIC SIGNIFICANCE)
-        </h4>
-        <p style="font-size:0.875rem; line-height:1.6; margin:0;">
-          ${escapeHtml(chain.drawerSummary?.whyItMatters || '')}
-        </p>
-      </div>
-
-      <div style="background-color:rgba(14, 116, 144, 0.08); border:1px solid var(--ms-primary); padding:16px; border-radius:4px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-          HÀNH ĐỘNG THỰC THI (ACTIONABLE TAKEAWAY)
-        </h4>
-        <p style="font-size:0.875rem; line-height:1.6; margin:0; font-weight:600;">
-          ${escapeHtml(chain.drawerSummary?.actionableTakeaway || '')}
-        </p>
-      </div>
-    </article>
-  `;
-
-  openDrawer(chain.chainTitle || 'Chuỗi truyền dẫn vĩ mô → vi mô', html);
-}
-
-
-// ─── SECTION 07: PAYMENT OPPORTUNITY RADAR ───
-function renderPaymentRadar() {
-  const radar = EDITION_DATA.editorialSections?.sec07_paymentRadar || EDITION_DATA.editorialSections?.paymentOpportunityRadar;
-  const grid = $('#paymentRadarGrid');
-  if (!radar || !grid) return;
-
-  grid.innerHTML = (radar.opportunities || []).map(op => {
-    const title = op.title || op.opportunityTitle || 'Cơ hội thanh toán';
-    const segment = op.merchantSegment || op.targetSegment || 'Chuỗi bán lẻ & F&B';
-    const painPoint = op.paymentPainPoint || op.merchantPainPoint || 'Thất thoát do thao tác xác nhận bill thủ công';
-    const solution = op.paymentSolution || op.payooPotentialSolution || 'Payoo SmartPOS & VietQR Động Webhook';
-    const rationale = op.businessRationale || op.commercialRationale || 'Bảo vệ dòng tiền doanh thu tại điểm bán';
-    const bdAction = op.proposedBDAction || op.proposedBdAction || 'Tiếp cận ban điều hành các chuỗi bán lẻ';
-    const readiness = op.solutionReadiness || 'CONFIRMED_EXISTING_CAPABILITY';
-    const readinessBadge = readiness === 'CONFIRMED_EXISTING_CAPABILITY'
-      ? '<span class="ms-badge ms-badge-success" style="font-size:12px;">NĂNG LỰC HIỆN HỮU</span>'
-      : '<span class="ms-badge ms-badge-primary" style="font-size:12px;">TÍCH HỢP MỞ RỘNG</span>';
-
-    return `
-      <article class="ms-radar-card">
-        <div>
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; gap:8px;">
-            <span class="ms-badge ms-badge-primary">B2B OPPORTUNITY</span>
-            ${readinessBadge}
-          </div>
-          <h3 class="ms-radar-title">${escapeHtml(title)}</h3>
-          <div class="ms-radar-row">
-            <strong>Tín hiệu thị trường:</strong> ${escapeHtml(op.marketSignal || '')}
-          </div>
-          <div class="ms-radar-row">
-            <strong>Phân khúc khách hàng:</strong> ${escapeHtml(segment)}
-          </div>
-          <div class="ms-radar-row">
-            <strong>Điểm đau / Nhu cầu:</strong> ${escapeHtml(painPoint)}
-          </div>
-          <div class="ms-radar-row">
-            <strong>Giải pháp Payoo:</strong> ${escapeHtml(solution)}
-          </div>
-          <div class="ms-radar-row">
-            <strong>Lợi ích thương mại:</strong> ${escapeHtml(rationale)}
-          </div>
-          ${op.assumptionsAndRisks ? `
-            <div class="ms-radar-row" style="font-size:0.75rem; color:var(--ms-text-muted);">
-              <strong>Giả định & Rủi ro:</strong> ${escapeHtml(op.assumptionsAndRisks)}
-            </div>
-          ` : ''}
-        </div>
-        <div style="border-top:1px solid var(--ms-border); padding-top:10px; margin-top:12px; font-size:0.8125rem; background-color:var(--ms-surface-alt); padding:8px 10px; border-radius:4px;">
-          <strong style="color:var(--ms-primary);">Hành động BD đề xuất:</strong> ${escapeHtml(bdAction)}
-        </div>
-      </article>
-    `;
-  }).join('');
-}
-
-
-// ─── SECTION 08: EXPERT LEARNING ───
-function renderExpertLearning() {
-  const el = EDITION_DATA.editorialSections?.sec08_expertLearning || EDITION_DATA.editorialSections?.expertLearning;
-  const grid = $('#expertLearningGrid');
-  if (!el || !grid) return;
-
-  let html = '';
-
-  // 1. Render Expert Masterclass Lessons if present
-  if (el.lessons && el.lessons.length > 0) {
-    html += el.lessons.map(lesson => {
-      const concept = lesson.concept || lesson.financialConcept || '';
-      const title = lesson.title || lesson.topic || '';
-      const grounding = lesson.newsGrounding || lesson.groundingEvent || '';
-      const explanation = lesson.simpleExplanation || lesson.plainEnglishExplanation || '';
-      const example = lesson.realWorldExample || '';
-      const takeaway = lesson.takeaway || lesson.readerTakeaway || '';
-      const impact = lesson.impactOnBusiness || '';
-
-      return `
-        <article class="ms-learning-card">
-          <div>
-            <div class="ms-learning-concept">${escapeHtml(concept)}</div>
-            <h3 class="ms-learning-topic">${escapeHtml(title)}</h3>
-            <div style="font-size:0.8125rem; color:var(--ms-text-muted); margin-bottom:8px;">
-              Căn cứ thực tế: ${escapeHtml(grounding)}
-            </div>
-            <p class="ms-learning-body"><strong>Giải thích đơn giản:</strong> ${escapeHtml(explanation)}</p>
-            <p class="ms-learning-body"><strong>Ví dụ thực tế:</strong> ${escapeHtml(example)}</p>
-            ${impact ? `<p class="ms-learning-body"><strong>Tác động đến doanh nghiệp / FinTech:</strong> ${escapeHtml(impact)}</p>` : ''}
-          </div>
-          <div class="ms-learning-takeaway">
-            <strong>Bài học thực chiến:</strong> ${escapeHtml(takeaway)}
+          <h1 class="v4-cover-headline" data-open-event="${esc(leadItem.eventId)}">${esc(coverTitle)}</h1>
+          <p class="v4-cover-sapo">${esc(coverSapo)}</p>
+          <div class="v4-article-meta">
+            <span>${esc(srcTxt)}</span>
+            <span aria-hidden="true">·</span>
+            <span class="v4-mono-time">${esc(timeTxt)}</span>
+            <button type="button" class="v4-read-inline-btn" data-open-event="${esc(leadItem.eventId)}">Đọc phân tích chi tiết &rarr;</button>
           </div>
         </article>
       `;
-    }).join('');
-  }
+    }
 
-  // 2. Render Strategic Frameworks if present
-  const frameworks = el.frameworks || [];
-  if (frameworks.length > 0) {
-    html += frameworks.map((fw, idx) => `
-      <article class="ms-learning-card" style="border-left:4px solid var(--ms-primary);">
-        <div>
-          <div class="ms-learning-concept">KHUNG TƯ DUY CHIẾN LƯỢC · FRAMEWORK 0${idx + 1}</div>
-          <h3 class="ms-learning-topic">${escapeHtml(fw.frameworkTitle || '')}</h3>
-          <div style="display:flex; flex-direction:column; gap:8px; margin:12px 0; font-size:0.875rem; line-height:1.6;">
-            <div style="background-color:var(--ms-surface-base); padding:8px 10px; border-radius:4px;">
-              <strong style="color:var(--ms-primary);">Bước 1 (Vĩ mô):</strong> ${escapeHtml(fw.step1 || '')}
-            </div>
-            <div style="background-color:var(--ms-surface-base); padding:8px 10px; border-radius:4px;">
-              <strong style="color:var(--ms-secondary);">Bước 2 (Ngân hàng & Vốn):</strong> ${escapeHtml(fw.step2 || '')}
-            </div>
-            <div style="background-color:var(--ms-surface-base); padding:8px 10px; border-radius:4px;">
-              <strong style="color:var(--ms-accent-emerald);">Bước 3 (Thanh toán & POS):</strong> ${escapeHtml(fw.step3 || '')}
-            </div>
-          </div>
+    // Cột phải (25%): Dòng tin mới 0-24h (6 tin mới nhất, không trùng bài đinh)
+    const feedCol = $('#v4LatestFeedCol');
+    if (feedCol) {
+      const latestSix = newsList
+        .filter((n) => n.eventId !== leadId)
+        .slice()
+        .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''))
+        .slice(0, 6);
+
+      feedCol.innerHTML = `
+        <div class="v4-col-label">
+          <span>Dòng tin mới 0–24h</span>
+          <span class="v4-col-label-sub">Quét nhanh</span>
         </div>
-        <div class="ms-learning-takeaway">
-          <strong>Đúc kết vận hành:</strong> Chuẩn hóa dòng tiền từ nguồn vốn vĩ mô đến điểm chạm thanh toán tại quầy.
+        <div class="v4-feed-list">
+          ${latestSix
+            .map(
+              (item) => `
+            <article class="v4-feed-item" data-open-event="${esc(item.eventId)}">
+              <div class="v4-feed-meta">
+                <span class="v4-crimson-tag">${esc(catLabel(item.category))}</span>
+                <span class="v4-mono-time">${esc(extractTimeHM(item))}</span>
+              </div>
+              <h3 class="v4-feed-title">${esc(item.headline || item.title)}</h3>
+            </article>
+          `
+            )
+            .join('')}
         </div>
-      </article>
-    `).join('');
-  }
-
-  // 3. Render B2B FinTech Sales Playbooks if present
-  const playbooks = el.salesPlaybook || [];
-  if (playbooks.length > 0) {
-    html += playbooks.map((pb, idx) => `
-      <article class="ms-learning-card" style="border-left:4px solid var(--ms-secondary);">
-        <div>
-          <div class="ms-learning-concept">KỊCH BẢN THỰC CHIẾN B2B FINTECH · PLAYBOOK 0${idx + 1}</div>
-          <h3 class="ms-learning-topic">${escapeHtml(pb.title || '')}</h3>
-          <div style="font-size:0.8125rem; color:var(--ms-text-muted); margin-bottom:8px;">
-            Khách hàng mục tiêu: <strong>${escapeHtml(pb.target || '')}</strong>
-          </div>
-          <p class="ms-learning-body"><strong>Thông điệp tiếp cận:</strong> ${escapeHtml(pb.pitch || '')}</p>
-        </div>
-        <div class="ms-learning-takeaway" style="background-color:var(--ms-surface-alt);">
-          <strong>Xử lý từ chối:</strong> ${escapeHtml(pb.objectionHandling || '')}
-        </div>
-      </article>
-    `).join('');
-  }
-
-  // 4. Render FinTech Glossary if present
-  const glossary = el.fintechGlossary || [];
-  if (glossary.length > 0) {
-    html += `
-      <article class="ms-learning-card" style="grid-column:1/-1;">
-        <div class="ms-learning-concept">THUẬT NGỮ CHUYÊN NGÀNH FINTECH & NGÂN HÀNG SỐ</div>
-        <h3 class="ms-learning-topic">Từ Điển Quy Chuẩn Nghiệp Vụ Bryan FinTech</h3>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-top:12px;">
-          ${glossary.map(g => `
-            <div style="background-color:var(--ms-surface-base); padding:10px 12px; border:1px solid var(--ms-border); border-radius:4px;">
-              <div style="font-family:var(--font-mono); font-weight:700; color:var(--ms-primary); font-size:0.875rem;">${escapeHtml(g.term)}</div>
-              <div style="font-size:0.8125rem; line-height:1.5; color:var(--ms-text-secondary); margin-top:4px;">${escapeHtml(g.definition)}</div>
-            </div>
-          `).join('')}
-        </div>
-      </article>
-    `;
-  }
-
-  grid.innerHTML = html;
-}
-
-
-// ─── SECTION 09: GOOGLE SHEETS ARCHIVE & EDITION HISTORY ───
-let currentArchiveSearch = '';
-let currentArchiveStatus = 'ALL';
-
-// Helper for strict editionId validation
-function isValidArchiveEditionId(id) {
-  return typeof id === 'string' && /^EDITION-\d{4}-\d{2}-\d{2}-[A-Za-z0-9_]+$/.test(id);
-}
-
-function renderArchive() {
-  const tbody = $('#archiveTableBody');
-  if (!tbody) return;
-
-  const editionData = (typeof window !== 'undefined' && window.EDITION_DATA)
-    ? window.EDITION_DATA
-    : (typeof EDITION_DATA !== 'undefined' ? EDITION_DATA : null);
-
-  const archiveSec = editionData?.editorialSections?.sec09_archive;
-  const editions = Array.isArray(archiveSec?.editions) ? archiveSec.editions : [];
-
-  if (editions.length === 0) {
-    tbody.innerHTML = `
-      <tr>
-        <td colspan="5" style="text-align:center; padding:24px; color:var(--ms-text-muted); font-size:0.875rem;">
-          Không có dữ liệu lưu trữ ấn bản.
-        </td>
-      </tr>
-    `;
-    return;
-  }
-
-  tbody.innerHTML = editions.map(ed => {
-    const statusText = ed.status || '';
-    const isPreview = statusText.includes('PREVIEW');
-    const badgeClass = isPreview ? 'ms-badge-warning' : 'ms-badge-neutral';
-    const displayDate = ed.date || ed.editionDate || '';
-    const editionId = ed.editionId || '';
-
-    return `
-      <tr>
-        <td style="white-space:nowrap;">
-          <strong>${escapeHtml(displayDate)}</strong>
-          <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">${escapeHtml(editionId)}</div>
-        </td>
-        <td style="white-space:nowrap; font-weight:600;">${escapeHtml(ed.number || '')}</td>
-        <td>
-          <div style="font-weight:600; color:var(--ms-text-primary); margin-bottom:4px;">${escapeHtml(ed.theme || '')}</div>
-          <div style="font-size:0.75rem; color:var(--ms-text-muted);">Tỷ lệ mới 0–24h: <strong>${escapeHtml(ed.freshness || '')}</strong> · ${escapeHtml(ed.newsCount || '')}</div>
-        </td>
-        <td>
-          <span class="ms-badge ${badgeClass}" style="font-size:12px;">${escapeHtml(statusText)}</span>
-        </td>
-        <td style="white-space:nowrap; text-align:right;">
-          <button type="button" class="ms-btn ms-btn-primary ms-btn-xs js-archive-drawer-btn" style="margin-right:6px;" data-edition-id="${escapeHtml(editionId)}">
-            MỞ ĐỌC →
-          </button>
-          <button type="button" class="ms-btn ms-btn-ghost ms-btn-xs js-archive-sheets-btn" data-edition-id="${escapeHtml(editionId)}">
-            SCHEMA SHEETS ↗
-          </button>
-        </td>
-      </tr>
-    `;
-  }).join('');
-
-  // Event Delegation: Bind listener once to tbody
-  if (!tbody.dataset.archiveListenerBound) {
-    tbody.addEventListener('click', (e) => {
-      const drawerBtn = e.target.closest('.js-archive-drawer-btn');
-      if (drawerBtn) {
-        const id = drawerBtn.getAttribute('data-edition-id');
-        if (isValidArchiveEditionId(id) && typeof window.openArchiveDrawer === 'function') {
-          window.openArchiveDrawer(id);
-        }
-        return;
-      }
-
-      const sheetsBtn = e.target.closest('.js-archive-sheets-btn');
-      if (sheetsBtn) {
-        const id = sheetsBtn.getAttribute('data-edition-id');
-        if (isValidArchiveEditionId(id) && typeof window.openSheetsSchemaModal === 'function') {
-          window.openSheetsSchemaModal(id);
-        }
-        return;
-      }
-    });
-    tbody.dataset.archiveListenerBound = 'true';
-  }
-}
-
-function openArchiveDrawer(editionId) {
-  const isCurrent = editionId === 'EDITION-2026-11-08-PILOT25';
-  const ct = EDITION_DATA.editorialSections?.sec02_coverStory || EDITION_DATA.editorialSections?.coreThesis;
-  const gate = EDITION_DATA.publicationGateStatus || {};
-  const mp = EDITION_DATA.marketPulseSnapshot || [];
-
-  const html = `
-    <article style="font-size:0.9375rem; line-height:1.7;">
-      <div style="padding-bottom:14px; margin-bottom:18px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-warning">${escapeHtml(editionId)}</span>
-        <h2 style="font-family:var(--font-headline); font-size:1.5rem; line-height:1.25; color:var(--ms-primary); margin:8px 0 6px 0;">
-          ${escapeHtml(ct?.editorialHeadline || 'Siết Chặt Lá Chắn Bảo Mật & Phòng Chống Lừa Đảo Số')}
-        </h2>
-        <div style="font-size:0.875rem; color:var(--ms-text-secondary); line-height:1.5;">
-          ${escapeHtml(ct?.executiveSummary || '')}
-        </div>
-      </div>
-
-      <!-- Section A: Publication Gate Audit -->
-      <div style="background-color:var(--ms-surface-alt); border:1px solid var(--ms-border); border-left:4px solid var(--ms-warning); padding:14px 16px; margin-bottom:16px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-warning-text); margin-bottom:6px;">
-          TÌNH TRẠNG KIỂM DUYỆT XUẤT BẢN (PUBLICATION GATE STATUS)
-        </h4>
-        <div style="font-size:0.8125rem; font-family:var(--font-mono); line-height:1.6;">
-          Trạng thái Gate: <strong>${escapeHtml(gate.gateStatus || 'FAIL_SHORTFALL_24H_PREVIEW_ONLY')}</strong><br>
-          Nhãn công khai: <strong>${escapeHtml(gate.publicBadgeLabel || 'PREVIEW — CHƯA XUẤT BẢN')}</strong><br>
-          Tỷ lệ 0–24h: <strong>11/21 tin (52,38%)</strong> (Ngưỡng đạt: ≥ 80%)<br>
-          Quy tắc áp dụng: Giữ nguyên chế độ Preview, không xuất bản sản xuất khi chưa đủ hạn ngạch 24H-First.
-        </div>
-      </div>
-
-      <!-- Section B: Market Pulse Snapshot -->
-      <div style="margin-bottom:18px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-          BỘ 8 CHỈ SỐ MARKET PULSE LƯU TRỮ
-        </h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-          ${mp.slice(0, 8).map(card => `
-            <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:8px 10px; font-size:0.75rem;">
-              <div style="font-family:var(--font-mono); color:var(--ms-text-muted); font-size:12px;">${escapeHtml(card.cardNumber || '')}. ${escapeHtml(card.shortLabel || card.label || '')}</div>
-              <div style="font-family:var(--font-headline); font-size:0.9375rem; font-weight:700; color:var(--ms-primary);">${escapeHtml(card.value || 'N/A')} ${escapeHtml(card.unit || '')}</div>
-              <div style="font-size:12px; color:var(--ms-text-muted);">Phiên: ${escapeHtml(card.asOf || '')}</div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Section C: Google Sheets Archive Integration -->
-      <div style="background:rgba(14, 116, 144, 0.08); border:1px solid var(--ms-primary); padding:14px; margin-bottom:14px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-          ĐỒNG BỘ GOOGLE SHEETS ARCHIVE
-        </h4>
-        <p style="font-size:0.8125rem; line-height:1.5; margin-bottom:8px;">
-          Ấn bản này đã sẵn sàng cấu trúc lưu trữ 7 tab chuẩn: <code>EDITIONS</code>, <code>NEWS_EVENTS</code>, <code>EDITORIAL_SECTIONS</code>, <code>MARKET_PULSE_HISTORY</code>, <code>EVENT_REGISTRY</code>, <code>SOURCE_LEDGER</code>, <code>PUBLISH_AUDIT</code>.
-        </p>
-        <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openSheetsSchemaModal('${escapeHtml(editionId)}')">
-          XEM CHI TIẾT 7 TABS SCHEMA →
-        </button>
-      </div>
-    </article>
-  `;
-
-  openDrawer(`Lưu Trữ: ${editionId}`, html);
-}
-
-function openSheetsSchemaModal(editionId) {
-  const html = `
-    <article style="font-size:0.875rem; line-height:1.6;">
-      <div style="padding-bottom:12px; margin-bottom:16px; border-bottom:2px solid var(--ms-border);">
-        <span class="ms-badge ms-badge-primary">GOOGLE SHEETS ARCHIVE SPECIFICATION</span>
-        <h2 style="font-family:var(--font-headline); font-size:1.375rem; line-height:1.25; color:var(--ms-primary); margin:8px 0 4px 0;">
-          BRYAN_FINTECH_EDITION_ARCHIVE
-        </h2>
-        <div style="font-size:0.8125rem; color:var(--ms-text-secondary);">
-          Kiến trúc lưu trữ ấn bản dài hạn bên ngoài website phục vụ tra cứu lịch sử và báo cáo độc lập.
-        </div>
-      </div>
-
-      <div style="margin-bottom:16px;">
-        <h4 style="font-family:var(--font-headline); font-size:0.8125rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:8px;">
-          7 TABS DỮ LIỆU CỐT LÕI (SPREADSHEET TABS SCHEMA)
-        </h4>
-
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">1. TAB [EDITIONS]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              editionId, editionDate, editionNumber, publicationStatus, eligibleCount, count0To24h, freshnessRatio, createdAt, publishedAt, revision, schemaVersion
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">2. TAB [NEWS_EVENTS]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              editionId, eventId, canonicalEventKey, title, category, eventDate, publicationDate, dataPeriod, strictCombinedTimeWindow, sourceName, canonicalUrl, summary, analysis, verificationStatus, sourceHash
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">3. TAB [EDITORIAL_SECTIONS]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              editionId, sectionKey, sectionTitle, editorialContent, originEventIds, publicationStatus
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">4. TAB [MARKET_PULSE_HISTORY]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              editionId, metricKey, value, unit, asOf, dataPeriod, publishedAt, verificationStatus, sourceUrl
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">5. TAB [EVENT_REGISTRY]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              canonicalEventKey, firstSeenEditionId, firstSeenDate, primaryEntity, canonicalUrl, titleNormalized
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">6. TAB [SOURCE_LEDGER]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              canonicalUrl, sourcePublisher, initialCapturedAt, snapshotPath, sha256Hash, author, verificationFlag
-            </div>
-          </div>
-
-          <div style="background:var(--ms-surface-card); border:1px solid var(--ms-border); padding:10px 12px;">
-            <div style="font-weight:700; color:var(--ms-primary);">7. TAB [PUBLISH_AUDIT]</div>
-            <div style="font-size:0.75rem; font-family:var(--font-mono); color:var(--ms-text-muted);">
-              editionId, auditTimestamp, auditorRole, decisionStatus, shortfallReason, approvedRevision, masterPromptVersion
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:var(--ms-surface-alt); padding:12px; border:1px solid var(--ms-border); font-size:0.75rem; font-family:var(--font-mono);">
-        <strong>KIẾN TRÚC TRUY XUẤT READ-ONLY:</strong><br>
-        • Google Apps Script Web App Endpoint: <code>doGet(e)</code><br>
-        • Caching: CacheService 6 giờ cho các ấn bản đã lưu trữ<br>
-        • Phân tách Public / Private: Chỉ trả dữ liệu các ấn bản đạt Gate; dữ liệu Draft / Review được bảo vệ qua API Key nội bộ.
-      </div>
-    </article>
-  `;
-
-  openDrawer(`Sheets Archive Schema: ${editionId}`, html);
-}
-
-
-// ─── TAB NAVIGATION CONTROLLER (VERSION 3.0 UNIFIED HOMEPAGE) ───
-function switchFintechTab(tabKey, targetSubId) {
-  // Version 3.0: Tab 'market' is merged into 'today'
-  if (tabKey === 'market') {
-    tabKey = 'today';
-    targetSubId = targetSubId || 'newsDesk';
-  }
-  // D-03: Redirect any legacy #archive access cleanly to #today
-  if (!tabKey || tabKey === 'archive') tabKey = 'today';
-  
-  const pages = {
-    today: 'page-today',
-    analysis: 'page-analysis',
-    b2b: 'page-b2b',
-    newsletter: 'page-newsletter'
-  };
-  
-  const targetPageId = pages[tabKey] || 'page-today';
-
-  if (tabKey === 'newsletter') {
-    loadLatestNewsletterIssue();
-  }
-
-  // 1. Toggle page sections visibility
-  document.querySelectorAll('.ms-page-section').forEach(sec => {
-    sec.classList.remove('active');
-  });
-  const activePage = document.getElementById(targetPageId);
-  if (activePage) {
-    activePage.classList.add('active');
-  }
-
-  // 2. Update desktop tab buttons with strict ARIA tab pattern
-  const desktopTabs = Array.from(document.querySelectorAll('.ms-nav-tab-btn:not(#navTabArchive)'));
-  desktopTabs.forEach(btn => {
-    const isActive = btn.getAttribute('data-tab') === tabKey;
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    btn.setAttribute('tabindex', isActive ? '0' : '-1');
-  });
-
-  // 3. Update mobile quick tabs with matching ARIA tab semantics
-  document.querySelectorAll('.ms-quick-tab:not(#quickTabArchive)').forEach(btn => {
-    const isActive = btn.getAttribute('data-tab') === tabKey;
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    btn.setAttribute('tabindex', isActive ? '0' : '-1');
-  });
-
-  // 3B. Highlight active workspace card inside slide-out menu drawer & clear topic pills when leaving market
-  document.querySelectorAll('.ms-drawer-ws-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-drawer-tab') === tabKey);
-  });
-  const navNlBtn = document.getElementById('navBtnNewsletter');
-  if (navNlBtn) navNlBtn.classList.toggle('active', tabKey === 'newsletter');
-  document.querySelectorAll('.ms-mobile-nl-btn').forEach(btn => {
-    btn.classList.toggle('active', tabKey === 'newsletter');
-  });
-  if (tabKey === 'newsletter') {
-    document.querySelectorAll('.ms-cat-btn:not(.ms-mobile-nl-btn)').forEach(btn => {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-pressed', 'false');
-    });
-  }
-  if (tabKey !== 'market') {
-    document.querySelectorAll('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
-  }
-
-  // 4. Close mobile drawer if open
-  closeMobileDrawer(false);
-
-  // 5. Update browser URL cleanly (/fintech-intelligence without /index.html or #today)
-  if (window.history && window.history.replaceState) {
-    const cleanBase = getCleanPortalPath() + window.location.search;
-    if (tabKey === 'today') {
-      window.history.replaceState(null, '', cleanBase);
-    } else {
-      window.history.replaceState(null, '', cleanBase + '#' + tabKey);
+      `;
     }
   }
 
-  // 6. Scroll smoothly to target sub-section or top of page
-  if (targetSubId) {
-    setTimeout(() => {
-      const el = document.getElementById(targetSubId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
+  // ─── B2. 6 CHUYÊN MỤC TIN TỨC (KHÔNG TRÙNG BÀI ĐINH) ───────────────────────
+  function renderCategoryClusters() {
+    const mount = $('#v4CategoriesMount');
+    if (!mount) return;
+
+    const cs = state.data.editorialSections?.sec02_coverStory || {};
+    const leadId = cs.leadArticle?.eventId;
+    const newsList = (state.data.eligibleNewsList || []).filter((n) => n.eventId !== leadId);
+
+    const grouped = CATEGORIES.map((cat) => {
+      const items = newsList
+        .filter((n) => n.category === cat.key)
+        .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''));
+      return { ...cat, items };
+    }).filter((g) => g.items.length > 0);
+
+    const richGroups = grouped.filter((g) => g.items.length >= 4);
+    const sparseGroups = grouped.filter((g) => g.items.length < 4);
+
+    let html = richGroups
+      .map((g) => {
+        const first = g.items[0];
+        const nextThree = g.items.slice(1, 4);
+        const extras = g.items.slice(4);
+        return `
+        <div class="v4-cat-cluster" data-cat-cluster="${esc(g.key)}">
+          <div class="v4-cat-cluster-head">
+            <h2 class="v4-cat-heading">${esc(g.label)}</h2>
+            <div class="v4-cat-actions">
+              <span class="v4-cat-count">${g.items.length} bản tin</span>
+              <button type="button" class="v4-cat-more-btn" data-filter-cat="${esc(g.key)}">Xem chuyên mục &rarr;</button>
+            </div>
+          </div>
+
+          <div class="v4-cat-rich-grid">
+            <article class="v4-cat-lead" data-open-event="${esc(first.eventId)}">
+              <div class="v4-thumb-wrap">${imgTag(first.imageUrl, first.headline, 'v4-thumb-img')}</div>
+              <div>
+                <h3 class="v4-cat-lead-title">${esc(first.headline || first.title)}</h3>
+                <p class="v4-cat-lead-sapo">${esc(first.summary || '')}</p>
+                <div class="v4-article-meta">
+                  <span>${esc(sourceLabel(first))}</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="v4-mono-time">${esc(extractTimeHM(first))}</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="v4-cat-stack">
+              ${nextThree
+                .map(
+                  (it) => `
+                <article class="v4-cat-stack-item" data-open-event="${esc(it.eventId)}">
+                  <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
+                  <div class="v4-article-meta">
+                    <span>${esc(sourceLabel(it))}</span>
+                    <span aria-hidden="true">·</span>
+                    <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                  </div>
+                </article>
+              `
+                )
+                .join('')}
+            </div>
+          </div>
+
+          ${
+            extras.length
+              ? `
+            <div class="v4-cat-extra-wrap">
+              <div class="v4-cat-extra-grid">
+                ${extras
+                  .map(
+                    (it) => `
+                  <article class="v4-cat-extra-item" data-open-event="${esc(it.eventId)}">
+                    <h4 class="v4-cat-extra-title">${esc(it.headline || it.title)}</h4>
+                    <div class="v4-article-meta">
+                      <span>${esc(sourceLabel(it))}</span>
+                      <span aria-hidden="true">·</span>
+                      <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                    </div>
+                  </article>
+                `
+                  )
+                  .join('')}
+              </div>
+            </div>
+          `
+              : ''
+          }
+        </div>
+      `;
+      })
+      .join('');
+
+    if (sparseGroups.length) {
+      html += `
+        <div class="v4-sparse-grid">
+          ${sparseGroups
+            .map((g) => {
+              const first = g.items[0];
+              const rest = g.items.slice(1);
+              return `
+              <div class="v4-sparse-cluster" data-cat-cluster="${esc(g.key)}">
+                <div class="v4-cat-cluster-head">
+                  <h2 class="v4-cat-heading">${esc(g.label)}</h2>
+                  <button type="button" class="v4-cat-more-btn" data-filter-cat="${esc(g.key)}">Mở rộng &rarr;</button>
+                </div>
+                <article class="v4-sparse-card" data-open-event="${esc(first.eventId)}">
+                  <div class="v4-thumb-wrap">${imgTag(first.imageUrl, first.headline, 'v4-thumb-img')}</div>
+                  <div>
+                    <h3 class="v4-sparse-title">${esc(first.headline || first.title)}</h3>
+                    <p class="v4-cat-lead-sapo">${esc(first.summary || '')}</p>
+                    <div class="v4-article-meta">
+                      <span>${esc(sourceLabel(first))}</span>
+                      <span aria-hidden="true">·</span>
+                      <span class="v4-mono-time">${esc(extractTimeHM(first))}</span>
+                    </div>
+                  </div>
+                </article>
+                ${
+                  rest.length
+                    ? `<div class="v4-cat-stack" style="border-left:none; padding-left:0; margin-top:12px;">
+                        ${rest
+                          .map(
+                            (it) => `
+                          <article class="v4-cat-stack-item" data-open-event="${esc(it.eventId)}">
+                            <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
+                            <div class="v4-article-meta">
+                              <span>${esc(sourceLabel(it))}</span>
+                              <span aria-hidden="true">·</span>
+                              <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                            </div>
+                          </article>
+                        `
+                          )
+                          .join('')}
+                      </div>`
+                    : ''
+                }
+              </div>
+            `;
+            })
+            .join('')}
+        </div>
+      `;
+    }
+
+    mount.innerHTML = html;
+  }
+
+  // ─── C1. CHUỖI TRUYỀN DẪN VĨ MÔ -> VI MÔ (CHẤT TẠP CHÍ 7 BƯỚC NGANG) ────────
+  function renderMacroMicro() {
+    const chains = state.data.editorialSections?.sec06_macroToMicro?.chains || [];
+    const tabsEl = $('#v4ChainTabs');
+    const headEl = $('#v4ChainHeader');
+    const stepBarEl = $('#v4StepBar');
+    const stepContentEl = $('#v4StepContent');
+    if (!chains.length || !tabsEl || !headEl || !stepBarEl || !stepContentEl) return;
+
+    if (state.activeChainIdx >= chains.length) state.activeChainIdx = 0;
+    const activeChain = chains[state.activeChainIdx];
+    const layers = activeChain.layers || [];
+    if (state.activeLayerIdx >= layers.length) state.activeLayerIdx = 0;
+    const activeLayer = layers[state.activeLayerIdx] || {};
+
+    tabsEl.innerHTML = chains
+      .map((ch, idx) => {
+        const shortT = String(ch.title || ch.chainTitle || `Chuỗi ${idx + 1}`)
+          .replace(/^Chuỗi truyền dẫn vĩ mô\s*[—-]\s*vi mô:\s*/i, '');
+        return `
+          <button type="button" class="v4-chain-tab ${idx === state.activeChainIdx ? 'active' : ''}" data-chain-idx="${idx}">
+            0${idx + 1} · ${esc(shortT)}
+          </button>
+        `;
+      })
+      .join('');
+
+    headEl.innerHTML = `
+      <h3 class="v4-chain-title">${esc(activeChain.title || activeChain.chainTitle)}</h3>
+      <p class="v4-chain-thesis">${esc(activeChain.coreThesis || activeChain.macroDriver || '')}</p>
+    `;
+
+    stepBarEl.innerHTML = layers
+      .map((ly, idx) => {
+        const stepNum = String(ly.levelNumber || idx + 1).padStart(2, '0');
+        const shortLayer = String(ly.levelName || ly.layerName || ly.title || '')
+          .replace(/^Tầng\s*\d+:\s*/i, '');
+        return `
+          <button type="button" class="v4-step-btn ${idx === state.activeLayerIdx ? 'active' : ''}" data-layer-idx="${idx}" role="tab" aria-selected="${idx === state.activeLayerIdx}">
+            <span class="v4-step-num">${esc(stepNum)}</span>
+            <span class="v4-step-label">${esc(shortLayer)}</span>
+          </button>
+        `;
+      })
+      .join('');
+
+    const relEvents = (activeLayer.eventIds || [])
+      .map((eid) => state.newsById[eid])
+      .filter(Boolean);
+
+    const stepNumStr = String(activeLayer.levelNumber || state.activeLayerIdx + 1).padStart(2, '0');
+    const stepBadge = activeLayer.badge === 'INFERENCE' ? 'SUY LUẬN HỆ THỐNG' : 'SỰ KIỆN XÁC MINH';
+
+    stepContentEl.innerHTML = `
+      <div>
+        <div class="v4-step-kicker">
+          <span class="v4-step-badge">${esc(stepBadge)}</span>
+          <span class="v4-step-layer-name">${esc(activeLayer.levelName || `Tầng ${stepNumStr}`)}</span>
+        </div>
+        <h4 class="v4-step-heading">${esc(activeLayer.title || '')}</h4>
+        <p class="v4-step-desc">${esc(activeLayer.content || activeLayer.description || '')}</p>
+        <div class="v4-step-pager">
+          <button type="button" class="v4-step-pager-btn" id="v4PrevStepBtn" ${state.activeLayerIdx === 0 ? 'disabled' : ''}>&larr; Tầng trước</button>
+          <button type="button" class="v4-step-pager-btn" id="v4NextStepBtn" ${state.activeLayerIdx >= layers.length - 1 ? 'disabled' : ''}>Tầng tiếp theo &rarr;</button>
+        </div>
+      </div>
+
+      <aside class="v4-step-side">
+        <div class="v4-step-side-label">Động lực vĩ mô dẫn dắt</div>
+        <p class="v4-step-driver">${esc(activeChain.macroDriver || activeChain.coreThesis || '')}</p>
+
+        <div class="v4-step-side-label">Tin tức liên đới ở tầng này (${relEvents.length})</div>
+        <div class="v4-step-events">
+          ${
+            relEvents.length
+              ? relEvents
+                  .map(
+                    (ev) => `
+                  <button type="button" class="v4-step-event-link" data-open-event="${esc(ev.eventId)}">
+                    <span class="v4-step-event-title">${esc(ev.headline || ev.title)}</span>
+                    <span class="v4-step-event-src">${esc(sourceLabel(ev))} · ${esc(extractTimeHM(ev))}</span>
+                  </button>
+                `
+                  )
+                  .join('')
+              : '<span class="v4-step-event-src">Tầng phân tích tổng hợp xuyên suốt mạch dữ kiện phiên.</span>'
+          }
+        </div>
+      </aside>
+    `;
+
+    tabsEl.querySelectorAll('.v4-chain-tab').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.activeChainIdx = Number(btn.dataset.chainIdx);
+        state.activeLayerIdx = 0;
+        renderMacroMicro();
+      });
+    });
+
+    stepBarEl.querySelectorAll('.v4-step-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.activeLayerIdx = Number(btn.dataset.layerIdx);
+        renderMacroMicro();
+      });
+    });
+
+    const prevBtn = $('#v4PrevStepBtn');
+    const nextBtn = $('#v4NextStepBtn');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (state.activeLayerIdx > 0) {
+          state.activeLayerIdx -= 1;
+          renderMacroMicro();
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (state.activeLayerIdx < layers.length - 1) {
+          state.activeLayerIdx += 1;
+          renderMacroMicro();
+        }
+      });
+    }
+  }
+
+  // ─── C2. GÓC CHUYÊN MÔN FINTECH (3 CỘT + PLAYBOOK 2 CỘT + TỪ ĐIỂN PHẲNG) ────
+  function renderFintechCorner() {
+    const elSec = state.data.editorialSections?.sec08_expertLearning || {};
+    const lessons = elSec.lessons || [];
+    const frameworks = elSec.frameworks || [];
+    const playbooks = elSec.salesPlaybook || [];
+    const glossary = elSec.fintechGlossary || [];
+
+    // 1. Lưới 3 cột không viền khung (6 mục: 4 lessons + 2 frameworks = 2 hàng x 3 cột đầy đặn)
+    const gridEl = $('#v4FintechGrid');
+    if (gridEl) {
+      const mergedItems = [
+        ...lessons.map((l, idx) => ({
+          kind: 'lesson',
+          idx,
+          kicker: l.concept || 'Kiến thức Fintech',
+          title: l.title || l.topic,
+          desc: l.simpleExplanation || l.newsGrounding || '',
+          payload: l
+        })),
+        ...frameworks.map((fw, idx) => ({
+          kind: 'framework',
+          idx,
+          kicker: 'Khung kiến trúc chuyển dịch',
+          title: String(fw.frameworkTitle || '').replace(/^Framework\s*\d+:\s*/i, ''),
+          desc: `${fw.step1 || ''} ${fw.step2 || ''}`.trim(),
+          payload: fw
+        }))
+      ];
+
+      gridEl.innerHTML = mergedItems
+        .map(
+          (item, i) => `
+          <article class="v4-fintech-card" data-fintech-idx="${i}">
+            <div class="v4-fintech-card-cat">${esc(item.kicker)}</div>
+            <h3 class="v4-fintech-card-title">${esc(item.title)}</h3>
+            <p class="v4-fintech-card-desc">${esc(item.desc)}</p>
+            <span class="v4-fintech-card-cta">Đọc chuyên đề &rarr;</span>
+          </article>
+        `
+        )
+        .join('');
+
+      gridEl.querySelectorAll('.v4-fintech-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const item = mergedItems[Number(card.dataset.fintechIdx)];
+          openFintechItemDrawer(item);
+        });
+      });
+    }
+
+    // 2. Playbook 2 cột cân đối
+    const pbGrid = $('#v4PlaybookGrid');
+    if (pbGrid) {
+      pbGrid.innerHTML = playbooks
+        .map(
+          (pb, idx) => `
+          <article class="v4-playbook-card" data-playbook-idx="${idx}">
+            <div class="v4-fintech-card-cat">Playbook 0${idx + 1}</div>
+            <h4 class="v4-playbook-title">${esc(pb.title)}</h4>
+            <p class="v4-playbook-pitch">${esc(pb.pitch)}</p>
+            <div class="v4-playbook-meta">Đối tượng: ${esc(pb.target)}</div>
+          </article>
+        `
+        )
+        .join('');
+
+      pbGrid.querySelectorAll('.v4-playbook-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          openPlaybookDrawer(playbooks[Number(card.dataset.playbookIdx)]);
+        });
+      });
+    }
+
+    // 3. Từ điển 2 cột phẳng (table)
+    const glBody = $('#v4GlossaryBody');
+    if (glBody) {
+      glBody.innerHTML = glossary
+        .map(
+          (g) => `
+          <tr>
+            <td class="v4-glossary-term">${esc(g.term)}</td>
+            <td>${esc(g.definition)}</td>
+          </tr>
+        `
+        )
+        .join('');
+    }
+  }
+
+  // ─── TRANG 04: TÍN HIỆU & CƠ HỘI B2B ───────────────────────────────────────
+  function renderB2BPage() {
+    const es = state.data.editorialSections || {};
+    const signals = es.sec04b_decisionBrief?.signals || [];
+    const opps = es.sec07_paymentRadar?.opportunities || [];
+    const watchlist = es.sec08b_watchlist?.items || es.sec08b_watchlist?.watchlistItems || [];
+
+    const dbMount = $('#v4DecisionBriefMount');
+    if (dbMount) {
+      dbMount.innerHTML = signals
+        .map((sig, idx) => {
+          const sigId = sig.signalId || `DECISION-0${idx + 1}`;
+          const segs = (sig.relevantMerchantSegments || []).slice(0, 4);
+          const sols = (sig.potentialPaymentSolutions || []).slice(0, 2);
+          return `
+            <article class="v4-b2b-card is-clickable" data-open-signal="${esc(sigId)}">
+              <div class="v4-b2b-card-top">
+                <span class="v4-crimson-tag">${esc(sig.categoryBadge || 'TÍN HIỆU ĐIỀU HÀNH')}</span>
+                <span class="v4-b2b-pill">${esc(sigId)}</span>
+              </div>
+              <h3 class="v4-b2b-title">${esc(sig.signalTitle || '')}</h3>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Diễn biến thị trường</div>
+                <p class="v4-b2b-text">${esc(sig.whatHappened || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Cơ hội ứng dụng B2B</div>
+                <p class="v4-b2b-text">${esc(sig.whatItMeansForMyWork || sig.proposedNextAction || '')}</p>
+              </div>
+              ${
+                segs.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Phân khúc ưu tiên</div>
+                      <div class="v4-b2b-tags">${segs.map((s) => `<span class="v4-b2b-tag">${esc(s)}</span>`).join('')}</div>
+                    </div>`
+                  : ''
+              }
+              ${
+                sols.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Giải pháp đối ứng</div>
+                      <p class="v4-b2b-text">${sols.map((s) => `<strong>${esc(s.solutionName)}</strong>: ${esc(s.capabilityNote)}`).join('<br>')}</p>
+                    </div>`
+                  : ''
+              }
+              <button type="button" class="v4-b2b-more-btn" data-open-signal="${esc(sigId)}">Xem phân tích điều hành &amp; nguồn đối soát &rarr;</button>
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    const radarMount = $('#v4PaymentRadarMount');
+    if (radarMount) {
+      radarMount.innerHTML = opps
+        .map((op) => {
+          const rels = (op.relevantEventIds || op.originEventIds || [])
+            .map((eid) => state.newsById[eid])
+            .filter(Boolean);
+          return `
+            <article class="v4-b2b-card">
+              <div class="v4-b2b-card-top">
+                <span class="v4-crimson-tag">${esc(op.merchantSegment || 'B2B PAYMENT RADAR')}</span>
+                <span class="v4-b2b-pill">${esc(op.opportunityId || 'RADAR')} · ${esc(op.priority || 'P1')}</span>
+              </div>
+              <h3 class="v4-b2b-title">${esc(op.title || op.opportunityTitle || '')}</h3>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Điểm nghẽn thanh toán</div>
+                <p class="v4-b2b-text">${esc(op.paymentPainPoint || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Giải pháp &amp; Giá trị thương mại</div>
+                <p class="v4-b2b-text">${esc(op.paymentSolution || '')} ${esc(op.commercialRationale || '')}</p>
+              </div>
+              <div class="v4-b2b-row">
+                <div class="v4-b2b-label">Hành động đề xuất</div>
+                <p class="v4-b2b-text"><strong>${esc(op.proposedBDAction || '')}</strong></p>
+              </div>
+              ${
+                rels.length
+                  ? `<div class="v4-b2b-row">
+                      <div class="v4-b2b-label">Tin tức nền tảng (${rels.length})</div>
+                      <div class="v4-b2b-tags">
+                        ${rels
+                          .map(
+                            (ev) => `<button type="button" class="v4-b2b-tag" style="cursor:pointer;" data-open-event="${esc(ev.eventId)}">${esc(ev.eventId)} · ${esc((ev.headline || '').slice(0, 56))}...</button>`
+                          )
+                          .join('')}
+                      </div>
+                    </div>`
+                  : ''
+              }
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    const wlMount = $('#v4WatchlistMount');
+    if (wlMount) {
+      wlMount.innerHTML = watchlist
+        .map(
+          (wl, idx) => `
+          <article class="v4-b2b-card">
+            <div class="v4-b2b-card-top">
+              <span class="v4-crimson-tag">${esc(wl.category || 'GIÁM SÁT VĨ MÔ')}</span>
+              <span class="v4-b2b-pill">${esc(wl.watchlistId || `WL-0${idx + 1}`)} · ${esc(wl.impactLevel || 'HIGH')}</span>
+            </div>
+            <h3 class="v4-b2b-title">${esc(wl.itemTitle || '')}</h3>
+            <div class="v4-b2b-row">
+              <div class="v4-b2b-label">Chỉ báo theo dõi (${esc(wl.observationHorizon || '7 ngày tới')})</div>
+              <p class="v4-b2b-text">${esc(wl.signalTracked || wl.description || '')}</p>
+            </div>
+            <div class="v4-b2b-row">
+              <div class="v4-b2b-label">Ngưỡng kích hoạt &amp; Hành động</div>
+              <p class="v4-b2b-text"><strong>Ngưỡng:</strong> ${esc(wl.threshold || wl.conditionChangingAssessment || '')}<br><strong>Đề xuất:</strong> ${esc(wl.possibleAction || '')}</p>
+            </div>
+          </article>
+        `
+        )
+        .join('');
+    }
+  }
+
+  // ─── CHUYỂN TRANG ĐIỀU HÀNH (01 -> 04) ──────────────────────────────────────
+  function loadNewsletterPreview() {
+    if (state.nlLoaded) return;
+    const mount = $('#v4NlPreviewMount');
+    if (!mount) return;
+    state.nlLoaded = true;
+    const nlUrl = `${CURRENT_DIR_BASE}newsletter-preview.html?v=${Date.now()}`;
+    mount.innerHTML = `<iframe src="${nlUrl}" class="v4-nl-iframe" title="Bản tin Bnews mới nhất"></iframe>`;
+    const ifr = mount.querySelector('iframe');
+    if (ifr) {
+      ifr.addEventListener('load', () => {
+        try {
+          const h = ifr.contentDocument?.documentElement?.scrollHeight;
+          if (h && h > 400) ifr.style.height = `${h + 24}px`;
+        } catch (_) {
+          // Keep default min-height
+        }
+      });
+    }
+  }
+
+  function switchPage(pageKey, opts = {}) {
+    const pages = {
+      today: $('#v4PageToday'),
+      newsletter: $('#v4PageNewsletter'),
+      analysis: $('#v4PageAnalysis'),
+      b2b: $('#v4PageB2B')
+    };
+    if (!pages[pageKey]) pageKey = 'today';
+    state.activePage = pageKey;
+
+    Object.entries(pages).forEach(([k, el]) => {
+      if (el) el.hidden = k !== pageKey;
+    });
+
+    $$('[data-drawer-page]').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.drawerPage === pageKey);
+    });
+    $$('[data-switch-page]').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.switchPage === pageKey);
+    });
+
+    const communityCta = $('#v4CommunityCta');
+    if (communityCta) {
+      communityCta.hidden = pageKey === 'newsletter';
+    }
+
+    if (opts.syncHash !== false && window.location.protocol !== 'file:' && window.history && window.history.replaceState) {
+      const cleanBase = getCleanPortalPath() + window.location.search;
+      window.history.replaceState(null, '', pageKey === 'today' ? cleanBase : `${cleanBase}#${pageKey}`);
+    }
+
+    if (pageKey === 'newsletter') {
+      loadNewsletterPreview();
+    }
+    applyFilters();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  // ─── CHẾ ĐỘ LỌC CHUYÊN MỤC & TÌM KIẾM ────────────────────────────────────
+  function applyFilters() {
+    const isToday = state.activePage === 'today';
+    const tabs = $$('#v4CatTabs .v4-cat-btn');
+    tabs.forEach((btn) => {
+      const active = isToday && btn.dataset.cat === state.activeCategory;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+
+    $$('[data-drawer-cat]').forEach((btn) => {
+      btn.classList.toggle('active', isToday && btn.dataset.drawerCat === state.activeCategory);
+    });
+
+    const frontView = $('#v4FrontPageView');
+    const filteredView = $('#v4FilteredView');
+    const clearBtn = $('#v4SearchClear');
+    const needle = state.searchTerm.trim().toLowerCase();
+
+    if (clearBtn) clearBtn.hidden = !needle;
+
+    const homeBtn = $('#v4HomeIconBtn');
+    if (homeBtn) {
+      homeBtn.classList.toggle('active', isToday && state.activeCategory === 'ALL' && !needle);
+    }
+
+    if (!isToday) return;
+
+    if (state.activeCategory === 'ALL' && !needle) {
+      if (frontView) frontView.hidden = false;
+      if (filteredView) filteredView.hidden = true;
+      return;
+    }
+
+    if (frontView) frontView.hidden = true;
+    if (filteredView) filteredView.hidden = false;
+
+    const allNews = state.data.eligibleNewsList || [];
+    const matches = allNews
+      .filter((item) => {
+        const matchCat = state.activeCategory === 'ALL' || item.category === state.activeCategory;
+        const matchQ =
+          !needle ||
+          String(item.headline || '').toLowerCase().includes(needle) ||
+          String(item.summary || '').toLowerCase().includes(needle) ||
+          String(item.publisher || '').toLowerCase().includes(needle) ||
+          String(item.category || '').toLowerCase().includes(needle);
+        return matchCat && matchQ;
+      })
+      .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''));
+
+    const matchedIds = new Set(matches.map((m) => m.eventId));
+    const otherNews = allNews
+      .filter((it) => !matchedIds.has(it.eventId))
+      .sort((a, b) => (b.originalSourcePublishedAt || '').localeCompare(a.originalSourcePublishedAt || ''))
+      .slice(0, 5);
+
+    const catCounts = {};
+    allNews.forEach((it) => {
+      if (it.category) catCounts[it.category] = (catCounts[it.category] || 0) + 1;
+    });
+
+    const headingText =
+      state.activeCategory === 'ALL'
+        ? `Kết quả tìm kiếm: "${state.searchTerm.trim()}"`
+        : `${catLabel(state.activeCategory)}${needle ? ` · lọc "${state.searchTerm.trim()}"` : ''}`;
+
+    const rowsHtml = matches.length
+      ? `<div class="v4-filtered-list">
+          ${matches
+            .map(
+              (it) => `
+            <article class="v4-filtered-row">
+              <div class="v4-thumb-wrap" data-open-event="${esc(it.eventId)}" style="cursor:pointer;">${imgTag(it.imageUrl, it.headline, 'v4-thumb-img')}</div>
+              <div>
+                <div class="v4-crimson-tag" style="margin-bottom:4px;">${esc(catLabel(it.category))}</div>
+                <h3 class="v4-filtered-row-title" data-open-event="${esc(it.eventId)}">${esc(it.headline || it.title)}</h3>
+                <p class="v4-filtered-row-sapo">${esc(it.summary || '')}</p>
+                <div class="v4-filtered-row-actions">
+                  <div class="v4-article-meta">
+                    <span>${esc(sourceLabel(it))}</span>
+                    <span aria-hidden="true">·</span>
+                    <span class="v4-mono-time">${esc(extractDateTimeReadable(it))}</span>
+                  </div>
+                  <button type="button" class="v4-filtered-read-btn" data-open-event="${esc(it.eventId)}">Đọc phân tích chi tiết &rarr;</button>
+                  ${
+                    it.sourceUrl
+                      ? `<a href="${esc(it.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="v4-filtered-orig-link">Nguồn báo gốc &nearr;</a>`
+                      : ''
+                  }
+                </div>
+              </div>
+            </article>
+          `
+            )
+            .join('')}
+        </div>`
+      : `<p class="v4-sec-subtitle">Không có bản tin nào khớp bộ lọc hiện tại.</p>`;
+
+    const otherNewsBlockHtml = otherNews.length
+      ? `<div class="v4-sidebar-block">
+          <div class="v4-col-label">
+            <span>Tin khác trong phiên</span>
+            <span class="v4-col-label-sub">Đọc thêm</span>
+          </div>
+          <div class="v4-feed-list">
+            ${otherNews
+              .map(
+                (it) => `
+              <article class="v4-feed-item" data-open-event="${esc(it.eventId)}">
+                <div class="v4-feed-meta">
+                  <span class="v4-crimson-tag">${esc(catLabel(it.category))}</span>
+                  <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                </div>
+                <h3 class="v4-feed-title">${esc(it.headline || it.title)}</h3>
+              </article>
+            `
+              )
+              .join('')}
+          </div>
+        </div>`
+      : '';
+
+    const catSidebarHtml = `
+      <div class="v4-sidebar-block">
+        <div class="v4-col-label">
+          <span>Chuyên mục phiên</span>
+          <span class="v4-col-label-sub">${allNews.length} tin</span>
+        </div>
+        <div class="v4-sidebar-cats">
+          <button type="button" class="v4-sidebar-cat-btn ${state.activeCategory === 'ALL' ? 'active' : ''}" data-filter-cat="ALL">
+            <span>Trang nhất (Tất cả)</span>
+            <span class="v4-sidebar-cat-count">${allNews.length}</span>
+          </button>
+          ${CATEGORIES.map((c) => {
+            const cnt = catCounts[c.key] || 0;
+            const active = state.activeCategory === c.key ? 'active' : '';
+            return `
+              <button type="button" class="v4-sidebar-cat-btn ${active}" data-filter-cat="${esc(c.key)}">
+                <span>${esc(c.label)}</span>
+                <span class="v4-sidebar-cat-count">${cnt}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+
+    filteredView.innerHTML = `
+      <div class="v4-filtered-head">
+        <div>
+          <h2 class="v4-sec-title">${esc(headingText)}</h2>
+          <p class="v4-sec-subtitle" style="margin-top:6px; padding-left:12px;">Tìm thấy ${matches.length} bản tin phù hợp trong ấn bản</p>
+        </div>
+        <button type="button" class="v4-back-front-btn" id="v4BackFrontBtn">&larr; Quay lại Trang nhất</button>
+      </div>
+
+      <div class="v4-filtered-layout">
+        <div class="v4-filtered-main">${rowsHtml}</div>
+        <aside class="v4-filtered-sidebar" aria-label="Tin khác và danh mục trong phiên">
+          ${otherNewsBlockHtml}
+          ${catSidebarHtml}
+        </aside>
+      </div>
+    `;
+
+    const backBtn = $('#v4BackFrontBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        state.activeCategory = 'ALL';
+        state.searchTerm = '';
+        const input = $('#v4SearchInput');
+        if (input) input.value = '';
+        applyFilters();
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }, 60);
-  } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-
-function initFintechTabs() {
-  const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-  const validTabs = ['today', 'market', 'analysis', 'b2b', 'newsletter'];
-  if (hash === 'archive') {
-    switchFintechTab('today');
-  } else if (validTabs.includes(hash)) {
-    switchFintechTab(hash);
-  } else {
-    switchFintechTab('today');
-  }
-
-  window.addEventListener('hashchange', () => {
-    const newHash = (window.location.hash || '').replace('#', '').toLowerCase();
-    if (newHash === 'archive') {
-      switchFintechTab('today');
-    } else if (validTabs.includes(newHash)) {
-      switchFintechTab(newHash);
+      });
     }
-  });
-
-  // WAI-ARIA Keyboard Navigation for Desktop & Mobile Tablists (ArrowLeft, ArrowRight, Home, End)
-  function bindTablistKeyboard(tablistEl, tabSelector) {
-    if (!tablistEl) return;
-    tablistEl.addEventListener('keydown', (e) => {
-      const tabs = Array.from(tablistEl.querySelectorAll(tabSelector));
-      const currentIndex = tabs.findIndex(t => t.classList.contains('active'));
-      if (currentIndex === -1) return;
-      let nextIndex = currentIndex;
-
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        nextIndex = (currentIndex + 1) % tabs.length;
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-      } else if (e.key === 'Home') {
-        e.preventDefault();
-        nextIndex = 0;
-      } else if (e.key === 'End') {
-        e.preventDefault();
-        nextIndex = tabs.length - 1;
-      }
-
-      if (nextIndex !== currentIndex) {
-        const nextTab = tabs[nextIndex];
-        const tabKey = nextTab.getAttribute('data-tab');
-        switchFintechTab(tabKey);
-        nextTab.focus();
-      }
-    });
-  }
-  bindTablistKeyboard(document.querySelector('.ms-nav-menu[role="tablist"]'), '.ms-nav-tab-btn:not(#navTabArchive)');
-  bindTablistKeyboard(document.querySelector('.ms-quick-tablist[role="tablist"], .ms-quick-tabs-scroll[role="tablist"]'), '.ms-quick-tab:not(#quickTabArchive)');
-}
-
-let navDrawerTrigger = null;
-
-function openMobileDrawer(focusSearch = false) {
-  const mobileDrawer = document.getElementById('mobileNavDrawer');
-  const backdrop = document.getElementById('navDrawerBackdrop');
-  if (!mobileDrawer) return;
-  navDrawerTrigger = document.activeElement;
-  closeDrawer(false);
-  closeContactModal(false);
-  closeWelcomeModal(false);
-  mobileDrawer.classList.add('open');
-  if (backdrop) {
-    backdrop.classList.add('open');
-    backdrop.setAttribute('aria-hidden', 'false');
-  }
-  const opener = document.getElementById('btnOpenCategoryDrawer');
-  if (opener) opener.setAttribute('aria-expanded', 'true');
-  document.body.style.overflow = 'hidden';
-  activateFocusTrap(mobileDrawer, closeMobileDrawer, navDrawerTrigger);
-  if (focusSearch) {
-    setTimeout(() => {
-      const searchEl = document.getElementById('drawerSearchInput');
-      if (searchEl) searchEl.focus();
-    }, 80);
-  }
-}
-
-function closeMobileDrawer(restoreFocus = true) {
-  const mobileDrawer = document.getElementById('mobileNavDrawer');
-  const backdrop = document.getElementById('navDrawerBackdrop');
-  if (backdrop) {
-    backdrop.classList.remove('open');
-    backdrop.setAttribute('aria-hidden', 'true');
-  }
-  const opener = document.getElementById('btnOpenCategoryDrawer');
-  if (opener) opener.setAttribute('aria-expanded', 'false');
-  if (mobileDrawer && mobileDrawer.classList.contains('open')) {
-    mobileDrawer.classList.remove('open');
-    deactivateFocusTrap(mobileDrawer, restoreFocus !== false);
-  } else if (mobileDrawer) {
-    mobileDrawer.setAttribute('aria-hidden', 'true');
-  }
-  navDrawerTrigger = null;
-}
-
-function navigateToNewsCategory(catKey) {
-  const targetCat = catKey || 'ALL';
-  currentCategoryFilter = targetCat;
-  currentSearchTerm = '';
-  const newsSearchInput = $('#newsSearchInput');
-  const headerSearchInput = $('#headerQuickSearchInput');
-  const drawerSearchInput = $('#drawerSearchInput');
-  if (newsSearchInput) newsSearchInput.value = '';
-  if (headerSearchInput) headerSearchInput.value = '';
-  if (drawerSearchInput) drawerSearchInput.value = '';
-
-  $$('.ms-cat-btn:not(.ms-nav-nl-tab):not(.ms-mobile-nl-btn)').forEach(b => {
-    const isMatch = (b.getAttribute('data-cat') || '') === targetCat;
-    b.classList.toggle('active', isMatch);
-    b.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
-  });
-  const navNlBtn = document.getElementById('navBtnNewsletter');
-  if (navNlBtn) navNlBtn.classList.remove('active');
-  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => {
-    const oc = btn.getAttribute('onclick') || '';
-    btn.classList.toggle('active', oc.includes(`'${targetCat}'`));
-  });
-
-  renderNewsDesk();
-  switchFintechTab('market', 'newsDesk');
-}
-
-function executePortalSearch(rawQuery) {
-  const term = (rawQuery || '').trim();
-  currentCategoryFilter = 'ALL';
-  currentSearchTerm = term;
-  $$('.ms-cat-btn').forEach(b => {
-    const isAll = (b.getAttribute('data-cat') || '') === 'ALL';
-    b.classList.toggle('active', isAll);
-    b.setAttribute('aria-pressed', isAll ? 'true' : 'false');
-  });
-  $$('.ms-topic-link, .ms-quick-topic').forEach(btn => btn.classList.remove('active'));
-  const newsSearchInput = $('#newsSearchInput');
-  const headerSearchInput = $('#headerQuickSearchInput');
-  const drawerSearchInput = $('#drawerSearchInput');
-  if (newsSearchInput) newsSearchInput.value = term;
-  if (headerSearchInput) headerSearchInput.value = term;
-  if (drawerSearchInput) drawerSearchInput.value = term;
-
-  renderNewsDesk();
-  switchFintechTab('market', 'newsDesk');
-}
-
-function handleHeaderQuickSearch(event) {
-  if (event) event.preventDefault();
-  const input = $('#headerQuickSearchInput');
-  executePortalSearch(input ? input.value : '');
-  return false;
-}
-
-function handleDrawerSearch(event) {
-  if (event) event.preventDefault();
-  const input = $('#drawerSearchInput');
-  executePortalSearch(input ? input.value : '');
-  return false;
-}
-
-// ─── BNEWSLETTER CONTROLLER & LATEST ISSUE LOADER (VERSION 1.3) ───
-const BNEWS_SUBSCRIBE_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwzarTCq14B7wgY3LjdBjLpWFP8hNH1xSGdwybkxCDigKdz12P60YRnBVFy9yi4uFL4/exec';
-
-function loadLatestNewsletterIssue() {
-  const container = document.getElementById('bnewsLatestIssuePaper');
-  if (!container || container.getAttribute('data-loaded') === 'true') return;
-
-  fetch(PORTAL_BASE_DIR + 'preview/newsletter-preview.html?v=' + Date.now())
-    .then(res => {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.text();
-    })
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const emailContainer = doc.querySelector('.email-container') || doc.body;
-      const styleEl = doc.querySelector('head style');
-      container.innerHTML = (styleEl ? styleEl.outerHTML : '') + emailContainer.outerHTML;
-      container.setAttribute('data-loaded', 'true');
-    })
-    .catch(err => {
-      console.warn('Fallback loading newsletter preview via iframe/embed:', err);
-      container.innerHTML = '<iframe src="' + PORTAL_BASE_DIR + 'preview/newsletter-preview.html" style="width:100%; min-height:1800px; border:none; display:block;" title="Bnews Latest Issue"></iframe>';
-      container.setAttribute('data-loaded', 'true');
-    });
-}
-
-function handleNewsletterSubscribe(source) {
-  let inputId = 'nlEmailInputTop';
-  let feedbackId = 'nlFeedbackTop';
-  let sourceLabel = 'Bnews Tab 05 (Top Hero)';
-
-  if (source === 'bottom') {
-    inputId = 'nlEmailInputBottom';
-    feedbackId = 'nlFeedbackBottom';
-    sourceLabel = 'Bnews Newsletter (Bottom)';
-  } else if (source === 'bottom_today') {
-    inputId = 'nlEmailInputToday';
-    feedbackId = 'nlFeedbackToday';
-    sourceLabel = 'Bnews Homepage (Bottom)';
-  } else if (source === 'modal') {
-    inputId = 'nlEmailInputModal';
-    feedbackId = 'nlFeedbackModal';
-    sourceLabel = 'Bnews Welcome Modal';
   }
 
-  const input = document.getElementById(inputId);
-  const feedback = document.getElementById(feedbackId);
-  const form = input ? input.closest('form') : null;
-  const btn = form ? form.querySelector('button[type="submit"]') : null;
-  if (!input || !feedback) return;
+  // ─── ACCESSIBLE FOCUS TRAP & DRAWER READER ─────────────────────────────────
+  const OVERLAY_SELECTORS = '#v4Drawer, #v4NavDrawer, #v4VCardModal, #v4WelcomeModal';
+  const LANDMARK_SELECTORS =
+    '.v4-skip-link, #v4Header, .v4-cat-nav, #v4PulseStrip, #mainContent, #v4CommunityCta, #siteFooter, #v4FloatWidget';
+  let activeTrap = null;
+  let lastExternalFocus = null;
 
-  const email = (input.value || '').trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !emailRegex.test(email)) {
-    feedback.className = 'bnews-nl-feedback error';
-    feedback.textContent = 'Vui lòng nhập địa chỉ email hợp lệ (ví dụ: tenban@gmail.com).';
-    input.focus();
-    return;
-  }
-
-  // Visual feedback during processing
-  if (btn) {
-    btn.disabled = true;
-    btn.setAttribute('data-orig-text', btn.textContent);
-    btn.textContent = 'ĐANG ĐĂNG KÝ...';
-  }
-
-  // Save to localStorage for client-side persistence
-  try {
-    const saved = JSON.parse(localStorage.getItem('bnews_subscribers') || '[]');
-    if (!saved.includes(email)) {
-      saved.push(email);
-      localStorage.setItem('bnews_subscribers', JSON.stringify(saved));
-    }
-  } catch (e) {}
-
-  // Post directly to Google Apps Script Webhook
-  const payload = JSON.stringify({
-    email: email,
-    source: sourceLabel,
-    timestamp: new Date().toISOString()
-  });
-
-  fetch(BNEWS_SUBSCRIBE_WEBHOOK_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: payload
-  }).catch(err => {
-    console.warn('Webhook post fallback:', err);
-  }).finally(() => {
-    feedback.className = 'bnews-nl-feedback success';
-    feedback.innerHTML = '✓ <strong>Đăng ký thành công!</strong> Bản tin Bnews ngày mai sẽ được gửi đến <u>' + escapeHtml(email) + '</u> lúc 9h00 sáng.';
-    input.value = '';
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = btn.getAttribute('data-orig-text') || 'ĐĂNG KÝ MIỄN PHÍ →';
-    }
-  });
-}
-
-// ─── FILTER & SEARCH EVENTS ───
-function setupEventListeners() {
-  // Floating Contact Widget Toggle (Bryan Portfolio Parity)
-  const fabBtn = $('#fabToggleBtn');
-  const floatWidget = $('#floating-widget');
-  if (fabBtn && floatWidget) {
-    fabBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      floatWidget.classList.toggle('menu-open');
-    });
-    document.addEventListener('click', (e) => {
-  // Floating widget close on outside click
-  const fw = document.getElementById('floating-widget');
-  if (fw && fw.classList.contains('menu-open') && !fw.contains(e.target)) {
-    closeFabMenu();
-  }
-
-      if (!floatWidget.contains(e.target)) {
-        floatWidget.classList.remove('menu-open');
-      }
-    });
-  }
-  // Category buttons in News Desk and Top Navigation
-  $$('.ms-cat-btn:not(.ms-nav-nl-tab):not(.ms-mobile-nl-btn)').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const cat = btn.getAttribute('data-cat') || 'ALL';
-      navigateToNewsCategory(cat);
-    });
-  });
-
-  // Search input
-  const searchInput = $('#newsSearchInput');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      currentSearchTerm = e.target.value.trim();
-      renderNewsDesk();
-      if (currentSearchTerm.length > 0 && window.scrollY < 300) {
-        const newsDeskEl = document.getElementById('newsDesk');
-        if (newsDeskEl) newsDeskEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  }
-
-  // Theme toggle
-  const themeBtn = $('#themeToggleBtn');
-  if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
-
-  // Drawer close & backdrop
-  const closeBtn = $('#drawerCloseBtn');
-  const backdrop = $('#drawerBackdrop');
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (backdrop) backdrop.addEventListener('click', closeDrawer);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeDrawer();
-      closeMobileDrawer();
-      closeAllDropdowns();
-    }
-  });
-
-  // ─── NAVIGATION MEGA MENU & MOBILE DRAWER INTERACTIONS ───
-  const mobileToggle = $('#mobileMenuToggle');
-  const mobileClose = $('#mobileDrawerClose');
-
-  function closeAllDropdowns() {
-    $$('.ms-nav-group').forEach(g => {
-      g.classList.remove('open');
-      const tr = g.querySelector('.ms-nav-trigger');
-      if (tr) tr.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  if (mobileToggle) mobileToggle.addEventListener('click', openMobileDrawer);
-  if (mobileClose) mobileClose.addEventListener('click', closeMobileDrawer);
-
-  // Desktop Navigation Trigger Click & Keyboard Toggle
-  $$('.ms-nav-trigger').forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const parent = trigger.closest('.ms-nav-group');
-      const isOpen = parent.classList.contains('open');
-      closeAllDropdowns();
-      if (!isOpen) {
-        parent.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  // Click outside to close dropdowns
-  document.addEventListener('click', (e) => {
-  // Floating widget close on outside click
-  const fw = document.getElementById('floating-widget');
-  if (fw && fw.classList.contains('menu-open') && !fw.contains(e.target)) {
-    closeFabMenu();
-  }
-
-    if (!e.target.closest('.ms-nav-group')) {
-      closeAllDropdowns();
-    }
-  });
-
-  // Mobile Accordion items
-  $$('.ms-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const parent = header.closest('.ms-accordion-item');
-      if (parent) {
-        parent.classList.toggle('active');
-      }
-    });
-  });
-
-  // Smooth scroll and auto-close for all dropdown items and accordion links
-  $$('.ms-dropdown-item, .ms-accordion-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        const target = $(href);
-        if (target) {
-          closeMobileDrawer();
-          closeAllDropdowns();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-  });
-}
-
-
-// ─── INITIALIZATION ───
-document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  setupEventListeners();
-  loadEditionData();
-});
-
-/* ─── SECTION 03B: RENDER TODAY'S DECISION BRIEF ─── */
-function renderDecisionBrief() {
-  const data = EDITION_DATA;
-  if (!data) return;
-  const container = document.getElementById('decisionBriefGrid');
-  if (!container) return;
-  
-  const briefData = data.editorialSections?.sec04b_decisionBrief || {};
-  const signals = briefData.signals || [];
-  
-  if (signals.length === 0) {
-    container.innerHTML = '<p class="ms-text-muted">Đang cập nhật các tín hiệu hành động điều hành...</p>';
-    return;
-  }
-  
-  container.innerHTML = signals.map((sig, idx) => {
-    const eventsStr = (sig.relatedEventIds || []).join(', ');
-    const meaning = sig.whatItMeansForMyWork || sig.whyItMatters || '';
-    const meaningSnippet = meaning.length > 160 ? meaning.slice(0, 160) + '...' : meaning;
-    
-    let categoryBadge = sig.categoryBadge || '';
-    if (!categoryBadge) {
-      if (sig.decisionCategory === 'COMMERCIAL_OPPORTUNITY' || /du lịch|khách sạn|quốc tế/i.test(sig.signalTitle)) {
-        categoryBadge = 'DU LỊCH & THANH TOÁN QUỐC TẾ';
-      } else if (sig.decisionCategory === 'MARKET_OPPORTUNITY' || /sme|hộ kinh doanh|chuỗi/i.test(sig.signalTitle)) {
-        categoryBadge = 'HỘ KINH DOANH & CHUỖI SME';
-      } else if (sig.decisionCategory === 'MONITORING_REQUIRED' || /ngoại hối|lãi suất|thanh khoản/i.test(sig.signalTitle)) {
-        categoryBadge = 'NGOẠI HỐI & LÃI SUẤT ĐIỀU HÀNH';
-      } else if (sig.decisionCategory === 'STRATEGIC_SIGNAL' || /xe điện|bán lẻ|điện máy/i.test(sig.signalTitle)) {
-        categoryBadge = 'BÁN LẺ GIÁ TRỊ CAO & XE ĐIỆN';
-      } else if (sig.decisionCategory) {
-        categoryBadge = sig.decisionCategory.replace(/_/g, ' ');
+  function setBackgroundInert(isInert, activeEl) {
+    $$(LANDMARK_SELECTORS).forEach((el) => {
+      if (activeEl && el.contains(activeEl)) return;
+      if (isInert) {
+        el.setAttribute('aria-hidden', 'true');
+        el.inert = true;
       } else {
-        categoryBadge = 'CHIẾN LƯỢC ĐIỀU HÀNH';
+        el.removeAttribute('aria-hidden');
+        el.inert = false;
       }
+    });
+  }
+
+  function isElementVisible(el) {
+    if (!el || el.disabled || el.closest('[hidden]') || el.closest('[aria-hidden="true"]')) return false;
+    const style = window.getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden') return false;
+    return el.getClientRects().length > 0;
+  }
+
+  function getFocusable(container) {
+    if (!container) return [];
+    return Array.from(
+      container.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter(isElementVisible);
+  }
+
+  function activateTrap(overlayEl, onClose) {
+    if (!overlayEl) return;
+    const currentFocus = document.activeElement;
+    if (
+      currentFocus &&
+      currentFocus !== document.body &&
+      currentFocus !== document.documentElement &&
+      !currentFocus.closest(OVERLAY_SELECTORS)
+    ) {
+      lastExternalFocus = currentFocus;
+    } else if (!lastExternalFocus || !document.contains(lastExternalFocus)) {
+      lastExternalFocus = null;
     }
 
-    const priorityBadge = sig.confidenceLevel === 'HIGH_CONFIDENCE_GROUNDED'
-      ? '<span class="ms-badge ms-badge-rose" style="font-size:12px;">ƯU TIÊN CAO</span>'
-      : '<span class="ms-badge ms-badge-primary" style="font-size:12px;">TRỌNG TÂM</span>';
+    const prevTrigger =
+      currentFocus && currentFocus !== document.body && !currentFocus.closest(OVERLAY_SELECTORS)
+        ? currentFocus
+        : lastExternalFocus;
 
-    return `
-      <article class="ms-compact-decision-card">
-        <div>
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-            <span class="ms-badge ms-badge-secondary" style="font-size:12px;">${escapeHtml(categoryBadge)}</span>
-            ${priorityBadge}
-          </div>
-          <h3 class="ms-decision-card-title">${escapeHtml(sig.signalTitle)}</h3>
-          <p class="ms-decision-card-lead">
-            <strong>Ý nghĩa B2B:</strong> ${escapeHtml(meaningSnippet)}
-          </p>
-        </div>
-        <div style="border-top:1px solid var(--ms-border); padding-top:10px; margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-size:0.75rem; color:var(--ms-text-muted); font-weight:600;">TÍN HIỆU #${idx + 1}</span>
-          <button class="ms-btn ms-btn-primary ms-btn-sm" onclick="openDecisionSignalDrawer('${escapeHtml(sig.signalId)}')">
-            ĐỌC PHÂN TÍCH →
-          </button>
-        </div>
-      </article>
-    `;
-  }).join('');
-}
-
-function openDecisionSignalDrawer(signalId) {
-  const briefData = EDITION_DATA.editorialSections?.sec04b_decisionBrief || {};
-  const sig = (briefData.signals || []).find(s => s.signalId === signalId);
-  if (!sig) return;
-
-  const assumptionsText = Array.isArray(sig.assumptions)
-    ? sig.assumptions.join('; ')
-    : (typeof sig.assumptions === 'string' ? sig.assumptions : '');
-
-  const risksText = Array.isArray(sig.risks)
-    ? sig.risks.join('; ')
-    : (typeof sig.risks === 'string' ? sig.risks : '');
-
-  const segmentsText = Array.isArray(sig.relevantMerchantSegments)
-    ? sig.relevantMerchantSegments.map(s => escapeHtml(s)).join(', ')
-    : (typeof sig.relevantMerchantSegments === 'string' ? escapeHtml(sig.relevantMerchantSegments) : 'Chuỗi F&B, Khách sạn, Bán lẻ đa kênh & Hộ kinh doanh');
-
-  const solutionsHtml = (sig.potentialPaymentSolutions || []).map(sol => {
-    let pillClass = 'ms-pill-confirmed';
-    let pillLabel = 'ĐÃ CÓ SẴN TẠI PAYOO (HIỆN HỮU)';
-    if (sol.readinessType === 'POTENTIAL_INTEGRATION') {
-      pillClass = 'ms-pill-potential';
-      pillLabel = 'CẦN TÍCH HỢP MỞ RỘNG';
-    } else if (sol.readinessType === 'PRODUCT_DEVELOPMENT_IDEA') {
-      pillClass = 'ms-pill-idea';
-      pillLabel = 'Ý TƯỞNG PHÁT TRIỂN MỚI';
+    if (activeTrap) {
+      if (activeTrap.handler) document.removeEventListener('keydown', activeTrap.handler, true);
+      if (activeTrap.focusHandler) document.removeEventListener('focusin', activeTrap.focusHandler, true);
     }
-    return `
-      <div class="ms-b2b-solution-item" style="background-color:var(--ms-surface-base); padding:12px 14px; border:1px solid var(--ms-border); border-left:3px solid var(--ms-primary); border-radius:4px; margin-bottom:10px;">
-        <div style="margin-bottom:6px;">
-          <span class="ms-solution-pill ${pillClass}">${pillLabel}</span>
-        </div>
-        <div style="font-weight:700; font-size:0.9375rem; color:var(--ms-text-primary); line-height:1.4;">${escapeHtml(sol.solutionName)}</div>
-        <p style="font-size:0.84375rem; margin:4px 0 0 0; color:var(--ms-text-secondary); line-height:1.55;">${escapeHtml(sol.capabilityNote)}</p>
-      </div>
-    `;
-  }).join('');
 
-  let urls = sig.evidenceUrls || [];
-  if (!urls.length && sig.relatedEventIds && sig.relatedEventIds.length) {
-    const newsList = EDITION_DATA.eligibleNewsList || [];
-    urls = sig.relatedEventIds.map(eid => {
-      const found = newsList.find(n => n.eventId === eid || n.originEventId === eid);
-      return found ? (found.canonicalUrl || found.sourceUrl) : null;
-    }).filter(Boolean);
-  }
+    // Move focus out of background landmarks BEFORE setting aria-hidden / inert
+    if (!overlayEl.hasAttribute('tabindex')) overlayEl.setAttribute('tabindex', '-1');
+    const syncItems = getFocusable(overlayEl);
+    if (syncItems.length) {
+      syncItems[0].focus({ preventScroll: true });
+    } else {
+      overlayEl.focus({ preventScroll: true });
+    }
+    setBackgroundInert(true, overlayEl);
 
-  const urlsHtml = (urls || []).map(u => `
-    <div style="margin-top:6px;">
-      <a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" class="ms-btn ms-btn-ghost ms-btn-xs" style="word-break:break-all;">
-        Mở bài viết gốc đã xác minh (${escapeHtml(u.slice(0, 50))}...) ↗
-      </a>
-    </div>
-  `).join('');
-
-  const confLabel = (!sig.confidenceLevel || String(sig.confidenceLevel).includes('HIGH'))
-    ? 'ĐỘ TIN CẬY CAO · ĐÃ XÁC MINH'
-    : 'TRỌNG TÂM ĐIỀU HÀNH';
-
-  const html = `
-    <article style="font-size:0.9375rem; line-height:1.7;">
-      <!-- Header -->
-      <div style="padding-bottom:14px; margin-bottom:16px; border-bottom:2px solid var(--ms-border);">
-        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:10px;">
-          <span class="ms-badge ms-badge-rose">TÍN HIỆU CHIẾN LƯỢC</span>
-          <span class="ms-badge ms-badge-neutral">${confLabel}</span>
-        </div>
-        <h2 style="font-family:var(--font-headline); font-size:clamp(1.25rem, 4.5vw, 1.55rem); line-height:1.3; color:var(--ms-primary); margin:0;">
-          ${escapeHtml(sig.signalTitle)}
-        </h2>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:16px;">
-        <!-- Section A: What Happened -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            A. SỰ KIỆN NÀO ĐÃ XẢY RA?
-          </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.6;">${escapeHtml(sig.whatHappened)}</p>
-        </div>
-
-        <!-- Section B: Why It Matters -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            B. VÌ SAO ĐÁNG CHÚ Ý?
-          </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.6;">${escapeHtml(sig.whyItMatters)}</p>
-        </div>
-
-        <!-- Section C: What Changes -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            C. TÁC ĐỘNG NÀO CÓ THỂ XẢY RA?
-          </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.6;">${escapeHtml(sig.whatChanges)}</p>
-        </div>
-
-        <!-- Section D: What It Means For B2B / Work -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px; border-left:4px solid var(--ms-secondary);">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-secondary); margin-bottom:6px;">
-            D. LIÊN QUAN GÌ ĐẾN THANH TOÁN & CÔNG VIỆC B2B?
-          </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.6; font-weight:600;">${escapeHtml(sig.whatItMeansForMyWork)}</p>
-        </div>
-
-        <!-- Section E: Opportunities, Assumptions & Risks -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            E. CƠ HỘI, GIỚI HẠN & RỦI RO
-          </h4>
-          <div style="font-size:0.875rem; line-height:1.6;">
-            <div><strong>Phân khúc khách hàng:</strong> ${segmentsText}</div>
-            ${assumptionsText ? `<div style="margin-top:4px;"><strong>Giả định:</strong> ${escapeHtml(assumptionsText)}</div>` : ''}
-            ${risksText ? `<div style="margin-top:4px; color:var(--ms-text-muted);"><strong>Rủi ro cần lường trước:</strong> ${escapeHtml(risksText)}</div>` : ''}
-          </div>
-        </div>
-
-        <!-- Section F: What to Watch & Next Action -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            F. TÔI NÊN LÀM GÌ HOẶC THEO DÕI GÌ?
-          </h4>
-          <p style="margin:0 0 8px 0; font-size:0.875rem; line-height:1.6;">${escapeHtml(sig.whatShouldIDoOrWatch)}</p>
-          <div style="background-color:var(--ms-surface-base); padding:8px 12px; border-radius:4px; font-size:0.8125rem;">
-            <strong>Hành động tiếp theo đề xuất:</strong> ${escapeHtml(sig.proposedNextAction)}
-            <br><span style="color:var(--ms-text-muted); font-size:0.75rem;">Khung thời gian theo dõi: ${escapeHtml(sig.monitoringTimeHorizon || '')}</span>
-          </div>
-        </div>
-
-        <!-- Section G: Relevant Payoo Solutions -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:10px;">
-            G. CÁC SẢN PHẨM / GIẢI PHÁP PAYOO LIÊN QUAN
-          </h4>
-          ${solutionsHtml}
-        </div>
-
-        <!-- Section H: Evidence & Sources -->
-        <div style="background-color:var(--ms-surface-alt); padding:16px; border:1px solid var(--ms-border); border-radius:4px;">
-          <h4 style="font-family:var(--font-headline); font-size:0.875rem; text-transform:uppercase; color:var(--ms-primary); margin-bottom:6px;">
-            H. NGUỒN BÁO CHÍ THAM KHẢO & ĐỐI SOÁT
-          </h4>
-          ${urlsHtml}
-        </div>
-      </div>
-    </article>
-  `;
-
-  openDrawer(sig.signalTitle || 'Tín hiệu hành động điều hành', html);
-}
-
-
-function renderWatchlist() {
-  const data = EDITION_DATA;
-  if (!data) return;
-  const container = document.getElementById('watchlistGrid');
-  if (!container) return;
-  
-  const watchlist = data.editorialSections?.sec08b_watchlist?.watchlistItems 
-                 || data.editorialSections?.sec08b_watchlist?.items 
-                 || [];
-  if (watchlist.length === 0) {
-    container.innerHTML = '<p class="ms-text-muted">Chưa có chỉ báo nào cần kích hoạt theo dõi tuần tới.</p>';
-    return;
-  }
-  
-  container.innerHTML = watchlist.map((item, idx) => {
-    const wId = item.watchlistId || `WL-0${idx + 1}`;
-    const indicator = item.category || item.sourceOrIndicator || 'Chỉ báo trọng yếu';
-    let title = item.itemTitle || item.signalTracked || 'Biến số theo dõi';
-    title = title.replace(new RegExp('^' + wId + '[:\\s\\-\\.]*', 'i'), '');
-    const desc = item.description || item.conditionChangingAssessment || '';
-    const impact = item.impactLevel || 'HIGH';
-    const action = item.possibleAction || (impact === 'HIGH' ? 'Kích hoạt kịch bản điều hòa thanh khoản & dòng tiền' : 'Theo dõi biến động phiên tiếp theo');
-    const horizon = item.observationHorizon || '7 ngày tới';
-
-    return `
-      <div class="ms-watchlist-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <div class="ms-watchlist-indicator">${escapeHtml(wId)} · ${escapeHtml(indicator)}</div>
-          <span class="ms-badge ${impact === 'HIGH' ? 'ms-badge-error' : 'ms-badge-warning'}" style="font-size:12px; padding:1px 5px;">${escapeHtml(impact)}</span>
-        </div>
-        <h4 class="ms-watchlist-title">${escapeHtml(title)}</h4>
-        <div class="ms-watchlist-desc">
-          <strong>Trọng tâm theo dõi:</strong> ${escapeHtml(desc)}
-        </div>
-        <div class="ms-watchlist-action" style="margin-top:8px; font-size:0.8125rem;">
-          <strong>Kịch bản ứng phó:</strong> ${escapeHtml(action)} (${escapeHtml(horizon)})
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-// Global accessibility keyboard handler
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closePulseDrawer();
-    closeArticleReader();
-  }
-});
-
-
-window.openArchiveDrawer = openArchiveDrawer;
-window.openSheetsSchemaModal = openSheetsSchemaModal;
-
-
-/* ==========================================================================
-   P0 CRITICAL RESTORATION: MODALS, VCARD, FAB, BACK-TO-TOP & EVENT DELEGATION
-   ========================================================================== */
-
-// Offline Vector SVG QR for vCard, Zalo, LinkedIn
-const QR_SVG_DATA = {
-      vcard: {
-        size: 71,
-        color: "#292524",
-        path: "M1,1h7v1h-7zM9,1h2v1h-2zM12,1h1v1h-1zM14,1h1v1h-1zM17,1h1v1h-1zM21,1h1v1h-1zM23,1h2v1h-2zM26,1h1v1h-1zM30,1h1v1h-1zM35,1h1v1h-1zM37,1h2v1h-2zM41,1h2v1h-2zM45,1h3v1h-3zM50,1h2v1h-2zM54,1h2v1h-2zM60,1h2v1h-2zM64,1h1v1h-1zM67,1h3v1h-3zM1,2h1v1h-1zM7,2h1v1h-1zM12,2h1v1h-1zM15,2h3v1h-3zM19,2h1v1h-1zM22,2h2v1h-2zM29,2h3v1h-3zM35,2h1v1h-1zM37,2h2v1h-2zM40,2h1v1h-1zM42,2h1v1h-1zM44,2h3v1h-3zM50,2h1v1h-1zM52,2h2v1h-2zM58,2h7v1h-7zM66,2h1v1h-1zM69,2h1v1h-1zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM10,3h4v1h-4zM18,3h1v1h-1zM21,3h2v1h-2zM24,3h1v1h-1zM26,3h2v1h-2zM31,3h1v1h-1zM33,3h5v1h-5zM39,3h2v1h-2zM42,3h3v1h-3zM46,3h1v1h-1zM48,3h1v1h-1zM50,3h2v1h-2zM53,3h1v1h-1zM57,3h1v1h-1zM59,3h2v1h-2zM63,3h1v1h-1zM65,3h3v1h-3zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM11,4h1v1h-1zM15,4h2v1h-2zM19,4h2v1h-2zM23,4h1v1h-1zM30,4h2v1h-2zM34,4h1v1h-1zM40,4h2v1h-2zM43,4h4v1h-4zM49,4h1v1h-1zM51,4h1v1h-1zM58,4h1v1h-1zM60,4h3v1h-3zM64,4h1v1h-1zM67,4h3v1h-3zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h3v1h-3zM13,5h3v1h-3zM20,5h1v1h-1zM24,5h3v1h-3zM29,5h2v1h-2zM33,5h6v1h-6zM47,5h1v1h-1zM50,5h1v1h-1zM57,5h1v1h-1zM59,5h1v1h-1zM61,5h5v1h-5zM67,5h1v1h-1zM69,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM11,6h1v1h-1zM14,6h2v1h-2zM19,6h1v1h-1zM21,6h5v1h-5zM29,6h3v1h-3zM33,6h1v1h-1zM37,6h2v1h-2zM40,6h1v1h-1zM42,6h1v1h-1zM44,6h1v1h-1zM46,6h4v1h-4zM51,6h2v1h-2zM54,6h1v1h-1zM57,6h1v1h-1zM59,6h1v1h-1zM61,6h1v1h-1zM65,6h3v1h-3zM69,6h1v1h-1zM1,7h7v1h-7zM9,7h2v1h-2zM12,7h3v1h-3zM17,7h1v1h-1zM22,7h1v1h-1zM24,7h4v1h-4zM29,7h2v1h-2zM32,7h2v1h-2zM35,7h1v1h-1zM37,7h4v1h-4zM42,7h1v1h-1zM46,7h1v1h-1zM50,7h2v1h-2zM54,7h2v1h-2zM57,7h1v1h-1zM61,7h1v1h-1zM63,7h1v1h-1zM65,7h3v1h-3zM9,8h3v1h-3zM14,8h1v1h-1zM19,8h6v1h-6zM26,8h2v1h-2zM32,8h2v1h-2zM37,8h1v1h-1zM39,8h2v1h-2zM43,8h1v1h-1zM46,8h1v1h-1zM50,8h2v1h-2zM53,8h3v1h-3zM58,8h2v1h-2zM61,8h1v1h-1zM65,8h1v1h-1zM67,8h1v1h-1zM69,8h1v1h-1zM1,9h1v1h-1zM4,9h2v1h-2zM7,9h2v1h-2zM11,9h1v1h-1zM14,9h1v1h-1zM16,9h1v1h-1zM18,9h1v1h-1zM23,9h1v1h-1zM25,9h1v1h-1zM28,9h1v1h-1zM31,9h8v1h-8zM41,9h1v1h-1zM44,9h2v1h-2zM47,9h2v1h-2zM52,9h1v1h-1zM54,9h2v1h-2zM57,9h1v1h-1zM60,9h7v1h-7zM69,9h1v1h-1zM1,10h1v1h-1zM8,10h2v1h-2zM11,10h3v1h-3zM15,10h1v1h-1zM19,10h3v1h-3zM24,10h2v1h-2zM27,10h1v1h-1zM29,10h1v1h-1zM31,10h2v1h-2zM35,10h1v1h-1zM38,10h1v1h-1zM42,10h1v1h-1zM44,10h4v1h-4zM49,10h1v1h-1zM52,10h2v1h-2zM56,10h2v1h-2zM59,10h2v1h-2zM63,10h1v1h-1zM65,10h1v1h-1zM69,10h1v1h-1zM1,11h1v1h-1zM3,11h1v1h-1zM5,11h8v1h-8zM15,11h4v1h-4zM20,11h1v1h-1zM23,11h1v1h-1zM25,11h2v1h-2zM28,11h6v1h-6zM35,11h5v1h-5zM44,11h1v1h-1zM46,11h1v1h-1zM50,11h5v1h-5zM57,11h5v1h-5zM63,11h1v1h-1zM65,11h1v1h-1zM2,12h2v1h-2zM5,12h1v1h-1zM9,12h1v1h-1zM12,12h2v1h-2zM15,12h1v1h-1zM19,12h3v1h-3zM24,12h1v1h-1zM26,12h3v1h-3zM30,12h1v1h-1zM32,12h3v1h-3zM37,12h1v1h-1zM39,12h1v1h-1zM41,12h5v1h-5zM47,12h1v1h-1zM49,12h1v1h-1zM51,12h2v1h-2zM54,12h2v1h-2zM60,12h1v1h-1zM62,12h3v1h-3zM66,12h2v1h-2zM69,12h1v1h-1zM1,13h1v1h-1zM3,13h3v1h-3zM7,13h1v1h-1zM9,13h1v1h-1zM15,13h5v1h-5zM21,13h1v1h-1zM24,13h2v1h-2zM27,13h2v1h-2zM30,13h3v1h-3zM34,13h1v1h-1zM36,13h3v1h-3zM40,13h11v1h-11zM52,13h1v1h-1zM54,13h4v1h-4zM59,13h1v1h-1zM62,13h2v1h-2zM67,13h1v1h-1zM69,13h1v1h-1zM1,14h1v1h-1zM5,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM12,14h2v1h-2zM16,14h2v1h-2zM19,14h3v1h-3zM23,14h1v1h-1zM26,14h4v1h-4zM31,14h2v1h-2zM34,14h1v1h-1zM38,14h1v1h-1zM40,14h2v1h-2zM45,14h5v1h-5zM54,14h1v1h-1zM56,14h1v1h-1zM58,14h2v1h-2zM62,14h3v1h-3zM66,14h1v1h-1zM1,15h1v1h-1zM4,15h1v1h-1zM7,15h1v1h-1zM9,15h1v1h-1zM12,15h2v1h-2zM15,15h2v1h-2zM20,15h1v1h-1zM23,15h1v1h-1zM27,15h5v1h-5zM33,15h1v1h-1zM35,15h1v1h-1zM37,15h2v1h-2zM41,15h1v1h-1zM44,15h1v1h-1zM46,15h3v1h-3zM51,15h4v1h-4zM58,15h3v1h-3zM62,15h1v1h-1zM65,15h1v1h-1zM68,15h1v1h-1zM3,16h4v1h-4zM9,16h2v1h-2zM12,16h1v1h-1zM14,16h2v1h-2zM18,16h1v1h-1zM23,16h1v1h-1zM25,16h2v1h-2zM29,16h2v1h-2zM32,16h1v1h-1zM34,16h1v1h-1zM37,16h3v1h-3zM43,16h2v1h-2zM46,16h1v1h-1zM48,16h2v1h-2zM51,16h2v1h-2zM55,16h2v1h-2zM58,16h1v1h-1zM63,16h1v1h-1zM65,16h1v1h-1zM67,16h1v1h-1zM69,16h1v1h-1zM1,17h4v1h-4zM7,17h4v1h-4zM12,17h2v1h-2zM16,17h3v1h-3zM23,17h3v1h-3zM27,17h1v1h-1zM29,17h1v1h-1zM31,17h4v1h-4zM36,17h2v1h-2zM39,17h3v1h-3zM44,17h1v1h-1zM46,17h1v1h-1zM52,17h1v1h-1zM54,17h1v1h-1zM56,17h1v1h-1zM58,17h1v1h-1zM61,17h2v1h-2zM66,17h2v1h-2zM69,17h1v1h-1zM1,18h1v1h-1zM9,18h1v1h-1zM16,18h2v1h-2zM20,18h1v1h-1zM22,18h2v1h-2zM25,18h2v1h-2zM28,18h1v1h-1zM31,18h1v1h-1zM34,18h1v1h-1zM37,18h1v1h-1zM40,18h1v1h-1zM44,18h1v1h-1zM47,18h2v1h-2zM51,18h1v1h-1zM54,18h2v1h-2zM60,18h2v1h-2zM64,18h3v1h-3zM1,19h1v1h-1zM4,19h1v1h-1zM6,19h4v1h-4zM12,19h2v1h-2zM15,19h2v1h-2zM22,19h2v1h-2zM25,19h2v1h-2zM30,19h1v1h-1zM33,19h1v1h-1zM35,19h1v1h-1zM38,19h1v1h-1zM41,19h4v1h-4zM46,19h1v1h-1zM48,19h2v1h-2zM52,19h1v1h-1zM55,19h1v1h-1zM60,19h3v1h-3zM67,19h2v1h-2zM2,20h1v1h-1zM5,20h1v1h-1zM8,20h1v1h-1zM10,20h1v1h-1zM12,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM18,20h1v1h-1zM21,20h7v1h-7zM29,20h1v1h-1zM31,20h3v1h-3zM37,20h3v1h-3zM41,20h1v1h-1zM44,20h1v1h-1zM46,20h1v1h-1zM49,20h1v1h-1zM51,20h8v1h-8zM61,20h1v1h-1zM64,20h1v1h-1zM67,20h1v1h-1zM69,20h1v1h-1zM1,21h3v1h-3zM7,21h1v1h-1zM14,21h1v1h-1zM19,21h2v1h-2zM22,21h1v1h-1zM25,21h2v1h-2zM29,21h9v1h-9zM40,21h2v1h-2zM43,21h1v1h-1zM45,21h2v1h-2zM48,21h2v1h-2zM51,21h2v1h-2zM54,21h1v1h-1zM56,21h3v1h-3zM60,21h1v1h-1zM62,21h5v1h-5zM68,21h2v1h-2zM1,22h1v1h-1zM3,22h1v1h-1zM6,22h1v1h-1zM9,22h1v1h-1zM13,22h1v1h-1zM15,22h1v1h-1zM18,22h2v1h-2zM23,22h1v1h-1zM25,22h1v1h-1zM27,22h3v1h-3zM31,22h1v1h-1zM34,22h1v1h-1zM36,22h2v1h-2zM39,22h2v1h-2zM42,22h1v1h-1zM44,22h1v1h-1zM47,22h1v1h-1zM50,22h2v1h-2zM54,22h1v1h-1zM64,22h1v1h-1zM66,22h1v1h-1zM68,22h2v1h-2zM3,23h2v1h-2zM7,23h1v1h-1zM10,23h2v1h-2zM14,23h1v1h-1zM17,23h1v1h-1zM19,23h1v1h-1zM22,23h1v1h-1zM25,23h1v1h-1zM33,23h1v1h-1zM36,23h1v1h-1zM38,23h2v1h-2zM41,23h1v1h-1zM46,23h1v1h-1zM48,23h2v1h-2zM53,23h4v1h-4zM63,23h1v1h-1zM67,23h2v1h-2zM2,24h1v1h-1zM4,24h3v1h-3zM8,24h3v1h-3zM12,24h1v1h-1zM14,24h1v1h-1zM16,24h1v1h-1zM18,24h1v1h-1zM21,24h4v1h-4zM27,24h1v1h-1zM29,24h1v1h-1zM31,24h4v1h-4zM36,24h1v1h-1zM39,24h1v1h-1zM41,24h1v1h-1zM43,24h3v1h-3zM47,24h1v1h-1zM50,24h2v1h-2zM54,24h2v1h-2zM57,24h2v1h-2zM60,24h2v1h-2zM63,24h2v1h-2zM67,24h3v1h-3zM1,25h1v1h-1zM4,25h2v1h-2zM7,25h8v1h-8zM20,25h1v1h-1zM24,25h1v1h-1zM26,25h2v1h-2zM30,25h1v1h-1zM32,25h1v1h-1zM40,25h8v1h-8zM50,25h1v1h-1zM54,25h1v1h-1zM57,25h2v1h-2zM62,25h7v1h-7zM1,26h2v1h-2zM4,26h1v1h-1zM8,26h3v1h-3zM12,26h1v1h-1zM14,26h1v1h-1zM16,26h1v1h-1zM20,26h2v1h-2zM24,26h1v1h-1zM28,26h1v1h-1zM30,26h1v1h-1zM32,26h2v1h-2zM37,26h1v1h-1zM39,26h2v1h-2zM42,26h1v1h-1zM46,26h4v1h-4zM52,26h4v1h-4zM58,26h2v1h-2zM61,26h1v1h-1zM64,26h3v1h-3zM68,26h2v1h-2zM1,27h1v1h-1zM4,27h2v1h-2zM7,27h4v1h-4zM12,27h2v1h-2zM16,27h1v1h-1zM24,27h1v1h-1zM27,27h1v1h-1zM32,27h1v1h-1zM34,27h1v1h-1zM36,27h1v1h-1zM38,27h1v1h-1zM41,27h2v1h-2zM46,27h1v1h-1zM48,27h4v1h-4zM53,27h1v1h-1zM55,27h2v1h-2zM58,27h2v1h-2zM61,27h1v1h-1zM64,27h2v1h-2zM67,27h1v1h-1zM69,27h1v1h-1zM2,28h2v1h-2zM5,28h2v1h-2zM11,28h1v1h-1zM13,28h2v1h-2zM18,28h3v1h-3zM23,28h1v1h-1zM25,28h2v1h-2zM31,28h1v1h-1zM35,28h3v1h-3zM40,28h1v1h-1zM42,28h1v1h-1zM45,28h1v1h-1zM47,28h2v1h-2zM54,28h2v1h-2zM57,28h2v1h-2zM60,28h2v1h-2zM63,28h1v1h-1zM65,28h1v1h-1zM67,28h1v1h-1zM69,28h1v1h-1zM3,29h2v1h-2zM7,29h2v1h-2zM12,29h1v1h-1zM14,29h4v1h-4zM20,29h2v1h-2zM24,29h3v1h-3zM29,29h1v1h-1zM32,29h3v1h-3zM36,29h1v1h-1zM39,29h1v1h-1zM42,29h2v1h-2zM46,29h2v1h-2zM50,29h1v1h-1zM52,29h1v1h-1zM54,29h1v1h-1zM56,29h4v1h-4zM63,29h1v1h-1zM66,29h1v1h-1zM68,29h1v1h-1zM1,30h1v1h-1zM4,30h2v1h-2zM9,30h1v1h-1zM12,30h3v1h-3zM16,30h1v1h-1zM19,30h1v1h-1zM21,30h3v1h-3zM27,30h7v1h-7zM39,30h1v1h-1zM42,30h3v1h-3zM46,30h5v1h-5zM53,30h2v1h-2zM57,30h5v1h-5zM64,30h6v1h-6zM4,31h2v1h-2zM7,31h2v1h-2zM10,31h2v1h-2zM13,31h2v1h-2zM18,31h2v1h-2zM21,31h2v1h-2zM24,31h2v1h-2zM30,31h1v1h-1zM32,31h1v1h-1zM34,31h2v1h-2zM40,31h1v1h-1zM50,31h6v1h-6zM60,31h1v1h-1zM65,31h1v1h-1zM67,31h2v1h-2zM1,32h1v1h-1zM4,32h1v1h-1zM6,32h1v1h-1zM8,32h2v1h-2zM11,32h1v1h-1zM13,32h1v1h-1zM15,32h2v1h-2zM19,32h1v1h-1zM24,32h1v1h-1zM26,32h2v1h-2zM34,32h1v1h-1zM36,32h2v1h-2zM39,32h1v1h-1zM41,32h3v1h-3zM46,32h1v1h-1zM48,32h3v1h-3zM52,32h2v1h-2zM55,32h2v1h-2zM60,32h1v1h-1zM64,32h1v1h-1zM67,32h1v1h-1zM2,33h1v1h-1zM4,33h11v1h-11zM16,33h1v1h-1zM18,33h1v1h-1zM20,33h4v1h-4zM27,33h1v1h-1zM31,33h8v1h-8zM40,33h1v1h-1zM42,33h1v1h-1zM45,33h3v1h-3zM53,33h2v1h-2zM56,33h10v1h-10zM67,33h3v1h-3zM3,34h1v1h-1zM5,34h1v1h-1zM9,34h1v1h-1zM12,34h1v1h-1zM15,34h2v1h-2zM20,34h3v1h-3zM26,34h5v1h-5zM33,34h1v1h-1zM37,34h1v1h-1zM39,34h2v1h-2zM42,34h1v1h-1zM47,34h3v1h-3zM54,34h1v1h-1zM58,34h2v1h-2zM61,34h1v1h-1zM65,34h1v1h-1zM68,34h2v1h-2zM3,35h3v1h-3zM7,35h1v1h-1zM9,35h2v1h-2zM12,35h1v1h-1zM15,35h1v1h-1zM17,35h1v1h-1zM19,35h1v1h-1zM21,35h1v1h-1zM24,35h1v1h-1zM27,35h1v1h-1zM29,35h1v1h-1zM32,35h2v1h-2zM35,35h1v1h-1zM37,35h2v1h-2zM40,35h4v1h-4zM46,35h1v1h-1zM50,35h2v1h-2zM53,35h3v1h-3zM57,35h5v1h-5zM63,35h1v1h-1zM65,35h1v1h-1zM67,35h2v1h-2zM1,36h3v1h-3zM5,36h1v1h-1zM9,36h3v1h-3zM14,36h2v1h-2zM17,36h1v1h-1zM21,36h1v1h-1zM26,36h1v1h-1zM30,36h4v1h-4zM37,36h1v1h-1zM39,36h3v1h-3zM45,36h1v1h-1zM49,36h3v1h-3zM53,36h1v1h-1zM56,36h2v1h-2zM60,36h2v1h-2zM65,36h3v1h-3zM1,37h1v1h-1zM5,37h5v1h-5zM11,37h2v1h-2zM20,37h1v1h-1zM24,37h2v1h-2zM27,37h2v1h-2zM31,37h8v1h-8zM41,37h2v1h-2zM45,37h4v1h-4zM51,37h1v1h-1zM54,37h1v1h-1zM56,37h1v1h-1zM59,37h8v1h-8zM68,37h2v1h-2zM2,38h5v1h-5zM12,38h2v1h-2zM16,38h1v1h-1zM18,38h1v1h-1zM20,38h1v1h-1zM26,38h2v1h-2zM29,38h1v1h-1zM33,38h3v1h-3zM37,38h2v1h-2zM40,38h3v1h-3zM45,38h2v1h-2zM49,38h2v1h-2zM53,38h2v1h-2zM57,38h3v1h-3zM61,38h2v1h-2zM64,38h2v1h-2zM68,38h1v1h-1zM4,39h6v1h-6zM11,39h1v1h-1zM13,39h2v1h-2zM16,39h1v1h-1zM20,39h1v1h-1zM22,39h4v1h-4zM30,39h1v1h-1zM32,39h1v1h-1zM38,39h3v1h-3zM47,39h1v1h-1zM51,39h3v1h-3zM57,39h1v1h-1zM60,39h2v1h-2zM63,39h1v1h-1zM65,39h4v1h-4zM1,40h1v1h-1zM4,40h3v1h-3zM8,40h4v1h-4zM17,40h4v1h-4zM22,40h1v1h-1zM25,40h3v1h-3zM29,40h1v1h-1zM31,40h1v1h-1zM33,40h1v1h-1zM35,40h3v1h-3zM40,40h8v1h-8zM49,40h1v1h-1zM51,40h1v1h-1zM53,40h1v1h-1zM60,40h5v1h-5zM66,40h3v1h-3zM1,41h3v1h-3zM7,41h1v1h-1zM9,41h3v1h-3zM13,41h1v1h-1zM15,41h3v1h-3zM22,41h1v1h-1zM26,41h1v1h-1zM28,41h1v1h-1zM31,41h2v1h-2zM37,41h2v1h-2zM43,41h4v1h-4zM48,41h4v1h-4zM56,41h5v1h-5zM67,41h1v1h-1zM69,41h1v1h-1zM1,42h2v1h-2zM6,42h1v1h-1zM8,42h1v1h-1zM11,42h1v1h-1zM14,42h4v1h-4zM19,42h1v1h-1zM22,42h5v1h-5zM29,42h1v1h-1zM33,42h2v1h-2zM36,42h3v1h-3zM40,42h1v1h-1zM42,42h1v1h-1zM46,42h1v1h-1zM48,42h3v1h-3zM52,42h2v1h-2zM59,42h1v1h-1zM62,42h1v1h-1zM65,42h2v1h-2zM69,42h1v1h-1zM1,43h1v1h-1zM3,43h2v1h-2zM6,43h2v1h-2zM9,43h2v1h-2zM12,43h2v1h-2zM16,43h1v1h-1zM20,43h1v1h-1zM22,43h1v1h-1zM24,43h1v1h-1zM26,43h1v1h-1zM30,43h1v1h-1zM32,43h1v1h-1zM36,43h2v1h-2zM39,43h4v1h-4zM47,43h2v1h-2zM50,43h6v1h-6zM57,43h2v1h-2zM60,43h3v1h-3zM65,43h5v1h-5zM1,44h6v1h-6zM8,44h1v1h-1zM12,44h1v1h-1zM14,44h2v1h-2zM17,44h2v1h-2zM20,44h2v1h-2zM23,44h3v1h-3zM27,44h2v1h-2zM30,44h3v1h-3zM36,44h2v1h-2zM40,44h2v1h-2zM44,44h1v1h-1zM47,44h1v1h-1zM51,44h2v1h-2zM57,44h1v1h-1zM59,44h2v1h-2zM63,44h2v1h-2zM67,44h2v1h-2zM1,45h4v1h-4zM6,45h2v1h-2zM11,45h1v1h-1zM13,45h2v1h-2zM17,45h1v1h-1zM19,45h5v1h-5zM28,45h1v1h-1zM30,45h2v1h-2zM34,45h1v1h-1zM36,45h4v1h-4zM47,45h1v1h-1zM49,45h1v1h-1zM55,45h1v1h-1zM57,45h1v1h-1zM64,45h1v1h-1zM66,45h1v1h-1zM69,45h1v1h-1zM5,46h2v1h-2zM10,46h1v1h-1zM12,46h2v1h-2zM16,46h1v1h-1zM20,46h1v1h-1zM22,46h1v1h-1zM24,46h1v1h-1zM26,46h1v1h-1zM28,46h2v1h-2zM31,46h1v1h-1zM34,46h5v1h-5zM40,46h2v1h-2zM45,46h2v1h-2zM48,46h1v1h-1zM51,46h4v1h-4zM56,46h5v1h-5zM62,46h1v1h-1zM64,46h2v1h-2zM67,46h1v1h-1zM69,46h1v1h-1zM1,47h1v1h-1zM3,47h1v1h-1zM5,47h1v1h-1zM7,47h3v1h-3zM11,47h2v1h-2zM14,47h1v1h-1zM16,47h1v1h-1zM18,47h1v1h-1zM20,47h2v1h-2zM24,47h1v1h-1zM27,47h1v1h-1zM30,47h1v1h-1zM34,47h1v1h-1zM36,47h2v1h-2zM39,47h4v1h-4zM44,47h1v1h-1zM47,47h1v1h-1zM50,47h6v1h-6zM60,47h4v1h-4zM65,47h1v1h-1zM67,47h3v1h-3zM1,48h1v1h-1zM3,48h2v1h-2zM6,48h1v1h-1zM8,48h1v1h-1zM10,48h3v1h-3zM15,48h2v1h-2zM19,48h2v1h-2zM22,48h1v1h-1zM26,48h2v1h-2zM29,48h1v1h-1zM31,48h4v1h-4zM36,48h2v1h-2zM40,48h1v1h-1zM42,48h2v1h-2zM51,48h3v1h-3zM55,48h1v1h-1zM58,48h1v1h-1zM63,48h6v1h-6zM1,49h3v1h-3zM6,49h2v1h-2zM11,49h3v1h-3zM16,49h1v1h-1zM23,49h1v1h-1zM29,49h1v1h-1zM31,49h1v1h-1zM35,49h1v1h-1zM37,49h3v1h-3zM42,49h1v1h-1zM44,49h2v1h-2zM50,49h1v1h-1zM55,49h2v1h-2zM59,49h3v1h-3zM66,49h2v1h-2zM69,49h1v1h-1zM2,50h5v1h-5zM9,50h1v1h-1zM12,50h2v1h-2zM16,50h1v1h-1zM19,50h1v1h-1zM25,50h2v1h-2zM29,50h1v1h-1zM31,50h4v1h-4zM38,50h1v1h-1zM41,50h1v1h-1zM45,50h2v1h-2zM53,50h2v1h-2zM56,50h1v1h-1zM59,50h1v1h-1zM64,50h1v1h-1zM67,50h1v1h-1zM69,50h1v1h-1zM1,51h1v1h-1zM5,51h1v1h-1zM7,51h2v1h-2zM11,51h1v1h-1zM13,51h1v1h-1zM15,51h2v1h-2zM18,51h1v1h-1zM21,51h1v1h-1zM24,51h2v1h-2zM27,51h1v1h-1zM29,51h3v1h-3zM34,51h2v1h-2zM37,51h1v1h-1zM40,51h2v1h-2zM44,51h1v1h-1zM46,51h1v1h-1zM48,51h1v1h-1zM50,51h3v1h-3zM54,51h1v1h-1zM58,51h5v1h-5zM65,51h1v1h-1zM68,51h2v1h-2zM1,52h2v1h-2zM4,52h1v1h-1zM9,52h6v1h-6zM16,52h1v1h-1zM19,52h2v1h-2zM23,52h3v1h-3zM27,52h2v1h-2zM30,52h1v1h-1zM32,52h1v1h-1zM36,52h2v1h-2zM40,52h2v1h-2zM44,52h1v1h-1zM46,52h2v1h-2zM51,52h1v1h-1zM54,52h1v1h-1zM56,52h3v1h-3zM63,52h2v1h-2zM68,52h1v1h-1zM2,53h2v1h-2zM7,53h1v1h-1zM10,53h2v1h-2zM13,53h2v1h-2zM16,53h1v1h-1zM20,53h3v1h-3zM24,53h1v1h-1zM30,53h2v1h-2zM34,53h1v1h-1zM38,53h1v1h-1zM41,53h2v1h-2zM45,53h1v1h-1zM47,53h1v1h-1zM52,53h1v1h-1zM54,53h1v1h-1zM56,53h8v1h-8zM65,53h2v1h-2zM69,53h1v1h-1zM3,54h3v1h-3zM11,54h4v1h-4zM16,54h3v1h-3zM20,54h3v1h-3zM24,54h1v1h-1zM27,54h3v1h-3zM31,54h2v1h-2zM34,54h1v1h-1zM38,54h3v1h-3zM44,54h1v1h-1zM47,54h1v1h-1zM49,54h1v1h-1zM51,54h1v1h-1zM53,54h2v1h-2zM59,54h2v1h-2zM65,54h1v1h-1zM1,55h1v1h-1zM3,55h1v1h-1zM6,55h4v1h-4zM12,55h1v1h-1zM14,55h1v1h-1zM16,55h2v1h-2zM19,55h6v1h-6zM26,55h1v1h-1zM30,55h4v1h-4zM38,55h5v1h-5zM44,55h1v1h-1zM46,55h3v1h-3zM50,55h4v1h-4zM55,55h1v1h-1zM57,55h2v1h-2zM61,55h1v1h-1zM63,55h2v1h-2zM68,55h2v1h-2zM2,56h2v1h-2zM6,56h1v1h-1zM8,56h1v1h-1zM10,56h3v1h-3zM15,56h1v1h-1zM18,56h4v1h-4zM23,56h1v1h-1zM25,56h2v1h-2zM29,56h2v1h-2zM32,56h3v1h-3zM36,56h1v1h-1zM38,56h1v1h-1zM41,56h1v1h-1zM43,56h2v1h-2zM47,56h1v1h-1zM50,56h1v1h-1zM52,56h1v1h-1zM57,56h1v1h-1zM59,56h2v1h-2zM63,56h2v1h-2zM67,56h3v1h-3zM2,57h3v1h-3zM6,57h2v1h-2zM10,57h1v1h-1zM12,57h2v1h-2zM15,57h2v1h-2zM19,57h2v1h-2zM22,57h2v1h-2zM27,57h2v1h-2zM31,57h1v1h-1zM34,57h1v1h-1zM37,57h1v1h-1zM39,57h1v1h-1zM42,57h1v1h-1zM44,57h2v1h-2zM47,57h1v1h-1zM50,57h3v1h-3zM54,57h1v1h-1zM56,57h3v1h-3zM60,57h2v1h-2zM64,57h2v1h-2zM68,57h1v1h-1zM2,58h1v1h-1zM4,58h1v1h-1zM8,58h1v1h-1zM11,58h1v1h-1zM13,58h1v1h-1zM16,58h1v1h-1zM18,58h2v1h-2zM21,58h3v1h-3zM27,58h3v1h-3zM31,58h4v1h-4zM39,58h4v1h-4zM44,58h6v1h-6zM52,58h1v1h-1zM54,58h1v1h-1zM58,58h4v1h-4zM63,58h7v1h-7zM3,59h1v1h-1zM5,59h4v1h-4zM10,59h1v1h-1zM13,59h1v1h-1zM15,59h2v1h-2zM18,59h3v1h-3zM23,59h1v1h-1zM26,59h1v1h-1zM33,59h1v1h-1zM36,59h1v1h-1zM41,59h2v1h-2zM44,59h1v1h-1zM46,59h1v1h-1zM48,59h1v1h-1zM51,59h4v1h-4zM56,59h1v1h-1zM60,59h2v1h-2zM63,59h2v1h-2zM67,59h1v1h-1zM69,59h1v1h-1zM1,60h1v1h-1zM8,60h1v1h-1zM12,60h3v1h-3zM19,60h3v1h-3zM23,60h1v1h-1zM25,60h1v1h-1zM27,60h2v1h-2zM31,60h1v1h-1zM34,60h1v1h-1zM37,60h1v1h-1zM39,60h1v1h-1zM41,60h2v1h-2zM44,60h4v1h-4zM51,60h1v1h-1zM53,60h3v1h-3zM58,60h1v1h-1zM61,60h1v1h-1zM63,60h3v1h-3zM67,60h2v1h-2zM1,61h1v1h-1zM5,61h1v1h-1zM7,61h6v1h-6zM14,61h1v1h-1zM16,61h2v1h-2zM19,61h2v1h-2zM22,61h3v1h-3zM26,61h6v1h-6zM33,61h6v1h-6zM41,61h1v1h-1zM44,61h2v1h-2zM49,61h2v1h-2zM52,61h1v1h-1zM54,61h1v1h-1zM56,61h4v1h-4zM61,61h6v1h-6zM69,61h1v1h-1zM9,62h2v1h-2zM12,62h1v1h-1zM14,62h1v1h-1zM16,62h1v1h-1zM23,62h4v1h-4zM28,62h2v1h-2zM33,62h1v1h-1zM37,62h1v1h-1zM41,62h1v1h-1zM43,62h1v1h-1zM47,62h3v1h-3zM53,62h3v1h-3zM57,62h2v1h-2zM60,62h2v1h-2zM1,63h7v1h-7zM9,63h1v1h-1zM11,63h1v1h-1zM13,63h1v1h-1zM15,63h1v1h-1zM17,63h1v1h-1zM19,63h1v1h-1zM21,63h1v1h-1zM23,63h1v1h-1zM25,63h1v1h-1zM27,63h1v1h-1zM29,63h1v1h-1zM31,63h1v1h-1zM33,63h1v1h-1zM35,63h1v1h-1zM37,63h1v1h-1zM39,63h1v1h-1zM41,63h1v1h-1zM43,63h1v1h-1zM45,63h1v1h-1zM47,63h1v1h-1zM49,63h1v1h-1zM51,63h1v1h-1zM53,63h1v1h-1zM55,63h1v1h-1zM57,63h1v1h-1zM59,63h1v1h-1zM61,63h1v1h-1zM63,63h7v1h-7zM1,64h1v1h-1zM7,64h1v1h-1zM9,64h2v1h-2zM12,64h2v1h-2zM16,64h2v1h-2zM19,64h1v1h-1zM26,64h6v1h-6zM33,64h1v1h-1zM37,64h1v1h-1zM39,64h2v1h-2zM42,64h1v1h-1zM44,64h2v1h-2zM47,64h1v1h-1zM51,64h2v1h-2zM57,64h3v1h-3zM63,64h1v1h-1zM69,64h1v1h-1zM1,65h1v1h-1zM3,65h3v1h-3zM7,65h1v1h-1zM9,65h5v1h-5zM15,65h2v1h-2zM19,65h1v1h-1zM21,65h1v1h-1zM23,65h2v1h-2zM26,65h3v1h-3zM31,65h1v1h-1zM33,65h6v1h-6zM40,65h2v1h-2zM46,65h3v1h-3zM50,65h1v1h-1zM52,65h1v1h-1zM54,65h1v1h-1zM56,65h4v1h-4zM61,65h1v1h-1zM63,65h1v1h-1zM65,65h3v1h-3zM69,65h1v1h-1zM1,66h1v1h-1zM3,66h3v1h-3zM7,66h1v1h-1zM9,66h2v1h-2zM12,66h1v1h-1zM15,66h2v1h-2zM19,66h1v1h-1zM21,66h3v1h-3zM26,66h5v1h-5zM35,66h7v1h-7zM44,66h1v1h-1zM46,66h2v1h-2zM49,66h5v1h-5zM56,66h1v1h-1zM61,66h1v1h-1zM63,66h1v1h-1zM65,66h3v1h-3zM69,66h1v1h-1zM1,67h1v1h-1zM3,67h3v1h-3zM7,67h1v1h-1zM13,67h1v1h-1zM15,67h1v1h-1zM17,67h1v1h-1zM23,67h1v1h-1zM25,67h1v1h-1zM27,67h2v1h-2zM30,67h2v1h-2zM34,67h2v1h-2zM37,67h1v1h-1zM40,67h4v1h-4zM47,67h2v1h-2zM50,67h1v1h-1zM52,67h1v1h-1zM54,67h6v1h-6zM63,67h1v1h-1zM65,67h3v1h-3zM69,67h1v1h-1zM1,68h1v1h-1zM7,68h1v1h-1zM10,68h3v1h-3zM15,68h1v1h-1zM17,68h3v1h-3zM21,68h1v1h-1zM23,68h2v1h-2zM28,68h2v1h-2zM31,68h1v1h-1zM34,68h1v1h-1zM37,68h3v1h-3zM41,68h2v1h-2zM44,68h1v1h-1zM47,68h2v1h-2zM57,68h2v1h-2zM63,68h1v1h-1zM69,68h1v1h-1zM1,69h7v1h-7zM9,69h3v1h-3zM15,69h1v1h-1zM17,69h2v1h-2zM20,69h2v1h-2zM26,69h1v1h-1zM28,69h1v1h-1zM30,69h1v1h-1zM32,69h1v1h-1zM37,69h3v1h-3zM41,69h3v1h-3zM46,69h3v1h-3zM50,69h1v1h-1zM52,69h2v1h-2zM55,69h3v1h-3zM59,69h3v1h-3zM63,69h7v1h-7z"
-      },
-      zalo: {
-        size: 27,
-        color: "#0068FF",
-        path: "M1,1h7v1h-7zM9,1h1v1h-1zM11,1h1v1h-1zM13,1h1v1h-1zM15,1h2v1h-2zM18,1h1v1h-1zM20,1h6v1h-6zM1,2h1v1h-1zM7,2h1v1h-1zM10,2h1v1h-1zM13,2h2v1h-2zM16,2h3v1h-3zM20,2h3v1h-3zM25,2h1v1h-1zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM9,3h2v1h-2zM14,3h2v1h-2zM17,3h1v1h-1zM22,3h2v1h-2zM25,3h1v1h-1zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM9,4h1v1h-1zM13,4h2v1h-2zM16,4h4v1h-4zM21,4h5v1h-5zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h1v1h-1zM12,5h1v1h-1zM16,5h6v1h-6zM23,5h1v1h-1zM25,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM9,6h1v1h-1zM12,6h1v1h-1zM15,6h1v1h-1zM17,6h1v1h-1zM21,6h2v1h-2zM25,6h1v1h-1zM1,7h7v1h-7zM10,7h4v1h-4zM17,7h1v1h-1zM19,7h1v1h-1zM21,7h1v1h-1zM23,7h3v1h-3zM9,8h1v1h-1zM11,8h1v1h-1zM14,8h4v1h-4zM21,8h2v1h-2zM1,9h1v1h-1zM3,9h3v1h-3zM7,9h3v1h-3zM11,9h1v1h-1zM13,9h2v1h-2zM17,9h5v1h-5zM23,9h1v1h-1zM1,10h1v1h-1zM3,10h4v1h-4zM8,10h4v1h-4zM13,10h2v1h-2zM16,10h2v1h-2zM19,10h3v1h-3zM25,10h1v1h-1zM1,11h1v1h-1zM5,11h1v1h-1zM7,11h1v1h-1zM9,11h3v1h-3zM14,11h5v1h-5zM20,11h3v1h-3zM24,11h2v1h-2zM1,12h2v1h-2zM5,12h1v1h-1zM8,12h2v1h-2zM11,12h1v1h-1zM13,12h1v1h-1zM15,12h1v1h-1zM17,12h1v1h-1zM20,12h1v1h-1zM22,12h1v1h-1zM24,12h1v1h-1zM1,13h1v1h-1zM3,13h5v1h-5zM9,13h3v1h-3zM15,13h2v1h-2zM18,13h4v1h-4zM23,13h3v1h-3zM5,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM12,14h3v1h-3zM16,14h4v1h-4zM21,14h1v1h-1zM25,14h1v1h-1zM1,15h2v1h-2zM4,15h4v1h-4zM9,15h1v1h-1zM11,15h3v1h-3zM16,15h2v1h-2zM19,15h1v1h-1zM21,15h2v1h-2zM24,15h2v1h-2zM1,16h3v1h-3zM5,16h2v1h-2zM10,16h2v1h-2zM14,16h2v1h-2zM20,16h1v1h-1zM24,16h1v1h-1zM1,17h1v1h-1zM3,17h5v1h-5zM10,17h1v1h-1zM13,17h1v1h-1zM15,17h1v1h-1zM19,17h5v1h-5zM9,18h2v1h-2zM12,18h4v1h-4zM17,18h1v1h-1zM1,19h7v1h-7zM9,19h1v1h-1zM11,19h1v1h-1zM13,19h1v1h-1zM15,19h1v1h-1zM17,19h1v1h-1zM19,19h7v1h-7zM1,20h1v1h-1zM7,20h1v1h-1zM9,20h2v1h-2zM14,20h1v1h-1zM16,20h2v1h-2zM19,20h1v1h-1zM25,20h1v1h-1zM1,21h1v1h-1zM3,21h3v1h-3zM7,21h1v1h-1zM9,21h1v1h-1zM11,21h1v1h-1zM15,21h2v1h-2zM19,21h1v1h-1zM21,21h3v1h-3zM25,21h1v1h-1zM1,22h1v1h-1zM3,22h3v1h-3zM7,22h1v1h-1zM9,22h5v1h-5zM15,22h3v1h-3zM19,22h1v1h-1zM21,22h3v1h-3zM25,22h1v1h-1zM1,23h1v1h-1zM3,23h3v1h-3zM7,23h1v1h-1zM9,23h2v1h-2zM16,23h1v1h-1zM19,23h1v1h-1zM21,23h3v1h-3zM25,23h1v1h-1zM1,24h1v1h-1zM7,24h1v1h-1zM10,24h1v1h-1zM13,24h1v1h-1zM16,24h1v1h-1zM19,24h1v1h-1zM25,24h1v1h-1zM1,25h7v1h-7zM11,25h4v1h-4zM19,25h7v1h-7z"
-      },
-      linkedin: {
-        size: 35,
-        color: "#0A66C2",
-        path: "M1,1h7v1h-7zM9,1h3v1h-3zM14,1h1v1h-1zM16,1h1v1h-1zM18,1h1v1h-1zM23,1h1v1h-1zM25,1h2v1h-2zM28,1h1v1h-1zM30,1h1v1h-1zM32,1h1v1h-1zM1,2h1v1h-1zM7,2h1v1h-1zM10,2h1v1h-1zM12,2h5v1h-5zM22,2h3v1h-3zM26,2h2v1h-2zM29,2h3v1h-3zM1,3h1v1h-1zM3,3h3v1h-3zM7,3h1v1h-1zM9,3h2v1h-2zM13,3h1v1h-1zM15,3h4v1h-4zM21,3h8v1h-8zM30,3h1v1h-1zM1,4h1v1h-1zM3,4h3v1h-3zM7,4h1v1h-1zM9,4h1v1h-1zM12,4h1v1h-1zM14,4h1v1h-1zM16,4h1v1h-1zM18,4h5v1h-5zM24,4h1v1h-1zM26,4h1v1h-1zM29,4h5v1h-5zM1,5h1v1h-1zM3,5h3v1h-3zM7,5h1v1h-1zM9,5h2v1h-2zM13,5h1v1h-1zM15,5h1v1h-1zM17,5h1v1h-1zM23,5h1v1h-1zM25,5h6v1h-6zM33,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM9,6h1v1h-1zM12,6h2v1h-2zM15,6h2v1h-2zM18,6h2v1h-2zM21,6h5v1h-5zM29,6h4v1h-4zM1,7h7v1h-7zM11,7h3v1h-3zM16,7h3v1h-3zM22,7h1v1h-1zM24,7h2v1h-2zM27,7h1v1h-1zM29,7h1v1h-1zM31,7h2v1h-2zM9,8h1v1h-1zM14,8h1v1h-1zM17,8h6v1h-6zM24,8h2v1h-2zM29,8h1v1h-1zM31,8h1v1h-1zM33,8h1v1h-1zM1,9h1v1h-1zM5,9h3v1h-3zM9,9h2v1h-2zM12,9h2v1h-2zM18,9h2v1h-2zM23,9h1v1h-1zM25,9h5v1h-5zM1,10h1v1h-1zM3,10h1v1h-1zM6,10h1v1h-1zM9,10h1v1h-1zM11,10h5v1h-5zM17,10h1v1h-1zM20,10h1v1h-1zM22,10h3v1h-3zM26,10h2v1h-2zM30,10h4v1h-4zM1,11h1v1h-1zM3,11h2v1h-2zM6,11h4v1h-4zM11,11h1v1h-1zM13,11h3v1h-3zM26,11h1v1h-1zM32,11h1v1h-1zM1,12h4v1h-4zM8,12h1v1h-1zM10,12h2v1h-2zM13,12h2v1h-2zM16,12h3v1h-3zM20,12h1v1h-1zM23,12h3v1h-3zM27,12h1v1h-1zM30,12h1v1h-1zM33,12h1v1h-1zM1,13h2v1h-2zM4,13h2v1h-2zM7,13h2v1h-2zM10,13h3v1h-3zM14,13h1v1h-1zM19,13h2v1h-2zM29,13h2v1h-2zM1,14h2v1h-2zM5,14h1v1h-1zM11,14h1v1h-1zM13,14h2v1h-2zM17,14h1v1h-1zM22,14h1v1h-1zM24,14h1v1h-1zM27,14h6v1h-6zM2,15h7v1h-7zM12,15h1v1h-1zM16,15h1v1h-1zM19,15h1v1h-1zM21,15h1v1h-1zM26,15h4v1h-4zM31,15h2v1h-2zM1,16h1v1h-1zM3,16h1v1h-1zM8,16h1v1h-1zM13,16h2v1h-2zM19,16h4v1h-4zM24,16h5v1h-5zM30,16h2v1h-2zM33,16h1v1h-1zM5,17h4v1h-4zM11,17h6v1h-6zM18,17h1v1h-1zM20,17h1v1h-1zM23,17h4v1h-4zM28,17h2v1h-2zM33,17h1v1h-1zM2,18h2v1h-2zM8,18h1v1h-1zM11,18h1v1h-1zM13,18h4v1h-4zM20,18h3v1h-3zM25,18h7v1h-7zM7,19h1v1h-1zM10,19h1v1h-1zM13,19h2v1h-2zM16,19h3v1h-3zM21,19h1v1h-1zM23,19h1v1h-1zM26,19h2v1h-2zM30,19h3v1h-3zM1,20h3v1h-3zM5,20h2v1h-2zM8,20h2v1h-2zM11,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM18,20h2v1h-2zM24,20h2v1h-2zM27,20h1v1h-1zM30,20h1v1h-1zM32,20h2v1h-2zM3,21h2v1h-2zM6,21h2v1h-2zM9,21h2v1h-2zM12,21h1v1h-1zM15,21h1v1h-1zM17,21h1v1h-1zM20,21h1v1h-1zM23,21h2v1h-2zM26,21h1v1h-1zM28,21h3v1h-3zM32,21h2v1h-2zM2,22h3v1h-3zM6,22h1v1h-1zM9,22h2v1h-2zM12,22h3v1h-3zM17,22h8v1h-8zM26,22h1v1h-1zM29,22h3v1h-3zM33,22h1v1h-1zM1,23h2v1h-2zM4,23h2v1h-2zM7,23h2v1h-2zM11,23h1v1h-1zM14,23h5v1h-5zM23,23h1v1h-1zM25,23h2v1h-2zM29,23h1v1h-1zM31,23h1v1h-1zM2,24h2v1h-2zM8,24h2v1h-2zM12,24h1v1h-1zM14,24h2v1h-2zM17,24h4v1h-4zM22,24h1v1h-1zM24,24h1v1h-1zM27,24h2v1h-2zM30,24h2v1h-2zM33,24h1v1h-1zM1,25h1v1h-1zM3,25h5v1h-5zM10,25h1v1h-1zM12,25h1v1h-1zM14,25h2v1h-2zM18,25h1v1h-1zM20,25h1v1h-1zM23,25h1v1h-1zM25,25h1v1h-1zM27,25h5v1h-5zM9,26h1v1h-1zM11,26h1v1h-1zM17,26h1v1h-1zM20,26h5v1h-5zM1,27h7v1h-7zM9,27h1v1h-1zM11,27h1v1h-1zM13,27h1v1h-1zM15,27h1v1h-1zM17,27h1v1h-1zM19,27h1v1h-1zM21,27h1v1h-1zM23,27h1v1h-1zM25,27h1v1h-1zM27,27h7v1h-7zM1,28h1v1h-1zM7,28h1v1h-1zM9,28h1v1h-1zM11,28h2v1h-2zM14,28h1v1h-1zM18,28h3v1h-3zM22,28h1v1h-1zM25,28h1v1h-1zM27,28h1v1h-1zM33,28h1v1h-1zM1,29h1v1h-1zM3,29h3v1h-3zM7,29h1v1h-1zM9,29h2v1h-2zM15,29h3v1h-3zM21,29h1v1h-1zM23,29h2v1h-2zM27,29h1v1h-1zM29,29h3v1h-3zM33,29h1v1h-1zM1,30h1v1h-1zM3,30h3v1h-3zM7,30h1v1h-1zM9,30h3v1h-3zM13,30h1v1h-1zM16,30h1v1h-1zM19,30h2v1h-2zM24,30h2v1h-2zM27,30h1v1h-1zM29,30h3v1h-3zM33,30h1v1h-1zM1,31h1v1h-1zM3,31h3v1h-3zM7,31h1v1h-1zM9,31h2v1h-2zM15,31h1v1h-1zM20,31h4v1h-4zM27,31h1v1h-1zM29,31h3v1h-3zM33,31h1v1h-1zM1,32h1v1h-1zM7,32h1v1h-1zM11,32h1v1h-1zM16,32h1v1h-1zM19,32h1v1h-1zM22,32h1v1h-1zM25,32h1v1h-1zM27,32h1v1h-1zM33,32h1v1h-1zM1,33h7v1h-7zM11,33h3v1h-3zM15,33h1v1h-1zM17,33h1v1h-1zM19,33h4v1h-4zM24,33h1v1h-1zM27,33h7v1h-7z"
+    const handler = (e) => {
+      if (!activeTrap || activeTrap.overlayEl !== overlayEl) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        onClose();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const items = getFocusable(overlayEl);
+        if (!items.length) {
+          e.preventDefault();
+          return;
+        }
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (first === last) {
+          e.preventDefault();
+          first.focus({ preventScroll: true });
+          return;
+        }
+        if (e.shiftKey) {
+          if (document.activeElement === first || !overlayEl.contains(document.activeElement)) {
+            e.preventDefault();
+            last.focus({ preventScroll: true });
+          }
+        } else if (document.activeElement === last || !overlayEl.contains(document.activeElement)) {
+          e.preventDefault();
+          first.focus({ preventScroll: true });
+        }
       }
     };
 
-let currentVCardTab = 'vcard';
+    const focusHandler = (e) => {
+      if (!activeTrap || activeTrap.overlayEl !== overlayEl || overlayEl.hidden) return;
+      if (!overlayEl.contains(e.target)) {
+        e.stopPropagation();
+        const items = getFocusable(overlayEl);
+        const fallback = items[0] || overlayEl;
+        if (fallback === overlayEl && !overlayEl.hasAttribute('tabindex')) {
+          overlayEl.setAttribute('tabindex', '-1');
+        }
+        fallback.focus({ preventScroll: true });
+      }
+    };
 
-function switchVCardTab(type) {
-  currentVCardTab = type;
-  ['vcard', 'zalo', 'linkedin'].forEach(t => {
-    const btn = document.getElementById(`vtab-${t}`);
-    if (btn) btn.classList.toggle('active', t === type);
-  });
-  const qrData = QR_SVG_DATA[type] || QR_SVG_DATA.vcard;
-  const container = document.getElementById('vcard-qr-container');
-  if (container) {
-    container.innerHTML = `<svg viewBox="0 0 ${qrData.size} ${qrData.size}" shape-rendering="crispEdges" role="img" aria-label="${type} QR Code"><rect width="${qrData.size}" height="${qrData.size}" fill="#ffffff"/><path d="${qrData.path}" fill="${qrData.color}"/></svg>`;
+    document.addEventListener('keydown', handler, true);
+    document.addEventListener('focusin', focusHandler, true);
+    activeTrap = { overlayEl, prevTrigger, handler, focusHandler };
+
+    setTimeout(() => {
+      if (overlayEl.hidden) return;
+      if (overlayEl.contains(document.activeElement) && document.activeElement !== overlayEl) return;
+      const items = getFocusable(overlayEl);
+      if (items.length) {
+        items[0].focus({ preventScroll: true });
+      }
+    }, 30);
   }
-  const hintEl = document.getElementById('vcard-scan-hint');
-  if (hintEl) {
-    if (type === 'vcard') {
-      hintEl.innerText = 'Đưa Camera iPhone vào quét để lưu thẳng Danh bạ trong 1 giây';
-    } else if (type === 'zalo') {
-      hintEl.innerText = 'Quét bằng Camera hoặc Zalo để nhắn tin trực tiếp với Quang Trí (Bryan)';
+
+  function deactivateTrap(overlayEl, restoreFocus = true) {
+    const anyOpen = [$( '#v4Drawer' ), $( '#v4NavDrawer' ), $( '#v4VCardModal' ), $( '#v4WelcomeModal' )].some(
+      (el) => el && !el.hidden
+    );
+    if (!anyOpen) {
+      setBackgroundInert(false);
+      document.body.style.overflow = '';
+    }
+    if (activeTrap && (!overlayEl || activeTrap.overlayEl === overlayEl)) {
+      const { prevTrigger, handler, focusHandler } = activeTrap;
+      if (handler) document.removeEventListener('keydown', handler, true);
+      if (focusHandler) document.removeEventListener('focusin', focusHandler, true);
+      activeTrap = null;
+      if (restoreFocus && !anyOpen) {
+        const targetRestore =
+          (prevTrigger && document.contains(prevTrigger) && isElementVisible(prevTrigger) ? prevTrigger : null) ||
+          (lastExternalFocus && document.contains(lastExternalFocus) && isElementVisible(lastExternalFocus)
+            ? lastExternalFocus
+            : null);
+        if (targetRestore) {
+          targetRestore.focus({ preventScroll: true });
+        }
+        lastExternalFocus = null;
+      }
+    }
+  }
+
+  function openDrawer(kicker, bodyHtml) {
+    const drawer = $('#v4Drawer');
+    $('#v4DrawerKicker').textContent = kicker;
+    $('#v4DrawerBody').innerHTML = bodyHtml;
+    $('#v4DrawerBackdrop').hidden = false;
+    drawer.hidden = false;
+    document.body.style.overflow = 'hidden';
+    activateTrap(drawer, closeDrawer);
+  }
+
+  function closeDrawer(restoreFocus = true) {
+    const drawer = $('#v4Drawer');
+    $('#v4DrawerBackdrop').hidden = true;
+    drawer.hidden = true;
+    deactivateTrap(drawer, restoreFocus);
+  }
+
+  function openArticleDrawer(eventId) {
+    const item = state.newsById[eventId];
+    if (!item) return;
+
+    const blocks = [
+      { label: '01 · Bối cảnh & Động thái chính', text: item.briefingContext || item.sectionB_context },
+      { label: '02 · Dữ kiện & Con số trọng tâm', text: item.briefingFacts || item.sectionA_whatHappened },
+      { label: '03 · Tác động thị trường', text: item.briefingPerspective || item.sectionC_whyItMatters },
+      { label: '04 · Hệ lụy & Góc nhìn doanh nghiệp', text: item.briefingImplication || item.sectionD_macroMicro },
+      { label: '05 · Liên hệ hạ tầng Fintech & Thanh toán', text: item.fintechRelevance || item.sectionE_fintechLens },
+      { label: '06 · Khuyến nghị hành động', text: item.sectionG_practicalTakeaway }
+    ].filter((b) => b.text && String(b.text).trim().length > 0);
+
+    const html = `
+      <span class="v4-crimson-tag">${esc(catLabel(item.category))}</span>
+      <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(item.headline || item.title)}</h2>
+      <div class="v4-drawer-meta">
+        <span>Nguồn: <strong>${esc(sourceLabel(item))}</strong></span>
+        <span aria-hidden="true"> · </span>
+        <span class="v4-mono-time">${esc(extractDateTimeReadable(item))}</span>
+      </div>
+      ${item.imageUrl ? imgTag(item.imageUrl, item.headline, 'v4-drawer-img') : ''}
+      ${item.supportingQuote ? `<blockquote class="v4-drawer-quote">“${esc(item.supportingQuote)}”</blockquote>` : ''}
+      ${blocks
+        .map(
+          (b) => `
+        <div class="v4-drawer-block">
+          <div class="v4-drawer-block-label">${esc(b.label)}</div>
+          <p class="v4-drawer-block-text">${esc(b.text)}</p>
+        </div>
+      `
+        )
+        .join('')}
+      <div class="v4-drawer-actions">
+        ${
+          item.sourceUrl
+            ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="v4-btn-navy">Đọc bài gốc (${esc(sourceLabel(item))}) &nearr;</a>`
+            : ''
+        }
+      </div>
+    `;
+    openDrawer(`${item.eventId} · Tóm tắt phân tích`, html);
+  }
+
+  function openMarketPulseDrawer(m) {
+    if (!m) return;
+    const isNotVerified = m.verificationStatus === '72H_NOT_VERIFIED';
+    const primaryArticleUrl = m.dailyArticleUrl || m.sourceUrl;
+    const secUrls = (m.secondarySourceUrls || []).filter(
+      (u) => u && /^https?:\/\//i.test(u) && u !== m.sourceUrl && u !== m.dailyArticleUrl
+    );
+
+    const html = `
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px;">
+        <span class="v4-crimson-tag">THẺ ${esc(m.cardNumber || '')} · ${esc(m.tierGroup || 'MARKET PULSE')}</span>
+        <span class="v4-readiness-pill ${isNotVerified ? 'is-idea' : 'is-confirmed'}">${esc(m.verificationStatus || 'VERIFIED')}</span>
+      </div>
+      <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(m.label || m.shortLabel)}</h2>
+      <div class="v4-drawer-meta">
+        <span>Giá trị hiện tại: <strong class="v4-mono-time">${esc(m.value)}</strong></span>
+        <span aria-hidden="true"> · </span>
+        <span>Biến động: <strong>${esc(m.compactDelta || m.change || '--')}</strong></span>
+      </div>
+      ${
+        isNotVerified
+          ? `<div class="v4-drawer-alert is-warning">
+              <strong>Thông báo kiểm định Freshness 72h:</strong> Số liệu kỳ quan sát chưa có công bố chính thức kèm timestamp đối soát trong vòng 72 giờ qua. Giá trị tham khảo gần nhất: <strong>${esc(m.referenceValue || 'Kỳ quan sát trước')}</strong>.
+            </div>`
+          : ''
+      }
+      ${
+        m.key === 'vietqrVolume'
+          ? `<div class="v4-drawer-alert">
+              <strong>Lưu ý phạm vi dữ liệu:</strong> Mức tăng trưởng <strong>${esc(m.value)}</strong> áp dụng riêng cho luồng khách du lịch quốc tế và điểm bán chấp nhận <strong>VietQR Global (Inbound &amp; Cross-border)</strong>, không đồng nhất với tổng sản lượng toàn hệ thống NAPAS.
+            </div>`
+          : ''
+      }
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Thông tin quan sát &amp; Chu kỳ</div>
+        <div class="v4-drawer-meta-grid">
+          <div><strong>Tên chỉ số:</strong> ${esc(m.label || m.shortLabel)}</div>
+          <div><strong>Mã tham chiếu:</strong> <span class="v4-mono-time">${esc(m.referenceCode || m.key || '')}</span></div>
+          <div><strong>Ngày quan sát:</strong> ${esc(m.observationAt || m.asOf || '--')}</div>
+          <div><strong>Ngày công bố:</strong> ${esc(m.publishedAt || m.asOf || '--')}</div>
+          ${m.dataPeriod ? `<div class="v4-drawer-meta-span"><strong>Kỳ dữ liệu:</strong> ${esc(m.dataPeriod)}</div>` : ''}
+          ${m.referenceValue ? `<div class="v4-drawer-meta-span"><strong>Thông số tham chiếu gốc:</strong> ${esc(m.referenceValue)}</div>` : ''}
+        </div>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Nguồn gốc &amp; Đường dẫn xác minh</div>
+        <p class="v4-drawer-block-text">
+          <strong>Cơ quan / Nguồn công bố:</strong> ${esc(m.sourceName || m.sourceShortName || 'Báo chí chính thống')}<br>
+          ${m.searchKeyword || m.referenceCode ? `<strong>Từ khóa quét cố định:</strong> <span class="v4-mono-time">${esc(m.referenceCode || m.searchKeyword)}</span><br>` : ''}
+          ${m.articleTitle ? `<strong>Bài báo đối soát:</strong> ${esc(m.articleTitle)}` : ''}
+        </p>
+        <div class="v4-drawer-links-row">
+          ${
+            primaryArticleUrl
+              ? `<a href="${esc(primaryArticleUrl)}" target="_blank" rel="noopener noreferrer" class="v4-btn-navy">Mở bài báo đối soát (${esc(m.sourceShortName || 'Bài báo')}) &nearr;</a>`
+              : ''
+          }
+          ${
+            m.sourceUrl && m.sourceUrl !== primaryArticleUrl
+              ? `<a href="${esc(m.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="v4-vcard-action-btn">Kênh tra cứu gốc &nearr;</a>`
+              : ''
+          }
+          ${secUrls
+            .map(
+              (u, idx) =>
+                `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" class="v4-vcard-action-btn">Nguồn bổ trợ #${idx + 1} &nearr;</a>`
+            )
+            .join('')}
+        </div>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Diễn giải tài chính &amp; Tác động thực tế</div>
+        <p class="v4-drawer-block-text">${esc(m.financialInterpretation || m.implication || m.statusReason || m.note || '')}</p>
+      </div>
+      ${
+        m.monitoringWatchpoint
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">Điểm cần theo dõi tiếp theo</div>
+              <p class="v4-drawer-block-text">${esc(m.monitoringWatchpoint)}</p>
+            </div>`
+          : ''
+      }
+    `;
+    openDrawer('Market Pulse · Đối soát chi tiết', html);
+  }
+
+  function openDecisionSignalDrawer(signalId) {
+    const signals = state.data?.editorialSections?.sec04b_decisionBrief?.signals || [];
+    const sig = signals.find((s, idx) => (s.signalId || `DECISION-0${idx + 1}`) === signalId);
+    if (!sig) return;
+
+    const assumptionsText = Array.isArray(sig.assumptions)
+      ? sig.assumptions.join('; ')
+      : typeof sig.assumptions === 'string'
+        ? sig.assumptions
+        : '';
+    const risksText = Array.isArray(sig.risks)
+      ? sig.risks.join('; ')
+      : typeof sig.risks === 'string'
+        ? sig.risks
+        : '';
+    const segmentsText = Array.isArray(sig.relevantMerchantSegments)
+      ? sig.relevantMerchantSegments.join(', ')
+      : sig.relevantMerchantSegments || 'Chuỗi F&B, Khách sạn, Bán lẻ đa kênh & Hộ kinh doanh';
+
+    const solutionsHtml = (sig.potentialPaymentSolutions || [])
+      .map((sol) => {
+        let cls = 'is-confirmed';
+        let label = 'ĐÃ CÓ SẴN TẠI PAYOO (HIỆN HỮU)';
+        if (sol.readinessType === 'POTENTIAL_INTEGRATION') {
+          cls = 'is-potential';
+          label = 'CẦN TÍCH HỢP MỞ RỘNG';
+        } else if (sol.readinessType === 'PRODUCT_DEVELOPMENT_IDEA') {
+          cls = 'is-idea';
+          label = 'Ý TƯỞNG PHÁT TRIỂN MỚI';
+        }
+        return `
+          <div class="v4-readiness-item">
+            <span class="v4-readiness-pill ${cls}">${esc(label)}</span>
+            <div style="font-weight:700; font-size:14.5px; color:var(--v4-text); margin-bottom:4px;">${esc(sol.solutionName || '')}</div>
+            <p class="v4-drawer-block-text">${esc(sol.capabilityNote || '')}</p>
+          </div>
+        `;
+      })
+      .join('');
+
+    let urls = Array.isArray(sig.evidenceUrls) ? sig.evidenceUrls.slice() : [];
+    if (!urls.length && Array.isArray(sig.relatedEventIds) && sig.relatedEventIds.length) {
+      urls = sig.relatedEventIds
+        .map((eid) => {
+          const found = state.newsById[eid];
+          return found ? found.canonicalUrl || found.sourceUrl : null;
+        })
+        .filter(Boolean);
+    }
+    urls = urls.filter((u) => /^https?:\/\//i.test(u));
+
+    const confLabel =
+      !sig.confidenceLevel || String(sig.confidenceLevel).includes('HIGH')
+        ? 'ĐỘ TIN CẬY CAO · ĐÃ XÁC MINH'
+        : 'TRỌNG TÂM ĐIỀU HÀNH';
+
+    const html = `
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px;">
+        <span class="v4-crimson-tag">${esc(sig.categoryBadge || 'TÍN HIỆU CHIẾN LƯỢC')}</span>
+        <span class="v4-b2b-pill">${esc(confLabel)}</span>
+      </div>
+      <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(sig.signalTitle || '')}</h2>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">A · Sự kiện nào đã xảy ra?</div>
+        <p class="v4-drawer-block-text">${esc(sig.whatHappened || '')}</p>
+      </div>
+      ${
+        sig.whyItMatters
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">B · Vì sao đáng chú ý?</div>
+              <p class="v4-drawer-block-text">${esc(sig.whyItMatters)}</p>
+            </div>`
+          : ''
+      }
+      ${
+        sig.whatChanges
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">C · Tác động nào có thể xảy ra?</div>
+              <p class="v4-drawer-block-text">${esc(sig.whatChanges)}</p>
+            </div>`
+          : ''
+      }
+      ${
+        sig.whatItMeansForMyWork
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">D · Liên quan gì đến thanh toán &amp; công việc B2B?</div>
+              <p class="v4-drawer-block-text"><strong>${esc(sig.whatItMeansForMyWork)}</strong></p>
+            </div>`
+          : ''
+      }
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">E · Cơ hội, Phân khúc, Giả định &amp; Rủi ro</div>
+        <p class="v4-drawer-block-text">
+          <strong>Phân khúc khách hàng:</strong> ${esc(segmentsText)}
+          ${assumptionsText ? `<br><strong>Giả định:</strong> ${esc(assumptionsText)}` : ''}
+          ${risksText ? `<br><strong>Rủi ro cần lường trước:</strong> ${esc(risksText)}` : ''}
+        </p>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">F · Tôi nên làm gì hoặc theo dõi gì?</div>
+        ${sig.whatShouldIDoOrWatch ? `<p class="v4-drawer-block-text" style="margin-bottom:8px;">${esc(sig.whatShouldIDoOrWatch)}</p>` : ''}
+        <p class="v4-drawer-block-text">
+          <strong>Hành động tiếp theo đề xuất:</strong> ${esc(sig.proposedNextAction || '')}
+          ${sig.monitoringTimeHorizon ? `<br><strong>Khung thời gian theo dõi:</strong> ${esc(sig.monitoringTimeHorizon)}` : ''}
+        </p>
+      </div>
+      ${
+        solutionsHtml
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">G · Sản phẩm &amp; Giải pháp Payoo liên quan</div>
+              ${solutionsHtml}
+            </div>`
+          : ''
+      }
+      ${
+        urls.length
+          ? `<div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">H · Nguồn báo chí tham khảo &amp; Đối soát (${urls.length})</div>
+              <div class="v4-drawer-links-row">
+                ${urls
+                  .map(
+                    (u, idx) =>
+                      `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" class="v4-vcard-action-btn">Nguồn đối soát #${idx + 1} &nearr;</a>`
+                  )
+                  .join('')}
+              </div>
+            </div>`
+          : ''
+      }
+    `;
+    openDrawer(`${sig.signalId || signalId} · Phân tích điều hành B2B`, html);
+  }
+
+  function openFintechItemDrawer(item) {
+    if (!item) return;
+    if (item.kind === 'framework') {
+      const fw = item.payload;
+      const html = `
+        <span class="v4-crimson-tag">${esc(item.kicker)}</span>
+        <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(fw.frameworkTitle)}</h2>
+        <div class="v4-drawer-block">
+          <div class="v4-drawer-block-label">Bước 01 · Tác động vĩ mô</div>
+          <p class="v4-drawer-block-text">${esc(fw.step1 || '')}</p>
+        </div>
+        <div class="v4-drawer-block">
+          <div class="v4-drawer-block-label">Bước 02 · Năng lực ngân hàng số</div>
+          <p class="v4-drawer-block-text">${esc(fw.step2 || '')}</p>
+        </div>
+        <div class="v4-drawer-block">
+          <div class="v4-drawer-block-label">Bước 03 · Điểm chạm thanh toán bán lẻ</div>
+          <p class="v4-drawer-block-text">${esc(fw.step3 || '')}</p>
+        </div>
+      `;
+      openDrawer('Góc chuyên môn Fintech', html);
+      return;
+    }
+
+    const l = item.payload;
+    const html = `
+      <span class="v4-crimson-tag">${esc(l.concept || 'Chuyên đề Fintech')}</span>
+      <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(l.title || l.topic)}</h2>
+      <div class="v4-drawer-meta">${esc(l.newsGrounding || '')}</div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Giải thích cơ chế</div>
+        <p class="v4-drawer-block-text">${esc(l.simpleExplanation || '')}</p>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Ví dụ thực tiễn</div>
+        <p class="v4-drawer-block-text">${esc(l.realWorldExample || '')}</p>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Tác động đối với doanh nghiệp</div>
+        <p class="v4-drawer-block-text">${esc(l.impactOnBusiness || l.takeaway || '')}</p>
+      </div>
+    `;
+    openDrawer('Góc chuyên môn Fintech', html);
+  }
+
+  function openPlaybookDrawer(pb) {
+    if (!pb) return;
+    const html = `
+      <span class="v4-crimson-tag">PLAYBOOK TRIỂN KHAI B2B</span>
+      <h2 class="v4-drawer-title" id="v4DrawerTitle">${esc(pb.title)}</h2>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Nhóm khách hàng mục tiêu</div>
+        <p class="v4-drawer-block-text">${esc(pb.target || '')}</p>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Đề xuất giá trị cốt lõi (Pitch)</div>
+        <p class="v4-drawer-block-text">${esc(pb.pitch || '')}</p>
+      </div>
+      <div class="v4-drawer-block">
+        <div class="v4-drawer-block-label">Xử lý rào cản &amp; Từ chối</div>
+        <p class="v4-drawer-block-text">${esc(pb.objectionHandling || '')}</p>
+      </div>
+    `;
+    openDrawer('Playbook B2B · Triển khai thực tế', html);
+  }
+
+  // ─── LEFT DRAWER, THEME, VCARD QR MODAL & WELCOME MODAL ─────────────────────
+  function openNavDrawer() {
+    const drawer = $('#v4NavDrawer');
+    $('#v4NavBackdrop').hidden = false;
+    drawer.hidden = false;
+    $('#v4MenuBtn')?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    activateTrap(drawer, closeNavDrawer);
+  }
+
+  function closeNavDrawer(restoreFocus = true) {
+    const drawer = $('#v4NavDrawer');
+    $('#v4NavBackdrop').hidden = true;
+    drawer.hidden = true;
+    $('#v4MenuBtn')?.setAttribute('aria-expanded', 'false');
+    deactivateTrap(drawer, restoreFocus);
+  }
+
+  function switchVCardTab(type) {
+    state.vcardTab = QR_SVG_DATA[type] ? type : 'vcard';
+    $$('[data-vcard-tab]').forEach((btn) => {
+      const active = btn.dataset.vcardTab === state.vcardTab;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+    const qrData = QR_SVG_DATA[state.vcardTab];
+    const container = $('#v4VCardQrContainer');
+    if (container) {
+      container.innerHTML = `<svg viewBox="0 0 ${qrData.size} ${qrData.size}" shape-rendering="crispEdges" role="img" aria-label="Mã QR ${esc(state.vcardTab)}"><rect width="${qrData.size}" height="${qrData.size}" fill="#ffffff"/><path d="${qrData.path}" fill="${qrData.color}"/></svg>`;
+    }
+    const hint = $('#v4VCardScanHint');
+    if (hint) {
+      if (state.vcardTab === 'zalo') {
+        hint.textContent = 'Quét bằng Camera hoặc Zalo để nhắn tin trực tiếp với Quang Trí (Bryan)';
+      } else if (state.vcardTab === 'linkedin') {
+        hint.textContent = 'Quét để mở hồ sơ LinkedIn chính thức của Bryan Nguyen';
+      } else {
+        hint.textContent = 'Đưa Camera iPhone vào quét để lưu thẳng Danh bạ trong 1 giây';
+      }
+    }
+  }
+
+  function openVCardModal() {
+    const modal = $('#v4VCardModal');
+    switchVCardTab(state.vcardTab);
+    $('#v4VCardBackdrop').hidden = false;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    activateTrap(modal, closeVCardModal);
+  }
+
+  function closeVCardModal(restoreFocus = true) {
+    const modal = $('#v4VCardModal');
+    $('#v4VCardBackdrop').hidden = true;
+    modal.hidden = true;
+    deactivateTrap(modal, restoreFocus);
+  }
+
+  function downloadVCard() {
+    const vcfContent = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:Nguyen;Bryan (Huynh Quang Tri);;;',
+      'FN:Bryan Nguyen (Nguyen Huynh Quang Tri)',
+      'ORG:Payoo (VietUnion)',
+      'TITLE:Enterprise B2B & Fintech Executive',
+      'TEL;TYPE=CELL,VOICE:+84838673639',
+      'EMAIL;TYPE=WORK,INTERNET:quangtritc1805@gmail.com',
+      'URL:https://bryanportfolio.io.vn/',
+      'ITEM1.URL:https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/',
+      'ITEM1.X-ABLabel:LinkedIn',
+      'ITEM2.URL:https://zalo.me/0838673639',
+      'ITEM2.X-ABLabel:Zalo',
+      'ADR;TYPE=WORK:;;Ho Chi Minh City;;;Vietnam',
+      'NOTE:Enterprise B2B Development & FinTech Infrastructure | Master of Business Analytics (UOW)',
+      'END:VCARD'
+    ].join('\r\n');
+
+    const blob = new Blob([vcfContent], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Bryan_Nguyen_Payoo_vCard.vcf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+  }
+
+  function copyVCardLink(btn) {
+    const url = 'https://bryanportfolio.io.vn/';
+    const done = () => {
+      if (!btn) return;
+      if (!btn.dataset.origLabel) btn.dataset.origLabel = btn.textContent;
+      btn.textContent = 'Đã sao chép ✓';
+      clearTimeout(btn._copyTimer);
+      btn._copyTimer = setTimeout(() => {
+        btn.textContent = btn.dataset.origLabel;
+      }, 2000);
+    };
+    const fallbackCopy = () => {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        done();
+      } catch (_) {}
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(fallbackCopy);
     } else {
-      hintEl.innerText = 'Quét để mở hồ sơ LinkedIn chính thức của Bryan Nguyen';
+      fallbackCopy();
     }
   }
-}
 
-function openVCardModal() {
-  switchVCardTab(currentVCardTab);
-  const modal = document.getElementById('vcard-modal-backdrop');
-  if (modal) {
-    modal.classList.add('open');
+  function openWelcomeModal() {
+    const modal = $('#v4WelcomeModal');
+    if (!modal) return;
+    $('#v4WelcomeBackdrop').hidden = false;
+    modal.hidden = false;
     document.body.style.overflow = 'hidden';
-  }
-}
-
-function closeVCardModal() {
-  const modal = document.getElementById('vcard-modal-backdrop');
-  if (modal) {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-}
-
-function downloadVCard() {
-  const vcfContent = [
-    "BEGIN:VCARD",
-    "VERSION:3.0",
-    "N:Nguyen;Bryan (Huynh Quang Tri);;;",
-    "FN:Bryan Nguyen (Nguyen Huynh Quang Tri)",
-    "ORG:Payoo (VietUnion)",
-    "TITLE:Enterprise B2B & Fintech Executive",
-    "TEL;TYPE=CELL,VOICE:+84838673639",
-    "EMAIL;TYPE=WORK,INTERNET:quangtritc1805@gmail.com",
-    "URL:https://bryanportfolio.io.vn/",
-    "ITEM1.URL:https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
-    "ITEM1.X-ABLabel:LinkedIn",
-    "ITEM2.URL:https://zalo.me/0838673639",
-    "ITEM2.X-ABLabel:Zalo",
-    "ADR;TYPE=WORK:;;Ho Chi Minh City;;;Vietnam",
-    "NOTE:Enterprise B2B Development & FinTech Infrastructure | Master of Business Analytics (UOW)",
-    "END:VCARD"
-  ].join("\r\n");
-
-  const blob = new Blob([vcfContent], { type: "text/vcard;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "Bryan_Nguyen_Payoo_vCard.vcf";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(() => URL.revokeObjectURL(url), 1500);
-}
-
-function copyVCardLink() {
-  const url = "https://bryanportfolio.io.vn/";
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url);
-  }
-  alert('Đã sao chép link Bryan Portfolio: ' + url);
-}
-
-// Floating Action Menu Toggle
-function toggleFabMenu(event) {
-  if (event) event.stopPropagation();
-  const fw = document.getElementById('floating-widget');
-  if (fw) fw.classList.toggle('menu-open');
-}
-
-function closeFabMenu() {
-  const fw = document.getElementById('floating-widget');
-  if (fw) fw.classList.remove('menu-open');
-}
-
-// Back To Top Controller
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Global Scroll Handler (Back To Top + VnEconomy-style Sticky Nav Brand State)
-function updateStickyNavState() {
-  const btn = document.getElementById('backToTopBtn');
-  if (btn) {
-    btn.classList.toggle('show', window.scrollY > 350);
-  }
-  const masthead = document.getElementById('masthead');
-  const isSticky = masthead ? (masthead.getBoundingClientRect().bottom <= 6) : (window.scrollY > 140);
-  const desktopNav = document.getElementById('desktopNavStrip');
-  const mobileNav = document.getElementById('mobileStickyNav');
-  if (desktopNav) desktopNav.classList.toggle('is-sticky', isSticky);
-  if (mobileNav) mobileNav.classList.toggle('is-sticky', isSticky);
-}
-
-window.addEventListener('scroll', updateStickyNavState, { passive: true });
-window.addEventListener('resize', updateStickyNavState, { passive: true });
-document.addEventListener('DOMContentLoaded', updateStickyNavState);
-
-// Centralized Click & Event Delegation
-document.addEventListener('click', (e) => {
-  // Floating widget close on outside click
-  const fw = document.getElementById('floating-widget');
-  if (fw && fw.classList.contains('menu-open') && !fw.contains(e.target)) {
-    closeFabMenu();
+    activateTrap(modal, () => closeWelcomeModal(true));
   }
 
-  // 1. Drawer close
-  if (e.target.closest('#drawerCloseBtn') || e.target.matches('#drawerBackdrop')) {
-    closeDrawer();
-    return;
-  }
-  // 2. vCard modal close
-  if (e.target.closest('.vcard-close-btn') || e.target.matches('#vcard-modal-backdrop')) {
-    closeVCardModal();
-    return;
-  }
-  // 3. Floating menu close on outside click
-  if (!e.target.closest('#floating-widget')) {
-    closeFabMenu();
-  }
-  // 4. Back to top button
-  if (e.target.closest('#backToTopBtn')) {
-    e.preventDefault();
-    scrollToTop();
-    return;
-  }
-  // 5. FAB toggle button
-  if (e.target.closest('#fabToggleBtn')) {
-    e.preventDefault();
-    toggleFabMenu(e);
-    return;
-  }
-  // 6. vCard triggers
-  if (e.target.closest('.float-btn-vcard, [data-vcard-trigger], .ms-vcard-trigger')) {
-    e.preventDefault();
-    openVCardModal();
-    closeFabMenu();
-    return;
-  }
-});
-
-// Escape key listener for all drawers and modals
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeDrawer();
-    closeVCardModal();
-    closeFabMenu();
-  }
-});
-
-// EXPLICIT WINDOW EXPORTS (Guarantee inline handlers work 100%)
-window.openDrawer = openDrawer;
-window.closeDrawer = closeDrawer;
-window.openPulseDetail = openPulseDetail;
-window.openArticleReader = openArticleReader;
-window.openDecisionSignalDrawer = openDecisionSignalDrawer;
-window.openMacroChainDrawer = openMacroChainDrawer;
-window.openArchiveDrawer = openArchiveDrawer;
-window.openSheetsSchemaModal = openSheetsSchemaModal;
-window.switchFintechTab = switchFintechTab;
-window.initFintechTabs = initFintechTabs;
-window.openMobileDrawer = openMobileDrawer;
-window.closeMobileDrawer = closeMobileDrawer;
-window.navigateToNewsCategory = navigateToNewsCategory;
-window.executePortalSearch = executePortalSearch;
-window.handleHeaderQuickSearch = handleHeaderQuickSearch;
-window.handleDrawerSearch = handleDrawerSearch;
-window.openVCardModal = openVCardModal;
-window.closeVCardModal = closeVCardModal;
-window.switchVCardTab = switchVCardTab;
-window.downloadVCard = downloadVCard;
-window.copyVCardLink = copyVCardLink;
-window.toggleFabMenu = toggleFabMenu;
-window.closeFabMenu = closeFabMenu;
-window.scrollToTop = scrollToTop;
-
-console.log('[MagSpread] All P0 Drawer, Modal & Contact controllers successfully exported to window.');
-
-
-/* ==========================================================================
-   V2.2.3 R1: INDEPENDENT POPUP SYSTEMS (CONTACT POPUP & EDITORIAL WELCOME)
-   ========================================================================== */
-
-let contactModalTrigger = null;
-let welcomeModalTrigger = null;
-
-function openContactModal() {
-  contactModalTrigger = document.activeElement;
-  closeWelcomeModal(false);
-  closeDrawer(false);
-  switchVCardTab(currentVCardTab);
-  const modal = document.getElementById('contact-modal-backdrop') || document.getElementById('vcard-modal-backdrop');
-  if (modal) {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    activateFocusTrap(modal, closeContactModal, contactModalTrigger);
-  }
-}
-
-function closeContactModal(restoreFocus = true) {
-  const modal = document.getElementById('contact-modal-backdrop') || document.getElementById('vcard-modal-backdrop');
-  if (!modal || !modal.classList.contains('open')) {
-    if (modal) modal.setAttribute('aria-hidden', 'true');
-    return;
-  }
-  modal.classList.remove('open');
-  deactivateFocusTrap(modal, restoreFocus !== false);
-  contactModalTrigger = null;
-}
-
-function openVCardModal() {
-  openContactModal();
-}
-
-function closeVCardModal() {
-  closeContactModal();
-}
-
-function toggleFabMenu(event) {
-  if (event) event.stopPropagation();
-  const fw = document.getElementById('floating-widget');
-  if (fw) fw.classList.toggle('menu-open');
-}
-
-function closeFabMenu() {
-  const fw = document.getElementById('floating-widget');
-  if (fw) fw.classList.remove('menu-open');
-}
-
-// ─── EDITORIAL WELCOME MODAL CONTROLLERS (R3 RESTORATION + D-09 FOCUS TRAP) ───
-function openWelcomeModal() {
-  welcomeModalTrigger = document.activeElement;
-  closeContactModal(false);
-  closeDrawer(false);
-  const modal = document.getElementById('welcome-modal-backdrop');
-  if (modal) {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    activateFocusTrap(modal, closeWelcomeModal, welcomeModalTrigger);
-  }
-}
-
-function closeWelcomeModal(restoreFocus = true) {
-  const modal = document.getElementById('welcome-modal-backdrop');
-  if (modal && modal.classList.contains('open')) {
-    modal.classList.remove('open');
-    deactivateFocusTrap(modal, restoreFocus !== false);
-  } else if (modal) {
-    modal.setAttribute('aria-hidden', 'true');
-  }
-  welcomeModalTrigger = null;
-  try {
-    localStorage.setItem('bryan_fintech_welcome_shown_v1', 'true');
-    sessionStorage.setItem('bryan_fintech_welcome_shown', 'true');
-  } catch (e) {}
-}
-
-function checkWelcomeModalOnLoad() {
-  try {
-    const shown = localStorage.getItem('bryan_fintech_welcome_shown_v1') || sessionStorage.getItem('bryan_fintech_welcome_shown');
-    if (!shown) {
-      setTimeout(() => {
-        openWelcomeModal();
-      }, 500);
+  function closeWelcomeModal(persist = true, restoreFocus = true) {
+    const modal = $('#v4WelcomeModal');
+    if (!modal) return;
+    $('#v4WelcomeBackdrop').hidden = true;
+    modal.hidden = true;
+    if (persist) {
+      try {
+        localStorage.setItem(WELCOME_STORAGE_KEY, 'true');
+      } catch (_) {}
     }
-  } catch (e) {
-    console.warn('[MagSpread] Storage inaccessible:', e);
-  }
-}
-
-// Global click event delegation for V2.2.3 R1
-document.addEventListener('click', (e) => {
-  // Floating widget close on outside click
-  const fw = document.getElementById('floating-widget');
-  if (fw && fw.classList.contains('menu-open') && !fw.contains(e.target)) {
-    closeFabMenu();
+    deactivateTrap(modal, restoreFocus);
   }
 
-  // 1. Floating Contact Launcher or Contact Triggers
-  if (e.target.closest('#floatingContactLauncher, .ms-contact-trigger, [data-contact-trigger]')) {
-    e.preventDefault();
-    openContactModal();
-    return;
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    const logoPath = isDark ? `${ROOT_ASSET_BASE}bnews-logo-dark-opt.webp` : `${ROOT_ASSET_BASE}bnews-logo-light-opt.webp`;
+    $$('.v4-brand-logo, .v4-nav-drawer-logo, .v4-footer-logo').forEach((img) => {
+      img.src = logoPath;
+    });
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute('content', isDark ? '#0B0F19' : '#0A3D7A');
+    }
+    const tBtn = $('#v4ThemeToggleBtn');
+    if (tBtn) {
+      tBtn.textContent = isDark ? 'Chuyển sang Giao diện Sáng' : 'Đổi giao diện Sáng / Tối';
+    }
   }
 
-  // 2. Welcome trigger button (e.g. in Masthead)
-  if (e.target.closest('#btnOpenWelcomeIntro')) {
-    e.preventDefault();
-    openWelcomeModal();
-    return;
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('site_theme', next);
+    localStorage.removeItem('ms-theme');
+    applyTheme(next);
   }
 
-  // 3. Contact modal backdrop click
-  if (e.target.matches('#contact-modal-backdrop')) {
-    closeContactModal();
-    return;
+  // ─── EVENTS & INITIALIZATION ──────────────────────────────────────────────
+  function bindNewsletterForm(formSel, inputSel, feedbackSel, sourceLabel) {
+    const form = $(formSel);
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = $(inputSel);
+      const fb = $(feedbackSel);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!input || !fb) return;
+
+      const email = (input.value || '').trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        fb.hidden = false;
+        fb.classList.add('is-error');
+        fb.textContent = 'Vui lòng nhập địa chỉ email hợp lệ (ví dụ: tenban@gmail.com).';
+        input.focus();
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.dataset.origText = submitBtn.textContent;
+        submitBtn.textContent = 'Đang đăng ký...';
+      }
+
+      try {
+        const saved = JSON.parse(localStorage.getItem('bnews_subscribers') || '[]');
+        if (Array.isArray(saved) && !saved.includes(email)) {
+          saved.push(email);
+          localStorage.setItem('bnews_subscribers', JSON.stringify(saved));
+        }
+      } catch (_) {}
+
+      fetch(BNEWS_SUBSCRIBE_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source: sourceLabel,
+          timestamp: new Date().toISOString()
+        })
+      })
+        .catch(() => {})
+        .finally(() => {
+          fb.hidden = false;
+          fb.classList.remove('is-error');
+          fb.textContent = `Đăng ký thành công! Bản tin Bnews sáng mai sẽ gửi tới ${email} lúc 9h00.`;
+          input.value = '';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitBtn.dataset.origText || 'Đăng ký nhận bản tin →';
+          }
+        });
+    });
   }
 
-  // 4. Welcome modal backdrop click
-  if (e.target.matches('#welcome-modal-backdrop')) {
-    closeWelcomeModal();
-    return;
+  function resetToFrontPage(e) {
+    if (e) e.preventDefault();
+    state.activeCategory = 'ALL';
+    state.searchTerm = '';
+    const input = $('#v4SearchInput');
+    if (input) input.value = '';
+    switchPage('today');
   }
-});
 
-// Update Escape key handler for all overlays
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeContactModal();
-    closeWelcomeModal();
-    closeVCardModal();
-    closeDrawer();
+  function updateBackToTopState() {
+    const btn = $('#v4BackToTopBtn');
+    if (btn) btn.classList.toggle('is-visible', window.scrollY > 350);
   }
-});
 
-// Window Exports
-window.openContactModal = openContactModal;
-window.closeContactModal = closeContactModal;
-window.openWelcomeModal = openWelcomeModal;
-window.closeWelcomeModal = closeWelcomeModal;
-window.checkWelcomeModalOnLoad = checkWelcomeModalOnLoad;
+  function bindGlobalEvents() {
+    document.addEventListener('click', (e) => {
+      const eventTrigger = e.target.closest('[data-open-event]');
+      if (eventTrigger) {
+        e.preventDefault();
+        openArticleDrawer(eventTrigger.dataset.openEvent);
+        return;
+      }
 
-// Trigger welcome check on initialization
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    checkWelcomeModalOnLoad();
-  });
-} else {
-  checkWelcomeModalOnLoad();
-}
+      const signalTrigger = e.target.closest('[data-open-signal]');
+      if (signalTrigger) {
+        e.preventDefault();
+        openDecisionSignalDrawer(signalTrigger.dataset.openSignal);
+        return;
+      }
 
-console.log('[MagSpread] V2.2.3 R1 Contact & Welcome modal controllers successfully registered.');
+      const pageBtn = e.target.closest('[data-switch-page], [data-drawer-page]');
+      if (pageBtn) {
+        const targetPage = pageBtn.dataset.switchPage || pageBtn.dataset.drawerPage;
+        closeNavDrawer(false);
+        switchPage(targetPage);
+        return;
+      }
+
+      const drawerCatBtn = e.target.closest('[data-drawer-cat]');
+      if (drawerCatBtn) {
+        state.activeCategory = drawerCatBtn.dataset.drawerCat;
+        closeNavDrawer(false);
+        switchPage('today');
+        return;
+      }
+
+      const catFilterTrigger = e.target.closest('[data-filter-cat]');
+      if (catFilterTrigger) {
+        state.activeCategory = catFilterTrigger.dataset.filterCat;
+        if (state.activeCategory === 'ALL') {
+          state.searchTerm = '';
+          const input = $('#v4SearchInput');
+          if (input) input.value = '';
+        }
+        switchPage('today');
+        return;
+      }
+
+      const fw = $('#v4FloatWidget');
+      if (fw && fw.classList.contains('is-open') && !e.target.closest('#v4FloatWidget')) {
+        fw.classList.remove('is-open');
+        $('#v4FabToggleBtn')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    $$('#v4CatTabs .v4-cat-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.activeCategory = btn.dataset.cat;
+        switchPage('today');
+      });
+    });
+
+    // WAI-ARIA Arrow key support on Category Tablist & Macro Step Bar
+    $('#v4CatTabs')?.addEventListener('keydown', (e) => {
+      const tabs = $$('#v4CatTabs .v4-cat-btn');
+      const idx = tabs.indexOf(document.activeElement);
+      if (idx === -1) return;
+      let nextIdx = -1;
+      if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') nextIdx = 0;
+      else if (e.key === 'End') nextIdx = tabs.length - 1;
+      if (nextIdx !== -1) {
+        e.preventDefault();
+        tabs[nextIdx].focus();
+        state.activeCategory = tabs[nextIdx].dataset.cat;
+        switchPage('today');
+      }
+    });
+
+    $('#v4StepBar')?.addEventListener('keydown', (e) => {
+      const steps = $$('#v4StepBar .v4-step-btn');
+      const idx = steps.indexOf(document.activeElement);
+      if (idx === -1) return;
+      let nextIdx = -1;
+      if (e.key === 'ArrowRight') nextIdx = (idx + 1) % steps.length;
+      else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + steps.length) % steps.length;
+      else if (e.key === 'Home') nextIdx = 0;
+      else if (e.key === 'End') nextIdx = steps.length - 1;
+      if (nextIdx !== -1) {
+        e.preventDefault();
+        state.activeLayerIdx = Number(steps[nextIdx].dataset.layerIdx);
+        renderMacroMicro();
+        $('#v4StepBar .v4-step-btn.active')?.focus({ preventScroll: true });
+      }
+    });
+
+    $('#v4BrandReset')?.addEventListener('click', resetToFrontPage);
+    $('#v4HomeIconBtn')?.addEventListener('click', resetToFrontPage);
+
+    const searchInput = $('#v4SearchInput');
+    const searchClear = $('#v4SearchClear');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        state.searchTerm = searchInput.value;
+        if (state.activePage !== 'today') {
+          switchPage('today');
+        } else {
+          applyFilters();
+        }
+      });
+    }
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        state.searchTerm = '';
+        applyFilters();
+        searchInput.focus();
+      });
+    }
+
+    // Left Navigation Drawer controls
+    $('#v4MenuBtn')?.addEventListener('click', openNavDrawer);
+    $('#v4NavClose')?.addEventListener('click', () => closeNavDrawer(true));
+    $('#v4NavBackdrop')?.addEventListener('click', () => closeNavDrawer(true));
+
+    $('#v4DrawerSearchForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = ($('#v4DrawerSearchInput')?.value || '').trim();
+      state.searchTerm = val;
+      if (searchInput) searchInput.value = val;
+      closeNavDrawer(false);
+      switchPage('today');
+    });
+
+    // Utility buttons for vCard modal (Header utility bar, Drawer, Footer, Floating Widget)
+    ['#v4TopVCardBtn', '#v4FooterVCardBtn'].forEach((sel) => {
+      $(sel)?.addEventListener('click', openVCardModal);
+    });
+    $('#v4OpenVCardBtn')?.addEventListener('click', () => {
+      closeNavDrawer(false);
+      openVCardModal();
+    });
+    $('#v4FloatVCard')?.addEventListener('click', () => {
+      $('#v4FloatWidget')?.classList.remove('is-open');
+      $('#v4FabToggleBtn')?.setAttribute('aria-expanded', 'false');
+      openVCardModal();
+    });
+
+    // Theme toggle (Drawer button)
+    $('#v4ThemeToggleBtn')?.addEventListener('click', toggleTheme);
+
+    // Welcome modal controls
+    $('#v4OpenWelcomeBtn')?.addEventListener('click', () => {
+      closeNavDrawer(false);
+      openWelcomeModal();
+    });
+    $('#v4WelcomeClose')?.addEventListener('click', () => closeWelcomeModal(true, true));
+    $('#v4WelcomeBackdrop')?.addEventListener('click', () => closeWelcomeModal(true, true));
+    $('#v4WelcomeExploreBtn')?.addEventListener('click', () => closeWelcomeModal(true, true));
+    $('#v4WelcomeContactBtn')?.addEventListener('click', () => {
+      closeWelcomeModal(true, false);
+      openVCardModal();
+    });
+
+    // Right Detail Drawer
+    $('#v4DrawerClose')?.addEventListener('click', () => closeDrawer(true));
+    $('#v4DrawerBackdrop')?.addEventListener('click', () => closeDrawer(true));
+
+    // Header "Đăng ký Bản tin" CTA -> Chuyển sang Trang 02 (Bản tin & Đăng ký)
+    $('#v4SubscribeBtn')?.addEventListener('click', () => {
+      switchPage('newsletter');
+    });
+
+    // Newsletter subscribe forms (Trang 02, Welcome Modal & Footer Community CTA Band) -> Google Apps Script Webhook
+    bindNewsletterForm('#v4NlForm', '#v4NlEmailInput', '#v4NlFeedback', 'Bnews V4 Tab 02 (Top Hero)');
+    bindNewsletterForm('#v4WelcomeNlForm', '#v4WelcomeNlInput', '#v4WelcomeNlFeedback', 'Bnews V4 Welcome Modal');
+    bindNewsletterForm('#v4FooterNlForm', '#v4FooterNlInput', '#v4FooterNlFeedback', 'Bnews V4 Community Band (Footer)');
+
+    // vCard Modal controls & QR Tabs & Save/Copy actions
+    $$('[data-vcard-tab]').forEach((btn) => {
+      btn.addEventListener('click', () => switchVCardTab(btn.dataset.vcardTab));
+    });
+    $('#v4DownloadVCardBtn')?.addEventListener('click', downloadVCard);
+    $('#v4CopyVCardLinkBtn')?.addEventListener('click', (e) => copyVCardLink(e.currentTarget));
+    $('#v4VCardClose')?.addEventListener('click', () => closeVCardModal(true));
+    $('#v4VCardBackdrop')?.addEventListener('click', () => closeVCardModal(true));
+
+    // Floating Quick-Connect Widget toggle & Back to Top
+    $('#v4FabToggleBtn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const fw = $('#v4FloatWidget');
+      if (!fw) return;
+      const open = fw.classList.toggle('is-open');
+      e.currentTarget.setAttribute('aria-expanded', String(open));
+    });
+    $('#v4BackToTopBtn')?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', updateBackToTopState, { passive: true });
+    updateBackToTopState();
+
+    // Sync URL hash changes
+    window.addEventListener('hashchange', () => {
+      const h = (window.location.hash || '').replace('#', '').toLowerCase();
+      if (['today', 'newsletter', 'analysis', 'b2b'].includes(h)) {
+        switchPage(h, { syncHash: false });
+      }
+    });
+  }
+
+  async function init() {
+    let savedTheme = localStorage.getItem('site_theme');
+    const legacy = localStorage.getItem('ms-theme');
+    if (!savedTheme && (legacy === 'dark' || legacy === 'light')) {
+      savedTheme = legacy;
+      localStorage.setItem('site_theme', savedTheme);
+    }
+    if (legacy !== null) localStorage.removeItem('ms-theme');
+    if (savedTheme !== 'dark' && savedTheme !== 'light') {
+      savedTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    applyTheme(savedTheme);
+
+    const data = await loadEditionData();
+    if (!data) {
+      const mount = $('#v4FrontPageView');
+      if (mount) {
+        mount.innerHTML = '<div class="v4-container" style="padding:48px 24px;"><p>Không thể tải dữ liệu ấn bản.</p></div>';
+      }
+      return;
+    }
+
+    // Rewrite internal links so trailing-slash-free replaceState URL never breaks relative paths
+    if (window.location.protocol !== 'file:') {
+      $$('a[href$="newsletter-preview.html"]').forEach((a) => {
+        a.setAttribute('href', `${CURRENT_DIR_BASE}newsletter-preview.html`);
+      });
+      $$('a[href$="../index.html"]').forEach((a) => {
+        if (!a.classList.contains('v4-anchor-link')) {
+          a.setAttribute('href', PORTFOLIO_HOME_URL);
+        }
+      });
+    }
+
+    state.data = data;
+    (data.eligibleNewsList || []).forEach((item) => {
+      if (item.eventId) state.newsById[item.eventId] = item;
+    });
+    updateSeoAndStructuredData();
+
+    try {
+      const q = new URLSearchParams(window.location.search).get('q');
+      if (q && q.trim()) {
+        state.searchTerm = q.trim();
+        const searchInput = $('#v4SearchInput');
+        if (searchInput) searchInput.value = state.searchTerm;
+      }
+    } catch (_) {}
+
+    renderMasthead();
+    renderPulseStrip();
+    renderFrontPage();
+    renderCategoryClusters();
+    renderMacroMicro();
+    renderFintechCorner();
+    renderB2BPage();
+    bindGlobalEvents();
+
+    const hashPage = (window.location.hash || '').replace('#', '').toLowerCase();
+    const initialPage = ['today', 'newsletter', 'analysis', 'b2b'].includes(hashPage) ? hashPage : 'today';
+    switchPage(initialPage);
+
+    try {
+      if (!localStorage.getItem(WELCOME_STORAGE_KEY)) {
+        setTimeout(() => {
+          const anyModalOpen = ['#v4Drawer', '#v4NavDrawer', '#v4VCardModal'].some((sel) => {
+            const el = $(sel);
+            return el && !el.hidden;
+          });
+          if (!anyModalOpen) openWelcomeModal();
+        }, 450);
+      }
+    } catch (_) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <!-- PREVIEW ONLY: đổi sang index, follow khi phát hành chính thức -->
+  <!-- PREVIEW MIRROR: bản chính thức tại /fintech-intelligence/ -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Bnews Fintech V4 Pilot — Clean Institutional UI Preview</title>
-  <meta name="description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
-  <meta name="keywords" content="Bryan News, Fintech Intelligence, tin tức kinh tế, thị trường tài chính, ngân hàng, thanh toán số, kinh tế vĩ mô, lãi suất, tỷ giá, Payoo, SmartPOS, chứng khoán">
+  <title>Bnews Fintech V4 Pilot — Institutional Preview</title>
+  <meta name="description" content="Bryan News (Bnews Fintech Intelligence) — Chuyên trang điểm tin và phân tích 40 sự kiện kinh tế vĩ mô, ngân hàng, thị trường vốn, doanh nghiệp, bán lẻ và hạ tầng thanh toán số Việt Nam.">
+  <meta name="keywords" content="Bryan News, Bnews Fintech, Fintech Intelligence, tin tức kinh tế, thị trường tài chính, ngân hàng, thanh toán số, kinh tế vĩ mô, lãi suất, tỷ giá, Payoo, SmartPOS, VietQR, chứng khoán">
   <meta name="author" content="Nguyễn Huỳnh Quang Trí (Bryan Nguyen)">
   <meta name="theme-color" content="#0A3D7A">
+  <link rel="canonical" href="https://bryanportfolio.io.vn/fintech-intelligence/">
   <link rel="icon" type="image/webp" href="../fintech-favicon-opt.webp">
+  <link rel="apple-touch-icon" href="../fintech-favicon-opt.png">
 
   <!-- Open Graph / Facebook / LinkedIn / Zalo -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bryanportfolio.io.vn/fintech-intelligence/">
-  <meta property="og:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính &amp; Thanh toán số">
-  <meta property="og:description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
-  <meta property="og:image" content="https://bryanportfolio.io.vn/bnews-logo-light.png">
+  <meta property="og:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính, Ngân hàng &amp; Thanh toán số">
+  <meta property="og:description" content="Bryan News (Bnews Fintech Intelligence) — Chuyên trang điểm tin và phân tích 40 sự kiện kinh tế vĩ mô, ngân hàng, thị trường vốn, doanh nghiệp, bán lẻ và hạ tầng thanh toán số Việt Nam.">
+  <meta property="og:image" content="https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png">
+  <meta property="og:image:alt" content="Bryan News | Fintech Intelligence — Bnews Institutional V4.0">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="vi_VN">
@@ -26,12 +29,13 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://bryanportfolio.io.vn/fintech-intelligence/">
-  <meta name="twitter:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính &amp; Thanh toán số">
-  <meta name="twitter:description" content="Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.">
-  <meta name="twitter:image" content="https://bryanportfolio.io.vn/bnews-logo-light.png">
+  <meta name="twitter:title" content="Bryan News | Fintech Intelligence — Tin tức Kinh tế, Tài chính, Ngân hàng &amp; Thanh toán số">
+  <meta name="twitter:description" content="Bryan News (Bnews Fintech Intelligence) — Chuyên trang điểm tin và phân tích 40 sự kiện kinh tế vĩ mô, ngân hàng, thị trường vốn, doanh nghiệp, bán lẻ và hạ tầng thanh toán số Việt Nam.">
+  <meta name="twitter:image" content="https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png">
+  <meta name="twitter:image:alt" content="Bryan News | Fintech Intelligence">
 
-  <!-- JSON-LD Structured Data Schema -->
-  <script type="application/ld+json">
+  <!-- JSON-LD Structured Data Schema (Hydrated live by JS Engine) -->
+  <script type="application/ld+json" id="v4JsonLdSchema">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -39,24 +43,25 @@
         "@type": ["NewsMediaOrganization", "WebSite"],
         "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#website",
         "name": "Bryan News | Fintech Intelligence",
-        "alternateName": ["Bryan News", "BNews", "Fintech Intelligence VN"],
+        "alternateName": ["Bryan News", "Bnews Fintech", "Fintech Intelligence VN"],
         "url": "https://bryanportfolio.io.vn/fintech-intelligence/",
-        "description": "Bryan News - Chuyên trang thông tin, phân tích chuyên sâu về kinh tế vĩ mô, thị trường tài chính, ngân hàng và hạ tầng thanh toán số Việt Nam. Cập nhật liên tục 24/7 từ các nguồn báo chí chính thống uy tín.",
+        "description": "Bryan News (Bnews Fintech Intelligence) — Chuyên trang điểm tin và phân tích 40 sự kiện kinh tế vĩ mô, ngân hàng, thị trường vốn, doanh nghiệp, bán lẻ và hạ tầng thanh toán số Việt Nam.",
         "inLanguage": "vi-VN",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bryanportfolio.io.vn/bnews-logo-light.png",
-          "width": 600,
-          "height": 180
+          "url": "https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png",
+          "width": 1200,
+          "height": 630
         },
         "publisher": {
           "@type": "Person",
           "name": "Nguyễn Huỳnh Quang Trí (Bryan Nguyen)",
-          "jobTitle": "Fintech & Enterprise Product Specialist",
+          "jobTitle": "Enterprise B2B & Fintech Product Specialist",
           "url": "https://bryanportfolio.io.vn/",
           "sameAs": [
             "https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/",
-            "https://zalo.me/0838673639"
+            "https://zalo.me/0838673639",
+            "https://www.facebook.com/Tori1005"
           ]
         },
         "potentialAction": {
@@ -67,6 +72,15 @@
           },
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#webpage",
+        "url": "https://bryanportfolio.io.vn/fintech-intelligence/",
+        "name": "Bryan News | Fintech Intelligence — Institutional V4.0",
+        "inLanguage": "vi-VN",
+        "isPartOf": { "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#website" },
+        "breadcrumb": { "@id": "https://bryanportfolio.io.vn/fintech-intelligence/#breadcrumb" }
       },
       {
         "@type": "BreadcrumbList",
@@ -480,9 +494,9 @@
       <div class="v4-footer-bottom">
         <span>Copyright &copy; 2026 Bryan Nguyen. All Rights Reserved.</span>
         <span class="v4-footer-bottom-meta">
-          <span id="v4FooterEditionMeta">ED-20261119-D01 · Pilot V4.0</span>
+          <span id="v4FooterEditionMeta">ED-20261119-D01 · Institutional V4.0</span>
           <span aria-hidden="true">&middot;</span>
-          <a href="../index.html" class="v4-anchor-link">Quay lại Bản chính thức V3.0</a>
+          <a href="../index.html" class="v4-anchor-link">Mở Bản chính thức V4.0</a>
         </span>
       </div>
     </div>

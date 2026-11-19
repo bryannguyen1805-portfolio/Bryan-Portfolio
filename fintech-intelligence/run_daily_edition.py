@@ -18,6 +18,9 @@ import sys
 import json
 import argparse
 import subprocess
+import re
+import shutil
+import hashlib
 from datetime import datetime
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -144,13 +147,12 @@ def main():
             print(f"   ⚠️ Lưu ý khi gọi Live Orchestrator: {e}")
 
     # Engine parity guard — Workspace root scripts are the Source of Truth.
-    import hashlib, shutil
-
     def _sha(p):
         with open(p, "rb") as fh:
             return hashlib.sha256(fh.read()).hexdigest()
 
-    for shared_mod in ["update_magspread_pilot_ui.py", "ed29_editorial_content.py"]:
+    ed_modules = sorted([f for f in os.listdir(WORKSPACE_ROOT) if re.match(r"^ed\d+_editorial_content\.py$", f)])
+    for shared_mod in ["update_magspread_pilot_ui.py"] + ed_modules:
         root_mod = os.path.join(WORKSPACE_ROOT, shared_mod)
         pkg_mod = os.path.join(PACKAGE_DIR, shared_mod)
         if os.path.exists(root_mod) and os.path.abspath(root_mod) != os.path.abspath(pkg_mod):
@@ -212,14 +214,20 @@ def main():
 
     html_path = os.path.join(PACKAGE_DIR, "index.html")
     if os.path.exists(html_path):
-        import re
-
         ts = int(datetime.now().timestamp())
         with open(html_path, "r", encoding="utf-8") as f:
             h_text = f.read()
         h_text = re.sub(r'href="(?:\.\/)?magspread\.css(?:\?v=[^"]*)?"', f'href="./magspread.css?v={ts}"', h_text)
         h_text = re.sub(r'src="(?:\.\/)?edition-data\.js(?:\?v=[^"]*)?"', f'src="./edition-data.js?v={ts}"', h_text)
         h_text = re.sub(r'src="(?:\.\/)?magspread\.js(?:\?v=[^"]*)?"', f'src="./magspread.js?v={ts}"', h_text)
+        ed_badge_val = data.get("editionNumber", "").strip()
+        if ed_badge_val:
+            ed_num_m = re.search(r"(\d+)", ed_badge_val)
+            if ed_num_m:
+                short_ed = f"Ấn bản số {ed_num_m.group(1)}"
+                h_text = re.sub(r'(<span[^>]*id="v4EditionLabel"[^>]*>)[^<]+(</span>)', rf'\g<1>{short_ed}\g<2>', h_text)
+                h_text = re.sub(r'(<span[^>]*id="v4DrawerEditionBadge"[^>]*>)[^<]+(</span>)', rf'\g<1>{short_ed}\g<2>', h_text)
+            h_text = re.sub(r">ẤN BẢN SỐ [^<]+<", f">{ed_badge_val}<", h_text)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(h_text)
         preview_path = os.path.join(PACKAGE_DIR, "magspread-preview.html")
@@ -229,6 +237,8 @@ def main():
     sync_files = [
         "index.html",
         "magspread-preview.html",
+        "newsletter-preview.html",
+        "avatar.webp",
         "edition-data.js",
         "edition-data.json",
         "EVIDENCE_INDEX.json",
@@ -268,15 +278,15 @@ def main():
     else:
         print("   ⚠️ Đủ cờ nghiệm thu thủ công — Thực hiện git commit & push theo yêu cầu chủ sản phẩm...")
         try:
+            ed_files = sorted([f for f in os.listdir(workspace_root) if re.match(r"^ed\d+_editorial_content\.py$", f)])
             candidate_targets = [
                 "fintech-intelligence/",
                 "pilot-output/",
                 "update_magspread_pilot_ui.py",
-                "ed29_editorial_content.py",
                 "run_daily_edition.py",
                 "setup_daily_scheduler_9am.sh",
                 "README_DAILY_RUN.md",
-            ]
+            ] + ed_files
             git_targets = [p for p in candidate_targets if os.path.exists(os.path.join(workspace_root, p))]
             subprocess.run(["git", "add", "--"] + git_targets, cwd=workspace_root, check=True)
             staged_res = subprocess.run(
@@ -311,7 +321,10 @@ def main():
             sys.exit(1)
 
     elapsed = (datetime.now() - start_time).total_seconds()
-    print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
+    if git_push_allowed:
+        print_header("XUẤT BẢN THÀNH CÔNG — PRODUCTION RELEASE ĐÃ NGHIỆM THU")
+    else:
+        print_header("HOÀN TẤT LOCAL STAGING (CHỜ NGHIỆM THU CHỦ SẢN PHẨM)")
     print(f"⏱️  Thời gian thực thi: {elapsed:.2f} giây")
     print(f"📁 Artifact local tại : {os.path.join(web_portal_dir, 'index.html')}")
     print("=" * 80 + "\n")
