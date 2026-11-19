@@ -9,6 +9,23 @@ let EDITION_DATA = null;
 let currentCategoryFilter = 'ALL';
 let currentSearchTerm = '';
 
+// Clean canonical portal URL helpers (strips /index.html and #today while keeping asset/fetch base safe)
+const PORTAL_BASE_DIR = (() => {
+  if (window.location.protocol === 'file:') return './';
+  let p = window.location.pathname || '/';
+  if (p.endsWith('/index.html')) p = p.slice(0, -'index.html'.length);
+  else if (p.endsWith('/magspread-preview.html')) p = p.slice(0, -'magspread-preview.html'.length);
+  else if (!p.endsWith('/')) p = p + '/';
+  return p;
+})();
+
+function getCleanPortalPath() {
+  if (window.location.protocol === 'file:') return window.location.pathname;
+  let p = PORTAL_BASE_DIR;
+  if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+  return p;
+}
+
 // DOM Helpers
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
@@ -62,7 +79,7 @@ function updateThemeIcon() {
       ? '<span class="ms-theme-icon" aria-hidden="true">☀️</span>'
       : '<span class="ms-theme-icon" aria-hidden="true">🌙</span>';
   }
-  const targetLogo = isDark ? './bnews-logo-dark-opt.webp?v=1794692000' : './bnews-logo-light-opt.webp?v=1794692000';
+  const targetLogo = PORTAL_BASE_DIR + (isDark ? 'bnews-logo-dark-opt.webp?v=1794692000' : 'bnews-logo-light-opt.webp?v=1794692000');
   const headerLogo = $('#headerBryanLogo');
   const desktopStickyLogo = $('#desktopStickyLogo');
   const mobileLogo = $('#mobileBryanLogo');
@@ -232,7 +249,7 @@ async function loadEditionData() {
 
   // 2. HTTP/HTTPS environment: fetch live canonical edition-data.json
   try {
-    const res = await fetch('./edition-data.json?v=' + Date.now());
+    const res = await fetch(PORTAL_BASE_DIR + 'edition-data.json?v=' + Date.now());
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}: ${res.statusText}`);
     }
@@ -267,10 +284,24 @@ async function loadEditionData() {
   }
 }
 
+function resolveRelativeDomUrls() {
+  if (window.location.protocol === 'file:') return;
+  const baseUrl = window.location.origin + PORTAL_BASE_DIR;
+  document.querySelectorAll('img[src^="./"], img[src^="../"], a[href^="./"], a[href^="../"]').forEach(el => {
+    const attr = el.hasAttribute('src') ? 'src' : 'href';
+    const rawVal = el.getAttribute(attr);
+    if (!rawVal) return;
+    try {
+      el.setAttribute(attr, new URL(rawVal, baseUrl).pathname);
+    } catch (e) { /* keep original */ }
+  });
+}
+
 // ─── RENDER ALL SECTIONS ───
 function renderAllSections() {
   if (!EDITION_DATA) return;
 
+  resolveRelativeDomUrls();
   renderMasthead();
   renderCoverStory();
   renderMarketPulse();
@@ -547,10 +578,12 @@ function renderPulseCard(m) {
 
   return `
     <div class="ms-ticker-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')" title="Bấm để xem đối soát chi tiết và bài báo gốc">
-      <div class="ms-ticker-top">
+      <div class="ms-ticker-head">
         <span class="ms-ticker-title">${escapeHtml(shortCode)}</span>
-        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
         <span class="ms-ticker-badge ${changeClass}">${changeIcon} ${escapeHtml(changeDisplay || changeText)}</span>
+      </div>
+      <div class="ms-ticker-val-row">
+        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
       </div>
       <div class="ms-ticker-mid">
         <span class="ms-ticker-sub">${escapeHtml(subRef)}</span>
@@ -1088,11 +1121,11 @@ function openArticleReader(eventId) {
           const lensTxt = item.sectionE_fintechLens;
           const isNonDirect = lensTxt.includes('Không áp dụng') || lensTxt.includes('Không liên quan') || lensTxt.includes('Không phát sinh');
           return `
-        <section style="background-color:${isNonDirect ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
-          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
+        <section style="background-color:${isNonDirect ? 'var(--ms-surface-subtle)' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.9;' : 'border-left:3px solid var(--ms-secondary);'}">
+          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-secondary)'}; margin-bottom:8px;">
             ${isNonDirect ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
           </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
+          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
         </section>`;
         })() : ''}
 
@@ -1782,9 +1815,14 @@ function switchFintechTab(tabKey, targetSubId) {
   // 4. Close mobile drawer if open
   closeMobileDrawer(false);
 
-  // 5. Update browser URL hash cleanly
+  // 5. Update browser URL cleanly (/fintech-intelligence without /index.html or #today)
   if (window.history && window.history.replaceState) {
-    window.history.replaceState(null, '', '#' + tabKey);
+    const cleanBase = getCleanPortalPath() + window.location.search;
+    if (tabKey === 'today') {
+      window.history.replaceState(null, '', cleanBase);
+    } else {
+      window.history.replaceState(null, '', cleanBase + '#' + tabKey);
+    }
   }
 
   // 6. Scroll smoothly to target sub-section or top of page
@@ -1971,7 +2009,7 @@ function loadLatestNewsletterIssue() {
   const container = document.getElementById('bnewsLatestIssuePaper');
   if (!container || container.getAttribute('data-loaded') === 'true') return;
 
-  fetch('./preview/newsletter-preview.html?v=' + Date.now())
+  fetch(PORTAL_BASE_DIR + 'preview/newsletter-preview.html?v=' + Date.now())
     .then(res => {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.text();
@@ -1986,7 +2024,7 @@ function loadLatestNewsletterIssue() {
     })
     .catch(err => {
       console.warn('Fallback loading newsletter preview via iframe/embed:', err);
-      container.innerHTML = '<iframe src="./preview/newsletter-preview.html" style="width:100%; min-height:1800px; border:none; display:block;" title="Bnews Latest Issue"></iframe>';
+      container.innerHTML = '<iframe src="' + PORTAL_BASE_DIR + 'preview/newsletter-preview.html" style="width:100%; min-height:1800px; border:none; display:block;" title="Bnews Latest Issue"></iframe>';
       container.setAttribute('data-loaded', 'true');
     });
 }

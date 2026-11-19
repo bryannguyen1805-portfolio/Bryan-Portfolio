@@ -1292,7 +1292,7 @@ def main():
                 "asOf": "2026-11-19",
                 "referenceValue": "NHNN: 25.646 VND/USD (-10đ) | VCB: 25.510 - 25.920 VND/USD (+30đ) | DXY: 103,79 điểm",
                 "change": "-10 VND/USD so với phiên 18/11 (VCB bán tăng 30đ lên 25.920đ)",
-                "compactDelta": "-10đ (VCB +30đ)",
+                "compactDelta": "-10đ (-0,04%)",
                 "compactSubRef": "VCB: 25.510 - 25.920 · DXY: 103,79",
                 "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-19-11-usd-ngan-hang-tang-dxy-ap-sat-104-diem-truoc-tin-hieu-cung-ran-tu-fed-207175.html",
                 "secondarySourceUrls": [

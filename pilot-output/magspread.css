@@ -7537,7 +7537,7 @@ button.ms-pulse-open-btn {
 
 /* ─── 1. COMPACT FINANCIAL TICKER STRIP (IMAGE 2 PARITY) ─── */
 .ms-ticker-strip-wrap {
-  background: #FFFFFF;
+  background: var(--ms-surface-card, #FFFFFF);
   border: 1px solid var(--ms-border, #E7E5E4);
   border-radius: 6px;
   padding: 10px 14px 12px 14px;
@@ -7545,13 +7545,19 @@ button.ms-pulse-open-btn {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
+[data-theme="dark"] .ms-ticker-strip-wrap {
+  background: #122825;
+  border-color: #1E4540;
+  box-shadow: none;
+}
+
 .ms-ticker-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 8px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--ms-border, #F1F5F9);
 }
 
 .ms-ticker-label-left {
@@ -7598,66 +7604,94 @@ button.ms-pulse-open-btn {
 }
 
 .ms-ticker-card {
-  background: #FAFAF9;
-  border: 1px solid #E7E5E4;
+  background: var(--ms-surface-subtle, #FAFAF9);
+  border: 1px solid var(--ms-border, #E7E5E4);
   border-radius: 4px;
-  padding: 8px 10px;
+  padding: 9px 11px;
   cursor: pointer;
   transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 78px;
+  min-height: 92px;
+  min-width: 0;
   position: relative;
 }
 
+[data-theme="dark"] .ms-ticker-card {
+  background: #0E221F;
+  border-color: #1E4540;
+}
+
 .ms-ticker-card:hover {
-  background: #FFFFFF;
+  background: var(--ms-surface-card, #FFFFFF);
   border-color: var(--ms-primary, #134E4A);
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+[data-theme="dark"] .ms-ticker-card:hover {
+  background: #16332F;
+  border-color: #2DD4BF;
+  box-shadow: none;
+}
+
 .ms-ticker-card.status-positive { border-left: 3px solid #16A34A; }
 .ms-ticker-card.status-negative { border-left: 3px solid #DC2626; }
 .ms-ticker-card.status-neutral  { border-left: 3px solid #D97706; }
+[data-theme="dark"] .ms-ticker-card.status-positive { border-left-color: #4ADE80; }
+[data-theme="dark"] .ms-ticker-card.status-negative { border-left-color: #F87171; }
+[data-theme="dark"] .ms-ticker-card.status-neutral  { border-left-color: #FBBF24; }
 
-.ms-ticker-top {
+.ms-ticker-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 4px;
-  margin-bottom: 3px;
+  gap: 6px;
+  margin-bottom: 4px;
 }
 
 .ms-ticker-title {
   font-family: var(--font-ui, sans-serif);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--ms-text-primary, #1C1917);
-  letter-spacing: 0.02em;
+  color: var(--ms-text-secondary, #44403C);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ms-ticker-val-row {
+  margin-bottom: 4px;
 }
 
 .ms-ticker-val {
   font-family: var(--font-mono, monospace);
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #0F172A;
+  font-size: 1.02rem;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+  display: block;
+  color: var(--ms-text-primary, #0F172A);
 }
 
 .ms-ticker-badge {
   font-family: var(--font-mono, monospace);
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .ms-ticker-badge.pos { color: #16A34A; }
 .ms-ticker-badge.neg { color: #DC2626; }
 .ms-ticker-badge.neu { color: #D97706; }
+[data-theme="dark"] .ms-ticker-badge.pos { color: #4ADE80; }
+[data-theme="dark"] .ms-ticker-badge.neg { color: #F87171; }
+[data-theme="dark"] .ms-ticker-badge.neu { color: #FBBF24; }
 
 .ms-ticker-mid {
   font-size: 0.725rem;
@@ -7666,15 +7700,16 @@ button.ms-pulse-open-btn {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 2px 0 4px 0;
-  margin-bottom: 2px;
-  border-bottom: 1px dashed #E7E5E4;
+  padding: 2px 0 5px 0;
+  margin-bottom: 4px;
+  border-bottom: 1px dashed var(--ms-border, #E7E5E4);
 }
 
 .ms-ticker-bot {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 6px;
   font-size: 0.6875rem;
   line-height: 1.2;
 }
@@ -7685,13 +7720,18 @@ button.ms-pulse-open-btn {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 65%;
+  max-width: 48%;
 }
 
 .ms-ticker-ref {
   color: var(--ms-text-muted, #78716C);
   font-size: 0.65rem;
   font-family: var(--font-mono, monospace);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 52%;
+  text-align: right;
 }
 
 @media (max-width: 1024px) {
@@ -7736,10 +7776,10 @@ button.ms-pulse-open-btn {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--ms-text-muted, #78716C);
-  background: #F5F5F4;
+  background: var(--ms-surface-subtle, #F5F5F4);
   padding: 4px 8px;
   border-radius: 3px;
-  border: 1px solid #E7E5E4;
+  border: 1px solid var(--ms-border, #E7E5E4);
 }
 
 /* ─── 3. MODERNIZED CATEGORY FILTER STRIP ─── */
@@ -7765,7 +7805,7 @@ button.ms-pulse-open-btn {
 .ms-cat-btn-v3:hover {
   border-color: var(--ms-primary, #134E4A);
   color: var(--ms-primary, #134E4A);
-  background: #F5F5F4;
+  background: var(--ms-surface-subtle, #F5F5F4);
 }
 
 .ms-cat-btn-v3.active {
@@ -8045,8 +8085,12 @@ button.ms-pulse-open-btn {
   flex: 0 0 240px !important;
   border-radius: 4px !important;
   overflow: hidden !important;
-  background-color: #F3F4F6 !important;
+  background-color: var(--ms-surface-subtle, #F3F4F6) !important;
   position: relative !important;
+}
+
+[data-theme="dark"] .ms-vne-thumb-wrap {
+  background-color: #0E221F !important;
 }
 
 .ms-vne-thumb-anchor {

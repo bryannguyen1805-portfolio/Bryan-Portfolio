@@ -22,6 +22,7 @@ import html
 import socket
 import ipaddress
 import hashlib
+import unicodedata
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode, urljoin
 import urllib.request
@@ -30,7 +31,7 @@ import urllib.error
 # Operational Constants
 TARGET_EVENTS = 25
 MIN_FRESHNESS_RATIO = 0.80  # Minimum 80% within 0-24h
-MAX_AGE_HOURS = 72.0        # Hard ceiling: maximum 72h
+MAX_AGE_HOURS = 48.0        # Hard ceiling: maximum 48h (strict 2-day cap; prevents 3-day carry-over)
 TIMEZONE_HCM = timezone(timedelta(hours=7))
 
 # Canonical V3.0.4 Categories
@@ -179,6 +180,107 @@ def normalize_url(raw_url: str) -> str:
         return canonical
     except Exception:
         return raw_url.strip()
+
+
+VN_STOPWORDS = {
+    "va", "cua", "cho", "trong", "tren", "duoi", "voi", "nhung", "cac", "mot",
+    "nhu", "khi", "ve", "tai", "tu", "den", "la", "duoc", "bi", "se", "da",
+    "dang", "nay", "do", "vi", "theo", "sau", "truoc", "hon", "nhat", "nam",
+    "ngay", "thang", "moi", "vua", "chinh", "thuc", "tiep", "tuc", "ngan", "hang",
+    "ty", "dong", "trieu", "phan", "tram"
+}
+
+
+def strip_vietnamese_accents(text: str) -> str:
+    """Normalizes Vietnamese text to lowercase ASCII for cross-day topic comparison."""
+    if not text:
+        return ""
+    s = html.unescape(str(text)).replace("đ", "d").replace("Đ", "D")
+    nfkd = unicodedata.normalize("NFD", s)
+    ascii_text = "".join(ch for ch in nfkd if unicodedata.category(ch) != "Mn")
+    return re.sub(r"[^a-z0-9]+", " ", ascii_text.lower()).strip()
+
+
+def headline_tokens(headline: str) -> set:
+    """Extracts meaningful ASCII tokens (>= 2 chars, excluding common stopwords)."""
+    norm = strip_vietnamese_accents(headline)
+    return {tok for tok in norm.split() if len(tok) >= 2 and tok not in VN_STOPWORDS}
+
+
+def headline_similarity(hl_a, hl_b) -> float:
+    """Computes Jaccard similarity between two headlines (or precomputed token sets)."""
+    tokens_a = hl_a if isinstance(hl_a, set) else headline_tokens(str(hl_a or ""))
+    tokens_b = hl_b if isinstance(hl_b, set) else headline_tokens(str(hl_b or ""))
+    if not tokens_a or not tokens_b:
+        return 0.0
+    union_len = len(tokens_a | tokens_b)
+    return (len(tokens_a & tokens_b) / union_len) if union_len else 0.0
+
+
+def resolve_daily_editions_dir(raw_evidence_dir: str) -> str:
+    """Finds the enclosing daily-editions directory from a raw evidence path, if present."""
+    if not raw_evidence_dir:
+        return ""
+    cur = os.path.abspath(raw_evidence_dir)
+    for _ in range(6):
+        base = os.path.basename(cur)
+        if base == "daily-editions" and os.path.isdir(cur):
+            return cur
+        candidate = os.path.join(cur, "daily-editions")
+        if os.path.isdir(candidate):
+            return candidate
+        parent = os.path.dirname(cur)
+        if parent == cur:
+            break
+        cur = parent
+    return ""
+
+
+def load_prior_published_history(daily_editions_dir: str, target_date_str: str = None, lookback_days: int = 10) -> tuple:
+    """
+    Loads canonical URLs and tokenized headlines from up to `lookback_days` prior daily editions
+    strictly before `target_date_str` to guarantee zero multi-day carry-over.
+    """
+    prior_urls = set()
+    prior_titles = []
+    if not daily_editions_dir or not os.path.isdir(daily_editions_dir):
+        return prior_urls, prior_titles
+
+    date_folders = []
+    for entry in os.listdir(daily_editions_dir):
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", entry):
+            continue
+        if target_date_str and entry >= target_date_str:
+            continue
+        full_dir = os.path.join(daily_editions_dir, entry)
+        if os.path.isdir(full_dir):
+            date_folders.append(entry)
+
+    date_folders.sort(reverse=True)
+    for d_str in date_folders[:max(1, int(lookback_days))]:
+        v_path = os.path.join(daily_editions_dir, d_str, "verified-news.json")
+        if not os.path.isfile(v_path):
+            continue
+        try:
+            with open(v_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        events = data if isinstance(data, list) else (data.get("records") or data.get("events") or data.get("news") or [])
+        for ev in events:
+            if not isinstance(ev, dict):
+                continue
+            for key in ("canonicalUrl", "sourceUrl", "url", "originalUrl", "candidateUrl"):
+                raw_u = ev.get(key)
+                if raw_u:
+                    prior_urls.add(normalize_url(raw_u))
+            hl = (ev.get("headline") or ev.get("title") or "").strip()
+            if hl:
+                toks = headline_tokens(hl)
+                if toks:
+                    prior_titles.append((d_str, hl, toks))
+
+    return prior_urls, prior_titles
 
 
 def parse_timestamp_iso_or_vietnamese(ts_str: str) -> datetime:
@@ -439,20 +541,24 @@ def extract_clean_article_content(html_text: str, url: str) -> dict:
         }
 
     # 1. Headline (Extract BEFORE html.unescape so &quot; / &#39; inside content="..." never truncates!)
-    raw_headline = ""
+    h1_candidates = []
     for h1_m in re.finditer(r'<h1[^>]*>(.*?)</h1>', html_text, re.I | re.DOTALL):
         h1_cand = " ".join(html.unescape(re.sub(r'<[^>]+>', ' ', h1_m.group(1))).split()).strip()
-        if len(h1_cand) > 15 and not any(nav_w in h1_cand.lower() for nav_w in ["cafef.vn", "tuổi trẻ online", "thanh niên", "vneconomy"]):
-            raw_headline = h1_cand
-            break
-    if not raw_headline:
-        m_title = (
-            re.search(r'<meta[^>]+property=[\"\']og:title[\"\'][^>]+content="([^"]+)"', html_text, re.I)
-            or re.search(r"<meta[^>]+property=[\"\']og:title[\"\'][^>]+content='([^']+)'", html_text, re.I)
-            or re.search(r'<title[^>]*>(.*?)</title>', html_text, re.I | re.DOTALL)
-        )
-        if m_title:
-            raw_headline = " ".join(html.unescape(re.sub(r'<[^>]+>', ' ', m_title.group(1))).split()).strip()
+        if len(h1_cand) > 15 and not any(nav_w in h1_cand.lower() for nav_w in ["cafef.vn", "tuổi trẻ online", "thanh niên", "vneconomy", "thời báo tài chính"]):
+            h1_candidates.append(h1_cand)
+    m_og_title = (
+        re.search(r'<meta[^>]+property=[\"\']og:title[\"\'][^>]+content="([^"]+)"', html_text, re.I)
+        or re.search(r"<meta[^>]+property=[\"\']og:title[\"\'][^>]+content='([^']+)'", html_text, re.I)
+    )
+    og_title_clean = " ".join(html.unescape(re.sub(r'<[^>]+>', ' ', m_og_title.group(1))).split()).strip() if m_og_title else ""
+    best_h1 = max(h1_candidates, key=len) if h1_candidates else ""
+    if best_h1 and (len(best_h1) >= 28 or not og_title_clean):
+        raw_headline = best_h1
+    elif og_title_clean:
+        raw_headline = og_title_clean
+    else:
+        m_title = re.search(r'<title[^>]*>(.*?)</title>', html_text, re.I | re.DOTALL)
+        raw_headline = " ".join(html.unescape(re.sub(r'<[^>]+>', ' ', m_title.group(1))).split()).strip() if m_title else ""
     headline = raw_headline if raw_headline else "Bản tin tài chính"
     headline = re.sub(r'\s*[-|]\s*(?:Báo\s+)?(?:Tuổi Trẻ(?:\s+Online)?|Thanh Niên|CafeF|VnEconomy|Báo Đầu tư|Tạp chí Kinh tế Việt Nam).*$', '', headline, flags=re.I).strip()
 
@@ -1324,7 +1430,7 @@ class DailyNewsCollector:
     true entity extraction, and multi-tier freshness enforcement.
     """
 
-    def __init__(self, raw_evidence_dir: str, run_timestamp: str = None, http_timeout: int = 10, max_retries: int = 2, test_mode: bool = False):
+    def __init__(self, raw_evidence_dir: str, run_timestamp: str = None, http_timeout: int = 10, max_retries: int = 2, test_mode: bool = False, daily_editions_dir: str = None):
         self.raw_evidence_dir = raw_evidence_dir
         os.makedirs(raw_evidence_dir, exist_ok=True)
         self.http_timeout = http_timeout
@@ -1337,6 +1443,15 @@ class DailyNewsCollector:
             self.run_timestamp = parse_timestamp_iso_or_vietnamese(run_timestamp)
         else:
             self.run_timestamp = datetime.now(TIMEZONE_HCM)
+
+        self.daily_editions_dir = daily_editions_dir if daily_editions_dir is not None else resolve_daily_editions_dir(raw_evidence_dir)
+        target_date_str = self.run_timestamp.strftime("%Y-%m-%d")
+        if self.daily_editions_dir and (not self.test_mode or daily_editions_dir is not None):
+            self.prior_urls, self.prior_titles = load_prior_published_history(
+                self.daily_editions_dir, target_date_str=target_date_str, lookback_days=10
+            )
+        else:
+            self.prior_urls, self.prior_titles = set(), []
 
     def fetch_url(self, url: str) -> dict:
         """
@@ -1439,45 +1554,68 @@ class DailyNewsCollector:
             "error": last_error
         }
 
+    @staticmethod
+    def _extract_numeric_article_id(url_str: str) -> int:
+        """Extracts trailing monotonic numeric article ID for newest-first feed ordering."""
+        path = urlparse(url_str).path or ""
+        m_id = re.search(r'-d?(\d{5,})\.(?:html|htm|chn)$', path)
+        return int(m_id.group(1)) if m_id else 0
+
     def extract_article_links_from_feed(self, publisher_domain: str, feed_url: str, html_text: str) -> list:
         """Extracts article links from feed HTML matching publisher URL patterns."""
         links = []
+        seen_canon = set()
         for m in re.finditer(r'href=[\"\']([^\"\']+)[\"\']', html_text):
             href = m.group(1).strip()
             full_url = urljoin(feed_url, href)
-            parsed_path = urlparse(full_url).path or ""
-            
+            parsed = urlparse(full_url)
+            parsed_netloc = (parsed.netloc or "").lower()
+            parsed_path = parsed.path or ""
+
+            if parsed_netloc.startswith("m.") or "cdn." in parsed_netloc:
+                continue
+
             is_article = False
-            if "cafef.vn" in full_url and re.search(r'-\d{10,}\.chn', full_url):
+            if parsed_netloc.endswith("cafef.vn") and re.search(r'-\d{10,}\.chn$', parsed_path):
                 is_article = True
-            elif "tuoitre.vn" in full_url and re.search(r'-\d{10,}\.htm', full_url):
+            elif parsed_netloc.endswith("cafebiz.vn") and re.search(r'-\d{10,}\.chn$', parsed_path):
                 is_article = True
-            elif "thanhnien.vn" in full_url and re.search(r'-\d{10,}\.htm', full_url):
+            elif parsed_netloc.endswith("tuoitre.vn") and re.search(r'-\d{10,}\.htm$', parsed_path):
                 is_article = True
-            elif "vneconomy.vn" in full_url and full_url.endswith(".htm") and parsed_path.count("-") >= 6:
-                if not any(sect in full_url for sect in ["/tai-chinh.htm", "/kinh-te.htm", "/chung-khoan.htm", "/ngan-hang.htm", "/index.htm"]):
+            elif parsed_netloc.endswith("thanhnien.vn") and re.search(r'-\d{10,}\.htm$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("vneconomy.vn") and parsed_path.endswith(".htm") and parsed_path.count("-") >= 6:
+                if not any(sect in parsed_path for sect in ["/tai-chinh.htm", "/kinh-te.htm", "/chung-khoan.htm", "/ngan-hang.htm", "/index.htm"]):
                     is_article = True
-            elif "baodautu.vn" in full_url and re.search(r'-d\d{4,}\.html', full_url):
+            elif parsed_netloc.endswith("baodautu.vn") and re.search(r'-d\d{4,}\.html$', parsed_path):
                 is_article = True
-                
-            if is_article and not any(skip in full_url for skip in ["video", "podcast", "photo", "infographic", "media"]):
-                if full_url not in links:
+            elif parsed_netloc.endswith("vietnamnet.vn") and re.search(r'-\d{6,}\.html$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("thoibaotaichinhvietnam.vn") and re.search(r'-\d{5,}\.html$', parsed_path):
+                is_article = True
+            elif parsed_netloc.endswith("nguoiquansat.vn") and re.search(r'-\d{5,}\.html$', parsed_path):
+                is_article = True
+
+            if is_article and not any(skip in parsed_path.lower() for skip in ["video", "podcast", "photo", "infographic", "media", "/du-lich/"]):
+                canon = normalize_url(full_url)
+                if canon not in seen_canon and canon not in self.prior_urls:
+                    seen_canon.add(canon)
                     links.append(full_url)
 
-        # For baodautu.vn, sort links descending by numeric article ID (-d<id>.html) so newest articles come first
-        if "baodautu.vn" in publisher_domain or "baodautu.vn" in feed_url:
-            def _bdt_id(u: str) -> int:
-                m_id = re.search(r'-d(\d+)\.html', u)
-                return int(m_id.group(1)) if m_id else 0
-            links.sort(key=_bdt_id, reverse=True)
+        # Sort links descending by trailing numeric article ID so newest articles come first
+        if any(dom in publisher_domain or dom in feed_url for dom in (
+            "baodautu.vn", "cafef.vn", "cafebiz.vn", "tuoitre.vn", "thanhnien.vn",
+            "vietnamnet.vn", "thoibaotaichinhvietnam.vn", "nguoiquansat.vn"
+        )):
+            links.sort(key=self._extract_numeric_article_id, reverse=True)
 
         return links
 
-    def discover_live_candidates(self, feeds: list = None, max_articles: int = 80) -> tuple:
+    def discover_live_candidates(self, feeds: list = None, max_articles: int = 140) -> tuple:
         """
         Executes genuine multi-source live news research across monitored financial publications:
-        1. Queries feeds across CafeF, Tuổi Trẻ, Thanh Niên, VnEconomy, and Báo Đầu tư.
-        2. Gathers links per publisher.
+        1. Queries feeds across CafeF, VnEconomy, Tuổi Trẻ, Thanh Niên, Báo Đầu tư, VietNamNet, Thời báo Tài chính, CafeBiz, Người Quan Sát.
+        2. Gathers links per publisher, skipping URLs already published in prior editions.
         3. Applies balanced round-robin interleaving to enforce publisher diversity.
         4. Extracts clean article body (stripping footers/navs).
         5. Extracts true publication timestamp (hierarchy without retrieval fallback).
@@ -1506,14 +1644,22 @@ class DailyNewsCollector:
                 ("baodautu.vn", "https://baodautu.vn/kinh-te-so-d23/"),
                 ("baodautu.vn", "https://baodautu.vn/dau-tu-d3/"),
                 ("baodautu.vn", "https://baodautu.vn/doanh-nghiep-d2/"),
-                ("laodong.vn", "https://laodong.vn/tien-te-dau-tu")
+                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh/tai-chinh"),
+                ("vietnamnet.vn", "https://vietnamnet.vn/kinh-doanh"),
+                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem"),
+                ("thoibaotaichinhvietnam.vn", "https://thoibaotaichinhvietnam.vn/chung-khoan"),
+                ("cafebiz.vn", "https://cafebiz.vn/tai-chinh.chn"),
+                ("cafebiz.vn", "https://cafebiz.vn/vi-mo.chn"),
+                ("nguoiquansat.vn", "https://nguoiquansat.vn/tai-chinh-ngan-hang")
             ]
 
-        # 1. Gather links per publisher
+        # 1. Gather links per publisher (pre-filtering previously published URLs)
         publisher_links = {}
+        publisher_seen_canon = {}
         for pub, feed_url in feeds:
             if pub not in publisher_links:
                 publisher_links[pub] = []
+                publisher_seen_canon[pub] = set()
                 
             res = self.fetch_url(feed_url)
             code = res["statusCode"]
@@ -1542,12 +1688,19 @@ class DailyNewsCollector:
                 
             feed_links = self.extract_article_links_from_feed(pub, feed_url, html_text)
             for fl in feed_links:
-                if fl not in publisher_links[pub]:
-                    publisher_links[pub].append(fl)
+                canon_fl = normalize_url(fl)
+                if canon_fl in self.prior_urls or canon_fl in publisher_seen_canon[pub]:
+                    continue
+                publisher_seen_canon[pub].add(canon_fl)
+                publisher_links[pub].append(fl)
+
+        for pub, fl_list in publisher_links.items():
+            if pub != "vneconomy.vn":
+                fl_list.sort(key=self._extract_numeric_article_id, reverse=True)
 
         # 2. Balanced Round-Robin Selection to enforce multi-source diversity
         selected_article_queue = []
-        max_per_pub = 20
+        max_per_pub = 30
         publishers = list(publisher_links.keys())
         
         for round_idx in range(max_per_pub):
@@ -1712,8 +1865,8 @@ class DailyNewsCollector:
         
         if bucket == "FUTURE_TIMESTAMP":
             return False, f"FUTURE_TIMESTAMP (age: {age_hours:.2f}h)", age_hours
-        if bucket == "STALE_OVER_72H":
-            return False, f"STALE_CONTENT (age: {age_hours:.2f}h > 72.0h)", age_hours
+        if bucket == "STALE_OVER_72H" or age_hours > MAX_AGE_HOURS:
+            return False, f"STALE_CONTENT (age: {age_hours:.2f}h > {MAX_AGE_HOURS:.1f}h)", age_hours
         if bucket == "TIMESTAMP_UNVERIFIED":
             return False, "TIMESTAMP_UNVERIFIED", None
             
@@ -1723,9 +1876,11 @@ class DailyNewsCollector:
         """
         Processes candidate events:
         - Filters out non-financial topics (REJECTED_IRRELEVANT)
-        - Validates freshness and age bounds
+        - Filters out already-published URLs/headlines from prior daily editions
+        - Validates freshness and age bounds (<= 48.0h ceiling)
         - Classifies candidates into valid and rejected pools
-        - Applies freshness priority sorting: 0-24h first, then 24-48h, then 48-72h
+        - Applies freshness priority sorting: 0-24h first, then 24-48h
+        - Deduplicates same-day duplicate stories across publishers
         - Checks quota (25 events) and 0-24h ratio (>= 80%)
         Returns (status_code: str, report_dict: dict)
         """
@@ -1742,6 +1897,28 @@ class DailyNewsCollector:
                 c["verificationStatus"] = "REJECTED"
                 c["rejectionReason"] = f"REJECTED_IRRELEVANT: {c.get('irrelevanceReason', 'Non-financial content')}"
                 c["disposition"] = "REJECTED_IRRELEVANT"
+                rejected_pool.append(c)
+                continue
+
+            # 1b. Cross-edition duplicate check against prior daily editions
+            hl_str = (c.get("headline") or "").strip()
+            prior_match_reason = None
+            if c["canonicalUrl"] in self.prior_urls:
+                prior_match_reason = f"REJECTED_ALREADY_PUBLISHED_PRIOR_EDITION (canonicalUrl={c['canonicalUrl']})"
+            elif self.prior_titles and hl_str:
+                cand_tokens = headline_tokens(hl_str)
+                for p_date, p_hl, p_toks in self.prior_titles:
+                    sim = headline_similarity(cand_tokens, p_toks)
+                    if sim >= 0.60:
+                        prior_match_reason = (
+                            f"REJECTED_ALREADY_PUBLISHED_PRIOR_EDITION "
+                            f"(sim={sim:.2f} with {p_date}: {p_hl[:60]})"
+                        )
+                        break
+            if prior_match_reason:
+                c["verificationStatus"] = "REJECTED"
+                c["rejectionReason"] = prior_match_reason
+                c["disposition"] = "REJECTED_ALREADY_PUBLISHED_PRIOR_EDITION"
                 rejected_pool.append(c)
                 continue
             
@@ -1803,6 +1980,41 @@ class DailyNewsCollector:
             key=lambda c: (1 if c.get("freshnessBucket") == "0_TO_24H" else 0, compute_candidate_priority(c)),
             reverse=True
         )
+
+        # Deduplicate same-edition URLs and same-story multi-publisher headlines (highest-priority wins)
+        dedup_valid_pool = []
+        seen_valid_urls = set()
+        seen_valid_titles = []
+        for cand in valid_pool:
+            cand_url = cand.get("canonicalUrl") or normalize_url(cand.get("candidateUrl") or "")
+            cand_hl = (cand.get("headline") or "").strip()
+            cand_toks = headline_tokens(cand_hl)
+
+            dup_reason = None
+            if cand_url and cand_url in seen_valid_urls:
+                dup_reason = f"Duplicate canonical URL within same edition ({cand_url})"
+            elif cand_toks:
+                for sel_hl, sel_toks in seen_valid_titles:
+                    sim = headline_similarity(cand_toks, sel_toks)
+                    if sim >= 0.50:
+                        dup_reason = f"Duplicate story within same edition (sim={sim:.2f} with '{sel_hl[:60]}')"
+                        break
+
+            if dup_reason:
+                dup_copy = dict(cand)
+                dup_copy["verificationStatus"] = "REJECTED"
+                dup_copy["disposition"] = "REJECTED_DUPLICATE_STORY_SAME_EDITION"
+                dup_copy["rejectionReason"] = dup_reason
+                rejected_pool.append(dup_copy)
+                continue
+
+            dedup_valid_pool.append(cand)
+            if cand_url:
+                seen_valid_urls.add(cand_url)
+            if cand_toks:
+                seen_valid_titles.append((cand_hl, cand_toks))
+
+        valid_pool = dedup_valid_pool
         total_valid = len(valid_pool)
         
         # Check quota
@@ -1817,11 +2029,12 @@ class DailyNewsCollector:
                 "selectedCandidates": valid_pool,
                 "rejectedCount": len(rejected_pool),
                 "rejectedCandidates": rejected_pool,
-                "shortfallReason": f"Discovered {total_valid} valid events meeting freshness criteria; requires {TARGET_EVENTS}. Zero fabrication enforced."
+                "shortfallReason": f"Discovered {total_valid} valid unique events meeting freshness criteria; requires {TARGET_EVENTS}. Zero fabrication enforced."
             }
             
         selected = valid_pool[:TARGET_EVENTS]
         excess = valid_pool[TARGET_EVENTS:]
+
         for ex in excess:
             ex_copy = dict(ex)
             ex_copy["disposition"] = "EXCESS_NOT_SELECTED"

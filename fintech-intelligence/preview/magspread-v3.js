@@ -547,10 +547,12 @@ function renderPulseCard(m) {
 
   return `
     <div class="ms-ticker-card status-${escapeHtml(st)}" onclick="openPulseDetail('${escapeHtml(m.key)}')" title="Bấm để xem đối soát chi tiết và bài báo gốc">
-      <div class="ms-ticker-top">
+      <div class="ms-ticker-head">
         <span class="ms-ticker-title">${escapeHtml(shortCode)}</span>
-        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
         <span class="ms-ticker-badge ${changeClass}">${changeIcon} ${escapeHtml(changeDisplay || changeText)}</span>
+      </div>
+      <div class="ms-ticker-val-row">
+        <span class="ms-ticker-val">${escapeHtml(m.value)}</span>
       </div>
       <div class="ms-ticker-mid">
         <span class="ms-ticker-sub">${escapeHtml(subRef)}</span>
@@ -1088,11 +1090,11 @@ function openArticleReader(eventId) {
           const lensTxt = item.sectionE_fintechLens;
           const isNonDirect = lensTxt.includes('Không áp dụng') || lensTxt.includes('Không liên quan') || lensTxt.includes('Không phát sinh');
           return `
-        <section style="background-color:${isNonDirect ? '#F5F5F4' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.85;' : 'border-left:3px solid var(--ms-secondary);'}">
-          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? '#78716C' : 'var(--ms-secondary)'}; margin-bottom:8px;">
+        <section style="background-color:${isNonDirect ? 'var(--ms-surface-subtle)' : 'var(--ms-surface-alt)'}; padding:16px 20px; border:1px solid var(--ms-border); ${isNonDirect ? 'opacity:0.9;' : 'border-left:3px solid var(--ms-secondary);'}">
+          <h4 style="font-family:var(--font-headline); font-size:0.9375rem; text-transform:uppercase; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-secondary)'}; margin-bottom:8px;">
             ${isNonDirect ? 'LĂNG KÍNH THANH TOÁN &amp; B2B' : 'GÓC NHÌN FINTECH &amp; B2B (PAYOO)'}
           </h4>
-          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? '#78716C' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
+          <p style="margin:0; font-size:0.875rem; line-height:1.65; color:${isNonDirect ? 'var(--ms-text-muted)' : 'var(--ms-text)'};">${escapeHtml(lensTxt)}</p>
         </section>`;
         })() : ''}
 
