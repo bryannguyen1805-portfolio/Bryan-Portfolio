@@ -116,6 +116,12 @@ except ImportError:
     ED34_COVER_OVERRIDE = {}
     ED34_ARTICLE_INTEL = {}
 
+try:
+    from ed35_editorial_content import ED35_COVER_OVERRIDE, ED35_ARTICLE_INTEL
+except ImportError:
+    ED35_COVER_OVERRIDE = {}
+    ED35_ARTICLE_INTEL = {}
+
 from html.parser import HTMLParser
 
 
@@ -659,8 +665,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (ED34, ED33, ED32, ED31, ED30 or ED29)
-    if "19/11/2026" in str(edition_date) or "2026-11-19" in str(edition_date):
+    # Check explicit curated lead override first (ED35, ED34, ED33, ED32, ED31, ED30 or ED29)
+    if "20/11/2026" in str(edition_date) or "2026-11-20" in str(edition_date):
+        cover_override = ED35_COVER_OVERRIDE
+    elif "19/11/2026" in str(edition_date) or "2026-11-19" in str(edition_date):
         cover_override = ED34_COVER_OVERRIDE
     elif "18/11/2026" in str(edition_date) or "2026-11-18" in str(edition_date):
         cover_override = ED33_COVER_OVERRIDE
@@ -1076,6 +1084,7 @@ def main():
     # 3. Build Verified Eligible News List with rich, event-specific analysis
     eligible_news = []
     records = news_raw.get("records", [])
+    is_ed35 = ("20/11/2026" in str(edition_date_display) or "2026-11-20" in str(edition_date_raw))
     is_ed34 = ("19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw))
     is_ed33 = ("18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw))
     is_ed32 = ("17/11/2026" in str(edition_date_display) or "2026-11-17" in str(edition_date_raw))
@@ -1097,7 +1106,9 @@ def main():
             pub_display = pub_time[:16].replace("T", " ")
 
         curated = None
-        if is_ed34:
+        if is_ed35:
+            curated = ED35_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed34:
             curated = ED34_ARTICLE_INTEL.get(origin_evt_id)
         elif is_ed33:
             curated = ED33_ARTICLE_INTEL.get(origin_evt_id)
@@ -1313,7 +1324,110 @@ def main():
         }
     }
 
-    if "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
+    if "20/11/2026" in str(edition_date_display) or "2026-11-20" in str(edition_date_raw):
+        CORE_4_DEFS = [
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
+                "articleTitle": "Tỷ giá USD hôm nay 20/11: Tỷ giá trung tâm lập đỉnh mới 25.659 đồng, thị trường đặt cược Fed tăng lãi suất ba lần",
+                "value": "25.659 VND/USD",
+                "unit": "VND/USD",
+                "asOf": "2026-11-20",
+                "referenceValue": "NHNN: 25.659 VND/USD (+13đ) | VCB: 25.530 - 25.940 VND/USD (+20đ) | DXY: 103,88 điểm",
+                "change": "+13 VND/USD lên đỉnh mới (VCB bán tăng 20đ lên 25.940đ)",
+                "compactDelta": "+13đ (+0,05%)",
+                "compactSubRef": "VCB: 25.530 - 25.940 · DXY: 103,88",
+                "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-20-11-ty-gia-trung-tam-lap-dinh-moi-25-659-dong-thi-truong-dat-cuoc-fed-tang-lai-suat-ba-lan-207252.html",
+                "secondarySourceUrls": [
+                    "https://thoibaotaichinhvietnam.vn/search_enginer.html?p=search&q=t%E1%BB%B7%20gi%C3%A1%20USD",
+                    "https://thoibaotaichinhvietnam.vn/ngan-hang-bao-hiem/ty-gia"
+                ],
+                "statusReason": "Sáng 20/11, Ngân hàng Nhà nước nâng tỷ giá trung tâm thêm 13 đồng lên đỉnh lịch sử 25.659 VND/USD với biên độ +/-5% trong khung 24.376,05 – 26.941,95 VND/USD. Giá USD tại Vietcombank tăng 20 đồng lên 25.530–25.940 VND/USD và thị trường tự do lên 26.140–26.190 VND/USD khi DXY đạt 103,88 điểm.",
+                "financialInterpretation": "Tỷ giá trung tâm lập đỉnh mới 25.659 VND/USD khiến các doanh nghiệp nhập khẩu nguyên liệu mùa cao điểm cuối năm đối mặt áp lực chi phí vốn gia tăng nếu thanh toán chậm 1–3 tháng. Tích hợp Payoo SmartPOS hỗ trợ Dynamic Currency Conversion (DCC) giúp cửa hàng bán lẻ đón khách quốc tế khóa tỷ giá quy đổi minh bạch theo thời gian thực.",
+                "monitoringWatchpoint": "Theo dõi phản ứng chỉ số DXY quanh mốc 104 điểm và chênh lệch giữa tỷ giá tự do 26.190đ với giá bán ngân hàng thương mại.",
+                "status": "negative",
+                "verificationStatus": "VERIFIED",
+                "sha256": "6e9042166973619763787d709b09424b4add36873e579d341271210d9f8db3be",
+                "evidencePath": "raw_evidence_store/market_pulse/MP01/evidence_mp01_6e90421669.html",
+                "publishedAt": "2026-11-20T08:53:49+07:00",
+                "observationAt": "2026-11-20T08:53:49+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["maxDeposit12M"],
+                "articleTitle": "Lãi suất Big4 cao nhất 5,5%/năm và mặt bằng 12T NHTM ngày 19-20/11",
+                "value": "7,1 %/năm",
+                "unit": "%/năm",
+                "asOf": "2026-11-19",
+                "referenceValue": "Big4 tại quầy: 5,4–5,5%/năm | 12T NHTMCP thường: 6,7 - 7,1%/năm | Online 20/11: VIB 7,0% · Sacombank 6,8%",
+                "change": "Mặt bằng 12T điều kiện thường tối đa 7,1%/năm; kênh online VIB 7,0% & Sacombank 6,8%",
+                "compactDelta": "5,4% - 7,1%",
+                "compactSubRef": "Big4: 5,4–5,5% · NHTMCP: 6,7–7,1%",
+                "dailyArticleUrl": "https://laodong.vn/kinh-doanh/lai-suat-big4-cao-nhat-55nam-gui-150-trieu-dong-nhan-bao-nhieu-tien-1802837.ldo",
+                "secondarySourceUrls": [
+                    "https://laodong.vn/tien-te-dau-tu"
+                ],
+                "statusReason": "Theo khảo sát trên Báo Lao Động kết hợp biểu niêm yết sáng 20/11, nhóm Big4 tiếp tục giữ trần tại quầy 5,5%/năm trong khi kỳ hạn 12 tháng điều kiện thường khối NHTMCP giữ quanh vùng cao nhất 7,0%–7,1%/năm (kênh trực tuyến tại VIB 7,0%/năm, Sacombank 6,8%/năm, VPBank 6,7%/năm).",
+                "financialInterpretation": "Mặt bằng huy động 12 tháng ổn định ở ngưỡng 6,7%–7,1%/năm cùng sự phân hóa lãi suất cho vay tháng 10 đòi hỏi nhà bán lẻ tối ưu tốc độ quay vòng dòng tiền. Liên kết Payoo triển khai Trả góp 0% đa thẻ ngân hàng giúp điểm bán giữ doanh số hàng giá trị cao mà không chịu thêm gánh nặng vốn lưu động.",
+                "monitoringWatchpoint": "Theo dõi động thái điều chỉnh biểu lãi suất tiền gửi trực tuyến tuần cuối tháng 11 và áp lực thanh khoản liên ngân hàng.",
+                "status": "positive",
+                "verificationStatus": "VERIFIED",
+                "sha256": "dccec296c21da7371f2bcf95e2581b61021b3e93b459ce7e9db369962f51b8e8",
+                "evidencePath": "raw_evidence_store/market_pulse/MP03/laodong_1802837_verified.txt",
+                "publishedAt": "2026-11-19T08:30:00+07:00",
+                "observationAt": "2026-11-19T08:30:00+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["vnIndex"],
+                "sourceName": "Báo Tuổi Trẻ (tuoitre.vn)",
+                "sourceShortName": "Báo Tuổi Trẻ",
+                "sourceUrl": "https://tuoitre.vn/vn-index-giam-3-phien-lien-tiep-ve-duoi-1700-diem-100261119154114635.htm",
+                "articleTitle": "VN-Index giảm 3 phiên liên tiếp, về dưới 1.700 điểm",
+                "value": "1.689,62 Điểm",
+                "unit": "Điểm",
+                "asOf": "2026-11-19",
+                "referenceValue": "Chốt phiên 19/11: 1.689,62 điểm (-13,39đ, -0,79%) | GTGD HoSE: 15.000 tỷ đồng | Hỗ trợ: 1.680 điểm",
+                "change": "-13,39 điểm (-0,79%), giảm 3 phiên liên tiếp xuống dưới mốc 1.700 điểm",
+                "compactDelta": "-13,39đ (-0,79%)",
+                "compactSubRef": "GTGD HoSE: 15.000 tỷ · Hỗ trợ: 1.680",
+                "dailyArticleUrl": "https://tuoitre.vn/vn-index-giam-3-phien-lien-tiep-ve-duoi-1700-diem-100261119154114635.htm",
+                "secondarySourceUrls": [
+                    "https://tuoitre.vn/chung-khoan.htm"
+                ],
+                "statusReason": "Theo Báo Tuổi Trẻ và thống kê HoSE phiên liền trước 19/11, áp lực bán ròng khối ngoại (-996 tỷ trên HoSE) trong ngày đáo hạn phái sinh kéo VN-Index lùi 13,39 điểm (-0,79%) xuống 1.689,62 điểm với thanh khoản HoSE đạt 15.000 tỷ đồng.",
+                "financialInterpretation": "Nhịp điều chỉnh đưa định giá P/E toàn thị trường về vùng 10,8 lần giữa lúc Dow Jones giảm hơn 1.100 điểm buộc dòng tiền ưu tiên doanh nghiệp có dòng tiền bán lẻ thực chất. Hạ tầng thu hộ tự động và đối soát đa kênh qua Payoo giúp đơn vị kinh doanh kiểm soát thanh khoản chặt chẽ theo ngày.",
+                "monitoringWatchpoint": "Theo dõi lực cầu cân bằng quanh vùng hỗ trợ ngắn hạn 1.680 điểm và áp lực bán ròng khối ngoại trên HoSE phiên 20/11.",
+                "status": "negative",
+                "verificationStatus": "VERIFIED",
+                "sha256": "542a61df19f7f3844654952c235bc1d5ea2b9d725c7c33df71a94908885f341c",
+                "evidencePath": "raw_evidence_store/market_pulse/MP04/evidence_mp04_542a61df19.html",
+                "publishedAt": "2026-11-19T16:04:00+07:00",
+                "observationAt": "2026-11-19T16:04:00+07:00"
+            },
+            {
+                **LOCKED_MARKET_PULSE_REGISTRY["inboundTourists"],
+                "articleTitle": "Việt Nam đón 19,5 triệu khách quốc tế, khách châu Âu tăng mạnh",
+                "value": "19,5 Triệu lượt",
+                "unit": "Triệu lượt",
+                "asOf": "10 tháng 2026",
+                "referenceValue": "10 tháng 2026: Đón 19,5 triệu lượt (+13,8% YoY) | Châu Á: 14,6 triệu lượt | Châu Âu: 3,22 triệu lượt",
+                "change": "+13,8% YoY sau 10 tháng; hoàn thành 78% mục tiêu cả năm (25 triệu lượt)",
+                "compactDelta": "+13,8% YoY",
+                "compactSubRef": "Châu Á: 14,6M · Châu Âu: 3,22M (10T)",
+                "dailyArticleUrl": "https://thanhnien.vn/viet-nam-don-195-trieu-khach-quoc-te-khach-chau-au-tang-manh-185261103141701446.htm",
+                "secondarySourceUrls": [
+                    "https://thanhnien.vn/tim-kiem.htm?keywords=KH%C3%81CH%20QU%E1%BB%90C%20T%E1%BA%BE"
+                ],
+                "statusReason": "Theo Báo Thanh Niên và Cục Du lịch Quốc gia Việt Nam, lũy kế 10 tháng năm 2026 Việt Nam đón 19,5 triệu lượt khách quốc tế (+13,8% YoY), hoàn thành 78% mục tiêu 25 triệu lượt cả năm, trong đó thị trường châu Á đạt 14,6 triệu lượt và châu Âu tăng lên 3,22 triệu lượt.",
+                "financialInterpretation": "Lượng khách quốc tế duy trì 19,5 triệu lượt cùng động lực đăng cai Năm APEC 2027 tạo lực đỡ trực tiếp cho nhóm lưu trú, hàng không và bán lẻ du lịch cao điểm cuối năm. Trang bị máy Payoo SmartPOS All-in-One chấp nhận đa thẻ quốc tế và VietQR Global giúp điểm bán nắm bắt trọn vẹn doanh thu ngoại tệ.",
+                "monitoringWatchpoint": "Theo dõi số liệu thống kê khách quốc tế tháng 11 và tốc độ triển khai điểm chấp nhận thanh toán QR xuyên biên giới tại các đô thị du lịch.",
+                "status": "positive",
+                "verificationStatus": "VERIFIED",
+                "sha256": "8736f03a06cdf6d65b71294e5df41ea9231c27057f0a4b33720aed487328e65e",
+                "evidencePath": "raw_evidence_store/market_pulse/MP08/evidence_mp08_8736f03a06.html",
+                "publishedAt": "2026-11-03T14:17:00+07:00",
+                "observationAt": "2026-11-03T14:17:00+07:00"
+            }
+        ]
+    elif "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
         CORE_4_DEFS = [
             {
                 **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
@@ -1673,7 +1787,9 @@ def main():
         ]
 
     # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
-    if "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
+    if "20/11/2026" in str(edition_date_display) or "2026-11-20" in str(edition_date_raw):
+        raw_indicators = []  # Curated 20/11 values take full precedence
+    elif "19/11/2026" in str(edition_date_display) or "2026-11-19" in str(edition_date_raw):
         raw_indicators = []  # Curated 19/11 values take full precedence
     elif "18/11/2026" in str(edition_date_display) or "2026-11-18" in str(edition_date_raw):
         raw_indicators = []  # Curated 18/11 values take full precedence
