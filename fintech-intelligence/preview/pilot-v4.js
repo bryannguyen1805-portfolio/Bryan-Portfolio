@@ -535,22 +535,21 @@
     let html = richGroups
       .map((g) => {
         const first = g.items[0];
-        const nextThree = g.items.slice(1, 4);
-        const extras = g.items.slice(4);
+        const nextFour = g.items.slice(1, 5);
         return `
         <div class="v4-cat-cluster" data-cat-cluster="${esc(g.key)}">
           <div class="v4-cat-cluster-head">
             <h2 class="v4-cat-heading">${esc(g.label)}</h2>
             <div class="v4-cat-actions">
               <span class="v4-cat-count">${g.items.length} bản tin</span>
-              <button type="button" class="v4-cat-more-btn" data-filter-cat="${esc(g.key)}">Xem chuyên mục &rarr;</button>
+              <button type="button" class="v4-cat-more-btn" data-filter-cat="${esc(g.key)}">Xem tất cả ${g.items.length} tin &rarr;</button>
             </div>
           </div>
 
           <div class="v4-cat-rich-grid">
             <article class="v4-cat-lead" data-open-event="${esc(first.eventId)}">
-              <div class="v4-thumb-wrap">${imgTag(first.imageUrl, first.headline, 'v4-thumb-img')}</div>
-              <div>
+              <div class="v4-cat-lead-media">${imgTag(first.imageUrl, first.headline, 'v4-cat-lead-img')}</div>
+              <div class="v4-cat-lead-body">
                 <h3 class="v4-cat-lead-title">${esc(first.headline || first.title)}</h3>
                 <p class="v4-cat-lead-sapo">${esc(first.summary || '')}</p>
                 <div class="v4-article-meta">
@@ -562,15 +561,18 @@
             </article>
 
             <div class="v4-cat-stack">
-              ${nextThree
+              ${nextFour
                 .map(
                   (it) => `
                 <article class="v4-cat-stack-item" data-open-event="${esc(it.eventId)}">
-                  <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
-                  <div class="v4-article-meta">
-                    <span>${esc(sourceLabel(it))}</span>
-                    <span aria-hidden="true">·</span>
-                    <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                  <div class="v4-cat-stack-thumb">${imgTag(it.imageUrl, it.headline, 'v4-thumb-img')}</div>
+                  <div class="v4-cat-stack-body">
+                    <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
+                    <div class="v4-article-meta">
+                      <span>${esc(sourceLabel(it))}</span>
+                      <span aria-hidden="true">·</span>
+                      <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                    </div>
                   </div>
                 </article>
               `
@@ -578,31 +580,6 @@
                 .join('')}
             </div>
           </div>
-
-          ${
-            extras.length
-              ? `
-            <div class="v4-cat-extra-wrap">
-              <div class="v4-cat-extra-grid">
-                ${extras
-                  .map(
-                    (it) => `
-                  <article class="v4-cat-extra-item" data-open-event="${esc(it.eventId)}">
-                    <h4 class="v4-cat-extra-title">${esc(it.headline || it.title)}</h4>
-                    <div class="v4-article-meta">
-                      <span>${esc(sourceLabel(it))}</span>
-                      <span aria-hidden="true">·</span>
-                      <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
-                    </div>
-                  </article>
-                `
-                  )
-                  .join('')}
-              </div>
-            </div>
-          `
-              : ''
-          }
         </div>
       `;
       })
@@ -640,11 +617,14 @@
                           .map(
                             (it) => `
                           <article class="v4-cat-stack-item" data-open-event="${esc(it.eventId)}">
-                            <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
-                            <div class="v4-article-meta">
-                              <span>${esc(sourceLabel(it))}</span>
-                              <span aria-hidden="true">·</span>
-                              <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                            <div class="v4-cat-stack-thumb">${imgTag(it.imageUrl, it.headline, 'v4-thumb-img')}</div>
+                            <div class="v4-cat-stack-body">
+                              <h4 class="v4-cat-stack-title">${esc(it.headline || it.title)}</h4>
+                              <div class="v4-article-meta">
+                                <span>${esc(sourceLabel(it))}</span>
+                                <span aria-hidden="true">·</span>
+                                <span class="v4-mono-time">${esc(extractTimeHM(it))}</span>
+                              </div>
                             </div>
                           </article>
                         `
