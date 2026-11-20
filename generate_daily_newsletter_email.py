@@ -3,18 +3,15 @@
 """
 generate_daily_newsletter_email.py
 -----------------------------------------------------------------------------
-BRYAN FINTECH INTELLIGENCE — DAILY EMAIL NEWSLETTER GENERATOR (V1.2 PREVIEW)
-Đặc trưng thiết kế:
-- Thừa hưởng 100% DNA thiết kế MagSpread độc bản của Bryan News:
-  + Nền giấy kem ấm áp: #FDF2E9 (Warm Cream)
-  + Màu chủ đạo: #134E4A (Deep Teal) và điểm nhấn đỏ báo chí #BE123C (Rose Accent)
-  + Font chữ hiện đại: 'Be Vietnam Pro', -apple-system, Segoe UI, Roboto, Arial
-  + Đổi toàn bộ "Web App" -> "Bnews".
-  + Các bảng Market Pulse đồng đều, ngang hàng 100%.
-  + LOẠI BỎ 100% EMOJI 4-BYTE: Thay toàn bộ bằng ký tự chuẩn BMP '■' và '+' 
-    đảm bảo KHÔNG BAO GIỜ bị lỗi font ô vuông hỏi chấm () trên Gmail & Mobile.
-  + Chuẩn hóa độ rộng 600px tối ưu hiển thị Mobile.
-  + Tối ưu phân cấp thị giác nút bấm: Nút chính đọc tin (Đỏ mận), Nút phụ Subscribe (Deep Teal).
+BRYAN FINTECH INTELLIGENCE — DAILY EMAIL NEWSLETTER GENERATOR (V4.0 INSTITUTIONAL)
+Đồng bộ 100% hệ thiết kế V4.0 Clean Institutional UI của Bnews:
+- Nền trang: #F8FAFC (Cool Slate) — Bề mặt thẻ: #FFFFFF
+- Viền & phân cách: 1px solid #E5E7EB (Flat Institutional, zero box-shadow)
+- Màu chủ đạo: #0A3D7A (Institutional Navy) · Nhấn biên tập: #C8102E (Crimson)
+- Tín hiệu thị trường: #15803D (Tăng/Tích cực) · #C8102E (Giảm/Rủi ro)
+- Typography: 'Be Vietnam Pro' + 'JetBrains Mono' (tabular-nums)
+- Ký tự chuẩn BMP ('·', '→', '↗') tương thích tuyệt đối Gmail, Apple Mail, Outlook.
+- Số lượng tin tự động theo edition-data.json (40 tin · 6 danh mục chuẩn V4.0).
 -----------------------------------------------------------------------------
 """
 
@@ -22,33 +19,58 @@ import os
 import sys
 import json
 import re
-from datetime import datetime
 from html import escape
 
 WORKSPACE_ROOT = "/Users/quangtri/Documents/Bryan-Portfolio-Antigravity"
 SOURCE_JSON = os.path.join(WORKSPACE_ROOT, "fintech-intelligence", "edition-data.json")
-OUT_PREVIEW_PILOT = os.path.join(WORKSPACE_ROOT, "pilot-output", "newsletter-preview.html")
-OUT_PREVIEW_WEB = os.path.join(WORKSPACE_ROOT, "fintech-intelligence", "preview", "newsletter-preview.html")
+OUT_TARGETS = [
+    os.path.join(WORKSPACE_ROOT, "pilot-output", "newsletter-preview.html"),
+    os.path.join(WORKSPACE_ROOT, "fintech-intelligence", "preview", "newsletter-preview.html"),
+    os.path.join(WORKSPACE_ROOT, "fintech-intelligence", "newsletter-preview.html"),
+    os.path.join(WORKSPACE_ROOT, "pilot-output", "daily-run-package", "newsletter-preview.html"),
+]
+
+SITE_BASE_URL = "https://bryanportfolio.io.vn/fintech-intelligence/"
+SUBSCRIBE_URL = "https://bryanportfolio.io.vn/fintech-intelligence/#newsletter"
+
+CAT_ORDER = [
+    "Thanh toán",
+    "Ngân hàng",
+    "Thị trường vốn",
+    "Doanh nghiệp",
+    "Kinh tế vĩ mô",
+    "Bán lẻ, D2C và xu hướng tiêu dùng",
+]
+
+CAT_DISPLAY_MAP = {
+    "Thanh toán": "Thanh toán số",
+    "Ngân hàng": "Ngân hàng",
+    "Thị trường vốn": "Thị trường vốn",
+    "Doanh nghiệp": "Doanh nghiệp",
+    "Kinh tế vĩ mô": "Kinh tế vĩ mô",
+    "Bán lẻ, D2C và xu hướng tiêu dùng": "Bán lẻ & Tiêu dùng",
+}
+
 
 def build_newsletter_html(data: dict) -> str:
-    ed_id = data.get("editionId", "ED-20261116-D01")
-    ed_date = data.get("editionDate", "16/11/2026")
-    day_of_week = data.get("dayOfWeek", "THỨ HAI")
-    session_name = data.get("sessionName", "ẤN BẢN ĐẦU TUẦN")
-    raw_ed_num = data.get("editionNumber", "31")
+    ed_id = data.get("editionId", "ED-20261120-D01")
+    ed_date = data.get("editionDate", "20/11/2026")
+    day_of_week = data.get("dayOfWeek", "THỨ SÁU")
+    session_name = data.get("sessionName", "PHIÊN SÁNG")
+    raw_ed_num = data.get("editionNumber", "35")
 
-    # Clean edition badge
     ed_badge_str = str(raw_ed_num).strip()
     if not ed_badge_str.upper().startswith("ẤN BẢN"):
         ed_badge_str = f"ẤN BẢN SỐ {ed_badge_str}"
+
+    session_display = session_name if ed_date in session_name else f"{session_name} ngày {ed_date}"
 
     es = data.get("editorialSections", {})
     cover = es.get("sec02_coverStory", {})
     synthesis = cover.get("editorialSynthesis", "")
     lead_hl = cover.get("editorialHeadline", "TỔNG QUAN PHIÊN GIAO DỊCH")
     lead_dek = cover.get("dek", "")
-    
-    # 1. Tóm tắt cốt lõi
+
     lead_sapo = (
         cover.get("executiveSummary")
         or cover.get("editorialSummary3Sentences")
@@ -58,7 +80,7 @@ def build_newsletter_html(data: dict) -> str:
     lead_quote = cover.get("supportingQuote", "")
     lead_img = cover.get("imageUrl", "") or cover.get("leadArticle", {}).get("imageUrl", "")
 
-    # 2. Parse 4 synthesis items [1], [2], [3], [4] with nested parentheses support
+    # Parse 4 synthesis items [1]..[4]
     synth_items = []
     if synthesis:
         pattern = r'\(([1-4])\)\s*(.*?)(?=\s*\([1-4]\)|$)'
@@ -72,307 +94,339 @@ def build_newsletter_html(data: dict) -> str:
             for idx, s in enumerate(sents[:4]):
                 synth_items.append((str(idx + 1), s))
 
-    # 3. Market Pulse: 4 cards matching the website exactly
+    # Market Pulse: 4 cards
     raw_mp = data.get("marketPulseSnapshot", [])
     if isinstance(raw_mp, dict):
         raw_mp = raw_mp.get("cards", [])
     mp_cards = raw_mp[:4]
 
-    # 4. News list: Filter to representative/featured news (1 per category)
+    # News list grouped across all 6 V4.0 categories
     news_list = data.get("eligibleNewsList", [])
+    total_news = len(news_list)
+
     cats = {}
     for n in news_list:
         c = n.get("category", "Doanh nghiệp")
         cats.setdefault(c, []).append(n)
 
-    cat_order = ["Ngân hàng", "Thị trường vốn", "Bán lẻ, D2C và xu hướng tiêu dùng", "Thanh toán", "Doanh nghiệp"]
-    featured_news_by_cat = {}
-    for cat_name in cat_order:
-        if cat_name in cats and cats[cat_name]:
-            featured_news_by_cat[cat_name] = cats[cat_name][:1]
+    featured_blocks = []
+    for c_key in CAT_ORDER:
+        items = cats.get(c_key, [])
+        if items:
+            display_name = CAT_DISPLAY_MAP.get(c_key, c_key)
+            featured_blocks.append(
+                _render_featured_category_block(display_name, items[:1], len(items))
+            )
 
-    # HTML Generator with 600px width for bulletproof mobile responsiveness
-    html = f"""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+    featured_count = len(featured_blocks)
+    remaining_news = max(0, total_news - featured_count)
+
+    # Render synthesis rows (V4.0 clean hairline rows)
+    synth_html = ""
+    for idx, (num, txt) in enumerate(synth_items):
+        num_fmt = f"0{num}" if len(str(num)) == 1 else str(num)
+        border_bottom = "border-bottom: 1px solid #E5E7EB;" if idx < len(synth_items) - 1 else ""
+        synth_html += f"""
+        <tr>
+          <td style="padding: 10px 0; {border_bottom} vertical-align: top;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td width="30" style="vertical-align: top; font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; font-weight: 700; color: #0A3D7A; padding-top: 2px; font-variant-numeric: tabular-nums;">
+                  {escape(num_fmt)}
+                </td>
+                <td style="font-size: 13px; line-height: 1.55; color: #374151;">
+                  {escape(txt)}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        """
+
+    lead_image_block = ""
+    if lead_img:
+        lead_image_block = f"""
+        <tr>
+          <td style="padding: 0 24px 16px 24px;">
+            <a href="{SITE_BASE_URL}" target="_blank" style="display: block; text-decoration: none;">
+              <div style="border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; background-color: #F8FAFC;">
+                <img src="{escape(lead_img)}" alt="{escape(lead_hl)}" width="552" class="hero-img" style="width: 100%; max-width: 552px; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block;" />
+              </div>
+            </a>
+          </td>
+        </tr>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bnews FinTech Intelligence — {escape(ed_badge_str)} ({escape(ed_date)})</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bnews | FinTech Intelligence · {escape(ed_badge_str)} ({escape(ed_date)})</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
   <style type="text/css">
-    body, table, td, p, a, li, blockquote {{ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }}
+    body, table, td, a {{ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }}
     table, td {{ mso-table-lspace: 0pt; mso-table-rspace: 0pt; }}
     img {{ -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }}
+    body {{ margin: 0; padding: 0; width: 100% !important; background-color: #F8FAFC; font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #111827; }}
+
     @media only screen and (max-width: 620px) {{
-      .email-container {{ width: 100% !important; max-width: 100% !important; }}
-      .mp-col {{ display: block !important; width: 100% !important; box-sizing: border-box !important; margin-bottom: 12px !important; }}
-      .mp-spacer {{ display: none !important; }}
-      .mobile-padding {{ padding-left: 14px !important; padding-right: 14px !important; }}
-      .mobile-p-top {{ padding-top: 16px !important; }}
-      .cover-title {{ font-size: 19px !important; line-height: 1.35 !important; }}
-      .header-title {{ font-size: 21px !important; }}
-      .hide-mobile {{ display: none !important; }}
-      .stack-mobile {{ display: block !important; width: 100% !important; box-sizing: border-box !important; }}
-      .action-table {{ width: 100% !important; margin-top: 10px !important; }}
-      .action-btn {{ display: block !important; width: 100% !important; text-align: center !important; margin-bottom: 6px !important; box-sizing: border-box !important; }}
-      .featured-img {{ width: 100% !important; max-width: 100% !important; height: auto !important; aspect-ratio: 16/9 !important; max-height: 220px !important; object-fit: cover !important; display: block !important; }}
+      .main-container {{ width: 100% !important; max-width: 100% !important; border-left: none !important; border-right: none !important; border-radius: 0 !important; }}
+      .pad-mobile {{ padding-left: 16px !important; padding-right: 16px !important; }}
+      .stack-col {{ display: block !important; width: 100% !important; max-width: 100% !important; text-align: left !important; padding-bottom: 8px !important; }}
+      .mp-col {{ display: block !important; width: 100% !important; max-width: 100% !important; margin-bottom: 10px !important; box-sizing: border-box !important; }}
+      .mp-spacer {{ display: none !important; height: 0 !important; }}
+      .btn-row {{ display: block !important; width: 100% !important; text-align: left !important; padding-top: 8px !important; }}
+      .btn-inline {{ display: inline-block !important; margin-bottom: 6px !important; }}
+      .hero-img {{ max-height: 220px !important; }}
+      .featured-img {{ max-height: 200px !important; }}
       .nowrap-badge {{ white-space: nowrap !important; }}
     }}
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #FDF2E9; font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1C1917; -webkit-font-smoothing: antialiased; line-height: 1.5;">
+<body style="margin: 0; padding: 0; background-color: #F8FAFC;">
 
-  <!-- PREVIEW TEXT (HIDDEN IN EMAIL CLIENTS) -->
-  <div style="display: none; font-size: 1px; color: #FDF2E9; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Bnews Bản tin tài chính & ngân hàng ngày {escape(ed_date)}: Đúc kết 4 chuyển động lớn, 4 chỉ số Market Pulse và tiêu điểm 25 sự kiện xác minh.
+  <!-- PREHEADER -->
+  <div style="display: none; font-size: 1px; color: #F8FAFC; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+    {escape(ed_badge_str)} · {escape(ed_date)} — {escape(lead_hl)} | {total_news} tin tức Tài chính &amp; Ngân hàng đã xác minh.
   </div>
 
-  <!-- MAIN EMAIL CONTAINER (600px standard for bulletproof email rendering) -->
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FDF2E9; padding: 16px 4px;">
+  <!-- OUTER WRAPPER -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC;">
     <tr>
-      <td align="center">
-        <table class="email-container" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%; background-color: #FFFFFF; border: 1px solid #E7E5E4; box-shadow: 0 4px 16px rgba(19, 78, 74, 0.06);">
-          
-          <!-- TOP MASTHEAD HEADER -->
+      <td align="center" style="padding: 20px 10px;">
+
+        <!-- MAIN CONTAINER (600px MAX-WIDTH, FLAT INSTITUTIONAL V4.0) -->
+        <table border="0" cellpadding="0" cellspacing="0" width="600" class="main-container" style="max-width: 600px; width: 100%; background-color: #FFFFFF; border: 1px solid #E5E7EB; border-top: 3px solid #0A3D7A; border-radius: 4px; overflow: hidden;">
+
+          <!-- 1. V4.0 INSTITUTIONAL MASTHEAD -->
           <tr>
-            <td class="mobile-padding" style="background-color: #134E4A; padding: 22px 24px; border-bottom: 3px solid #BE123C;">
+            <td style="background-color: #FFFFFF; padding: 18px 24px; border-bottom: 1px solid #E5E7EB;" class="pad-mobile">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td class="stack-mobile" style="vertical-align: middle;">
-                    <div style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #F7EBE0; margin-bottom: 4px;">
-                      FINTECH & FINANCIAL INTELLIGENCE • {escape(day_of_week)}, {escape(ed_date)}
+                  <td class="stack-col" style="vertical-align: middle;">
+                    <div style="font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.9px; color: #6B7280; text-transform: uppercase; margin-bottom: 5px;">
+                      FINTECH INTELLIGENCE · {escape(day_of_week)}, {escape(ed_date)}
                     </div>
-                    <div class="header-title" style="font-size: 22px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.5px; line-height: 1.2;">
-                      BNEWS <span style="font-weight: 300; opacity: 0.85;">| BẢN TIN TÀI CHÍNH</span>
+                    <div style="font-size: 20px; font-weight: 800; color: #0A3D7A; letter-spacing: -0.4px; line-height: 1.15; white-space: nowrap;">
+                      BNEWS <span style="font-weight: 400; color: #D1D5DB; margin: 0 4px;">|</span> <span style="font-weight: 600; color: #111827; font-size: 15px; letter-spacing: 0;">BẢN TIN TÀI CHÍNH</span>
                     </div>
                   </td>
-                  <td class="stack-mobile" align="right" style="vertical-align: middle;">
-                    <span style="display: inline-block; background-color: #0F3D3A; color: #FFFFFF; font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; padding: 5px 10px; border: 1px solid #2DD4BF; border-radius: 2px; margin-top: 6px;">
+                  <td class="stack-col" align="right" style="vertical-align: middle;">
+                    <div style="display: inline-block; background-color: #EFF6FF; border: 1px solid #BFDBFE; color: #0A3D7A; padding: 5px 10px; border-radius: 3px; font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap;">
                       {escape(ed_badge_str)}
-                    </span>
+                    </div>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- BNEWS TOP ACTION BAR (RESPONSIVE BUTTONS) -->
+          <!-- 2. ACTION BAR (SLATE UTILITY STRIP) -->
           <tr>
-            <td class="mobile-padding" style="background-color: #F7EBE0; padding: 10px 24px; border-bottom: 1px solid #E7E5E4;">
+            <td style="background-color: #F8FAFC; padding: 10px 24px; border-bottom: 1px solid #E5E7EB;" class="pad-mobile">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td class="stack-mobile" style="font-size: 12px; color: #44403C; font-weight: 500; vertical-align: middle; padding: 4px 0;">
-                    Phiên: <strong>{escape(session_name)}</strong> • 25 Tin xác minh 0–24h
+                  <td class="stack-col" style="font-size: 11px; color: #374151; font-weight: 500; vertical-align: middle; line-height: 1.4;">
+                    <strong style="color: #111827;">{escape(session_display)}</strong> · <span style="font-family: 'JetBrains Mono', monospace; color: #0A3D7A; font-weight: 700; font-variant-numeric: tabular-nums;">{total_news}</span> tin xác minh 0–24h
                   </td>
-                  <td class="stack-mobile" align="right" style="vertical-align: middle;">
-                    <!-- INLINE BUTTONS -->
-                    <table class="action-table" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse: collapse;">
-                      <tr>
-                        <td class="action-btn" style="padding-right: 6px;">
-                          <a href="https://bryanportfolio.io.vn/fintech-intelligence/#subscribe" target="_blank" style="display: inline-block; background-color: #BE123C; color: #FFFFFF; text-decoration: none; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap;">
-                            + ĐĂNG KÝ (SUBSCRIBE)
-                          </a>
-                        </td>
-                        <td class="action-btn">
-                          <a href="https://bryanportfolio.io.vn/fintech-intelligence/" target="_blank" style="display: inline-block; background-color: #134E4A; color: #FFFFFF; text-decoration: none; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap;">
-                            XEM TRÊN BNEWS ↗
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
+                  <td class="btn-row" align="right" style="vertical-align: middle; white-space: nowrap;">
+                    <a href="{SUBSCRIBE_URL}" target="_blank" class="btn-inline" style="display: inline-block; background-color: #FFFFFF; color: #0A3D7A; border: 1px solid #0A3D7A; font-size: 10px; font-weight: 700; padding: 6px 10px; border-radius: 3px; text-decoration: none; letter-spacing: 0.3px; margin-right: 6px;">
+                      + ĐĂNG KÝ
+                    </a>
+                    <a href="{SITE_BASE_URL}" target="_blank" class="btn-inline" style="display: inline-block; background-color: #0A3D7A; color: #FFFFFF; border: 1px solid #0A3D7A; font-size: 10px; font-weight: 700; padding: 6px 11px; border-radius: 3px; text-decoration: none; letter-spacing: 0.3px;">
+                      XEM TRÊN BNEWS ↗
+                    </a>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- COVER STORY HERO -->
+          <!-- 3. COVER STORY (TIÊU ĐIỂM PHIÊN) -->
           <tr>
-            <td class="mobile-padding" style="padding: 24px 24px 18px 24px;">
-              <div style="display: inline-block; background-color: #BE123C; color: #FFFFFF; font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; padding: 3px 8px; text-transform: uppercase; letter-spacing: 1px; border-radius: 2px; margin-bottom: 10px;">
-                BÀI ĐINH TRANG NHẤT (COVER STORY)
+            <td style="padding: 22px 24px 10px 24px;" class="pad-mobile">
+              <div style="font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; color: #C8102E; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px;">
+                TIÊU ĐIỂM PHIÊN · COVER STORY
               </div>
-              <h1 class="cover-title" style="font-size: 21px; font-weight: 800; color: #1C1917; line-height: 1.35; margin: 0 0 10px 0;">
-                {escape(lead_hl)}
+              <h1 style="margin: 0 0 8px 0; font-size: 21px; line-height: 1.32; font-weight: 800; color: #111827; letter-spacing: -0.3px;">
+                <a href="{SITE_BASE_URL}" target="_blank" style="color: #111827; text-decoration: none;">
+                  {escape(lead_hl)}
+                </a>
               </h1>
-              {f'<div style="font-size: 13px; color: #57534E; font-weight: 500; line-height: 1.5; margin-bottom: 14px; font-style: italic;">{escape(lead_dek)}</div>' if lead_dek else ''}
-              {f'''
-              <div style="margin: 12px 0 16px 0; border-radius: 4px; overflow: hidden; border: 1px solid #E7E5E4; background-color: #F5F5F4;">
-                <img src="{escape(lead_img)}" alt="{escape(lead_hl)}" width="100%" class="featured-img" style="width: 100%; max-width: 100%; height: auto; max-height: 280px; aspect-ratio: 16/9; object-fit: cover; display: block;" onerror="this.parentElement.style.display='none'" />
-              </div>
-              ''' if lead_img else ''}
-              
-              <!-- SAPO / EXECUTIVE SUMMARY -->
-              <div style="font-size: 13px; line-height: 1.6; color: #1C1917; background-color: #FDF2E9; border-left: 3px solid #134E4A; padding: 12px 14px; margin-bottom: 16px; border-radius: 2px;">
-                <div style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #134E4A; text-transform: uppercase; margin-bottom: 4px;">
-                  ■ TÓM TẮT CỐT LÕI (EXECUTIVE SUMMARY):
-                </div>
-                <div>{escape(lead_sapo)}</div>
-              </div>
-
-              <!-- SUPPORTING QUOTE -->
-              {f'''
-              <div style="background-color: #F7EBE0; border: 1px solid #E7E5E4; padding: 12px 14px; margin-bottom: 20px; border-radius: 2px;">
-                <div style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #134E4A; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">
-                  TRÍCH DẪN NGUYÊN VĂN BÁO CHÍ
-                </div>
-                <div style="font-size: 13px; font-style: italic; color: #44403C; line-height: 1.5;">
-                  “{escape(lead_quote)}”
-                </div>
-              </div>
-              ''' if lead_quote else ''}
-
-              <!-- 4-BOX SYNTHESIS: ĐÚC KẾT TOÀN CẢNH PHIÊN -->
-              <div style="border-top: 2px solid #134E4A; padding-top: 16px; margin-bottom: 20px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td style="font-family: 'SF Mono', monospace; font-size: 11px; font-weight: 800; color: #134E4A; text-transform: uppercase; letter-spacing: 0.5px;">
-                      ■ ĐÚC KẾT TOÀN CẢNH PHIÊN (4 MẠCH CHUYỂN ĐỘNG)
-                    </td>
-                    <td align="right" style="font-family: 'SF Mono', monospace; font-size: 10px; color: #BE123C; font-weight: 700;">
-                      25 SỰ KIỆN XÁC MINH
-                    </td>
-                  </tr>
-                </table>
-                <div style="font-size: 12px; color: #57534E; margin: 6px 0 12px 0;">
-                  Toàn cảnh phiên {escape(ed_date)} phản ánh bốn mạch chuyển động lớn từ 25 sự kiện xác minh:
-                </div>
-
-                <!-- 4 BOXES -->
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                  {''.join([f'''
-                  <tr>
-                    <td style="padding-bottom: 8px; vertical-align: top;">
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FDF2E9; border: 1px solid #E7E5E4; border-radius: 2px;">
-                        <tr>
-                          <td width="32" align="center" style="vertical-align: top; padding: 10px 0 10px 10px;">
-                            <span style="display: inline-block; width: 20px; height: 20px; line-height: 20px; text-align: center; background-color: #134E4A; color: #FFFFFF; font-family: 'SF Mono', monospace; font-size: 11px; font-weight: 700; border-radius: 2px;">
-                              {item_num}
-                            </span>
-                          </td>
-                          <td style="padding: 10px 12px 10px 8px; font-size: 12px; line-height: 1.5; color: #1C1917;">
-                            {escape(item_text)}
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  ''' for item_num, item_text in synth_items])}
-                </table>
-              </div>
-
+              {f'<p style="margin: 0 0 12px 0; font-size: 13px; line-height: 1.5; color: #4B5563;">{escape(lead_dek)}</p>' if lead_dek else ''}
             </td>
           </tr>
 
-          <!-- SECTION: MARKET PULSE (4 CORE INDICATORS - GUARANTEED EQUAL HEIGHT) -->
+          <!-- 3B. COVER IMAGE -->
+          {lead_image_block}
+
+          <!-- 3C. EXECUTIVE SUMMARY BOX (FLAT V4.0 SURFACE) -->
           <tr>
-            <td class="mobile-padding" style="background-color: #F7EBE0; padding: 20px 24px; border-top: 1px solid #E7E5E4; border-bottom: 1px solid #E7E5E4;">
+            <td style="padding: 0 24px 16px 24px;" class="pad-mobile">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC; border: 1px solid #E5E7EB; border-radius: 4px;">
+                <tr>
+                  <td style="padding: 13px 16px;">
+                    <div style="font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; color: #0A3D7A; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px;">
+                      TÓM TẮT ĐIỀU HÀNH
+                    </div>
+                    <div style="font-size: 13px; line-height: 1.6; color: #111827;">
+                      {escape(lead_sapo)}
+                    </div>
+                    {f'<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #E5E7EB; font-size: 12px; font-style: italic; color: #4B5563; line-height: 1.45;">“{escape(lead_quote)}”</div>' if lead_quote else ''}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- 4. 4 SYNTHESIS HIGHLIGHTS -->
+          <tr>
+            <td style="padding: 0 24px 20px 24px;" class="pad-mobile">
+              <div style="font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; color: #0A3D7A; text-transform: uppercase; letter-spacing: 0.7px; padding-bottom: 8px; border-bottom: 1px solid #E5E7EB;">
+                04 ĐIỂM NHẤN TỔNG HỢP
+              </div>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                {synth_html}
+              </table>
+            </td>
+          </tr>
+
+          <!-- DIVIDER -->
+          <tr>
+            <td style="padding: 0 24px;" class="pad-mobile">
+              <div style="height: 1px; background-color: #E5E7EB;"></div>
+            </td>
+          </tr>
+
+          <!-- 5. MARKET PULSE SNAPSHOT (2x2 TABLE GRID) -->
+          <tr>
+            <td style="padding: 20px 24px 16px 24px; background-color: #F8FAFC;" class="pad-mobile">
               <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px;">
                 <tr>
-                  <td>
-                    <div style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 800; color: #BE123C; text-transform: uppercase; letter-spacing: 1px;">
-                      MARKET PULSE
-                    </div>
-                    <div style="font-size: 17px; font-weight: 800; color: #134E4A;">
-                      4 NHỊP ĐẬP THỊ TRƯỜNG THEN CHỐT
+                  <td style="border-left: 3px solid #0A3D7A; padding-left: 9px;">
+                    <div style="font-size: 14px; font-weight: 800; color: #111827; letter-spacing: -0.2px;">
+                      NHỊP ĐẬP THỊ TRƯỜNG
                     </div>
                   </td>
-                  <td align="right">
-                    <span style="font-size: 10px; font-family: 'SF Mono', monospace; color: #57534E;">
-                      PHIÊN: {escape(ed_date)}
-                    </span>
+                  <td align="right" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6B7280; font-weight: 600;">
+                    MARKET PULSE
                   </td>
                 </tr>
               </table>
 
-              <!-- 2x2 TILES GRID (GUARANTEED EQUAL HEIGHT ACROSS COLUMNS) -->
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <!-- ROW 1 -->
                 <tr>
                   {_render_pulse_cell(mp_cards, 0)}
-                  <td class="mp-spacer" width="12" style="width: 12px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                  <td class="mp-spacer" width="4%" style="width: 4%;">&nbsp;</td>
                   {_render_pulse_cell(mp_cards, 1)}
                 </tr>
-                <tr>
-                  <td colspan="3" height="12" style="height: 12px; font-size: 1px; line-height: 1px;">&nbsp;</td>
-                </tr>
-                <!-- ROW 2 -->
+                <tr><td colspan="3" height="12" style="font-size: 0; line-height: 0;">&nbsp;</td></tr>
                 <tr>
                   {_render_pulse_cell(mp_cards, 2)}
-                  <td class="mp-spacer" width="12" style="width: 12px; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                  <td class="mp-spacer" width="4%" style="width: 4%;">&nbsp;</td>
                   {_render_pulse_cell(mp_cards, 3)}
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- SECTION: FEATURED HIGHLIGHTS (TÓM LƯỢC CÁC TIN TIÊU BIỂU) -->
+          <!-- DIVIDER -->
           <tr>
-            <td class="mobile-padding" style="padding: 22px 24px 18px 24px;">
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px; border-bottom: 2px solid #134E4A; padding-bottom: 6px;">
+            <td style="padding: 0 24px;" class="pad-mobile">
+              <div style="height: 1px; background-color: #E5E7EB;"></div>
+            </td>
+          </tr>
+
+          <!-- 6. FEATURED CATEGORY HIGHLIGHTS (6 V4.0 CATEGORIES) -->
+          <tr>
+            <td style="padding: 20px 24px 8px 24px;" class="pad-mobile">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;">
                 <tr>
-                  <td>
-                    <div style="font-size: 17px; font-weight: 800; color: #134E4A;">
-                      TIÊU ĐIỂM TIN TỨC CHỌN LỌC (FEATURED HIGHLIGHTS)
+                  <td style="border-left: 3px solid #0A3D7A; padding-left: 9px;">
+                    <div style="font-size: 14px; font-weight: 800; color: #111827; letter-spacing: -0.2px;">
+                      TIN TIÊU BIỂU THEO CHUYÊN MỤC
                     </div>
-                    <div style="font-size: 11px; color: #57534E; margin-top: 2px;">
-                      Chọn lọc các sự kiện trọng điểm đại diện 5 ngành • Phân tích góc nhìn FinTech & B2B
-                    </div>
+                  </td>
+                  <td align="right" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6B7280; font-weight: 600; font-variant-numeric: tabular-nums;">
+                    {featured_count}/{total_news} TIN CHỌN LỌC
                   </td>
                 </tr>
               </table>
 
-              <!-- FEATURED NEWS ITEMS -->
-              {''.join([_render_featured_category_block(cat_name, featured_news_by_cat[cat_name]) for cat_name in cat_order if cat_name in featured_news_by_cat])}
-
-              <!-- PROMINENT CTA BANNER: ĐỌC TRỌN BỘ 25 TIN TRÊN BNEWS (PRIMARY ACTION) -->
-              <div style="background-color: #134E4A; padding: 20px 22px; text-align: center; border-radius: 4px; margin-top: 18px; box-shadow: 0 4px 12px rgba(19, 78, 74, 0.15);">
-                <div style="color: #F7EBE0; font-size: 12px; line-height: 1.5; margin-bottom: 12px;">
-                  Bản tin phiên này còn <strong>20 sự kiện xác minh chuyên sâu</strong> khác về điều hành lãi suất, biến động thị trường chứng khoán, dữ liệu thanh toán số và an ninh tài chính.
-                </div>
-                <a href="https://bryanportfolio.io.vn/fintech-intelligence/#verified-news" target="_blank" style="display: inline-block; background-color: #BE123C; color: #FFFFFF; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; padding: 11px 24px; text-decoration: none; border-radius: 2px;">
-                  ĐỌC TOÀN BỘ 25 BẢN TIN TRÊN BNEWS →
-                </a>
-              </div>
-
-              <!-- DEDICATED SUBSCRIBE CALL-OUT BOX (SECONDARY ACTION - CLEAN & BALANCED) -->
-              <div style="background-color: #F7EBE0; border: 1px solid #134E4A; border-radius: 4px; padding: 18px 20px; text-align: center; margin-top: 18px;">
-                <div style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #BE123C; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">
-                  BẠN ĐƯỢC BẠN BÈ CHUYỂN TIẾP (FORWARD) EMAIL NÀY?
-                </div>
-                <div style="font-size: 15px; font-weight: 800; color: #134E4A; margin-bottom: 4px;">
-                  Đăng Ký Nhận Bản Tin Bnews Hàng Ngày
-                </div>
-                <div style="font-size: 12px; color: #57534E; line-height: 1.5; max-width: 440px; margin: 0 auto 12px auto;">
-                  Cập nhật phân tích tài chính, thanh toán số, lãi suất tiền gửi và 25 sự kiện xác minh lúc 9h00 sáng mỗi ngày. Miễn phí 100%.
-                </div>
-                <a href="https://bryanportfolio.io.vn/fintech-intelligence/#subscribe" target="_blank" style="display: inline-block; background-color: #134E4A; color: #FFFFFF; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding: 9px 20px; text-decoration: none; border-radius: 2px;">
-                  + ĐĂNG KÝ NHẬN BẢN TIN (SUBSCRIBE) →
-                </a>
-              </div>
-
+              {''.join(featured_blocks)}
             </td>
           </tr>
 
-          <!-- FOOTER -->
+          <!-- 7. REMAINING NEWS CTA BANNER -->
           <tr>
-            <td class="mobile-padding" style="background-color: #134E4A; padding: 24px 20px; color: #F7EBE0; text-align: center; border-top: 3px solid #BE123C;">
-              <div style="font-size: 15px; font-weight: 800; color: #FFFFFF; margin-bottom: 4px;">
-                BNEWS | FINTECH & FINANCIAL INTELLIGENCE
+            <td style="padding: 8px 24px 20px 24px;" class="pad-mobile">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC; border: 1px solid #E5E7EB; border-radius: 4px;">
+                <tr>
+                  <td align="center" style="padding: 20px 18px;">
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; color: #0A3D7A; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 5px;">
+                      TOÀN CẢNH {escape(ed_badge_str)}
+                    </div>
+                    <div style="font-size: 14px; font-weight: 700; color: #111827; margin-bottom: 6px;">
+                      Còn {remaining_news} bản tin chuyên sâu &amp; Radar Chú ý trên Bnews
+                    </div>
+                    <div style="font-size: 12px; color: #4B5563; line-height: 1.5; margin-bottom: 14px;">
+                      Đọc đầy đủ {total_news} tin tức đã xác minh từ nguồn chính thống cùng phân tích tác động B2B trên giao diện Bnews V4.0.
+                    </div>
+                    <a href="{SITE_BASE_URL}" target="_blank" style="display: inline-block; background-color: #0A3D7A; color: #FFFFFF; font-size: 12px; font-weight: 700; padding: 11px 22px; border-radius: 4px; text-decoration: none; letter-spacing: 0.3px;">
+                      XEM ĐẦY ĐỦ {total_news} TIN TRÊN BNEWS ↗
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- 8. COMMUNITY SUBSCRIBE BANNER (V4.0 NAVY CTA) -->
+          <tr>
+            <td style="padding: 0 24px 22px 24px;" class="pad-mobile">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A3D7A; border-radius: 4px;">
+                <tr>
+                  <td align="center" style="padding: 22px 20px;">
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; color: #BFDBFE; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 6px;">
+                      NHẬN BẢN TIN MỖI SÁNG
+                    </div>
+                    <div style="font-size: 16px; font-weight: 800; color: #FFFFFF; line-height: 1.35; margin-bottom: 6px;">
+                      Đồng bộ nhịp đập Tài chính – Ngân hàng – Thanh toán
+                    </div>
+                    <div style="font-size: 12px; color: #E2E8F0; line-height: 1.5; margin-bottom: 16px;">
+                      Tổng hợp lúc 07:30 sáng mỗi ngày · Hoàn toàn miễn phí · Hủy đăng ký bất kỳ lúc nào.
+                    </div>
+                    <a href="{SUBSCRIBE_URL}" target="_blank" style="display: inline-block; background-color: #FFFFFF; color: #0A3D7A; font-size: 12px; font-weight: 700; padding: 10px 22px; border-radius: 4px; text-decoration: none; letter-spacing: 0.3px;">
+                      ĐĂNG KÝ NHẬN BẢN TIN →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- 9. INSTITUTIONAL FOOTER -->
+          <tr>
+            <td style="background-color: #F8FAFC; border-top: 1px solid #E5E7EB; padding: 16px 24px; text-align: center;" class="pad-mobile">
+              <div style="font-size: 12px; font-weight: 700; color: #111827; margin-bottom: 4px;">
+                BNEWS · FINTECH INTELLIGENCE
               </div>
-              <div style="font-size: 11px; opacity: 0.85; line-height: 1.5; max-width: 460px; margin: 0 auto 14px auto;">
-                Bản quyền nội dung thuộc về Bryan Portfolio & Ban Biên Tập Bnews FinTech Intelligence. Bản tin được tổng hợp, kiểm chứng và biên tập tự động lúc 9h00 hàng ngày.
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6B7280; margin-bottom: 10px;">
+                {escape(ed_id)} · {escape(ed_date)} · {total_news} bản tin xác minh 0–24h
               </div>
-              <div style="margin-bottom: 14px;">
-                <a href="https://bryanportfolio.io.vn/fintech-intelligence/" target="_blank" style="color: #FDF2E9; text-decoration: underline; font-size: 11px; font-weight: 600; margin: 0 10px;">Truy cập Bnews</a>
-                <a href="https://bryanportfolio.io.vn" target="_blank" style="color: #FDF2E9; text-decoration: underline; font-size: 11px; font-weight: 600; margin: 0 10px;">Bryan Portfolio</a>
+              <div style="font-size: 11px; color: #6B7280; line-height: 1.5;">
+                <a href="{SITE_BASE_URL}" target="_blank" style="color: #0A3D7A; text-decoration: none; font-weight: 600;">Trang chủ Bnews</a>
+                &nbsp;·&nbsp;
+                <a href="{SUBSCRIBE_URL}" target="_blank" style="color: #0A3D7A; text-decoration: none; font-weight: 600;">Đăng ký nhận tin</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.linkedin.com/in/bryan-nguyen-796a7b1ab/" target="_blank" style="color: #0A3D7A; text-decoration: none; font-weight: 600;">LinkedIn</a>
+                &nbsp;·&nbsp;
+                <a href="https://zalo.me/0838673639" target="_blank" style="color: #0A3D7A; text-decoration: none; font-weight: 600;">Zalo</a>
               </div>
-              <div style="font-size: 11px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 12px; font-family: 'SF Mono', monospace; line-height: 1.5;">
-                <span style="color: rgba(255,255,255,0.75);">
-                  Bạn nhận được email này vì đã đăng ký theo dõi Bản tin Bnews FinTech Intelligence.<br/>
-                  Nếu không muốn tiếp tục nhận email, vui lòng 
-                </span>
-                <a href="#unsubscribe" style="color: #5EEAD4; text-decoration: underline; font-weight: 700;">Hủy đăng ký (Unsubscribe)</a>.
+              <div style="margin-top: 10px; font-size: 10px; color: #9CA3AF;">
+                © 2026 Bryan Nguyen FinTech Intelligence. Tổng hợp từ nguồn báo chí chính thống Việt Nam &amp; quốc tế.
               </div>
             </td>
           </tr>
@@ -386,10 +440,11 @@ def build_newsletter_html(data: dict) -> str:
 </html>"""
     return html
 
+
 def _render_pulse_cell(cards: list, idx: int) -> str:
     if idx >= len(cards):
         return '<td class="mp-col" width="48%" style="padding: 0;"></td>'
-    
+
     card = cards[idx]
     lbl = card.get("shortLabel") or card.get("label", f"CHỈ SỐ 0{idx+1}")
     val_raw = str(card.get("value", "--")).strip()
@@ -400,53 +455,56 @@ def _render_pulse_cell(cards: list, idx: int) -> str:
     else:
         val_display = val_raw
 
+    compact_delta = str(card.get("compactDelta", "")).strip()
+    status = str(card.get("status", "neutral")).lower()
+    if status == "positive":
+        badge_bg, badge_fg = "#F0FDF4", "#15803D"
+    elif status == "negative":
+        badge_bg, badge_fg = "#FEF2F2", "#C8102E"
+    else:
+        badge_bg, badge_fg = "#EFF6FF", "#0A3D7A"
+
+    badge_text = compact_delta if compact_delta else "ĐÃ XÁC MINH"
     ref_val = card.get("referenceValue", "")
-    period = card.get("dataPeriod") or card.get("asOf", "")
-    url = card.get("sourceUrl", "https://bryanportfolio.io.vn/fintech-intelligence/")
+    period = card.get("observationDate") or card.get("dataPeriod") or card.get("asOf", "")
+    url = card.get("sourceUrl", SITE_BASE_URL)
     article_title = card.get("articleTitle", "")
 
-    # Outer TD carries background, borders, and border-top directly so HTML table engine renders 100% equal height
     return f"""
-    <td class="mp-col" width="48%" style="background-color: #FFFFFF; border: 1px solid #E7E5E4; border-top: 3px solid #134E4A; border-radius: 2px; padding: 12px 14px; vertical-align: top;">
+    <td class="mp-col" width="48%" style="background-color: #FFFFFF; border: 1px solid #E5E7EB; border-top: 2px solid #0A3D7A; border-radius: 4px; padding: 12px 14px; vertical-align: top;">
       <table border="0" cellpadding="0" cellspacing="0" width="100%" style="height: 100%;">
         <tr>
           <td style="vertical-align: top;">
-            <!-- HEADER: LABEL + BADGE -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 4px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 6px;">
               <tr>
-                <td style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #134E4A; text-transform: uppercase;">
+                <td style="font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #374151; text-transform: uppercase;">
                   {escape(lbl)}
                 </td>
-                <td align="right">
-                  <span style="display: inline-block; background-color: #DCFCE7; color: #15803D; font-family: 'SF Mono', monospace; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px;">
-                    VERIFIED
+                <td align="right" style="white-space: nowrap; padding-left: 6px;">
+                  <span style="display: inline-block; background-color: {badge_bg}; color: {badge_fg}; font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 2px; font-variant-numeric: tabular-nums;">
+                    {escape(badge_text)}
                   </span>
                 </td>
               </tr>
             </table>
 
-            <!-- VALUE -->
-            <div style="font-size: 19px; font-weight: 800; color: #047857; line-height: 1.2; margin-bottom: 3px; font-family: 'SF Mono', monospace;">
+            <div style="font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; font-size: 19px; font-weight: 700; color: #111827; line-height: 1.2; margin-bottom: 4px; font-variant-numeric: tabular-nums;">
               {escape(val_display)}
             </div>
 
-            <!-- PERIOD -->
-            {f'<div style="font-size: 10px; color: #78716C; margin-bottom: 5px; font-weight: 500;">{escape(period)}</div>' if period else ''}
+            {f'<div style="font-size: 10px; color: #6B7280; margin-bottom: 6px; font-weight: 500;">{escape(period)}</div>' if period else ''}
 
-            <!-- REFERENCE INFO -->
-            <div style="font-size: 11px; color: #44403C; line-height: 1.45; margin-bottom: 5px;">
+            <div style="font-size: 11px; color: #374151; line-height: 1.45; margin-bottom: 6px;">
               {escape(ref_val[:110])}{'...' if len(ref_val) > 110 else ''}
             </div>
 
-            <!-- ARTICLE TITLE (IF PRESENT) -->
-            {f'<div style="font-size: 11px; color: #134E4A; font-weight: 600; margin-bottom: 5px; line-height: 1.3;">Bài viết: {escape(article_title[:55])}...</div>' if article_title else ''}
+            {f'<div style="font-size: 11px; color: #0A3D7A; font-weight: 600; margin-bottom: 4px; line-height: 1.35;">{escape(article_title[:60])}{"..." if len(article_title) > 60 else ""}</div>' if article_title else ''}
           </td>
         </tr>
         <tr>
-          <!-- BOTTOM ALIGNED LINK -->
-          <td style="vertical-align: bottom; padding-top: 8px;">
-            <a href="{escape(url)}" target="_blank" style="font-size: 10px; font-family: 'SF Mono', monospace; font-weight: 700; color: #BE123C; text-decoration: none;">
-              CHI TIẾT & NGUỒN →
+          <td style="vertical-align: bottom; padding-top: 8px; border-top: 1px solid #F3F4F6;">
+            <a href="{escape(url)}" target="_blank" style="font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #0A3D7A; text-decoration: none;">
+              CHI TIẾT &amp; NGUỒN →
             </a>
           </td>
         </tr>
@@ -454,19 +512,10 @@ def _render_pulse_cell(cards: list, idx: int) -> str:
     </td>
     """
 
-def _render_featured_category_block(cat_name: str, items: list) -> str:
+
+def _render_featured_category_block(cat_display_name: str, items: list, cat_total: int) -> str:
     if not items:
         return ""
-    
-    # 100% standard BMP Unicode characters (never corrupt into  in any mail client)
-    cat_bullets = {
-        "Ngân hàng": "■",
-        "Thị trường vốn": "■",
-        "Bán lẻ, D2C và xu hướng tiêu dùng": "■",
-        "Thanh toán": "■",
-        "Doanh nghiệp": "■"
-    }
-    bullet = cat_bullets.get(cat_name, "■")
 
     items_html = []
     for item in items:
@@ -477,12 +526,12 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
         url = item.get("sourceUrl", "#")
         fintech_lens = item.get("sectionE_fintechLens", "")
         quote = item.get("supportingQuote", "")
-
         img_url = item.get("imageUrl", "")
+
         img_banner_html = ""
         if img_url:
             img_banner_html = f"""
-            <div style="margin: 8px 0 10px 0; border-radius: 4px; overflow: hidden; border: 1px solid #E7E5E4; background-color: #F5F5F4;">
+            <div style="margin: 10px 0 12px 0; border-radius: 4px; overflow: hidden; border: 1px solid #E5E7EB; background-color: #F8FAFC;">
               <a href="{escape(url)}" target="_blank" style="display: block; text-decoration: none;">
                 <img src="{escape(img_url)}" alt="{escape(hl)}" width="100%" class="featured-img" style="width: 100%; max-width: 100%; height: auto; max-height: 220px; aspect-ratio: 16/9; object-fit: cover; display: block;" onerror="this.parentElement.parentElement.style.display='none'" />
               </a>
@@ -490,59 +539,57 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
             """
 
         items_html.append(f"""
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border: 1px solid #E7E5E4; border-radius: 3px; margin-bottom: 12px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 4px; margin-bottom: 14px;">
           <tr>
-            <td style="padding: 13px 15px;">
-              <!-- META ROW: ID, SOURCE & 0-24H BADGE -->
+            <td style="padding: 14px 16px;">
+              <!-- META ROW -->
               <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 6px;">
                 <tr>
                   <td style="vertical-align: middle;">
-                    <span style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; background-color: #134E4A; color: #FFFFFF; padding: 2px 6px; border-radius: 2px; white-space: nowrap;">
+                    <span style="font-family: 'JetBrains Mono', 'SF Mono', monospace; font-size: 10px; font-weight: 700; background-color: #EFF6FF; color: #0A3D7A; border: 1px solid #DBEAFE; padding: 2px 6px; border-radius: 2px; white-space: nowrap;">
                       {escape(eid)}
                     </span>
-                    <span style="font-size: 11px; color: #57534E; margin-left: 6px; line-height: 1.4;">
-                      Nguồn: <strong style="color: #1C1917;">{escape(src)}</strong>
+                    <span style="font-size: 11px; color: #6B7280; margin-left: 6px;">
+                      <strong style="color: #111827;">{escape(src)}</strong>
                     </span>
                   </td>
-                  <td align="right" style="vertical-align: top; white-space: nowrap; padding-left: 8px;">
-                    <span class="nowrap-badge" style="font-family: 'SF Mono', monospace; font-size: 10px; font-weight: 700; color: #15803D; background-color: #DCFCE7; padding: 2px 6px; border-radius: 2px; white-space: nowrap; display: inline-block;">
-                      [0–24H]
+                  <td align="right" style="vertical-align: middle; white-space: nowrap; padding-left: 8px;">
+                    <span class="nowrap-badge" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: #6B7280;">
+                      0–24H
                     </span>
                   </td>
                 </tr>
               </table>
 
-              <!-- FEATURED IMAGE BANNER (RESPONSIVE FULL-WIDTH) -->
               {img_banner_html}
 
               <!-- HEADLINE -->
-              <div style="font-size: 14px; font-weight: 700; color: #1C1917; line-height: 1.4; margin-bottom: 6px;">
-                <a href="{escape(url)}" target="_blank" style="color: #1C1917; text-decoration: none;">
+              <div style="font-size: 15px; font-weight: 700; color: #111827; line-height: 1.4; margin-bottom: 6px;">
+                <a href="{escape(url)}" target="_blank" style="color: #111827; text-decoration: none;">
                   {escape(hl)}
                 </a>
               </div>
 
               <!-- SUMMARY -->
-              <div style="font-size: 12px; color: #44403C; line-height: 1.55; margin-bottom: 8px;">
+              <div style="font-size: 13px; color: #374151; line-height: 1.55; margin-bottom: 10px;">
                 {escape(sm)}
               </div>
 
-              <!-- FINTECH LENS -->
+              <!-- FINTECH LENS (FLAT V4.0 BOX) -->
               {f'''
-              <div style="background-color: #FDF2E9; border-left: 3px solid #BE123C; padding: 8px 10px; font-size: 11px; color: #1C1917; line-height: 1.45; margin-bottom: 6px;">
-                <strong>Góc nhìn FinTech & B2B:</strong> {escape(fintech_lens)}
+              <div style="background-color: #F8FAFC; border: 1px solid #E5E7EB; border-radius: 3px; padding: 9px 11px; font-size: 12px; color: #374151; line-height: 1.5; margin-bottom: 8px;">
+                <strong style="color: #0A3D7A;">Góc nhìn FinTech &amp; B2B:</strong> {escape(fintech_lens)}
               </div>
               ''' if fintech_lens else ''}
 
-              <!-- SUPPORTING QUOTE -->
               {f'''
-              <div style="font-size: 11px; font-style: italic; color: #57534E; line-height: 1.4; margin-bottom: 6px;">
+              <div style="font-size: 11px; font-style: italic; color: #6B7280; line-height: 1.45; margin-bottom: 8px;">
                 “{escape(quote)}”
               </div>
               ''' if quote else ''}
 
-              <div style="text-align: right; margin-top: 4px;">
-                <a href="{escape(url)}" target="_blank" style="font-size: 10px; font-family: 'SF Mono', monospace; font-weight: 700; color: #134E4A; text-decoration: none;">
+              <div style="text-align: right; padding-top: 4px;">
+                <a href="{escape(url)}" target="_blank" style="font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #0A3D7A; text-decoration: none;">
                   XEM NGUỒN BÁO GỐC ↗
                 </a>
               </div>
@@ -552,13 +599,21 @@ def _render_featured_category_block(cat_name: str, items: list) -> str:
         """)
 
     return f"""
-    <div style="margin-bottom: 14px;">
-      <div style="font-family: 'SF Mono', monospace; font-size: 11px; font-weight: 800; color: #BE123C; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">
-        <span style="color: #BE123C; margin-right: 4px;">{bullet}</span> {escape(cat_name.upper())}
-      </div>
+    <div style="margin-bottom: 16px;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 8px;">
+        <tr>
+          <td style="border-left: 3px solid #0A3D7A; padding-left: 8px; font-size: 12px; font-weight: 700; color: #111827; text-transform: uppercase; letter-spacing: 0.4px;">
+            {escape(cat_display_name)}
+          </td>
+          <td align="right" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6B7280; font-variant-numeric: tabular-nums;">
+            {cat_total} bản tin
+          </td>
+        </tr>
+      </table>
       {''.join(items_html)}
     </div>
     """
+
 
 def main():
     if not os.path.exists(SOURCE_JSON):
@@ -570,17 +625,12 @@ def main():
 
     html_content = build_newsletter_html(data)
 
-    # Save to pilot-output
-    os.makedirs(os.path.dirname(OUT_PREVIEW_PILOT), exist_ok=True)
-    with open(OUT_PREVIEW_PILOT, "w", encoding="utf-8") as f:
-        f.write(html_content)
-    print(f"Successfully generated: {OUT_PREVIEW_PILOT} ({len(html_content):,} bytes)")
+    for target_path in OUT_TARGETS:
+        os.makedirs(os.path.dirname(target_path), exist_ok=True)
+        with open(target_path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"Successfully synced: {target_path} ({len(html_content):,} bytes)")
 
-    # Save to preview
-    os.makedirs(os.path.dirname(OUT_PREVIEW_WEB), exist_ok=True)
-    with open(OUT_PREVIEW_WEB, "w", encoding="utf-8") as f:
-        f.write(html_content)
-    print(f"Successfully synced: {OUT_PREVIEW_WEB} ({len(html_content):,} bytes)")
 
 if __name__ == "__main__":
     main()
