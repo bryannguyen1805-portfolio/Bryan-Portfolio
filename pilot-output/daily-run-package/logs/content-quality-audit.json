@@ -1,14 +1,14 @@
 {
-  "editionId": "ED-20261120-D01",
-  "checkedAt": "2026-11-20T09:53:41.779276",
+  "editionId": "ED-20261121-D01",
+  "checkedAt": "2026-11-21T16:00:42.486599",
   "articlesChecked": 40,
   "expectedArticles": 40,
   "categoryCounts": {
     "Thanh toán": 6,
-    "Ngân hàng": 8,
+    "Ngân hàng": 5,
     "Thị trường vốn": 7,
     "Doanh nghiệp": 7,
-    "Kinh tế vĩ mô": 6,
+    "Kinh tế vĩ mô": 9,
     "Bán lẻ, D2C và xu hướng tiêu dùng": 6
   },
   "categoryBalanceViolations": [],
