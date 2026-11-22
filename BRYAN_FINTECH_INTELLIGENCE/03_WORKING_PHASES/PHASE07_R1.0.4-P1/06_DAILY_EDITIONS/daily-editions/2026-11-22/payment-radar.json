@@ -1,0 +1,880 @@
+{
+  "signals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Thu hộ Không tiền mặt cho Chuyển phát & Vận tải Hàng nặng",
+      "sector": "Logistics & Chuyển phát Hàng nặng",
+      "paymentDomain": "Logistics & Chuyển phát Hàng nặng",
+      "targetSegment": "Doanh nghiệp logistics bưu chính, đơn vị chuyển phát nhanh hàng nặng và sàn TMĐT.",
+      "actualMarketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "marketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "verifiedMarketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "merchantProblem": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "businessProblem": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "paymentImplication": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "relevantPaymentSolution": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "relevantSolution": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "opportunity": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "targetPartnerType": "Doanh nghiệp logistics bưu chính, đơn vị chuyển phát nhanh hàng nặng và sàn TMĐT.",
+      "commercialRationale": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "payooSolutionRelevance": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "payooRelevance": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE nhu cầu thu hộ COD không tiền mặt hoặc Payment Link cho hàng nặng với đối tác logistics trước khi mở rộng.",
+      "recommendedMonitoring": [
+        "VALIDATE nhu cầu thu hộ COD không tiền mặt hoặc Payment Link cho hàng nặng với đối tác logistics trước khi mở rộng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+        "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công."
+      ],
+      "merchantImpact": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Logistics & Chuyển phát Hàng nặng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-003",
+        "EVT-20261122-026",
+        "EVT-20261122-156",
+        "EVT-20261122-053",
+        "EVT-20261122-041",
+        "EVT-20261122-061",
+        "EVT-20261122-044",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-208",
+        "EVT-20261122-124"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-003",
+        "EVT-20261122-026",
+        "EVT-20261122-156",
+        "EVT-20261122-053",
+        "EVT-20261122-041",
+        "EVT-20261122-061",
+        "EVT-20261122-044",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-208",
+        "EVT-20261122-124"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-03",
+      "opportunityId": "OPP-03",
+      "signalTitle": "Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử Khởi tạo từ Máy tính tiền cho SME",
+      "sector": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "paymentDomain": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "targetSegment": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "actualMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "marketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "verifiedMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "merchantProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "businessProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "paymentImplication": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantPaymentSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "targetPartnerType": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "commercialRationale": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooSolutionRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "commercialRelevance": "MEDIUM",
+      "priority": "P2_MEDIUM",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng.",
+      "recommendedMonitoring": [
+        "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+        "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động."
+      ],
+      "merchantImpact": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-04",
+      "opportunityId": "OPP-04",
+      "signalTitle": "Theo dõi Thanh khoản Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "sector": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "paymentDomain": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "targetSegment": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "actualMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "marketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "verifiedMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "merchantProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "businessProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "paymentImplication": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantPaymentSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "opportunity": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "targetPartnerType": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "commercialRationale": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooSolutionRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "commercialRelevance": "NONE",
+      "priority": "P3_MONITOR_ONLY",
+      "opportunityType": "NO_DIRECT_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung.",
+      "recommendedMonitoring": [
+        "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-001"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-001"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-08"
+      ],
+      "marketDrivers": [
+        "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+        "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại."
+      ],
+      "merchantImpact": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25659",
+          "unit": "VND/USD",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://thanhnien.vn/gia-usd-hom-nay-22112026-tang-cao-day-euro-va-bang-anh-lao-doc-185261121201624411.htm",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    }
+  ],
+  "radarSignals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Thu hộ Không tiền mặt cho Chuyển phát & Vận tải Hàng nặng",
+      "sector": "Logistics & Chuyển phát Hàng nặng",
+      "paymentDomain": "Logistics & Chuyển phát Hàng nặng",
+      "targetSegment": "Doanh nghiệp logistics bưu chính, đơn vị chuyển phát nhanh hàng nặng và sàn TMĐT.",
+      "actualMarketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "marketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "verifiedMarketSignal": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "merchantProblem": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "businessProblem": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "paymentImplication": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "relevantPaymentSolution": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "relevantSolution": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "opportunity": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "targetPartnerType": "Doanh nghiệp logistics bưu chính, đơn vị chuyển phát nhanh hàng nặng và sàn TMĐT.",
+      "commercialRationale": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "payooSolutionRelevance": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "payooRelevance": "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE nhu cầu thu hộ COD không tiền mặt hoặc Payment Link cho hàng nặng với đối tác logistics trước khi mở rộng.",
+      "recommendedMonitoring": [
+        "VALIDATE nhu cầu thu hộ COD không tiền mặt hoặc Payment Link cho hàng nặng với đối tác logistics trước khi mở rộng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+        "Cắt giảm chi phí quản lý tiền mặt, giảm thời gian đối soát công nợ và tăng tỷ lệ giao nhận thành công."
+      ],
+      "merchantImpact": "Đơn hàng giá trị cao tạo rủi ro quản lý tiền mặt cho tài xế và tỷ lệ từ chối nhận hàng (boom hàng) lớn.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Logistics & Chuyển phát Hàng nặng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-003",
+        "EVT-20261122-026",
+        "EVT-20261122-156",
+        "EVT-20261122-053",
+        "EVT-20261122-041",
+        "EVT-20261122-061",
+        "EVT-20261122-044",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-208",
+        "EVT-20261122-124"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-003",
+        "EVT-20261122-026",
+        "EVT-20261122-156",
+        "EVT-20261122-053",
+        "EVT-20261122-041",
+        "EVT-20261122-061",
+        "EVT-20261122-044",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-208",
+        "EVT-20261122-124"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-03",
+      "opportunityId": "OPP-03",
+      "signalTitle": "Giải pháp Thanh toán Tích hợp Hóa đơn Điện tử Khởi tạo từ Máy tính tiền cho SME",
+      "sector": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "paymentDomain": "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "targetSegment": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "actualMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "marketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "verifiedMarketSignal": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "merchantProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "businessProblem": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "paymentImplication": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantPaymentSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "relevantSolution": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "targetPartnerType": "Chuỗi cửa hàng bán lẻ, tiệm vàng bạc trang sức, nhà hàng ăn uống và phần mềm POS.",
+      "commercialRationale": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooSolutionRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "payooRelevance": "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động.",
+      "commercialRelevance": "MEDIUM",
+      "priority": "P2_MEDIUM",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng.",
+      "recommendedMonitoring": [
+        "INVESTIGATE nghiên cứu hợp tác với các nhà cung cấp giải pháp hóa đơn điện tử và phần mềm bán hàng."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [],
+      "marketDrivers": [
+        "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+        "Đáp ứng đúng yêu cầu pháp lý về hóa đơn điện tử, chuẩn hóa dòng tiền và tích hợp thu hộ thuế tự động."
+      ],
+      "merchantImpact": "Hộ kinh doanh gặp khó khăn trong việc đối soát doanh thu, xuất hóa đơn điện tử từng lần và tuân thủ thuế.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-04",
+      "opportunityId": "OPP-04",
+      "signalTitle": "Theo dõi Thanh khoản Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "sector": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "paymentDomain": "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng",
+      "targetSegment": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "actualMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "marketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "verifiedMarketSignal": "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+      "merchantProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "businessProblem": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "paymentImplication": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantPaymentSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "relevantSolution": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "opportunity": "Không phát triển giải pháp thanh toán bán lẻ; giữ vai trò theo dõi thanh khoản hệ thống.",
+      "targetPartnerType": "Không áp dụng đối tác thương mại trung gian thanh toán bán lẻ.",
+      "commercialRationale": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooSolutionRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "payooRelevance": "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại.",
+      "commercialRelevance": "NONE",
+      "priority": "P3_MONITOR_ONLY",
+      "opportunityType": "NO_DIRECT_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung.",
+      "recommendedMonitoring": [
+        "MONITOR tiếp tục theo dõi diễn biến thanh khoản tiền đồng để đánh giá mặt bằng lãi suất chung."
+      ],
+      "triggerEventIds": [
+        "EVT-20261122-001"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-001"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-01",
+        "MP-08"
+      ],
+      "marketDrivers": [
+        "Hoạt động điều tiết can thiệp ngoại hối của NHNN và kế hoạch đầu tư lưới điện hạ tầng EVN.",
+        "Sàng lọc minh bạch để không lãng phí nguồn lực tiếp thị và kinh doanh vào các sự kiện phi thương mại."
+      ],
+      "merchantImpact": "Các giao dịch buôn ngoại tệ liên ngân hàng và vốn đầu tư hạ tầng quốc gia không phát sinh giao dịch thanh toán bán lẻ.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Thị trường Ngoại hối Liên ngân hàng & Hạ tầng Năng lượng"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "MP-01",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Tỷ giá trung tâm USD/VND",
+          "currentValue": "25659",
+          "unit": "VND/USD",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://thanhnien.vn/gia-usd-hom-nay-22112026-tang-cao-day-euro-va-bang-anh-lao-doc-185261121201624411.htm",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    }
+  ],
+  "totalSignals": 4,
+  "verifiedOrEmergingOpportunitiesCount": 0,
+  "potentialOpportunitiesCount": 3,
+  "noDirectOpportunityCount": 1,
+  "commercialCoverage": "PRIORITY_PAYMENT_SECTORS_EVALUATED",
+  "modelProviderStatus": "MODEL_PROVIDER_UNAVAILABLE"
+}

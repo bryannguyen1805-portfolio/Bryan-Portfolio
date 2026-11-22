@@ -1,0 +1,2475 @@
+{
+  "cards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "title": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "headline": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "whatChanged": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "whyItMatters": "Tác động lan tỏa từ sự chuyển dịch của Bán lẻ Giá trị cao, Điện máy & Xe điện mở ra cơ hội gia tăng doanh số thanh toán số và tối ưu chi phí đối soát.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-02"
+      ],
+      "supportingRadarSignalId": "RADAR-02",
+      "relatedRadarIds": [
+        "RADAR-02"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-034",
+        "EVT-20261122-166",
+        "EVT-20261122-005",
+        "EVT-20261122-156",
+        "EVT-20261122-125",
+        "EVT-20261122-002",
+        "EVT-20261122-095",
+        "EVT-20261122-061",
+        "EVT-20261122-003",
+        "EVT-20261122-025",
+        "EVT-20261122-064",
+        "EVT-20261122-039",
+        "EVT-20261122-063",
+        "EVT-20261122-036",
+        "EVT-20261122-008",
+        "EVT-20261122-132",
+        "EVT-20261122-069",
+        "EVT-20261122-019",
+        "EVT-20261122-053",
+        "EVT-20261122-195",
+        "EVT-20261122-006",
+        "EVT-20261122-102",
+        "EVT-20261122-031",
+        "EVT-20261122-001",
+        "EVT-20261122-208",
+        "EVT-20261122-013",
+        "EVT-20261122-131",
+        "EVT-20261122-029",
+        "EVT-20261122-016",
+        "EVT-20261122-068",
+        "EVT-20261122-124",
+        "EVT-20261122-066",
+        "EVT-20261122-041",
+        "EVT-20261122-050",
+        "EVT-20261122-073",
+        "EVT-20261122-026",
+        "EVT-20261122-114",
+        "EVT-20261122-071",
+        "EVT-20261122-044",
+        "EVT-20261122-089"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunities": [
+        "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến."
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "VALIDATE",
+      "monitoringTriggers": [
+        "Doanh số giao dịch và tốc độ phủ điểm chấp nhận thanh toán tại Bán lẻ Giá trị cao, Điện máy & Xe điện."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_036_2d4c8ec65c.html",
+          "evidenceSha256": "2d4c8ec65ccce3d354542bba77b3968ce5af8a954d0771babc4933bdbe45b023",
+          "supportingQuote": "Mục tiêu tăng trưởng hai con số đặt ra bài toán lớn về huy động, phân bổ và sử dụng hiệu quả các nguồn lực đầu tư."
+        },
+        {
+          "referenceId": "EVT-20261122-166",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "canonicalUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_169_ca2cdc6513.html",
+          "evidenceSha256": "ca2cdc6513247d8a3954dd53f81838477648dadf13d07d434e001ea637c88712",
+          "supportingQuote": "Hai cổ đông chiến lược của Vietcombank và VietinBank cùng ký hợp tác với Sovico Trong tháng 11/2026, hàng loạt thỏa thuận tài chính giữa các doanh nghiệp trong hệ sinh thái tỷ phú"
+        },
+        {
+          "referenceId": "EVT-20261122-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "canonicalUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_a417010013.html",
+          "evidenceSha256": "a41701001375134421293a0abdd075f159eb93673f6f044b2f8b0760deb12bb6",
+          "supportingQuote": "Với doanh nghiệp nhỏ và vừa (SME), một khoản vốn được giữ lại đúng lúc có thể giúp hoàn thành đơn hàng, duy trì việc làm và tiếp tục đầu tư. Do đó, các chính sách miễn, giảm, gia h"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-125",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_128_683adcf275.html",
+          "evidenceSha256": "683adcf2752e62db224ea35ef00d5715860bd61fd73eb33f7723f8ac41a36561",
+          "supportingQuote": "Sau phiên tăng nhẹ đầu tuần, chỉ số giảm liên tiếp 4 phiên và đánh mất mốc tâm lý 1.700 điểm."
+        },
+        {
+          "referenceId": "EVT-20261122-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "canonicalUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_002_94f56a8356.html",
+          "evidenceSha256": "94f56a8356fd365bc8fb230d0f9baa1ef10b76deeac418ab06821ea570328413",
+          "supportingQuote": "ABB là mã đi lên 1,81%, mức tăng cao hơn các mã còn lại trong nhóm, dù giá trị giao dịch chỉ khoảng 27 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261122-095",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "canonicalUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_098_13e0e75203.html",
+          "evidenceSha256": "13e0e75203a2d2087d61d31da2ccdd260dd8fb845a39d9d9a9bcfe14a5b8da97",
+          "supportingQuote": "Việt Nam đề xuất xây dựng hành lang kinh tế Côn Minh - Lào Cai - Hà Nội - Hải Phòng, hình thành các cụm sản xuất xuyên biên giới và thí điểm chuỗi thương mại nông sản tin cậy tại d"
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "canonicalUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_acd5490900.html",
+          "evidenceSha256": "acd5490900196e1eb7232140cbe963b0ac15f851a0b93c23f52248bbf2a076d6",
+          "supportingQuote": "MBS vừa có báo cáo cập nhật nội dung buổi gặp gỡ nhà đầu tư của BIDV."
+        },
+        {
+          "referenceId": "EVT-20261122-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "canonicalUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_b50d4e968a.html",
+          "evidenceSha256": "b50d4e968a2cd50b5e5384caf0e06cba2e1fc08f1956972c7aa64671140e0a12",
+          "supportingQuote": "Xuất khẩu rau quả Việt Nam trong 11 tháng ước đạt hơn 9,2 tỷ USD, vượt kỷ lục của cả năm 2025. Trong đó, sầu riêng tiếp tục là mặt hàng chủ lực, đóng góp khoảng 3,3 tỷ USD từ thị t"
+        },
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "canonicalUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_b66452b27c.html",
+          "evidenceSha256": "b66452b27cf4c4b0099d34b11e547b736ff441388224a73e255f30be731a9109",
+          "supportingQuote": "Trong báo cáo chiến lược thị trường quý IV/2026 công bố ngày 20/11, Trung tâm Phân tích CTCP Chứng khoán DSC chỉ ra nghịch lý của thị trường chứng khoán Việt Nam: lợi nhuận doanh n"
+        },
+        {
+          "referenceId": "EVT-20261122-036",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "canonicalUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_2f23a9112f.html",
+          "evidenceSha256": "2f23a9112fb6da96026d6a60f2f632e9d5a726685d511bd1eccd8661ef0158ca",
+          "supportingQuote": "Nếu một startup phải có khách hàng, doanh thu, lợi nhuận và mô hình kinh doanh được chứng minh trước khi gọi vốn, liệu họ còn cần quỹ đầu tư mạo hiểm để làm gì?"
+        },
+        {
+          "referenceId": "EVT-20261122-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_00e765c871.html",
+          "evidenceSha256": "00e765c871ebaa7ba84b28cb2c28f1fd3f578a54f322b650383af1744c624882",
+          "supportingQuote": "Nhân Ngày Văn hóa Việt Nam (24/11), các ngân hàng tạm ngừng giao dịch tại quầy trong một ngày. Hoạt động giao dịch tại quầy trở lại bình thường từ thứ Tư, ngày 25/11/2026. Trong th"
+        },
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        },
+        {
+          "referenceId": "EVT-20261122-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "canonicalUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_4a3bd87e04.html",
+          "evidenceSha256": "4a3bd87e04fdfbd24b9299f19dd82737e17c1585b7a2de1966edb82f390573f6",
+          "supportingQuote": "Tuy nhiên, theo Bảng tổng hợp thông tin hợp đồng đã gửi Kho bạc Nhà nước, thời hạn chậm nhất phải thu hồi tạm ứng lần 1 là ngày 30/7/2026."
+        },
+        {
+          "referenceId": "EVT-20261122-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_021_d9915297f6.html",
+          "evidenceSha256": "d9915297f676a8610dd9e26d512e7bdcda7d88990ab30152e7fd3a29e0dc269a",
+          "supportingQuote": "Giá xăng dầu hôm nay 21/11: Dầu trong nước về sát mốc 26.000 đồng/lít Giá xăng dầu hôm nay (21/11) trên thị trường quốc tế tăng do lo ngại xung đột tại Trung Đông làm gián đoạn ngu"
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-195",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "canonicalUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_198_77ca8320f7.html",
+          "evidenceSha256": "77ca8320f75efc05beaf478b9340bc4ee7dca2b809ee9e3a988027dccdcb871d",
+          "supportingQuote": "Trong bối cảnh Việt Nam đặt mục tiêu tăng trưởng GDP hai con số nhưng nhiều động lực truyền thống dần bộc lộ giới hạn thì kinh tế hàng không vũ trụ (Space Economy) và kinh tế tầm t"
+        },
+        {
+          "referenceId": "EVT-20261122-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_006_aa56ebb777.html",
+          "evidenceSha256": "aa56ebb777b3fa81c15d3484fa0973e2f6f7d1149199ff440b29826053a080e5",
+          "supportingQuote": "Dòng tiền phân hóa mạnh theo nền tảng cơ bản của doanh nghiệp trong tuần khối ngoại bán ròng hơn 3.382 tỉ đồng Trái ngược với nhịp tăng nhẹ 9,57 điểm (+0,55%) của tuần trước đó, th"
+        },
+        {
+          "referenceId": "EVT-20261122-102",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "canonicalUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_105_1a33cb9a8c.html",
+          "evidenceSha256": "1a33cb9a8ce487990f4cf69d63d3d373d979b525f01a5eec8441a78d0654ee69",
+          "supportingQuote": "Theo Bộ Nông nghiệp và Môi trường, tháng 10/2026, xuất khẩu chè ước đạt 15,6 nghìn tấn, trị giá 29,7 triệu USD, tăng lần lượt 19,3% về lượng và 30,4% về giá trị so với cùng kỳ năm"
+        },
+        {
+          "referenceId": "EVT-20261122-031",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "canonicalUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_24bdcc2973.html",
+          "evidenceSha256": "24bdcc2973747cca7813ff6e3c7ca12cb58ca6be04662aa094e7dca943ac0580",
+          "supportingQuote": "Theo dữ liệu từ WiData, tính đến phiên giao dịch ngày 20/11/2026, hệ số giá trên giá trị sổ sách (P/B) của 28 ngân hàng niêm yết và đăng ký giao dịch trên thị trường chứng khoán Vi"
+        },
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "canonicalUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_014_7ba496bb30.html",
+          "evidenceSha256": "7ba496bb3087ad30be202b55293ffca05601de351ef26b249d2db5f3456bfb4b",
+          "supportingQuote": "Công ty CP Tập đoàn Novaland (NVL) vừa công bố thông tin bất thường về việc gia hạn giấy chứng nhận đăng ký chào bán thêm cổ phiếu ra công chúng."
+        },
+        {
+          "referenceId": "EVT-20261122-131",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "canonicalUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_134_6171406a91.html",
+          "evidenceSha256": "6171406a91f12a07faad8e8fb340c87b8374e3ef9133879126a3821777def6cc",
+          "supportingQuote": "Gần 77% cổ phiếu HoSE giảm giá, VN-Index mất hơn 5% Kết thúc phiên 20/11/2026, VN-Index đứng tại 1.688,79 điểm, giảm 5,36% so với cuối năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261122-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_dec1020b93.html",
+          "evidenceSha256": "dec1020b9357c79f0489f8e60156231a8189b544bf94f7b38d89811515437808",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
+          "referenceId": "EVT-20261122-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "canonicalUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_072a8fcebe.html",
+          "evidenceSha256": "072a8fcebe64423444634da6eeb9b8b3640c23f778d8ce47b314a07ff855de86",
+          "supportingQuote": "Một lô dâu tây tươi nhập khẩu từ Trung Quốc, bị phát hiện có dư lượng Cypermethrin cao gần gấp 6 lần, Deltamethrin gần 2 lần giới hạn cho phép. Cục Hải quan yêu cầu các đơn vị chủ"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "EVT-20261122-066",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "canonicalUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_069_ec9dd1ad70.html",
+          "evidenceSha256": "ec9dd1ad70b3c247ffc52635175d300da358abbeec0c831ca34e9c5f44e2fa47",
+          "supportingQuote": "“Chúng tôi sẽ không cho phép các công ty xây dựng trung tâm dữ liệu bên ngoài nước Mỹ”, ông Trump phát biểu khi đề cập đến lĩnh vực AI tại cuộc họp báo ở Nhà Trắng mới đây, sau khi"
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-114",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "canonicalUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_117_0f3aeac32e.html",
+          "evidenceSha256": "0f3aeac32e417ce198c0f7fe0cfe7a1a6a39285e58793e36556c59e9bbdf7680",
+          "supportingQuote": "Sau 5 năm thành lập, công ty phát triển Claude gây chú ý với thương vụ IPO trị giá 81,3 tỷ USD trên sàn Nasdaq."
+        },
+        {
+          "referenceId": "EVT-20261122-071",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "canonicalUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_074_5faa45b3a5.html",
+          "evidenceSha256": "5faa45b3a5f901e78d7505190ac887c22bc6925ba1b1a69193d47bf5550f3bb1",
+          "supportingQuote": "Ngày 21/11, Công ty Cổ phần Thép Nam Kim khánh thành Nhà máy Tôn Nam Kim Phú Mỹ tại Khu công nghiệp Mỹ Xuân B1 – Đại Dương, TP.HCM."
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-089",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "canonicalUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_092_758a8d285a.html",
+          "evidenceSha256": "758a8d285a42e4fb974bf7289ec69ae4f32bb1b97cd9b91159a50d67a6c6c5b9",
+          "supportingQuote": "Văn kiện năm 2013 và ngoại lệ trong chính sách tài trợ của Nhật Bản Ngày 9/11/2026, tại Tokyo, Cơ quan Hợp tác Quốc tế Nhật Bản (JICA) ký hiệp định cung cấp khoản vay ODA trị giá t"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "title": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "headline": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "decisionCategory": "MARKET_OPPORTUNITY",
+      "executiveSummary": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "whatChanged": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "whyItMatters": "Giải quyết triệt để bài toán công nợ và rủi ro quản lý tiền mặt cho các doanh nghiệp thuộc Logistics & Chuyển phát Hàng nặng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "opportunities": [
+        "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng."
+      ],
+      "risk": "Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm.",
+      "risks": [
+        "Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm."
+      ],
+      "recommendedAction": "VALIDATE",
+      "monitoringTriggers": [
+        "Phản hồi từ các đối tác thương mại thuộc Logistics & Chuyển phát Hàng nặng và tỷ lệ số hóa thanh toán."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Techcombank huy động 7.500 tỷ đồng qua 3 lô trái phiếu, lãi suất cao nhất 9%/năm' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Techcombank huy động 7.500 tỷ đồng qua 3 lô trái phiếu, lãi suất cao nhất 9%/năm' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
+      "whyItMatters": "Chi phí vốn ngân hàng ảnh hưởng trực tiếp đến biên lợi nhuận tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-001",
+        "EVT-20261122-031",
+        "EVT-20261122-025",
+        "EVT-20261122-089",
+        "EVT-20261122-166",
+        "EVT-20261122-002",
+        "EVT-20261122-124",
+        "EVT-20261122-008",
+        "EVT-20261122-029",
+        "EVT-20261122-063",
+        "EVT-20261122-034",
+        "EVT-20261122-041",
+        "EVT-20261122-114",
+        "EVT-20261122-071",
+        "EVT-20261122-003",
+        "EVT-20261122-125",
+        "EVT-20261122-005",
+        "EVT-20261122-156",
+        "EVT-20261122-069",
+        "EVT-20261122-061",
+        "EVT-20261122-006",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-073",
+        "EVT-20261122-208",
+        "EVT-20261122-131",
+        "EVT-20261122-195",
+        "EVT-20261122-013",
+        "EVT-20261122-026",
+        "EVT-20261122-039",
+        "EVT-20261122-066",
+        "EVT-20261122-064",
+        "EVT-20261122-053",
+        "EVT-20261122-016",
+        "EVT-20261122-102",
+        "EVT-20261122-019",
+        "EVT-20261122-036",
+        "EVT-20261122-132",
+        "EVT-20261122-044",
+        "EVT-20261122-095"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "supportingFacts": [
+        "7.500 tỷ đồng",
+        "9%/năm",
+        "24,1%"
+      ],
+      "supportingFactIds": [
+        "7.500 tỷ đồng",
+        "9%/năm",
+        "24,1%"
+      ],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất huy động tại các NHTM và số liệu can thiệp thị trường của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "EVT-20261122-031",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "canonicalUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_24bdcc2973.html",
+          "evidenceSha256": "24bdcc2973747cca7813ff6e3c7ca12cb58ca6be04662aa094e7dca943ac0580",
+          "supportingQuote": "Theo dữ liệu từ WiData, tính đến phiên giao dịch ngày 20/11/2026, hệ số giá trên giá trị sổ sách (P/B) của 28 ngân hàng niêm yết và đăng ký giao dịch trên thị trường chứng khoán Vi"
+        },
+        {
+          "referenceId": "EVT-20261122-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "canonicalUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_acd5490900.html",
+          "evidenceSha256": "acd5490900196e1eb7232140cbe963b0ac15f851a0b93c23f52248bbf2a076d6",
+          "supportingQuote": "MBS vừa có báo cáo cập nhật nội dung buổi gặp gỡ nhà đầu tư của BIDV."
+        },
+        {
+          "referenceId": "EVT-20261122-089",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "canonicalUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_092_758a8d285a.html",
+          "evidenceSha256": "758a8d285a42e4fb974bf7289ec69ae4f32bb1b97cd9b91159a50d67a6c6c5b9",
+          "supportingQuote": "Văn kiện năm 2013 và ngoại lệ trong chính sách tài trợ của Nhật Bản Ngày 9/11/2026, tại Tokyo, Cơ quan Hợp tác Quốc tế Nhật Bản (JICA) ký hiệp định cung cấp khoản vay ODA trị giá t"
+        },
+        {
+          "referenceId": "EVT-20261122-166",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "canonicalUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_169_ca2cdc6513.html",
+          "evidenceSha256": "ca2cdc6513247d8a3954dd53f81838477648dadf13d07d434e001ea637c88712",
+          "supportingQuote": "Hai cổ đông chiến lược của Vietcombank và VietinBank cùng ký hợp tác với Sovico Trong tháng 11/2026, hàng loạt thỏa thuận tài chính giữa các doanh nghiệp trong hệ sinh thái tỷ phú"
+        },
+        {
+          "referenceId": "EVT-20261122-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "canonicalUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_002_94f56a8356.html",
+          "evidenceSha256": "94f56a8356fd365bc8fb230d0f9baa1ef10b76deeac418ab06821ea570328413",
+          "supportingQuote": "ABB là mã đi lên 1,81%, mức tăng cao hơn các mã còn lại trong nhóm, dù giá trị giao dịch chỉ khoảng 27 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "EVT-20261122-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_00e765c871.html",
+          "evidenceSha256": "00e765c871ebaa7ba84b28cb2c28f1fd3f578a54f322b650383af1744c624882",
+          "supportingQuote": "Nhân Ngày Văn hóa Việt Nam (24/11), các ngân hàng tạm ngừng giao dịch tại quầy trong một ngày. Hoạt động giao dịch tại quầy trở lại bình thường từ thứ Tư, ngày 25/11/2026. Trong th"
+        },
+        {
+          "referenceId": "EVT-20261122-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_dec1020b93.html",
+          "evidenceSha256": "dec1020b9357c79f0489f8e60156231a8189b544bf94f7b38d89811515437808",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
+          "referenceId": "EVT-20261122-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "canonicalUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_b66452b27c.html",
+          "evidenceSha256": "b66452b27cf4c4b0099d34b11e547b736ff441388224a73e255f30be731a9109",
+          "supportingQuote": "Trong báo cáo chiến lược thị trường quý IV/2026 công bố ngày 20/11, Trung tâm Phân tích CTCP Chứng khoán DSC chỉ ra nghịch lý của thị trường chứng khoán Việt Nam: lợi nhuận doanh n"
+        },
+        {
+          "referenceId": "EVT-20261122-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_036_2d4c8ec65c.html",
+          "evidenceSha256": "2d4c8ec65ccce3d354542bba77b3968ce5af8a954d0771babc4933bdbe45b023",
+          "supportingQuote": "Mục tiêu tăng trưởng hai con số đặt ra bài toán lớn về huy động, phân bổ và sử dụng hiệu quả các nguồn lực đầu tư."
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-114",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "canonicalUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_117_0f3aeac32e.html",
+          "evidenceSha256": "0f3aeac32e417ce198c0f7fe0cfe7a1a6a39285e58793e36556c59e9bbdf7680",
+          "supportingQuote": "Sau 5 năm thành lập, công ty phát triển Claude gây chú ý với thương vụ IPO trị giá 81,3 tỷ USD trên sàn Nasdaq."
+        },
+        {
+          "referenceId": "EVT-20261122-071",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "canonicalUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_074_5faa45b3a5.html",
+          "evidenceSha256": "5faa45b3a5f901e78d7505190ac887c22bc6925ba1b1a69193d47bf5550f3bb1",
+          "supportingQuote": "Ngày 21/11, Công ty Cổ phần Thép Nam Kim khánh thành Nhà máy Tôn Nam Kim Phú Mỹ tại Khu công nghiệp Mỹ Xuân B1 – Đại Dương, TP.HCM."
+        },
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-125",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_128_683adcf275.html",
+          "evidenceSha256": "683adcf2752e62db224ea35ef00d5715860bd61fd73eb33f7723f8ac41a36561",
+          "supportingQuote": "Sau phiên tăng nhẹ đầu tuần, chỉ số giảm liên tiếp 4 phiên và đánh mất mốc tâm lý 1.700 điểm."
+        },
+        {
+          "referenceId": "EVT-20261122-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "canonicalUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_a417010013.html",
+          "evidenceSha256": "a41701001375134421293a0abdd075f159eb93673f6f044b2f8b0760deb12bb6",
+          "supportingQuote": "Với doanh nghiệp nhỏ và vừa (SME), một khoản vốn được giữ lại đúng lúc có thể giúp hoàn thành đơn hàng, duy trì việc làm và tiếp tục đầu tư. Do đó, các chính sách miễn, giảm, gia h"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "canonicalUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_4a3bd87e04.html",
+          "evidenceSha256": "4a3bd87e04fdfbd24b9299f19dd82737e17c1585b7a2de1966edb82f390573f6",
+          "supportingQuote": "Tuy nhiên, theo Bảng tổng hợp thông tin hợp đồng đã gửi Kho bạc Nhà nước, thời hạn chậm nhất phải thu hồi tạm ứng lần 1 là ngày 30/7/2026."
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_006_aa56ebb777.html",
+          "evidenceSha256": "aa56ebb777b3fa81c15d3484fa0973e2f6f7d1149199ff440b29826053a080e5",
+          "supportingQuote": "Dòng tiền phân hóa mạnh theo nền tảng cơ bản của doanh nghiệp trong tuần khối ngoại bán ròng hơn 3.382 tỉ đồng Trái ngược với nhịp tăng nhẹ 9,57 điểm (+0,55%) của tuần trước đó, th"
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-131",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "canonicalUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_134_6171406a91.html",
+          "evidenceSha256": "6171406a91f12a07faad8e8fb340c87b8374e3ef9133879126a3821777def6cc",
+          "supportingQuote": "Gần 77% cổ phiếu HoSE giảm giá, VN-Index mất hơn 5% Kết thúc phiên 20/11/2026, VN-Index đứng tại 1.688,79 điểm, giảm 5,36% so với cuối năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261122-195",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "canonicalUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_198_77ca8320f7.html",
+          "evidenceSha256": "77ca8320f75efc05beaf478b9340bc4ee7dca2b809ee9e3a988027dccdcb871d",
+          "supportingQuote": "Trong bối cảnh Việt Nam đặt mục tiêu tăng trưởng GDP hai con số nhưng nhiều động lực truyền thống dần bộc lộ giới hạn thì kinh tế hàng không vũ trụ (Space Economy) và kinh tế tầm t"
+        },
+        {
+          "referenceId": "EVT-20261122-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "canonicalUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_014_7ba496bb30.html",
+          "evidenceSha256": "7ba496bb3087ad30be202b55293ffca05601de351ef26b249d2db5f3456bfb4b",
+          "supportingQuote": "Công ty CP Tập đoàn Novaland (NVL) vừa công bố thông tin bất thường về việc gia hạn giấy chứng nhận đăng ký chào bán thêm cổ phiếu ra công chúng."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-066",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "canonicalUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_069_ec9dd1ad70.html",
+          "evidenceSha256": "ec9dd1ad70b3c247ffc52635175d300da358abbeec0c831ca34e9c5f44e2fa47",
+          "supportingQuote": "“Chúng tôi sẽ không cho phép các công ty xây dựng trung tâm dữ liệu bên ngoài nước Mỹ”, ông Trump phát biểu khi đề cập đến lĩnh vực AI tại cuộc họp báo ở Nhà Trắng mới đây, sau khi"
+        },
+        {
+          "referenceId": "EVT-20261122-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "canonicalUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_b50d4e968a.html",
+          "evidenceSha256": "b50d4e968a2cd50b5e5384caf0e06cba2e1fc08f1956972c7aa64671140e0a12",
+          "supportingQuote": "Xuất khẩu rau quả Việt Nam trong 11 tháng ước đạt hơn 9,2 tỷ USD, vượt kỷ lục của cả năm 2025. Trong đó, sầu riêng tiếp tục là mặt hàng chủ lực, đóng góp khoảng 3,3 tỷ USD từ thị t"
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "canonicalUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_072a8fcebe.html",
+          "evidenceSha256": "072a8fcebe64423444634da6eeb9b8b3640c23f778d8ce47b314a07ff855de86",
+          "supportingQuote": "Một lô dâu tây tươi nhập khẩu từ Trung Quốc, bị phát hiện có dư lượng Cypermethrin cao gần gấp 6 lần, Deltamethrin gần 2 lần giới hạn cho phép. Cục Hải quan yêu cầu các đơn vị chủ"
+        },
+        {
+          "referenceId": "EVT-20261122-102",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "canonicalUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_105_1a33cb9a8c.html",
+          "evidenceSha256": "1a33cb9a8ce487990f4cf69d63d3d373d979b525f01a5eec8441a78d0654ee69",
+          "supportingQuote": "Theo Bộ Nông nghiệp và Môi trường, tháng 10/2026, xuất khẩu chè ước đạt 15,6 nghìn tấn, trị giá 29,7 triệu USD, tăng lần lượt 19,3% về lượng và 30,4% về giá trị so với cùng kỳ năm"
+        },
+        {
+          "referenceId": "EVT-20261122-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_021_d9915297f6.html",
+          "evidenceSha256": "d9915297f676a8610dd9e26d512e7bdcda7d88990ab30152e7fd3a29e0dc269a",
+          "supportingQuote": "Giá xăng dầu hôm nay 21/11: Dầu trong nước về sát mốc 26.000 đồng/lít Giá xăng dầu hôm nay (21/11) trên thị trường quốc tế tăng do lo ngại xung đột tại Trung Đông làm gián đoạn ngu"
+        },
+        {
+          "referenceId": "EVT-20261122-036",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "canonicalUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_2f23a9112f.html",
+          "evidenceSha256": "2f23a9112fb6da96026d6a60f2f632e9d5a726685d511bd1eccd8661ef0158ca",
+          "supportingQuote": "Nếu một startup phải có khách hàng, doanh thu, lợi nhuận và mô hình kinh doanh được chứng minh trước khi gọi vốn, liệu họ còn cần quỹ đầu tư mạo hiểm để làm gì?"
+        },
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-095",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "canonicalUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_098_13e0e75203.html",
+          "evidenceSha256": "13e0e75203a2d2087d61d31da2ccdd260dd8fb845a39d9d9a9bcfe14a5b8da97",
+          "supportingQuote": "Việt Nam đề xuất xây dựng hành lang kinh tế Côn Minh - Lào Cai - Hà Nội - Hải Phòng, hình thành các cụm sản xuất xuyên biên giới và thí điểm chuỗi thương mại nông sản tin cậy tại d"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-04",
+      "decisionTitle": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "title": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "headline": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "whatChanged": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "whyItMatters": "Đón đầu xu hướng chuyển dịch thanh toán số và chuẩn hóa tuân thủ dòng tiền.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu.",
+      "risks": [
+        "Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành và tốc độ tiếp nhận giải pháp của thị trường."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        }
+      ]
+    }
+  ],
+  "decisionCards": [
+    {
+      "decisionId": "DECISION-01",
+      "decisionTitle": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "title": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "headline": "Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "decisionCategory": "COMMERCIAL_OPPORTUNITY",
+      "executiveSummary": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "whatChanged": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "whyItMatters": "Tác động lan tỏa từ sự chuyển dịch của Bán lẻ Giá trị cao, Điện máy & Xe điện mở ra cơ hội gia tăng doanh số thanh toán số và tối ưu chi phí đối soát.",
+      "supportingThesisIds": [
+        "THESIS-04"
+      ],
+      "supportingThesisId": "THESIS-04",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-02"
+      ],
+      "supportingRadarSignalId": "RADAR-02",
+      "relatedRadarIds": [
+        "RADAR-02"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-034",
+        "EVT-20261122-166",
+        "EVT-20261122-005",
+        "EVT-20261122-156",
+        "EVT-20261122-125",
+        "EVT-20261122-002",
+        "EVT-20261122-095",
+        "EVT-20261122-061",
+        "EVT-20261122-003",
+        "EVT-20261122-025",
+        "EVT-20261122-064",
+        "EVT-20261122-039",
+        "EVT-20261122-063",
+        "EVT-20261122-036",
+        "EVT-20261122-008",
+        "EVT-20261122-132",
+        "EVT-20261122-069",
+        "EVT-20261122-019",
+        "EVT-20261122-053",
+        "EVT-20261122-195",
+        "EVT-20261122-006",
+        "EVT-20261122-102",
+        "EVT-20261122-031",
+        "EVT-20261122-001",
+        "EVT-20261122-208",
+        "EVT-20261122-013",
+        "EVT-20261122-131",
+        "EVT-20261122-029",
+        "EVT-20261122-016",
+        "EVT-20261122-068",
+        "EVT-20261122-124",
+        "EVT-20261122-066",
+        "EVT-20261122-041",
+        "EVT-20261122-050",
+        "EVT-20261122-073",
+        "EVT-20261122-026",
+        "EVT-20261122-114",
+        "EVT-20261122-071",
+        "EVT-20261122-044",
+        "EVT-20261122-089"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunities": [
+        "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến."
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán.",
+      "risks": [
+        "Rủi ro thích ứng công nghệ và chi phí lắp đặt thiết bị đầu cuối tại điểm bán."
+      ],
+      "recommendedAction": "VALIDATE",
+      "monitoringTriggers": [
+        "Doanh số giao dịch và tốc độ phủ điểm chấp nhận thanh toán tại Bán lẻ Giá trị cao, Điện máy & Xe điện."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_036_2d4c8ec65c.html",
+          "evidenceSha256": "2d4c8ec65ccce3d354542bba77b3968ce5af8a954d0771babc4933bdbe45b023",
+          "supportingQuote": "Mục tiêu tăng trưởng hai con số đặt ra bài toán lớn về huy động, phân bổ và sử dụng hiệu quả các nguồn lực đầu tư."
+        },
+        {
+          "referenceId": "EVT-20261122-166",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "canonicalUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_169_ca2cdc6513.html",
+          "evidenceSha256": "ca2cdc6513247d8a3954dd53f81838477648dadf13d07d434e001ea637c88712",
+          "supportingQuote": "Hai cổ đông chiến lược của Vietcombank và VietinBank cùng ký hợp tác với Sovico Trong tháng 11/2026, hàng loạt thỏa thuận tài chính giữa các doanh nghiệp trong hệ sinh thái tỷ phú"
+        },
+        {
+          "referenceId": "EVT-20261122-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "canonicalUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_a417010013.html",
+          "evidenceSha256": "a41701001375134421293a0abdd075f159eb93673f6f044b2f8b0760deb12bb6",
+          "supportingQuote": "Với doanh nghiệp nhỏ và vừa (SME), một khoản vốn được giữ lại đúng lúc có thể giúp hoàn thành đơn hàng, duy trì việc làm và tiếp tục đầu tư. Do đó, các chính sách miễn, giảm, gia h"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-125",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_128_683adcf275.html",
+          "evidenceSha256": "683adcf2752e62db224ea35ef00d5715860bd61fd73eb33f7723f8ac41a36561",
+          "supportingQuote": "Sau phiên tăng nhẹ đầu tuần, chỉ số giảm liên tiếp 4 phiên và đánh mất mốc tâm lý 1.700 điểm."
+        },
+        {
+          "referenceId": "EVT-20261122-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "canonicalUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_002_94f56a8356.html",
+          "evidenceSha256": "94f56a8356fd365bc8fb230d0f9baa1ef10b76deeac418ab06821ea570328413",
+          "supportingQuote": "ABB là mã đi lên 1,81%, mức tăng cao hơn các mã còn lại trong nhóm, dù giá trị giao dịch chỉ khoảng 27 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261122-095",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "canonicalUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_098_13e0e75203.html",
+          "evidenceSha256": "13e0e75203a2d2087d61d31da2ccdd260dd8fb845a39d9d9a9bcfe14a5b8da97",
+          "supportingQuote": "Việt Nam đề xuất xây dựng hành lang kinh tế Côn Minh - Lào Cai - Hà Nội - Hải Phòng, hình thành các cụm sản xuất xuyên biên giới và thí điểm chuỗi thương mại nông sản tin cậy tại d"
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "canonicalUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_acd5490900.html",
+          "evidenceSha256": "acd5490900196e1eb7232140cbe963b0ac15f851a0b93c23f52248bbf2a076d6",
+          "supportingQuote": "MBS vừa có báo cáo cập nhật nội dung buổi gặp gỡ nhà đầu tư của BIDV."
+        },
+        {
+          "referenceId": "EVT-20261122-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "canonicalUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_b50d4e968a.html",
+          "evidenceSha256": "b50d4e968a2cd50b5e5384caf0e06cba2e1fc08f1956972c7aa64671140e0a12",
+          "supportingQuote": "Xuất khẩu rau quả Việt Nam trong 11 tháng ước đạt hơn 9,2 tỷ USD, vượt kỷ lục của cả năm 2025. Trong đó, sầu riêng tiếp tục là mặt hàng chủ lực, đóng góp khoảng 3,3 tỷ USD từ thị t"
+        },
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "canonicalUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_b66452b27c.html",
+          "evidenceSha256": "b66452b27cf4c4b0099d34b11e547b736ff441388224a73e255f30be731a9109",
+          "supportingQuote": "Trong báo cáo chiến lược thị trường quý IV/2026 công bố ngày 20/11, Trung tâm Phân tích CTCP Chứng khoán DSC chỉ ra nghịch lý của thị trường chứng khoán Việt Nam: lợi nhuận doanh n"
+        },
+        {
+          "referenceId": "EVT-20261122-036",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "canonicalUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_2f23a9112f.html",
+          "evidenceSha256": "2f23a9112fb6da96026d6a60f2f632e9d5a726685d511bd1eccd8661ef0158ca",
+          "supportingQuote": "Nếu một startup phải có khách hàng, doanh thu, lợi nhuận và mô hình kinh doanh được chứng minh trước khi gọi vốn, liệu họ còn cần quỹ đầu tư mạo hiểm để làm gì?"
+        },
+        {
+          "referenceId": "EVT-20261122-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_00e765c871.html",
+          "evidenceSha256": "00e765c871ebaa7ba84b28cb2c28f1fd3f578a54f322b650383af1744c624882",
+          "supportingQuote": "Nhân Ngày Văn hóa Việt Nam (24/11), các ngân hàng tạm ngừng giao dịch tại quầy trong một ngày. Hoạt động giao dịch tại quầy trở lại bình thường từ thứ Tư, ngày 25/11/2026. Trong th"
+        },
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        },
+        {
+          "referenceId": "EVT-20261122-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "canonicalUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_4a3bd87e04.html",
+          "evidenceSha256": "4a3bd87e04fdfbd24b9299f19dd82737e17c1585b7a2de1966edb82f390573f6",
+          "supportingQuote": "Tuy nhiên, theo Bảng tổng hợp thông tin hợp đồng đã gửi Kho bạc Nhà nước, thời hạn chậm nhất phải thu hồi tạm ứng lần 1 là ngày 30/7/2026."
+        },
+        {
+          "referenceId": "EVT-20261122-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_021_d9915297f6.html",
+          "evidenceSha256": "d9915297f676a8610dd9e26d512e7bdcda7d88990ab30152e7fd3a29e0dc269a",
+          "supportingQuote": "Giá xăng dầu hôm nay 21/11: Dầu trong nước về sát mốc 26.000 đồng/lít Giá xăng dầu hôm nay (21/11) trên thị trường quốc tế tăng do lo ngại xung đột tại Trung Đông làm gián đoạn ngu"
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-195",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "canonicalUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_198_77ca8320f7.html",
+          "evidenceSha256": "77ca8320f75efc05beaf478b9340bc4ee7dca2b809ee9e3a988027dccdcb871d",
+          "supportingQuote": "Trong bối cảnh Việt Nam đặt mục tiêu tăng trưởng GDP hai con số nhưng nhiều động lực truyền thống dần bộc lộ giới hạn thì kinh tế hàng không vũ trụ (Space Economy) và kinh tế tầm t"
+        },
+        {
+          "referenceId": "EVT-20261122-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_006_aa56ebb777.html",
+          "evidenceSha256": "aa56ebb777b3fa81c15d3484fa0973e2f6f7d1149199ff440b29826053a080e5",
+          "supportingQuote": "Dòng tiền phân hóa mạnh theo nền tảng cơ bản của doanh nghiệp trong tuần khối ngoại bán ròng hơn 3.382 tỉ đồng Trái ngược với nhịp tăng nhẹ 9,57 điểm (+0,55%) của tuần trước đó, th"
+        },
+        {
+          "referenceId": "EVT-20261122-102",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "canonicalUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_105_1a33cb9a8c.html",
+          "evidenceSha256": "1a33cb9a8ce487990f4cf69d63d3d373d979b525f01a5eec8441a78d0654ee69",
+          "supportingQuote": "Theo Bộ Nông nghiệp và Môi trường, tháng 10/2026, xuất khẩu chè ước đạt 15,6 nghìn tấn, trị giá 29,7 triệu USD, tăng lần lượt 19,3% về lượng và 30,4% về giá trị so với cùng kỳ năm"
+        },
+        {
+          "referenceId": "EVT-20261122-031",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "canonicalUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_24bdcc2973.html",
+          "evidenceSha256": "24bdcc2973747cca7813ff6e3c7ca12cb58ca6be04662aa094e7dca943ac0580",
+          "supportingQuote": "Theo dữ liệu từ WiData, tính đến phiên giao dịch ngày 20/11/2026, hệ số giá trên giá trị sổ sách (P/B) của 28 ngân hàng niêm yết và đăng ký giao dịch trên thị trường chứng khoán Vi"
+        },
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "canonicalUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_014_7ba496bb30.html",
+          "evidenceSha256": "7ba496bb3087ad30be202b55293ffca05601de351ef26b249d2db5f3456bfb4b",
+          "supportingQuote": "Công ty CP Tập đoàn Novaland (NVL) vừa công bố thông tin bất thường về việc gia hạn giấy chứng nhận đăng ký chào bán thêm cổ phiếu ra công chúng."
+        },
+        {
+          "referenceId": "EVT-20261122-131",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "canonicalUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_134_6171406a91.html",
+          "evidenceSha256": "6171406a91f12a07faad8e8fb340c87b8374e3ef9133879126a3821777def6cc",
+          "supportingQuote": "Gần 77% cổ phiếu HoSE giảm giá, VN-Index mất hơn 5% Kết thúc phiên 20/11/2026, VN-Index đứng tại 1.688,79 điểm, giảm 5,36% so với cuối năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261122-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_dec1020b93.html",
+          "evidenceSha256": "dec1020b9357c79f0489f8e60156231a8189b544bf94f7b38d89811515437808",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
+          "referenceId": "EVT-20261122-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "canonicalUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_072a8fcebe.html",
+          "evidenceSha256": "072a8fcebe64423444634da6eeb9b8b3640c23f778d8ce47b314a07ff855de86",
+          "supportingQuote": "Một lô dâu tây tươi nhập khẩu từ Trung Quốc, bị phát hiện có dư lượng Cypermethrin cao gần gấp 6 lần, Deltamethrin gần 2 lần giới hạn cho phép. Cục Hải quan yêu cầu các đơn vị chủ"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "EVT-20261122-066",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "canonicalUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_069_ec9dd1ad70.html",
+          "evidenceSha256": "ec9dd1ad70b3c247ffc52635175d300da358abbeec0c831ca34e9c5f44e2fa47",
+          "supportingQuote": "“Chúng tôi sẽ không cho phép các công ty xây dựng trung tâm dữ liệu bên ngoài nước Mỹ”, ông Trump phát biểu khi đề cập đến lĩnh vực AI tại cuộc họp báo ở Nhà Trắng mới đây, sau khi"
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-114",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "canonicalUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_117_0f3aeac32e.html",
+          "evidenceSha256": "0f3aeac32e417ce198c0f7fe0cfe7a1a6a39285e58793e36556c59e9bbdf7680",
+          "supportingQuote": "Sau 5 năm thành lập, công ty phát triển Claude gây chú ý với thương vụ IPO trị giá 81,3 tỷ USD trên sàn Nasdaq."
+        },
+        {
+          "referenceId": "EVT-20261122-071",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "canonicalUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_074_5faa45b3a5.html",
+          "evidenceSha256": "5faa45b3a5f901e78d7505190ac887c22bc6925ba1b1a69193d47bf5550f3bb1",
+          "supportingQuote": "Ngày 21/11, Công ty Cổ phần Thép Nam Kim khánh thành Nhà máy Tôn Nam Kim Phú Mỹ tại Khu công nghiệp Mỹ Xuân B1 – Đại Dương, TP.HCM."
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-089",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "canonicalUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_092_758a8d285a.html",
+          "evidenceSha256": "758a8d285a42e4fb974bf7289ec69ae4f32bb1b97cd9b91159a50d67a6c6c5b9",
+          "supportingQuote": "Văn kiện năm 2013 và ngoại lệ trong chính sách tài trợ của Nhật Bản Ngày 9/11/2026, tại Tokyo, Cơ quan Hợp tác Quốc tế Nhật Bản (JICA) ký hiệp định cung cấp khoản vay ODA trị giá t"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-02",
+      "decisionTitle": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "title": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "headline": "Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng",
+      "decisionCategory": "MARKET_OPPORTUNITY",
+      "executiveSummary": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "whatChanged": "Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm thương mại điện tử.",
+      "whyItMatters": "Giải quyết triệt để bài toán công nợ và rủi ro quản lý tiền mặt cho các doanh nghiệp thuộc Logistics & Chuyển phát Hàng nặng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingRadarSignalId": "RADAR-01",
+      "relatedRadarIds": [
+        "RADAR-01"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-039",
+        "EVT-20261122-073"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.",
+      "opportunities": [
+        "Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng."
+      ],
+      "risk": "Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm.",
+      "risks": [
+        "Thói quen thanh toán tiền mặt cố hữu và yêu cầu tích hợp đồng bộ phần mềm."
+      ],
+      "recommendedAction": "VALIDATE",
+      "monitoringTriggers": [
+        "Phản hồi từ các đối tác thương mại thuộc Logistics & Chuyển phát Hàng nặng và tỷ lệ số hóa thanh toán."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-03",
+      "decisionTitle": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "title": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "headline": "Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động",
+      "decisionCategory": "MONITORING_REQUIRED",
+      "executiveSummary": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Techcombank huy động 7.500 tỷ đồng qua 3 lô trái phiếu, lãi suất cao nhất 9%/năm' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
+      "whatChanged": "Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Techcombank huy động 7.500 tỷ đồng qua 3 lô trái phiếu, lãi suất cao nhất 9%/năm' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM.",
+      "whyItMatters": "Chi phí vốn ngân hàng ảnh hưởng trực tiếp đến biên lợi nhuận tài trợ vốn của doanh nghiệp và người tiêu dùng.",
+      "supportingThesisIds": [
+        "THESIS-01"
+      ],
+      "supportingThesisId": "THESIS-01",
+      "supportingChainIds": [
+        "CHAIN-01"
+      ],
+      "supportingMacroChainId": "CHAIN-01",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-001",
+        "EVT-20261122-031",
+        "EVT-20261122-025",
+        "EVT-20261122-089",
+        "EVT-20261122-166",
+        "EVT-20261122-002",
+        "EVT-20261122-124",
+        "EVT-20261122-008",
+        "EVT-20261122-029",
+        "EVT-20261122-063",
+        "EVT-20261122-034",
+        "EVT-20261122-041",
+        "EVT-20261122-114",
+        "EVT-20261122-071",
+        "EVT-20261122-003",
+        "EVT-20261122-125",
+        "EVT-20261122-005",
+        "EVT-20261122-156",
+        "EVT-20261122-069",
+        "EVT-20261122-061",
+        "EVT-20261122-006",
+        "EVT-20261122-050",
+        "EVT-20261122-068",
+        "EVT-20261122-073",
+        "EVT-20261122-208",
+        "EVT-20261122-131",
+        "EVT-20261122-195",
+        "EVT-20261122-013",
+        "EVT-20261122-026",
+        "EVT-20261122-039",
+        "EVT-20261122-066",
+        "EVT-20261122-064",
+        "EVT-20261122-053",
+        "EVT-20261122-016",
+        "EVT-20261122-102",
+        "EVT-20261122-019",
+        "EVT-20261122-036",
+        "EVT-20261122-132",
+        "EVT-20261122-044",
+        "EVT-20261122-095"
+      ],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "supportingFacts": [
+        "7.500 tỷ đồng",
+        "9%/năm",
+        "24,1%"
+      ],
+      "supportingFactIds": [
+        "7.500 tỷ đồng",
+        "9%/năm",
+        "24,1%"
+      ],
+      "opportunity": "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng.",
+      "opportunities": [
+        "Thúc đẩy giải pháp trả góp 0% để giảm áp lực chi trả một lần cho người tiêu dùng."
+      ],
+      "risk": "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống.",
+      "risks": [
+        "Biến động lãi suất liên ngân hàng và thanh khoản hệ thống."
+      ],
+      "recommendedAction": "MONITOR",
+      "monitoringTriggers": [
+        "Biểu lãi suất huy động tại các NHTM và số liệu can thiệp thị trường của NHNN."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-001",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "canonicalUrl": "https://nguoiquansat.vn/techcombank-huy-dong-7-500-ty-dong-qua-3-lo-trai-phieu-lai-suat-cao-nhat-9-nam-329473.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_001_35c346e60a.html",
+          "evidenceSha256": "35c346e60a97aff4f4ee449524124e55233f7d3bb9f96392ef909ae6b2f9ec36",
+          "supportingQuote": "Việc liên tiếp phát hành các lô trái phiếu cho thấy Techcombank đang đẩy mạnh huy động vốn qua kênh trái phiếu."
+        },
+        {
+          "referenceId": "EVT-20261122-031",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "canonicalUrl": "https://cafef.vn/co-phieu-vietcombank-khong-con-duoc-dinh-gia-cao-nhat-nganh-ngan-hang-8-ma-bank-dang-giao-dich-duoi-gia-tri-so-sach-lpbank-va-sacombank-bo-xa-phan-con-lai-188261122091658111.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_033_24bdcc2973.html",
+          "evidenceSha256": "24bdcc2973747cca7813ff6e3c7ca12cb58ca6be04662aa094e7dca943ac0580",
+          "supportingQuote": "Theo dữ liệu từ WiData, tính đến phiên giao dịch ngày 20/11/2026, hệ số giá trên giá trị sổ sách (P/B) của 28 ngân hàng niêm yết và đăng ký giao dịch trên thị trường chứng khoán Vi"
+        },
+        {
+          "referenceId": "EVT-20261122-025",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "canonicalUrl": "https://nguoiquansat.vn/62-000-ty-dong-du-no-mua-nha-tai-bidv-du-kien-tang-lai-suat-them-2-3-trong-12-thang-toi-canh-bao-nguy-co-no-xau-gia-tang-329472.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_027_acd5490900.html",
+          "evidenceSha256": "acd5490900196e1eb7232140cbe963b0ac15f851a0b93c23f52248bbf2a076d6",
+          "supportingQuote": "MBS vừa có báo cáo cập nhật nội dung buổi gặp gỡ nhà đầu tư của BIDV."
+        },
+        {
+          "referenceId": "EVT-20261122-089",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "canonicalUrl": "https://cafef.vn/nhat-ban-siet-cho-vay-da-dien-dung-nhien-lieu-hoa-thach-viet-nam-van-nhan-khoan-vay-hon-4500-ty-dong-lai-suat-14-nho-mot-van-kien-tu-13-nam-truoc-188261122095157999.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_092_758a8d285a.html",
+          "evidenceSha256": "758a8d285a42e4fb974bf7289ec69ae4f32bb1b97cd9b91159a50d67a6c6c5b9",
+          "supportingQuote": "Văn kiện năm 2013 và ngoại lệ trong chính sách tài trợ của Nhật Bản Ngày 9/11/2026, tại Tokyo, Cơ quan Hợp tác Quốc tế Nhật Bản (JICA) ký hiệp định cung cấp khoản vay ODA trị giá t"
+        },
+        {
+          "referenceId": "EVT-20261122-166",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "canonicalUrl": "https://cafef.vn/ty-phu-nguyen-thi-phuong-thao-lien-tiep-bat-tay-2-dai-gia-nhat-tung-rot-hon-13-ty-usd-vao-vietcombank-va-vietinbank-188261121232200282.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_169_ca2cdc6513.html",
+          "evidenceSha256": "ca2cdc6513247d8a3954dd53f81838477648dadf13d07d434e001ea637c88712",
+          "supportingQuote": "Hai cổ đông chiến lược của Vietcombank và VietinBank cùng ký hợp tác với Sovico Trong tháng 11/2026, hàng loạt thỏa thuận tài chính giữa các doanh nghiệp trong hệ sinh thái tỷ phú"
+        },
+        {
+          "referenceId": "EVT-20261122-002",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "canonicalUrl": "https://cafef.vn/hai-co-phieu-ngan-hang-nguoc-chieu-tang-gia-trong-tuan-do-lua-188261122105306833.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_002_94f56a8356.html",
+          "evidenceSha256": "94f56a8356fd365bc8fb230d0f9baa1ef10b76deeac418ab06821ea570328413",
+          "supportingQuote": "ABB là mã đi lên 1,81%, mức tăng cao hơn các mã còn lại trong nhóm, dù giá trị giao dịch chỉ khoảng 27 tỷ đồng."
+        },
+        {
+          "referenceId": "EVT-20261122-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "canonicalUrl": "https://cafef.vn/ngay-22-11-gui-duoi-100-trieu-dong-ky-han-6-thang-tai-lpbank-msb-nam-a-bank-vib-va-ocb-nhan-duoc-bao-nhieu-tien-lai-188261121212422552.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_127_c4e1a3843b.html",
+          "evidenceSha256": "c4e1a3843be2c4e2548316d58c1b66827c38d31b911fed64638d544f17d5a0a8",
+          "supportingQuote": "Gửi tại quầy: LPBank và OCB niêm yết lãi suất cao nhất Theo biểu lãi suất được niêm yết, tại kỳ hạn 6 tháng, LPBank niêm yết lãi suất tiền gửi tại quầy ở mức 5,9%/năm đối với sản p"
+        },
+        {
+          "referenceId": "EVT-20261122-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/lich-nghi-ngay-ngay-van-hoa-viet-nam-cua-he-thong-ngan-hang-87234.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_00e765c871.html",
+          "evidenceSha256": "00e765c871ebaa7ba84b28cb2c28f1fd3f578a54f322b650383af1744c624882",
+          "supportingQuote": "Nhân Ngày Văn hóa Việt Nam (24/11), các ngân hàng tạm ngừng giao dịch tại quầy trong một ngày. Hoạt động giao dịch tại quầy trở lại bình thường từ thứ Tư, ngày 25/11/2026. Trong th"
+        },
+        {
+          "referenceId": "EVT-20261122-029",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/vo-hoac-chong-tu-y-vay-tien-ngan-hang-nguoi-con-lai-co-phai-tra-no-191059.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_031_dec1020b93.html",
+          "evidenceSha256": "dec1020b9357c79f0489f8e60156231a8189b544bf94f7b38d89811515437808",
+          "supportingQuote": "Thời báo Ngân hàng xin cảm ơn bạn đã gửi câu hỏi."
+        },
+        {
+          "referenceId": "EVT-20261122-063",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "canonicalUrl": "https://cafef.vn/loi-nhuan-doanh-nghiep-tang-gan-50-nhung-dinh-gia-chung-khoan-xuong-day-6-nam-dieu-gi-dang-xay-ra-188261122102058591.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_066_b66452b27c.html",
+          "evidenceSha256": "b66452b27cf4c4b0099d34b11e547b736ff441388224a73e255f30be731a9109",
+          "supportingQuote": "Trong báo cáo chiến lược thị trường quý IV/2026 công bố ngày 20/11, Trung tâm Phân tích CTCP Chứng khoán DSC chỉ ra nghịch lý của thị trường chứng khoán Việt Nam: lợi nhuận doanh n"
+        },
+        {
+          "referenceId": "EVT-20261122-034",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-can-van-luc-muon-giu-chan-dong-von-ngoai-viet-nam-phai-nang-suc-hut-cua-thi-truong-von-329494.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_036_2d4c8ec65c.html",
+          "evidenceSha256": "2d4c8ec65ccce3d354542bba77b3968ce5af8a954d0771babc4933bdbe45b023",
+          "supportingQuote": "Mục tiêu tăng trưởng hai con số đặt ra bài toán lớn về huy động, phân bổ và sử dụng hiệu quả các nguồn lực đầu tư."
+        },
+        {
+          "referenceId": "EVT-20261122-041",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "canonicalUrl": "https://thanhnien.vn/khoi-dong-mua-mua-sam-ban-le-tphcm-thu-ve-hon-60000-ti-dong-185261122080810278.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_043_9af55acf8e.html",
+          "evidenceSha256": "9af55acf8eaf425fa9e79b3d34d90223f7e200a3a4dbc4c0bdb59b5865af81b1",
+          "supportingQuote": "Trong mùa mua sắm cuối năm, TP.HCM lần đầu triển khai chương trình tổng kích cầu kinh tế với tên gọi Vibrant Ho ChiMinh City (Vibrant HCMC) theo mô hình \"5 trong 1\": kết hợp mua sắ"
+        },
+        {
+          "referenceId": "EVT-20261122-114",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "canonicalUrl": "https://cafef.vn/anthropic-gia-nhap-cau-lac-bo-doanh-nghiep-nghin-ty-usd-188261122074333473.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_117_0f3aeac32e.html",
+          "evidenceSha256": "0f3aeac32e417ce198c0f7fe0cfe7a1a6a39285e58793e36556c59e9bbdf7680",
+          "supportingQuote": "Sau 5 năm thành lập, công ty phát triển Claude gây chú ý với thương vụ IPO trị giá 81,3 tỷ USD trên sàn Nasdaq."
+        },
+        {
+          "referenceId": "EVT-20261122-071",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "canonicalUrl": "https://baodautu.vn/ton-nam-kim-mo-rong-nang-luc-san-xuat-voi-nha-may-thep-6200-ty-dong-d746640.html",
+          "publisher": "Báo Đầu tư",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_074_5faa45b3a5.html",
+          "evidenceSha256": "5faa45b3a5f901e78d7505190ac887c22bc6925ba1b1a69193d47bf5550f3bb1",
+          "supportingQuote": "Ngày 21/11, Công ty Cổ phần Thép Nam Kim khánh thành Nhà máy Tôn Nam Kim Phú Mỹ tại Khu công nghiệp Mỹ Xuân B1 – Đại Dương, TP.HCM."
+        },
+        {
+          "referenceId": "EVT-20261122-003",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-22-11-vang-the-gioi-ap-sat-3-500-usd-trong-nuoc-tiep-tuc-giam-207368.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_003_e6e75aa82e.html",
+          "evidenceSha256": "e6e75aa82e68e045383454d352d211da321124546307ccb44986da4d58869365",
+          "supportingQuote": "Giá vàng thế giới giao dịch ở mức 3.539 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261122-125",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/chung-khoan-tuan-moi-23-27-11-cho-nhip-kiem-dinh-lai-moc-1-700-diem-207362.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_128_683adcf275.html",
+          "evidenceSha256": "683adcf2752e62db224ea35ef00d5715860bd61fd73eb33f7723f8ac41a36561",
+          "supportingQuote": "Sau phiên tăng nhẹ đầu tuần, chỉ số giảm liên tiếp 4 phiên và đánh mất mốc tâm lý 1.700 điểm."
+        },
+        {
+          "referenceId": "EVT-20261122-005",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "canonicalUrl": "https://nguoiquansat.vn/chuyen-nhung-khoan-thue-duoc-mien-giam-thanh-nang-luc-san-xuat-viec-lam-329497.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_005_a417010013.html",
+          "evidenceSha256": "a41701001375134421293a0abdd075f159eb93673f6f044b2f8b0760deb12bb6",
+          "supportingQuote": "Với doanh nghiệp nhỏ và vừa (SME), một khoản vốn được giữ lại đúng lúc có thể giúp hoàn thành đơn hàng, duy trì việc làm và tiếp tục đầu tư. Do đó, các chính sách miễn, giảm, gia h"
+        },
+        {
+          "referenceId": "EVT-20261122-156",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "canonicalUrl": "https://nguoiquansat.vn/gia-vang-lao-doc-xuong-day-14-thang-du-chung-khoan-do-lua-chuyen-gia-canh-bao-tai-san-tru-an-dang-thanh-tai-san-rui-ro-329461.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_159_d82afc5486.html",
+          "evidenceSha256": "d82afc548667854cb973e9e16e72a9d3af7e19b0d56cbeb3764f9bed42473fba",
+          "supportingQuote": "Giá vàng lao dốc bất chấp chứng khoán đỏ lửa, chuyên gia nhận định kim loại quý đang mất dần vai trò trú ẩn và vận động giống một tài sản rủi ro."
+        },
+        {
+          "referenceId": "EVT-20261122-069",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "canonicalUrl": "https://cafef.vn/cham-nop-ho-so-thu-hoi-tam-ung-co-bi-phat-188261122094817857.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_072_4a3bd87e04.html",
+          "evidenceSha256": "4a3bd87e04fdfbd24b9299f19dd82737e17c1585b7a2de1966edb82f390573f6",
+          "supportingQuote": "Tuy nhiên, theo Bảng tổng hợp thông tin hợp đồng đã gửi Kho bạc Nhà nước, thời hạn chậm nhất phải thu hồi tạm ứng lần 1 là ngày 30/7/2026."
+        },
+        {
+          "referenceId": "EVT-20261122-061",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-vang-sjc-vang-nhan-9999-giam-sau-toi-6-trieu-dong-luong-trong-tuan-vang-the-gioi-mat-gan-10-188261122081406871.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_064_3ca0057822.html",
+          "evidenceSha256": "3ca005782290fc356bb20878a76d6875e530c481f889278a21bb3c3d51beba84",
+          "supportingQuote": "Sáng 22/11, vàng miếng SJC được niêm yết ở mức 128,5 triệu đồng/lượng mua vào và 133,5 triệu đồng/lượng bán ra."
+        },
+        {
+          "referenceId": "EVT-20261122-006",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/chung-khoan-tuan-qua-vn-index-lui-ve-1688-diem-khoi-ngoai-xa-rong-hon-3380-ti-dong-191060.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_006_aa56ebb777.html",
+          "evidenceSha256": "aa56ebb777b3fa81c15d3484fa0973e2f6f7d1149199ff440b29826053a080e5",
+          "supportingQuote": "Dòng tiền phân hóa mạnh theo nền tảng cơ bản của doanh nghiệp trong tuần khối ngoại bán ròng hơn 3.382 tỉ đồng Trái ngược với nhịp tăng nhẹ 9,57 điểm (+0,55%) của tuần trước đó, th"
+        },
+        {
+          "referenceId": "EVT-20261122-050",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-vang-hom-nay-22-11-sjc-mat-6-trieu-dong-luong-chieu-mua-2577390.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_053_a71ce3b757.html",
+          "evidenceSha256": "a71ce3b757568c1fb8bdd7ab8e58e124f6fe970dda1a82a7a63dd5334cd1c5a8",
+          "supportingQuote": "Giá vàng hôm nay 22/11: SJC mất 6 triệu đồng/lượng chỉ trong ít ngày Duy Anh Xem các bài viết của tác giả Sao chép liên kết 22/11/2026 05:00 (GMT+07:00)"
+        },
+        {
+          "referenceId": "EVT-20261122-068",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "canonicalUrl": "https://cafef.vn/gia-vang-hom-nay-22-11-hoi-phuc-nhe-nhung-van-dung-o-nguong-thap-188261122090107889.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_071_d33afe2208.html",
+          "evidenceSha256": "d33afe22080a0fe9cbf6198ffb1194f1510c7e37e3527c096ba4356cdc8a9c05",
+          "supportingQuote": "Giá vàng thế giới hồi phục nhẹ nhưng trải qua 1 tuần giảm mạnh do kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) duy trì chính sách tiền tệ thắt chặt ngày càng gia tăng, lợi suất trái phiếu"
+        },
+        {
+          "referenceId": "EVT-20261122-073",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "canonicalUrl": "https://nguoiquansat.vn/cuoc-dua-moi-giua-cac-ong-lon-logistics-gan-40-000-ty-dong-dau-tu-vao-6-ben-cang-tai-dac-khu-cat-hai-329468.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_076_4ea2288ecb.html",
+          "evidenceSha256": "4ea2288ecb2ce6da58021b7d4c90f3e6a35917bee547e5a5f715f8a5dc8fc760",
+          "supportingQuote": "Từ năm 2029, nguồn cung cảng biển tại Hải Phòng dự kiến bắt đầu thay đổi khi các bến mới lần lượt đi vào hoạt động."
+        },
+        {
+          "referenceId": "EVT-20261122-208",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/mua-sam-truc-tuyen-lam-gi-de-tranh-tien-mat-tat-mang-190987.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_212_859a581035.html",
+          "evidenceSha256": "859a581035792db0cdbe8b9599cb7f52cf4fa28a37d3e8c605fd54b49f280eaa",
+          "supportingQuote": "Mùa lễ hội, mùa của hacker tấn công trực tuyến Cảnh giác bẫy “giá rẻ” khi mua sắm online Một chiếc máy lọc không khí có giá hấp dẫn từng khiến chị Minh Hằng (Hà Nội) đặt mua từ một"
+        },
+        {
+          "referenceId": "EVT-20261122-131",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "canonicalUrl": "https://cafef.vn/2-3-so-co-phieu-tren-hose-giam-manh-hon-vn-index-he-lo-dieu-gi-188261121213625504.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_134_6171406a91.html",
+          "evidenceSha256": "6171406a91f12a07faad8e8fb340c87b8374e3ef9133879126a3821777def6cc",
+          "supportingQuote": "Gần 77% cổ phiếu HoSE giảm giá, VN-Index mất hơn 5% Kết thúc phiên 20/11/2026, VN-Index đứng tại 1.688,79 điểm, giảm 5,36% so với cuối năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261122-195",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "canonicalUrl": "https://vneconomy.vn/phat-trien-kinh-te-khong-gian-vu-tru-kinh-te-tam-thap-tai-viet-nam-e733.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_198_77ca8320f7.html",
+          "evidenceSha256": "77ca8320f75efc05beaf478b9340bc4ee7dca2b809ee9e3a988027dccdcb871d",
+          "supportingQuote": "Trong bối cảnh Việt Nam đặt mục tiêu tăng trưởng GDP hai con số nhưng nhiều động lực truyền thống dần bộc lộ giới hạn thì kinh tế hàng không vũ trụ (Space Economy) và kinh tế tầm t"
+        },
+        {
+          "referenceId": "EVT-20261122-013",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "canonicalUrl": "https://tuoitre.vn/novaland-smc-baf-cho-co-dong-nhan-vien-xuong-tien-mua-co-phieu-100261122104906855.htm",
+          "publisher": "Báo Tuổi Trẻ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_014_7ba496bb30.html",
+          "evidenceSha256": "7ba496bb3087ad30be202b55293ffca05601de351ef26b249d2db5f3456bfb4b",
+          "supportingQuote": "Công ty CP Tập đoàn Novaland (NVL) vừa công bố thông tin bất thường về việc gia hạn giấy chứng nhận đăng ký chào bán thêm cổ phiếu ra công chúng."
+        },
+        {
+          "referenceId": "EVT-20261122-026",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "canonicalUrl": "https://cafef.vn/chuyen-gia-chi-ra-chat-xuc-tac-5000-ty-usd-co-the-giup-vang-tang-gia-tro-lai-188261122090823455.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_028_e25f6e6c00.html",
+          "evidenceSha256": "e25f6e6c0032591c770a2451c14ebe89985fec3edc59e1ba2c9107bc2db85982",
+          "supportingQuote": "Giá vàng và bạc vừa trải qua một tuần giao dịch đầy biến động khi lợi suất trái phiếu tăng và kỳ vọng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất gây sức ép lớn lên thị tr"
+        },
+        {
+          "referenceId": "EVT-20261122-039",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "canonicalUrl": "https://cafef.vn/bat-dong-san-cong-nghiep-viet-nam-don-song-ma-ty-usd-188261122102810073.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_041_5eab689439.html",
+          "evidenceSha256": "5eab689439d4ef87cb1d4eadff13c3256dacfbd2036312d7b0d8c2a955f7146d",
+          "supportingQuote": "Nhà đầu tư chuyển hướng sang tài sản đang vận hành Thông tin CTP dự kiến mua lại danh mục bất động sản logistics của SLP cho thấy sức hút ngày càng lớn của thị trường Việt Nam đối"
+        },
+        {
+          "referenceId": "EVT-20261122-066",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "canonicalUrl": "https://vneconomy.vn/my-se-ap-thue-nang-voi-doanh-nghiep-xay-trung-tam-du-lieu-o-nuoc-ngoai.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_069_ec9dd1ad70.html",
+          "evidenceSha256": "ec9dd1ad70b3c247ffc52635175d300da358abbeec0c831ca34e9c5f44e2fa47",
+          "supportingQuote": "“Chúng tôi sẽ không cho phép các công ty xây dựng trung tâm dữ liệu bên ngoài nước Mỹ”, ông Trump phát biểu khi đề cập đến lĩnh vực AI tại cuộc họp báo ở Nhà Trắng mới đây, sau khi"
+        },
+        {
+          "referenceId": "EVT-20261122-064",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "canonicalUrl": "https://nguoiquansat.vn/xuat-khau-rau-qua-ap-sat-moc-10-ty-usd-mot-loai-qua-mang-ve-hon-3-ty-usd-tu-trung-quoc-329492.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_067_b50d4e968a.html",
+          "evidenceSha256": "b50d4e968a2cd50b5e5384caf0e06cba2e1fc08f1956972c7aa64671140e0a12",
+          "supportingQuote": "Xuất khẩu rau quả Việt Nam trong 11 tháng ước đạt hơn 9,2 tỷ USD, vượt kỷ lục của cả năm 2025. Trong đó, sầu riêng tiếp tục là mặt hàng chủ lực, đóng góp khoảng 3,3 tỷ USD từ thị t"
+        },
+        {
+          "referenceId": "EVT-20261122-053",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "canonicalUrl": "https://cafebiz.vn/thu-tuong-chi-dao-loat-giai-phap-kich-cau-tieu-dung-dip-cuoi-nam-176261122062214694.chn",
+          "publisher": "CafeBiz / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_056_17825f0f01.html",
+          "evidenceSha256": "17825f0f017a09785ba4d9ce18776bc3289d8138451cf528cc10f2f4a4e759bb",
+          "supportingQuote": "Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc vừa ký Chỉ thị ngày 21/11 của Thủ tướng Chính phủ về việc thực hiện các giải pháp kích cầu tiêu dùng, phát triển thị trường trong n"
+        },
+        {
+          "referenceId": "EVT-20261122-016",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "canonicalUrl": "https://thanhnien.vn/dau-tay-nhap-co-du-luong-thuoc-tru-sau-vuot-nguong-6-lan-hai-quan-siet-kiem-tra-185261122092621536.htm",
+          "publisher": "Báo Thanh Niên",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_017_072a8fcebe.html",
+          "evidenceSha256": "072a8fcebe64423444634da6eeb9b8b3640c23f778d8ce47b314a07ff855de86",
+          "supportingQuote": "Một lô dâu tây tươi nhập khẩu từ Trung Quốc, bị phát hiện có dư lượng Cypermethrin cao gần gấp 6 lần, Deltamethrin gần 2 lần giới hạn cho phép. Cục Hải quan yêu cầu các đơn vị chủ"
+        },
+        {
+          "referenceId": "EVT-20261122-102",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "canonicalUrl": "https://vneconomy.vn/xuat-khau-che-tang-gia-tri-nhung-van-can-che-bien-sau-va-da-dang-hoa-dau-ra.htm",
+          "publisher": "Tạp chí Kinh tế Việt Nam (VnEconomy)",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_105_1a33cb9a8c.html",
+          "evidenceSha256": "1a33cb9a8ce487990f4cf69d63d3d373d979b525f01a5eec8441a78d0654ee69",
+          "supportingQuote": "Theo Bộ Nông nghiệp và Môi trường, tháng 10/2026, xuất khẩu chè ước đạt 15,6 nghìn tấn, trị giá 29,7 triệu USD, tăng lần lượt 19,3% về lượng và 30,4% về giá trị so với cùng kỳ năm"
+        },
+        {
+          "referenceId": "EVT-20261122-019",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "canonicalUrl": "https://vietnamnet.vn/gia-xang-dau-hom-nay-22-11-the-gioi-va-trong-nuoc-cung-giam-2577531.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_021_d9915297f6.html",
+          "evidenceSha256": "d9915297f676a8610dd9e26d512e7bdcda7d88990ab30152e7fd3a29e0dc269a",
+          "supportingQuote": "Giá xăng dầu hôm nay 21/11: Dầu trong nước về sát mốc 26.000 đồng/lít Giá xăng dầu hôm nay (21/11) trên thị trường quốc tế tăng do lo ngại xung đột tại Trung Đông làm gián đoạn ngu"
+        },
+        {
+          "referenceId": "EVT-20261122-036",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "canonicalUrl": "https://cafef.vn/startup-ai-viet-phai-lon-moi-goi-duoc-von-hay-can-von-de-lon-188261122093759118.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_038_2f23a9112f.html",
+          "evidenceSha256": "2f23a9112fb6da96026d6a60f2f632e9d5a726685d511bd1eccd8661ef0158ca",
+          "supportingQuote": "Nếu một startup phải có khách hàng, doanh thu, lợi nhuận và mô hình kinh doanh được chứng minh trước khi gọi vốn, liệu họ còn cần quỹ đầu tư mạo hiểm để làm gì?"
+        },
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        },
+        {
+          "referenceId": "EVT-20261122-044",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "canonicalUrl": "https://vietnamnet.vn/pnj-cho-khach-doi-vang-sang-kim-cuong-khong-dong-y-doi-kim-cuong-lay-vang-2577453.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_047_789335090f.html",
+          "evidenceSha256": "789335090f92359b9a7229e303fb4d868073e9933a1439bf12ff06a4fe8dc0bf",
+          "supportingQuote": "Ba giám đốc cao cấp tại PNJ đồng loạt từ nhiệm Ba giám đốc cao cấp của CTCP Vàng bạc Đá quý Phú Nhuận (PNJ) đồng loạt từ nhiệm theo nguyện vọng cá nhân, có hiệu lực từ ngày 26/11."
+        },
+        {
+          "referenceId": "EVT-20261122-095",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "canonicalUrl": "https://nguoiquansat.vn/viet-nam-va-khu-vuc-tay-nam-trung-quoc-de-xuat-5-sang-kien-hop-tac-chien-luoc-329466.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_098_13e0e75203.html",
+          "evidenceSha256": "13e0e75203a2d2087d61d31da2ccdd260dd8fb845a39d9d9a9bcfe14a5b8da97",
+          "supportingQuote": "Việt Nam đề xuất xây dựng hành lang kinh tế Côn Minh - Lào Cai - Hà Nội - Hải Phòng, hình thành các cụm sản xuất xuyên biên giới và thí điểm chuỗi thương mại nông sản tin cậy tại d"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-22",
+          "sourceUrl": "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2211-gui-450-trieu-dong-nhan-7425-trieu-dong-tien-lai-1804524.ldo",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "decisionId": "DECISION-04",
+      "decisionTitle": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "title": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "headline": "Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)",
+      "decisionCategory": "STRATEGIC_SIGNAL",
+      "executiveSummary": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "whatChanged": "Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối với các cơ sở kinh doanh.",
+      "whyItMatters": "Đón đầu xu hướng chuyển dịch thanh toán số và chuẩn hóa tuân thủ dòng tiền.",
+      "supportingThesisIds": [
+        "THESIS-02"
+      ],
+      "supportingThesisId": "THESIS-02",
+      "supportingChainIds": [
+        "CHAIN-02"
+      ],
+      "supportingMacroChainId": "CHAIN-02",
+      "supportingRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingRadarSignalId": "RADAR-03",
+      "relatedRadarIds": [
+        "RADAR-03"
+      ],
+      "supportingEventIds": [
+        "EVT-20261122-132"
+      ],
+      "supportingMarketPulseIds": [],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "opportunity": "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền.",
+      "opportunities": [
+        "Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền."
+      ],
+      "risk": "Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu.",
+      "risks": [
+        "Thời gian thích ứng quy trình nghiệp vụ và chi phí đầu tư ban đầu."
+      ],
+      "recommendedAction": "INVESTIGATE",
+      "monitoringTriggers": [
+        "Văn bản hướng dẫn thi hành và tốc độ tiếp nhận giải pháp của thị trường."
+      ],
+      "timeHorizon": "IMMEDIATE_1_2_WEEKS",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "limitations": [
+        "Cần đối chiếu số liệu triển khai thực tế và năng lực tích hợp hệ thống của các bên trước khi mở rộng quy mô."
+      ],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261122-132",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "canonicalUrl": "https://cafef.vn/dang-uy-chinh-phu-cho-y-kien-ve-de-xuat-trung-tam-hanh-chinh-moi-o-lam-dong-188261122073429659.chn",
+          "publisher": "CafeF / VCCorp",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_135_8235645959.html",
+          "evidenceSha256": "823564595945403ec1e2c92f9ee72d08ad27b9700730c01c7b1c3dc6d02214dd",
+          "supportingQuote": "Theo Công văn số 1690-CV/ĐU ngày 6/11/2026 về chủ trương triển khai đầu tư xây dựng Trung tâm hành chính - chính trị mới của tỉnh Lâm Đồng, Đảng ủy Chính phủ đã có ý kiến gửi Văn p"
+        }
+      ]
+    }
+  ],
+  "totalDecisionCards": 4,
+  "fiveQuestionsExecutiveSynthesis": {
+    "question1_whatIsMarketChanging": "Thị trường đang chuyển động theo các trục vĩ mô chính: Ngân hàng, Tín dụng & Lãi suất: Nền tảng định giá thương hiệu và chất lượng vốn vững chắc từ 'Techcombank huy động 7.500 tỷ đồng qua 3 lô trái phiếu, lãi suất cao nhất 9%/năm' tạo trợ lực quan trọng giúp các tổ chức tín dụng tối ưu hóa chi phí vốn (COF), củng cố tỷ lệ CASA và giữ ổn định biên lãi ròng NIM. Chính sách Tiền tệ, Tỷ giá & Thị trường Vốn: Xung lực tăng trưởng mở rộng từ 'Chứng khoán tuần qua: VN-Index lùi về 1.688 điểm, khối ngoại xả ròng hơn 3.380 tỉ đồng' với các dữ kiện trọng yếu (VN-Index: 1.700 điểm; VN-Index: 23,71 điểm) thúc đẩy dòng tiền và hoạt động thanh toán/tín dụng đối với biến số Chỉ số VN-Index (1.700 điểm) gắn với VN-Index.",
+    "question2_macroImpactOnBanksEnterprisesConsumers": "Ngân hàng duy trì cân đối chi phí huy động và thanh khoản; doanh nghiệp đối mặt với chi phí vốn chọn lọc nhưng hưởng lợi từ dòng tiền thông suốt hơn; người tiêu dùng duy trì tâm lý tích lũy phòng thủ kết hợp tập trung mua sắm có kế hoạch vào các dịp khuyến mại.",
+    "question3_cashlessPaymentOpportunities": "Các cơ hội thương mại nổi bật nhất cho thanh toán không tiền mặt bao gồm: (1) Logistics & Chuyển phát Hàng nặng: Giải pháp Shipper Dynamic QR định danh theo mã vận đơn và Payment Link thanh toán trước khi giao hàng.; (2) Bán lẻ Giá trị cao, Điện máy & Xe điện: Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.; (3) Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): Gói giải pháp SmartPOS tích hợp phần mềm bán hàng kết nối trực tiếp hóa đơn điện tử khởi tạo từ máy tính tiền..",
+    "question4_keyWatchSignals": "Các tín hiệu điều hành và thị trường trọng điểm cần bám sát: Logistics & Chuyển phát Hàng nặng: theo dõi Các đơn vị vận chuyển mở rộng mạng lưới trung chuyển hàng nặng phục vụ cao điểm ; Bán lẻ Giá trị cao, Điện máy & Xe điện: theo dõi Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phâ; Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME): theo dõi Tăng cường thanh kiểm tra đo lường, chất lượng và chuẩn hóa hóa đơn chứng từ đối.",
+    "question5_bryanNextActions": "Kế hoạch hành động khuyến nghị cho Bryan: VALIDATE: Mở rộng Chấp nhận Thanh toán cho Bán lẻ Giá trị cao, Điện máy & Xe điện; VALIDATE: Triển khai Giải pháp Thanh toán & Đối soát cho Logistics & Chuyển phát Hàng nặng; MONITOR: Theo dõi Tác động Thanh khoản từ Kênh Ngoại hối & Lãi suất Huy động; INVESTIGATE: Chiến lược Giải pháp Thanh toán Chuyên sâu cho Hộ kinh doanh Chuỗi & Doanh nghiệp Vừa và Nhỏ (SME)."
+  },
+  "modelProviderStatus": "MODEL_PROVIDER_UNAVAILABLE"
+}
