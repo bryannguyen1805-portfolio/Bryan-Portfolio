@@ -1870,7 +1870,7 @@
   function applyTheme(theme) {
     const isDark = theme === 'dark';
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    const logoPath = isDark ? `${ROOT_ASSET_BASE}bnews-logo-dark-opt.webp` : `${ROOT_ASSET_BASE}bnews-logo-light-opt.webp`;
+    const logoPath = isDark ? `${ROOT_ASSET_BASE}bnews-logo-dark.svg` : `${ROOT_ASSET_BASE}bnews-logo-light.svg`;
     $$('.v4-brand-logo, .v4-nav-drawer-logo, .v4-footer-logo').forEach((img) => {
       img.src = logoPath;
     });

@@ -267,7 +267,7 @@ html[data-theme="dark"] .v4-top-utility {
 }
 
 .v4-brand-logo {
-  height: 40px;
+  height: 44px;
   width: auto;
   object-fit: contain;
 }
@@ -1746,7 +1746,7 @@ html[data-theme="dark"] .v4-top-utility {
 }
 
 .v4-footer-logo {
-  height: 34px;
+  height: 38px;
   width: auto;
   margin-bottom: 14px;
 }
@@ -2481,7 +2481,7 @@ html[data-theme="dark"] .v4-top-utility {
 }
 
 .v4-nav-drawer-logo {
-  height: 26px;
+  height: 32px;
   width: auto;
   object-fit: contain;
 }
@@ -3241,7 +3241,7 @@ html[data-theme="dark"] .v4-top-utility {
     justify-content: center;
   }
   .v4-brand-logo {
-    height: 29px;
+    height: 32px;
   }
   .v4-masthead-right {
     grid-column: 3;
