@@ -269,6 +269,33 @@ def main():
                     shutil.copy2(src, dst)
             print(f"   - Đã lưu bản local staging tại: {target_dir}")
 
+    # Prune old raw_evidence_store directories (keep only 3 most recent dated editions)
+    if os.path.exists(daily_editions_dir):
+        dated_dirs = sorted(
+            [
+                d for d in os.listdir(daily_editions_dir)
+                if re.match(r"^\d{4}-\d{2}-\d{2}$", d)
+                and os.path.isdir(os.path.join(daily_editions_dir, d))
+            ],
+            reverse=True,
+        )
+        keep_dates = set(dated_dirs[:3]) | {today_str}
+        pruned_dates = []
+        for d in dated_dirs:
+            if d in keep_dates:
+                continue
+            raw_store_path = os.path.join(daily_editions_dir, d, "raw_evidence_store")
+            if os.path.isdir(raw_store_path):
+                try:
+                    shutil.rmtree(raw_store_path)
+                    pruned_dates.append(d)
+                except Exception as exc:
+                    print(f"   ⚠️ Không thể xóa raw_evidence_store cũ ({d}): {exc}")
+        if pruned_dates:
+            print(f"   🧹 Đã tự động dọn raw_evidence_store cũ ({len(pruned_dates)} ngày: {', '.join(pruned_dates)}); giữ lại 3 ngày gần nhất.")
+        else:
+            print("   🧹 Retention raw_evidence_store: Đang giữ tối đa 3 ngày gần nhất (không có thư mục cũ cần xóa).")
+
     # Step 4 [Production Safety Gate]: Auto Git Push DISABLED by default
     print("\n📌 [BƯỚC 4/4 - RELEASE GOVERNANCE GATE] Kiểm tra quyền phát hành Production...")
     if not git_push_allowed:
