@@ -14,14 +14,17 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
-  const title = payload?.notification?.title || payload?.data?.title || 'Bnews · FinTech Intelligence';
-  const body = payload?.notification?.body || payload?.data?.body || 'Ấn bản tài chính mới đã được xuất bản.';
+  // Only show manually for data-only messages so FCM notification payloads never duplicate
+  if (payload?.notification) return;
+  const title = payload?.data?.title || 'Bnews · Ấn bản mới';
+  const body = payload?.data?.body || 'Đã có 40 tin Tài chính – Ngân hàng & Thanh toán số hôm nay. Mở đọc bản tóm tắt 3 phút ngay →';
   const targetUrl = payload?.fcmOptions?.link || payload?.data?.url || 'https://bryanportfolio.io.vn/fintech-intelligence/';
 
   self.registration.showNotification(title, {
     body,
     icon: '/fintech-intelligence/fintech-favicon-192.png',
     badge: '/fintech-intelligence/fintech-favicon-32.png',
+    tag: payload?.data?.tag || 'bnews-daily-edition',
     data: { url: targetUrl }
   });
 });

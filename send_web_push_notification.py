@@ -6,14 +6,14 @@ send_web_push_notification.py
 Gửi Web Push Notification hàng loạt qua Firebase Cloud Messaging (FCM)
 cho tất cả độc giả đã đăng ký trong Firestore collection `fcm_tokens`.
 
-Yêu cầu:
-  - pip install firebase-admin
-  - GOOGLE_APPLICATION_CREDENTIALS=/path/to/bnews-firebase-adminsdk.json
-    (hoặc đặt file tại ~/.gemini/config/firebase/bnews-11b05-service-account.json)
+Format chuẩn Option A + Kiểu 1:
+  - Title: "Bnews · Ấn bản số {N}" (gọn < 25 ký tự, không bị cắt '...' trên iPhone)
+  - Body : "Đã có {total_news} tin Tài chính – Ngân hàng & Thanh toán số hôm nay. Mở đọc bản tóm tắt 3 phút ngay →"
 -----------------------------------------------------------------------------
 """
 
 import os
+import re
 import sys
 import json
 
@@ -49,28 +49,32 @@ def main():
     with open(EDITION_JSON, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    ed_num = data.get("editionNumber", "Bnews")
-    ed_date = data.get("editionDate", "")
-    cover = data.get("editorialSections", {}).get("sec02_coverStory", {})
-    headline = cover.get("editorialHeadline", "Ấn bản tài chính mới đã xuất bản")
+    raw_ed_num = str(data.get("editionNumber", "")).strip()
+    m = re.search(r"(\d+)", raw_ed_num)
+    ed_num_only = m.group(1) if m else raw_ed_num
+    total_news = len(data.get("eligibleNewsList", [])) or 40
+
+    push_title = f"Bnews · Ấn bản số {ed_num_only}" if ed_num_only else "Bnews · Ấn bản mới"
+    push_body = f"Đã có {total_news} tin Tài chính – Ngân hàng & Thanh toán số hôm nay. Mở đọc bản tóm tắt 3 phút ngay →"
     target_url = "https://bryanportfolio.io.vn/fintech-intelligence/"
+    notif_tag = f"bnews-edition-{ed_num_only or 'latest'}"
 
     total_sent = 0
     invalid_doc_ids = []
-    # FCM multicast supports up to 500 tokens per batch
     for i in range(0, len(tokens), 500):
         batch_tokens = tokens[i : i + 500]
         batch_docs = docs[i : i + 500]
         msg = messaging.MulticastMessage(
             tokens=batch_tokens,
             notification=messaging.Notification(
-                title=f"Bnews · {ed_num} ({ed_date})",
-                body=headline,
+                title=push_title,
+                body=push_body,
             ),
             webpush=messaging.WebpushConfig(
                 notification=messaging.WebpushNotification(
                     icon="https://bryanportfolio.io.vn/fintech-intelligence/fintech-favicon-192.png",
                     badge="https://bryanportfolio.io.vn/fintech-intelligence/fintech-favicon-32.png",
+                    tag=notif_tag,
                 ),
                 fcm_options=messaging.WebpushFCMOptions(link=target_url),
             ),
@@ -88,7 +92,7 @@ def main():
     for doc_id in invalid_doc_ids:
         db.collection("fcm_tokens").document(doc_id).delete()
 
-    print(f"✅ Đã gửi Firebase Web Push thành công tới {total_sent}/{len(tokens)} thiết bị (đã dọn {len(invalid_doc_ids)} token hết hạn).")
+    print(f"✅ Đã gửi Firebase Web Push ({push_title}) tới {total_sent}/{len(tokens)} thiết bị (đã dọn {len(invalid_doc_ids)} token hết hạn).")
 
 
 if __name__ == "__main__":
