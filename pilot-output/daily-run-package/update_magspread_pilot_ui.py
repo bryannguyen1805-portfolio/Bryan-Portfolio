@@ -140,6 +140,12 @@ except ImportError:
     ED38_COVER_OVERRIDE = {}
     ED38_ARTICLE_INTEL = {}
 
+try:
+    from ed39_editorial_content import ED39_COVER_OVERRIDE, ED39_ARTICLE_INTEL
+except ImportError:
+    ED39_COVER_OVERRIDE = {}
+    ED39_ARTICLE_INTEL = {}
+
 from html.parser import HTMLParser
 
 
@@ -683,8 +689,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (ED38, ED37, ED36, ED35, ED34, ED33, ED32, ED31, ED30 or ED29)
-    if "23/11/2026" in str(edition_date) or "2026-11-23" in str(edition_date):
+    # Check explicit curated lead override first (ED39, ED38, ED37, ED36, ED35, ED34, ED33, ED32, ED31, ED30 or ED29)
+    if "24/11/2026" in str(edition_date) or "2026-11-24" in str(edition_date):
+        cover_override = ED39_COVER_OVERRIDE
+    elif "23/11/2026" in str(edition_date) or "2026-11-23" in str(edition_date):
         cover_override = ED38_COVER_OVERRIDE
     elif "22/11/2026" in str(edition_date) or "2026-11-22" in str(edition_date):
         cover_override = ED37_COVER_OVERRIDE
@@ -1108,6 +1116,7 @@ def main():
     # 3. Build Verified Eligible News List with rich, event-specific analysis
     eligible_news = []
     records = news_raw.get("records", [])
+    is_ed39 = ("24/11/2026" in str(edition_date_display) or "2026-11-24" in str(edition_date_raw))
     is_ed38 = ("23/11/2026" in str(edition_date_display) or "2026-11-23" in str(edition_date_raw))
     is_ed37 = ("22/11/2026" in str(edition_date_display) or "2026-11-22" in str(edition_date_raw))
     is_ed36 = ("21/11/2026" in str(edition_date_display) or "2026-11-21" in str(edition_date_raw))
@@ -1133,7 +1142,9 @@ def main():
             pub_display = pub_time[:16].replace("T", " ")
 
         curated = None
-        if is_ed38:
+        if is_ed39:
+            curated = ED39_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed38:
             curated = ED38_ARTICLE_INTEL.get(origin_evt_id)
         elif is_ed37:
             curated = ED37_ARTICLE_INTEL.get(origin_evt_id)
@@ -1357,6 +1368,99 @@ def main():
         }
     }
 
+    _ED39_MARKET_PULSE_DEFS = [
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
+            "articleTitle": "Tỷ giá USD hôm nay 24/11: USD trong nước đi ngang, DXY vượt 104 điểm sau dữ liệu PMI Mỹ",
+            "value": "25.668 VND/USD",
+            "unit": "VND/USD",
+            "asOf": "2026-11-24",
+            "referenceValue": "NHNN: 25.668 VND/USD (đi ngang nghỉ lễ) | VCB: 25.580 - 25.990 VND/USD | DXY: 104,32 điểm",
+            "change": "Trung tâm giữ 25.668đ (nghỉ lễ 24/11) · DXY vọt 104,32đ",
+            "compactDelta": "NHNN 25.668đ · DXY 104,32",
+            "compactSubRef": "VCB: 25.580 - 25.990 VND/USD",
+            "dailyArticleUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-24-11-usd-trong-nuoc-di-ngang-dxy-vuot-104-diem-sau-du-lieu-pmi-my-207445.html",
+            "secondarySourceUrls": [
+                "https://vov.vn/thi-truong/ty-gia-usd-hom-nay-2411-ty-gia-trung-tam-o-muc-25668-dongusd-post1352702.vov"
+            ],
+            "statusReason": "Sáng 24/11/2026, do thị trường trong nước nghỉ lễ Ngày Văn hóa Việt Nam, tỷ giá trung tâm NHNN đi ngang ở đỉnh kỷ lục 25.668 VND/USD (biên độ ±5%: 24.338–26.951 VND/USD) và Vietcombank giữ niêm yết 25.580–25.990 VND/USD; trên thị trường quốc tế, chỉ số DXY tăng mạnh lên 104,32 điểm (cao nhất từ tháng 4/2025) sau dữ liệu PMI Mỹ.",
+            "financialInterpretation": "Chỉ số DXY vượt ngưỡng 104,32 điểm tạo sức ép tăng tỷ giá ngay khi thị trường mở cửa trở lại sau kỳ nghỉ lễ, làm tăng chi phí nhập khẩu hàng hóa cuối năm. Kích hoạt tính năng Dynamic Currency Conversion (DCC) trên SmartPOS giúp điểm bán đón khách quốc tế khóa tỷ giá minh bạch ngay tại quầy.",
+            "monitoringWatchpoint": "Theo dõi áp lực điều chỉnh tỷ giá USD/VND tại quầy Vietcombank quanh vùng 26.000 đồng trong phiên mở cửa lại ngày 25/11 và chỉ số PCE Mỹ.",
+            "status": "negative",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-24T07:56:09+07:00",
+            "observationAt": "2026-11-24T07:56:09+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["maxDeposit12M"],
+            "articleTitle": "Lãi suất ngân hàng ngày 24/11/2026: Big4 giữ 5,4%/năm, NHTMCP ưu đãi tới 7,1–7,2%/năm",
+            "value": "7,20%/năm",
+            "unit": "%/năm",
+            "asOf": "2026-11-24",
+            "referenceValue": "Big4 (12T quầy): 5,4%/năm | NHTMCP: 6,3–7,1%/năm (PGBank 7,0–7,1%, VCBNeo 7,0%) | VPBank Hũ Mục Tiêu 7,2% (Cake +2,2% tới 9,1%)",
+            "change": "Big4 5,4% · NHTMCP 6,3–7,2% (Cake ưu đãi tới 9,1%)",
+            "compactDelta": "Big4 5,4% · NHTMCP 7,2%",
+            "compactSubRef": "PGBank 7,0–7,1% · VCBNeo 7,0%",
+            "dailyArticleUrl": "https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-23-11-ru-ban-than-gui-tiet-kiem-lai-toi-7-2-nam-2577718.html",
+            "secondarySourceUrls": [
+                "https://laodong.vn/tien-te-dau-tu/lai-suat-big4-ngay-2311-gui-250-trieu-dong-tien-lai-cao-nhat-4125-trieu-dong-1805320.ldo",
+                "https://laodong.vn/tien-te-dau-tu/gui-tiet-kiem-12-thang-co-the-nhan-lai-suat-cao-91-1804304.ldo"
+            ],
+            "statusReason": "Ngày 24/11/2026, nhóm Big4 (Agribank, BIDV, VietinBank, Vietcombank) duy trì lãi suất tiền gửi tại quầy kỳ hạn 12 tháng đồng loạt 5,4%/năm; khối NHTMCP niêm yết phổ biến 6,3–7,1%/năm với PGBank 7,0–7,1%/năm, VCBNeo 7,0%/năm và VPBank Hũ Mục Tiêu tới 7,2%/năm (Cake by VPBank cộng thêm tới 9,1%/năm).",
+            "financialInterpretation": "Mặt bằng lãi suất huy động ưu đãi vùng 7,0–7,2%/năm giữ chi phí vốn đầu ra ở mức cao, khiến người tiêu dùng có xu hướng giữ tiền gửi sinh lời và ưu tiên thanh toán trả góp 0% qua thẻ tín dụng khi mua sắm cuối năm.",
+            "monitoringWatchpoint": "Theo dõi động thái điều chỉnh biểu lãi suất tiền gửi trực tuyến cuối tháng 11 tại nhóm NHTMCP vừa và nhỏ.",
+            "status": "negative",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-24T08:00:00+07:00",
+            "observationAt": "2026-11-24T08:00:00+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["vnIndex"],
+            "articleTitle": "VN-Index hồi phục lên 1.697,14 điểm (+0,49%) trước kỳ nghỉ Ngày Văn hóa Việt Nam 24/11",
+            "value": "1.697,14 điểm",
+            "unit": "Điểm",
+            "asOf": "2026-11-23",
+            "referenceValue": "Chốt phiên gần nhất 23/11: 1.697,14đ (+8,35đ; +0,49%) | VN30: 1.791,12đ | Khớp lệnh HOSE: 8.714 tỷ đ | 24/11 nghỉ lễ",
+            "change": "+8,35đ (+0,49%) phiên 23/11 · 24/11 nghỉ giao dịch",
+            "compactDelta": "+8,35đ · 24/11 nghỉ lễ",
+            "compactSubRef": "Khớp lệnh HOSE: 8.714 tỷ đ",
+            "dailyArticleUrl": "https://thoibaonganhang.vn/dong-tien-bat-day-lan-toa-vn-index-lay-lai-sac-xanh-191104.html",
+            "secondarySourceUrls": [
+                "https://www.vietnamplus.vn/vn-index-tang-nhe-nhom-cong-nghe-va-bat-dong-san-dan-nhip-post1150147.vnp",
+                "https://hangthat.thuonghieucongluan.com.vn/chung-khoan-ngay-24-11-hose-hnx-nghi-giao-dich-loat-doanh-nghiep-cong-bo-thong-tin-moi-a295585.html"
+            ],
+            "statusReason": "Ngày 24/11/2026, cả sàn HOSE và HNX tạm nghỉ giao dịch nhân dịp Ngày Văn hóa Việt Nam. Tại phiên chốt gần nhất ngày 23/11/2026, VN-Index đảo chiều tăng 8,35 điểm (+0,49%) lên 1.697,14 điểm (VN30 đạt 1.791,12 điểm) nhờ lực cầu bắt đáy nhóm công nghệ và bất động sản dù thanh khoản khớp lệnh HOSE thu hẹp về 8.714 tỷ đồng (tổng GTGD 12.754 tỷ đồng).",
+            "financialInterpretation": "Dù VN-Index hồi phục áp sát mốc 1.700 điểm trước kỳ nghỉ lễ, thanh khoản khớp lệnh giảm 19% về 8.714 tỷ đồng cùng xu hướng khối ngoại tiếp tục bán ròng khiến dòng tiền cá nhân duy trì trạng thái phòng thủ và tập trung vào chi tiêu thiết yếu.",
+            "monitoringWatchpoint": "Theo dõi phản ứng vượt cản 1.700 điểm và thanh khoản khớp lệnh sàn HOSE khi thị trường giao dịch trở lại ngày 25/11.",
+            "status": "positive",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-24T07:30:00+07:00",
+            "observationAt": "2026-11-23T15:00:00+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["inboundTourists"],
+            "articleTitle": "Cục Du lịch Quốc gia: Việt Nam đón 19,54 triệu lượt khách quốc tế sau 10 tháng (+13,8% YoY)",
+            "value": "19,54 Triệu lượt",
+            "unit": "Triệu lượt",
+            "asOf": "10 tháng 2026",
+            "referenceValue": "10T/2026: 19.535.396 lượt (+13,8% YoY) | Riêng T10: 1.854.682 lượt (+4,9% MoM) | Đạt 78% mục tiêu 25 triệu lượt",
+            "change": "+13,8% YoY sau 10 tháng (riêng T10 đạt 1,85 triệu lượt)",
+            "compactDelta": "+13,8% YoY",
+            "compactSubRef": "78% mục tiêu 25M · T10 +7% YoY",
+            "dailyArticleUrl": "https://vneconomy.vn/du-lich-viet-nam-da-dat-khoang-78-muc-tieu-nam-2026.htm",
+            "secondarySourceUrls": [
+                "https://vietnamtourism.gov.vn/statistic/international"
+            ],
+            "statusReason": "Theo số liệu chính thức của Cục Du lịch Quốc gia Việt Nam và Cục Thống kê, tháng 10/2026 đón 1.854.682 lượt khách quốc tế (+4,9% so với tháng 9 và +7,0% YoY), nâng tổng lượt khách 10 tháng đầu năm 2026 lên 19.535.396 lượt (~19,54 triệu lượt, +13,8% YoY), hoàn thành 78% mục tiêu 25 triệu lượt cả năm.",
+            "financialInterpretation": "Gần 19,54 triệu lượt khách quốc tế trong 10 tháng cùng cao điểm du lịch cuối năm và kỳ nghỉ lễ 24/11 thúc đẩy mạnh nhu cầu chấp nhận thẻ quốc tế EMV Contactless, tính năng khóa tỷ giá DCC và VietQR Global tại điểm bán lẻ, F&B và lưu trú.",
+            "monitoringWatchpoint": "Theo dõi sản lượng giao dịch thẻ quốc tế và mức tăng trưởng khách nhập cảnh mùa cao điểm tháng 11–12/2026.",
+            "status": "positive",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-24T08:30:00+07:00",
+            "observationAt": "2026-11-24T08:30:00+07:00"
+        }
+    ]
+
     _ED38_MARKET_PULSE_DEFS = [
         {
             **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
@@ -1541,7 +1645,10 @@ def main():
         }
     ]
 
-    if "23/11/2026" in str(edition_date_display) or "2026-11-23" in str(edition_date_raw):
+    if "24/11/2026" in str(edition_date_display) or "2026-11-24" in str(edition_date_raw):
+        CORE_4_DEFS = _ED39_MARKET_PULSE_DEFS
+        raw_indicators = []
+    elif "23/11/2026" in str(edition_date_display) or "2026-11-23" in str(edition_date_raw):
         CORE_4_DEFS = _ED38_MARKET_PULSE_DEFS
         raw_indicators = []
     elif "22/11/2026" in str(edition_date_display) or "2026-11-22" in str(edition_date_raw):
@@ -2102,7 +2209,10 @@ def main():
         ]
 
     # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
-    if "23/11/2026" in str(edition_date_display) or "2026-11-23" in str(edition_date_raw):
+    if "24/11/2026" in str(edition_date_display) or "2026-11-24" in str(edition_date_raw):
+        CORE_4_DEFS = _ED39_MARKET_PULSE_DEFS
+        raw_indicators = []
+    elif "23/11/2026" in str(edition_date_display) or "2026-11-23" in str(edition_date_raw):
         CORE_4_DEFS = _ED38_MARKET_PULSE_DEFS
         raw_indicators = []
     elif "22/11/2026" in str(edition_date_display) or "2026-11-22" in str(edition_date_raw):
