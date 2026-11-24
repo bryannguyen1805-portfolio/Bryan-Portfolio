@@ -389,6 +389,31 @@ html[data-theme="dark"] .v4-top-utility {
   background: var(--v4-bg-subtle);
 }
 
+.v4-bell-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--v4-border);
+  background: var(--v4-bg);
+  color: var(--v4-text);
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.v4-bell-btn:hover {
+  border-color: var(--v4-navy);
+  color: var(--v4-navy);
+  background: var(--v4-bg-subtle);
+}
+.v4-bell-btn.is-subscribed {
+  color: var(--v4-navy);
+  border-color: var(--v4-navy);
+  background: #EFF6FF;
+}
+
 /* Tầng 3: Menu Chuyên mục Căn Giữa + Sticky độc lập */
 .v4-cat-nav {
   position: sticky;

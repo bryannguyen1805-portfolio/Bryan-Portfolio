@@ -1,0 +1,6 @@
+{
+  "provider": "onesignal",
+  "oneSignalAppId": "",
+  "serviceWorkerPath": "fintech-intelligence/OneSignalSDKWorker.js",
+  "scope": "/fintech-intelligence/"
+}

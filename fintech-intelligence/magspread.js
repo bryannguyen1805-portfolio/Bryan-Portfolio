@@ -2229,6 +2229,7 @@
     renderFintechCorner();
     renderB2BPage();
     bindGlobalEvents();
+    initPwaAndWebPush();
 
     const hashPage = (window.location.hash || '').replace('#', '').toLowerCase();
     const initialPage = ['today', 'newsletter', 'analysis', 'b2b'].includes(hashPage) ? hashPage : 'today';
@@ -2245,6 +2246,121 @@
         }, 450);
       }
     } catch (_) {}
+  }
+
+  // ─── PWA & WEB PUSH NOTIFICATIONS (ONESIGNAL / SAFARI / CHROME) ─────────────
+  async function initPwaAndWebPush() {
+    if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+      try {
+        await navigator.serviceWorker.register(`${CURRENT_DIR_BASE}sw.js`, {
+          scope: CURRENT_DIR_BASE,
+        });
+      } catch (_) {}
+    }
+
+    let pushCfg = {};
+    try {
+      const resp = await fetch(`${CURRENT_DIR_BASE}push-config.json?v=${Date.now()}`, { cache: 'no-store' });
+      if (resp.ok) pushCfg = await resp.json();
+    } catch (_) {}
+
+    const appId = (pushCfg.oneSignalAppId || '').trim();
+    const bellBtn = $('#v4PushNotifyBtn');
+
+    if (appId && window.location.protocol !== 'file:') {
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      window.OneSignalDeferred.push(async (OneSignal) => {
+        await OneSignal.init({
+          appId,
+          serviceWorkerPath: pushCfg.serviceWorkerPath || 'fintech-intelligence/OneSignalSDKWorker.js',
+          serviceWorkerParam: { scope: pushCfg.scope || '/fintech-intelligence/' },
+          notifyButton: { enable: false },
+        });
+        if (bellBtn && OneSignal.Notifications?.permission) {
+          bellBtn.classList.add('is-subscribed');
+          bellBtn.title = 'Đã bật thông báo đẩy Bnews';
+        }
+      });
+      const sdkScript = document.createElement('script');
+      sdkScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+      sdkScript.defer = true;
+      document.head.appendChild(sdkScript);
+    }
+
+    if (bellBtn && typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+      bellBtn.classList.add('is-subscribed');
+    }
+
+    if (bellBtn) {
+      bellBtn.addEventListener('click', async () => {
+        const ua = window.navigator.userAgent || '';
+        const isIos = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+
+        if (isIos && !isStandalone) {
+          openDrawer(
+            'Bật thông báo đẩy trên iPhone',
+            `
+              <span class="v4-crimson-tag">HƯỚNG DẪN IOS (APPLE PWA)</span>
+              <h2 class="v4-drawer-title">Cài Bnews ra Màn hình chính để nhận thông báo đẩy</h2>
+              <p class="v4-drawer-meta">Apple yêu cầu trang web phải được thêm vào Màn hình chính trước khi gửi thông báo đẩy khi đóng trình duyệt.</p>
+              <div class="v4-drawer-block">
+                <div class="v4-drawer-block-label">BƯỚC 1 · CHIA SẺ</div>
+                <p class="v4-drawer-block-text">Nhấn biểu tượng <strong>Chia sẻ (Share)</strong> ở thanh dưới cùng của Safari.</p>
+              </div>
+              <div class="v4-drawer-block">
+                <div class="v4-drawer-block-label">BƯỚC 2 · THÊM VÀO MÀN HÌNH CHÍNH</div>
+                <p class="v4-drawer-block-text">Chọn <strong>Thêm vào Màn hình chính (Add to Home Screen)</strong> → bấm <strong>Thêm</strong>.</p>
+              </div>
+              <div class="v4-drawer-block">
+                <div class="v4-drawer-block-label">BƯỚC 3 · CHO PHÉP THÔNG BÁO</div>
+                <p class="v4-drawer-block-text">Mở biểu tượng <strong>Bnews</strong> vừa tạo trên Màn hình chính và nhấn nút chuông thông báo một lần để kích hoạt.</p>
+              </div>
+            `
+          );
+          return;
+        }
+
+        if (appId && window.OneSignalDeferred) {
+          window.OneSignalDeferred.push(async (OneSignal) => {
+            try {
+              await OneSignal.Notifications.requestPermission();
+              if (OneSignal.Notifications.permission) {
+                bellBtn.classList.add('is-subscribed');
+              }
+            } catch (_) {}
+          });
+          return;
+        }
+
+        // Fallback if OneSignal App ID is not configured yet
+        if (typeof Notification !== 'undefined' && Notification.permission !== 'denied') {
+          try {
+            const perm = await Notification.requestPermission();
+            if (perm === 'granted') {
+              bellBtn.classList.add('is-subscribed');
+            }
+          } catch (_) {}
+        }
+
+        openDrawer(
+          'Thông báo đẩy Web Push (PWA)',
+          `
+            <span class="v4-crimson-tag">CẤU HÌNH WEB PUSH</span>
+            <h2 class="v4-drawer-title">Hạ tầng PWA &amp; Service Worker đã sẵn sàng</h2>
+            <p class="v4-drawer-meta">Trạng thái: ${appId ? 'Đã kết nối OneSignal' : 'Chờ gắn OneSignal App ID vào push-config.json'}</p>
+            <div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">MACBOOK &amp; ANDROID</div>
+              <p class="v4-drawer-block-text">Sau khi gắn OneSignal App ID miễn phí vào <code>fintech-intelligence/push-config.json</code>, độc giả chỉ cần bấm biểu tượng chuông để nhận thông báo đẩy mỗi sáng ngay cả khi đã đóng trình duyệt.</p>
+            </div>
+            <div class="v4-drawer-block">
+              <div class="v4-drawer-block-label">IPHONE (IOS 16.4+)</div>
+              <p class="v4-drawer-block-text">Độc giả iPhone thêm trang vào Màn hình chính (PWA) sẽ nhận thông báo đẩy trực tiếp trên màn hình khóa.</p>
+            </div>
+          `
+        );
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
