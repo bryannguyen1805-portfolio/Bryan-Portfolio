@@ -136,7 +136,7 @@
 
   function imgTag(src, alt, cls) {
     const safeSrc = src && /^https?:|^data:|^\./.test(src) ? src : V4_FALLBACK_IMG;
-    return `<img src="${esc(safeSrc)}" alt="${esc(alt)}" class="${cls}" loading="lazy" onerror="this.onerror=null;this.src='${V4_FALLBACK_IMG}'">`;
+    return `<img src="${esc(safeSrc)}" alt="${esc(alt)}" class="${cls}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${V4_FALLBACK_IMG}'">`;
   }
 
   // ─── DATA LOADER ──────────────────────────────────────────────────────────

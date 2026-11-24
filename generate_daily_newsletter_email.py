@@ -163,6 +163,7 @@ def build_newsletter_html(data: dict) -> str:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="no-referrer" />
   <title>Bnews | FinTech Intelligence · {escape(ed_badge_str)} ({escape(ed_date)})</title>
   <link rel="icon" type="image/svg+xml" href="/fintech-intelligence/fintech-favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/fintech-intelligence/fintech-favicon-32.png" />
