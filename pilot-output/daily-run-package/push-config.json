@@ -9,7 +9,7 @@
     "appId": "1:484182584980:web:2ab6dacdc8b920394c0e81",
     "measurementId": "G-V5PD5D9RBB"
   },
-  "vapidKey": "",
+  "vapidKey": "BMVavdIsg86ie5zZMs2FEG4qKWSxzxK_mynkc2h9OFIJ9_Pjm69J22CRXnQ7vDtDktLFsAWxiaCADt-SCvbg3Qk",
   "serviceWorkerPath": "/fintech-intelligence/firebase-messaging-sw.js",
   "scope": "/fintech-intelligence/"
 }
