@@ -1,6 +1,15 @@
 {
-  "provider": "onesignal",
-  "oneSignalAppId": "",
-  "serviceWorkerPath": "fintech-intelligence/OneSignalSDKWorker.js",
+  "provider": "firebase",
+  "firebaseConfig": {
+    "apiKey": "AIzaSyDlBDhAmI0dwxJBQAwXPh85pUX8wtkZcUI",
+    "authDomain": "bnews-11b05.firebaseapp.com",
+    "projectId": "bnews-11b05",
+    "storageBucket": "bnews-11b05.firebasestorage.app",
+    "messagingSenderId": "484182584980",
+    "appId": "1:484182584980:web:2ab6dacdc8b920394c0e81",
+    "measurementId": "G-V5PD5D9RBB"
+  },
+  "vapidKey": "",
+  "serviceWorkerPath": "/fintech-intelligence/firebase-messaging-sw.js",
   "scope": "/fintech-intelligence/"
 }

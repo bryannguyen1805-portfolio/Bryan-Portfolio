@@ -1,0 +1,103 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: fcm_tokens
+    // Document ID: {tokenId} (string, length 16..128)
+    // Purpose: Stores Web Push FCM registration tokens from anonymous
+    //          visitors of the static Bnews Fintech Intelligence app.
+    // Fields:
+    //   - token: string (required, length 50..500) - FCM registration token
+    //   - platform: string (required, enum: 'desktop', 'ios_pwa', 'android', 'web')
+    //   - userAgent: string (optional, length <= 300) - Browser user-agent string
+    //   - updatedAt: timestamp (required) - Last registration/refresh time
+    //
+    // Access Pattern:
+    //   - Unauthenticated clients: create / update only (with strict validation)
+    //   - Clients: NO read (get/list) and NO delete (prevents token scraping)
+    //   - Backend (Firebase Admin SDK on owner's Mac): full access (bypasses rules)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    // Validate that the document contains only the allowed fields
+    function hasOnlyAllowedFields(data, fields) {
+      return data.keys().hasOnly(fields);
+    }
+
+    // Validate that all required fields exist
+    function hasRequiredFields(data, fields) {
+      return data.keys().hasAll(fields);
+    }
+
+    // Validate required string length
+    function isValidString(val, minLen, maxLen) {
+      return val is string &&
+             val.size() >= minLen &&
+             val.size() <= maxLen;
+    }
+
+    // Validate optional string (if present, must be string within length)
+    function isValidOptionalString(data, field, minLen, maxLen) {
+      return !(field in data) ||
+             (data[field] is string &&
+              data[field].size() >= minLen &&
+              data[field].size() <= maxLen);
+    }
+
+    // ===============================================================
+    // Domain Validators (Used in BOTH create and update)
+    // ===============================================================
+
+    function isValidTokenId(tokenId) {
+      return isValidString(tokenId, 16, 128);
+    }
+
+    function isValidPlatform(platform) {
+      return platform is string &&
+             platform in ['desktop', 'ios_pwa', 'android', 'web'];
+    }
+
+    function isValidFcmToken(data) {
+      return hasOnlyAllowedFields(data, ['token', 'platform', 'userAgent', 'updatedAt']) &&
+             hasRequiredFields(data, ['token', 'platform', 'updatedAt']) &&
+             isValidString(data.token, 50, 500) &&
+             isValidPlatform(data.platform) &&
+             isValidOptionalString(data, 'userAgent', 0, 300) &&
+             data.updatedAt is timestamp;
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    match /fcm_tokens/{tokenId} {
+      // Never allow clients to read or delete tokens (prevents subscriber scraping)
+      allow read: if false;
+      allow delete: if false;
+
+      // Allow anonymous visitors to register or refresh their own FCM token
+      allow create: if isValidTokenId(tokenId) &&
+                       isValidFcmToken(request.resource.data);
+
+      allow update: if isValidTokenId(tokenId) &&
+                       isValidFcmToken(request.resource.data);
+    }
+
+    // ===============================================================
+    // Default Deny All Other Collections
+    // ===============================================================
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

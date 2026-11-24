@@ -2248,7 +2248,60 @@
     } catch (_) {}
   }
 
-  // ─── PWA & WEB PUSH NOTIFICATIONS (ONESIGNAL / SAFARI / CHROME) ─────────────
+  // ─── PWA & WEB PUSH NOTIFICATIONS (FIREBASE FCM + FIRESTORE) ────────────────
+  async function hashTokenId(token) {
+    if (window.crypto?.subtle) {
+      const buf = await window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(token));
+      return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+    }
+    return token.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 64);
+  }
+
+  async function subscribeFirebasePush(pushCfg, bellBtn) {
+    const fbCfg = pushCfg.firebaseConfig;
+    const vapidKey = (pushCfg.vapidKey || '').trim();
+    if (!fbCfg || !fbCfg.apiKey || !vapidKey) return { ok: false, reason: 'missing_vapid' };
+
+    const [{ initializeApp, getApps }, { getMessaging, getToken }, { getFirestore, doc, setDoc, serverTimestamp }] =
+      await Promise.all([
+        import('https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js'),
+        import('https://www.gstatic.com/firebasejs/11.1.0/firebase-messaging.js'),
+        import('https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js'),
+      ]);
+
+    const app = getApps().length ? getApps()[0] : initializeApp(fbCfg);
+    const messaging = getMessaging(app);
+    const db = getFirestore(app);
+
+    const swReg = await navigator.serviceWorker.register(
+      pushCfg.serviceWorkerPath || `${CURRENT_DIR_BASE}firebase-messaging-sw.js`,
+      { scope: pushCfg.scope || CURRENT_DIR_BASE }
+    );
+
+    const token = await getToken(messaging, { vapidKey, serviceWorkerRegistration: swReg });
+    if (!token) return { ok: false, reason: 'no_token' };
+
+    const ua = navigator.userAgent || '';
+    const isIos = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    const platform = isIos && isStandalone ? 'ios_pwa' : isAndroid ? 'android' : /Mac|Windows|Linux/i.test(ua) ? 'desktop' : 'web';
+
+    const tokenId = await hashTokenId(token);
+    await setDoc(doc(db, 'fcm_tokens', tokenId), {
+      token,
+      platform,
+      userAgent: ua.slice(0, 280),
+      updatedAt: serverTimestamp(),
+    });
+
+    if (bellBtn) {
+      bellBtn.classList.add('is-subscribed');
+      bellBtn.title = 'Đã bật thông báo đẩy Bnews (Firebase FCM)';
+    }
+    return { ok: true, token };
+  }
+
   async function initPwaAndWebPush() {
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
       try {
@@ -2264,31 +2317,14 @@
       if (resp.ok) pushCfg = await resp.json();
     } catch (_) {}
 
-    const appId = (pushCfg.oneSignalAppId || '').trim();
+    const vapidKey = (pushCfg.vapidKey || '').trim();
     const bellBtn = $('#v4PushNotifyBtn');
-
-    if (appId && window.location.protocol !== 'file:') {
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      window.OneSignalDeferred.push(async (OneSignal) => {
-        await OneSignal.init({
-          appId,
-          serviceWorkerPath: pushCfg.serviceWorkerPath || 'fintech-intelligence/OneSignalSDKWorker.js',
-          serviceWorkerParam: { scope: pushCfg.scope || '/fintech-intelligence/' },
-          notifyButton: { enable: false },
-        });
-        if (bellBtn && OneSignal.Notifications?.permission) {
-          bellBtn.classList.add('is-subscribed');
-          bellBtn.title = 'Đã bật thông báo đẩy Bnews';
-        }
-      });
-      const sdkScript = document.createElement('script');
-      sdkScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
-      sdkScript.defer = true;
-      document.head.appendChild(sdkScript);
-    }
 
     if (bellBtn && typeof Notification !== 'undefined' && Notification.permission === 'granted') {
       bellBtn.classList.add('is-subscribed');
+      if (vapidKey && window.location.protocol !== 'file:') {
+        subscribeFirebasePush(pushCfg, bellBtn).catch(() => {});
+      }
     }
 
     if (bellBtn) {
@@ -2321,41 +2357,44 @@
           return;
         }
 
-        if (appId && window.OneSignalDeferred) {
-          window.OneSignalDeferred.push(async (OneSignal) => {
-            try {
-              await OneSignal.Notifications.requestPermission();
-              if (OneSignal.Notifications.permission) {
-                bellBtn.classList.add('is-subscribed');
-              }
-            } catch (_) {}
-          });
+        if (typeof Notification === 'undefined') {
+          openDrawer('Thông báo đẩy Web Push', '<p class="v4-drawer-block-text">Trình duyệt hiện tại chưa hỗ trợ Web Push Notifications.</p>');
           return;
         }
 
-        // Fallback if OneSignal App ID is not configured yet
-        if (typeof Notification !== 'undefined' && Notification.permission !== 'denied') {
+        const perm = await Notification.requestPermission();
+        if (perm !== 'granted') {
+          openDrawer('Thông báo đẩy Web Push', '<p class="v4-drawer-block-text">Bạn chưa cấp quyền thông báo cho trình duyệt. Hãy bật lại quyền Notifications trong cài đặt trình duyệt để nhận ấn bản mới mỗi sáng.</p>');
+          return;
+        }
+
+        if (vapidKey && window.location.protocol !== 'file:') {
           try {
-            const perm = await Notification.requestPermission();
-            if (perm === 'granted') {
-              bellBtn.classList.add('is-subscribed');
+            const res = await subscribeFirebasePush(pushCfg, bellBtn);
+            if (res.ok) {
+              openDrawer(
+                'Đã bật thông báo đẩy Bnews',
+                `
+                  <span class="v4-crimson-tag">FIREBASE CLOUD MESSAGING</span>
+                  <h2 class="v4-drawer-title">Đăng ký nhận thông báo thành công</h2>
+                  <p class="v4-drawer-block-text">Thiết bị của bạn đã được lưu an toàn. Bạn sẽ nhận được thông báo ngay khi ấn bản tài chính mới xuất bản mỗi sáng, kể cả khi đóng trình duyệt.</p>
+                `
+              );
+              return;
             }
           } catch (_) {}
         }
 
+        bellBtn.classList.add('is-subscribed');
         openDrawer(
-          'Thông báo đẩy Web Push (PWA)',
+          'Thông báo đẩy Firebase (PWA)',
           `
-            <span class="v4-crimson-tag">CẤU HÌNH WEB PUSH</span>
-            <h2 class="v4-drawer-title">Hạ tầng PWA &amp; Service Worker đã sẵn sàng</h2>
-            <p class="v4-drawer-meta">Trạng thái: ${appId ? 'Đã kết nối OneSignal' : 'Chờ gắn OneSignal App ID vào push-config.json'}</p>
+            <span class="v4-crimson-tag">CHỜ HOÀN TẤT VAPID KEY</span>
+            <h2 class="v4-drawer-title">Trình duyệt đã cấp quyền · Chờ gắn VAPID Key</h2>
+            <p class="v4-drawer-meta">Project Firebase: <strong>bnews-11b05</strong></p>
             <div class="v4-drawer-block">
-              <div class="v4-drawer-block-label">MACBOOK &amp; ANDROID</div>
-              <p class="v4-drawer-block-text">Sau khi gắn OneSignal App ID miễn phí vào <code>fintech-intelligence/push-config.json</code>, độc giả chỉ cần bấm biểu tượng chuông để nhận thông báo đẩy mỗi sáng ngay cả khi đã đóng trình duyệt.</p>
-            </div>
-            <div class="v4-drawer-block">
-              <div class="v4-drawer-block-label">IPHONE (IOS 16.4+)</div>
-              <p class="v4-drawer-block-text">Độc giả iPhone thêm trang vào Màn hình chính (PWA) sẽ nhận thông báo đẩy trực tiếp trên màn hình khóa.</p>
+              <div class="v4-drawer-block-label">CẤU HÌNH CUỐI</div>
+              <p class="v4-drawer-block-text">Bật Cloud Firestore API và tạo Web Push certificate (VAPID Key) trong Firebase Console rồi điền vào <code>fintech-intelligence/push-config.json</code>.</p>
             </div>
           `
         );
