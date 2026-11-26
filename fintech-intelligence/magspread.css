@@ -446,16 +446,23 @@ html[data-theme="dark"] .v4-top-utility {
   border: none;
   background: var(--v4-bg-subtle);
   color: var(--v4-muted);
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
   align-self: center;
-  border-radius: 3px;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
   transition: color 0.15s ease, background-color 0.15s ease;
+}
+.v4-home-b-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
 }
 .v4-home-icon-btn:hover,
 .v4-home-icon-btn.active {
