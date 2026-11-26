@@ -1,0 +1,43 @@
+{
+  "executionTimestamp": "2026-11-26T10:08:00.094622+07:00",
+  "editionId": "ED-20261126-D01",
+  "statusSummary": {
+    "searchesAttempted": 4,
+    "successfulSearchCount": 4,
+    "accessBlockedCount": 0
+  },
+  "indicators": {
+    "MP-01": {
+      "indicatorId": "MP-01",
+      "actualValue": "25676",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-26",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-26-11-dxy-it-bien-dong-sau-du-lieu-pce-my-thi-truong-dat-cuoc-fed-va-boe-nang-lai-suat-thang-12-207521.html"
+    },
+    "MP-03": {
+      "indicatorId": "MP-03",
+      "actualValue": "7.1",
+      "unit": "%/năm",
+      "observationDate": "2026-11-26",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://cafef.vn/tu-hom-nay-26-11-ngan-hang-tu-nhan-lon-nhat-he-thong-dieu-chinh-lai-suat-tiet-kiem-188261125223209256.chn"
+    },
+    "MP-04": {
+      "indicatorId": "MP-04",
+      "actualValue": "1687.45",
+      "unit": "Điểm",
+      "observationDate": "2026-11-26",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://fili.vn/2026/11/nhip-dap-thi-truong-2611-som-chiu-ap-luc-truoc-thong-tin-thue-quan-1636-1517894.htm"
+    },
+    "MP-07": {
+      "indicatorId": "MP-07",
+      "actualValue": "19.54",
+      "unit": "Triệu lượt",
+      "observationDate": "2026-11-26",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://vietnamtourism.gov.vn/statistic/international"
+    }
+  }
+}
