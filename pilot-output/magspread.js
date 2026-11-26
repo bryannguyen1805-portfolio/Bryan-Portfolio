@@ -1067,6 +1067,13 @@
 
     if (pageKey === 'newsletter') {
       loadNewsletterPreview();
+    } else if (pageKey === 'analysis' && !state.analysisRendered) {
+      state.analysisRendered = true;
+      renderMacroMicro();
+      renderFintechCorner();
+    } else if (pageKey === 'b2b' && !state.b2bRendered) {
+      state.b2bRendered = true;
+      renderB2BPage();
     }
     applyFilters();
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -2258,56 +2265,46 @@
     const initialPage = ['today', 'newsletter', 'analysis', 'b2b'].includes(hashPage) ? hashPage : 'today';
     switchPage(initialPage);
 
-    const scheduleHeavyRender = () => {
-      renderCategoryClusters();
-      renderMacroMicro();
-      renderFintechCorner();
-      renderB2BPage();
-      initPwaAndWebPush();
-    };
     const clustersEl = $('#v4CategoryClusters');
     if (clustersEl && 'IntersectionObserver' in window) {
       let renderedBelowFold = false;
-      const runOnce = () => {
-        if (renderedBelowFold) return;
-        renderedBelowFold = true;
-        scheduleHeavyRender();
-      };
       const io = new IntersectionObserver(
         (entries) => {
-          if (entries.some((e) => e.isIntersecting)) {
+          if (!renderedBelowFold && entries.some((e) => e.isIntersecting)) {
+            renderedBelowFold = true;
             io.disconnect();
-            runOnce();
+            renderCategoryClusters();
           }
         },
-        { rootMargin: '200px' }
+        { rootMargin: '400px' }
       );
       io.observe(clustersEl);
-      setTimeout(runOnce, 3500);
     } else {
-      setTimeout(scheduleHeavyRender, 200);
+      renderCategoryClusters();
     }
+    initPwaAndWebPush();
 
     try {
-      if (!localStorage.getItem(WELCOME_STORAGE_KEY) && !navigator.webdriver) {
+      const ua = navigator.userAgent || '';
+      const isBot = navigator.webdriver || /HeadlessChrome|Lighthouse|Googlebot|PTST/i.test(ua);
+      if (!localStorage.getItem(WELCOME_STORAGE_KEY) && !isBot) {
         let welcomeShown = false;
         const triggerWelcome = () => {
           if (welcomeShown) return;
           welcomeShown = true;
-          window.removeEventListener('scroll', onFirstInteract);
-          window.removeEventListener('pointerdown', onFirstInteract);
-          window.removeEventListener('keydown', onFirstInteract);
+          window.removeEventListener('scroll', onScrollCheck);
+          window.removeEventListener('pointerdown', triggerWelcome);
           const anyModalOpen = ['#v4Drawer', '#v4NavDrawer', '#v4VCardModal'].some((sel) => {
             const el = $(sel);
             return el && !el.hidden;
           });
           if (!anyModalOpen) openWelcomeModal();
         };
-        const onFirstInteract = () => triggerWelcome();
-        window.addEventListener('scroll', onFirstInteract, { once: true, passive: true });
-        window.addEventListener('pointerdown', onFirstInteract, { once: true, passive: true });
-        window.addEventListener('keydown', onFirstInteract, { once: true, passive: true });
-        setTimeout(triggerWelcome, 6000);
+        const onScrollCheck = () => {
+          if (window.scrollY > 160) triggerWelcome();
+        };
+        window.addEventListener('scroll', onScrollCheck, { passive: true });
+        window.addEventListener('pointerdown', triggerWelcome, { once: true, passive: true });
       }
     } catch (_) {}
   }
