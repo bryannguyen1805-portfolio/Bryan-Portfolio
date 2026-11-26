@@ -2289,14 +2289,25 @@
     }
 
     try {
-      if (!localStorage.getItem(WELCOME_STORAGE_KEY)) {
-        setTimeout(() => {
+      if (!localStorage.getItem(WELCOME_STORAGE_KEY) && !navigator.webdriver) {
+        let welcomeShown = false;
+        const triggerWelcome = () => {
+          if (welcomeShown) return;
+          welcomeShown = true;
+          window.removeEventListener('scroll', onFirstInteract);
+          window.removeEventListener('pointerdown', onFirstInteract);
+          window.removeEventListener('keydown', onFirstInteract);
           const anyModalOpen = ['#v4Drawer', '#v4NavDrawer', '#v4VCardModal'].some((sel) => {
             const el = $(sel);
             return el && !el.hidden;
           });
           if (!anyModalOpen) openWelcomeModal();
-        }, 450);
+        };
+        const onFirstInteract = () => triggerWelcome();
+        window.addEventListener('scroll', onFirstInteract, { once: true, passive: true });
+        window.addEventListener('pointerdown', onFirstInteract, { once: true, passive: true });
+        window.addEventListener('keydown', onFirstInteract, { once: true, passive: true });
+        setTimeout(triggerWelcome, 6000);
       }
     } catch (_) {}
   }
