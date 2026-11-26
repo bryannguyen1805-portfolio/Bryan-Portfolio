@@ -134,21 +134,45 @@
     return state.data?.editionDate || '';
   }
 
-  function imgTag(src, alt, cls) {
+  function imgTag(src, alt, cls, isLcp = false) {
     const safeSrc = src && /^https?:|^data:|^\./.test(src) ? src : V4_FALLBACK_IMG;
-    return `<img src="${esc(safeSrc)}" alt="${esc(alt)}" class="${cls}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${V4_FALLBACK_IMG}'">`;
+    const loadingAttr = isLcp ? 'loading="eager" fetchpriority="high" decoding="sync" width="800" height="450"' : 'loading="lazy" decoding="async"';
+    return `<img src="${esc(safeSrc)}" alt="${esc(alt)}" class="${cls}" ${loadingAttr} referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${V4_FALLBACK_IMG}'">`;
   }
 
   // ─── DATA LOADER ──────────────────────────────────────────────────────────
+  function loadScriptOnce(src) {
+    return new Promise((resolve) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = () => resolve(true);
+      s.onerror = () => resolve(false);
+      document.head.appendChild(s);
+    });
+  }
+
   async function loadEditionData() {
+    if (window.EDITION_DATA && typeof window.EDITION_DATA === 'object') {
+      return window.EDITION_DATA;
+    }
+    const lcpImg = document.querySelector('#v4CoverCol .v4-cover-img');
+    if (lcpImg && !lcpImg.complete) {
+      await new Promise((resolve) => {
+        const t = setTimeout(resolve, 650);
+        lcpImg.addEventListener('load', () => { clearTimeout(t); resolve(); }, { once: true });
+        lcpImg.addEventListener('error', () => { clearTimeout(t); resolve(); }, { once: true });
+      });
+    }
     try {
-      const resp = await fetch(`${ROOT_ASSET_BASE}edition-data.json?v=${Date.now()}`, { cache: 'no-store' });
+      const resp = await fetch(`${ROOT_ASSET_BASE}edition-data.json`, { cache: 'default' });
       if (resp.ok) {
         return await resp.json();
       }
     } catch (_) {
-      // Fall back silently to window.EDITION_DATA
+      // Fall back to edition-data.js (e.g. file:// protocol)
     }
+    await loadScriptOnce(`${ROOT_ASSET_BASE}edition-data.js`);
     return window.EDITION_DATA || null;
   }
 
@@ -429,7 +453,7 @@
       const points = parseSynthesisPoints(cs.editorialSynthesis);
       synthCol.innerHTML = `
         <div class="v4-col-label">
-          <span>Đúc kết 4 mạch phiên</span>
+          <h2 class="v4-col-label-heading">Đúc kết 4 mạch phiên</h2>
           <span class="v4-col-label-sub">${newsList.length} tin</span>
         </div>
         <div class="v4-synth-list">
@@ -450,34 +474,39 @@
       `;
     }
 
-    // Cột giữa (50%): Bài đinh trang nhất (không có nhãn XÁC MINH 100%)
+    // Cột giữa (50%): Bài đinh trang nhất (không ghi đè nếu đã SSR đúng eventId để giữ nguyên LCP & CLS = 0)
     const coverCol = $('#v4CoverCol');
     if (coverCol && leadItem) {
-      const coverTitle = cs.editorialHeadline || leadItem.headline || leadItem.title;
-      const coverSapo = cs.editorialSubheadline || leadItem.summary || cs.dek || '';
-      const coverImg = leadItem.imageUrl || cs.imageUrl;
-      const categoryTxt = catLabel(leadItem.category || 'Ngân hàng');
-      const srcTxt = sourceLabel(leadItem);
-      const timeTxt = extractDateTimeReadable(leadItem);
+      const existingCoverImg = coverCol.querySelector('.v4-cover-img');
+      const existingEid = coverCol.querySelector('[data-open-event]')?.getAttribute('data-open-event');
+      if (!(existingCoverImg && existingEid === leadItem.eventId)) {
+        const coverTitle = cs.editorialHeadline || leadItem.headline || leadItem.title;
+        const coverSapo = cs.editorialSubheadline || leadItem.summary || cs.dek || '';
+        const coverImg = leadItem.imageUrl || cs.imageUrl;
+        const heroSrc = `${ROOT_ASSET_BASE}cover-hero.jpg`;
+        const categoryTxt = catLabel(leadItem.category || 'Ngân hàng');
+        const srcTxt = sourceLabel(leadItem);
+        const timeTxt = extractDateTimeReadable(leadItem);
 
-      coverCol.innerHTML = `
-        <article class="v4-cover-card">
-          <button type="button" class="v4-cover-img-btn" data-open-event="${esc(leadItem.eventId)}" aria-label="Đọc bài đinh: ${esc(coverTitle)}">
-            ${imgTag(coverImg, coverTitle, 'v4-cover-img')}
-          </button>
-          <div class="v4-cover-kicker">
-            <span class="v4-crimson-tag">${esc(categoryTxt)} · Tiêu điểm</span>
-          </div>
-          <h1 class="v4-cover-headline" data-open-event="${esc(leadItem.eventId)}">${esc(coverTitle)}</h1>
-          <p class="v4-cover-sapo">${esc(coverSapo)}</p>
-          <div class="v4-article-meta">
-            <span>${esc(srcTxt)}</span>
-            <span aria-hidden="true">·</span>
-            <span class="v4-mono-time">${esc(timeTxt)}</span>
-            <button type="button" class="v4-read-inline-btn" data-open-event="${esc(leadItem.eventId)}">Đọc phân tích chi tiết &rarr;</button>
-          </div>
-        </article>
-      `;
+        coverCol.innerHTML = `
+          <article class="v4-cover-card">
+            <button type="button" class="v4-cover-img-btn" data-open-event="${esc(leadItem.eventId)}" aria-label="Đọc bài đinh: ${esc(coverTitle)}">
+              <img src="${esc(heroSrc)}" alt="${esc(coverTitle)}" class="v4-cover-img" loading="eager" fetchpriority="high" decoding="sync" width="680" height="383" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${esc(coverImg || V4_FALLBACK_IMG)}'">
+            </button>
+            <div class="v4-cover-kicker">
+              <span class="v4-crimson-tag">${esc(categoryTxt)} · Tiêu điểm</span>
+            </div>
+            <h1 class="v4-cover-headline" data-open-event="${esc(leadItem.eventId)}">${esc(coverTitle)}</h1>
+            <p class="v4-cover-sapo">${esc(coverSapo)}</p>
+            <div class="v4-article-meta">
+              <span>${esc(srcTxt)}</span>
+              <span aria-hidden="true">·</span>
+              <span class="v4-mono-time">${esc(timeTxt)}</span>
+              <button type="button" class="v4-read-inline-btn" data-open-event="${esc(leadItem.eventId)}">Đọc phân tích chi tiết &rarr;</button>
+            </div>
+          </article>
+        `;
+      }
     }
 
     // Cột phải (25%): Dòng tin mới 0-24h (6 tin mới nhất, không trùng bài đinh)
@@ -491,7 +520,7 @@
 
       feedCol.innerHTML = `
         <div class="v4-col-label">
-          <span>Dòng tin mới 0–24h</span>
+          <h2 class="v4-col-label-heading">Dòng tin mới 0–24h</h2>
           <span class="v4-col-label-sub">Quét nhanh</span>
         </div>
         <div class="v4-feed-list">
@@ -2224,16 +2253,40 @@
     renderMasthead();
     renderPulseStrip();
     renderFrontPage();
-    renderCategoryClusters();
-    renderMacroMicro();
-    renderFintechCorner();
-    renderB2BPage();
     bindGlobalEvents();
-    initPwaAndWebPush();
-
     const hashPage = (window.location.hash || '').replace('#', '').toLowerCase();
     const initialPage = ['today', 'newsletter', 'analysis', 'b2b'].includes(hashPage) ? hashPage : 'today';
     switchPage(initialPage);
+
+    const scheduleHeavyRender = () => {
+      renderCategoryClusters();
+      renderMacroMicro();
+      renderFintechCorner();
+      renderB2BPage();
+      initPwaAndWebPush();
+    };
+    const clustersEl = $('#v4CategoryClusters');
+    if (clustersEl && 'IntersectionObserver' in window) {
+      let renderedBelowFold = false;
+      const runOnce = () => {
+        if (renderedBelowFold) return;
+        renderedBelowFold = true;
+        scheduleHeavyRender();
+      };
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            io.disconnect();
+            runOnce();
+          }
+        },
+        { rootMargin: '200px' }
+      );
+      io.observe(clustersEl);
+      setTimeout(runOnce, 3500);
+    } else {
+      setTimeout(scheduleHeavyRender, 200);
+    }
 
     try {
       if (!localStorage.getItem(WELCOME_STORAGE_KEY)) {

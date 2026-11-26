@@ -584,11 +584,16 @@ html[data-theme="dark"] .v4-top-utility {
   padding: 24px 0 34px;
 }
 
+#v4FrontPageView {
+  min-height: 1500px;
+}
+
 .v4-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
   gap: 0;
   align-items: start;
+  min-height: 540px;
 }
 
 .v4-hero-col-left {
@@ -617,6 +622,15 @@ html[data-theme="dark"] .v4-top-utility {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.v4-col-label-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 .v4-col-label-sub {
@@ -655,7 +669,7 @@ html[data-theme="dark"] .v4-top-utility {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--v4-navy-soft);
+  color: #47698E;
 }
 
 .v4-synth-title {
@@ -686,6 +700,7 @@ html[data-theme="dark"] .v4-top-utility {
 .v4-cover-img-btn {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
   padding: 0;
   border: 1px solid var(--v4-border);
   background: var(--v4-bg-subtle);

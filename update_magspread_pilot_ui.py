@@ -3312,8 +3312,8 @@ def main():
     # 14. Write to pilot-output/edition-data.js (inline window.EDITION_DATA for file:// protocol)
     js_path = os.path.join(PILOT_OUTPUT_DIR, "edition-data.js")
     with open(js_path, "w", encoding="utf-8") as f:
-        f.write("window.EDITION_DATA = ")
-        json.dump(edition_payload, f, ensure_ascii=False, indent=2)
+        f.write("window.EDITION_DATA=")
+        json.dump(edition_payload, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
     print(f"✅ Đã ghi thành công window.EDITION_DATA vào: {js_path}")
 
@@ -3325,8 +3325,8 @@ def main():
         with open(pkg_json, "w", encoding="utf-8") as f:
             json.dump(edition_payload, f, ensure_ascii=False, indent=2)
         with open(pkg_js, "w", encoding="utf-8") as f:
-            f.write("window.EDITION_DATA = ")
-            json.dump(edition_payload, f, ensure_ascii=False, indent=2)
+            f.write("window.EDITION_DATA=")
+            json.dump(edition_payload, f, ensure_ascii=False, separators=(",", ":"))
             f.write(";\n")
         print(f"✅ Đã tự động đồng bộ sang gói vận hành hàng ngày: {pkg_dir}")
 
@@ -3338,8 +3338,8 @@ def main():
         with open(fi_json, "w", encoding="utf-8") as f:
             json.dump(edition_payload, f, ensure_ascii=False, indent=2)
         with open(fi_js, "w", encoding="utf-8") as f:
-            f.write("window.EDITION_DATA = ")
-            json.dump(edition_payload, f, ensure_ascii=False, indent=2)
+            f.write("window.EDITION_DATA=")
+            json.dump(edition_payload, f, ensure_ascii=False, separators=(",", ":"))
             f.write(";\n")
         print(f"✅ Đã tự động đồng bộ sang fintech-intelligence: {fintech_dir}")
 
