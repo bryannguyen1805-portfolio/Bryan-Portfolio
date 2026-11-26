@@ -2259,7 +2259,9 @@
 
     renderMasthead();
     renderPulseStrip();
+    await new Promise((r) => setTimeout(r, 0));
     renderFrontPage();
+    await new Promise((r) => setTimeout(r, 0));
     bindGlobalEvents();
     const hashPage = (window.location.hash || '').replace('#', '').toLowerCase();
     const initialPage = ['today', 'newsletter', 'analysis', 'b2b'].includes(hashPage) ? hashPage : 'today';
