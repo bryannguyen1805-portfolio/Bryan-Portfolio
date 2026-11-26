@@ -1,0 +1,43 @@
+{
+  "executionTimestamp": "2026-11-25T20:55:00+07:00",
+  "editionId": "ED-20261125-D01",
+  "statusSummary": {
+    "searchesAttempted": 4,
+    "successfulSearchCount": 4,
+    "accessBlockedCount": 0
+  },
+  "indicators": {
+    "MP-01": {
+      "indicatorId": "MP-01",
+      "actualValue": "25679",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-25",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-25-11-ty-gia-trung-tam-len-25-679-dong-dxy-hoi-nhe-truoc-khi-cong-bo-du-lieu-pce-my-207472.html"
+    },
+    "MP-03": {
+      "indicatorId": "MP-03",
+      "actualValue": "7.1",
+      "unit": "%/năm",
+      "observationDate": "2026-11-25",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-25-11-2026-lpbank-giam-lai-suat-2578326.html"
+    },
+    "MP-04": {
+      "indicatorId": "MP-04",
+      "actualValue": "1687.45",
+      "unit": "Điểm",
+      "observationDate": "2026-11-25",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://vtv.vn/vn-index-lui-xuong-duoi-moc-1700-diem-10026112517185644.htm"
+    },
+    "MP-07": {
+      "indicatorId": "MP-07",
+      "actualValue": "19.54",
+      "unit": "Triệu lượt",
+      "observationDate": "2026-11-25",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://nhandan.vn/khach-quoc-te-den-viet-nam-dat-195-trieu-luot-nguoi-trong-10-thang-qua-post999980.html"
+    }
+  }
+}
