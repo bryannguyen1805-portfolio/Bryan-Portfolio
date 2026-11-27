@@ -3451,5 +3451,71 @@ def main():
             f.write(";\n")
         print(f"✅ Đã tự động đồng bộ sang fintech-intelligence: {fintech_dir}")
 
+    # 17. Auto-sync cover-hero.jpg + SSR #v4CoverCol in index.html & magspread-preview.html
+    try:
+        import html as _html, shutil, subprocess, urllib.request
+        cs = edition_payload.get("editorialSections", {}).get("sec02_coverStory", {})
+        news_list = edition_payload.get("eligibleNewsList", [])
+        lead_id = (cs.get("leadArticle") or {}).get("eventId") or (news_list[0].get("eventId") if news_list else "EVT-01")
+        lead = next((x for x in news_list if x.get("eventId") == lead_id), news_list[0] if news_list else {})
+        cover_img_url = lead.get("imageUrl") or cs.get("imageUrl") or ""
+        ed_id_str = str(edition_payload.get("editionId", ""))
+        ed_ts = str(int(datetime.now().timestamp()))
+        hero_ok = False
+        if cover_img_url.startswith("http"):
+            tmp_raw = "/tmp/bnews_cover_raw.img"
+            req = urllib.request.Request(cover_img_url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as r, open(tmp_raw, "wb") as tf:
+                tf.write(r.read())
+            tmp_opt = "/tmp/bnews_cover_opt.jpg"
+            subprocess.run(["sips", "-Z", "560", "-s", "format", "jpeg", "-s", "formatOptions", "48", tmp_raw, "--out", tmp_opt], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            hero_ok = os.path.exists(tmp_opt)
+
+        cover_title = _html.escape(cs.get("editorialHeadline") or lead.get("headline") or "")
+        cover_sapo = _html.escape(cs.get("editorialSubheadline") or lead.get("summary") or cs.get("dek") or "")
+        src_txt = _html.escape(lead.get("sourceName") or "Bnews")
+        cat_txt = _html.escape(lead.get("category") or "Kinh tế vĩ mô")
+        eid_esc = _html.escape(lead.get("eventId") or "EVT-01")
+        ed_id_esc = _html.escape(ed_id_str)
+        cover_fallback = _html.escape(cover_img_url)
+        hero_rel = f"./cover-hero.jpg?v={ed_ts}" if hero_ok else cover_fallback
+
+        ssr_cover = (
+            f'<div class="v4-hero-col v4-hero-col-center" id="v4CoverCol" data-edition-id="{ed_id_esc}">'
+            f'<article class="v4-cover-card"><button type="button" class="v4-cover-img-btn" data-open-event="{eid_esc}" aria-label="Đọc bài đinh: {cover_title}">'
+            f'<img src="{hero_rel}" alt="{cover_title}" class="v4-cover-img" loading="eager" fetchpriority="high" decoding="sync" width="680" height="383" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=\'{cover_fallback}\'">'
+            f'</button><div class="v4-cover-kicker"><span class="v4-crimson-tag">{cat_txt} · Tiêu điểm</span></div>'
+            f'<h1 class="v4-cover-headline" data-open-event="{eid_esc}">{cover_title}</h1>'
+            f'<p class="v4-cover-sapo">{cover_sapo}</p>'
+            f'<div class="v4-article-meta"><span>{src_txt}</span></div></article></div>'
+        )
+
+        target_dirs = [d for d in (PILOT_OUTPUT_DIR, pkg_dir, fintech_dir) if os.path.exists(d)]
+        for tdir in target_dirs:
+            if hero_ok:
+                shutil.copy2("/tmp/bnews_cover_opt.jpg", os.path.join(tdir, "cover-hero.jpg"))
+            for hname in ("index.html", "magspread-preview.html"):
+                hpath = os.path.join(tdir, hname)
+                if not os.path.exists(hpath):
+                    continue
+                with open(hpath, "r", encoding="utf-8") as hf:
+                    hraw = hf.read()
+                hraw = re.sub(
+                    r'<link rel="preload" as="image" href="\./cover-hero\.jpg[^"]*" fetchpriority="high">',
+                    f'<link rel="preload" as="image" href="{hero_rel}" fetchpriority="high">',
+                    hraw,
+                )
+                hraw = re.sub(
+                    r'<div class="v4-hero-col v4-hero-col-center" id="v4CoverCol"[^>]*>.*?</div>(?=\s*<div class="v4-hero-col v4-hero-col-right")',
+                    ssr_cover,
+                    hraw,
+                    flags=re.DOTALL,
+                )
+                with open(hpath, "w", encoding="utf-8") as hf:
+                    hf.write(hraw)
+        print(f"✅ Đã cập nhật cover-hero.jpg & SSR #v4CoverCol ({ed_id_str}) cho các thư mục đích.")
+    except Exception as _e:
+        print(f"⚠️ Lưu ý khi cập nhật cover-hero.jpg/SSR: {_e}")
+
 if __name__ == "__main__":
     main()

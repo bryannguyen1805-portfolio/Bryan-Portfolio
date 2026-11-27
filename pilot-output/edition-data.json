@@ -2,10 +2,10 @@
   "editionId": "ED-20261127-D01",
   "editionDate": "27/11/2026",
   "dayOfWeek": "Thứ Sáu",
-  "sessionName": "Phiên sáng ngày 27/11/2026",
-  "sessionType": "MORNING",
+  "sessionName": "Phiên chiều ngày 27/11/2026",
+  "sessionType": "AFTERNOON",
   "editionCutoffAt": "2026-11-27T10:02:51.763064+07:00",
-  "editionNumber": "ẤN BẢN SỐ 42 · PHIÊN SÁNG",
+  "editionNumber": "ẤN BẢN SỐ 42 · PHIÊN CHIỀU",
   "publicationGateStatus": {
     "status": "PASS_40_EVENTS_24H_80PCT",
     "publicBadgeLabel": "ĐÃ XÁC MINH · 0–24H: 40/40 (100.0%)",
@@ -281,7 +281,7 @@
     "sec01_masthead": {
       "portalTitle": "BRYAN NEWS | FINTECH INTELLIGENCE",
       "tagline": "Tạp chí & Cổng thông tin thị trường tài chính, thanh toán số, ngân hàng và cơ hội B2B — Phong cách tạp chí biên tập MagSpread cao cấp.",
-      "editionDateDisplay": "Phiên sáng ngày 27/11/2026 — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
+      "editionDateDisplay": "Phiên chiều ngày 27/11/2026 — Múi giờ Asia/Ho_Chi_Minh (GMT+7)",
       "bryanPortfolioUrl": "../index.html",
       "portfolioTitle": "Quay về Bryan Portfolio",
       "topics": [
