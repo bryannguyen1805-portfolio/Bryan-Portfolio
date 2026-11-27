@@ -30,8 +30,8 @@ OUT_TARGETS = [
     os.path.join(WORKSPACE_ROOT, "pilot-output", "daily-run-package", "newsletter-preview.html"),
 ]
 
-SITE_BASE_URL = "https://bryanportfolio.io.vn/fintech-intelligence/"
-SUBSCRIBE_URL = "https://bryanportfolio.io.vn/fintech-intelligence/#newsletter"
+SITE_BASE_URL = "https://bnews.bryanportfolio.io.vn/"
+SUBSCRIBE_URL = "https://bnews.bryanportfolio.io.vn/#newsletter"
 
 CAT_ORDER = [
     "Thanh toán",

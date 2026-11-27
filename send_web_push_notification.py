@@ -56,7 +56,7 @@ def main():
 
     push_title = f"Bnews · Ấn bản số {ed_num_only}" if ed_num_only else "Bnews · Ấn bản mới"
     push_body = f"Đã có {total_news} tin Tài chính – Ngân hàng & Thanh toán số hôm nay. Mở đọc bản tóm tắt 3 phút ngay →"
-    target_url = "https://bryanportfolio.io.vn/fintech-intelligence/"
+    target_url = "https://bnews.bryanportfolio.io.vn/"
     notif_tag = f"bnews-edition-{ed_num_only or 'latest'}"
 
     total_sent = 0
@@ -72,8 +72,8 @@ def main():
             ),
             webpush=messaging.WebpushConfig(
                 notification=messaging.WebpushNotification(
-                    icon="https://bryanportfolio.io.vn/fintech-intelligence/fintech-favicon-192.png",
-                    badge="https://bryanportfolio.io.vn/fintech-intelligence/fintech-favicon-32.png",
+                    icon="https://bnews.bryanportfolio.io.vn/fintech-favicon-192.png",
+                    badge="https://bnews.bryanportfolio.io.vn/fintech-favicon-32.png",
                     tag=notif_tag,
                 ),
                 fcm_options=messaging.WebpushFCMOptions(link=target_url),
