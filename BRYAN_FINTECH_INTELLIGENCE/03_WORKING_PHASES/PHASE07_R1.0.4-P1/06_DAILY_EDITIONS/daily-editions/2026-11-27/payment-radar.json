@@ -1,0 +1,432 @@
+{
+  "signals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế (VietQR Global & SmartPOS)",
+      "sector": "Du lịch, Khách sạn & Bán lẻ Quốc tế",
+      "paymentDomain": "Du lịch, Khách sạn & Bán lẻ Quốc tế",
+      "targetSegment": "Chuỗi khách sạn, khu nghỉ dưỡng, nhà hàng F&B du lịch, trung tâm mua sắm và spa.",
+      "actualMarketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "marketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "verifiedMarketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "merchantProblem": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "businessProblem": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "paymentImplication": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "relevantPaymentSolution": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "relevantSolution": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "targetPartnerType": "Chuỗi khách sạn, khu nghỉ dưỡng, nhà hàng F&B du lịch, trung tâm mua sắm và spa.",
+      "commercialRationale": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "payooSolutionRelevance": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "payooRelevance": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P0_IMMEDIATE",
+      "opportunityType": "VERIFIED_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "EXPLORE triển khai thiết bị chấp nhận thanh toán thẻ quốc tế và mã VietQR Global tại các điểm bán du lịch.",
+      "recommendedMonitoring": [
+        "EXPLORE triển khai thiết bị chấp nhận thanh toán thẻ quốc tế và mã VietQR Global tại các điểm bán du lịch."
+      ],
+      "triggerEventIds": [
+        "EVT-20261127-232"
+      ],
+      "supportingEventIds": [
+        "EVT-20261127-232"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "marketDrivers": [
+        "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+        "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán."
+      ],
+      "merchantImpact": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Du lịch, Khách sạn & Bán lẻ Quốc tế"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261127-232",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/thanh-toan-qr-viet-nam-huong-toi-11-thi-truong-quoc-te-191255.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/thanh-toan-qr-viet-nam-huong-toi-11-thi-truong-quoc-te-191255.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_239_27bfc9ec02.html",
+          "evidenceSha256": "27bfc9ec02baf2af11ada607f63f577fe5d06b4500f2c6df86f0ca38a7f007c7",
+          "supportingQuote": "Tại Sự kiện kết nối Fintech 2026 diễn ra sáng 26/11 tại TP."
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách quốc tế đến Việt Nam",
+          "currentValue": "19.54",
+          "unit": "Triệu lượt",
+          "observationPeriod": "2026-11-27",
+          "sourceUrl": "https://chinhsachcuocsong.vnanet.vn/khach-quoc-te-den-viet-nam-dat-195-trieu-luot-trong-10-thang-nam-2026/100603.html",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261127-008",
+        "EVT-20261127-040",
+        "EVT-20261127-052",
+        "EVT-20261127-094",
+        "EVT-20261127-124"
+      ],
+      "supportingEventIds": [
+        "EVT-20261127-008",
+        "EVT-20261127-040",
+        "EVT-20261127-052",
+        "EVT-20261127-094",
+        "EVT-20261127-124"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261127-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/vietinbank-11-nam-lien-tiep-duoc-vinh-danh-ngan-hang-ban-le-tot-nhat-viet-nam-87342.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/vietinbank-11-nam-lien-tiep-duoc-vinh-danh-ngan-hang-ban-le-tot-nhat-viet-nam-87342.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_b48d51831c.html",
+          "evidenceSha256": "b48d51831cc387f5ef49f2c601b06b2b50dd8a695212de899c5a65fd21cde888",
+          "supportingQuote": "Được Tạp chí Global Banking & Finance Review vinh danh “Ngân hàng Bán lẻ Tốt nhất Việt Nam” (Best Retail Bank of Vietnam) 11 năm liên tiếp là dấu mốc khẳng định uy tín, năng lực củ"
+        },
+        {
+          "referenceId": "EVT-20261127-040",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-27-11-gia-vang-trong-nuoc-tang-the-gioi-giu-tren-3-500-usd-207591.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-27-11-gia-vang-trong-nuoc-tang-the-gioi-giu-tren-3-500-usd-207591.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_042_1a24f8f934.html",
+          "evidenceSha256": "1a24f8f934fc4bb39ebca0ec7d76fd1175d409c112f8077054ed560e026a7d71",
+          "supportingQuote": "Giá vàng thế giới hiện giao dịch quanh 3.567 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261127-052",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/gia-vang-the-gioi-nhich-tang-cho-dong-luc-phuc-hoi-ben-vung-191298.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/gia-vang-the-gioi-nhich-tang-cho-dong-luc-phuc-hoi-ben-vung-191298.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_054_187101d383.html",
+          "evidenceSha256": "187101d383f582e523c687b30fddb574f11c02b80bf69d02eb2c9dc5b873778c",
+          "supportingQuote": "Giá vàng thế giới vượt 3.600 USD/oz, chuyên gia vẫn thận trọng Giá vàng thế giới lùi về dưới ngưỡng 3.550 USD/oz Giá vàng thế giới chật vật tìm động lực phục hồi Trước đó, giá vàng"
+        },
+        {
+          "referenceId": "EVT-20261127-094",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/thuong-mai-dien-tu-phat-trien-nhanh-bo-khan-truong-bit-khoang-trong-phap-ly-2579077.html",
+          "canonicalUrl": "https://vietnamnet.vn/thuong-mai-dien-tu-phat-trien-nhanh-bo-khan-truong-bit-khoang-trong-phap-ly-2579077.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_096_17abeed8a9.html",
+          "evidenceSha256": "17abeed8a97cdf68396dbd88b6081829a722d9a10e50b5ac793854dfbd06309f",
+          "supportingQuote": "Thương mại điện tử 30 tỷ USD, nông dân vẫn phải leo đồi 'hứng sóng' livestream Thương mại điện tử phát triển rất mạnh, dự báo đạt quy mô khoảng 30 tỷ USD trong năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261127-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-nguyen-tri-hieu-day-la-thoi-diem-thuan-loi-de-xuong-tien-mua-vang-330342.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-nguyen-tri-hieu-day-la-thoi-diem-thuan-loi-de-xuong-tien-mua-vang-330342.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_126_845af4a47f.html",
+          "evidenceSha256": "845af4a47f95f4b037a337b1812e3ee563ff730c6098f38412dd4a464fefacca",
+          "supportingQuote": "Trong bối cảnh giá vàng giảm sâu, TS Nguyễn Trí Hiếu cho rằng đây là thời điểm thuận lợi để những nhà đầu tư còn do dự cân nhắc mua vàng, nhưng cần tránh tâm lý bắt đáy và giải ngâ"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-27",
+          "sourceUrl": "https://vietnambiz.vn/lai-suat-ngan-hang-hom-nay-2711-vpbank-giam-toi-05nam-nhom-big4-agribank-vietcombank-bidv-va-vietinbank-dung-yen-2026112794153229.htm",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    }
+  ],
+  "radarSignals": [
+    {
+      "radarId": "RADAR-01",
+      "opportunityId": "OPP-01",
+      "signalTitle": "Chấp nhận Thanh toán Du lịch & Bán lẻ Quốc tế (VietQR Global & SmartPOS)",
+      "sector": "Du lịch, Khách sạn & Bán lẻ Quốc tế",
+      "paymentDomain": "Du lịch, Khách sạn & Bán lẻ Quốc tế",
+      "targetSegment": "Chuỗi khách sạn, khu nghỉ dưỡng, nhà hàng F&B du lịch, trung tâm mua sắm và spa.",
+      "actualMarketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "marketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "verifiedMarketSignal": "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+      "merchantProblem": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "businessProblem": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "paymentImplication": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "relevantPaymentSolution": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "relevantSolution": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "opportunity": "Triển khai SmartPOS chấp nhận đa thẻ quốc tế kết hợp mã VietQR Global và DCC chuyển đổi ngoại tệ linh hoạt.",
+      "targetPartnerType": "Chuỗi khách sạn, khu nghỉ dưỡng, nhà hàng F&B du lịch, trung tâm mua sắm và spa.",
+      "commercialRationale": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "payooSolutionRelevance": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "payooRelevance": "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P0_IMMEDIATE",
+      "opportunityType": "VERIFIED_OPPORTUNITY",
+      "confidence": "HIGH",
+      "confidenceLevel": "HIGH",
+      "recommendedNextAction": "EXPLORE triển khai thiết bị chấp nhận thanh toán thẻ quốc tế và mã VietQR Global tại các điểm bán du lịch.",
+      "recommendedMonitoring": [
+        "EXPLORE triển khai thiết bị chấp nhận thanh toán thẻ quốc tế và mã VietQR Global tại các điểm bán du lịch."
+      ],
+      "triggerEventIds": [
+        "EVT-20261127-232"
+      ],
+      "supportingEventIds": [
+        "EVT-20261127-232"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-07"
+      ],
+      "marketDrivers": [
+        "Sản lượng khách du lịch quốc tế đạt 19.54 Triệu lượt.",
+        "Tăng giá trị giỏ hàng trung bình của du khách quốc tế và tối ưu doanh thu phí giao dịch cho đối tác thanh toán."
+      ],
+      "merchantImpact": "Điểm bán thiếu phương thức chấp nhận thanh toán ngoại tệ xuyên biên giới thuận tiện cho du khách.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Du lịch, Khách sạn & Bán lẻ Quốc tế"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261127-232",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/thanh-toan-qr-viet-nam-huong-toi-11-thi-truong-quoc-te-191255.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/thanh-toan-qr-viet-nam-huong-toi-11-thi-truong-quoc-te-191255.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_239_27bfc9ec02.html",
+          "evidenceSha256": "27bfc9ec02baf2af11ada607f63f577fe5d06b4500f2c6df86f0ca38a7f007c7",
+          "supportingQuote": "Tại Sự kiện kết nối Fintech 2026 diễn ra sáng 26/11 tại TP."
+        },
+        {
+          "referenceId": "MP-07",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Khách quốc tế đến Việt Nam",
+          "currentValue": "19.54",
+          "unit": "Triệu lượt",
+          "observationPeriod": "2026-11-27",
+          "sourceUrl": "https://chinhsachcuocsong.vnanet.vn/khach-quoc-te-den-viet-nam-dat-195-trieu-luot-trong-10-thang-nam-2026/100603.html",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    },
+    {
+      "radarId": "RADAR-02",
+      "opportunityId": "OPP-02",
+      "signalTitle": "Dịch vụ Trả góp 0% cho Bán lẻ Giá trị cao & Thiết bị Thông minh",
+      "sector": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "paymentDomain": "Bán lẻ Giá trị cao, Điện máy & Xe điện",
+      "targetSegment": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "actualMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "marketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "verifiedMarketSignal": "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+      "merchantProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "businessProblem": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "paymentImplication": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantPaymentSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "relevantSolution": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "opportunity": "Dịch vụ Trả góp 0% qua thẻ tín dụng liên kết đa ngân hàng trên thiết bị SmartPOS và cổng thanh toán trực tuyến.",
+      "targetPartnerType": "Chuỗi bán lẻ điện máy, showroom xe máy điện, trường đào tạo và dịch vụ chăm sóc sức khỏe.",
+      "commercialRationale": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooSolutionRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "payooRelevance": "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán.",
+      "commercialRelevance": "HIGH",
+      "priority": "P1_HIGH",
+      "opportunityType": "POTENTIAL_OPPORTUNITY",
+      "confidence": "MEDIUM",
+      "confidenceLevel": "MEDIUM",
+      "recommendedNextAction": "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện.",
+      "recommendedMonitoring": [
+        "VALIDATE kiểm chứng nhu cầu trả góp tại các chuỗi bán lẻ thiết bị gia dụng và xe điện."
+      ],
+      "triggerEventIds": [
+        "EVT-20261127-008",
+        "EVT-20261127-040",
+        "EVT-20261127-052",
+        "EVT-20261127-094",
+        "EVT-20261127-124"
+      ],
+      "supportingEventIds": [
+        "EVT-20261127-008",
+        "EVT-20261127-040",
+        "EVT-20261127-052",
+        "EVT-20261127-094",
+        "EVT-20261127-124"
+      ],
+      "supportingFacts": [],
+      "supportingFactIds": [],
+      "supportingMarketPulseIds": [
+        "MP-03"
+      ],
+      "marketDrivers": [
+        "Mặt bằng lãi suất tiền gửi 12 tháng 7.1%/năm và chi phí vốn thúc đẩy nhu cầu phân bổ chi tiêu trả góp.",
+        "Giúp khách hàng phân bổ dòng tiền hàng tháng mà không mất lãi tiền gửi, nâng cao tỷ lệ chốt đơn cho điểm bán."
+      ],
+      "merchantImpact": "Khách hàng ngại chi trả các món hàng giá trị lớn một lần trong mùa mua sắm cuối năm.",
+      "consumerImpact": "Người tiêu dùng tiếp cận phương thức thanh toán an toàn, minh bạch và thuận tiện.",
+      "affectedSegments": [
+        "Bán lẻ Giá trị cao, Điện máy & Xe điện"
+      ],
+      "risk": "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán.",
+      "riskFactors": [
+        "Rủi ro thích ứng công nghệ và chi phí triển khai thiết bị ban đầu tại điểm bán."
+      ],
+      "counterEvidence": [],
+      "evidenceReferences": [
+        {
+          "referenceId": "EVT-20261127-008",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thitruongtaichinhtiente.vn/vietinbank-11-nam-lien-tiep-duoc-vinh-danh-ngan-hang-ban-le-tot-nhat-viet-nam-87342.html",
+          "canonicalUrl": "https://thitruongtaichinhtiente.vn/vietinbank-11-nam-lien-tiep-duoc-vinh-danh-ngan-hang-ban-le-tot-nhat-viet-nam-87342.html",
+          "publisher": "Tạp chí Thị trường Tài chính Tiền tệ",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_008_b48d51831c.html",
+          "evidenceSha256": "b48d51831cc387f5ef49f2c601b06b2b50dd8a695212de899c5a65fd21cde888",
+          "supportingQuote": "Được Tạp chí Global Banking & Finance Review vinh danh “Ngân hàng Bán lẻ Tốt nhất Việt Nam” (Best Retail Bank of Vietnam) 11 năm liên tiếp là dấu mốc khẳng định uy tín, năng lực củ"
+        },
+        {
+          "referenceId": "EVT-20261127-040",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-27-11-gia-vang-trong-nuoc-tang-the-gioi-giu-tren-3-500-usd-207591.html",
+          "canonicalUrl": "https://thoibaotaichinhvietnam.vn/gia-vang-hom-nay-ngay-27-11-gia-vang-trong-nuoc-tang-the-gioi-giu-tren-3-500-usd-207591.html",
+          "publisher": "Thời báo Tài chính Việt Nam",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_042_1a24f8f934.html",
+          "evidenceSha256": "1a24f8f934fc4bb39ebca0ec7d76fd1175d409c112f8077054ed560e026a7d71",
+          "supportingQuote": "Giá vàng thế giới hiện giao dịch quanh 3.567 USD/ounce."
+        },
+        {
+          "referenceId": "EVT-20261127-052",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://thoibaonganhang.vn/gia-vang-the-gioi-nhich-tang-cho-dong-luc-phuc-hoi-ben-vung-191298.html",
+          "canonicalUrl": "https://thoibaonganhang.vn/gia-vang-the-gioi-nhich-tang-cho-dong-luc-phuc-hoi-ben-vung-191298.html",
+          "publisher": "Thời báo Ngân hàng",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_054_187101d383.html",
+          "evidenceSha256": "187101d383f582e523c687b30fddb574f11c02b80bf69d02eb2c9dc5b873778c",
+          "supportingQuote": "Giá vàng thế giới vượt 3.600 USD/oz, chuyên gia vẫn thận trọng Giá vàng thế giới lùi về dưới ngưỡng 3.550 USD/oz Giá vàng thế giới chật vật tìm động lực phục hồi Trước đó, giá vàng"
+        },
+        {
+          "referenceId": "EVT-20261127-094",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://vietnamnet.vn/thuong-mai-dien-tu-phat-trien-nhanh-bo-khan-truong-bit-khoang-trong-phap-ly-2579077.html",
+          "canonicalUrl": "https://vietnamnet.vn/thuong-mai-dien-tu-phat-trien-nhanh-bo-khan-truong-bit-khoang-trong-phap-ly-2579077.html",
+          "publisher": "Báo VietNamNet",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_096_17abeed8a9.html",
+          "evidenceSha256": "17abeed8a97cdf68396dbd88b6081829a722d9a10e50b5ac793854dfbd06309f",
+          "supportingQuote": "Thương mại điện tử 30 tỷ USD, nông dân vẫn phải leo đồi 'hứng sóng' livestream Thương mại điện tử phát triển rất mạnh, dự báo đạt quy mô khoảng 30 tỷ USD trong năm 2025."
+        },
+        {
+          "referenceId": "EVT-20261127-124",
+          "referenceType": "NEWS_EVENT",
+          "sourceUrl": "https://nguoiquansat.vn/ts-nguyen-tri-hieu-day-la-thoi-diem-thuan-loi-de-xuong-tien-mua-vang-330342.html",
+          "canonicalUrl": "https://nguoiquansat.vn/ts-nguyen-tri-hieu-day-la-thoi-diem-thuan-loi-de-xuong-tien-mua-vang-330342.html",
+          "publisher": "Tạp chí Người Quan Sát",
+          "publishedAt": "",
+          "evidencePath": "raw_evidence_store/snapshot_live_126_845af4a47f.html",
+          "evidenceSha256": "845af4a47f95f4b037a337b1812e3ee563ff730c6098f38412dd4a464fefacca",
+          "supportingQuote": "Trong bối cảnh giá vàng giảm sâu, TS Nguyễn Trí Hiếu cho rằng đây là thời điểm thuận lợi để những nhà đầu tư còn do dự cân nhắc mua vàng, nhưng cần tránh tâm lý bắt đáy và giải ngâ"
+        },
+        {
+          "referenceId": "MP-03",
+          "referenceType": "MARKET_PULSE_INDICATOR",
+          "indicatorName": "Lãi suất tiền gửi 12T cao nhất",
+          "currentValue": "7.1",
+          "unit": "%/năm",
+          "observationPeriod": "2026-11-27",
+          "sourceUrl": "https://vietnambiz.vn/lai-suat-ngan-hang-hom-nay-2711-vpbank-giam-toi-05nam-nhom-big4-agribank-vietcombank-bidv-va-vietinbank-dung-yen-2026112794153229.htm",
+          "evidencePath": "",
+          "evidenceSha256": ""
+        }
+      ]
+    }
+  ],
+  "totalSignals": 2,
+  "verifiedOrEmergingOpportunitiesCount": 1,
+  "potentialOpportunitiesCount": 1,
+  "noDirectOpportunityCount": 0,
+  "commercialCoverage": "PRIORITY_PAYMENT_SECTORS_EVALUATED",
+  "modelProviderStatus": "MODEL_PROVIDER_UNAVAILABLE"
+}
