@@ -13,17 +13,19 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
+const DEFAULT_BNEWS_URL = self.location.origin + (self.location.pathname.includes('/fintech-intelligence/') ? '/fintech-intelligence/' : '/');
+
 messaging.onBackgroundMessage((payload) => {
   // Only show manually for data-only messages so FCM notification payloads never duplicate
   if (payload?.notification) return;
   const title = payload?.data?.title || 'Bnews · Ấn bản mới';
   const body = payload?.data?.body || 'Đã có 40 tin Tài chính – Ngân hàng & Thanh toán số hôm nay. Mở đọc bản tóm tắt 3 phút ngay →';
-  const targetUrl = payload?.fcmOptions?.link || payload?.data?.url || 'https://bryanportfolio.io.vn/fintech-intelligence/';
+  const targetUrl = payload?.fcmOptions?.link || payload?.data?.url || DEFAULT_BNEWS_URL;
 
   self.registration.showNotification(title, {
     body,
-    icon: '/fintech-intelligence/fintech-favicon-192.png',
-    badge: '/fintech-intelligence/fintech-favicon-32.png',
+    icon: 'fintech-favicon-192.png',
+    badge: 'fintech-favicon-32.png',
     tag: payload?.data?.tag || 'bnews-daily-edition',
     data: { url: targetUrl }
   });
@@ -31,11 +33,11 @@ messaging.onBackgroundMessage((payload) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  const targetUrl = event.notification?.data?.url || 'https://bryanportfolio.io.vn/fintech-intelligence/';
+  const targetUrl = event.notification?.data?.url || DEFAULT_BNEWS_URL;
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
       for (const client of windowClients) {
-        if (client.url.includes('/fintech-intelligence') && 'focus' in client) {
+        if (client.url.startsWith(self.location.origin) && 'focus' in client) {
           return client.focus();
         }
       }

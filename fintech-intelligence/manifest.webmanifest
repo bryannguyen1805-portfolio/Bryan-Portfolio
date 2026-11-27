@@ -2,8 +2,8 @@
   "name": "Bnews — Bryan FinTech Intelligence",
   "short_name": "Bnews",
   "description": "Chuyên trang điểm tin và phân tích 40 sự kiện kinh tế vĩ mô, ngân hàng, thị trường vốn, doanh nghiệp, bán lẻ và thanh toán số Việt Nam.",
-  "start_url": "/fintech-intelligence/",
-  "scope": "/fintech-intelligence/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#FFFFFF",
@@ -11,13 +11,13 @@
   "lang": "vi",
   "icons": [
     {
-      "src": "/fintech-intelligence/fintech-favicon-192.png",
+      "src": "fintech-favicon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/fintech-intelligence/fintech-favicon.png",
+      "src": "fintech-favicon.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"

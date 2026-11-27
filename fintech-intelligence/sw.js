@@ -1,12 +1,12 @@
 // Bnews PWA Service Worker (v4.0)
 const CACHE_NAME = 'bnews-v4-shell-1';
 const SHELL_ASSETS = [
-  '/fintech-intelligence/',
-  '/fintech-intelligence/index.html',
-  '/fintech-intelligence/magspread.css',
-  '/fintech-intelligence/magspread.js',
-  '/fintech-intelligence/bnews-logo-light.svg',
-  '/fintech-intelligence/fintech-favicon.svg'
+  './',
+  './index.html',
+  './magspread.min.css',
+  './magspread.min.js',
+  './bnews-logo-light.svg',
+  './fintech-favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {

@@ -216,7 +216,7 @@
 
     const schemaEl = document.getElementById('v4JsonLdSchema');
     if (schemaEl) {
-      const portalUrl = 'https://bryanportfolio.io.vn/fintech-intelligence/';
+      const portalUrl = 'https://bnews.bryanportfolio.io.vn/';
       const topArticles = newsList.slice(0, 10).map((item, idx) => ({
         '@type': 'ListItem',
         position: idx + 1,
@@ -227,7 +227,7 @@
           description: item.summary || '',
           datePublished: item.originalSourcePublishedAt || item.originalPublishedAt || modifiedIso,
           articleSection: catLabel(item.category),
-          image: item.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+          image: item.imageUrl || 'https://bnews.bryanportfolio.io.vn/bnews-logo-light.png',
           url: item.canonicalUrl || item.sourceUrl || portalUrl,
           publisher: {
             '@type': 'Organization',
@@ -249,7 +249,7 @@
             inLanguage: 'vi-VN',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+              url: 'https://bnews.bryanportfolio.io.vn/bnews-logo-light.png',
               width: 1200,
               height: 630
             },
@@ -289,8 +289,7 @@
             '@type': 'BreadcrumbList',
             '@id': `${portalUrl}#breadcrumb`,
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Bryan Portfolio', item: 'https://bryanportfolio.io.vn/' },
-              { '@type': 'ListItem', position: 2, name: 'Bryan News | Fintech Intelligence', item: portalUrl }
+              { '@type': 'ListItem', position: 1, name: 'Bnews', item: portalUrl }
             ]
           },
           {
@@ -298,7 +297,7 @@
             '@id': `${portalUrl}#cover-story`,
             headline: coverTitle || seoTitle,
             description: cs.editorialSubheadline || cs.dek || seoDesc,
-            image: cs.leadArticle?.imageUrl || 'https://bryanportfolio.io.vn/fintech-intelligence/bnews-logo-light.png',
+            image: cs.leadArticle?.imageUrl || 'https://bnews.bryanportfolio.io.vn/bnews-logo-light.png',
             datePublished: `${isoDate}T09:00:00+07:00`,
             dateModified: modifiedIso,
             author: { '@type': 'Person', name: 'Nguyễn Huỳnh Quang Trí (Bryan Nguyen)', url: 'https://bryanportfolio.io.vn/' },
