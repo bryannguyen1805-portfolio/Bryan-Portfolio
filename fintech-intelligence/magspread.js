@@ -191,11 +191,11 @@
     const modifiedIso = d.editionCutoffAt || `${isoDate}T19:30:00+07:00`;
     const coverTitle = String(cs.editorialHeadline || '').trim();
     const seoTitle = IS_PREVIEW_SUBDIR
-      ? `Bnews Fintech V4 Pilot — ${edLabel} (${edDate})`
-      : `Bryan News | Fintech Intelligence — ${edLabel} (${edDate}) · ${newsList.length} Tin Kinh tế & Thanh toán số`;
+      ? `Bnews Pilot — ${edLabel} (${edDate})`
+      : `Bnews — Tin mới nhất hôm nay (${edDate}) | Báo Kinh tế & Tài chính (${edLabel})`;
     const seoDesc = coverTitle
-      ? `Bryan News (${edLabel} · ${edDate}): ${coverTitle}. Tổng hợp ${newsList.length} sự kiện xác minh về Thanh toán số, Ngân hàng, Thị trường vốn, Doanh nghiệp, Vĩ mô và Bán lẻ.`
-      : `Bryan News - Chuyên trang thông tin và phân tích ${newsList.length} sự kiện kinh tế vĩ mô, ngân hàng, thị trường tài chính và thanh toán số Việt Nam.`;
+      ? `Bnews (${edLabel} · ${edDate}): ${coverTitle}. Cập nhật ${newsList.length} tin tức mới nhất hôm nay về kinh tế, tài chính, ngân hàng & thanh toán số.`
+      : `Bnews — Báo điện tử cập nhật ${newsList.length} tin tức mới nhất hôm nay về kinh tế vĩ mô, ngân hàng, thị trường tài chính và thanh toán số Việt Nam.`;
 
     document.title = seoTitle;
 
@@ -242,8 +242,8 @@
           {
             '@type': ['NewsMediaOrganization', 'WebSite'],
             '@id': `${portalUrl}#website`,
-            name: 'Bryan News | Fintech Intelligence',
-            alternateName: ['Bryan News', 'Bnews Fintech', 'Fintech Intelligence VN'],
+            name: 'Bnews',
+            alternateName: ['Bnews', 'Bryan News', 'Báo Bnews', 'Bnews Tin mới nhất hôm nay', 'Bnews Fintech Intelligence'],
             url: portalUrl,
             description: seoDesc,
             inLanguage: 'vi-VN',
