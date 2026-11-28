@@ -1,0 +1,43 @@
+{
+  "executionTimestamp": "2026-11-28T10:05:00+07:00",
+  "editionId": "ED-20261128-D01",
+  "statusSummary": {
+    "searchesAttempted": 4,
+    "successfulSearchCount": 4,
+    "accessBlockedCount": 0
+  },
+  "indicators": {
+    "MP-01": {
+      "indicatorId": "MP-01",
+      "actualValue": "25687",
+      "unit": "VND/USD",
+      "observationDate": "2026-11-28",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://tapchikinhtetaichinh.vn/lai-suat-ty-gia-hom-nay-lai-suat-uu-dai-len-9-1-nam-usd-tang-gia-173813.html"
+    },
+    "MP-03": {
+      "indicatorId": "MP-03",
+      "actualValue": "7.0",
+      "unit": "%/năm",
+      "observationDate": "2026-11-28",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://tapchikinhtetaichinh.vn/lai-suat-ty-gia-hom-nay-lai-suat-uu-dai-len-9-1-nam-usd-tang-gia-173813.html"
+    },
+    "MP-04": {
+      "indicatorId": "MP-04",
+      "actualValue": "1653.9",
+      "unit": "Điểm",
+      "observationDate": "2026-11-28",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://fili.vn/2026/11/chung-khoan-tuan-23-27112026-song-gio-chua-qua-1636-1518685.htm"
+    },
+    "MP-07": {
+      "indicatorId": "MP-07",
+      "actualValue": "19.54",
+      "unit": "Triệu lượt",
+      "observationDate": "2026-11-28",
+      "updateStatus": "NEW_OBSERVATION_VERIFIED",
+      "sourceUrl": "https://baodautu.vn/du-lich-viet-voi-bai-toan-thu-hut-khach-quoc-te-trong-chang-nuoc-rut-d744639.html"
+    }
+  }
+}

@@ -164,6 +164,12 @@ except ImportError:
     ED42_COVER_OVERRIDE = {}
     ED42_ARTICLE_INTEL = {}
 
+try:
+    from ed43_editorial_content import ED43_COVER_OVERRIDE, ED43_ARTICLE_INTEL
+except ImportError:
+    ED43_COVER_OVERRIDE = {}
+    ED43_ARTICLE_INTEL = {}
+
 from html.parser import HTMLParser
 
 
@@ -707,8 +713,10 @@ def derive_daily_cover_story(eligible_news, market_pulse, edition_date, ct_raw=N
             "monitoringWatchpoint": "Theo dõi sát diễn biến phiên tiếp theo."
         }
 
-    # Check explicit curated lead override first (ED42, ED41, ED40, ED39, ED38, ED37, ED36, ED35, ED34, ED33, ED32, ED31, ED30 or ED29)
-    if "27/11/2026" in str(edition_date) or "2026-11-27" in str(edition_date):
+    # Check explicit curated lead override first (ED43, ED42, ED41, ED40, ED39, ED38, ED37, ED36, ED35, ED34, ED33, ED32, ED31, ED30 or ED29)
+    if "28/11/2026" in str(edition_date) or "2026-11-28" in str(edition_date):
+        cover_override = ED43_COVER_OVERRIDE
+    elif "27/11/2026" in str(edition_date) or "2026-11-27" in str(edition_date):
         cover_override = ED42_COVER_OVERRIDE
     elif "26/11/2026" in str(edition_date) or "2026-11-26" in str(edition_date):
         cover_override = ED41_COVER_OVERRIDE
@@ -1140,6 +1148,7 @@ def main():
     # 3. Build Verified Eligible News List with rich, event-specific analysis
     eligible_news = []
     records = news_raw.get("records", [])
+    is_ed43 = ("28/11/2026" in str(edition_date_display) or "2026-11-28" in str(edition_date_raw))
     is_ed42 = ("27/11/2026" in str(edition_date_display) or "2026-11-27" in str(edition_date_raw))
     is_ed41 = ("26/11/2026" in str(edition_date_display) or "2026-11-26" in str(edition_date_raw))
     is_ed40 = ("25/11/2026" in str(edition_date_display) or "2026-11-25" in str(edition_date_raw))
@@ -1169,7 +1178,9 @@ def main():
             pub_display = pub_time[:16].replace("T", " ")
 
         curated = None
-        if is_ed42:
+        if is_ed43:
+            curated = ED43_ARTICLE_INTEL.get(origin_evt_id)
+        elif is_ed42:
             curated = ED42_ARTICLE_INTEL.get(origin_evt_id)
         elif is_ed41:
             curated = ED41_ARTICLE_INTEL.get(origin_evt_id)
@@ -1400,6 +1411,99 @@ def main():
             "lockNotice": "Mã tham chiếu 'Khách quốc tế' và link tra cứu gốc tại Báo Thanh Niên đã được khóa cố định theo chỉ đạo điều hành."
         }
     }
+
+    _ED43_MARKET_PULSE_DEFS = [
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["usdVndCenter"],
+            "articleTitle": "Lãi suất - tỷ giá hôm nay 28/11: Tỷ giá trung tâm giữ 25.687đ, Vietcombank tăng +20đ lên 26.030đ, DXY đạt 104,04 điểm",
+            "value": "25.687 VND/USD",
+            "unit": "VND/USD",
+            "asOf": "2026-11-28",
+            "referenceValue": "NHNN: 25.687 VND/USD (đi ngang) | VCB: 25.620 - 26.030 VND/USD (+20đ) | DXY: 104,04 điểm",
+            "change": "Trung tâm 25.687đ · VCB +20đ lên 26.030đ",
+            "compactDelta": "NHNN 0đ · VCB +20đ",
+            "compactSubRef": "VCB: 25.620 - 26.030 VND/USD",
+            "dailyArticleUrl": "https://tapchikinhtetaichinh.vn/lai-suat-ty-gia-hom-nay-lai-suat-uu-dai-len-9-1-nam-usd-tang-gia-173813.html",
+            "secondarySourceUrls": [
+                "https://thanhnien.vn/gia-usd-hom-nay-28112026-tang-tuan-thu-3-lien-tiep-185261128073208845.htm",
+                "https://thoibaotaichinhvietnam.vn/ty-gia-usd-hom-nay-28-11-usd-trong-nuoc-di-len-dxy-tru-vung-moc-104-diem-duy-tri-chuoi-tang-5-tuan-207669.html"
+            ],
+            "statusReason": "Sáng 28/11/2026, NHNN giữ tỷ giá trung tâm ở mức 25.687 VND/USD (biên độ ±5%: 24.403–26.971 VND/USD). Tại các NHTM, Vietcombank tăng +20 đồng lên 25.620–26.030 VND/USD (mua CK 25.650), BIDV niêm yết 25.660–26.040 VND/USD, thị trường tự do quanh 26.460–26.560 VND/USD trong khi DXY chốt tuần ở 104,04 điểm (+0,36%).",
+            "financialInterpretation": "Giá bán USD tại Vietcombank và BIDV nhích lên vùng 26.030–26.040 đồng khi DXY duy trì chuỗi tăng 5 tuần qua mốc 104 điểm phản ánh áp lực ngoại hối cuối năm, thúc đẩy doanh nghiệp tối ưu thanh toán chính ngạch và kích hoạt Dynamic Currency Conversion (DCC) trên SmartPOS.",
+            "monitoringWatchpoint": "Theo dõi chênh lệch tỷ giá tự do – ngân hàng quanh vùng 26.030–26.560 đồng và cuộc họp lãi suất tháng 12 của Fed.",
+            "status": "negative",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-28T09:55:08+07:00",
+            "observationAt": "2026-11-28T09:55:08+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["maxDeposit12M"],
+            "articleTitle": "Lãi suất ngân hàng 28/11/2026: Big4 giữ 5,4%/năm (12T), VCBNeo 7,0%/năm, Cake 12T 6,9% (ưu đãi tới 9,1%)",
+            "value": "7,00%/năm",
+            "unit": "%/năm",
+            "asOf": "2026-11-28",
+            "referenceValue": "Big4 (12T quầy): 5,4%/năm | VCBNeo 12T: 7,0% | Cake 12T: 6,9% (quý 7,08%, ưu đãi tới 9,1%) | VPBank 6,9%, Bắc Á 6,6%",
+            "change": "Big4 5,4% · NHTMCP 6,5–7,0% (ưu đãi số tới 9,1%)",
+            "compactDelta": "Big4 5,4% · NHTMCP 7,0%",
+            "compactSubRef": "VCBNeo 7,0% · Cake/VPBank 6,9%",
+            "dailyArticleUrl": "https://tapchikinhtetaichinh.vn/lai-suat-ty-gia-hom-nay-lai-suat-uu-dai-len-9-1-nam-usd-tang-gia-173813.html",
+            "secondarySourceUrls": [
+                "https://cafef.vn/du-lieu/lai-suat-ngan-hang.chn"
+            ],
+            "statusReason": "Ngày 28/11/2026, nhóm Big4 (Agribank, Vietcombank, BIDV, VietinBank) giữ nguyên lãi suất 12T tại quầy 5,4%/năm (24T đạt 5,5%/năm). Ở khối NHTMCP, VCBNeo niêm yết 12T ở mức 7,0%/năm, VPBank 12T 6,9%/năm, Cake by VPBank 12T 6,9%/năm (lĩnh lãi quý 7,08%/năm, cộng thêm ưu đãi 2,2% lên 9,1%/năm hết 30/11), Bắc Á Bank 6,6%/năm.",
+            "financialInterpretation": "Mặt bằng lãi suất 12T phân hóa rõ giữa Big4 (5,4%/năm) và NHTMCP (6,5–7,0%/năm) cùng các gói cộng lãi suất ngắn hạn buộc doanh nghiệp bán lẻ tối ưu vòng quay vốn lưu động và đẩy mạnh trả góp 0% qua thẻ tín dụng.",
+            "monitoringWatchpoint": "Theo dõi phản ứng lãi suất liên ngân hàng qua đêm (6,1%/năm) sau tuần NHNN bơm ròng 120.228 tỷ đồng qua kênh OMO.",
+            "status": "positive",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-28T09:55:08+07:00",
+            "observationAt": "2026-11-28T09:55:08+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["vnIndex"],
+            "articleTitle": "VN-Index chốt phiên 27/11 hồi +24,22đ (+1,49%) lên 1.653,9 điểm; cả tuần 23–27/11 giảm 34,89đ (-2,07%)",
+            "value": "1.653,90 điểm",
+            "unit": "Điểm",
+            "asOf": "2026-11-27",
+            "referenceValue": "Chốt 27/11: 1.653,9đ (+24,22đ; +1,49%) | Tuần 23–27/11: -34,89đ (-2,07%) | Khối ngoại HOSE: mua ròng +558,8 tỷ đ",
+            "change": "Chốt 27/11: 1.653,9đ (+1,49%) · Cả tuần -2,07%",
+            "compactDelta": "Chốt +1,49% · Tuần -2,07%",
+            "compactSubRef": "Khối ngoại mua ròng +558,8 tỷ",
+            "dailyArticleUrl": "https://fili.vn/2026/11/chung-khoan-tuan-23-27112026-song-gio-chua-qua-1636-1518685.htm",
+            "secondarySourceUrls": [
+                "https://vietstock.vn/2026/11/nhip-dap-thi-truong-2711-thi-truong-ha-nhiet-sau-nhip-tang-manh-1636-1518388.htm"
+            ],
+            "statusReason": "Chốt phiên cuối tuần 27/11/2026, VN-Index bật tăng +24,22 điểm (+1,49%) lên 1.653,9 điểm (HNX-Index +0,68% lên 228,11 điểm; 455 mã tăng/268 mã giảm) nhờ nhóm dầu khí (+6,39%), công nghệ (+2,38%) và VIC (+2,17%). Khối ngoại đảo chiều mua ròng >558,84 tỷ đồng trên HOSE, song thanh khoản khớp lệnh thấp (>9,19 nghìn tỷ đ) khiến cả tuần vẫn giảm 34,89 điểm (-2,07%).",
+            "financialInterpretation": "Nhịp hồi +24,22 điểm đúng kỷ niệm 30 năm ngành chứng khoán cùng động thái mua ròng trở lại của khối ngoại giúp ổn định tâm lý thị trường, nhưng thanh khoản thấp giữ nhà đầu tư ưu tiên phòng thủ dòng tiền và thanh toán trả góp linh hoạt.",
+            "monitoringWatchpoint": "Theo dõi khả năng giữ vững vùng 1.650 điểm kèm cải thiện thanh khoản khớp lệnh trên HOSE trong tuần giao dịch đầu tháng 12.",
+            "status": "positive",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-27T17:15:00+07:00",
+            "observationAt": "2026-11-27T15:00:00+07:00"
+        },
+        {
+            **LOCKED_MARKET_PULSE_REGISTRY["inboundTourists"],
+            "articleTitle": "Khách quốc tế 10T đạt 19,54 triệu lượt (+13,8% YoY), ước 11T đạt ~21,6 triệu lượt trong chặng nước rút",
+            "value": "19,54 Triệu lượt",
+            "unit": "Triệu lượt",
+            "asOf": "10T & ước 11T/2026",
+            "referenceValue": "10T/2026: 19,54 triệu lượt (+13,8% YoY; 78% mục tiêu 25M) | Ước 11T: ~21,6 triệu lượt | Châu Âu +51,5% YoY",
+            "change": "10T: 19,54M (+13,8% YoY) · Ước 11T: ~21,6M lượt",
+            "compactDelta": "10T +13,8% · 11T ~21,6M",
+            "compactSubRef": "78% mục tiêu 25M · T12 cao điểm",
+            "dailyArticleUrl": "https://baodautu.vn/du-lich-viet-voi-bai-toan-thu-hut-khach-quoc-te-trong-chang-nuoc-rut-d744639.html",
+            "secondarySourceUrls": [
+                "https://chinhsachcuocsong.vnanet.vn/khach-quoc-te-den-viet-nam-dat-195-trieu-luot-trong-10-thang-nam-2026/100603.html",
+                "https://vietnamtourism.gov.vn/post/68801"
+            ],
+            "statusReason": "Theo Cục Du lịch Quốc gia Việt Nam, lũy kế 10 tháng năm 2026 Việt Nam đón 19.535.396 lượt khách quốc tế (+13,8% YoY, đạt 78% mục tiêu 25 triệu lượt) và ước 11 tháng đạt khoảng 21,6 triệu lượt. Theo Văn bản 7476/BVHTTDL-DLQGVN, ngành du lịch đặt mục tiêu thu hút thêm 5,5–7,5 triệu lượt trong hai tháng cao điểm cuối năm.",
+            "financialInterpretation": "Dòng khách quốc tế ước đạt 21,6 triệu lượt sau 11 tháng cùng chỉ đạo kích cầu kinh tế đêm và mua sắm cuối năm mở rộng dư địa tăng trưởng giao dịch thẻ EMV Contactless, DCC và VietQRGlobal tại điểm bán lẻ và lưu trú.",
+            "monitoringWatchpoint": "Theo dõi công bố số liệu khách quốc tế chính thức tháng 11/2026 vào đầu tháng 12 và doanh số chấp nhận thanh toán đa tiền tệ dịp Giáng sinh – Tết Dương lịch.",
+            "status": "positive",
+            "verificationStatus": "VERIFIED",
+            "publishedAt": "2026-11-26T08:46:00+07:00",
+            "observationAt": "2026-11-28T08:30:00+07:00"
+        }
+    ]
 
     _ED42_MARKET_PULSE_DEFS = [
         {
@@ -1952,7 +2056,10 @@ def main():
         }
     ]
 
-    if "27/11/2026" in str(edition_date_display) or "2026-11-27" in str(edition_date_raw):
+    if "28/11/2026" in str(edition_date_display) or "2026-11-28" in str(edition_date_raw):
+        CORE_4_DEFS = _ED43_MARKET_PULSE_DEFS
+        raw_indicators = []
+    elif "27/11/2026" in str(edition_date_display) or "2026-11-27" in str(edition_date_raw):
         CORE_4_DEFS = _ED42_MARKET_PULSE_DEFS
         raw_indicators = []
     elif "26/11/2026" in str(edition_date_display) or "2026-11-26" in str(edition_date_raw):
@@ -2525,7 +2632,10 @@ def main():
         ]
 
     # Dynamic synchronization from live daily market-pulse.json if available (strict semantic + unit match)
-    if "27/11/2026" in str(edition_date_display) or "2026-11-27" in str(edition_date_raw):
+    if "28/11/2026" in str(edition_date_display) or "2026-11-28" in str(edition_date_raw):
+        CORE_4_DEFS = _ED43_MARKET_PULSE_DEFS
+        raw_indicators = []
+    elif "27/11/2026" in str(edition_date_display) or "2026-11-27" in str(edition_date_raw):
         CORE_4_DEFS = _ED42_MARKET_PULSE_DEFS
         raw_indicators = []
     elif "26/11/2026" in str(edition_date_display) or "2026-11-26" in str(edition_date_raw):
