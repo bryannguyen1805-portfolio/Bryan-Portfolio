@@ -192,7 +192,7 @@
     const coverTitle = String(cs.editorialHeadline || '').trim();
     const seoTitle = IS_PREVIEW_SUBDIR
       ? `Bnews Pilot — ${edLabel} (${edDate})`
-      : `Bnews — Tin mới nhất hôm nay (${edDate}) | Báo Kinh tế & Tài chính (${edLabel})`;
+      : `Bnews — Tin mới nhất hôm nay | Kinh tế & Tài chính`;
     const seoDesc = coverTitle
       ? `Bnews (${edLabel} · ${edDate}): ${coverTitle}. Cập nhật ${newsList.length} tin tức mới nhất hôm nay về kinh tế, tài chính, ngân hàng & thanh toán số.`
       : `Bnews — Báo điện tử cập nhật ${newsList.length} tin tức mới nhất hôm nay về kinh tế vĩ mô, ngân hàng, thị trường tài chính và thanh toán số Việt Nam.`;
