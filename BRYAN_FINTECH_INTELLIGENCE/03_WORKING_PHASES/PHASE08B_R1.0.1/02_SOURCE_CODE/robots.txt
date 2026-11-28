@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bryanportfolio.io.vn/fintech-intelligence/sitemap.xml

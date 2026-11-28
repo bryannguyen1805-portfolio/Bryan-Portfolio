@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bnews.bryanportfolio.io.vn/sitemap.xml
